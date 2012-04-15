@@ -1,7 +1,5 @@
 require 'spec_helper'
 
-require 'spec_helper'
-
 describe PostsController do
   describe "GET #index" do
     it "populates an array of posts" do
@@ -42,15 +40,20 @@ describe PostsController do
   
   describe "POST #create" do
     context "with valid attributes" do
+      before(:each) {@category = Category.create(name: 'uncategorized')}
+      let(:valid_params) do
+        {post: {title: 'sample title', body: 'sample body', category_id: @category.id}}
+      end
+      
       it "redirects to the home page" do 
-      	post :create, post: FactoryGirl.attributes_for(:post)
+      	post :create, valid_params
       	response.should redirect_to posts_path
       end
     end
     
     context "with invalid attributes" do
       it "re-renders the :new template" do
-      	post :create, post: FactoryGirl.build(:post, title:nil) #invalid post
+      	post :create, post: FactoryGirl.attributes_for(:post, title:nil) #invalid post
       	response.should render_template :new
       end
     end
