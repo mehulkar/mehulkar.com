@@ -1,0 +1,1 @@
+Simple blog app to make personal websites easy for newb developers.
