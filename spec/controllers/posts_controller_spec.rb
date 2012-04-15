@@ -16,14 +16,15 @@ describe PostsController do
   end
   
 	describe "GET #show" do
+		before (:each) {@post = FactoryGirl.create(:post)}
+
 	  it "assigns the requested post to @post" do
-	    post = FactoryGirl.create(:post)
-	    get :show, id: post
-	    assigns(:post).should eq(post)
+	    get :show, id: @post
+	    assigns(:post).should eq(@post)
 	  end
 	  
 	  it "renders the #show view" do
-	    get :show, id: FactoryGirl.create(:post)
+	    get :show, id: @post
 	    response.should render_template :show
 	  end
 	end
@@ -37,7 +38,6 @@ describe PostsController do
     	get :new
     	response.should render_template :new
     end
-
   end
   
   describe "POST #create" do
