@@ -1,0 +1,9 @@
+%h1
+	Portfolio
+-@projects.each do |project|
+	#projects
+		.project
+			=project.name
+			=project.description
+			=project.demo_url
+			=project.source_url

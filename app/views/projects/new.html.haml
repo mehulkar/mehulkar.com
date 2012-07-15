@@ -1,0 +1,13 @@
+=form_for(@project) do |p|
+	#project-new
+		%h4
+			Name		
+		=p.text_field :name
+		%h4
+			Description
+		=p.text_area :description
+		%h4
+			Current?
+		=select("project", "current", [true, false])
+	.button
+	=p.submit

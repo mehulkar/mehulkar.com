@@ -1,8 +1,15 @@
 Blog::Application.routes.draw do
+  devise_for :users
 
-  resources :posts
-  resource :projects
+  get "static_pages/home"
+  get "static_pages/about"
   
+  resources :posts
+  resources :projects
+
+  match "/about" => 'static_pages#about'
+  match "/portfolio" => 'projects#index'
+  root :to => 'static_pages#home'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -61,3 +68,4 @@ Blog::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
 end
+

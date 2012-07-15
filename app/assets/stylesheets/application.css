@@ -8,6 +8,58 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require 'bootstrap'
  *= require_self
  *= require_tree .
 */
+
+
+body {
+	background-image:url('classy_fabric.png');
+	font-family: 'PT Mono', sans-serif;
+}
+
+#page {
+	width:800px;
+	margin: 0 auto;
+}
+
+#header{
+	text-align:center;
+	font-family: 'Poiret One', cursive;
+	color:white;
+	font-size:40px;
+	padding:50px;
+	margin-top:200px;
+}
+
+.tagline {
+	background-color:#eee;
+	border-radius:15px;
+	padding:5px 10px;
+	display:inline;
+	font-size:0.5em;
+	position:relative;
+	bottom:5px;
+	color:red;
+	text-align:center;
+	margin:0 25px;
+}
+nav ul {
+
+}
+nav li{
+	line-height:34px;
+	display:block;
+	width:100px;
+	height:30px;
+	color:#333;
+	background-color:#eee;
+	padding:5px 15px;
+	border-top:1px solid #333;
+	border-bottom:1px solid #333;
+	background: -webkit-gradient(linear, left top, left bottom, 
+																color-stop(0%,#ccc), 
+																color-stop(35%, #eee), to(#ccc));	
+
+}

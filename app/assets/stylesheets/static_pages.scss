@@ -1,0 +1,31 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+	color:#eee;
+}	
+
+#content {
+	text-align:center;
+}
+#header {
+  font-family: $header-font;
+  text-align:center;
+  font-size: $base-font-size * 3;
+  a {
+    color:#fff;    
+    &:hover {
+      text-decoration:none;
+    }
+  }
+  span {
+    font-size: $base-font-size * 1.5;
+    padding: 5px 10px;
+    background-color:#eee;
+    border-radius:15px;
+    position:relative;
+    bottom:5px;
+    color:red;
+  }
+}
