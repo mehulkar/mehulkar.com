@@ -1,4 +1,5 @@
 Blog::Application.routes.draw do
+  root to: 'static_pages#home'
 
   get "static_pages/home"
   get "static_pages/about"
@@ -8,7 +9,7 @@ Blog::Application.routes.draw do
 
   match "/about" => 'static_pages#about'
   match "/portfolio" => 'projects#index'
-  root :to => 'static_pages#home'
+
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

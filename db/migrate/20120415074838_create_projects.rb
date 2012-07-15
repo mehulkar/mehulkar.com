@@ -3,7 +3,7 @@ class CreateProjects < ActiveRecord::Migration
     create_table :projects do |t|
       t.string :name
       t.text :description, :default => "No description given"
-      t.string :status
+      t.string :current, :default => true
       t.string :demo_url
       t.string :source_url
       t.boolean :public
