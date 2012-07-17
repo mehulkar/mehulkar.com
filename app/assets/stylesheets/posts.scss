@@ -1,3 +1,45 @@
-// Place all the styles related to the posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+section.posts {
+  article {
+    width: 500px;
+    color:#dddddd;
+    text-align:left;
+    p {    
+      font-size:16px;
+      line-height:20px;
+    }
+    .post-title {
+      margin-bottom:5px;
+    }
+    .post-date {
+      border-bottom:dotted 1px #bbb;
+      margin-bottom:10px;
+    }
+    .post-body {
+    }
+  }
+}
+aside.archive {
+  text-align:right;
+  float:right;
+  padding-left:10px;
+  border-left: dotted 1px #ccc;
+}
+// end show and index post routes
+
+// new_post route
+article.write {
+  input {
+    display:block;
+    width:500px;
+  }
+  textarea {
+    height:500px;
+    width:500px;
+  }
+  [type="submit"] {
+    width:100px;
+  }
+}
+article.preview {
+
+}

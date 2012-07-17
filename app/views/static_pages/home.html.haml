@@ -1,2 +1,3 @@
-=link_to(image_tag("twitter.png", size: '50x50'), "http://twitter.com/mehulkar")
-=link_to(image_tag("octocat.png", size: '50x50'), "http://github.com/mehulkar")
+%ul.links
+  %li= link_to "@mehulkar", "http://twitter.com/mehulkar"
+  %li= link_to "/github", portfolio_path

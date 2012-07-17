@@ -6,26 +6,35 @@ h1 {
 	color:#eee;
 }	
 
-#content {
-	text-align:center;
-}
 #header {
   font-family: $header-font;
   text-align:center;
   font-size: $base-font-size * 3;
-  a {
-    color:#fff;    
+  .title {
+    color:#fff;
+  }
+  span a {
+    color:red;
     &:hover {
       text-decoration:none;
     }
   }
-  span {
-    font-size: $base-font-size * 1.5;
-    padding: 5px 10px;
-    background-color:#eee;
-    border-radius:15px;
-    position:relative;
-    bottom:5px;
-    color:red;
+  span:hover {
+    text-decoration:underline;
+    cursor:pointer;
+  }
+}
+
+ul.links {
+  text-align:center;
+  list-style-type:none;
+  width:20%;
+  margin:0 auto;
+  li {
+    margin-bottom:5px;
+    &:hover {
+      border-bottom:dotted 1px #ccc;
+      margin-bottom:5px;  
+    }
   }
 }

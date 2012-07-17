@@ -1,18 +1,19 @@
 !!!
 %html
 	%head
-		%title blog
-
+		%title Yay
 		= stylesheet_link_tag "application", media: "all" 
-		%link{href:'http://fonts.googleapis.com/css?family=Poiret+One', rel:'stylesheet', type: 'text/css' }
-		%link{href:'http://fonts.googleapis.com/css?family=PT+Mono', rel:'stylesheet', type: 'text/css' }
+		%link{href:'http://fonts.googleapis.com/css?family=Poiret+One', rel:'stylesheet', type: 'text/css'}
+		%link{href:'http://fonts.googleapis.com/css?family=Open+Sans:400,300', rel:'stylesheet', type: 'text/css'}
 		=javascript_include_tag
 		=csrf_meta_tags
 	%body
 		#page
-			#header
-				Mehul Kar
+			#header.title
+				= link_to "Mehul Kar", root_path
 				.tagline
-					I write code
+					%span.bio=link_to "I", about_path
+					%span.blog=link_to "write", posts_path
+					%span.portfolio=link_to "code", portfolio_path
 			#content
 				= yield

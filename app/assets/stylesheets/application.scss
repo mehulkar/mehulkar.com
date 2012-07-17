@@ -9,18 +9,30 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require 'bootstrap'
 */
 @import "variables.scss";
 @import "posts.scss";
 @import "static_pages.scss";
 @import "projects.scss";
 
+* {margin:0;padding:0;}
 
 body {
 	background-image:url('classy_fabric.png');
-	font-family: $body-font;
 	font-size: $base-font-size;
+	font-family: 'Open sans';
+	a, a:visited, a:hover {
+		color:#eee;
+		text-decoration:none;
+	}
+	p {
+		font-size: 16px;
+		font-weight: 300;
+		margin-bottom:15px;
+	}
+	img {
+		max-width:100%;
+	}
 }
 
 #page {
@@ -34,21 +46,6 @@ body {
 	color:white;
 	font-size:40px;
 	padding:50px;
-	margin-top:200px;
-}
-
-#page {
-	width:800px;
-	margin: 0 auto;
-}
-
-#header{
-	text-align:center;
-	font-family: 'Poiret One', cursive;
-	color:white;
-	font-size:40px;
-	padding:50px;
-	margin-top:200px;
 }
 
 .tagline {
@@ -62,22 +59,4 @@ body {
 	color:red;
 	text-align:center;
 	margin:0 25px;
-}
-nav ul {
-
-}
-nav li{
-	line-height:34px;
-	display:block;
-	width:100px;
-	height:30px;
-	color:#333;
-	background-color:#eee;
-	padding:5px 15px;
-	border-top:1px solid #333;
-	border-bottom:1px solid #333;
-	background: -webkit-gradient(linear, left top, left bottom, 
-																color-stop(0%,#ccc), 
-																color-stop(35%, #eee), to(#ccc));	
-
 }

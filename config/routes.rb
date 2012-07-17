@@ -9,7 +9,7 @@ Blog::Application.routes.draw do
 
   match "/about" => 'static_pages#about'
   match "/portfolio" => 'projects#index'
-
+  match "/writes" => 'posts#index'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

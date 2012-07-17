@@ -1,17 +1,14 @@
-%h1 Listing posts
-
-%table
-  %tr
-    %th
-    %th
-    %th
-
+%aside.archive 
+  %h2 Archives
   - @posts.each do |post|
-    %tr
-      %td= link_to 'Show', post
-      %td= link_to 'Edit', edit_post_path(post)
-      %td= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete
-
-%br
-
-= link_to 'New Post', new_post_path
+    = link_to post.title, post
+%section.posts
+  - @posts.each do |post|
+    %article
+      .post-title
+        %h1
+          = link_to post.title, post
+      .post-date
+        = post.created_at
+      .post-body
+        = @markdown.render(post.body).html_safe
