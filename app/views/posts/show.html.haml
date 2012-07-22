@@ -5,7 +5,8 @@
       %h1
         = link_to @post.title, @post
     .post-date
-      = @post.created_at
+      Last updated: 
+      = post.updated_at.strftime(format='%B %e, %Y')
     .post-body
       = @markdown.render(@post.body).html_safe
   = link_to 'Back', posts_path
