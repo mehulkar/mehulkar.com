@@ -42,7 +42,7 @@ body {
 
 #header{
 	text-align:center;
-	font-family: 'Poiret One', cursive;
+	font-family: 'Poiret One', sans-serif;
 	color:white;
 	font-size:40px;
 	padding:50px;
@@ -59,4 +59,10 @@ body {
 	color:red;
 	text-align:center;
 	margin:0 25px;
+}
+#footer {
+	margin-bottom:10px;
+	border-top: solid 1px #ccc;
+	padding: 10px 0;
+	font-size: 14px;
 }

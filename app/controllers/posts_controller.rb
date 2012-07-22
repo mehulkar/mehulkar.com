@@ -11,6 +11,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @posts = Post.all
     @post = Post.find(params[:id])
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :fenced_code_blocks => true)
     respond_to do |format|

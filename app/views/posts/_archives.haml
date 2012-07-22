@@ -1,0 +1,4 @@
+%aside.archive 
+  %h2 Archives
+  - @posts.each do |post|
+    = link_to post.title, post

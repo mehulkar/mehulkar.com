@@ -1,10 +1,11 @@
-%p#notice= notice
-
-%article
-  .title
-    = @post.title
-  .body
-    = @markdown.render(@post.body).html_safe
-  = link_to 'Edit', edit_post_path(@post)
-  \|
+= render partial: 'archives', collection: @posts
+%section.posts
+  %article
+    .post-title
+      %h1
+        = link_to @post.title, @post
+    .post-date
+      = @post.created_at
+    .post-body
+      = @markdown.render(@post.body).html_safe
   = link_to 'Back', posts_path
