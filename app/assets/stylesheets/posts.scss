@@ -20,13 +20,20 @@ section.posts {
   }
 }
 aside.archive {
+  color:#eee;
+  width:175px;
   text-align:right;
   float:right;
   padding-left:10px;
   border-left: dotted 1px #ccc;
   ul {
     list-style-type:none;
-    
+    li {
+
+      text-overflow:ellipsis;
+      overflow:hidden;
+      white-space:nowrap;
+    }
   }
 }
 // end show and index post routes
