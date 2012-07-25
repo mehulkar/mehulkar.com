@@ -1,4 +1,6 @@
 %aside.archive 
   %h2 Archives
-  - @posts.each do |post|
-    = link_to post.title, post
+  %ul
+    - @posts.each do |post|
+      %li
+        = link_to post.title, post

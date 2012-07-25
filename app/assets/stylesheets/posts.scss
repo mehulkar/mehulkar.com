@@ -24,6 +24,10 @@ aside.archive {
   float:right;
   padding-left:10px;
   border-left: dotted 1px #ccc;
+  ul {
+    list-style-type:none;
+    
+  }
 }
 // end show and index post routes
 

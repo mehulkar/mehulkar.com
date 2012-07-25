@@ -1,4 +1,4 @@
-= render partial: 'archives', collection: @posts
+= render 'archives'
 %section.posts
   %article
     .post-title
@@ -6,7 +6,7 @@
         = link_to @post.title, @post
     .post-date
       Last updated: 
-      = post.updated_at.strftime(format='%B %e, %Y')
+      = @post.updated_at.strftime(format='%B %e, %Y')
     .post-body
       = @markdown.render(@post.body).html_safe
   = link_to 'Back', posts_path
