@@ -1,7 +1,14 @@
-This is all the stuff I'm working on
--@projects.each do |p|
-	=p.name
-	=p.description
-	=p.demo_url
-	=p.source_url
-	=p.current
+%p
+  At the moment I'm busy learning about computers. Some of my projects are on
+  =link_to "github", "http://github.com/mehulkar"
+  \.
+%p
+  Go
+  = link_to "home", root_path, class: 'button'
+  
+- @projects.each do |p|
+  =p.name
+  =p.description
+  =p.demo_url
+  =p.source_url
+  =p.current

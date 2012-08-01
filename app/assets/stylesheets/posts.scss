@@ -1,38 +1,46 @@
-section.posts {
-  article {
-    width: 500px;
-    color:#dddddd;
-    text-align:left;
-    margin-bottom:50px;
-    p {    
+article.post {
+  width: 500px;
+  color:#dddddd;
+  text-align:left;
+  margin-bottom:50px;
+  p {    
+    font-size:16px;
+    line-height:20px;
+  }
+  .post-title {
+    margin-bottom:5px;
+  }
+  .post-date {
+    border-bottom:dotted 1px #bbb;
+    margin-bottom:10px;
+  }
+  .post-body {
+  }
+  .post-links {
+    a {
+      @include button;
       font-size:16px;
-      line-height:20px;
-    }
-    .post-title {
-      margin-bottom:5px;
-    }
-    .post-date {
-      border-bottom:dotted 1px #bbb;
-      margin-bottom:10px;
-    }
-    .post-body {
-    }
+      margin:10px 0;
+      display:inline-block;
+    }  
   }
 }
+
 aside.archive {
-  color:#eee;
+  position:fixed;
   width:175px;
   text-align:right;
-  float:right;
-  padding-left:10px;
-  border-left: dotted 1px #ccc;
+  left:925px;
+  h2 {
+    margin-bottom:18px;
+  }
   ul {
     list-style-type:none;
     li {
-
       text-overflow:ellipsis;
       overflow:hidden;
       white-space:nowrap;
+      margin-bottom:3px;
     }
   }
 }

@@ -1,7 +1,8 @@
-= render 'archives'
-%section.posts
+%aside.archive
+  = render 'archives'
+%section
   - @posts.each do |post|
-    %article
+    %article.post
       .post-title
         %h1
           = link_to post.title, post

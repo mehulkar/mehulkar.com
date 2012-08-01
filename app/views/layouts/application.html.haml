@@ -10,7 +10,7 @@
 	%body
 		#page
 			#header.title
-				= link_to "Mehul Kar", root_path
+				= link_to "Hello", root_path
 				.tagline
 					%span.bio=link_to "I", about_path
 					%span.blog=link_to "write", posts_path
@@ -18,5 +18,4 @@
 			#content
 				= yield
 			#footer
-				Follow me on 
-				=link_to "twitter", "http://twitter.com/mehulkar/"
+				=link_to "@mehulkar", "http://twitter.com/mehulkar/"

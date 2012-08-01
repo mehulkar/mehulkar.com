@@ -5,3 +5,11 @@
 $header-font: 'Poiret One', cursive;
 $body-font: 'PT Mono', sans-serif;
 $base-font-size: 12px;
+
+@mixin button {
+  background-color:#eee;
+  border-radius:15px;
+  padding:5px 10px;
+  color:#ff0000;
+  display:inline-block;
+}

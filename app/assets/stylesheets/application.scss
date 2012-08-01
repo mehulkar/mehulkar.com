@@ -16,14 +16,19 @@
 @import "projects.scss";
 
 * {margin:0;padding:0;}
-
+h1 { font-size: 1.5em;}
 body {
+	color:#eee;
 	background-image:url('classy_fabric.png');
 	font-size: $base-font-size;
 	font-family: 'Open sans';
 	a, a:visited, a:hover {
 		color:#eee;
 		text-decoration:none;
+		&.button{
+			@include button;
+			color:red;
+		}
 	}
 	p {
 		font-size: 16px;
@@ -49,15 +54,12 @@ body {
 }
 
 .tagline {
-	background-color:#eee;
-	border-radius:15px;
-	padding:5px 10px;
-	display:inline;
+	@include button;
+	text-align:center;
 	font-size:0.5em;
+	display:inline;
 	position:relative;
 	bottom:5px;
-	color:red;
-	text-align:center;
 	margin:0 25px;
 }
 #footer {
@@ -65,4 +67,7 @@ body {
 	border-top: solid 1px #ccc;
 	padding: 10px 0;
 	font-size: 14px;
+	position:fixed;
+	bottom:25px;
+	left:50px;
 }
