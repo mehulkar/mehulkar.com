@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all.reverse
+    @posts = Post.all.sort_by(&:created_at).reverse
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :fenced_code_blocks => true)
     respond_to do |format|
       format.html # index.html.erb
@@ -11,7 +11,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @posts = Post.all
+    @posts = Post.all.sort_by(&:created_at).reverse
     @post = Post.find(params[:id])
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :fenced_code_blocks => true)
     respond_to do |format|
