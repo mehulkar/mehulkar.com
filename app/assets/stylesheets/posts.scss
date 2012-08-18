@@ -1,9 +1,17 @@
+article.post, section.posts {
+  max-width:500px;
+  width:95%;
+}
 article.post {
-  width: 500px;
+  width:100%;
   color:#dddddd;
   text-align:left;
   margin-bottom:50px;
   float:left;
+  div {
+    position:relative;
+    width:100%;
+  }
   p {    
     font-size:16px;
     line-height:20px;
@@ -28,14 +36,16 @@ article.post {
 }
 section.posts {
   float:left;
-  width:80%;
   overflow:hidden;
 }
 aside.archive {
   float:left;
   height:100%;
   margin-right:20px;
-  width:15%;
+  margin-bottom: 10px;
+  width:17%;
+  max-width:175px;
+  min-width:150px;
   h2 {
     margin-bottom:18px;
   }
