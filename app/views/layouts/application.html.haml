@@ -15,7 +15,6 @@
 					%span.bio=link_to "I", about_path
 					%span.blog=link_to "write", posts_path
 					%span.portfolio=link_to "code", portfolio_path
+				= link_to(image_tag('twitter.png', class: 'twitter'), 'http://twitter.com/mehulkar')
 			#content
 				= yield
-			#footer
-				=link_to "@mehulkar", "http://twitter.com/mehulkar/"

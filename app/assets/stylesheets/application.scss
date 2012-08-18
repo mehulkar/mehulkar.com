@@ -51,6 +51,12 @@ body {
 	color:white;
 	font-size:40px;
 	padding:50px;
+	img.twitter {
+		height:50px;
+		width:50px;
+		position:relative;
+		top:10px;
+	}
 }
 
 .tagline {
@@ -70,4 +76,18 @@ body {
 	position:fixed;
 	bottom:25px;
 	left:50px;
+}
+
+@media screen and (max-device-width: 480px) {
+	* { margin: 0; border: 0; padding: 0; }
+	body {
+		-webkit-text-size-adjust: none;
+	}
+	div {
+		clear: both !important;
+		float: none !important;
+		width: 320px !important;
+		padding: 0 !important;
+		margin: 0 !important;
+	}
 }
