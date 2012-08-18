@@ -3,6 +3,7 @@ article.post {
   color:#dddddd;
   text-align:left;
   margin-bottom:50px;
+  float:left;
   p {    
     font-size:16px;
     line-height:20px;
@@ -25,11 +26,16 @@ article.post {
     }  
   }
 }
-
+section.posts {
+  float:left;
+  width:80%;
+  overflow:hidden;
+}
 aside.archive {
-  float:right;
-  width:175px;
-  text-align:right;
+  float:left;
+  height:100%;
+  margin-right:20px;
+  width:15%;
   h2 {
     margin-bottom:18px;
   }

@@ -40,33 +40,48 @@ body {
 	}
 }
 
+body, #page {width:100%;height:100%;}
 #page {
-	width:800px;
-	margin: 0 auto;
+	display: -webkit-box; 
+	-webkit-box-orient: vertical; 
+	-webkit-box-align: stretch; 
+	-webkit-box-pack: start;
 }
-
+#page #header, #page #content {
+	-webkit-box-flex: 1;
+}
 #header{
+	position:fixed;
+	width:100%;
+	background-color:lighten(#000, 20%);
+	border-bottom: 1px darken(white, 60%) solid;
+	padding:10px;
+	margin-bottom:50px;
 	text-align:center;
 	font-family: 'Poiret One', sans-serif;
 	color:white;
 	font-size:40px;
-	padding:50px;
 	img.twitter {
 		height:50px;
 		width:50px;
 		position:relative;
 		top:10px;
 	}
+	.tagline {
+		@include button;
+		text-align:center;
+		font-size:0.5em;
+		display:inline;
+		position:relative;
+		bottom:5px;
+		margin:0 25px;
+	}
 }
 
-.tagline {
-	@include button;
-	text-align:center;
-	font-size:0.5em;
-	display:inline;
-	position:relative;
-	bottom:5px;
-	margin:0 25px;
+#content {
+	width:80%;
+	margin: 0 auto;
+	margin-top:100px;
 }
 #footer {
 	margin-bottom:10px;
