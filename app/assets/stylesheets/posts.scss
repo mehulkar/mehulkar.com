@@ -1,55 +1,30 @@
-article.post, section.posts {
+article, section, aside {
+  min-width:300px;
+  max-width:500px;
+  float:left;
+  text-align:left;
+}
+section.posts, article.post {
   max-width:500px;
   width:95%;
 }
-article.post {
-  width:100%;
-  color:#dddddd;
-  text-align:left;
-  margin-bottom:50px;
-  float:left;
-  div {
-    position:relative;
-    width:100%;
-  }
-  p {    
-    font-size:16px;
-    line-height:20px;
-  }
-  .post-title {
-    margin-bottom:5px;
-  }
-  .post-date {
-    border-bottom:dotted 1px #bbb;
-    margin-bottom:10px;
-  }
-  .post-body {
-  }
-  .post-links {
-    a {
-      @include button;
-      font-size:16px;
-      margin:10px 0;
-      display:inline-block;
-    }  
-  }
-}
-section.posts {
-  float:left;
-  overflow:hidden;
-}
-aside.archive {
-  float:left;
-  height:200px;
-  overflow:auto;
-  margin-right:20px;
-  margin-bottom: 10px;
+aside {
   width:17%;
-  max-width:175px;
-  min-width:150px;
-  h2 {
-    margin-bottom:18px;
-  }
+}
+
+section.posts {}
+article.post {
+  color:#dddddd;
+  margin-bottom:50px;
+  div {margin-bottom:10px;}
+  .post-title {}
+  .post-date {border-bottom:dotted 1px #bbb;}
+  .post-body {}
+  .post-links {}
+}
+
+aside.archive {
+  margin:0 20px 10px 0;
   ul {
     list-style-type:none;
     li {
@@ -64,18 +39,21 @@ aside.archive {
 
 // new_post route
 article.write {
-  input {
+  margin: 0 auto;
+  input, textarea {
     display:block;
     width:500px;
+    min-height:20px;
+    padding:10px;
+    font-size:14px;
+    margin:0 auto 10px;
+    background-color:#eee;
   }
   textarea {
-    height:500px;
-    width:500px;
+    height:300px;
   }
-  [type="submit"] {
+  input[type="submit"] {
     width:100px;
+    @include button;
   }
-}
-article.preview {
-
 }

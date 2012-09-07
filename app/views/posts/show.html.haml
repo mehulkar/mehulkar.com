@@ -11,4 +11,4 @@
     = @markdown.render(@post.body).html_safe
   .post-links
     - str = ('&larr; Back').html_safe
-    = link_to str , posts_path
+    = link_to str , posts_path, class: 'button'

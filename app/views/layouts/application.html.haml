@@ -9,8 +9,8 @@
 		= csrf_meta_tags
 	%body
 		#page
-			#header.title
-				= link_to "Hello", root_path
+			#header
+				= link_to "Hello", root_path, class: 'title'
 				.tagline
 					%span.bio=link_to "I", about_path
 					%span.blog=link_to "write", posts_path
@@ -19,4 +19,5 @@
 			#content
 				= yield
 			#footer
+				Ugly Footer &copy;
 			
