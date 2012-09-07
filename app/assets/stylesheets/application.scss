@@ -16,32 +16,24 @@
 @import "projects.scss";
 
 * {margin:0;padding:0;}
-h1, h2, { margin-bottom:15px;}
-h1 { font-size: 1.5em;}
-h2 { font-size: 1.4em;}
+
+
 body {
 	color:#eee;
 	background-image:url('classy_fabric.png');
-	font-size: $base-font-size;
-	font-family: 'Open sans';
+	@include regularfont;
+	h1, h2, { margin-bottom:15px;}
+	h1 { font-size: 1.5em;}
+	h2 { font-size: 1.4em;}
+	p {margin-bottom:15px;}
+	img {max-width:100%;}
 	a, a:visited, a:hover {
 		color:#eee;
 		text-decoration:none;
-		&.button{
-			@include button;
-			color:red;
-		}
-	}
-	p {
-		font-size: 16px;
-		font-weight: 300;
-		margin-bottom:15px;
-	}
-	img {
-		max-width:100%;
+		&.button{@include button;}
 	}
 }
-
+// Box kit
 body, #page {width:100%;height:100%;}
 #page {
 	display: -webkit-box; 
@@ -53,18 +45,25 @@ body, #page {width:100%;height:100%;}
 	-webkit-box-flex: 1;
 	overflow:auto;
 }
-#header{
-	z-index: 999;
+// End box kit
+#header, #content, #footer {
+	padding: 10px;
+	margin: 0 auto;
+}
+#header, #footer {
 	position:fixed;
 	width:100%;
-	background-color:lighten(#000, 10%);
-	border-bottom: 1px darken(white, 60%) solid;
-	padding:10px;
-	margin-bottom:50px;
-	text-align:center;
+	margin: 0 auto;
+}
+#header{
 	font-family: 'Poiret One', sans-serif;
 	color:white;
-	font-size:40px;
+	font-size:$base-font-size * 3;
+	z-index: 999;
+	background-color:lighten(#000, 10%);
+	border-bottom: 1px darken(white, 60%) solid;
+	margin-bottom:50px;
+	text-align:center;
 	img.twitter {
 		height:50px;
 		width:50px;
@@ -73,24 +72,17 @@ body, #page {width:100%;height:100%;}
 	}
 	.tagline {
 		@include button;
-		text-align:center;
-		font-size:0.5em;
+		font-size:$base-font-size * 1.5;
 		position:relative;
 		bottom:5px;
 		margin:0 25px;
 	}
 }
 
-#content {
-	padding:10px;
-	margin: 100px auto 0;
-}
+#content { margin-top:100px; }
+
 #footer {
-	position:fixed;
 	bottom:0;
-	width:100%;
-	margin: 0 auto;
-	padding:5px;
 	text-align:center;
 	font-size: 14px;
 	background-color:#eee;

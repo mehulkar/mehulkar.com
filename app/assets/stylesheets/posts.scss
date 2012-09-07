@@ -8,30 +8,38 @@ section.posts, article.post {
   max-width:500px;
   width:95%;
 }
-aside {
-  width:17%;
-}
+
+aside {width:17%;}
 
 section.posts {}
 article.post {
   color:#dddddd;
   margin-bottom:50px;
   div {margin-bottom:10px;}
-  .post-title {}
+  .post-title {
+    overflow:hidden;
+  }
   .post-date {border-bottom:dotted 1px #bbb;}
   .post-body {}
   .post-links {}
+  ul, ol {
+    li{
+      list-style-position:inside;
+    }
+  }
 }
 
 aside.archive {
   margin:0 20px 10px 0;
+  border:1px dotted #ccc;
+  padding:5px;
   ul {
     list-style-type:none;
     li {
       text-overflow:ellipsis;
       overflow:hidden;
       white-space:nowrap;
-      margin-bottom:3px;
+      margin-bottom:1px;
     }
   }
 }

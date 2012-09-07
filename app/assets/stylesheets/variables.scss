@@ -4,7 +4,7 @@
 
 $header-font: 'Poiret One', cursive;
 $body-font: 'PT Mono', sans-serif;
-$base-font-size: 12px;
+$base-font-size: 16px;
 
 @mixin button {
   background-color:#eee;
@@ -12,5 +12,14 @@ $base-font-size: 12px;
   padding:5px 10px;
   color:#ff0000;
   display:inline-block;
+  font-size:$base-font-size;
+}
+
+@mixin regularfont {
   font-size:16px;
+  color: #eee;
+  font-family:'Open Sans';
+  color:#ddd;
+  font-weight:300;
+  line-height:(16*1.5)px;
 }
