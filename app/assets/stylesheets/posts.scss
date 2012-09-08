@@ -26,6 +26,13 @@ article.post {
     list-style-position:outside;
     margin-left:1.5em;
   }
+  pre {
+    font-size:0.8em;
+    padding:10px;
+    overflow:scroll;
+    color: #444;
+    background-color:#e3e3ea;
+  }
 }
 
 aside.archive {
