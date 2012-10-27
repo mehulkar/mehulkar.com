@@ -35,19 +35,24 @@ article.post {
   }
 }
 
-aside.archive {
-  margin:0 20px 10px 0;
-  border:1px dotted #ccc;
+aside.sidebar {
+  font-size:12px;
   padding:5px;
-  ul {
-    list-style-type:none;
-    li {
-      text-overflow:ellipsis;
-      overflow:hidden;
-      white-space:nowrap;
-      margin-bottom:1px;
+  margin:0 20px 10px 0;
+  .archives {
+    padding:5px;
+    margin-bottom:10px;
+    border:1px dotted #ccc;
+    ul {
+      list-style-type:none;
+      li {
+        text-overflow:ellipsis;
+        overflow:hidden;
+        white-space:nowrap;
+        margin-bottom:1px;
+      }
     }
-  }
+  }  
 }
 // end show and index post routes
 
