@@ -24,17 +24,22 @@ h1 {
     cursor:pointer;
   }
 }
-
-ul.links {
-  text-align:center;
-  list-style-type:none;
-  width:20%;
+#home {
+  width:40%;
   margin:0 auto;
-  li {
-    margin-bottom:5px;
-    &:hover {
-      border-bottom:dotted 1px #ccc;
-      margin-bottom:5px;  
+  ul.links {
+    padding:20px;
+    text-align:center;
+    list-style-type:none;
+    width:30%;
+    margin:0 auto 20px;
+    &:first-child {border-bottom:solid 1px #fff;}
+    li {
+      margin-bottom:10px;
+      &:hover {
+        border-bottom:dotted 1px #ccc;
+        margin-bottom:5px;  
+      }
     }
   }
 }
