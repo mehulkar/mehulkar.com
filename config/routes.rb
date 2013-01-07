@@ -3,6 +3,7 @@ Blog::Application.routes.draw do
 
   get "static_pages/home"
   get "static_pages/about"
+  get "static_pages/shitaaronsays"
   
   resources :posts
   resources :projects
@@ -10,6 +11,9 @@ Blog::Application.routes.draw do
   match "/about" => 'static_pages#about'
   match "/portfolio" => 'projects#index'
   match "/writes" => 'posts#index'
+  match "/shitaaronsays" => 'static_pages#shit_aaron_says'
+  
+
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
