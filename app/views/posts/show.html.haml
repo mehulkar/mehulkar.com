@@ -1,11 +1,8 @@
-%aside.sidebar
-  = render 'archives'
 %article.post
-  .post-title
-    %h1
-      = link_to @post.title, @post
-  .post-date
-    Last updated: 
+  .post-details
+    %h3
+      =@post.title
+    Last updated:
     = @post.updated_at.strftime(format='%B %e, %Y')
   .post-body
     = @markdown.render(@post.body).html_safe

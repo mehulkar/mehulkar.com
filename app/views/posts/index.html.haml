@@ -1,13 +1,5 @@
-%aside.sidebar
-  = render 'archives'
-%section.posts
-  - @posts.each do |post|
-    %article.post
-      .post-title
-        %h1
-          = link_to post.title, post
-      .post-date
-        Last updated: 
-        = post.updated_at.strftime(format='%B %e, %Y')
-      .post-body
-        = @markdown.render(post.body).html_safe
+- @posts.each do |post|
+  .post-title
+    %h4
+      = link_to post.title, post
+    = post.created_at.strftime(format='%B %e, %Y')
