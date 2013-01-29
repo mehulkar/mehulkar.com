@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<<html>
+  <head>
+    <title>Yay</title>
+    <%= stylesheet_link_tag "application", media: "all" %>
+    <%= javascript_include_tag "application"%>
+    <%= csrf_meta_tags%>
+  </head>
+  <body>
+    <div id="page">
+      <div id="header">
+        <%= link_to "Hello", root_path, class: 'title' %>
+        <div class="tagline">
+          <%= link_to "I", about_path %>
+          <%= link_to "write", posts_path %>
+          <%= link_to "code", portfolio_path %>
+        </div>
+        <%= link_to(image_tag('twitter.png', class: 'twitter'), 'http://twitter.com/mehulkar') %>
+      </div>
+      <div id="content">
+        <%= yield %>
+      </div>
+      <div id="footer">Mehul Kar, 2013 &copy;</div>
+  </body>
+</html>

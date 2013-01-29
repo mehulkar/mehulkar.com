@@ -1,0 +1,8 @@
+<article class="write">
+  <%= form_form @post do |f| %>
+    = f.text_field :title, class: 'title'
+    = f.text_area :body, class: 'body'
+    .actions
+      = f.submit 'Save', class: 'button'
+  <% end %>
+</article>
