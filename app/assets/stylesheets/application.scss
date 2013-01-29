@@ -67,14 +67,7 @@ hr { width: 50%; margin: 0 auto;}
 ul {
   list-style-type:none;
   margin:20px auto;
-  width:200px;
-  li {
-    margin-bottom:10px;
-    &:hover {
-      border-bottom:dotted 1px #ccc;
-      margin-bottom:5px;  
-    }
-  }
+  li {margin-bottom:10px;}
 }
 
 @media screen and (max-device-width: 480px) {
