@@ -12,12 +12,12 @@
 			#header
 				= link_to "Hello", root_path, class: 'title'
 				.tagline
-					%span.bio=link_to "I", about_path
-					%span.blog=link_to "write", posts_path
-					%span.portfolio=link_to "code", portfolio_path
+					=link_to "I", about_path
+					=link_to "write", posts_path
+					=link_to "code", portfolio_path
 				= link_to(image_tag('twitter.png', class: 'twitter'), 'http://twitter.com/mehulkar')
 			#content
 				= yield
 			#footer
-				Ugly Footer &copy;
+				Mehul Kar, 2013 &copy;
 			
