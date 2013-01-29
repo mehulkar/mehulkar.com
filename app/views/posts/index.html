@@ -1,5 +1,6 @@
-- @posts.each do |post|
-  .post-title
-    %h4
-      = link_to post.title, post
-    = post.created_at.strftime(format='%B %e, %Y')
+<%- @posts.each do |post| %>
+  <div class="post-title">
+    <h4><%= link_to post.title, post %></h4>
+    <%= post.created_at.strftime(format='%B %e, %Y') %>
+  </div>
+<% end %>
