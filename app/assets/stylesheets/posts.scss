@@ -30,6 +30,9 @@ article.post {
   ul, ol {
     margin: 0 auto;
   }
+  ul {
+    list-style-type: disc;
+  }
   pre {
     font-size:0.8em;
     padding:10px;

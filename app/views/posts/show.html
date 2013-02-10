@@ -8,11 +8,11 @@
   <div class="post-body">
     <%= @markdown.render(@post.body).html_safe %>
   </div>
-  <div class="post-links">
-    <%- str = ('&larr; Back').html_safe %>
-    <%= link_to str , posts_path, class: 'button' %>
-  </div>
-  <p>
-    <%= link_to(image_tag('twitter.png', class: 'twitter'), 'http://twitter.com/mehulkar') %>
-  </p>
 </article>
+<p>
+  <%= link_to(image_tag('twitter.png', class: 'twitter'), 'http://twitter.com/mehulkar') %>
+</p>
+<div class="post-links">
+  <% str = ('&larr; Back').html_safe %>
+  <%= link_to str , posts_path, class: 'button' %>
+</div>
