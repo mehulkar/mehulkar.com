@@ -23,9 +23,11 @@ article.post {
       margin-bottom:5px;
     }  
   }
+  .post-body {
+    text-align: left;
+  }
   a { border-bottom: dotted 1px #eee;}
   ul, ol {
-    max-width: 200px;
     margin: 0 auto;
   }
   pre {
