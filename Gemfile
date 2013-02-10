@@ -12,6 +12,9 @@ gem 'nokogiri'
 
 group :development, :test do
   gem 'sqlite3'
+  gem 'pry'
+  gem 'pry-stack_explorer'
+  gem 'pry-debugger'
 end
 
 gem 'sass-rails',   '~> 3.2.3'
