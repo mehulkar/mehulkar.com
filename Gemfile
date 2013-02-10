@@ -9,7 +9,7 @@ gem 'thin'
 gem 'redcarpet'
 gem 'albino'
 gem 'nokogiri'
-
+gem 'twitter'
 group :development, :test do
   gem 'sqlite3'
   gem 'pry'

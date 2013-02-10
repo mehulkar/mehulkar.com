@@ -2,6 +2,8 @@ class Post < ActiveRecord::Base
   validates_presence_of :title, :body
   belongs_to :category
 
+  after_save :tweet
+
   # TODO: Make this not messy and not make assumptions about existing categories.
   def categorize
     if self.title.downcase.include? "quote" or self.title.include? "quotation"
@@ -35,5 +37,23 @@ class Post < ActiveRecord::Base
   def last_assigned_post_in_category(category_id)
     posts = Post.where(category_id: category_id)
     posts.last if !posts.empty?
+  end
+
+  def url
+    # TODO use the host for this instead of hard coding.
+    # it's ok for now because we're only using it in one place
+    "http://mehulkar.com/posts/#{self.id}"
+  end
+
+  def tweet
+    tweet = self.title + ": " + self.url
+    if Rails.env == "production"
+      Twitter.update(tweet)
+    else
+      # TODO rails has a logger?
+      puts "==============================="
+      puts "#{tweet}"
+      puts "==============================="
+    end
   end
 end
