@@ -1,13 +1,17 @@
 .post-title {
   width:300px;
-  margin:0 auto 20px;
-  padding-bottom: 20px;
+  margin: 0 auto;
+  padding: 10px 0;
   border-bottom: dotted 1px #eee;
-  h4 {
+  .title {
     text-overflow:ellipsis;
     white-space: nowrap;
     overflow: hidden;
-
+    text-transform: capitalize;
+  }
+  .date {
+    font-size: $base-font-size * 0.7;
+    float: right;
   }
 }
 
@@ -29,6 +33,7 @@ article.post {
   a { border-bottom: dotted 1px #eee;}
   ul, ol {
     margin: 0 auto;
+    list-style-position: inside;
   }
   ul {
     list-style-type: disc;
@@ -39,6 +44,10 @@ article.post {
     overflow:scroll;
     color: #444;
     background-color:#e3e3ea;
+  }
+  blockquote {
+    padding: 0 50px;
+    font-size: $base-font-size * 0.9;
   }
 }
 
