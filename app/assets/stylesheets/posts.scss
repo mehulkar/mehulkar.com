@@ -32,8 +32,12 @@ article.post {
   }
   a { border-bottom: dotted 1px #eee;}
   ul, ol {
-    margin: 0 auto;
-    list-style-position: inside;
+    margin: 0 0 20px 40px;
+    list-style-position: outside;
+    font-size: $base-font-size * 0.9;
+    li {
+      margin-bottom: 10px;
+    }
   }
   ul {
     list-style-type: disc;
