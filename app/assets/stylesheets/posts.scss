@@ -1,17 +1,22 @@
 .post-title {
-  width:500px;
   margin: 0 auto;
   padding: 10px 0;
   border-bottom: dotted 1px #eee;
-  .title {
+  position: relative;
+  & > * {
+    display: inline-block;
     text-overflow:ellipsis;
     white-space: nowrap;
     overflow: hidden;
+  }
+  .title {
     text-transform: capitalize;
   }
   .date {
     font-size: $base-font-size * 0.7;
-    float: right;
+    right: 0;
+    position: absolute;
+    max-width: 15%;
   }
 }
 
