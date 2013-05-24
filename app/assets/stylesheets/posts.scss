@@ -5,7 +5,7 @@
   position: relative;
   & > * {
     display: inline-block;
-    text-overflow:ellipsis;
+    text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
   }
