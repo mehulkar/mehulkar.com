@@ -58,6 +58,8 @@ img.twitter {
   .tagline {
     @include button;
     font-size:$base-font-size * 1.5;
+    position: relative;
+    bottom: 8px;
     a {
       color: red;
       &:hover{ text-decoration: underline;}
