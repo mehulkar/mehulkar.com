@@ -10,8 +10,13 @@
   box-sizing:border-box;
 }
 
+h1, h2, h3, h4, h5 {
+  font-family: $header-font;
+}
+
 h1 { font-size: 1.5em;}
 h2 { font-size: 1.4em;}
+
 p, pre, code { margin-bottom:15px; }
 a, a:visited, a:hover {
   color:#eee;
@@ -21,19 +26,20 @@ a, a:visited, a:hover {
 img { max-width:100%; }
 
 body {
-  background-image:url('classy_fabric.png');
+  background-image: -webkit-radial-gradient(center center, circle cover, $background, darken($background, 30%));
+  background-image: -moz-radial-gradient(center center, circle cover, $background, darken($background, 30%));
   @include regularfont;
 }
 
-html, body, #page {
+html, body {
   width:100%;
   height:100%;
-  margin: 0 auto;
 }
 
 #page {
-  height:100%;
+  margin: 0 auto;
   max-width: 768px;
+  min-width: 400px;
   padding: 0 20px;
 }
 
@@ -49,11 +55,25 @@ img.twitter {
   top:10px;
 }
 
+#content {
+  padding: 30px 0;
+  max-width: 500px;
+  margin: 0 auto;
+  a { border-bottom: dotted 1px #bbb;}
+  p {
+    line-height: 25px;
+    margin-bottom: 30px;
+  }
+}
+
+#footer {
+  border-top:1px darken(white, 60%) solid;
+}
+
 #header{
   font-family: 'Poiret One', sans-serif;
   color:white;
   font-size:$base-font-size * 3;
-  background-color:lighten(#000, 10%);
   border-bottom: 1px darken(white, 60%) solid;
   .tagline {
     @include button;
