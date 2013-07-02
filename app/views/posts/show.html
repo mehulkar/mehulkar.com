@@ -4,7 +4,7 @@
     Last updated:
     <%= @post.updated_at.strftime(format='%B %e, %Y') %>
   </div>
-  
+
   <div class="post-body">
     <%= @markdown.render(@post.body).html_safe %>
   </div>

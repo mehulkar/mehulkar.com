@@ -1,8 +1,18 @@
-.post-title {
+#content a.post-title {
+  display: block;
   margin: 0 auto;
   text-align: left;
-  padding: 10px 0;
+  padding: 10px;
   position: relative;
+  color: #ddd;
+  margin-left: 3px;
+  // margin-bottom: 5px;
+  box-shadow: 0 1px 0 #B8860B;
+  &:hover {
+    border-left: solid 3px #B8860B;
+    margin-left: 0;
+    box-shadow: 0 1px 3px #B8860B;
+  }
   & > * {
     display: inline-block;
     text-overflow: ellipsis;
@@ -10,7 +20,9 @@
     overflow: hidden;
     text-transform: capitalize;
   }
-  .title { max-width: 74%; }
+  .title {
+    width: 74%;
+  }
   .date {
     float:right;
     font-size: $base-font-size * 0.7;
@@ -22,7 +34,6 @@ article.post {
   max-width: 500px;
   margin:0 auto;
   .post-details {
-    border-bottom:dotted 1px #eee;
     margin-bottom: 20px;
     padding-bottom: 20px;
     h3 {

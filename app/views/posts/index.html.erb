@@ -1,8 +1,8 @@
 <div class="posts">
   <% @posts.each do |post| %>
-    <div class="post-title">
-      <%= link_to post.title, post, class: 'title' %>
-      <div class="date"><%= post.created_at.strftime(format='%B %e, %Y') %></div>
-    </div>
+    <%= link_to(post, class: 'post-title') do %>
+      <div class="title"><%= post.title %></div>
+      <span class="date"><%= post.created_at.strftime(format='%B %e, %Y') %></span>
+    <% end %>
   <% end %>
 </div>
