@@ -1,12 +1,12 @@
 class PostsController < ApplicationController
   before_filter :require_login, :except =>[:show, :index]
+
   def index
-    @posts = Post.all.sort_by(&:created_at).reverse
+    @posts = Post.order('created_at DESC')
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :fenced_code_blocks => true)
   end
 
   def show
-    @posts = Post.all.sort_by(&:created_at).reverse
     @post = Post.find(params[:id])
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :fenced_code_blocks => true)
   end
@@ -14,7 +14,6 @@ class PostsController < ApplicationController
   def new
     @post = Post.new
   end
-
 
   def edit
     @post = Post.find(params[:id])
@@ -25,8 +24,8 @@ class PostsController < ApplicationController
     @post.categorize
     @post.adjust_title
 
-    if @post.save 
-      redirect_to @post 
+    if @post.save
+      redirect_to @post
     else
       render action: 'new'
     end
