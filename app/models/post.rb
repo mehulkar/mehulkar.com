@@ -47,7 +47,7 @@ class Post < ActiveRecord::Base
 
   def attempt_tweet
     if Rails.env.production?
-      tweet
+      tweet if (views == 0) || (views % 5 == 0)
     else
       puts "tweeting #{title}"
     end
