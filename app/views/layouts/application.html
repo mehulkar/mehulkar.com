@@ -10,7 +10,7 @@
     <div id="page">
       <div id="header">
         <%= link_to "Hello", root_path, class: 'title' %>
-        <div class="tagline"> I write code</div>
+        <div class="tagline"> I <%= link_to "write", writes_path %> code</div>
         <%= link_to(image_tag('twitter.png', class: 'twitter'), 'http://twitter.com/mehulkar') %>
       </div>
       <div id="content">
