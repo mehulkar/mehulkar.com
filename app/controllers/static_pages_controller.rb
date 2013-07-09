@@ -4,8 +4,4 @@ class StaticPagesController < ApplicationController
 
   def about
   end
-
-  def portfolio
-  	@projects = Project.all
-  end
 end
