@@ -13,6 +13,15 @@
   <%= link_to(image_tag('twitter.png', class: 'twitter'), 'http://twitter.com/mehulkar') %>
 </p>
 <div class="post-links">
-  <% str = ('&larr; Back').html_safe %>
-  <%= link_to str , posts_path, class: 'button' %>
+  <% if @last_post %>
+    <% last_post_str = ("&larr; <br> #{@last_post.title}").html_safe %>
+    <%= link_to last_post_str, @last_post, class: 'button' %>
+  <% end %>
+  <% if @next_post %>
+    <% next_post_str = ("&rarr; <br> #{@next_post.title}").html_safe %>
+    <%= link_to next_post_str, @next_post, class: 'button' %>
+  <% end %>
+  <br>
+  <br>
+  <%= link_to "Back to All Posts" , posts_path, class: 'button' %>
 </div>

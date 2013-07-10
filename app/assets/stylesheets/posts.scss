@@ -10,6 +10,16 @@
     }
   }
 }
+
+#content .post-links {
+  .button {
+    text-transform: capitalize;
+    width: 200px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
 #content a.post-title {
   display: block;
   margin: 0 auto;
