@@ -18,15 +18,22 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    text-transform: capitalize;
+  }
+  .subtext {
+    font-size: $base-font-size * 0.7;
+    line-height: 22px;
+    max-width: 20%;
+
+  }
+  .date { float:right; }
+  .views {
+    float:left;
+    margin-right: 10px;
+    color: #999;
   }
   .title {
-    width: 74%;
-  }
-  .date {
-    float:right;
-    font-size: $base-font-size * 0.7;
-    max-width: 24%;
+    width: 64%;
+    text-transform: capitalize;
   }
 }
 

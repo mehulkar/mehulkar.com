@@ -1,8 +1,9 @@
 <div class="posts">
   <% @posts.each do |post| %>
     <%= link_to(post, class: 'post-title') do %>
+      <span class="subtext views"><%= pluralize post.views, 'view' %></span>
       <div class="title"><%= post.title %></div>
-      <span class="date"><%= post.created_at.strftime(format='%B %e, %Y') %></span>
+      <span class="subtext date"><%= post.created_at.strftime(format='%B %e, %Y') %></span>
     <% end %>
   <% end %>
 </div>
