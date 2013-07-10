@@ -2,7 +2,7 @@ class Post < ActiveRecord::Base
   validates_presence_of :title, :body
   belongs_to :category
 
-  after_save :attempt_tweet
+  after_create :tweet
 
   # TODO: Make this not messy and not make assumptions about existing categories.
   def categorize
@@ -45,14 +45,6 @@ class Post < ActiveRecord::Base
     "http://mehulkar.com/posts/#{self.id}"
   end
 
-  def attempt_tweet
-    if Rails.env.production?
-      tweet if (views == 0) || (views % 10 == 0)
-    else
-      puts "tweeting #{title}"
-    end
-  end
-
   def tweet_text
     "#{self.title} - #{self.url}"
   end
@@ -61,7 +53,7 @@ class Post < ActiveRecord::Base
     begin
       Twitter.update(tweet_text)
     rescue => e
-      puts "#{e.inspect} - #{self.title}"
+      puts "#{e.inspect} - #{tweet_text}"
     end
   end
 end
