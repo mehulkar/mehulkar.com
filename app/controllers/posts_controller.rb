@@ -2,8 +2,13 @@ class PostsController < ApplicationController
   before_filter :require_login, :except =>[:show, :index]
 
   def index
-    @posts = Post.order('created_at DESC')
-    @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :fenced_code_blocks => true)
+    @posts = if params[:sort] == "views"
+      Post.order('views DESC')
+    elsif params[:sort] == "recent"
+      Post.order('created_at DESC')
+    else
+      Post.order('created_at DESC')
+    end
   end
 
   def show

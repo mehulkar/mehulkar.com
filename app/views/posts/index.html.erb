@@ -1,3 +1,7 @@
+<nav>
+	<li><%= link_to "Popular", controller: "posts", sort: "views" %></li>
+	<li><%= link_to "Recent", controller: "posts", sort: "recent" %></li>
+</nav>
 <div class="posts">
   <% @posts.each do |post| %>
     <%= link_to(post, class: 'post-title') do %>
