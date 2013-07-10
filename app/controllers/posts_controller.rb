@@ -2,11 +2,10 @@ class PostsController < ApplicationController
   before_filter :require_login, :except =>[:show, :index]
 
   def index
-    @posts = if params[:sort] == "views"
+    redirect_to posts_path(sort: "recent") if !params[:sort]
+    @posts = if params[:sort] == "popular"
       Post.order('views DESC')
     elsif params[:sort] == "recent"
-      Post.order('created_at DESC')
-    else
       Post.order('created_at DESC')
     end
   end
