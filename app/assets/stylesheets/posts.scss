@@ -22,17 +22,19 @@
   .subtext {
     font-size: $base-font-size * 0.7;
     line-height: 22px;
-    max-width: 20%;
-
   }
-  .date { float:right; }
+  .date {
+    float:right;
+    width: 15%
+  }
   .views {
     float:left;
     margin-right: 10px;
     color: #999;
+    width: 12%;
   }
   .title {
-    width: 64%;
+    width: 70%;
     text-transform: capitalize;
   }
 }
