@@ -1,3 +1,4 @@
+<% content_for :title, "#{@post.title.split(' ').map(&:capitalize).join(' ')} - " %>
 <article class="post">
   <div class="post-details">
     <h3><%= @post.title %></h3>
