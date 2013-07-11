@@ -11,6 +11,10 @@ class PostsController < ApplicationController
   end
 
   def show
+    if params[:random] == "true"
+      num = rand(0..Post.count)
+      redirect_to post_path(Post.find(num))
+    end
     @post = Post.find(params[:id])
     @post.views += 1
     @post.save

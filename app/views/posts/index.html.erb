@@ -1,6 +1,7 @@
 <nav>
-	<li><%= link_to "Popular", posts_path(sort: "popular") %></li>
-	<li><%= link_to "Recent", posts_path %></li>
+  <li><%= link_to "Popular", posts_path(sort: "popular") %></li>
+  <li><%= link_to "Recent", posts_path %></li>
+  <li><%= link_to "Random Post", post_path(id: 1, random: true) %></li>
 </nav>
 <div class="posts">
   <% @posts.each do |post| %>
