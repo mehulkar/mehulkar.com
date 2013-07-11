@@ -1,7 +1,7 @@
-<% content_for :title, "#{@post.title.split(' ').map(&:capitalize).join(' ')} - " %>
+<% content_for :title, "#{@post.formatted_title} - " %>
 <article class="post">
   <div class="post-details">
-    <h3><%= @post.title %></h3>
+    <h3><%= @post.formatted_title %></h3>
     <div class="date"><%= @post.created_at.strftime(format='%B %e, %Y') %></div>
     <div class="sub-title">Views: <%= @post.views %></div>
   </div>

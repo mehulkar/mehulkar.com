@@ -6,7 +6,7 @@
   <% @posts.each do |post| %>
     <%= link_to(post, class: 'post-title') do %>
       <span class="subtext views"><%= pluralize post.views, 'view' %></span>
-      <div class="title"><%= post.title %></div>
+      <div class="title"><%= post.formatted_title %></div>
       <span class="subtext date"><%= post.created_at.strftime(format='%b %e, %Y') %></span>
     <% end %>
   <% end %>

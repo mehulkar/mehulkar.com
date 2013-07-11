@@ -15,6 +15,9 @@ class Post < ActiveRecord::Base
     end
   end
 
+  def formatted_title
+    title.split(' ').map(&:capitalize).join(' ')
+  end
   # We want to add a number to titles if the post is categorized a quote or an epiphany
   def adjust_title
     if self.category
