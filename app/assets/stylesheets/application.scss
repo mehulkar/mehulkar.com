@@ -22,7 +22,11 @@ p, pre, code { margin-bottom:15px; }
 a, a:visited, a:hover {
   color:#eee;
   text-decoration:none;
-  &.button{@include button;}
+  &.button{
+    @include button;
+    text-transform: capitalize;
+    box-shadow: 0px 2px 0 1px #B8860B;
+  }
 }
 img { max-width:100%; }
 

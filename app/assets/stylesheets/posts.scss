@@ -11,15 +11,12 @@
   }
 }
 
-#content .post-links {
+#content .nav-links {
   .button {
-    text-transform: capitalize;
-    width: 200px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+    margin: 0 5px;
   }
 }
+
 #content section {
   margin-bottom: 20px;
 }

@@ -25,18 +25,16 @@
   <div class="fb-like" data-href=<%=@post.url %> data-send="true" data-layout="button_count" data-width="200" data-show-faces="false" data-action="recommend"></div>
 </section>
 
-<section class="post-links">
+<section class="nav-links">
   <% if @last_post %>
-    <% last_post_str = ("&larr; <br> #{@last_post.title}").html_safe %>
+    <% last_post_str = ("&larr; Previous").html_safe %>
     <%= link_to last_post_str, @last_post, class: 'button' %>
   <% end %>
+  <%= link_to "All" , posts_path, class: 'button' %>
   <% if @next_post %>
-    <% next_post_str = ("&rarr; <br> #{@next_post.title}").html_safe %>
+    <% next_post_str = ("Next &rarr;").html_safe %>
     <%= link_to next_post_str, @next_post, class: 'button' %>
   <% end %>
-  <br>
-  <br>
-  <%= link_to "Back to All Posts" , posts_path, class: 'button' %>
 </section>
 
 <section>
