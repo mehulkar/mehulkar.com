@@ -1,8 +1,8 @@
 <% content_for :title, "Blog - " %>
 <nav>
-  <li><%= link_to "Popular", posts_path(sort: "popular") %></li>
-  <li><%= link_to "Recent", posts_path %></li>
-  <li><%= link_to "Random", post_path(id: 1, random: true) %></li>
+  <%= link_to "Popular", posts_path(sort: "popular"), class: 'button' %>
+  <%= link_to "Recent", posts_path, class: 'button' %>
+  <%= link_to "Random", post_path(id: 1, random: true), class: 'button' %>
 </nav>
 <div class="posts">
   <% @posts.each do |post| %>

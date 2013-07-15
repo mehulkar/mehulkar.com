@@ -25,7 +25,7 @@
   <div class="fb-like" data-href=<%=@post.url %> data-send="true" data-layout="button_count" data-width="200" data-show-faces="false" data-action="recommend"></div>
 </section>
 
-<section class="nav-links">
+<nav>
   <% if @last_post %>
     <% last_post_str = ("&larr; Previous").html_safe %>
     <%= link_to last_post_str, @last_post, class: 'button' %>
@@ -35,7 +35,7 @@
     <% next_post_str = ("Next &rarr;").html_safe %>
     <%= link_to next_post_str, @next_post, class: 'button' %>
   <% end %>
-</section>
+</nav>
 
 <section>
   <a href="https://twitter.com/mehulkar" class="twitter-follow-button" data-show-count="false">Follow @mehulkar</a>
