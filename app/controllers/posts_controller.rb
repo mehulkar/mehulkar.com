@@ -33,8 +33,6 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(params[:post])
-    @post.categorize
-    @post.adjust_title
 
     if @post.save
       redirect_to @post
