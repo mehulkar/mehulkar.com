@@ -9,22 +9,25 @@
 /* iPad 5 */
 
 @media screen and (device-aspect-ratio: 2/3) {
-  #page { max-width: 100%; }
-  #content { max-width: 90%; }
-  #page { font-size: 32px; line-height: 48px; }
-  #content p, #content > * { font-size: 32px; line-height: 48px;}
+  #page { max-width: 90%; }
+  #content {
+    max-width: 90%;
+    p { line-height: 48px; }
+  }
 }
 @media screen and (device-aspect-ratio: 40/71) {
-  #page { max-width: 100%; }
-  #content { max-width: 90%; }
-  #page { font-size: 32px; line-height: 48px; }
-  #content p, #content > * { font-size: 32px; line-height: 48px;}
+  #page { max-width: 90%; }
+  #content {
+    max-width: 90%;
+    p { line-height: 48px; }
+  }
 }
 @media screen and (device-aspect-ratio: 3/4) {
-  #page { max-width: 100%; }
-  #content { max-width: 90%; }
-  #page { font-size: 32px; line-height: 48px; }
-  #content p, #content > * { font-size: 32px; line-height: 48px;}
+  #page { max-width: 90%; }
+  #content {
+    max-width: 90%;
+    p { line-height: 48px; }
+  }
 }
 
 @media screen and (max-device-width: 480px) {

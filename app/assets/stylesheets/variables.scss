@@ -1,6 +1,6 @@
 $heading-font: 'PT Sans', sans-serif;
 $body-font: 'PT Mono', sans-serif;
-$base-font-size: 16px;
+$base-font-size: 1rem;
 $background: #333;
 
 @mixin button {
@@ -10,6 +10,7 @@ $background: #333;
   color: red;
   border: solid 2px red;
   display:inline-block;
+  vertical-align: middle;
   font-size:$base-font-size;
   min-width: 100px;
   text-overflow: ellipsis;
@@ -18,7 +19,7 @@ $background: #333;
 }
 
 @mixin regularfont {
-  font-size:16px;
+  font-size: $base-font-size;
   font-family:'Open Sans';
   color:#333;
   font-weight:300;
