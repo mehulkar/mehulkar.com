@@ -50,6 +50,7 @@ html, body {
   max-width: 768px;
   min-width: 400px;
   padding: 0 20px;
+  position: relative;
 }
 
 #header, #content, #footer {
@@ -57,11 +58,16 @@ html, body {
   text-align:center;
 }
 
-img.twitter {
-  height:50px;
-  width:50px;
-  position:relative;
-  top:10px;
+.twitter {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  img {
+    height:50px;
+    width:50px;
+    position:relative;
+    top:10px;
+  }
 }
 
 #content {
