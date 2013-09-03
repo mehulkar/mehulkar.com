@@ -107,7 +107,9 @@ article.write {
     padding:10px;
     font-size:14px;
     margin:0 auto 10px;
-    background-color:#eee;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 3px #333;
   }
   textarea {
     height:300px;
