@@ -20,7 +20,7 @@ $background: #333;
 
 @mixin regularfont {
   font-size: $base-font-size;
-  font-family:'Open Sans';
+  font-family: $body-font;
   color:#333;
   font-weight:300;
   line-height:(16*1.5)px;
