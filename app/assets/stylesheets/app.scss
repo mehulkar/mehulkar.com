@@ -10,6 +10,7 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
+  position: relative;
 }
 
 h1, h2, h3, h4, h5 {
@@ -50,24 +51,11 @@ html, body {
   max-width: 768px;
   min-width: 400px;
   padding: 0 20px;
-  position: relative;
 }
 
 #header, #content, #footer {
   padding: 10px;
   text-align:center;
-}
-
-.twitter {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  img {
-    height:50px;
-    width:50px;
-    position:relative;
-    top:10px;
-  }
 }
 
 #content {
@@ -85,10 +73,13 @@ html, body {
   border-top:1px darken(white, 60%) solid;
 }
 
-#header{
+#header {
   font-family: 'Poiret One', sans-serif;
   color:white;
   font-size:$base-font-size * 3;
+  margin-bottom: 20px;
+  background-color: #eee;
+  box-shadow: 0 3px 5px -2px #ccc;
   .tagline {
     @include button;
     font-size:$base-font-size * 1.5;

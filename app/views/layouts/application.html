@@ -13,10 +13,13 @@
         <%= link_to "Hello", root_path, class: 'title' %>
         <div class="tagline"> I <%= link_to "write", posts_path %> <%= link_to "code", "//github.com/mehulkar" %></div>
       </div>
-      <%= link_to(image_tag('twitter.png', class: 'twitter'), 'http://twitter.com/mehulkar', class: 'twitter')  %>
       <div id="content">
         <%= yield %>
       </div>
-      <div id="footer">Mehul Kar, 2013 &copy;</div>
+      <div id="footer">
+        Mehul Kar, 2013 &copy;
+        <br>
+        <%= link_to(image_tag('twitter.png', class: 'twitter', width: '50', height: '50'), 'http://twitter.com/mehulkar', class: 'twitter')  %>
+      </div>
   </body>
 </html>
