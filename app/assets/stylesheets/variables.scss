@@ -7,7 +7,8 @@ $background: #333;
   background-color:#eee;
   border-radius:15px;
   padding:5px 10px;
-  color:red;
+  color: red;
+  border: solid 2px red;
   display:inline-block;
   font-size:$base-font-size;
   min-width: 100px;
@@ -18,9 +19,8 @@ $background: #333;
 
 @mixin regularfont {
   font-size:16px;
-  color: #eee;
   font-family:'Open Sans';
-  color:#ddd;
+  color:#333;
   font-weight:300;
   line-height:(16*1.5)px;
 }

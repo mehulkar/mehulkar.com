@@ -21,20 +21,22 @@ h1 { font-size: 1.5em;}
 h2 { font-size: 1.4em;}
 
 p, pre, code { margin-bottom:15px; }
+
 a, a:visited, a:hover {
-  color:#eee;
+  color: #666;
   text-decoration:none;
   &.button{
     @include button;
     text-transform: capitalize;
-    box-shadow: 0px 2px 0 1px #B8860B;
+    text-decoration: none;
+    border: none;
+    border: solid 1px #B8860B;
+    color: #B8860B;
   }
 }
 img { max-width:100%; }
 
 body {
-  background-image: -webkit-radial-gradient(center center, circle cover, $background, darken($background, 30%));
-  background-image: -moz-radial-gradient(center center, circle cover, $background, darken($background, 30%));
   @include regularfont;
 }
 
@@ -63,19 +65,13 @@ img.twitter {
 }
 
 #content {
-  padding: 30px 0;
+  padding: 15px 0 30px;
   max-width: 500px;
   margin: 0 auto;
-  a {
-    color: #B8860B;
-    &:hover { text-decoration: underline; }
-    &.button:hover {
-      text-decoration: none;
-    }
-  }
   p {
     line-height: 30px;
     margin-bottom: 30px;
+    a { border-bottom: solid 1px #666; }
   }
 }
 
@@ -87,7 +83,6 @@ img.twitter {
   font-family: 'Poiret One', sans-serif;
   color:white;
   font-size:$base-font-size * 3;
-  border-bottom: 1px darken(white, 60%) solid;
   .tagline {
     @include button;
     font-size:$base-font-size * 1.5;

@@ -18,13 +18,11 @@
   text-align: left;
   padding: 10px;
   position: relative;
-  color: #ddd;
+  color: #666;
   margin-left: 3px;
-  box-shadow: 0 1px 0 #B8860B;
   &:hover {
     border-left: solid 3px #B8860B;
     margin-left: 0;
-    box-shadow: 0 1px 3px #B8860B;
   }
   & > * {
     display: inline-block;
