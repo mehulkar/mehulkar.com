@@ -2,12 +2,22 @@ class PostsController < ApplicationController
   before_filter :require_login, :except =>[:show, :index]
 
   def index
-    redirect_to posts_path(sort: "recent") if !params[:sort]
-    @posts = if params[:sort] == "popular"
-      Post.order('views DESC')
-    elsif params[:sort] == "recent"
-      Post.order('created_at DESC')
+    respond_to do |format|
+      format.html do
+        redirect_to posts_path(sort: "recent") if !params[:sort]
+        @posts = if params[:sort] == "popular"
+          Post.order('views DESC')
+        elsif params[:sort] == "recent"
+          Post.order('created_at DESC')
+        end
+      end
+
+      format.atom do
+        @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :fenced_code_blocks => true)
+        @posts = Post.order('created_at DESC')
+      end
     end
+
   end
 
   def show

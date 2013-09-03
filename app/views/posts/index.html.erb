@@ -1,4 +1,6 @@
 <% content_for :title, "Blog" %>
+<% content_for :head, auto_discovery_link_tag(:atom, posts_url(format: "atom")) %>
+
 <nav>
   <%= link_to "Popular", posts_path(sort: "popular"), class: 'button' %>
   <%= link_to "Recent", posts_path, class: 'button' %>
