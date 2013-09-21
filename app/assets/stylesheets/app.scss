@@ -63,10 +63,15 @@ html, body {
   margin-bottom: 20px;
   background-color: #eee;
   box-shadow: 0 3px 5px -2px #ccc;
-  padding: 20px;
+  padding: 10px 0 10px;
+
+  .title {
+    display: block;
+    margin-bottom: 10px;
+  }
 
   .tagline {
-    @include button;
+    color: red;
     font-size:$base-font-size * 1.5;
     position: relative;
     bottom: 8px;
