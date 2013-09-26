@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_filter :require_login, :except =>[:show, :index]
+  before_filter :get_random_post, only: [:show, :index]
   after_filter :increment_views, only: [:show]
 
   def index
@@ -11,7 +12,6 @@ class PostsController < ApplicationController
         elsif params[:sort] == "recent"
           Post.order('created_at DESC')
         end
-        @random_post = Post.all.sample
       end
 
       format.atom do
@@ -26,7 +26,6 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @last_post = Post.find_by_id(@post.id - 1 )
     @next_post = Post.find_by_id(@post.id + 1 )
-    @random_post = Post.all.sample
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :fenced_code_blocks => true)
   end
 
@@ -73,5 +72,9 @@ class PostsController < ApplicationController
 
   def increment_views
     @post.increment_views
+  end
+
+  def get_random_post
+    @random_post = Post.random
   end
 end
