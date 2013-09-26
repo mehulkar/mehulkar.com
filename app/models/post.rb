@@ -8,6 +8,10 @@ class Post < ActiveRecord::Base
     title.split(' ').map(&:capitalize).join(' ')
   end
 
+  def self.random
+    all.sample
+  end
+
   # this is used for tweeting after create
   def url
     "http://mehulkar.com/posts/#{self.id}"
