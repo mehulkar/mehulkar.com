@@ -10,6 +10,7 @@ class PostsController < ApplicationController
         elsif params[:sort] == "recent"
           Post.order('created_at DESC')
         end
+        @random_post = Post.all.sample
       end
 
       format.atom do
@@ -21,9 +22,6 @@ class PostsController < ApplicationController
   end
 
   def show
-    if params[:random] == "true"
-      redirect_to post_path(Post.all.sample)
-    end
     @post = Post.find(params[:id])
     @post.views += 1
     @post.save
