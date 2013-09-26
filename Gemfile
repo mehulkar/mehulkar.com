@@ -12,7 +12,6 @@ gem 'albino'
 gem 'nokogiri'
 gem 'twitter'
 group :development, :test do
-  gem 'sqlite3'
   gem 'pry'
   gem 'pry-stack_explorer'
   gem 'pry-debugger'
@@ -27,9 +26,7 @@ group :assets do
   gem 'uglifier'
 end
 
-group :production do
-  gem 'pg'
-end
+gem 'pg'
 
 group :test do
   gem 'rspec-rails'

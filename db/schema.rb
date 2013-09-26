@@ -28,17 +28,6 @@ ActiveRecord::Schema.define(:version => 20130709061435) do
     t.integer  "views",       :default => 0
   end
 
-  create_table "projects", :force => true do |t|
-    t.string   "name"
-    t.text     "description", :default => "No description given"
-    t.string   "current",     :default => "t"
-    t.string   "demo_url"
-    t.string   "source_url"
-    t.boolean  "public"
-    t.datetime "created_at",                                      :null => false
-    t.datetime "updated_at",                                      :null => false
-  end
-
   create_table "votes", :force => true do |t|
     t.integer  "post_id"
     t.datetime "created_at", :null => false
