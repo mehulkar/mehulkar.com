@@ -92,9 +92,10 @@
     border: solid 1px #B8860B;
   }
   blockquote {
-    padding: 0 50px;
+    margin-left: 50px;
+    padding: 0 20px;
+    border-left: solid 3px #B8860B;
     font-size: $base-font-size * 0.9;
-
   }
 }
 
