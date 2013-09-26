@@ -22,15 +22,16 @@ gem 'sass-rails',   '~> 3.2.3'
 gem 'coffee-rails', '~> 3.2.1'
 gem 'jquery-rails'
 
-group :assets do 
+group :assets do
   gem 'therubyracer'
   gem 'uglifier'
 end
 
 group :production do
   gem 'pg'
-end 
+end
 
 group :test do
   gem 'rspec-rails'
+  gem 'capybara'
 end

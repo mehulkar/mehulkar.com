@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_filter :require_login, :except =>[:show, :index]
+  after_filter :increment_views, only: [:show]
 
   def index
     respond_to do |format|
@@ -23,8 +24,6 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @post.views += 1
-    @post.save
     @last_post = Post.find_by_id(@post.id - 1 )
     @next_post = Post.find_by_id(@post.id + 1 )
     @random_post = Post.all.sample
@@ -70,5 +69,9 @@ class PostsController < ApplicationController
       md5_of_password = Digest::MD5.hexdigest(password)
       username == 'mehulkar' && md5_of_password == '0ccbfd202131ce37047e7974db697b94'
     end
+  end
+
+  def increment_views
+    @post.increment_views
   end
 end

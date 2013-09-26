@@ -26,4 +26,9 @@ class Post < ActiveRecord::Base
       end
     end
   end
+
+  def increment_views
+    self.views += 1
+    self.save
+  end
 end
