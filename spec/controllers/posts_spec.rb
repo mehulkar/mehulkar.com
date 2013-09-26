@@ -10,14 +10,14 @@ describe PostsController do
     it "increments number of views" do
       post = Post.first
       expect(post.views).to eq 0
-      get(post_path(post))
+      get :show, id: post.id
       post.reload
       expect(post.views).to eq 1
     end
 
     it "fetches a random post" do
       post = Post.first
-      get(post_path(post))
+      get :show, id: post.id
       assigns(:random_post).should be_an_instance_of(Post)
     end
   end
@@ -29,7 +29,7 @@ describe PostsController do
       end
     end
     it "fetches a random post" do
-      get posts_path
+      get :index
       assigns(:random_post).should be_an_instance_of(Post)
     end
   end
