@@ -1,4 +1,9 @@
 <% content_for :title, "#{@post.formatted_title} - Blog" %>
+<nav>
+  <%= link_to "Popular", posts_path(sort: "popular"), class: 'button' %>
+  <%= link_to "Recent", posts_path, class: 'button' %>
+  <%= link_to "Random", post_path(@random_post), class: 'button' %>
+</nav>
 <article class="post">
   <div class="post-details">
     <h3><%= @post.formatted_title %></h3>

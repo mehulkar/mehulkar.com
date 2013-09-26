@@ -4,7 +4,7 @@
 <nav>
   <%= link_to "Popular", posts_path(sort: "popular"), class: 'button' %>
   <%= link_to "Recent", posts_path, class: 'button' %>
-  <%= link_to "Random", post_path(@random_post, random: true), class: 'button' %>
+  <%= link_to "Random", post_path(@random_post), class: 'button' %>
 </nav>
 <div class="posts">
   <% @posts.each do |post| %>

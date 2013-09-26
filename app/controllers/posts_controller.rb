@@ -27,6 +27,7 @@ class PostsController < ApplicationController
     @post.save
     @last_post = Post.find_by_id(@post.id - 1 )
     @next_post = Post.find_by_id(@post.id + 1 )
+    @random_post = Post.all.sample
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :fenced_code_blocks => true)
   end
 
