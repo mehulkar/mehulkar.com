@@ -66,7 +66,7 @@ class PostsController < ApplicationController
   def require_login
     authenticate_or_request_with_http_basic('Administration') do |username, password|
       md5_of_password = Digest::MD5.hexdigest(password)
-      username == 'mehulkar' && md5_of_password == '0ccbfd202131ce37047e7974db697b94'
+      username == 'mehulkar' && md5_of_password == '7415b61b3f79bebcccd49ee1e358e956'
     end
   end
 
