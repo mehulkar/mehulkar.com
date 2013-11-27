@@ -83,13 +83,19 @@
   ul {
     list-style-type: disc;
   }
-  pre {
-    font-size:0.8em;
-    padding:10px;
-    overflow:scroll;
+  pre, code {
     color: #444;
     background-color: rgba(238, 238, 238, 0.2);
     border: solid 1px #B8860B;
+  }
+  pre {
+    font-size: 0.8em;
+    padding: 10px;
+    overflow: scroll;
+  }
+  code {
+    display: inline-block;
+    padding: 1px 3px;
   }
   blockquote {
     margin-left: 50px;
