@@ -45,8 +45,6 @@ a, a:visited, a:hover {
 #page {
   margin: 200px auto 0;
   max-width: 768px;
-  min-width: 400px;
-  padding: 0 20px;
 }
 
 #header, #footer {
@@ -65,7 +63,7 @@ a, a:visited, a:hover {
 
 #content {
   max-width: 500px;
-  margin: 0 auto;
+  margin: 0 auto 50px;
 }
 
 #content ol {
@@ -80,28 +78,7 @@ a, a:visited, a:hover {
   line-height: 24px;
 }
 
-#footer {
-  border-top: 1px #666666 solid;
-  color: #999;
-  font-size: 1em;
-}
-
-hr {
-  width: 75%;
-  margin: 0 auto 30px;
-  border-top: 1px solid #999;
-  border-bottom: 0;
-}
-
-ul {
-  list-style-type: none;
-  margin: 20px auto;
-}
-
-ul li {
-  margin-bottom: 10px;
-}
-
+#footer { color: #999; }
 
 /* Responsive */
 
