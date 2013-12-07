@@ -8,22 +8,6 @@
   position: relative;
 }
 
-h1 { font-size: 1.5em; }
-h2 { font-size: 1.4em; }
-
-h1, h2, h3, h4, h5 {
-  font-family: "PT Sans", sans-serif;
-  margin-bottom: 10px;
-}
-
-
-p, pre { margin-bottom: 15px; }
-
-a, a:visited, a:hover {
-  color: #666;
-  text-decoration: none;
-}
-
 body {
   font-size: 1rem;
   font-family: "PT Sans", sans-serif;
@@ -35,6 +19,27 @@ body {
 html, body {
   width: 100%;
   height: 100%;
+}
+
+h1 { font-size: 1.5em; }
+h2 { font-size: 1.4em; }
+
+h1, h2, h3, h4, h5 {
+  font-family: "PT Sans", sans-serif;
+  margin-bottom: 10px;
+}
+
+
+p, pre { margin-bottom: 15px; }
+
+p {
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+
+a, a:visited, a:hover {
+  color: #666;
+  text-decoration: none;
 }
 
 #page {
@@ -58,22 +63,10 @@ html, body {
   padding: 10px 0 10px;
 }
 
-#header .title {
-  display: block;
-  margin-bottom: 10px;
-}
-
 #content {
   padding: 15px 0 30px;
   max-width: 500px;
   margin: 0 auto;
-}
-#content p {
-  line-height: 30px;
-  margin-bottom: 30px;
-}
-#content p a {
-  border-bottom: solid 1px #666;
 }
 
 #footer {
@@ -95,13 +88,6 @@ ul li {
   margin-bottom: 10px;
 }
 
-#content nav {
-  margin-bottom: 20px;
-}
-#content nav .button {
-  display: inline-block;
-  margin: 0 5px;
-}
 
 #content section {
   margin-bottom: 20px;
@@ -115,18 +101,8 @@ ul li {
 /* iPhone < 5 */
 /* iPhone 5 */
 /* iPad 5 */
-@media screen and (device-aspect-ratio: 2 / 3) {
-  #page {
-    max-width: 90%;
-  }
-
-  #content {
-    max-width: 90%;
-  }
-  #content p {
-    line-height: 48px;
-  }
-}
+@media screen and (device-aspect-ratio: 2 / 3),
+@media screen and (device-aspect-ratio: 3 / 4),
 @media screen and (device-aspect-ratio: 40 / 71) {
   #page {
     max-width: 90%;
@@ -135,22 +111,8 @@ ul li {
   #content {
     max-width: 90%;
   }
-  #content p {
-    line-height: 48px;
-  }
 }
-@media screen and (device-aspect-ratio: 3 / 4) {
-  #page {
-    max-width: 90%;
-  }
 
-  #content {
-    max-width: 90%;
-  }
-  #content p {
-    line-height: 48px;
-  }
-}
 @media screen and (max-device-width: 480px) {
   * {
     margin: 0;
