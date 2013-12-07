@@ -1,5 +1,6 @@
 @import url(//fonts.googleapis.com/css?family=Poiret+One);
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:700);
+
 * {
   margin: 0;
   padding: 0;
@@ -7,49 +8,20 @@
   position: relative;
 }
 
+h1 { font-size: 1.5em; }
+h2 { font-size: 1.4em; }
+
 h1, h2, h3, h4, h5 {
   font-family: "PT Sans", sans-serif;
   margin-bottom: 10px;
 }
 
-h1 {
-  font-size: 1.5em;
-}
 
-h2 {
-  font-size: 1.4em;
-}
-
-p, pre {
-  margin-bottom: 15px;
-}
+p, pre { margin-bottom: 15px; }
 
 a, a:visited, a:hover {
   color: #666;
   text-decoration: none;
-}
-a.button, a:visited.button, a:hover.button {
-  background-color: #eee;
-  border-radius: 15px;
-  padding: 5px 10px;
-  color: red;
-  border: solid 2px red;
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 1rem;
-  min-width: 100px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  text-transform: capitalize;
-  text-decoration: none;
-  border: none;
-  border: solid 1px #B8860B;
-  color: #B8860B;
-}
-
-img {
-  max-width: 100%;
 }
 
 body {
@@ -66,7 +38,7 @@ html, body {
 }
 
 #page {
-  margin: 0 auto;
+  margin: 200px auto 0;
   max-width: 768px;
   min-width: 400px;
   padding: 0 20px;
@@ -85,21 +57,10 @@ html, body {
   box-shadow: 0 3px 5px -2px #ccc;
   padding: 10px 0 10px;
 }
+
 #header .title {
   display: block;
   margin-bottom: 10px;
-}
-#header .tagline {
-  color: red;
-  font-size: 1.5rem;
-  position: relative;
-  bottom: 8px;
-}
-#header .tagline a {
-  color: red;
-}
-#header .tagline a:hover {
-  text-decoration: underline;
 }
 
 #content {
@@ -144,141 +105,6 @@ ul li {
 
 #content section {
   margin-bottom: 20px;
-}
-
-#content a.post-title {
-  display: block;
-  margin: 0 auto;
-  text-align: left;
-  padding: 10px;
-  position: relative;
-  color: #666;
-  margin-left: 3px;
-}
-#content a.post-title:hover {
-  border-left: solid 3px #B8860B;
-  margin-left: 0;
-}
-#content a.post-title > * {
-  display: inline-block;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-#content a.post-title .subtext {
-  font-size: 0.7rem;
-  line-height: 22px;
-}
-#content a.post-title .date {
-  float: right;
-  width: 15%;
-}
-#content a.post-title .views {
-  float: left;
-  margin-right: 10px;
-  color: #999;
-  width: 12%;
-}
-#content a.post-title .title {
-  width: 70%;
-  text-transform: capitalize;
-}
-
-#content article.post {
-  margin: 0 auto 20px;
-}
-#content article.post .post-details {
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-}
-#content article.post .post-details h3 {
-  font-size: 2rem;
-  margin-bottom: 5px;
-}
-#content article.post .post-details .date {
-  font-size: 0.8rem;
-}
-#content article.post .post-details .sub-title {
-  font-size: 0.7rem;
-  color: #ccc;
-}
-#content article.post .post-body {
-  text-align: left;
-}
-#content article.post .post-body iframe {
-  max-width: 100%;
-}
-#content article.post ul, #content article.post ol {
-  margin: 0 0 30px 40px;
-  list-style-position: outside;
-  font-size: 0.9rem;
-}
-#content article.post ul li, #content article.post ol li {
-  margin-bottom: 10px;
-}
-#content article.post ul li p, #content article.post ol li p {
-  margin-bottom: 10px;
-}
-#content article.post ul {
-  list-style-type: disc;
-}
-#content article.post pre, #content article.post code {
-  color: #444;
-  line-height: 1.3rem;
-  font-family: "PT Sans", sans-serif;
-}
-#content article.post pre {
-  padding: 10px;
-  overflow: scroll;
-  border: solid 1px #B8860B;
-  background-color: rgba(238, 238, 238, 0.2);
-}
-#content article.post pre code {
-  background-color: transparent;
-}
-#content article.post code {
-  display: inline-block;
-  padding: 1px 3px;
-  background-color: #ededed;
-}
-#content article.post blockquote {
-  margin-left: 50px;
-  padding: 0 20px;
-  border-left: solid 3px #B8860B;
-  font-size: 0.9rem;
-}
-
-article.write {
-  margin: 0 auto;
-}
-article.write input, article.write textarea {
-  display: block;
-  width: 500px;
-  min-height: 20px;
-  padding: 10px;
-  font-size: 14px;
-  margin: 0 auto 10px;
-  border: none;
-  outline: none;
-  box-shadow: 0 0 3px #333;
-}
-article.write textarea {
-  height: 300px;
-}
-article.write input[type="submit"] {
-  width: 100px;
-  background-color: #eee;
-  border-radius: 15px;
-  padding: 5px 10px;
-  color: red;
-  border: solid 2px red;
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 1rem;
-  min-width: 100px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
 }
 
 /*
