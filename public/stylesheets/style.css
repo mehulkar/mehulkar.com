@@ -59,7 +59,7 @@ a, a:visited, a:hover {
   font-size: 3rem;
   margin-bottom: 20px;
   background-color: #eee;
-  box-shadow: 0 3px 5px -2px #ccc;
+  border: solid 3px #ccc;
   padding: 10px 0 10px;
 }
 
