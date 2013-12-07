@@ -1,10 +1,11 @@
     </div>
       <div id="footer">
-        Mehul Kar, 2013 &copy;
-        <br>
-        <a href='http://twitter.com/mehulkar' class='twitter'>
-          <img src='images/twitter.png' class='twitter' width=50 height=50 />
-        </a>
+        <script>
+          document.addEventListener('DOMContentLoaded',function() {
+            document.getElementById('year').innerHTML = (new Date).getFullYear();
+          });
+        </script>
+         &copy; <span id='year'></span>
       </div>
     </div>
   </body>
