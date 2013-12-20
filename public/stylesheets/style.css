@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -28,8 +27,7 @@ h1, h2, h3, h4, h5 {
   margin-bottom: 10px;
 }
 
-
-p, pre { margin-bottom: 15px; }
+pre { margin-bottom: 15px; }
 
 p {
   line-height: 30px;
@@ -46,7 +44,7 @@ a, a:visited, a:hover {
 }
 
 #page {
-  margin: 200px auto 0;
+  margin: 100px auto 0;
   max-width: 768px;
 }
 
