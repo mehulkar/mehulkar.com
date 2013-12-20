@@ -31,7 +31,7 @@ pre { margin-bottom: 15px; }
 
 p {
   line-height: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 img.left {
@@ -78,10 +78,12 @@ a, a:visited, a:hover {
   padding-left: 30px;
 }
 
-#content ol li {
-  margin-left: 20px;
+#content ol li, #content ul li {
+  margin: 10px 0 0 20px;
   padding-left: 10px;
-  margin-bottom: 20px;
+}
+
+#content ol li p, #content ul li p {
   line-height: 24px;
 }
 
