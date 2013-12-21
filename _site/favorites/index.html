@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Favorites</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/style.css">
+
+    </head>
+    <body>
+      <div id="page">
+        <div id="header"><a href='/'>Mehul Kar</a></div>
+        <img class='left' src="https://gravatar.com/avatar/57c2dff3cf681f22f9519a18bafc7bce" width="80" height="80">
+        <div id="content">
+          <h2>Favorites</h2>
+<ul>
+  <li><a href="http://betterthanenglish.com">Better Than English</a></li>
+  <li><a href="http://www.lettersofnote.com/">Letters of Note</a></li>
+  <li>Scroll through my favorites on <a href="http://twitter.com/mehulkar/favorites">twitter</a></li>
+</ul>
+        </div>
+        <div id="footer">
+          <nav>
+            <li><a href="/">Home</a></li>
+            <li><a href="/favorites">Favorites</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </nav>
+          <script>
+            document.addEventListener('DOMContentLoaded',function() {
+              document.getElementById('year').innerHTML = (new Date).getFullYear();
+            });
+          </script>
+           &copy; <span id='year'></span>
+        </div>
+      </div>
+    </body>
+</html>
