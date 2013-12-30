@@ -19,13 +19,14 @@ html, body {
   height: 100%;
 }
 
-h1 { font-size: 1.5em; }
-h2 { font-size: 1.4em; }
-
 h1, h2, h3, h4, h5 {
   font-family: "PT Sans", sans-serif;
   margin-bottom: 10px;
 }
+
+h1 { font-size: 1.5em; }
+h2 { font-size: 1.4em; }
+h3 { font-size: 1.3em; margin-bottom: 5px; }
 
 pre { margin-bottom: 15px; }
 
@@ -34,9 +35,14 @@ p {
   margin-bottom: 20px;
 }
 
-img.left {
+.left {
   float: left;
   margin-right: 10px;
+  font-size: 0.7rem;
+}
+
+.left img {
+  margin-bottom: 10px;
 }
 
 a, a:visited, a:hover {
