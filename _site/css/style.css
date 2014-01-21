@@ -45,6 +45,11 @@ p {
   margin-bottom: 10px;
 }
 
+.left li {
+  list-style-type: none;
+  margin-bottom: 2px;
+}
+
 a, a:visited, a:hover {
   color: #666;
 }
