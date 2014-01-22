@@ -39,6 +39,8 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 0.7rem;
+  margin-bottom: 10px;
+  overflow: hidden;
 }
 
 .left img {
@@ -132,8 +134,13 @@ a, a:visited, a:hover {
     -webkit-text-size-adjust: none;
   }
 
-  div {
-    clear: both !important;
-    float: none !important;
+  .left > * {
+    float: left;
+    margin-right: 10px;
+  }
+
+  #content, #footer {
+    clear:both;
+    margin-left: 0;
   }
 }
