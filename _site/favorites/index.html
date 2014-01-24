@@ -19,8 +19,8 @@
         <div class="left">
           <img src="https://gravatar.com/avatar/57c2dff3cf681f22f9519a18bafc7bce" width="100" height="100">
           <section>
-            <h3>Currently</h3>
-            <a href="https://kindle.amazon.com/profile/Mehul-Kar/4275127/reading">Reading</a>
+            <h3>Reading</h3>
+            <a id='reading'></a>
           </section>
           <section>
             <h3>Listening</h3>
@@ -76,14 +76,15 @@
           var xmlhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
           xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-              callback(JSON.parse(xmlhttp.responseText));
+              callback(xmlhttp.responseText);
             }
           }
           xmlhttp.open("GET", url, true);
           xmlhttp.send();
         }
         var url = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=mehulkar&api_key=7707da5069c4a9e899306057726a5b13&format=json&limit=1"
-        doAjax(url, function(response) {
+        doAjax(url, function(raw) {
+          var response = JSON.parse(raw);
           var track = response.recenttracks.track[0];
           var listening = track.artist['#text'] + ': ' + track.name;
           document.getElementById('listening').innerHTML = listening;
@@ -91,4 +92,26 @@
         })
       });
     </script>
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded',function() {
+        function doAjax(url, callback) {
+          var xmlhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+          xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+              callback(xmlhttp.responseText);
+            }
+          }
+          xmlhttp.open("GET", url, true);
+          xmlhttp.send();
+        }
+
+        var url = "https://mk-reading.herokuapp.com/"
+
+        doAjax(url, function(raw) {
+          var title = raw;
+          document.getElementById('reading').innerHTML = title;
+        })
+      });
+    </script>
+
 </html>
