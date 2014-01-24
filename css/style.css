@@ -138,8 +138,13 @@ a, a:visited, a:hover {
   body {
     -webkit-text-size-adjust: none;
   }
+  .left {
+    width: 100%;
+    max-width: none;
+  }
 
   .left > * {
+    display: inline-block;
     float: left;
     margin-right: 10px;
   }
