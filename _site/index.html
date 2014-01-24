@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Home</title>
-        <meta name="viewport" content="width=device-width">
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Home</title>
+      <meta name="viewport" content="width=device-width">
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+      <!-- syntax highlighting CSS -->
+      <link rel="stylesheet" href="/css/syntax.css">
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/style.css">
+      <!-- Custom CSS -->
+      <link rel="stylesheet" href="/css/style.css">
 
-    </head>
-    <body>
-      <div id="page">
-        <div id="header"><a href='/'>Mehul Kar</a></div>
-        <div class="left">
-          <img src="https://gravatar.com/avatar/57c2dff3cf681f22f9519a18bafc7bce" width="100" height="100">
-          <section>
-            <h3>Reading</h3>
-            <a id='reading'></a>
-          </section>
-          <section>
-            <h3>Listening</h3>
-            <a id='listening' target='_blank'></a>
-          </section>
-        </div>
+  </head>
+  <body>
+    <div id="page">
+      <div id="header"><a href='/'>Mehul Kar</a></div>
+      <div class="left">
+        <img src="https://gravatar.com/avatar/57c2dff3cf681f22f9519a18bafc7bce" width="100" height="100">
+        <section>
+          <h3>Reading</h3>
+          <a id='reading'></a>
+        </section>
+        <section>
+          <h3>Listening</h3>
+          <a id='listening' target='_blank'></a>
+        </section>
+      </div>
 
-        <div id="content">
-          <h2>About Me</h2>
+      <div id="content">
+        <h2>About Me</h2>
 <ol>
   <li><p>I currently earn a living <strong>writing code</strong>, but in the past I've worked as a market researcher, a tennis instructor, and even pruned some trees.</p></li>
   <li><p>In college I started (and sold) a company that generated cash by renting appliances to facilitate <strong>international microloans</strong> to Third World entrepreneurs.</p></li>
@@ -37,57 +37,56 @@
   <li><p>I live in the heart of Silicon Valley, but I'm more interested in how technology is used in the developing world.</p></li>
   <li><p>Oh, and I graduated from the <strong>Maharishi School of the Age of Enlightenment.</strong></p></li>
 </ol>
-        </div>
-        <div id="footer">
-          <nav>
-            <li><a href="/">Home</a></li>
-            <li><a href="/favorites">Favorites</a></li>
-            <li><a href="/domains">Domains</a></li>
-            <li><a href="/contact">Contact</a></li>
-          </nav>
-           &copy; <span id='year'></span>
-        </div>
       </div>
-    </body>
-    <script src="/js/ga.js"></script>
+      <div id="footer">
+        <nav>
+          <li><a href="/">Home</a></li>
+          <li><a href="/favorites">Favorites</a></li>
+          <li><a href="/domains">Domains</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </nav>
+         &copy; <span id='year'></span>
+      </div>
+    </div>
+  </body>
+  <script src="/js/ga.js"></script>
 
-    <!-- ajax function without jquery -->
-    <script>
-      function doAjax(url, callback) {
-        var xmlhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
-        xmlhttp.onreadystatechange = function() {
-          if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            callback(xmlhttp.responseText);
-          }
+  <!-- ajax function without jquery -->
+  <script>
+    function doAjax(url, callback) {
+      var xmlhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+      xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+          callback(xmlhttp.responseText);
         }
-        xmlhttp.open("GET", url, true);
-        xmlhttp.send();
       }
-    </script>
+      xmlhttp.open("GET", url, true);
+      xmlhttp.send();
+    }
+  </script>
 
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded',function() {
 
-    <script type="text/javascript">
-      document.addEventListener('DOMContentLoaded',function() {
+      // gets current year for copyright info
+      document.getElementById('year').innerHTML = (new Date).getFullYear();
 
-        // gets current year for copyright info
-        document.getElementById('year').innerHTML = (new Date).getFullYear();
-
-        // gets latest track scrobbled on last.fm and puts it in sidebar
-        var url = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=mehulkar&api_key=7707da5069c4a9e899306057726a5b13&format=json&limit=1"
-        doAjax(url, function(raw) {
-          var response = JSON.parse(raw);
-          var track = response.recenttracks.track[0];
-          var listening = track.artist['#text'] + ': ' + track.name;
-          document.getElementById('listening').innerHTML = listening;
-          document.getElementById('listening').href = track.url;
-        });
-
-        // gets current reading book from amazon kindle profile
-        var url = "https://mk-reading.herokuapp.com/"
-        doAjax(url, function(raw) {
-          var title = raw;
-          document.getElementById('reading').innerHTML = title;
-        });
+      // gets latest track scrobbled on last.fm and puts it in sidebar
+      var url = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=mehulkar&api_key=7707da5069c4a9e899306057726a5b13&format=json&limit=1"
+      doAjax(url, function(raw) {
+        var response = JSON.parse(raw);
+        var track = response.recenttracks.track[0];
+        var listening = track.artist['#text'] + ': ' + track.name;
+        document.getElementById('listening').innerHTML = listening;
+        document.getElementById('listening').href = track.url;
       });
-    </script>
+
+      // gets current reading book from amazon kindle profile
+      var url = "https://mk-reading.herokuapp.com/"
+      doAjax(url, function(raw) {
+        var title = raw;
+        document.getElementById('reading').innerHTML = title;
+      });
+    });
+  </script>
 </html>
