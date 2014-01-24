@@ -62,12 +62,6 @@ To add new posts, simply add a file in the <code>_posts</code> directory that fo
       </div>
     </body>
     <script src="/js/ga.js"></script>
-    <!-- gets current year for copyright info -->
-    <script>
-      document.addEventListener('DOMContentLoaded',function() {
-        document.getElementById('year').innerHTML = (new Date).getFullYear();
-      });
-    </script>
 
     <!-- ajax function without jquery -->
     <script>
@@ -83,9 +77,14 @@ To add new posts, simply add a file in the <code>_posts</code> directory that fo
       }
     </script>
 
-    <!-- gets latest track scrobbled on last.fm and puts it in sidebar -->
+
     <script type="text/javascript">
       document.addEventListener('DOMContentLoaded',function() {
+
+        // gets current year for copyright info
+        document.getElementById('year').innerHTML = (new Date).getFullYear();
+
+        // gets latest track scrobbled on last.fm and puts it in sidebar
         var url = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=mehulkar&api_key=7707da5069c4a9e899306057726a5b13&format=json&limit=1"
         doAjax(url, function(raw) {
           var response = JSON.parse(raw);
@@ -93,19 +92,14 @@ To add new posts, simply add a file in the <code>_posts</code> directory that fo
           var listening = track.artist['#text'] + ': ' + track.name;
           document.getElementById('listening').innerHTML = listening;
           document.getElementById('listening').href = track.url;
-        })
-      });
-    </script>
+        });
 
-    <!-- gets current reading book from amazon kindle profile -->
-    <script type="text/javascript">
-      document.addEventListener('DOMContentLoaded',function() {
+        // gets current reading book from amazon kindle profile
         var url = "https://mk-reading.herokuapp.com/"
         doAjax(url, function(raw) {
           var title = raw;
           document.getElementById('reading').innerHTML = title;
-        })
+        });
       });
     </script>
-
 </html>
