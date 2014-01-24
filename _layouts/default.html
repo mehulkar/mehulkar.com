@@ -76,7 +76,7 @@
       });
 
       // gets current reading book from amazon kindle profile
-      var url = "https://mk-reading.herokuapp.com/"
+      var url = "https://kindle-profile-scraper.herokuapp.com/"
       doAjax(url, function(raw) {
         var title = raw;
         document.getElementById('reading').innerHTML = title;
