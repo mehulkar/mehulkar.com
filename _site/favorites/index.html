@@ -89,7 +89,7 @@
         var response = JSON.parse(raw);
         var tracks = response.recenttracks
         var track = tracks.track.length ? tracks.track[0] : tracks.track;
-        var listening = track.artist['#text'] + ': ' + track.name;
+        var listening = track.name + "<br />by " + track.artist['#text'];
         document.getElementById('listening').innerHTML = listening;
         document.getElementById('listening').href = track.url;
       });
