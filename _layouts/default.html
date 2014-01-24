@@ -78,8 +78,10 @@
       // gets current reading book from amazon kindle profile
       var url = "https://kindle-profile-scraper.herokuapp.com/"
       doAjax(url, function(raw) {
-        var title = raw;
-        document.getElementById('reading').innerHTML = title;
+        var response = JSON.parse(raw);
+        var book = response.books[0]
+        var reading = book.title + "<br />" + book.author
+        document.getElementById('reading').innerHTML = reading;
       });
     });
   </script>

@@ -37,6 +37,7 @@
   <li><p>I live in the heart of Silicon Valley, but I'm more interested in how technology is used in the developing world.</p></li>
   <li><p>Oh, and I graduated from the <strong>Maharishi School of the Age of Enlightenment.</strong></p></li>
 </ol>
+
       </div>
       <div id="footer">
         <nav>
@@ -83,10 +84,12 @@
       });
 
       // gets current reading book from amazon kindle profile
-      var url = "https://mk-reading.herokuapp.com/"
+      var url = "https://kindle-profile-scraper.herokuapp.com/"
       doAjax(url, function(raw) {
-        var title = raw;
-        document.getElementById('reading').innerHTML = title;
+        var response = JSON.parse(raw);
+        var book = response.books[0]
+        var reading = book.title + "<br />" + book.author
+        document.getElementById('reading').innerHTML = reading;
       });
     });
   </script>
