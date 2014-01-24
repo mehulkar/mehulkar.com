@@ -75,7 +75,8 @@
       var url = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=mehulkar&api_key=7707da5069c4a9e899306057726a5b13&format=json&limit=1"
       doAjax(url, function(raw) {
         var response = JSON.parse(raw);
-        var track = response.recenttracks.track[0];
+        var tracks = response.recenttracks
+        var track = tracks.length ? tracks.track[0] : tracks.track;
         var listening = track.artist['#text'] + ': ' + track.name;
         document.getElementById('listening').innerHTML = listening;
         document.getElementById('listening').href = track.url;
