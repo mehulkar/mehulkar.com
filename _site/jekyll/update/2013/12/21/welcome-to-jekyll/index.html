@@ -17,14 +17,15 @@
       <div id="page">
         <div id="header"><a href='/'>Mehul Kar</a></div>
         <div class="left">
-          <img src="https://gravatar.com/avatar/57c2dff3cf681f22f9519a18bafc7bce" width="80" height="80">
-          <div>
+          <img src="https://gravatar.com/avatar/57c2dff3cf681f22f9519a18bafc7bce" width="100" height="100">
+          <section>
             <h3>Currently</h3>
-            <ul>
-              <li><a href="https://kindle.amazon.com/profile/Mehul-Kar/4275127/reading">Reading</a></li>
-              <li><a href="http://open.spotify.com/user/mehulkar">Listening</a></li>
-            </ul>
-          </div>
+            <a href="https://kindle.amazon.com/profile/Mehul-Kar/4275127/reading">Reading</a>
+          </section>
+          <section>
+            <h3>Listening</h3>
+            <a id='listening' target='_blank'></a>
+          </section>
         </div>
 
         <div id="content">
@@ -56,14 +57,38 @@ To add new posts, simply add a file in the <code>_posts</code> directory that fo
             <li><a href="/domains">Domains</a></li>
             <li><a href="/contact">Contact</a></li>
           </nav>
-          <script>
-            document.addEventListener('DOMContentLoaded',function() {
-              document.getElementById('year').innerHTML = (new Date).getFullYear();
-            });
-          </script>
            &copy; <span id='year'></span>
         </div>
       </div>
     </body>
     <script src="/js/ga.js"></script>
+    <!-- gets current year for copyright info -->
+    <script>
+      document.addEventListener('DOMContentLoaded',function() {
+        document.getElementById('year').innerHTML = (new Date).getFullYear();
+      });
+    </script>
+
+    <!-- gets latest track scrobbled on last.fm and puts it in sidebar -->
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded',function() {
+        function doAjax(url, callback) {
+          var xmlhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+          xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+              callback(JSON.parse(xmlhttp.responseText));
+            }
+          }
+          xmlhttp.open("GET", url, true);
+          xmlhttp.send();
+        }
+        var url = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=mehulkar&api_key=7707da5069c4a9e899306057726a5b13&format=json&limit=1"
+        doAjax(url, function(response) {
+          var track = response.recenttracks.track[0];
+          var listening = track.artist['#text'] + ': ' + track.name;
+          document.getElementById('listening').innerHTML = listening;
+          document.getElementById('listening').href = track.url;
+        })
+      });
+    </script>
 </html>

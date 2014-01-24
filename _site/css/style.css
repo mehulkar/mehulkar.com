@@ -26,7 +26,7 @@ h1, h2, h3, h4, h5 {
 
 h1 { font-size: 1.5em; }
 h2 { font-size: 1.4em; }
-h3 { font-size: 1.3em; margin-bottom: 5px; }
+h3 { font-size: 1.3em; margin-bottom: 0; }
 
 pre { margin-bottom: 15px; }
 
@@ -37,10 +37,15 @@ p {
 
 .left {
   float: left;
+  max-width: 150px;
   margin-right: 10px;
   font-size: 0.7rem;
   margin-bottom: 10px;
   overflow: hidden;
+}
+
+.left section {
+  margin-bottom: 15px;
 }
 
 .left img {
@@ -80,7 +85,7 @@ a, a:visited, a:hover {
 }
 
 #content, #footer {
-  margin-left: 100px;
+  margin-left: 150px;
 }
 
 #content {
@@ -143,4 +148,12 @@ a, a:visited, a:hover {
     clear:both;
     margin-left: 0;
   }
+}
+
+#listening {
+  max-width: 100px;
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
