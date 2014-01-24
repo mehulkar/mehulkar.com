@@ -88,7 +88,7 @@ To add new posts, simply add a file in the <code>_posts</code> directory that fo
       doAjax(url, function(raw) {
         var response = JSON.parse(raw);
         var tracks = response.recenttracks
-        var track = tracks.length ? tracks.track[0] : tracks.track;
+        var track = tracks.track.length ? tracks.track[0] : tracks.track;
         var listening = track.artist['#text'] + ': ' + track.name;
         document.getElementById('listening').innerHTML = listening;
         document.getElementById('listening').href = track.url;
