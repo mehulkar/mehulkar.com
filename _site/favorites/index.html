@@ -20,7 +20,7 @@
         <img src="https://gravatar.com/avatar/57c2dff3cf681f22f9519a18bafc7bce" width="100" height="100">
         <section>
           <h3>Reading</h3>
-          <a id='reading'></a>
+          <ul id='reading'></ul>
         </section>
         <section>
           <h3>Listening</h3>
@@ -98,8 +98,11 @@
       var url = "https://kindle-profile-scraper.herokuapp.com/"
       doAjax(url, function(raw) {
         var response = JSON.parse(raw);
-        var book = response.books[0]
-        var reading = book.title + "<br />" + book.author
+        var reading = "";
+        var books = response.books.forEach(function(book) {
+          var snippet = "<li>" + book.title + "<br />" + book.author + "</li>";
+          reading += snippet
+        });
         document.getElementById('reading').innerHTML = reading;
       });
     });

@@ -155,7 +155,7 @@ a, a:visited, a:hover {
   }
 }
 
-#listening, #reading {
+#listening, #reading li {
   max-width: 100px;
   display: block;
   text-overflow: ellipsis;
@@ -163,7 +163,14 @@ a, a:visited, a:hover {
   white-space: nowrap;
 }
 
-#listening:hover, #reading:hover {
+#reading li {
+  list-style-type: circle;
+  list-style-position: inside;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+#listening:hover, #reading li:hover {
   overflow: visible;
   max-width: none;
 }
