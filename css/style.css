@@ -157,7 +157,6 @@ a, a:visited, a:hover {
 
 #listening, #reading li {
   max-width: 100px;
-  display: block;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
