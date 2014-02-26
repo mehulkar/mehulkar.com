@@ -96,6 +96,14 @@ a, a:visited, a:hover {
   padding-left: 30px;
 }
 
+#content blockquote {
+  margin-left: 30px;
+  color: #777;
+  border-left: #ccc solid 2px;
+  padding-left: 20px;
+  padding-right: 30px;
+}
+
 #content ol li, #content ul li {
   margin: 10px 0 0 20px;
   padding-left: 10px;
