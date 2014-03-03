@@ -105,8 +105,8 @@ the [lizard brain][3], or "The Resistance":
 My hesitation to write is essentially a hesitation to become vulnerable, which is in
 turn a fear of deep emotional connection. I think in some ways, the
 always-connected, always-online culture promotes this fear. (There was
-an excellent post by someone talking about this that I can't find anymore.)
-
+an excellent post by someone talking about this that I can't find anymore. 
+So I guess I don't even know why I mentioned it.)
 
 But I'd like to change that.
 
@@ -121,4 +121,3 @@ I'd like to write again.
 [1]: http://royalpurplenews.com/ "Royal Purple News"
 [2]: https://en.wikipedia.org/wiki/Impostor_syndrome "Imposter Syndrome Wikipedia Article"
 [3]: http://sethgodin.typepad.com/seths_blog/2010/01/quieting-the-lizard-brain.html "Seth Godin on Quieting the Lizard Brain"
-
