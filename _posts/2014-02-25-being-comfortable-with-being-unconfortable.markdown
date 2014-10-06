@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Being Comfortable with Being Uncomfortable"
-date:   2013-02-25 20:14:00
+date:   2014-02-25 20:14:00
 categories: life
 ---
 
