@@ -1,4 +1,5 @@
 name: Mehul Kar
 markdown: redcarpet
-pygments: true
+highlighter: pygments
 permalink: pretty
+exclude: [Gemfile, Gemfile.lock]
