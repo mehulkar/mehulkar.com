@@ -1,8 +1,7 @@
 ---
-layout: post
 title:  "Being Comfortable with Being Uncomfortable"
 date:   2014-02-25 20:14:00
-categories: life
+categories: personal
 ---
 
 I've decided to start writing again.
@@ -105,7 +104,7 @@ the [lizard brain][3], or "The Resistance":
 My hesitation to write is essentially a hesitation to become vulnerable, which is in
 turn a fear of deep emotional connection. I think in some ways, the
 always-connected, always-online culture promotes this fear. (There was
-an excellent post by someone talking about this that I can't find anymore. 
+an excellent post by someone talking about this that I can't find anymore.
 So I guess I don't even know why I mentioned it.)
 
 But I'd like to change that.

@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Auxiliary Business"
 date:   2014-03-01 17:14:00
 categories: business
