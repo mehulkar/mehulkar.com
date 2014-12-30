@@ -1,3 +1,3 @@
 ## Personal website
 
-Built on [Jekyll](http://jekyllrb.com/).
+Built on [Middleman](http://middlemanapp.com/).
