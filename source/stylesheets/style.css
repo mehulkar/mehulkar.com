@@ -141,9 +141,12 @@ a, a:visited, a:hover {
 }
 /* Responsive */
 
-@media screen and (device-aspect-ratio: 2 / 3), /* iPhone < 5 */
-@media screen and (device-aspect-ratio: 3 / 4), /* iPhone 5 */
-@media screen and (device-aspect-ratio: 40 / 71) { /* iPad 5 */
+/* iPhone < 5 */
+/*@media screen and (device-aspect-ratio: 2 / 3),*/
+/* iPhone 5 */
+/*@media screen and (device-aspect-ratio: 3 / 4),*/
+/* iPad 5 */
+@media screen and (device-aspect-ratio: 40 / 71) {
   #page, #content {
     max-width: 90%;
   }
