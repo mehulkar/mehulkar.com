@@ -1,5 +1,0 @@
-name: Mehul Kar
-markdown: redcarpet
-highlighter: pygments
-permalink: pretty
-exclude: [Gemfile, Gemfile.lock, config.rb, source]
