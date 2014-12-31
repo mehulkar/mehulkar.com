@@ -1,0 +1,5 @@
+<ul id='posts'>
+  <% posts.each do |post| %>
+    <li><date><%=post[:date]%></date> <%= link_to post[:title], post[:link] %></li>
+  <% end %>
+</ul>
