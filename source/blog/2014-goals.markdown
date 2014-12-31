@@ -4,8 +4,6 @@ date:   2014-03-12 15:18:49
 categories: goals
 ---
 
-### Hi
-
 Some quantifiable goals for 2014 in no particular order
 
 1. #### Language

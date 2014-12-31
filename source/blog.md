@@ -1,1 +1,0 @@
-[Being Comfortable with Being Uncomfortable](blog/2014-02-25-being-comfortable-with-being-unconfortable.html)

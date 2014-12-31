@@ -1,0 +1,10 @@
+<% wrap_layout :layout do %>
+  <header>
+    <h3><%= created_at %></h3>
+    <h1><%= current_page.metadata[:page]["title"]%></h1>
+    <h2><%= current_page.metadata[:page]["categories"]%></h2>
+  </header>
+  <article>
+    <%= yield %>
+  </article>
+<% end %>
