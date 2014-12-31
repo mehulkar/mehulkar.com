@@ -324,9 +324,9 @@ a, a:visited, a:hover {
 /* Responsive */
 
 /* iPhone < 5 */
-@media screen and (device-aspect-ratio: 2 / 3),
+/*@media screen and (device-aspect-ratio: 2 / 3),*/
  /*iPhone 5 */
-@media screen and (device-aspect-ratio: 3 / 4),
+/*@media screen and (device-aspect-ratio: 3 / 4),*/
 /* iPad 5 */
 @media screen and (device-aspect-ratio: 40 / 71) {
   #page, #content {
