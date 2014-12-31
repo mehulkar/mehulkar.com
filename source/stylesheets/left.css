@@ -1,0 +1,18 @@
+.left #listening, #reading li {
+  max-width: 100px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.left #reading li {
+  list-style-type: circle;
+  list-style-position: inside;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+.left #listening:hover, #reading li:hover {
+  overflow: visible;
+  max-width: none;
+}

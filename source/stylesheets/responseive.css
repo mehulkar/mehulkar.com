@@ -1,0 +1,39 @@
+/* Responsive */
+
+/* iPhone < 5 */
+/*@media screen and (device-aspect-ratio: 2 / 3),*/
+ /*iPhone 5 */
+/*@media screen and (device-aspect-ratio: 3 / 4),*/
+/* iPad 5 */
+@media screen and (device-aspect-ratio: 40 / 71) {
+  #page, #posts {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-device-width: 480px) {
+  * {
+    margin: 0;
+    border: 0;
+    padding: 0;
+  }
+
+  body {
+    -webkit-text-size-adjust: none;
+  }
+  .left {
+    width: 100%;
+    max-width: none;
+  }
+
+  .left > * {
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+  }
+
+  #posts, #footer {
+    clear:both;
+    margin-left: 0;
+  }
+}

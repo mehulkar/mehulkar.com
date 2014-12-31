@@ -1,0 +1,80 @@
+#content ul#posts date {
+  color: #ccc;
+  font-size: 12px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+#content ul#posts {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+
+#content ul#posts li {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+#content, #footer {
+  margin-left: 150px;
+}
+
+#content {
+  max-width: 500px;
+  min-height: 410px;
+  margin-bottom: 50px;
+  border-left: dotted 3px #ccc;
+  padding-left: 30px;
+  text-align: left;
+}
+
+#content header {
+  border-bottom: solid 1px #eee;
+}
+
+#content header h1 {
+  margin-bottom: 0.2em;
+}
+
+#content header h2,
+#content header h3 {
+  color: #ccc;
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 0.5em;
+}
+
+#content header h3 {
+  font-size: 12px;
+}
+
+#content hr {
+  border-top: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+#content blockquote {
+  color: #777;
+  border-left: #ccc solid 2px;
+  padding-left: 20px;
+  padding-right: 30px;
+}
+
+/* Using !important because twitter
+  converts blockquote to iframe and
+  applies inline CSS
+ */
+#content iframe.twitter-tweet {
+  margin-bottom: 20px !important;
+}
+
+#content ol li, #content ul li {
+  margin: 10px 0 0 20px;
+  padding-left: 10px;
+}
+
+#content ol li p, #content ul li p {
+  line-height: 24px;
+}
