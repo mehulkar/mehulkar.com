@@ -4,7 +4,7 @@ Built on [Middleman](http://middlemanapp.com/).
 
 ## Deploy
 
-Uses `[middleman-gh-pages][1]` gem to deploy to GH Pages. To deploy, run:
+Uses [`middleman-gh-pages`][1] gem to deploy to GH Pages. To deploy, run:
 
 ```
 rake publish
