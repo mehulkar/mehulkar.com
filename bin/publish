@@ -7,6 +7,7 @@ git checkout source
 GIT_REMOTE=$(git config --get remote.origin.url)
 CURRENT_REV=$(git rev-parse --short HEAD)
 
+mkdir -p build
 cd build
 git init
 git remote add new-origin $GIT_REMOTE
