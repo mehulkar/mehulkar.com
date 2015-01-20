@@ -3,7 +3,6 @@
 source 'https://rubygems.org'
 
 gem "middleman", "~>3.3.7"
-gem 'middleman-gh-pages'
 gem 'redcarpet'
 
 # Live-reloading plugin
@@ -16,3 +15,4 @@ gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 gem "tzinfo-data", platforms: [:mswin, :mingw]
 
 gem 'pry'
+gem 'rake'

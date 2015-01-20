@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+set -e # Exit immediately if something fails
+set -x # Log every command
+
+GIT_REMOTE=`git config --get remote.origin.url`
+git checkout source
+bundle exec middleman build
+cd build
+git init
+git remote add new-org $GIT_REMOTE
+git push new-org HEAD:master
+cd ..
+rm -rf build/
