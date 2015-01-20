@@ -7,13 +7,17 @@ git checkout source
 GIT_REMOTE=$(git config --get remote.origin.url)
 CURRENT_REV=$(git rev-parse --short HEAD)
 
-bundle exec middleman build
 cd build
 git init
 git remote add new-origin $GIT_REMOTE
 git fetch new-origin && git reset new-origin/master
+cd ..
+
+bundle exec middleman build
+cd build
 git add -A
 git commit -m "Publishing site at $CURRENT_REV"
 git push new-origin HEAD:master -f
+
 cd ..
 rm -rf build/
