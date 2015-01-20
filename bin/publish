@@ -11,7 +11,7 @@ bundle exec middleman build
 cd build
 git init
 git remote add new-origin $GIT_REMOTE
-git fetch --all
+git fetch new-origin && git reset new-origin/master
 git add -A
 git commit -m "Publishing site at $CURRENT_REV"
 git push new-origin HEAD:master -f
