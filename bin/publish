@@ -10,9 +10,10 @@ CURRENT_REV=$(git rev-parse --short HEAD)
 bundle exec middleman build
 cd build
 git init
+git remote add new-origin $GIT_REMOTE
+git fetch --all
 git add -A
 git commit -m "Publishing site at $CURRENT_REV"
-git remote add new-org $GIT_REMOTE
-git push new-org HEAD:master
+git push new-origin HEAD:master
 cd ..
 rm -rf build/
