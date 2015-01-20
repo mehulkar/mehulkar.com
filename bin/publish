@@ -3,11 +3,15 @@
 set -e # Exit immediately if something fails
 set -x # Log every command
 
-GIT_REMOTE=`git config --get remote.origin.url`
 git checkout source
+GIT_REMOTE=$(git config --get remote.origin.url)
+CURRENT_REV=$(git rev-parse --short HEAD)
+
 bundle exec middleman build
 cd build
 git init
+git add -A
+git commit -m "Publishing site at $CURRENT_REV"
 git remote add new-org $GIT_REMOTE
 git push new-org HEAD:master
 cd ..
