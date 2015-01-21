@@ -20,5 +20,3 @@ Email me at <mehul.kar@gmail.com>. I'm also on [Twitter][1].
 
 [1]: https://twitter.com/mehulkar
 [2]: http://maharishischooliowa.org
-
-Test
