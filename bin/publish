@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-set -e # Exit immediately if something fails
 set -x # Log every command
 
 git checkout source
@@ -21,7 +20,6 @@ git commit -m "Publishing site at $CURRENT_REV"
 git push new-origin HEAD:master -f
 
 cd ..
-rm -rf build/
 
 git checkout master
 git pull
