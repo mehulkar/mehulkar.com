@@ -78,3 +78,11 @@
 #content ol li p, #content ul li p {
   line-height: 24px;
 }
+
+#content code {
+  background-color: #eee;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 3px 15px 3px 15px;
+  font-size: 0.8rem;
+}
