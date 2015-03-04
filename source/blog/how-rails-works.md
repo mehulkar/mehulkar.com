@@ -4,8 +4,6 @@ date: 2014-10-04 12:06:45
 categories: learn-to-code
 ---
 
-# How Rails Works
-
 You should read the one about [how websites work](02_website.html) first.
 
 Did you read it? Because I'll assume you read it. So don't tell me you didn't

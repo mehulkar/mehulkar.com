@@ -4,8 +4,6 @@ date: 2014-09-26 17:29:48
 categories: learn-to-code
 ---
 
-### What's a website?
-
 A website is basically you being all bored on your computer and wanting to get stuff that's on another computer. So you go to a website and it fetches stuff that's on some other computer and you can watch it, hear it, read it, play it, whatever. Sometimes you can even send stuff back to the other computer. Like a tweet. When you tweet, you're sending a piece of text to the other computer and it stores it away. And then weirdly enough other people around the word are like "wait I want to hear what Lucy (I'm assuming that's your name) tweeted!" And the other computer is like... ok here you go. But you're still on your computer bored.
 
 So that's what a website is.
