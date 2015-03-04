@@ -35,7 +35,11 @@ helpers do
   end
 
   def created_at
-    first_created(current_page.source_file)
+    if current_page.metadata[:page]["date"]
+      Date.parse("#{current_page.metadata[:page]["date"]}").to_s
+    else
+      first_created(current_page.source_file)
+    end
   end
 
   def first_created(path)
