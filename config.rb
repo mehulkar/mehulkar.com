@@ -49,6 +49,8 @@ helpers do
   end
 
   def first_created(path)
-    `git log --follow --date=short --pretty=format:%ad --diff-filter=A -- #{path}`
+    date = `git log --follow --date=short --pretty=format:%ad --diff-filter=A -- #{path}`
+    date = Date.today.to_s if date.empty?
+    date
   end
 end
