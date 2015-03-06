@@ -17,6 +17,10 @@
   margin-left: 0;
 }
 
+#content ul#posts li a{
+  text-transform: capitalize;
+}
+
 #content, #footer {
   margin-left: 150px;
 }
