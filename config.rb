@@ -25,15 +25,19 @@ end
 helpers do
   TOP_LEVEL_DIR = Dir.pwd
   POST_FILES = Dir["#{TOP_LEVEL_DIR}/source/blog/*"]
-  def posts
-    POST_FILES.map do |file|
+  def post_groups
+    x = POST_FILES.map { |file|
       basename = File.basename(file).split('.')[0]
       {
         date: first_created(file),
         link: '/blog/' + basename,
         title: basename.gsub('-', ' ').capitalize
       }
-    end
+    }.group_by { |x|
+      Date.parse(x[:date]).strftime("%Y")
+    }.sort_by { |year, posts|
+      year
+    }.reverse
   end
 
   def created_at
