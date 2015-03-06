@@ -14,9 +14,4 @@ I have a degree in Finance, but I've forgotten most of what I learned.
 Some of the more valuable parts of my education come from the 8 years
 I spent at the [Maharishi School of the Age of Enlightenment][2].
 
-## Contact
-
-Email me at <mehul.kar@gmail.com>. I'm also on [Twitter][1].
-
-[1]: https://twitter.com/mehulkar
 [2]: http://maharishischooliowa.org
