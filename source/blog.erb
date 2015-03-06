@@ -1,4 +1,11 @@
 <ul id='posts'>
+  <% if !(post_groups.map { |g| g[0]}.include?(Date.today.year)) %>
+    <h3><%= Date.today.year%></h3>
+    <p>
+      I haven't written anything this year &#x2639;.
+    </p>
+  <% end %>
+
   <% post_groups.each do |group, posts| %>
     <h3><%= group %></h3>
     <% posts.sort {|x,y| Date.parse(y[:date]) <=> Date.parse(x[:date]) }.each do |post| %>
