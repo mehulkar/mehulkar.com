@@ -1,4 +1,4 @@
-<% if !(post_groups.map { |g| g[0]}.include?(Date.today.year)) %>
+<% if !(post_groups.map { |g| g[0]}.include?(Date.today.year.to_s)) %>
   <h3><%= Date.today.year%></h3>
   <p>
     I haven't written anything this year &#x2639;.
