@@ -1,23 +1,23 @@
-#content ul#posts date {
+#content ul.posts date {
   color: #ccc;
   font-size: 12px;
   display: inline-block;
   margin-right: 5px;
 }
 
-#content ul#posts {
+#content ul.posts {
   padding-left: 0;
   margin-left: 0;
 }
 
 
-#content ul#posts li {
+#content ul.posts li {
   list-style: none;
   padding-left: 0;
   margin-left: 0;
 }
 
-#content ul#posts li a{
+#content ul.posts li a{
   text-transform: capitalize;
 }
 
