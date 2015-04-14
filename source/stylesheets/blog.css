@@ -83,7 +83,7 @@
   line-height: 24px;
 }
 
-#content code {
+#content pre code {
   display: block;
   padding: 10px 15px;
   border-radius: 3px 15px 3px 15px;
