@@ -5,6 +5,10 @@
   margin-right: 5px;
 }
 
+#content img {
+  max-width: 100%;
+}
+
 #content ul.posts {
   padding-left: 0;
   margin-left: 0;
