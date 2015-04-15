@@ -1,5 +1,5 @@
 ---
-title: "WHy I Work On CollegeDesis"
+title: "Why I Work On CollegeDesis"
 date: 2013-07-19 00:00:00
 categories: personal
 ---
