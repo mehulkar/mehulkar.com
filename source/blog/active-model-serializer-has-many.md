@@ -1,5 +1,6 @@
 ---
 title: "Active Model Serializers has_many association"
+date:  2014-10-02 00:00:00
 categories: programming
 ---
 
