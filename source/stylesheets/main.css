@@ -192,9 +192,12 @@ h3 { font-size: 1.3em; margin-bottom: 0; }
 
 pre { margin-bottom: 15px; }
 
+p, ol {
+  margin-bottom: 20px;
+}
+
 p {
   line-height: 30px;
-  margin-bottom: 20px;
 }
 
 a, a:visited, a:hover {
