@@ -30,7 +30,7 @@ describe Cat do
 end
 ```
 
-In this exapmple, you can see that the tests only care about the `.talk` method.
+In this example, you can see that the tests only care about the `.talk` method.
 They don't care about how it is implemented. Let's say we decide to implement
 this `Cat` class like this:
 
@@ -94,7 +94,10 @@ This is important from a number of different perspectives:
     For example, in a typical Rails scenario, if my application allows users to click
     a button to make a cat meow, the `CatController` will call this `Cat.new.talk` method.
     Or maybe I have it wired up so that every time the dog barks, the cat also meows.
-    In all of these situations, when I write my tests to assert against the `talk` method,
+    In both of these use cases, when I write my tests to assert against the `talk` method,
+    I can guarantee that I have a working interface. I could almost compare this to
+    type checking at compile time.
+
 
 1. Implementations change, expectations remain the same:
 
