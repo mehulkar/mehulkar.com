@@ -91,13 +91,16 @@ This is important from a number of different perspectives:
 
     When I write my tests with the interface (or API) of my objects in mind,
     I'm forced to think about how my objects will be used by the rest of my application.
+    I'm forced to design objects with a usable API in mind. In a language like
+    Ruby, where you get to make arbitrary decisions about public / private methods,
+    this is really useful.
+
     For example, in a typical Rails scenario, if my application allows users to click
     a button to make a cat meow, the `CatController` will call this `Cat.new.talk` method.
     Or maybe I have it wired up so that every time the dog barks, the cat also meows.
     In both of these use cases, when I write my tests to assert against the `talk` method,
     I can guarantee that I have a working interface. I could almost compare this to
     type checking at compile time.
-
 
 1. Implementations change, expectations remain the same:
 
