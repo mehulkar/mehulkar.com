@@ -112,13 +112,13 @@ This is important from a number of different perspectives:
 
 3. Service level agreements
 
-    In this world of microservices or modular design or single level responsibility,
+    In this world of microservices or modular design or single responsibility,
     or whatever you want to call it, objects interact with each other through
     contracts. The more objects a program has, the more important it is that breaking
     changes to these contracts are kept to a minimum. I used to think that that the fuss
     over 'breaking changes' was overrated. 'Just update your code when something changes,'
     I would silently say. This is mostly fine. Except when it isn't. Which is usually the
-    case in any decent sized program over any decent length of time with any number of
+    case in any decent sized program over any decent length of time with any decent number of
     contributors. Maintaining these contracts makes everyone's lives easier, because it
     allows the developer to focus on a single piece at a time and trust that the other
     pieces will at least interact in the same way as they did yesterday. Whether or
