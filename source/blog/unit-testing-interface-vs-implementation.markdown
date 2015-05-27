@@ -41,7 +41,7 @@ class VoiceBox
     @animal = animal
   end
   def talk
-    puts "Meow"
+    "Meow"
   end
 end
 
@@ -62,7 +62,7 @@ class Cat
 
 private
   def make_a_meowwww
-    puts "Meow"
+    "Meow"
   end
 end
 ```
@@ -73,7 +73,7 @@ or like this:
 class Animal
   def talk
     if self.class.name == "Cat"
-      puts "Meow"
+      "Meow"
     end
   end
 end
