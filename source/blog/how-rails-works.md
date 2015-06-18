@@ -4,7 +4,7 @@ date: 2014-10-04 12:06:45
 categories: learn-to-code
 ---
 
-You should read the one about [how websites work](02_website.html) first.
+You should read the one about [how websites work](what-is-a-website) first.
 
 Did you read it? Because I'll assume you read it. So don't tell me you didn't
 understand something because you totally should.
@@ -22,7 +22,7 @@ and I want to make it clear that (1) that's a fine way to feel and (2),
 
 You won't be writing any code in this tutorial for two reasons:
 
-- Installing Ruby on Rails can be a pain because [installing Ruby](installing-ruby.html) is a pain.
+- Installing Ruby on Rails can be a pain because installing Ruby is a pain.
 - So I can write another post about actual code and get more pageviews and earn
   more nothing dollars from all the ads on this page.
 
