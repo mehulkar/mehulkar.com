@@ -47,5 +47,5 @@ Either way, I wasn't really taught any of this and reading about it or
 researching it offhand is really boring (and I'm lazy).
 
 Ok, that's all for now. Maybe if I get a new job and have to fill out
-another one of those stupid W2s again, I'll be forced to write a dumbed-down
+another one of those stupid W2s (edit: W4s) again, I'll be forced to write a dumbed-down
 primer on that too for myself.
