@@ -3,7 +3,7 @@ title:  "Stochastic Self Similarity"
 categories: til
 ---
 
-I've been reading<sup>1</sup> Creativity, Inc and I learned a new concept today:
+I've been reading<sup>1</sup> [Creativity, Inc][1] and I learned a new concept today:
 Stochastic Self-Similarity.
 
 Stochastic Self-similarity is a mathematical concept that describes
@@ -31,3 +31,5 @@ I thought that was interesting.
 **Footnotes**
 
 1. Ok fine, I've been listening to the audiobook.
+
+[1]: http://www.amazon.com/Creativity-Inc-Overcoming-Unseen-Inspiration/dp/0812993012
