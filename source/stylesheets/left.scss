@@ -1,50 +1,57 @@
 .left {
-  float: left;
-  width: 150px;
-  margin-right: 10px;
-  font-size: 0.7rem;
-  margin-bottom: 10px;
-  overflow: hidden;
-  text-align: left;
-  padding-top:16pt;
-  section {
-    h3 {
-      background-color: #0074D9;
-      border-radius: 5pt;
-      padding: 0 5pt;
-      margin-bottom: 8pt;
-      color: #fff;
-      font-weight: 100;
-    }
-    padding-right: 8pt;
-    margin-bottom: 15px;
-    p { line-height: normal; }
-  }
-  img {
+  background-color: #FAFAFA;
+  padding: 0 16pt;
+  .left-content {
+    max-width: 512pt;
+    margin: 0 auto;
+    @include display(flex);
+    width: 100%;
+    section { @include flex(1); }
+    font-size: 0.7rem;
     margin-bottom: 10px;
-    border-radius: 50%;
-  }
-  li {
-    list-style-type: none;
-    margin-bottom: 2px;
-  }
-  #listening, #reading li {
-    max-width: 120px;
-    text-overflow: ellipsis;
     overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
+    text-align: left;
+    padding-top: 8pt;
+    section {
+      h3 {
+        background-color: rgba(9,116,217, 1);
+        border-radius: 5pt;
+        padding: 0 5pt;
+        margin-bottom: 8pt;
+        color: #fff;
+        font-weight: 100;
+      }
+      padding: 4pt;
+      p { line-height: normal; }
+    }
+    img {
+      margin-bottom: 10px;
+      border-radius: 50%;
+    }
+    li {
+      list-style-type: none;
+      margin-bottom: 2px;
+    }
+    #listening, #reading li {
+      max-width: 120px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      display: inline-block;
+    }
+
+    #reading li {
+      list-style-type: circle;
+      list-style-position: inside;
+      margin-left: 5px;
+      margin-bottom: 5px;
+    }
+
+    #listening:hover, #reading li:hover {
+      overflow: visible;
+      max-width: none;
+    }
   }
 
-  #reading li {
-    list-style-type: circle;
-    list-style-position: inside;
-    margin-left: 5px;
-    margin-bottom: 5px;
-  }
 
-  #listening:hover, #reading li:hover {
-    overflow: visible;
-    max-width: none;
-  }
 }

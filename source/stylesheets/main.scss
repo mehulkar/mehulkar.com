@@ -114,11 +114,6 @@ h3 { font-size: 1.3em; margin-bottom: 0; }
 
 pre { margin-bottom: 15px; }
 
-p, ol {
-  margin-bottom: 20px;
-}
-
-p { line-height: 30px; }
 a, a:visited, a:hover {
   color: #666;
   text-decoration: none;
@@ -126,5 +121,5 @@ a, a:visited, a:hover {
 
 #page {
   margin: 20px auto 0;
-  max-width: 768px;
+  max-width: 512pt;
 }

@@ -9,7 +9,7 @@
 /*@media screen and (device-aspect-ratio: 3 / 4),*/
 /* iPad 5 */
 @media screen and (device-aspect-ratio: 40 / 71) {
-  #page, #posts {
+  #content {
     max-width: 90%;
   }
 }
@@ -24,21 +24,8 @@
   body {
     -webkit-text-size-adjust: none;
   }
-  .left {
-    @include display(flex);
-    width: 100%;
+  #page, .left .left-content, #header .header-content {
     max-width: none;
-    font-size: 1rem;
-    img { display: none; }
-    section {
-      @include flex(1);
-    }
-
-    > * {
-      display: inline-block;
-      float: left;
-      margin-right: 10px;
-    }
   }
 
   #posts, #footer, #content {
@@ -49,9 +36,9 @@
     border-left: none;
     padding-left: 0;
     padding: 32pt;
-    p {
-      line-height: 1.6em;
-      letter-spacing: 0.5pt;
+    article {
+      line-height: 1.5em;
+      letter-spacing: 0pt;
     }
   }
 }
