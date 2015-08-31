@@ -22,18 +22,33 @@
     -webkit-text-size-adjust: none;
   }
   .left {
+    @include display(flex);
     width: 100%;
     max-width: none;
+    font-size: 1rem;
+    img { display: none; }
+    section {
+      @include flex(1);
+    }
+
+    > * {
+      display: inline-block;
+      float: left;
+      margin-right: 10px;
+    }
   }
 
-  .left > * {
-    display: inline-block;
-    float: left;
-    margin-right: 10px;
-  }
-
-  #posts, #footer {
+  #posts, #footer, #content {
     clear:both;
     margin-left: 0;
+  }
+  #content {
+    border-left: none;
+    padding-left: 0;
+    padding: 32pt;
+    p {
+      line-height: 1.6em;
+      letter-spacing: 0.5pt;
+    }
   }
 }

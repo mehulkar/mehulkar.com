@@ -1,0 +1,44 @@
+#header {
+  padding: 8pt 16pt;
+  text-align: center;
+  font-family: 'Poiret One', sans-serif;
+  background-color: #FAFAFA;
+  @include display(flex);
+  img {
+    border-radius: 50%;
+    margin-right: 8pt;
+  }
+  h1 {
+    @include flex(1);
+    text-align: left;
+    font-weight: 100;
+    font-size: 2rem;
+    line-height: 2rem;
+    position: relative;
+    top: 4pt;
+  }
+  nav {
+    margin-left: auto;
+    text-align: left;
+    li {
+      display: inline-block;
+      background-color: #0074D9;
+      border-radius: 5pt;
+      border: solid 1px #0074D9;
+      &:hover {
+        border: solid 1px #0074D9;
+        background-color: #fff;
+        a, a:visited, a:hover { color: #0074D9; }
+      }
+      a {
+        padding: 2pt 8pt;
+        width: 100%;
+        display: block;
+        color: #fff;
+        &:visited {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

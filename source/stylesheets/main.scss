@@ -49,84 +49,6 @@ a:visited { color: #a0a; }
   font-size: 80%;
 }
 
-/*****************************************************************************/
-/*
-/* Site
-/*
-/*****************************************************************************/
-
-.site {
-  font-size: 115%;
-  text-align: justify;
-  width: 42em;
-  margin: 3em auto 2em;
-  line-height: 1.5em;
-}
-
-.header a {
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.title {
-  display: inline-block;
-  margin-bottom: 2em;
-}
-
-.title a {
-  color: #a00;
-}
-
-.title a:hover {
-  color: #000;
-}
-
-.header a.extra {
-  color: #aaa;
-  margin-left: 1em;
-}
-
-.header a.extra:hover {
-  color: #000;
-}
-
-.meta {
-  color: #aaa;
-}
-
-.footer {
-  font-size: 80%;
-  color: #666;
-  border-top: 4px solid #eee;
-  margin-top: 2em;
-  overflow: hidden;
-}
-
-.footer .contact {
-  float: left;
-  margin-right: 3em;
-}
-
-.footer .contact a {
-  color: #8085C1;
-}
-
-.footer .rss {
-  margin-top: 1.1em;
-  margin-right: -.2em;
-  float: right;
-}
-
-.footer .rss img {
-  border: 0;
-}
-
-/*****************************************************************************/
-/*
-/* Posts
-/*
-/*****************************************************************************/
-
 /* standard */
 .post pre {
   border: 1px solid #ddd;
@@ -172,7 +94,7 @@ body {
   font-family: "PT Sans", sans-serif;
   color: #333;
   font-weight: 300;
-  line-height: 24 px;
+  line-height: 24px;
   min-width: 400px;
 }
 
@@ -196,47 +118,13 @@ p, ol {
   margin-bottom: 20px;
 }
 
-p {
-  line-height: 30px;
-}
-
+p { line-height: 30px; }
 a, a:visited, a:hover {
   color: #666;
+  text-decoration: none;
 }
 
 #page {
   margin: 20px auto 0;
   max-width: 768px;
-}
-
-#header, #footer {
-  padding: 10px;
-  text-align: center;
-}
-
-#header {
-  font-family: 'Poiret One', sans-serif;
-  font-size: 3rem;
-  margin-bottom: 20px;
-  background-color: #eee;
-  border: solid 3px #ccc;
-  padding: 10px 0 10px;
-}
-
-#header a {
-  text-decoration: none;
-}
-
-#footer { color: #999; }
-
-#footer nav {
-  text-align: left;
-}
-
-#footer nav li {
-  display: inline-block;
-}
-
-#footer nav li:after {
-  content: "    /";
 }

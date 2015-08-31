@@ -6,10 +6,15 @@
 <% end %>
 
 <% post_groups.each do |group, posts| %>
-  <h3><%= group %></h3>
-  <ul class="posts">
-    <% posts.sort {|x,y| Date.parse(y[:date]) <=> Date.parse(x[:date]) }.each do |post| %>
-      <li><date><%=post[:date]%></date> <%= link_to post[:title], post[:link] %></li>
-    <% end %>
-  </ul>
+  <div class="post-group">
+    <h3><%= group %></h3>
+    <ul>
+      <% posts.sort {|x,y| Date.parse(y[:date]) <=> Date.parse(x[:date]) }.each do |post| %>
+        <li>
+          <%= link_to post[:title], post[:link] %>
+          <date><%=post[:date]%></date>
+        </li>
+      <% end %>
+    </ul>
+  </div>
 <% end %>

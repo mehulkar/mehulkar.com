@@ -1,0 +1,82 @@
+#content {
+  margin-left: 150px;
+  max-width: 750px;
+  min-height: 410px;
+  margin-bottom: 50px;
+  padding: 16pt;
+  text-align: left;
+  border-radius: 8pt;
+  header {
+    border-bottom: solid 1px #eee;
+    h1 { margin-bottom: 0.2em; }
+    h3 { font-size: 12px; }
+    h2, h3 {
+      color: #ccc;
+      font-size: 16px;
+      font-weight: normal;
+      margin-bottom: 0.5em;
+    }
+  }
+
+  .post-group {
+    margin-bottom: 32pt;
+    h3 {
+      padding-left: 4pt;
+      margin-bottom: 8pt;
+    }
+    ul {
+      padding-left: 0;
+      margin-left: 0;
+      font-size: 1rem;
+      li {
+        @include display(flex);
+        a  { @include flex(1);  }
+        list-style: none;
+        padding: 4pt;
+        margin: 0;
+        a { text-transform: capitalize; }
+        &:hover {
+          background-color: rgba(9,116,217,0.1);
+        }
+      }
+      date {
+        color: #ccc;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  img {
+    max-width: 100%;
+  }
+  hr {
+    border-top: 1px solid #ccc;
+    margin-bottom: 20px;
+  }
+  blockquote {
+    color: #777;
+    border-left: #ccc solid 2px;
+    padding-left: 20px;
+    padding-right: 30px;
+  }
+  /* Using !important because twitter
+    converts blockquote to iframe and
+    applies inline CSS
+   */
+  iframe.twitter-tweet {
+    margin-bottom: 20px !important;
+  }
+  ol li, ul li {
+    margin: 10px 0 0 20px;
+    padding-left: 10px;
+    p { line-height: 24px; }
+  }
+  pre code {
+    display: block;
+    padding: 10px 15px;
+    border-radius: 3px 15px 3px 15px;
+    font-size: 0.8rem;
+  }
+}
