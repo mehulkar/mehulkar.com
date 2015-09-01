@@ -42,10 +42,15 @@ a, a:visited, a:hover {
 
 #content {
   margin: 20px auto 0;
-  max-width: 512pt;
-  min-height: 410px;
-  margin-bottom: 50px;
+  width: 512pt;
   padding: 0;
   text-align: left;
   border-radius: 8pt;
+}
+
+body {
+  min-height: 100vh;
+  @include display(flex);
+  @include flex-direction(column);
+  #content { @include flex(1); }
 }
