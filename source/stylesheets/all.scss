@@ -6,3 +6,46 @@
 @import 'footer';
 @import 'header';
 @import 'responsive';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+html, body { height: 100%; }
+
+body {
+  text-align: center;
+  font-size: 1rem;
+  font-family: "PT Sans", sans-serif;
+  color: #333;
+  font-weight: 300;
+  line-height: 24px;
+  min-width: 400px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-family: "PT Sans", sans-serif;
+  margin-bottom: 10px;
+}
+
+h1 { font-size: 1.5em; margin-bottom: 1em; }
+h2 { font-size: 1.4em;    }
+h3 { font-size: 1.3em; margin-bottom: 0; }
+
+p { margin: 1em 0; }
+
+pre { margin-bottom: 15px; }
+
+a, a:visited, a:hover {
+  color: #666;
+  text-decoration: none;
+}
+
+#page {
+  margin: 20px auto 0;
+  max-width: 512pt;
+}
