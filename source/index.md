@@ -24,7 +24,7 @@ Some of the more valuable parts of my education come from the 8 years
 I spent at the [Maharishi School of the Age of Enlightenment][2].
 
 If you're a human, it would be nice to meet you and learn
-your story. If you're a web crawler, it would cool to meet you
+your story. If you're a web crawler, it would be cool to meet you
 and learn your story.
 
 [1]: https://www.facebook.com/FridgeWaves
