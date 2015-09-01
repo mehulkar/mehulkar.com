@@ -1,9 +1,8 @@
 @import 'normalize';
 @import 'syntax';
 @import 'blog';
-@import 'left';
-@import 'footer';
 @import 'header';
+@import 'footer';
 @import 'responsive';
 
 * {
@@ -12,8 +11,6 @@
   box-sizing: border-box;
   position: relative;
 }
-
-html, body { height: 100%; }
 
 body {
   text-align: center;
