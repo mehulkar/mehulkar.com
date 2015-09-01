@@ -28,68 +28,6 @@
   }
 }
 
-#content {
-  min-height: 410px;
-  margin-bottom: 50px;
-  padding: 0;
-  text-align: left;
-  border-radius: 8pt;
-  article {
-    font-size: 1rem;
-    ol, ul {
-      margin-left: 16pt;
-    }
-    ol li, ul li {
-      margin-top: 8pt;
-      margin-left: 16pt;
-      line-height: 1.5rem;
-      p { line-height: 24px; }
-    }
-    ol, ul, p, h3{
-      line-height: 1.5rem;
-      margin-bottom: 16pt;
-    }
-  }
-  header {
-    border-bottom: solid 1px #eee;
-    h1 { margin-bottom: 0.2em; }
-    h3 { font-size: 12px; }
-    h2, h3 {
-      color: #ccc;
-      font-size: 16px;
-      font-weight: normal;
-      margin-bottom: 0.5em;
-    }
-  }
-
-  img { max-width: 100%; }
-  hr {
-    border-top: 1px solid #ccc;
-    margin-bottom: 20px;
-  }
-  blockquote {
-    color: #777;
-    border-left: #ccc solid 2px;
-    padding-left: 20px;
-    padding-right: 30px;
-  }
-  /* Using !important because twitter
-    converts blockquote to iframe and
-    applies inline CSS
-   */
-  iframe.twitter-tweet {
-    margin-bottom: 20px !important;
-  }
-
-  pre code {
-    display: block;
-    padding: 10px 15px;
-    border-radius: 3px 15px 3px 15px;
-    font-size: 0.8rem;
-  }
-}
-
-
 .posts {
   list-style-type: none;
   margin-bottom: 2em;
@@ -98,28 +36,5 @@
     color: #aaa;
     font-family: Monaco, "Courier New", monospace;
     font-size: 80%;
-  }
-}
-
-.post {
-  pre {
-    border: 1px solid #ddd;
-    background-color: #eef;
-    padding: 0 .4em;
-    code { border: none; }
-    &.terminal {
-      border: 1px solid #000;
-      background-color: #333;
-      color: #FFF;
-      code { background-color: #333; }
-    }
-  }
-  ul, ol {
-    margin-left: 1.35em;
-  }
-  code {
-    border: 1px solid #ddd;
-    background-color: #eef;
-    padding: 0 .2em;
   }
 }
