@@ -88,3 +88,38 @@
     font-size: 0.8rem;
   }
 }
+
+
+.posts {
+  list-style-type: none;
+  margin-bottom: 2em;
+  li { line-height: 1.75em; }
+  span {
+    color: #aaa;
+    font-family: Monaco, "Courier New", monospace;
+    font-size: 80%;
+  }
+}
+
+.post {
+  pre {
+    border: 1px solid #ddd;
+    background-color: #eef;
+    padding: 0 .4em;
+    code { border: none; }
+    &.terminal {
+      border: 1px solid #000;
+      background-color: #333;
+      color: #FFF;
+      code { background-color: #333; }
+    }
+  }
+  ul, ol {
+    margin-left: 1.35em;
+  }
+  code {
+    border: 1px solid #ddd;
+    background-color: #eef;
+    padding: 0 .2em;
+  }
+}
