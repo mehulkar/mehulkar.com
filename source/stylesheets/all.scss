@@ -54,3 +54,7 @@ body {
   @include flex-direction(column);
   #content { @include flex(1); }
 }
+
+pre .highlight.plaintext {
+  color: #333;
+}
