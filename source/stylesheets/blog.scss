@@ -19,7 +19,11 @@
       }
       li {
         @include display(flex);
-        a  { @include flex(1);  }
+        a, a:visited, a:hover {
+          @include flex(1);
+          color: #666;
+          text-decoration: none;
+        }
         list-style: none;
         padding: 4pt;
         margin: 0;
