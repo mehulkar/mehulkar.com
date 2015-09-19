@@ -1,5 +1,4 @@
 @import 'normalize';
-@import 'syntax';
 @import 'blog';
 @import 'post';
 @import 'header';
@@ -33,7 +32,6 @@ h1 { font-size: 1.5em; margin-bottom: 1em;  }
 h2 { font-size: 1.4em;                      }
 h3 { font-size: 1.3em; margin-bottom: 0;    }
 p   { margin: 1em 0; }
-pre { margin-bottom: 15px; }
 
 a, a:visited, a:hover {
   color: #666;
@@ -64,8 +62,4 @@ body {
   @include display(flex);
   @include flex-direction(column);
   #content { @include flex(1); }
-}
-
-pre .highlight.plaintext {
-  color: #333;
 }

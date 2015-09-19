@@ -13,10 +13,8 @@
 
   article {
     font-size: 1rem;
+    margin-bottom: 32pt;
     pre {
-      border: 1px solid #ddd;
-      background-color: #eef;
-      padding: 0 .4em;
       code {
         border: none;
         display: block;
@@ -44,11 +42,6 @@
         line-height: 1.5rem;
         p { line-height: 24px; }
       }
-    }
-    code {
-      border: 1px solid #ddd;
-      background-color: #eef;
-      padding: 0 .2em;
     }
 
     img { max-width: 100%; }
