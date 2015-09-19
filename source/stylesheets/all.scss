@@ -35,9 +35,12 @@ h3 { font-size: 1.3em; margin-bottom: 0;    }
 p   { margin: 1em 0; }
 pre { margin-bottom: 15px; }
 
-a, a:visited, a:hover {
-  color: #666;
+a {
+  color: #007aff;
   text-decoration: none;
+}
+a:hover, a:focus {
+  color: #0055b3;
 }
 
 #content {
@@ -46,6 +49,10 @@ a, a:visited, a:hover {
   padding: 0;
   text-align: left;
   border-radius: 8pt;
+  ul {
+    margin-left: 16pt;
+    margin-bottom: 16pt;
+  }
 }
 
 body {

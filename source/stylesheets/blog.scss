@@ -1,40 +1,40 @@
 @import 'bourbon';
 @import 'neat';
 
-.post-group {
-  margin-bottom: 32pt;
-  h3 {
-    padding-left: 4pt;
-    margin-bottom: 8pt;
-  }
-  ul {
-    li {
-      @include display(flex);
-      a  { @include flex(1);  }
-      list-style: none;
-      padding: 4pt;
-      margin: 0;
-      a { text-transform: capitalize; }
-      &:hover {
-        background-color: rgba(9,116,217,0.1);
+#content {
+  .post-group {
+    margin-bottom: 32pt;
+    h3 {
+      padding-left: 4pt;
+      margin-bottom: 8pt;
+    }
+    ul {
+      margin-left: 0;
+      list-style-type: none;
+      margin-bottom: 2em;
+      span {
+        color: #aaa;
+        font-family: Monaco, "Courier New", monospace;
+        font-size: 80%;
+      }
+      li {
+        @include display(flex);
+        a  { @include flex(1);  }
+        list-style: none;
+        padding: 4pt;
+        margin: 0;
+        line-height: 1.75em;
+        a { text-transform: capitalize; }
+        &:hover {
+          background-color: rgba(9,116,217,0.1);
+        }
+      }
+      date {
+        color: #ccc;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: 5px;
       }
     }
-    date {
-      color: #ccc;
-      display: inline-block;
-      margin-left: auto;
-      margin-right: 5px;
-    }
-  }
-}
-
-.posts {
-  list-style-type: none;
-  margin-bottom: 2em;
-  li { line-height: 1.75em; }
-  span {
-    color: #aaa;
-    font-family: Monaco, "Courier New", monospace;
-    font-size: 80%;
   }
 }

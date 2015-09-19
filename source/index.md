@@ -1,32 +1,40 @@
-<header>
 # Hello
-## I am a person. And so are you.
-</header>
 
+I am a human. And so are you. Or maybe you are a robot.
 
+In either case, you're probably here because you want to know **all the things**
+about me. I made a list below.
 
-Or maybe you are a web crawler. Or maybe you are a little of both.
+If you're a human, it would be nice to meet you and learn your story.
+If you're a robot, it would still be cool to meet you and learn your story.
 
-In any case, hello.
+---
 
-I currently most enjoy writing code, but I  also teach tennis. In the past
-I've worked as a market researcher, washed dishes and pruned trees.
+Things I'm Doing **Now**:
 
-In college I started (and sold) [a company][1] that generated cash by
-renting appliances to facilitate international microloans to
-Third World entrepreneurs.
+- Working at a [fruit company][10]
+- Writing at [ThreeMusics][5]
 
-I also created and grew a [community of South Asian student organizations][3]
-for three years.
+Things I've Done **Recently**:
 
-I earned a degree in Finance, but I've forgotten most of what I learned.
-Some of the more valuable parts of my education come from the 8 years
-I spent at the [Maharishi School of the Age of Enlightenment][2].
+- Wrote some code for [TeaWithStrangers][6]
+- Learned how to code at [Dev Bootcamp][7]
 
-If you're a human, it would be nice to meet you and learn
-your story. If you're a web crawler, it would be cool to meet you
-and learn your story.
+Things From **The Past**:
+
+- Created and grew a community of South Asian student organizations at [CollegeDesis][3]
+- Facilitated microloans at [FridgeWaves][9]
+- Went to [University of Wisconsin-Whitewater][8]
+- Learned the Science of Creative Intelligence at [Maharishi School of the Age of Englightnment][2]
+
 
 [1]: https://www.facebook.com/FridgeWaves
 [2]: http://maharishischooliowa.org
 [3]: http://collegedesis.com
+[4]: https://apple.com
+[5]: http://threemusics.com
+[6]: https://teawithstrangers.com
+[7]: https://devbootcamp.com
+[8]: http://www.uww.edu/cobe/
+[9]: https://www.facebook.com/FridgeWaves/info?tab=page_info
+[10]: https://apple.com

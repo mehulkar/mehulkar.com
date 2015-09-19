@@ -8,7 +8,7 @@
 <% post_groups.each do |group, posts| %>
   <div class="post-group">
     <h3><%= group %></h3>
-    <ul>
+    <ul class="posts">
       <% posts.sort {|x,y| Date.parse(y[:date]) <=> Date.parse(x[:date]) }.each do |post| %>
         <li>
           <%= link_to post[:title], post[:link] %>
