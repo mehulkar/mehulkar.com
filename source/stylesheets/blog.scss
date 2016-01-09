@@ -12,11 +12,6 @@
       margin-left: 0;
       list-style-type: none;
       margin-bottom: 2em;
-      span {
-        color: #aaa;
-        font-family: Monaco, "Courier New", monospace;
-        font-size: 80%;
-      }
       li {
         @include display(flex);
         a, a:visited, a:hover {
@@ -32,12 +27,14 @@
         &:hover {
           background-color: rgba(9,116,217,0.1);
         }
-      }
-      date {
-        color: #ccc;
-        display: inline-block;
-        margin-left: auto;
-        margin-right: 5px;
+        span {
+          &.categories {
+            color: #ccc;
+            @include flex(1);
+          }
+          &.title { @include flex(4); }
+          &.date { color: #ccc; }
+        }
       }
     }
   }

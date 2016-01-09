@@ -31,7 +31,8 @@ helpers do
       {
         date: first_created(file),
         link: '/blog/' + basename,
-        title: basename.gsub('-', ' ').capitalize
+        title: basename.gsub('-', ' ').capitalize,
+        categories: categories(file)
       }
     }.group_by { |x|
       Date.parse(x[:date]).strftime("%Y")
@@ -46,6 +47,12 @@ helpers do
     else
       first_created(current_page.source_file)
     end
+  end
+
+  def categories(path)
+    str = `cat #{path} | grep categories:`
+    str ||= ""
+    str.split("categories: ")[1]
   end
 
   def first_created(path)

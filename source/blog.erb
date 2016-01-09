@@ -11,8 +11,9 @@
     <ul class="posts">
       <% posts.sort {|x,y| Date.parse(y[:date]) <=> Date.parse(x[:date]) }.each do |post| %>
         <li>
-          <%= link_to post[:title], post[:link] %>
-          <date><%=post[:date]%></date>
+          <span class="categories"><%= post[:categories] %></span>
+          <span class="title"><%= link_to post[:title], post[:link] %></span>
+          <span class="date"><%=post[:date]%></span>
         </li>
       <% end %>
     </ul>
