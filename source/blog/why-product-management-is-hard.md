@@ -19,26 +19,17 @@ The key to measurable progress is incrementalism.
 I don't think I need to convince anyone that breaking
 down large endeavors into smaller tasks is a good thing.
 
-But the thing about smaller tasks is this:
-
-> Sometimes a small task looks like a step forward and
-> soemtimes it looks like a step backwards.
-
-In other words, sometimes incrementalism means introducing
-complexity and friction. In even other words, sometimes
+But the thing about smaller tasks is that sometimes they involve
+introducing complexity and friction. In even other words, sometimes
 incrementalism means moving in the wrong direction<sup>1</sup>.
 
 The problem with moving in the wrong direction is that
 roadmaps can change.
 
-For example, today our roadmap might involve getting a user's
-interests from the Facebook, so we decide to add Facebook
-authentication to the application even though we already have
-an authentication system. This serves the purpose of measuring
-progress. But if Facebook decides to remove the API we're
-actually interested in (user "likes") or if our roadmap changes
-so that we no longer plan to use our users' likes, then the
-new authentication system becomes technical debt.
+For example, removing a feature for the sake of simplicity might
+seem like moving backwards today. But tomorrow, the simplicity
+could either be a bad thing, or a business requirement could mean
+that that feature was critical and needs to come back.
 
 A Product Manager's role, then, is twofold:
 
@@ -48,7 +39,7 @@ progress is made on a regular and frequent basis.
 in relationship to the investments made today.
 
 Each of these is difficult both for the technical work required
-and the social work required to convince the team about the merits
+and the social work required to convince stakeholders about the merits
 of decisions.
 
 **Footnotes**
