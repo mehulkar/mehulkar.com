@@ -4,4 +4,9 @@ task :publish do
   system("rm -rf build")
 end
 
+desc 'Create a new post'
+task :new do
+  system('./bin/new_post.rb')
+end
+
 task :default => :publish
