@@ -13,6 +13,7 @@
 }
 
 body {
+  @include display(flex);
   text-align: center;
   font-size: 1rem;
   font-family: "PT Sans", sans-serif;
@@ -39,7 +40,17 @@ a, a:visited, a:hover {
   text-decoration: none;
 }
 
+spacer { @include flex(1); }
+
 #content {
+  margin-top: 10px;
+  margin-left: 32pt;
+  width: 800pt;
+  min-width: 800pt;
+  text-align: left;
+  height: 100vh;
+  @include display(flex);
+  @include flex-direction(column);
   .content-inside {
     max-width: 600pt;
     p, ul, ol {
@@ -53,13 +64,6 @@ a, a:visited, a:hover {
     }
 
   }
-  margin-top: 20px;
-  margin-left: 32pt;
-  width: 800pt;
-  text-align: left;
-  height: 100vh;
-  @include flex-direction(column);
-  spacer { @include flex(1); }
   ul {
     margin-left: 16pt;
     margin-bottom: 16pt;
@@ -72,9 +76,4 @@ a, a:visited, a:hover {
   a:hover, a:focus {
     color: #0055b3;
   }
-}
-
-body {
-  @include display(flex);
-  spacer { @include flex(1); }
 }
