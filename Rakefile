@@ -1,3 +1,8 @@
+desc 'Start Middleman server'
+task :run do
+  system('middleman server')
+end
+
 desc "Publish website to master branch of origin"
 task :publish do
   system("./bin/publish")
