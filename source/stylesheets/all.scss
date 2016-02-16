@@ -31,6 +31,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 { font-size: 1.5em; margin-bottom: 1em;  }
 h2 { font-size: 1.4em;                      }
 h3 { font-size: 1.3em; margin-bottom: 0;    }
+
 p  { margin: 1em 0; }
 
 a, a:visited, a:hover {
@@ -39,11 +40,26 @@ a, a:visited, a:hover {
 }
 
 #content {
-  margin: 20px auto 0;
-  width: 512pt;
-  padding: 0;
+  .content-inside {
+    max-width: 600pt;
+    p, ul, ol {
+      font-size: 1.25rem;
+      line-height: 2rem;
+    }
+
+    ul, ol {
+      font-size: 1.1rem;
+      margin-left: 2rem;
+    }
+
+  }
+  margin-top: 20px;
+  margin-left: 32pt;
+  width: 800pt;
   text-align: left;
-  border-radius: 8pt;
+  height: 100vh;
+  @include flex-direction(column);
+  spacer { @include flex(1); }
   ul {
     margin-left: 16pt;
     margin-bottom: 16pt;
@@ -59,8 +75,6 @@ a, a:visited, a:hover {
 }
 
 body {
-  min-height: 100vh;
   @include display(flex);
-  @include flex-direction(column);
-  #content { @include flex(1); }
+  spacer { @include flex(1); }
 }

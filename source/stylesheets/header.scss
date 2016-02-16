@@ -1,9 +1,15 @@
 @import 'bourbon';
 @import 'neat';
 
-#header {
+header, #content {
+  padding-top: 3rem;
+}
+
+header {
   background-color: #f0f0f0;
-  padding: 8pt 16pt;
+  padding-right: 2rem;
+  padding-left: 4rem;
+  background-color: #FAFAFA;
   .header-content {
     max-width: 512pt;
     margin: 0 auto;
@@ -24,83 +30,66 @@
       position: relative;
       top: 4pt;
     }
-    nav {
-      margin-left: auto;
-      text-align: left;
-      li {
-        display: inline-block;
-        border-radius: 5pt;
-        border: solid 1px #0074D9;
-        &:hover {
-          border: solid 1px #0074D9;
-          a, a:visited, a:hover { color: #0074D9; }
-        }
-        a {
-          padding: 2pt 8pt;
-          width: 100%;
-          display: block;
-          color: #0074D9;
-          &:visited {
-            color: #0074D9;
-          }
+  }
+
+  $color: #0074D9;
+  nav {
+    margin-left: auto;
+    margin-bottom: 40px;
+    text-align: right;
+    li {
+      list-style: none;
+      border-bottom: solid 1px $color;
+      a {
+        padding: 2pt 8pt;
+        width: 100%;
+        display: block;
+        color: $color;
+        &:visited {
+          color: $color;
         }
       }
     }
   }
-}
 
-.sub-header {
-  background-color: #FAFAFA;
-  padding: 0 16pt;
-  .sub-header-content {
-    max-width: 512pt;
-    margin: 0 auto;
-    @include display(flex);
-    width: 100%;
-    section { @include flex(1); }
-    font-size: 0.7rem;
+  section.notes {
+    font-size: 0.8rem;
     margin-bottom: 10px;
     overflow: hidden;
-    text-align: left;
+    text-align: right;
     padding-top: 8pt;
-    section {
-      h3 {
-        background-color: #39c;
-        border-radius: 5pt;
-        padding: 0 5pt;
-        margin-bottom: 8pt;
-        color: #fff;
-        font-weight: 100;
-      }
-      padding: 4pt;
-      p { line-height: normal; }
+    h3 {
+      background-color: #39c;
+      border-radius: 5pt;
+      padding: 0 5pt;
+      margin-bottom: 8pt;
+      color: #fff;
+      font-weight: 100;
     }
-    img {
-      margin-bottom: 10px;
-      border-radius: 50%;
-    }
-    li {
-      list-style-type: none;
-      margin-bottom: 2px;
-    }
-    #listening, #reading li {
-      max-width: 120px;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
-      display: inline-block;
-    }
+    padding: 4pt;
+    p { line-height: normal; }
+  }
+  img {
+    margin-bottom: 10px;
+    border-radius: 50%;
+  }
+  li {
+    list-style-type: none;
+    margin-bottom: 2px;
+  }
+  #listening, #reading li {
+    max-width: 150px;
+    display: inline-block;
+  }
+  #listening .artist {
+    color: #333;
+    font-weight: 600;
+  }
 
-    #reading li {
-      list-style-type: circle;
-      list-style-position: inside;
-      margin-left: 5px;
-      margin-bottom: 5px;
-    }
-
-    #listening:hover, #reading li:hover {
-      overflow: visible;
-      max-width: none;
-    }
+  #reading li {
+    list-style-type: circle;
+    list-style-position: inside;
+    margin-left: 5px;
+    margin-bottom: 5px;
   }
 }

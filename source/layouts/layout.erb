@@ -14,42 +14,42 @@
   </head>
 
   <body>
-    <div id="header">
+    <header>
       <div class="header-content">
         <img src="https://gravatar.com/avatar/57c2dff3cf681f22f9519a18bafc7bce" width="40" height="40">
         <h1><a href='/'>Mehul Kar</a></h1>
-        <nav>
-          <li><a href="/">Home</a></li>
-          <li><a href="/blog">Blog</a></li>
-        </nav>
       </div>
-    </div>
-    <div class="sub-header">
-      <div class="sub-header-content">
-        <section>
-          <h3>Reading</h3>
-          <ul id='reading'></ul>
-        </section>
-        <section>
-          <h3>Listening</h3>
-          <a id='listening' target='_blank'></a>
-        </section>
-        <section>
-          <h3>Favorites</h3>
-          <li><a href="//twitter.com/mehulkar/favorites">See all</a></li>
-        </section>
-        <section>
-          <h3>Contact</h3>
-          <li><a href="//twitter.com/mehulkar">Twitter</a></li>
-          <li><a href="mailto:mehul.kar@gmail.com">Email</a></li>
-        </section>
-      </div>
-    </div>
+      <nav>
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="//twitter.com/mehulkar/favorites">Favorites</a></li>
+      </nav>
+
+      <section class='notes'>
+        <h3>Reading</h3>
+        <ul id='reading'></ul>
+      </section>
+
+      <section class='notes'>
+        <h3>Listening</h3>
+        <a id='listening' target='_blank'></a>
+      </section>
+
+      <section class='notes'>
+        <h3>Contact</h3>
+        <li><a href="//twitter.com/mehulkar">Twitter</a></li>
+        <li><a href="mailto:mehul.kar@gmail.com">Email</a></li>
+      </section>
+    </header>
+
     <div id="content">
-      <%= yield %>
-    </div>
-    <div id="footer">
-       &copy; <span id='year'></span>
+      <div class='content-inside'>
+        <%= yield %>
+      </div>
+      <spacer></spacer>
+      <div id="footer">
+         &copy; <span id='year'></span>
+      </div>
     </div>
   </body>
 </html>

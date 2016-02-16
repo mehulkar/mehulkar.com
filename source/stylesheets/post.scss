@@ -1,18 +1,19 @@
 .post {
+  max-width: 500pt;
   header {
+    background: none;
+    padding: 0;
     border-bottom: solid 1px #eee;
     h1 { margin-bottom: 0.2em; }
-    h3 { font-size: 12px; }
     h2, h3 {
-      color: #ccc;
+      color: #999;
       font-size: 16px;
-      font-weight: normal;
+      font-weight: 600;
       margin-bottom: 0.5em;
     }
   }
 
   article {
-    font-size: 1rem;
     margin-bottom: 32pt;
     pre {
       code {
@@ -29,17 +30,16 @@
         code { background-color: #333; }
       }
     }
+
     ol, ul, p, h3{
-      line-height: 1.5rem;
       margin-bottom: 16pt;
     }
     ul, ol {
       margin-left: 1.35em;
       margin-left: 16pt;
       li {
-        margin-top: 8pt;
-        margin-left: 16pt;
-        line-height: 1.5rem;
+        margin-right: 2rem;
+        margin-bottom: 1.25rem;
         p { line-height: 24px; }
       }
     }

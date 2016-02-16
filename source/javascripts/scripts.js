@@ -19,7 +19,7 @@ function insertCurrentlyPlaying() {
     var response = JSON.parse(raw);
     var tracks = response.recenttracks
     var track = tracks.track.length ? tracks.track[0] : tracks.track;
-    var listening = track.name + "<br />by " + track.artist['#text'];
+    var listening = track.name + "<br />by " + "<span class='artist'>" + track.artist['#text'] + "</span>";
     document.getElementById('listening').innerHTML = listening;
     document.getElementById('listening').href = track.url;
   });
