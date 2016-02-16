@@ -7,7 +7,6 @@ header, #content {
 
 header {
   min-width: 300px;
-  background-color: #f0f0f0;
   padding-right: 2rem;
   padding-left: 4rem;
   background-color: #FAFAFA;
@@ -34,6 +33,7 @@ header {
   }
 
   $color: #0074D9;
+  $right-align-padding: 2pt 8pt;
   nav {
     margin-left: auto;
     margin-bottom: 40px;
@@ -42,7 +42,7 @@ header {
       list-style: none;
       border-bottom: solid 1px $color;
       a {
-        padding: 2pt 8pt;
+        padding: $right-align-padding;
         width: 100%;
         display: block;
         color: $color;
@@ -58,16 +58,17 @@ header {
     margin-bottom: 10px;
     overflow: hidden;
     text-align: right;
+    padding: 4pt;
     padding-top: 8pt;
+    padding-right: 0;
     h3 {
       background-color: #39c;
-      border-radius: 5pt;
-      padding: 0 5pt;
+      padding: $right-align-padding;
       margin-bottom: 8pt;
       color: #fff;
       font-weight: 100;
     }
-    padding: 4pt;
+
     p { line-height: normal; }
   }
   img {
