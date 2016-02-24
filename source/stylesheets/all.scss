@@ -53,13 +53,17 @@ spacer { @include flex(1); }
   @include flex-direction(column);
   .content-inside {
     max-width: 600pt;
-    p, ul, ol {
+    p {
       font-size: 1.25rem;
-      line-height: 2rem;
     }
 
-    ul, ol {
+    p, ul, ol {
+      line-height: 2rem;
+    }
+    ul, ol, ul p, ol p {
       font-size: 1.1rem;
+    }
+    ul, ol {
       margin-left: 2rem;
     }
 
