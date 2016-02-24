@@ -13,7 +13,7 @@ If you're a robot, it would still be cool to meet you and learn your story.
 Things I'm Doing **Now**:
 
 - Working at a [fruit company][10]
-- Writing at [ThreeMusics][5]
+- [Writing][11]
 
 Things I've Done **Recently**:
 
@@ -27,7 +27,6 @@ Things From **The Past**:
 - Went to [University of Wisconsin-Whitewater][8]
 - Learned the Science of Creative Intelligence at [Maharishi School of the Age of Englightnment][2]
 
-
 [1]: https://www.facebook.com/FridgeWaves
 [2]: http://maharishischooliowa.org
 [3]: http://collegedesis.com
@@ -38,3 +37,4 @@ Things From **The Past**:
 [8]: http://www.uww.edu/cobe/
 [9]: https://www.facebook.com/FridgeWaves/info?tab=page_info
 [10]: https://apple.com
+[11]: /blog
