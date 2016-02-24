@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-puts "Name of post?"
+print "Name of post: "
 title = gets.chomp
 parameterized = title.split(" ").map(&:downcase).join('-')
 filename = "source/blog/#{parameterized}.md"
