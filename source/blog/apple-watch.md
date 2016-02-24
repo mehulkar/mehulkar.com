@@ -1,7 +1,7 @@
 ---
 title: Apple Watch
 date: 2015-11-15
-categories: product-insights
+categories: product
 ---
 
 Looking at your watch is often a signal to indicate that it's getting
