@@ -58,3 +58,6 @@ I get is a list of ALL my connections, sorted alphabetically.
 
 If Linkedin is about professional networks that are based around some semblance
 of trust, the design of this page completely takes away from that.
+
+But all that said and done, the most perplexing part of all of this is that
+over 200 strangers have accepted my invitation request already. What?
