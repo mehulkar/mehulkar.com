@@ -47,5 +47,4 @@ and placed it below for comparison.
     [![Linkedin New Connections](/images/linkedin-new-connections.png)](/images/linkedin-new-connections.png)
 
 
-  Now I have a very large number of new connections, none of whom I intended to
-  add. And more importantly, I don't _know_
+:(
