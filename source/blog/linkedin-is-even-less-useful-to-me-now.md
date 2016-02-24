@@ -47,4 +47,10 @@ and placed it below for comparison.
     [![Linkedin New Connections](/images/linkedin-new-connections.png)](/images/linkedin-new-connections.png)
 
 
-:(
+  Now I have a very large number of new connections, none of whom I intended to
+  add. And more importantly, I can't actually get a list of the people that
+  I inadvertantly added. When I click on the notifications of new connections, all
+  I get is a list of ALL my connections, sorted alphabetically.
+
+  If Linkedin is about professional networks that are based around some semblance
+  of trust, this page completely takes away from that.
