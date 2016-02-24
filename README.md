@@ -2,6 +2,14 @@
 
 Built on [Middleman](http://middlemanapp.com/).
 
+## Write
+
+Write new posts like this:
+
+```
+rake new
+```
+
 ## Deploy
 
 Uses custom shell script to deploy to the master branch on github pages.
