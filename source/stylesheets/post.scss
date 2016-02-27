@@ -1,4 +1,4 @@
-.post {
+#content .content-inside .post {
   max-width: 500pt;
   header {
     background: none;
@@ -60,8 +60,14 @@
     blockquote {
       color: #777;
       border-left: #ccc solid 2px;
-      padding-left: 20px;
-      padding-right: 30px;
+      padding-left: 1rem;
+      padding-right: 5rem;
+      margin-left: 2rem;
+      p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        margin-bottom: 1rem;
+      }
     }
   }
 }
