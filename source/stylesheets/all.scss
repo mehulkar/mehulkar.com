@@ -28,8 +28,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "PT Sans", sans-serif;
   margin-bottom: 10px;
 }
-
-h1 { font-size: 1.5em; margin-bottom: 1em;  }
+h1 { font-size: 1.5em; }
 h2 { font-size: 1.4em;                      }
 h3 { font-size: 1.3em; margin-bottom: 0;    }
 
@@ -52,31 +51,35 @@ spacer { @include flex(1); }
   @include display(flex);
   @include flex-direction(column);
   .content-inside {
-    max-width: 600pt;
+    max-width: 500pt;
+
     p {
-      font-size: 1.25rem;
+      font-size: 1rem;
     }
 
     p, ul, ol {
-      line-height: 2rem;
+      line-height: 1.5rem;
     }
+
     ul, ol, ul p, ol p {
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
+
     ul, ol {
       margin-left: 2rem;
     }
 
   }
+
   ul {
     margin-left: 16pt;
     margin-bottom: 16pt;
   }
   a {
-    color: #007aff;
     color: #39c;
     text-decoration: none;
   }
+
   a:hover, a:focus {
     color: #0055b3;
   }
