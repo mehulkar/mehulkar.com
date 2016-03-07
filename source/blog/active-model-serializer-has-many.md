@@ -6,7 +6,7 @@ categories: programming
 
 I always forget all the different ways of serializing associations things, so putting down notes:
 
-### has_many
+## has_many
 
 ```ruby
 class AuthorSerializer < ActiveModel::Serializer
@@ -24,7 +24,7 @@ This will embed a array of `post` records into the `author` record.
 }
 ```
 
-### has_many, embed :ids
+## has_many, embed :ids
 
 ```ruby
 class AuthorSerializer < ActiveModel::Serializer
@@ -42,7 +42,7 @@ This will embed post_ids and sideload the posts:
   }
 }
 ```
-### attribute
+## attribute
 
 ```ruby
 class AuthorSerializer < ActiveModel::Serializer

@@ -16,7 +16,7 @@ and I want to make it clear that (1) that's a fine way to feel and (2),
 
 [1]: https://www.youtube.com/watch?v=GtkST5-ZFHw
 
----
+
 
 ## What to expect
 
@@ -26,7 +26,7 @@ You won't be writing any code in this tutorial for two reasons:
 - So I can write another post about actual code and get more pageviews and earn
   more nothing dollars from all the ads on this page.
 
----
+
 
 ## So, Ruby on Rails
 
@@ -41,7 +41,7 @@ There are 3 important things:
 1. Controllers,
 1. Views
 
----
+
 
 ### Routes
 
@@ -61,7 +61,7 @@ PS, Guess what happens if you don't have a definition for a particular "route"?
 See this: [http://www.google.com/idontexist](http://www.google.com/idontexist).
 That's a 404. It means the route wasn't found.
 
----
+
 
 ### Controllers
 
@@ -78,7 +78,7 @@ For example, if you as for `myserver.com/bananas`, you could have a
 responds with a message saying "You're such a monkey. Why are you such a
 monkey". And that would be that.
 
----
+
 
 ### Views
 
@@ -96,7 +96,7 @@ don't know what any of these are, AHA, I have another thing to write about!
 
 So that's what a view is: It contains content that should be displayed in a browser.
 
----
+
 
 ### All together
 
@@ -110,7 +110,7 @@ Let's put it together, shall we?
 1. Your `BananasController` sends `bananas.html` back to where the request came from.
 1. The user sees a picture of a banana in their browser.
 
----
+
 
 ### The big missing piece: Models
 
