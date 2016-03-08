@@ -18,3 +18,4 @@ gem "tzinfo-data", platforms: [:mswin, :mingw]
 
 gem 'pry'
 gem 'rake'
+gem 'font-awesome-middleman'

@@ -28,6 +28,11 @@ header {
       margin-bottom: 0;
     }
   }
+  .fa {
+    &:hover {
+      color: #39c;
+    }
+  }
 
   $color: #39c;
   $right-align-padding: 2pt 8pt;
@@ -55,6 +60,12 @@ header {
     margin-bottom: 1rem;
     overflow: hidden;
     text-align: right;
+    &.contact {
+      a {
+        margin-right: 5px;
+        &:last-child { margin-right: 0; }
+      }
+    }
     h3 {
       font-size: 1rem;
       background-color: $color;
