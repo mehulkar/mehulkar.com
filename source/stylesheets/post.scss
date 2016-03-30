@@ -28,16 +28,16 @@
       margin-bottom: 0.5rem;
     }
 
-    p code, pre code {
+    p code, pre code, li code {
       font-size: 0.8rem;
     }
 
-    p {
+    p, li {
       code {
-        border-radius: 3px 10px 3px 10px;
-
+        border-radius: 5px;
+        color: red;
         background: #eee;
-        padding: 1px 10px;
+        padding: 3px 4px;
       }
     }
     pre {
