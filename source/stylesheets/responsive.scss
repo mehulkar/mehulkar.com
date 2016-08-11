@@ -1,44 +1,23 @@
-@import 'bourbon';
-@import 'neat';
-
-/* Responsive */
-
-/* iPhone < 5 */
-/*@media screen and (device-aspect-ratio: 2 / 3),*/
- /*iPhone 5 */
-/*@media screen and (device-aspect-ratio: 3 / 4),*/
-/* iPad 5 */
-@media screen and (device-aspect-ratio: 40 / 71) {
-  #content {
-    max-width: 90%;
-  }
-}
-
-@media screen and (max-device-width: 480px) {
-  * {
-    margin: 0;
-    border: 0;
-    padding: 0;
-  }
-
-  body {
-    -webkit-text-size-adjust: none;
-  }
-  #page, .left .left-content, #header .header-content {
-    max-width: none;
-  }
-
-  #posts, #footer, #content {
-    clear:both;
-    margin-left: 0;
-  }
-  #content {
-    border-left: none;
-    padding-left: 0;
-    padding: 32pt;
-    article {
-      line-height: 1.5em;
-      letter-spacing: 0pt;
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    header {
+      position: static;
+      width: 100%;
+      .header-inner { position: static; }
+      .header-content {
+        display: block;
+        // img {
+        //   width: 1em;
+        //   height: 1em;
+        // }
+      }
+      nav { text-align: center; }
     }
-  }
+    #content { margin-left: 0; }
+    body { font-size: 3em; }
+    #content .content-inside p {
+      font-size: 1.5em;
+    }
 }

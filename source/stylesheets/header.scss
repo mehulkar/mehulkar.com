@@ -2,7 +2,7 @@
 @import 'neat';
 
 header, #content {
-  padding-top: 3rem;
+  padding-top: 3em;
 }
 
 header {
@@ -15,15 +15,15 @@ header {
   .header-inner {
     position: absolute;
     bottom: 1em;
-    left: 4rem;
+    left: 4em;
   }
-  min-width: 300px;
-  padding-right: 1rem;
-  padding-left: 4rem;
+
+  padding-right: 1em;
+  padding-left: 4em;
   background-color: #39c;
   .header-content {
     max-width: 512pt;
-    margin: 0 auto 2.5rem;
+    margin: 0 auto 2.5em;
     text-align: center;
     font-family: 'Poiret One', sans-serif;
 
@@ -35,7 +35,7 @@ header {
     }
     h1 {
       font-weight: 100;
-      font-size: 2rem;
+      font-size: 2em;
       margin-bottom: 0;
       a {
         color: #fff;
@@ -68,8 +68,8 @@ header {
   }
 
   section.notes {
-    font-size: 0.8rem;
-    margin-bottom: 1rem;
+    font-size: 0.8em;
+    margin-bottom: 1em;
     overflow: hidden;
     text-align: right;
     &.contact {
@@ -79,7 +79,7 @@ header {
       }
     }
     h3 {
-      font-size: 1rem;
+      font-size: 1em;
       background-color: $color;
       padding: $right-align-padding;
       margin-bottom: 8pt;

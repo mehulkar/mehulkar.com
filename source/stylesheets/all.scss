@@ -3,7 +3,6 @@
 @import 'post';
 @import 'header';
 @import 'footer';
-@import 'responsive';
 @import "font-awesome";
 
 * {
@@ -15,7 +14,7 @@
 
 body {
   text-align: center;
-  font-size: 1rem;
+  font-size: 1em;
   font-family: "PT Sans", sans-serif;
   color: #333;
   font-weight: 300;
@@ -41,8 +40,19 @@ a, a:visited, a:hover {
 
 spacer { @include flex(1); }
 
+$sidebar-width: 18em;
+header {
+  width: $sidebar-width;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin-left: $sidebar-width;
+  .clear { clear: both; }
+}
+
 #content {
-  margin-left: 300px;
   padding-left: 1em;
   margin-top: 10px;
   width: 800pt;
@@ -55,19 +65,19 @@ spacer { @include flex(1); }
     max-width: 500pt;
 
     p {
-      font-size: 1rem;
+      font-size: 1em;
     }
 
     p, ul, ol {
-      line-height: 1.5rem;
+      line-height: 1.5em;
     }
 
     ul, ol, ul p, ol p {
-      font-size: 1rem;
+      font-size: 1em;
     }
 
     ul, ol {
-      margin-left: 2rem;
+      margin-left: 2em;
     }
 
   }
@@ -85,3 +95,5 @@ spacer { @include flex(1); }
     color: #0055b3;
   }
 }
+
+@import 'responsive';

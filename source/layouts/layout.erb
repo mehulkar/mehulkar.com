@@ -34,14 +34,16 @@
       </div>
     </header>
 
-    <div id="content">
-      <div class='content-inside'>
-        <%= yield %>
+    <main>
+      <div id="content">
+        <div class='content-inside'>
+          <%= yield %>
+        </div>
       </div>
-      <spacer></spacer>
+      <div class='clear'></div>
       <div id="footer">
-         &copy; <span id='year'></span>
+        &copy; <span id='year'></span>
       </div>
-    </div>
+    </main>
   </body>
 </html>
