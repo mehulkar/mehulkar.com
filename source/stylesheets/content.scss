@@ -1,9 +1,11 @@
+$base-color: #39c;
+$link-hover-color: #0055b3;
+
 body main #content {
   flex: 1;
+  max-width: 30em;
 
   .content-inside {
-    max-width: 40em;
-
     p {
       font-size: 1em;
     }
@@ -18,20 +20,26 @@ body main #content {
 
     ul, ol {
       margin-left: 2em;
+      li {
+        font-size: 0.8em;
+        line-height: 1.25em;
+        margin-bottom: 0.5em;
+      }
     }
 
   }
 
   ul {
-    margin-left: 16pt;
-    margin-bottom: 16pt;
+    margin-left: 1em;
+    margin-bottom: 1em;
   }
+
   a {
-    color: #39c;
+    color: $base-color;
     text-decoration: none;
   }
 
   a:hover, a:focus {
-    color: #0055b3;
+    color: $link-hover-color;
   }
 }
