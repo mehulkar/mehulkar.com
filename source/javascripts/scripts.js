@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded',function() {
 });
 
 
-function insertCurrentlyReading() {
+function insertDate() {
   document.getElementById('year').innerHTML = (new Date).getFullYear();
 }
 
@@ -25,7 +25,7 @@ function insertCurrentlyPlaying() {
   });
 }
 
-function insertDate() {
+function insertCurrentlyReading() {
   var url = "https://kindle-profile-scraper.herokuapp.com/"
   doAjax(url, function(raw) {
     var response = JSON.parse(raw);
