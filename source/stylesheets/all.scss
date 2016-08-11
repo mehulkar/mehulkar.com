@@ -56,13 +56,11 @@ main {
 
 #content {
   flex: 1;
+  padding-top: 2em;
   padding-left: 1em;
-  margin-top: 10px;
   width: 800pt;
   min-width: 800pt;
   text-align: left;
-  @include display(flex);
-  @include flex-direction(column);
   .content-inside {
     max-width: 500pt;
 
