@@ -6,10 +6,21 @@ header, #content {
 }
 
 header {
+  $color: #fff;
+  $right-align-padding: 2pt 8pt;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  .header-inner {
+    position: absolute;
+    bottom: 1em;
+    left: 4rem;
+  }
   min-width: 300px;
   padding-right: 1rem;
   padding-left: 4rem;
-  background-color: #FAFAFA;
+  background-color: #39c;
   .header-content {
     max-width: 512pt;
     margin: 0 auto 2.5rem;
@@ -26,16 +37,17 @@ header {
       font-weight: 100;
       font-size: 2rem;
       margin-bottom: 0;
+      a {
+        color: #fff;
+      }
     }
   }
   .fa {
     &:hover {
-      color: #39c;
+      color: $color;
     }
   }
 
-  $color: #39c;
-  $right-align-padding: 2pt 8pt;
   nav {
     margin-left: auto;
     margin-bottom: 40px;
@@ -80,20 +92,5 @@ header {
   li {
     list-style-type: none;
     margin-bottom: 2px;
-  }
-  #listening, #reading li {
-    max-width: 150px;
-    display: inline-block;
-  }
-  #listening .artist {
-    color: #333;
-    font-weight: 600;
-  }
-
-  #reading li {
-    list-style-type: circle;
-    list-style-position: inside;
-    margin-left: 5px;
-    margin-bottom: 5px;
   }
 }

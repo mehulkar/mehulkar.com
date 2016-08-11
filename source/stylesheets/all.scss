@@ -14,7 +14,6 @@
 }
 
 body {
-  @include display(flex);
   text-align: center;
   font-size: 1rem;
   font-family: "PT Sans", sans-serif;
@@ -43,8 +42,9 @@ a, a:visited, a:hover {
 spacer { @include flex(1); }
 
 #content {
+  margin-left: 300px;
+  padding-left: 1em;
   margin-top: 10px;
-  margin-left: 32pt;
   width: 800pt;
   min-width: 800pt;
   text-align: left;
