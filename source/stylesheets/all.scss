@@ -4,6 +4,8 @@
 @import 'header';
 @import 'footer';
 @import "font-awesome";
+@import "layout";
+@import "content";
 
 * {
   margin: 0;
@@ -13,14 +15,12 @@
 }
 
 body {
-  text-align: center;
   font-size: 1em;
   font-family: "PT Sans", sans-serif;
   color: #333;
   font-weight: 300;
   line-height: 24px;
   min-width: 400px;
-  min-height: 100vh;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -41,59 +41,13 @@ a, a:visited, a:hover {
 
 spacer { @include flex(1); }
 
-$sidebar-width: 18em;
-header {
-  width: $sidebar-width;
-}
-
 main {
-  display: flex;
-  flex-direction: column;
-  margin-left: $sidebar-width;
+  @include display(flex);
+  @include flex-direction(column);
   min-height: 100%;
   margin-bottom: -80px;
-}
-
-#content {
-  flex: 1;
   padding-top: 2em;
   padding-left: 1em;
-  width: 800pt;
-  min-width: 800pt;
-  text-align: left;
-  .content-inside {
-    max-width: 500pt;
-
-    p {
-      font-size: 1em;
-    }
-
-    p, ul, ol {
-      line-height: 1.5em;
-    }
-
-    ul, ol, ul p, ol p {
-      font-size: 1em;
-    }
-
-    ul, ol {
-      margin-left: 2em;
-    }
-
-  }
-
-  ul {
-    margin-left: 16pt;
-    margin-bottom: 16pt;
-  }
-  a {
-    color: #39c;
-    text-decoration: none;
-  }
-
-  a:hover, a:focus {
-    color: #0055b3;
-  }
 }
 
 @import 'responsive';

@@ -1,0 +1,37 @@
+body main #content {
+  flex: 1;
+
+  .content-inside {
+    max-width: 40em;
+
+    p {
+      font-size: 1em;
+    }
+
+    p, ul, ol {
+      line-height: 1.5em;
+    }
+
+    ul, ol, ul p, ol p {
+      font-size: 1em;
+    }
+
+    ul, ol {
+      margin-left: 2em;
+    }
+
+  }
+
+  ul {
+    margin-left: 16pt;
+    margin-bottom: 16pt;
+  }
+  a {
+    color: #39c;
+    text-decoration: none;
+  }
+
+  a:hover, a:focus {
+    color: #0055b3;
+  }
+}
