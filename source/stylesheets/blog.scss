@@ -1,5 +1,5 @@
 @import 'bourbon';
-@import 'neat';
+@import 'variables';
 
 #content {
   .post-group {
@@ -12,6 +12,7 @@
       margin-left: 0;
       list-style-type: none;
       margin-bottom: 2em;
+      font-size: $small;
       li {
         @include display(flex);
         a, a:visited, a:hover {

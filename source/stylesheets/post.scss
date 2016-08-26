@@ -1,3 +1,5 @@
+@import 'variables';
+
 #content .content-inside .post {
   .post-header {
     background: none;
@@ -16,19 +18,20 @@
   }
 
   article {
-    margin-bottom: 32pt;
+
     h2 {
       font-size: 1.2em;
-      border-bottom: solid 1px #333;
+      border-bottom: solid 1px #EEE;
       margin-bottom: 1em;
     }
+
     h3 {
       font-size: 1.1em;
       margin-bottom: 0.5em;
     }
 
-    p code, pre code, li code {
-      font-size: 0.8em;
+    code {
+      font-size: $small;
     }
 
     p, li {
@@ -60,20 +63,6 @@
       margin-bottom: 1.25em;
     }
 
-    ol, ul {
-      font-size: 1em;
-    }
-
-    ul, ol {
-      margin-left: 3em;
-      li {
-        margin-right: 2em;
-        margin-bottom: 0.5em;
-      }
-    }
-
-    img { max-width: 100%; }
-
     /* Using !important because twitter
       converts blockquote to iframe and
       applies inline CSS
@@ -93,7 +82,7 @@
       padding-left: 1em;
       padding-right: 3em;
       margin-left: 1em;
-      font-size: 0.8em;
+      font-size: $small;
       p {
         font-size: 1em;
         line-height: 1.5em;

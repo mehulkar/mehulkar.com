@@ -1,45 +1,32 @@
-$base-color: #39c;
-$link-hover-color: #0055b3;
+@import 'variables';
 
 body main #content {
   flex: 1;
   max-width: 30em;
 
   .content-inside {
-    p {
-      font-size: 1em;
-    }
 
-    p, ul, ol {
+    img { max-width: 100%; }
+
+    > p, article > p, ul, ol {
+      font-size: 1em;
       line-height: 1.5em;
     }
 
-    ul, ol, ul p, ol p {
-      font-size: 1em;
-    }
-
     ul, ol {
-      margin-left: 2em;
+      margin-left: 3em;
       li {
-        font-size: 0.8em;
-        line-height: 1.25em;
+        margin-right: 2em;
         margin-bottom: 0.5em;
       }
     }
-
-  }
-
-  ul {
-    margin-left: 1em;
-    margin-bottom: 1em;
   }
 
   a {
     color: $base-color;
     text-decoration: none;
-  }
-
-  a:hover, a:focus {
-    color: $link-hover-color;
+    &:hover, &:focus {
+      color: $link-hover-color;
+    }
   }
 }
