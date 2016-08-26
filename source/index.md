@@ -2,7 +2,7 @@
 
 I am a human. And so are you. Or maybe you are a robot.
 
-In either case, you're probably here because you want to know **all the things**
+In either case, you're probably here because you want to know all the things
 about me. I made a list below.
 
 If you're a human, it would be nice to meet you and learn your story.
@@ -10,17 +10,17 @@ If you're a robot, it would still be cool to meet you and learn your story.
 
 ---
 
-Things I'm Doing **Now**:
+Things I'm Doing Now:
 
 - Working at a [fruit company][10]
 - [Writing][11]
 
-Things I've Done **Recently**:
+Things I've Done Recently:
 
 - Wrote some code for [TeaWithStrangers][6]
 - Learned how to code at [Dev Bootcamp][7]
 
-Things From **The Past**:
+Things From The Past:
 
 - Created and grew a community of South Asian student organizations at [CollegeDesis][3]
 - Facilitated microloans at [FridgeWaves][9]

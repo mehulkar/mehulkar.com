@@ -1,4 +1,6 @@
-$sidebar-width: 16em;
+@import 'variables';
+
+spacer { flex: 1; }
 
 body {
   header {
@@ -6,7 +8,10 @@ body {
   }
   main {
     margin-left: $sidebar-width;
-    #content {}
+    #content {
+      flex: 1;
+      max-width: $main-width;
+    }
     footer {}
   }
 }

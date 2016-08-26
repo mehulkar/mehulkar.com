@@ -1,12 +1,17 @@
+//vendor
 @import 'normalize';
+@import 'font-awesome';
+
+// variables
 @import 'variables';
-@import 'blog';
-@import 'post';
+
+@import 'layout';
+
+// page
 @import 'header';
+@import 'content';
+@import 'post';
 @import 'footer';
-@import "font-awesome";
-@import "layout";
-@import "content";
 
 * {
   margin: 0;
@@ -40,8 +45,6 @@ a, a:visited, a:hover {
   color: #666;
   text-decoration: none;
 }
-
-spacer { @include flex(1); }
 
 main {
   @include display(flex);

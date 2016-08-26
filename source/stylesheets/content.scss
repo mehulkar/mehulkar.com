@@ -1,11 +1,15 @@
 @import 'variables';
 
 body main #content {
-  flex: 1;
-  max-width: 30em;
+  a {
+    color: $base-color;
+    text-decoration: none;
+    &:hover, &:focus {
+      color: $link-hover-color;
+    }
+  }
 
   .content-inside {
-
     img { max-width: 100%; }
 
     > p, article > p, ul, ol {
@@ -20,13 +24,51 @@ body main #content {
         margin-bottom: 0.5em;
       }
     }
-  }
 
-  a {
-    color: $base-color;
-    text-decoration: none;
-    &:hover, &:focus {
-      color: $link-hover-color;
+    .post-group {
+      margin-bottom: 3em;
+
+      h3 { margin-bottom: 0.5em; }
+
+      ul.posts {
+        margin-left: 0;
+        list-style-type: none;
+        margin-bottom: 2em;
+        font-size: $small;
+
+        li {
+          display: flex;
+          margin-bottom: 0.5em;
+          margin-right: 0;
+          list-style: none;
+          line-height: 1.5em;
+          padding: 0.25em;
+          &:hover {
+            background-color: rgba(9,116,217,0.1);
+          }
+
+          .categories {
+            color: $muted-color;
+            flex: 1;
+            min-width: 130px;
+          }
+          .title {
+            flex: 4;
+            min-width: 300px;
+            a, a:visited, a:hover {
+              width: 100%;
+              display: inline-block;
+              color: #666;
+              text-decoration: none;
+              text-transform: capitalize;
+            }
+          }
+          .date {
+            color: $muted-color;
+            min-width: 130px;
+          }
+        }
+      }
     }
   }
 }
