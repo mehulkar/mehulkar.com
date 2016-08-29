@@ -31,8 +31,8 @@ helpers do
       {
         date: first_created(file),
         link: '/blog/' + basename,
-        title: basename.gsub('-', ' ').capitalize,
-        categories: categories(file)
+        title: extensions[:frontmatter].data(file).first[:title],
+        categories: extensions[:frontmatter].data(file).first[:categories]
       }
     }.group_by { |x|
       Date.parse(x[:date]).strftime("%Y")
