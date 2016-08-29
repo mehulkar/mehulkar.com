@@ -14,4 +14,6 @@ file = File.open(filename, 'w+') do |f|
   f
 end
 
+`git checkout -b blog-#{parameterized}`
+
 `subl #{file.path}`
