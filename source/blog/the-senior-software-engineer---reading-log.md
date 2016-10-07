@@ -1,7 +1,7 @@
 ---
 title: The Senior Software Engineer - Reading Log
 date: 2016-10-07
-categories:
+categories: books
 ---
 
 ## Friday, October 7, 2016
