@@ -56,8 +56,8 @@ helpers do
   end
 
   def first_created(path)
-    date = `cat #{path} | grep date:`
-    if date.empty?
+    date_line = `cat #{path} | grep date:`
+    if date_line.empty?
       date = `git log --follow --date=short --pretty=format:%ad --diff-filter=A -- #{path}`
       date = Date.today.to_s if date.empty?
     else
