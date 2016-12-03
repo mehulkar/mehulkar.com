@@ -1,0 +1,90 @@
+---
+title: Japan Journal
+date: 2016-12-03
+categories: journal
+---
+
+### Preamble
+
+Most of the below is transcribed from a physical journal I wrote in during the trip. I've made a few edits (visible and invisible), but for the most part the text is word-for-word written as before. The tenses are confusing because I was sometimes writing surrounded by the things I was describing and sometimes after-the-fact. The last section on Odaiba was written after coming back to the US based on memory, so it's a shorter and less descriptive.
+
+### 11.29.2016 morning
+
+The airport was a relief. After a disappointing Shanghai, Haneda was a breath of fresh air. The lights were on, for one. Staff was visible and the actual processing of immigration and customs was quick. They even showed a vide on the plane to tell us what to expect after landing. There was a bit of a line at the wifi rental counter which actually turned out to be a general mail send/receive counter, so many people were shipping luggage--presumably to their home outside Tokyo? This might be a side-effect of smaller cars?
+
+Pocket Wifi, is, by the way, amazing. Pre-paid LTE speeds and it makes me feel in control of my data usage. I wonder if we could built it as a case for phones? It's not clear to me how it's different from a data-enabled SIM card though. It's think it would be slower since you're accessing the network through two connections (cell network and then WiFi), instead of one. Anyhow...
+
+The subway is amazing and New York-like. Most signs have some English on them, but some signs are digital and only show English once every 10-15 seconds, which can be the difference between catching and missing a train or stop.
+
+I'm staying at an AirBnb, which is basically a 5-6 room hostel with private rooms and a single split toilet/shower. The host speaks enough English for basic communication. Most people do, actually. The rest are proficient at interpreting my barbarian nods, points and _arigatos_.
+
+I'm sitting in Shibuya, close to the metro station at a hip coffee shop, which is basically like California and am mostly unaware that I'm in Tokyo. There are a few Caucasians here, obviously also visitors, who are reminding me, by their lack of eye contact, that I am not white--something I easily forget in the US.
+
+Being here makes me wish I could read a few characters in Japanese. Every building that looks like a restaurant has signs outside, but no windows to confirm the existence of edibles for pay. I'm too nervous to walk in and discover for myself. It's also not clear at a glance if VISA is accepted. Speaking of credit cards, Apple Pay exists! Sadly, the only place I tried it so far did not have VISA as an acceptable provider. I'm not sure if this will be a city-wide truth yet.
+
+### 11.29.2016 afternoon
+
+#### Shibuya
+
+Shibuya has been uninteresting for the most part. It's like a combination of Manhattan (with fewer subway entrances), and SF's China Town district. Shibuya Crossing was empty when I get there. I thought I was in the wrong place [edit: I *was* in the wrong place, oops]. I see lots of Udon noodle shops in small alleys and bars. Many of the doors are tiny in height and width (which is strange because the people are the same height as me on average). I walked into two sushi shops. One was commercialized, fast-food style. Each seat had a touch screen (not an iPad, but touch responsiveness wasn't terrible as I had expected!) and conveyor belts with plates of sushi that would arrive after ordering through the screen. Both sushi shops had green tea powder at each spot with a tap for hot water. Seating was at rows of bars instead of tables, like slot machines in a casino.
+
+Speaking of casinos, I'm seeing a bunch of "ESPACE"s. They look like casinos, but instead of rows of slot machines, there are rows of arcade games (mostly on-screen fighting games like Street Fighter). The one I walked into smelled of cigarettes . Faces staring at tiny screens, punching buttons. It was noisy, like a railroad station, compared to the mostly quiet streets outside.
+
+There are two things noticeable about the streets worth mentioning: no food vendors, and no homeless people. [edit: I saw a few homeless people after the time of this writing]. I didn't notice this immediately--i.e. I wasn't expecting food vendors and homeless people as a basic tenet of a city--but the more I think about it, the more unusual it seems.
+
+## 11.30.2016 morning
+
+Last night was a little surreal. I got two quintessential traveler experices that don't make great stories, but great memories.
+
+First, at Vanilla Mood, a local dive bar / cafe, I bonded with two locals and the girl behind the counter. A conveniently placed performance stage, complete with instruments lent itself nicely to an impromptu jam session singing The Supremes and The Beatles--it certainly helped that the girl happened to be a singer and was happy to oblige as I fumbled my way on the piano. It did _not_ help that between the three of them (the cook/waiter/bartender and the two patrons), they spoke maybe 10 words of English, but Google Translate and good vibes bridged the remaining gaps in communication.
+
+Next, I traveled to Nakano, which ahd its own complications, incidentally--running out of cash and phone battery life will do that.
+
+#### Nakano
+
+Nakaon seems authentic and suburban. Very different from Shibuya and Shinjuku and Roppongi. It feels more authentic. No billboards or flashing lights, but lots of narrow streets<sup>1</sup>.
+
+The guest house Machiko has invited me to is a tiny room with a desk and a back room with an equally tiny kitchen. The whole floor area couldn't have been more than 500 square feet, but they were crowded with Spanish speaking backpackers, laughing raucously and drinking cheap beer. A gay couple from Barcelona, a large quiet man from elsewhere in Japan, a woman from Mexico City, a Dutchman and his sister from London. This reminds me of our international students group at UW-Whitewater.
+
+And then the guitars come out.
+
+From *Stand By Me*, to the Spanish version of Lion King, to chanting *gomen nasai* to an African-style beat when the guest house manager (also in the grey) realizes how loud this party is, I couldn't do justice to the merriment.
+
+A few Facebook friendships later and mental bookmarks of people to look up when I visit their country later, the party dies down and I'm on the train back to Chuo to my AirBnB.
+
+#### Tsukiji
+
+The Tsukiji fish market is about 3x3 blocks of alleyways with makeshift stalls selling fish, other seafood, and varios other things to eat or to take home. It's like any other farmer's market, except bigger and more Japanese.
+
+This felt like a more makeshift version of Lajpat Nagar in Delhi. Some vendors beckoned me into their tents, but many ignored me--I assume to avoid the hassle of a language barrier. I grabbed the first three piece box of sushi I saw. It was 7am, but I was already hungry after only a couple of hours of sleep. The fish was cold. I told myself that was because it was still fresh. Next, I sat down in a tent and ordered a rice bowl with two kinds of tuna and egg. The Miso soup was fantastic. The tuna was, again, fresh and cold. The tea was a welcome warmth-inducing device against my pals. The cashier in this particular tent happened to be a PhD student writing her thesis in brain imaging; she was fluent in seven languages and worked part time at the fish market. *Sigh of wonder at the people you meet*.
+
+I'm checked out of my AirBnb now and have carried my luggage to Shinjuku to Green Plaza--a capsule hotel plus sauna/bathhouse. There's a cafe across the street, where I am writing this and another regular, modern hotel nearby. Staying in an infamous capsule hotel will be another adventure tonight.
+
+### 12.01.2016
+
+#### Green Palace Shinjuku
+
+The capsule hotel experience was definitely interesting, for want of a better word. Note that this was an all male hotel--most capsule hotels are, apparently. Co-ed hotels exist, but even those have entirely separate floors for men and women.
+
+As soon as I walked in, I was ushered into (ok, angrily ushered into into) a special shoe locker rooms. (Aside: there are a lot of locker rooms in this story, so try to keep up.) This room was like a mail rom with hundreds of slots just big enough for a pair of shoes, each with a key in the slot door. I picked one, put my shoes in a took the key to the front desk. The rest of the experience in the hotel was barefoot.
+
+At check-in, I was asked if I wanted the top of bottom capsule (like picking a bunk bed) and was given a corresponding key. It took a while to figure it out, but this key was for the main locker room where I had a space to deposit my luggage and my street clothes and where I was expected to change into the cotton kimono-style jersey and shorts--let's call them capsule clothes--they had given me at check-in. My duffel bag was checked in at another counter.
+
+I left for dinner at this point, but when I came back (around midnight), I changed into my capsule clothes and left everything except my phone and various chargers in my locker.
+
+The check-in counter, the bag check counter, and this locker room was on level 4 of this building and my capsule on level 3. Level 5 was a restaurant with TVs and a massage parlor. There were surprisingly still people there at 1 AM. Level 6 was the sauna and bath house. I ventured into the bath house, stripped in yet another locker room, washed myself at an open, seated shower stall, and sat in the hot, open community bath. Even at 1:30 AM, there were other people here. I expected public nudity to be a more harrowing experience than it actually was. Turns out its easy to forget that you're supposed to be embarrassed when no one else is. Or maybe everyone tells themselves the same thing and the safe space is all a big illusion that only exists until one person decides not to believe in it.
+
+It was 2:30 AM by the time I finished my bath and got back to my capsule, but that massage parlor on level 5--surprisingly still open--called my name. I ordered a pork cutlet while I waited for my appointment and struggled to stay awake. Many other guests were still awake, milling about watching TV, smoking cigarettes. By 3:45 am , I had crawled to my capsule and passed out.
+
+It's not close to noon and I've checked out: changed back into street clothes, exchanged my locker room key for my shoes, and retrieved my duffel bag.
+
+#### Odaiba Ooedo-Onsen-Monogatari
+
+My last adventure was to travel to Odaiba, an amusement park and hot spring baths destination on the outskirts of Tokyo. The experience was much like the Green Palace: shoe locker room, check in, a yukata<sup>2</sup> selection, a bigger changing/locker room, a common area with restaurants, and then finally the bath houses with their own locker rooms to strip down in. I sat in each of the hot baths, the cold bath, and the sauna for a few minutes each, amongst tens of Japanese boys and old men. None of them paid me any attention, which was a welcome relief against my nakedness.
+
+When I had had enough, I went back to the common area and booked another 30 minute upper body massage and then rushed to the airport.
+
+**Footnotes**
+
+1. There are a lot of narrow streets in Tokyo. There are the big highways that look like regular American roads, but the majority of streets are small and are shared by cars, bikes and pedestrians in a free-for-all way that somehow still seems organized and less dangerous than the equivalent in Delhi.
+2. A Yukata is a less formal, cotton version of a kimono.
