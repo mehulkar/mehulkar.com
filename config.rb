@@ -24,13 +24,17 @@ end
 
 helpers do
   TOP_LEVEL_DIR = Dir.pwd
-  POST_FILES = Dir["#{TOP_LEVEL_DIR}/source/blog/*"]
+  BLOG_BASE_DIR = File.join(TOP_LEVEL_DIR, 'source', 'blog')
+  POST_FILES = Dir["#{TOP_LEVEL_DIR}/source/blog/**/*.md"]
+
   def post_groups
     x = POST_FILES.map { |file|
+
       basename = File.basename(file).split('.')[0]
+      path = file.match(/#{BLOG_BASE_DIR}\/(.*)\.md/)[1]
       {
         date: first_created(file),
-        link: '/blog/' + basename,
+        link: '/blog/' + path,
         title: extensions[:frontmatter].data(file).first[:title],
         categories: extensions[:frontmatter].data(file).first[:categories]
       }
