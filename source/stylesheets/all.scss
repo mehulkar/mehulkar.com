@@ -25,13 +25,12 @@ body {
   font-size: 16px;
   font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #333;
-  font-weight: 300;
   min-width: 400px;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-size: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 1em;
 }
 
 .h__underlined {
@@ -52,8 +51,8 @@ a, a:visited, a:hover {
 }
 
 main {
-  @include display(flex);
-  @include flex-direction(column);
+  display: flex;
+  flex-direction: column;
   min-height: 100%;
   margin-bottom: -80px;
   padding-top: 2em;
