@@ -10,9 +10,9 @@ Most of the below is transcribed from a physical journal I wrote in during the t
 
 ### 11.29.2016 morning
 
-The airport was a relief. After a disappointing Shanghai, Haneda was a breath of fresh air. The lights were on, for one. Staff was visible and the actual processing of immigration and customs was quick. They even showed a vide on the plane to tell us what to expect after landing. There was a bit of a line at the wifi rental counter which actually turned out to be a general mail send/receive counter, so many people were shipping luggage--presumably to their home outside Tokyo? This might be a side-effect of smaller cars?
+The airport was a relief. After a disappointing Shanghai, Haneda was a breath of fresh air. The lights were on, for one. Staff was visible and the actual processing of immigration and customs was quick. They even showed a video on the plane to tell us what to expect after landing. There was a bit of a line at the wifi rental counter which actually turned out to be a general mail send/receive counter, so many people were shipping luggage--presumably to their home outside Tokyo? This might be a side-effect of smaller cars?
 
-Pocket Wifi, is, by the way, amazing. Pre-paid LTE speeds and it makes me feel in control of my data usage. I wonder if we could built it as a case for phones? It's not clear to me how it's different from a data-enabled SIM card though. It's think it would be slower since you're accessing the network through two connections (cell network and then WiFi), instead of one. Anyhow...
+Pocket WiFi, is, by the way, amazing. Pre-paid LTE speeds and it makes me feel in control of my data usage. I wonder if we could built it as a case for phones? It's not clear to me how it's different from a data-enabled SIM card though. It's think it would be slower since you're accessing the network through two connections (cell network and then WiFi), instead of one. Anyhow...
 
 The subway is amazing and New York-like. Most signs have some English on them, but some signs are digital and only show English once every 10-15 seconds, which can be the difference between catching and missing a train or stop.
 
