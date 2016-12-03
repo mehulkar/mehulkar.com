@@ -17,5 +17,6 @@ gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 gem "tzinfo-data", platforms: [:mswin, :mingw]
 
 gem 'pry'
+gem 'pry-doc'
 gem 'rake'
 gem 'font-awesome-middleman'

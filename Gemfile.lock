@@ -108,6 +108,9 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    pry-doc (0.4.6)
+      pry (>= 0.9)
+      yard (>= 0.8)
     rack (1.6.0)
     rack-livereload (0.3.15)
       rack
@@ -142,6 +145,7 @@ GEM
     uglifier (2.6.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    yard (0.8.7.4)
 
 PLATFORMS
   ruby
@@ -153,6 +157,7 @@ DEPENDENCIES
   middleman-neat
   middleman-syntax
   pry
+  pry-doc
   rake
   redcarpet
   tzinfo-data
