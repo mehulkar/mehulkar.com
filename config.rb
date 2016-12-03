@@ -61,7 +61,7 @@ helpers do
       date = `git log --follow --date=short --pretty=format:%ad --diff-filter=A -- #{path}`
       date = Date.today.to_s if date.empty?
     else
-      date = date.split(" ")[1]
+      date = date_line.split(" ")[1]
     end
     date
   end
