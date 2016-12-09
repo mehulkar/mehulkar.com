@@ -3,37 +3,29 @@
 
 header {
   $color: #fff;
-  $right-align-padding: 2pt 8pt;
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
+  padding: 1em;
+  width: 100%;
+  background-color: #39c;
+  text-align: center;
+
   li {
     list-style-type: none;
   }
-  .header-inner {
-    position: absolute;
-    bottom: 1em;
-    right: 1em;
-  }
 
-  padding-right: 1em;
-  padding-left: 4em;
-  background-color: #39c;
   .header-content {
     max-width: 512pt;
-    margin: 0 auto 2.5em;
-    text-align: center;
-    font-family: 'Poiret One', sans-serif;
+    margin: 0 auto 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    @include display(flex);
-    @include align-items(center);
     img {
       margin-right: 8pt;
       border-radius: 50%;
       width: 50px;
       height: 50px;
     }
+
     h1 {
       font-weight: 100;
       font-size: 2em;
@@ -43,22 +35,13 @@ header {
       }
     }
   }
-  .fa {
-    &:hover {
-      color: $color;
-    }
-  }
 
   nav {
-    margin-left: auto;
-    margin-bottom: 40px;
-    text-align: right;
+    margin-bottom: 1em;
     li {
-      list-style: none;
-      border-bottom: solid 1px $color;
-      margin-bottom: 1em;
+      display: inline-block;
+      margin: 0 8px;
       a {
-        padding: $right-align-padding;
         width: 100%;
         display: block;
         color: $color;
@@ -73,22 +56,14 @@ header {
     font-size: 0.8em;
     margin-bottom: 1em;
     overflow: hidden;
-    text-align: right;
+    text-align: center;
+    a { color: $color; }
     &.contact {
       a {
         margin-right: 5px;
         &:last-child { margin-right: 0; }
       }
     }
-    h3 {
-      font-size: 1em;
-      background-color: $color;
-      padding: $right-align-padding;
-      margin-bottom: 8pt;
-      color: #fff;
-      font-weight: 100;
-    }
-
     p { line-height: normal; }
   }
 }

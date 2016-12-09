@@ -39,25 +39,17 @@
       }
 
       header {
-        position: static;
-        padding: 1em;
+        padding: 0 1em;
         width: 100%;
-        .header-inner {
-          position: static;
-          .header-content {
-            display: block;
-            margin-bottom: 1.5em;
-            img {
-              width: 300px;
-              height: 300px;
-            }
-          }
 
-          nav {
-            text-align: center;
-          }
-          .notes {
-            text-align: center;
+        .header-content, nav, .notes {
+          margin-bottom: 0;
+        }
+
+        .header-content {
+          img {
+            width: 100px;
+            height: 100px;
           }
         }
       }

@@ -1,11 +1,9 @@
 @import 'variables';
 
 body {
-  header {
-    width: $sidebar-width;
-  }
   main {
-    margin-left: $sidebar-width;
+    margin: 0 auto;
+    max-width: $main-width;
     #content {
       flex: 1;
       max-width: $main-width;
