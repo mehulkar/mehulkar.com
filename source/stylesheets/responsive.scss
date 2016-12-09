@@ -11,6 +11,7 @@
         #content .content-inside p {
           font-size: 1em;
         }
+
         #content .content-inside {
           // actual post
           .post {
@@ -29,6 +30,10 @@
               margin-bottom: 2em;
               span { display: block; }
             }
+          }
+
+          .resume-section {
+            width: 100%;
           }
         }
       }

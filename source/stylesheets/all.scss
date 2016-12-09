@@ -57,10 +57,13 @@ main {
   padding-left: 1em;
 }
 
-.resume-section {
-  width: 50%;
-  padding: 0 1em;
-  margin-bottom: 1em;
+.resume-section-wrapper {
+  justify-content: space-between;
+  .resume-section {
+    width: calc(50% - 20px);
+    padding: 0;
+    margin-bottom: 1em;
+  }
 }
 
 @import 'responsive';
