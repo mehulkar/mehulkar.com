@@ -16,6 +16,7 @@ cd ..
 bundle exec middleman build
 cd build
 git add -A
+git config --local user.email 'mehul.kar@gmail.com'
 git commit -m "Publishing site at $CURRENT_REV"
 git push new-origin HEAD:master -f
 
