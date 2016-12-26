@@ -39,9 +39,11 @@
       }
 
       header {
-        padding: 0 1em;
+        padding: 0.5em 1em;
         width: 100%;
-
+        nav {
+          padding: 0;
+        }
         .header-content, nav, .notes {
           margin-bottom: 0;
         }
