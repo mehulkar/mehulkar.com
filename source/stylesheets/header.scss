@@ -34,10 +34,10 @@ header {
   }
 
   nav {
-    margin-bottom: 1em;
+    margin: 0 auto 2em;
     display: flex;
-    justify-content: space-between;
-    padding: 0 8em;
+    justify-content: space-around;
+    max-width: 50%;
     li {
       a {
         width: 100%;
