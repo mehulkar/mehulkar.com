@@ -25,11 +25,10 @@ end
 helpers do
   TOP_LEVEL_DIR = Dir.pwd
   BLOG_BASE_DIR = File.join(TOP_LEVEL_DIR, 'source', 'blog')
-  POST_FILES = Dir["#{TOP_LEVEL_DIR}/source/blog/**/*.md"]
+  POST_FILES    = Dir["#{BLOG_BASE_DIR}/**/*.md"]
 
   def post_groups
-    x = POST_FILES.map { |file|
-
+    POST_FILES.map { |file|
       basename = File.basename(file).split('.')[0]
       path = file.match(/#{BLOG_BASE_DIR}\/(.*)\.md/)[1]
       {
