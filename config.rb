@@ -29,6 +29,10 @@ helpers do
   TOP_LEVEL_DIR = Dir.pwd
   BLOG_BASE_DIR = File.join(TOP_LEVEL_DIR, 'source', 'blog')
 
+  def quotations_path;  '/quotations' end
+  def poetry_path;      '/poetry' end
+  def books_path;       '/books' end
+
   def posts_for_category(name)
     groups = post_files.group_by do |path|
       extensions[:frontmatter].data(path).first[:categories].split(' ').first

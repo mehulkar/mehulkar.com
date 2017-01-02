@@ -1,3 +1,8 @@
+<p>There's a whole bunch of stuff here. You can see a full list below or
+some specific sets like <%= link_to 'poetry', poetry_path %>, <%= link_to 'books', books_path %>
+or <%= link_to 'quotations', quotations_path %>.
+</p>
+
 <% if !(post_groups.map { |g| g[0]}.include?(Date.today.year.to_s)) %>
   <h3><%= Date.today.year%></h3>
   <p>
