@@ -25,10 +25,9 @@ end
 helpers do
   TOP_LEVEL_DIR = Dir.pwd
   BLOG_BASE_DIR = File.join(TOP_LEVEL_DIR, 'source', 'blog')
-  POST_FILES    = Dir["#{BLOG_BASE_DIR}/**/*.md"]
 
   def post_groups
-    POST_FILES.map { |file|
+    post_files.map { |file|
       basename = File.basename(file).split('.')[0]
       path = file.match(/#{BLOG_BASE_DIR}\/(.*)\.md/)[1]
       {
@@ -42,6 +41,10 @@ helpers do
     }.sort_by { |year, posts|
       year
     }.reverse
+  end
+
+  def post_files
+    Dir["#{BLOG_BASE_DIR}/**/*.md"]
   end
 
   def created_at
