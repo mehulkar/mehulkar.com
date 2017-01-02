@@ -13,7 +13,7 @@ Ya phir nasha hain voh<br/>
 Din-din ki kahaani bhulane ko<br/>
 
 Shayad tabhi daudta hoon main aaj<br/>
-Ke jab taangon mein jaan aaye<br/>
+Ke jab pairon mein jaan aaye<br/>
 Jab rooh jaag jaaye<br/>
 Dil aur dimaag ke dal-dal se door,<br/>
 inke peeche bhaag sakoon<br/>
