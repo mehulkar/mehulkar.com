@@ -1,7 +1,7 @@
 ---
 title:  "An Informal Commencement Speech"
 date:   2011-03-07
-categories: personal
+categories: poetry
 ---
 
 ```
