@@ -1,4 +1,7 @@
 <% wrap_layout :layout do %>
+  <p>
+    <%= link_to '&larr; Archive', blog_path %>
+  </p>
   <h1><%= current_page.metadata[:page]['title']%></h1>
   <%= yield %>
 <% end %>
