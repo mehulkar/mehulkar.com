@@ -13,14 +13,6 @@ or <%= link_to 'quotations', quotations_path %>.
 <% post_groups.each do |group, posts| %>
   <div class="post-group">
     <h3><%= group %></h3>
-    <ul class="posts">
-      <% posts.sort {|x,y| Date.parse(y[:date]) <=> Date.parse(x[:date]) }.each do |post| %>
-        <li>
-          <span class="categories"><%= post[:categories] %></span>
-          <span class="title"><%= link_to post[:title], post[:link] %></span>
-          <span class="date"><%=post[:date]%></span>
-        </li>
-      <% end %>
-    </ul>
+    <%= partial 'partials/list', locals: { posts: posts } %>
   </div>
 <% end %>

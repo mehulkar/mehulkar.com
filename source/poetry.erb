@@ -2,13 +2,5 @@
 title: Poetry
 ---
 <div class="post-group">
-  <ul class="posts">
-    <% posts_for_category('poetry').each do |post| %>
-      <li>
-        <span class="categories"><%= post[:categories] %></span>
-        <span class="title"><%= link_to post[:title], post[:link] %></span>
-        <span class="date"><%=post[:date]%></span>
-      </li>
-    <% end %>
-  </ul>
+  <%= partial 'partials/list', locals: { posts: posts_for_category('poetry') } %>
 </div>
