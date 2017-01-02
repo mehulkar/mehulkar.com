@@ -62,3 +62,11 @@ but is also very simple to use for the base use case. The only thing that
 I have to be careful of is putting work tasks on there, since everything
 about my job needs to stay off third party servers.
 
+- Pocket. The only thing I don't like about Pocket is that it makes it easy
+to share excerpts to my Pocket feed, which I don't care about, but not as
+easily to Twitter or Facebook. In fact, I can't actually share directly to
+Twitter or Facebook, I have to "recommend" to Pocket, and then share that
+recommendation anywhere else. This seems unnecessary. There also isn't a
+screenshot/highlight/annotate feature like Instapaper, which would make
+it much easier to share. Other than that, I like Pocket much more than Instapaper
+and intend to continue using it. As of today, I have 204 items in my archive.
