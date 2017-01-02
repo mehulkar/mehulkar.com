@@ -6,7 +6,7 @@ categories: product
 
 ![2017 home screen](/images/2017-home-screen.png)
 
-I posted my [2016](http://localhost:4567/blog/2016-home-screen) home screen last
+I posted my [2016](/blog/2016-home-screen) home screen last
 year and I wanted to take a snapshot again.
 
 It doesn't look like too much has changed, actually. The Home row is almost
