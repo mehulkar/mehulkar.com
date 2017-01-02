@@ -1,28 +1,27 @@
 ---
 title: nani
 date: 2016-12-26
-categories: personal
+categories: poetry
 ---
 
-Shaam hui, tere kaam ki  
-Teri manzil aa gayi  
-Nuks tere gum gaye  
-Dard tere tham gaye  
-Raat teri aa gayi  
+Shaam hui, tere kaam ki<br/>
+Teri manzil aa gayi<br/>
+Nuks tere gum gaye<br/>
+Dard tere tham gaye<br/>
+Raat teri aa gayi<br/>
 
-Muskurahat chhod gayi  
-Barso ke karmon mein tu  
-Dheere dheere pyaar se jo  
-Waqt se bhi lad gayi  
+Muskurahat chhod gayi<br/>
+Barso ke karmon mein tu<br/>
+Dheere dheere pyaar se jo<br/>
+Waqt se bhi lad gayi<br/>
 
-Usne jo rastaa dikhaya  
-Uspe has ke chal gayi  
-Kaanto ko bhi pyaar de kar  
-Mishri ki mitthaas di  
+Usne jo rastaa dikhaya<br/>
+Uspe has ke chal gayi<br/>
+Kaanto ko bhi pyaar de kar<br/>
+Mishri ki mitthaas di<br/>
 
-Humse door ho sahi  
-Aaj bicchdon se tu mil  
-Aas teri hum jalaayen  
-Tera Nagma hum sunaayein  
-Teri seva bas hui  
-_
+Humse door ho sahi<br/>
+Aaj bicchdon se tu mil<br/>
+Aas teri hum jalaayen<br/>
+Tera Nagma hum sunaayein<br/>
+Teri seva bas hui<br/>
