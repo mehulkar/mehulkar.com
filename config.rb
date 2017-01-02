@@ -12,6 +12,7 @@ activate :syntax
 page 'blog/*',  layout: :post
 page 'poetry.*',  layout: :category
 page 'quotations.*',  layout: :category
+page 'books.*',  layout: :category
 
 configure :development do
   activate :livereload
