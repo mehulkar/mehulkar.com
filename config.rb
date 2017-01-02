@@ -9,7 +9,8 @@ activate :directory_indexes
 
 activate :syntax
 
-page "blog/*", :layout => :post
+page 'blog/*',  layout: :post
+page 'poetry.*',  layout: :category
 
 configure :development do
   activate :livereload
@@ -26,21 +27,35 @@ helpers do
   TOP_LEVEL_DIR = Dir.pwd
   BLOG_BASE_DIR = File.join(TOP_LEVEL_DIR, 'source', 'blog')
 
+  def posts_for_category(name)
+    groups = post_files.group_by do |path|
+      extensions[:frontmatter].data(path).first[:categories].split(' ').first
+    end
+    x = groups[name].map do |file|
+      data_for_file(file)
+    end
+    x.sort {|x,y| Date.parse(y[:date]) <=> Date.parse(x[:date]) }
+  end
+
   def post_groups
     post_files.map { |file|
-      basename = File.basename(file).split('.')[0]
-      path = file.match(/#{BLOG_BASE_DIR}\/(.*)\.md/)[1]
-      {
-        date: first_created(file),
-        link: '/blog/' + path,
-        title: extensions[:frontmatter].data(file).first[:title],
-        categories: extensions[:frontmatter].data(file).first[:categories]
-      }
+      data_for_file(file)
     }.group_by { |x|
       Date.parse(x[:date]).strftime("%Y")
     }.sort_by { |year, posts|
       year
     }.reverse
+  end
+
+  def data_for_file(file)
+    basename = File.basename(file).split('.')[0]
+    path = file.match(/#{BLOG_BASE_DIR}\/(.*)\.md/)[1]
+    {
+      date: first_created(file),
+      link: '/blog/' + path,
+      title: extensions[:frontmatter].data(file).first[:title],
+      categories: extensions[:frontmatter].data(file).first[:categories]
+    }
   end
 
   def post_files
