@@ -1,6 +1,11 @@
-<p>There's a whole bunch of stuff here. You can see a full list below or
-some specific sets like <%= link_to 'poetry', poetry_path %>, <%= link_to 'books', books_path %>
-or <%= link_to 'quotations', quotations_path %>.
+<h1>Hello</h1>
+
+<p>I am a human. And so are you. Or maybe you are a robot?</p>
+
+<p>
+  I wrote down a whole bunch of words here. You can read all of them below or
+  some specific categories like <%= link_to 'poetry', poetry_path %>, <%= link_to 'books', books_path %>
+  or <%= link_to 'quotations', quotations_path %>.
 </p>
 
 <% if !(post_groups.map { |g| g[0]}.include?(Date.today.year.to_s)) %>
