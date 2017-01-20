@@ -9,10 +9,10 @@ activate :directory_indexes
 
 activate :syntax
 
-page 'blog/*',  layout: :post
-page 'poetry.*',  layout: :category
+page 'blog/*',        layout: :post
+page 'poetry.*',      layout: :category
 page 'quotations.*',  layout: :category
-page 'books.*',  layout: :category
+page 'books.*',       layout: :category
 page 'ninjatennis.*', layout: :category
 
 configure :development do
