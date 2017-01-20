@@ -13,6 +13,7 @@ page 'blog/*',  layout: :post
 page 'poetry.*',  layout: :category
 page 'quotations.*',  layout: :category
 page 'books.*',  layout: :category
+page 'ninjatennis.*', layout: :category
 
 configure :development do
   activate :livereload
@@ -33,6 +34,7 @@ helpers do
   def quotations_path;  '/quotations' end
   def poetry_path;      '/poetry' end
   def books_path;       '/books' end
+  def ninjatennis_path; '/ninjatennis' end
 
   def posts_for_category(name)
     groups = post_files.group_by do |path|
