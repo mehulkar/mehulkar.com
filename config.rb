@@ -3,7 +3,7 @@ set :js_dir,          'javascripts'
 set :images_dir,      'images'
 set :relative_links,  true
 set :markdown_engine, :redcarpet
-set :markdown, fenced_code_blocks: true, smartypants: true
+set :markdown, fenced_code_blocks: true, smartypants: true, underline: true
 
 activate :directory_indexes
 
