@@ -30,10 +30,10 @@ helpers do
   TOP_LEVEL_DIR = Dir.pwd
   BLOG_BASE_DIR = File.join(TOP_LEVEL_DIR, 'source', 'blog')
 
-  def blog_path;        '/blog' end
+  def home_path;        '/'           end
   def quotations_path;  '/quotations' end
-  def poetry_path;      '/poetry' end
-  def books_path;       '/books' end
+  def poetry_path;      '/poetry'     end
+  def books_path;       '/books'      end
   def ninjatennis_path; '/ninjatennis' end
 
   def posts_for_category(name)
