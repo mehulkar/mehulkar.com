@@ -18,6 +18,6 @@
 <% post_groups.each do |group, posts| %>
   <div class="post-group">
     <h3><%= group %></h3>
-    <%= partial 'partials/list', locals: { posts: posts } %>
+    <%= partial 'partials/list', locals: { posts: reverse_chronological(posts) } %>
   </div>
 <% end %>

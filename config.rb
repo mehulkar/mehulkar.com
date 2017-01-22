@@ -36,14 +36,26 @@ helpers do
   def books_path;       '/books'      end
   def ninjatennis_path; '/ninjatennis' end
 
+  def chronological(posts)
+    posts.sort  do |x,y|
+      Date.parse(x[:date]) <=> Date.parse(y[:date])
+    end
+  end
+
+  def reverse_chronological(posts)
+    posts.sort do |x,y|
+      Date.parse(y[:date]) <=> Date.parse(x[:date])
+    end
+  end
+
   def posts_for_category(name)
     groups = post_files.group_by do |path|
       extensions[:frontmatter].data(path).first[:categories].split(' ').first
     end
-    x = groups[name].map do |file|
+    posts = groups[name].map do |file|
       data_for_file(file)
     end
-    x.sort {|x,y| Date.parse(y[:date]) <=> Date.parse(x[:date]) }
+    reverse_chronological(posts)
   end
 
   def post_groups
