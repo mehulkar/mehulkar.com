@@ -10,7 +10,7 @@ Did you read it? Because I'll assume you read it. So don't tell me you didn't
 understand something because you totally should.
 
 Just kidding, if you don't understand something, it's definitely my fault.
-I often feel stupid when I don't understand documentation (basically everyday),
+I often (everyday) feel stupid when I don't understand documentation,
 and I want to make it clear that (1) that's a fine way to feel and (2),
 [Will, it's not your fault][1]. Look at me, son.
 
@@ -24,13 +24,11 @@ You won't be writing any code in this tutorial for two reasons:
 
 - Installing Ruby on Rails can be a pain because installing Ruby is a pain.
 - So I can write another post about actual code and get more pageviews and earn
-  more nothing dollars from all the ads on this page.
-
-
+  $0 dollars again from the lack of ads on this page.
 
 ## So, Ruby on Rails
 
-So you know how websites work (it's a request-response cycle, remember).
+So you know [how websites work](/blog/what-is-a-website) (it's a request-response cycle, remember?).
 
 The Ruby on Rails framework makes it easy to handle the things that
 happen between the request and the response.
@@ -58,26 +56,24 @@ directions. But don't worry about that. Just trust me for now. I know, I know
 "that's what they all say".
 
 PS, Guess what happens if you don't have a definition for a particular "route"?
-See this: [http://www.google.com/idontexist](http://www.google.com/idontexist).
+For example, see: [google.com/idontexist](https://www.google.com/idontexist).
 That's a 404. It means the route wasn't found.
-
-
 
 ### Controllers
 
-Rails does a really good job of compartmentalizing logic. Actually, that's not
-a Rails specific thing, this is a design pattern that is used in many places
-with slight variations depdending on the programmer(s) who set it up.
+Rails does a really good job of compartmentalizing code. Actually, that's not
+a Rails-specific thing, this is a design pattern that is used in many places
+with slight variations depending on the programmer(s) who were in that place.
 
-When a Rails route says "forward the request to this other piece of code,
+When a Rails route says "forward this request to this other piece of code",
 that other piece of code is a Controller. The controller has the particular
-logic needed to respond to the request at a particular route.
+logic needed to respond to all requests at that particular route.
 
 For example, if you as for `myserver.com/bananas`, you could have a
 `BananasController`. This controller could for example have code that
-responds with a message saying "You're such a monkey. Why are you such a
-monkey". And that would be that.
-
+responds with a message saying "You are such a monkey. Why are you such a
+monkey". And that would be that. (It cannot serve you real bananas to eat,
+though. Wouldn't that be something?)
 
 
 ### Views
@@ -102,15 +98,13 @@ So that's what a view is: It contains content that should be displayed in a brow
 
 Let's put it together, shall we?
 
-1. Some random user opens up their browser and types in `myserver.com/bananas`.
-1. Your Rails application is running on `myserver.com`
+1. Someone opens up a web browser on their computer and types in `myserver.com/bananas`.
+1. Your Rails application is running on `myserver.com` listening for requests to it.
 1. Your Rails application defines a `/bananas` route that forwards to the `BananasController`.
 1. Your `BananasController` says, when someone "calls" on me, find the `bananas` view and respond with it.
 1. Your `bananas` view is an HTML file called `bananas.html` and it has a picture of a banana on it.
 1. Your `BananasController` sends `bananas.html` back to where the request came from.
 1. The user sees a picture of a banana in their browser.
-
-
 
 ### The big missing piece: Models
 
