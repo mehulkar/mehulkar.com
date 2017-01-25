@@ -4,7 +4,7 @@ date: 2014-10-04 12:06:45
 categories: learn-to-code
 ---
 
-You should read the one about [how websites work](what-is-a-website) first.
+You should read the one about [how websites work](/blog/what-is-a-website) first.
 
 Did you read it? Because I'll assume you read it. So don't tell me you didn't
 understand something because you totally should.
