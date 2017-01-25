@@ -4,7 +4,13 @@ date: 2014-09-26 17:29:48
 categories: learn-to-code
 ---
 
-A website is basically you being all bored on your computer and wanting to get stuff that's on another computer. So you go to a website and it fetches stuff that's on some other computer and you can watch it, hear it, read it, play it, whatever. Sometimes you can even send stuff back to the other computer. Like a tweet. When you tweet, you're sending a piece of text to the other computer and it stores it away. And then weirdly enough other people around the word are like "wait I want to hear what Lucy (I'm assuming that's your name) tweeted!" And the other computer is like... ok here you go. But you're still on your computer bored.
+A website is basically you being all bored on your computer and wanting to get stuff
+that's on another computer. So you go to a website and it fetches stuff that's on some other
+computer and you can watch it, hear it, read it, play it, whatever. Sometimes you can even
+send stuff back to the other computer. Like a tweet. When you tweet, you're sending a piece
+of text to the other computer and it stores it away. And then weirdly enough other people
+around the word are like "wait I want to hear what Lucy (I'm assuming that's your name) tweeted!"
+And the other computer is like... "ok! here you go".
 
 So that's what a website is.
 
@@ -12,13 +18,17 @@ So that's what a website is.
 
 ### The other computer
 
-As a programmer, you're the person who writes code that runs on the other computer. Let's call this other computer a "server". Totally random, I know. But not really because it "serves" Lucy's tweets to all the crazy people who want to read them. Like me. I'm crazy. But I Love Lucy.
+As a programmer, you're the person who writes code that runs on the other computer.
+Let's call this other computer a "server". Totally random, I know. But not really because
+it "serves" Lucy's tweets to all the crazy people who want to read them.
 
 ---
 
 ### Can I Haz Website (Requests)
 
-Ok, so there's this thing called a "Request-response cycle". It's what it sounds like. Lucy makes a request. The server responds with some information. That's like 1 year of a CS degree right there. Maybe. I don't have one so I could be totally wrong.
+Ok, so there's this thing called a "Request-response cycle". It's what it sounds like.
+Lucy makes a request. The server responds with some information. That's like 1 year of a
+CS degree right there. Maybe. I don't have one so I could be totally wrong.
 
 Think of it like going to the drug store and going up to the counter
 and asking the guy in the white lab coat (who is totally a real doctor)
@@ -41,10 +51,22 @@ the lab-coat. I mean server. Wait, what?
 
 ### Databases
 
-Databases. What a buzz word right? You've probably heard of a database. It's not really that big of a deal. In fact, forget about database altogether. Think of it as storage space. So remember when Lucy tweeted that thing about monkeys? Well, in order for me to go see it later, the server has to store it somewhere. The easiest thing for the server would be to write her text to a file, and then read the file when I request it. Turns out reading and writing files is slow. So that's why we have database. Also because they have some advantages in terms of organization. It doesn't really matter. It's all the same in the end.
+Databases. What a buzz word right? You've probably heard of a database. It's not really that
+big of a deal. In fact, forget about database altogether. Think of it as storage space. So
+remember when Lucy tweeted that thing about monkeys? Well, in order for me to go see it
+later, the server has to store it somewhere. The easiest thing for the server would be to
+write her text to a file, and then read the file when I request it. Turns out reading and
+writing files is slow. So that's why we have database. Also because they have some advantages
+in terms of organization. It doesn't really matter. It's all the same in the end.
 
 ---
 
 ### Complete picture
 
-So I'm sitting at home bored. I lied earlier, Lucy is actually really cool and is never bored. I'm the one who's sitting at home. So I open up my browser and type in `twitter.com/codenewbies`. My computer figures out what server `twitter.com` is sitting on (how it figures that out is a different topic) and sends it a request that contains some information about me, and what I'm asking for [@codenewbies page](https://twitter.com/codenewbies). The `twitter.com` server looks up `@codenewbies` in their database. Fetches all the tweets out of some database, and replies with a bunch of text and images and styles. My browser takes all this stuff and renders it on the screen for me.
+So I'm sitting at home bored and I open up my browser and type in
+`twitter.com/codenewbies`. My computer figures out what server `twitter.com` is sitting on
+(how it figures that out is a different topic) and sends it a request that contains some information
+about me, and what I'm asking for [@codenewbies page](https://twitter.com/codenewbies). The
+`twitter.com` server looks up `@codenewbies` in their database. Fetches all the tweets out of some
+database, and replies with a bunch of text and images and styles. My browser takes all this
+stuff and renders it on the screen for me.
