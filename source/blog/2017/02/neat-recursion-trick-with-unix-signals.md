@@ -48,15 +48,16 @@ infinite loop with a `while True` loop. This is just a dumb
 way to keep the `python script.py` process alive forever.
 
 ```python
-def main(signum=None, frame=None):
-  # bind this function as a callback to SIGALARM
-  signal.signal(signal.SIGALRM, self.main)
+class MyClass():
+  def main(signum=None, frame=None):
+    # bind this function as a callback to SIGALARM
+    signal.signal(signal.SIGALRM, self.main)
 
-  # send a SIGALARM in 10 seconds
-  signal.alarm(10)
+    # send a SIGALARM in 10 seconds
+    signal.alarm(10)
 ```
 
-The `main` function here does 4 things:
+The `main` function here does 2 things:
 
 1. Binds `self.main` as a callback to `SIGALARM`. This means
 that if a `SIGALARM` is received by the current process, it should
