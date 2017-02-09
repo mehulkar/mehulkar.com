@@ -30,23 +30,23 @@
     }
 
     code {
-      font-size: $small;
+      font-size: $base-font-size * 0.9;
+      line-height: $base-font-size * 0.9 * 1.25;
     }
 
     p, li {
       code {
         border-radius: 5px;
-        color: red;
-        background: #eee;
+        background: #f8f8f8;
         padding: 3px 4px;
+        font-size: $small;
       }
     }
     pre {
       code {
         border: none;
         display: block;
-        padding: 10px 15px;
-        border-radius: 3px 15px 3px 15px;
+        padding: 2em;
       }
 
       &.terminal {
