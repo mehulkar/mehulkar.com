@@ -1,7 +1,7 @@
 ---
 title: "What is a website?"
 date: 2014-09-26 17:29:48
-categories: learn-to-code
+categories: programming
 ---
 
 A website is basically you being all bored on your computer and wanting to get stuff

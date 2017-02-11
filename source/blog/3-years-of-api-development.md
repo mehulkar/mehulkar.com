@@ -1,7 +1,7 @@
 ---
 title: 3 years of API development
 date: 2016-03-07
-categories: product
+categories: programming
 ---
 
 I've been writing HTTP APIs for the past 2-3 years---most of my professional life

@@ -1,7 +1,7 @@
 ---
 title: Programming Fundamentals
 date: 2014-09-26 17:29:48
-categories: learn-to-code
+categories: programming
 ---
 
 ### Sequential instructions

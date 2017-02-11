@@ -1,7 +1,7 @@
 ---
 title: "Protips: brought to you by pain"
 date:   2014-09-30 22:42:35
-categories: dev
+categories: programming
 ---
 
 These are probbaly not news to anyone who has any experience,

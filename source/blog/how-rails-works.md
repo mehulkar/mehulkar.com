@@ -1,7 +1,7 @@
 ---
 title: How Rails Works
 date: 2014-10-04 12:06:45
-categories: learn-to-code
+categories: programming
 ---
 
 You should read the one about [how websites work](/blog/what-is-a-website) first.
