@@ -45,8 +45,8 @@ dog.age
 dog.bark()
 ```
 
-Ruby defines properties using instance variables--variables preceded by
-an `@` sign, which can be shared internally inside a class external
+Ruby defines properties using instance variables (variables preceded by
+an `@` sign) which can be shared internally inside a class external
 using get/set methods (or shorthand using `attr_reader` and `attr_writer`).
 This is a great feature and gets us 95% of the way there.
 
