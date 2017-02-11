@@ -85,7 +85,7 @@ and properties in Ruby can be set to callable anonymous functions, but the
 goal isn't to discover the flexibility of the language--the
 more powerful the better, I say--the goal is to make it easier to declare intent.
 
-The interesting thing here is that Ruby already has examples for caring about
+The interesting thing here is that Ruby already has examples of caring about
 declaring intent. Predicate method (ending with `?`) and Bang methods (ending with `!`)
 both exist to declare intent; the former to indicate a boolean return type,
 the latter to indicate that a safer version of the method exists.
