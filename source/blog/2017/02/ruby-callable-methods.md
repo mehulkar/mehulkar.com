@@ -75,7 +75,7 @@ garfield.present    // is a property
 garfield.present()  // is a function
 ```
 
-As you can see the additional detail here is the `()` parentheses at the time
+As you can see, the additional detail here is the `()` parentheses at the time
 of invocation. A function must be called with `()` or else it returns
 the function itself. (Python has the same requirement, for the record).
 Properties, on the other hand, are like Ruby's `attr_reader`.
