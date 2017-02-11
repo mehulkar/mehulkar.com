@@ -45,26 +45,28 @@ helpers do
   end
 
   def reverse_chronological(posts)
-    posts.sort do |x,y|
-      Date.parse(y[:date]) <=> Date.parse(x[:date])
+    chronological(posts).reverse
+  end
+
+  def posts_by_category
+    post_files.group_by do |file|
+      categories_for_file(file).split(' ').first
     end
   end
 
   def posts_for_category(name)
-    groups = post_files.group_by do |path|
-      extensions[:frontmatter].data(path).first[:categories].split(' ').first
-    end
-    posts = groups[name].map do |file|
+    posts = posts_by_category[name].map do |file|
       data_for_file(file)
     end
+
     reverse_chronological(posts)
   end
 
   def post_groups
     post_files.map { |file|
       data_for_file(file)
-    }.group_by { |x|
-      Date.parse(x[:date]).strftime("%Y")
+    }.group_by { |post|
+      Date.parse(post[:date]).strftime("%Y")
     }.sort_by { |year, posts|
       year
     }.reverse
@@ -77,8 +79,12 @@ helpers do
       date: first_created(file),
       link: '/blog/' + path,
       title: extensions[:frontmatter].data(file).first[:title],
-      categories: extensions[:frontmatter].data(file).first[:categories]
+      categories: categories_for_file(file)
     }
+  end
+
+  def categories_for_file(file)
+    extensions[:frontmatter].data(file).first[:categories]
   end
 
   def post_files
