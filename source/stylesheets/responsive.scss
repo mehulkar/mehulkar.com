@@ -1,3 +1,5 @@
+@import 'variables';
+
 @media only screen
   and (min-device-width: 320px)
   and (max-device-width: 736px)
@@ -9,7 +11,7 @@
         margin-left: 0;
         padding: 2em 1em;
         #content p {
-          font-size: 1em;
+          font-size: $mobile-base-font-size;
         }
 
         #content {
@@ -18,10 +20,16 @@
             max-width: none;
             .post-header {
               h1 { line-height: 1em; }
-              h2 {
-                line-height: 1em;
+              h2 { line-height: 1em; }
+            }
+
+            article {
+              code {
+                font-size: $mobile-base-font-size * 0.9;
+                line-height: $mobile-base-font-size * 0.9 * 1.25;
               }
             }
+
           }
           // list of posts on /blogs page
           .post-group ul.posts {
