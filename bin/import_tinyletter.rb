@@ -1,6 +1,4 @@
 #!/usr/bin/env ruby
-require 'open-uri'
-require 'nokogiri'
 require_relative '../lib/post'
 require_relative '../lib/tinyletter/tinyletter'
 
