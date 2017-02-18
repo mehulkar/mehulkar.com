@@ -3,13 +3,15 @@ require 'fileutils'
 
 class Post
   attr_reader :file_path
-  def initialize(title, current_time=Time.now)
+  attr_accessor :categories
+  def initialize(title, current_time=Time.now, categories=[])
     @title = title
     @current_time = current_time
+    @categories = categories
   end
 
   def parameterized_title
-    title.split(" ").map(&:downcase).join('-')
+    title.gsub(/[^a-zA-Z0-9 -]/, '').split(" ").map(&:downcase).join('-')
   end
 
   def create
@@ -22,8 +24,8 @@ class Post
       f.write("---\n")
       f.write("title: #{title}\n")
       f.write("date: #{full_date}\n")
-      f.write("categories: \n")
-      f.write("---\n")
+      f.write("categories: #{categories.join(',')}\n")
+      f.write("---\n\n")
       f
     end
   end
