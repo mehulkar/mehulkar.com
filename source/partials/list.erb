@@ -1,15 +1,24 @@
 <ul class="posts">
   <% posts.each do |post| %>
     <li>
-      <span class="categories">
-        <%= partial('partials/categories',
-          locals: {
-            categories: post[:categories].split(',')
-          }
-        )%>
-      </span>
-      <span class="title"><%= link_to post[:title], post[:link] %></span>
-      <span class="date"><%=post[:date]%></span>
+      <div class='meta'>
+        <span class="date">
+          <%= formatted_date(post[:date]) %>
+        </span>
+      </div>
+      <div class="title">
+        <%= link_to post[:title], post[:link] %>
+      </div>
+
+      <div class='meta'>
+        <span class="categories">
+          <%= partial('partials/categories',
+            locals: {
+              categories: post[:categories].split(',')
+            }
+          )%>
+        </span>
+      </div>
     </li>
   <% end %>
 </ul>

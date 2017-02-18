@@ -1,5 +1,7 @@
 @import 'variables';
 
+$mobile-small: $mobile-base-font-size * 0.9;
+
 @media only screen
   and (min-device-width: 320px)
   and (max-device-width: 736px)
@@ -25,8 +27,8 @@
 
             article {
               code {
-                font-size: $mobile-base-font-size * 0.9;
-                line-height: $mobile-base-font-size * 0.9 * 1.25;
+                font-size: $mobile-small;
+                line-height: $mobile-small * 1.25;
               }
             }
 
@@ -34,10 +36,12 @@
           // list of posts on /blogs page
           .post-group ul.posts {
             li {
-              display: block;
               border-bottom: solid 1px #ccc;
               margin-bottom: 2em;
               span { display: block; }
+              .meta {
+                font-size: $mobile-small;
+              }
             }
           }
 

@@ -1,7 +1,7 @@
 <% wrap_layout :layout do %>
   <div class="post">
     <div class='post-header'>
-      <h2><%= created_at %></h2>
+      <h2><%= formatted_date(created_at) %></h2>
       <h1><%= current_page.metadata[:page]["title"]%></h1>
       <h2>
         <%= partial('partials/categories',

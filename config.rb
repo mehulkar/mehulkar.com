@@ -55,6 +55,11 @@ helpers do
     false
   end
 
+  def formatted_date(date)
+    date_obj = Date.parse(date)
+    date_obj.strftime('%B %d, %Y')
+  end
+
   def chronological(posts)
     posts.sort  do |x,y|
       Date.parse(x[:date]) <=> Date.parse(y[:date])
