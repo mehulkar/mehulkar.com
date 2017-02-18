@@ -3,7 +3,6 @@ require 'fileutils'
 
 class Post
   attr_reader :file_path
-
   def initialize(title, current_time=Time.now)
     @title = title
     @current_time = current_time
@@ -26,6 +25,13 @@ class Post
       f.write("categories: \n")
       f.write("---\n")
       f
+    end
+  end
+
+  def write_body(body)
+    File.open(@file_path, 'a+') do |f|
+      f.write(body)
+      f.write("\n")
     end
   end
 
