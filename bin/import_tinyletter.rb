@@ -5,7 +5,7 @@ require_relative '../lib/tinyletter/tinyletter'
 TINYLETTER_NAME = ENV['TINYLETTER_NAME'] || ARGV[0]
 
 if !TINYLETTER_NAME
-  print "Enter your TinyLetter archive page: "
+  print "Enter your TinyLetter name: "
   TINYLETTER_NAME = gets.chomp
 end
 
