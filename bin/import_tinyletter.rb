@@ -24,7 +24,7 @@ archive.page_links.each_with_index do |link, i|
   post = Post.new(
     stripped_title,
     letter.date.to_time,
-    ['three-musics'], # categories
+    ['three-musics'], # TODO: remove hardcoded categories
   ).tap(&:create)
 
   post.write_body(letter.body)
