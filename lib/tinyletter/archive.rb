@@ -4,13 +4,20 @@ module TinyLetter
   class Archive
     include Utils
 
-    attr_reader :page_links
+    HOST = 'http://tinyletter.com'
 
-    def initialize
+    attr_reader :name, :page_links
+
+    def initialize(name)
+      @name = name
       @page_links = []
     end
 
-    def find_links(url, recursive=true)
+    def archive_url
+      "#{HOST}/#{name}/archive"
+    end
+
+    def find_links(recursive=true, url=archive_url)
       archive_page = fetch_html(url)
       archive_page.css('.message-link').map do |x|
         @page_links << x.attributes['href'].value
@@ -21,7 +28,7 @@ module TinyLetter
         next_path = next_button.attributes['href'].value
         return if next_path.match(%r{javascript:void})
         uri = URI(url)
-        find_links("#{uri.scheme}://#{uri.host}#{next_path}", recursive=true)
+        find_links(recursive=true, "#{uri.scheme}://#{uri.host}#{next_path}")
       end
     end
   end

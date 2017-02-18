@@ -2,15 +2,15 @@
 require_relative '../lib/post'
 require_relative '../lib/tinyletter/tinyletter'
 
-ARCHIVE_URL = ENV['ARCHIVE_URL'] || ARGV[0]
+TINYLETTER_NAME = ENV['TINYLETTER_NAME'] || ARGV[0]
 
-if !ARCHIVE_URL
+if !TINYLETTER_NAME
   print "Enter your TinyLetter archive page: "
-  ARCHIVE_URL = gets.chomp
+  TINYLETTER_NAME = gets.chomp
 end
 
-archive = TinyLetter::Archive.new
-archive.find_links(ARCHIVE_URL, recursive=true)
+archive = TinyLetter::Archive.new(TINYLETTER_NAME)
+archive.find_links(recursive=true)
 
 total = archive.page_links.length
 
