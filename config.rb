@@ -1,3 +1,5 @@
+require_relative './lib/category'
+
 set :css_dir,         'stylesheets'
 set :js_dir,          'javascripts'
 set :images_dir,      'images'
@@ -39,6 +41,14 @@ helpers do
   def ninjatennis_path; '/ninjatennis'  end
   def programming_path; '/programming'  end
   def threemusics_path; '/three-musics' end
+
+  def path_exists?(category)
+    path = Category.new(category).route_path
+    self.send(path)
+    true
+  rescue
+    false
+  end
 
   def chronological(posts)
     posts.sort  do |x,y|
