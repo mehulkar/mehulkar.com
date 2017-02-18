@@ -15,6 +15,7 @@ page 'quotations.*',  layout: :category
 page 'books.*',       layout: :category
 page 'ninjatennis.*', layout: :category
 page 'programming.*', layout: :category
+page 'three-musics.*', layout: :category
 
 configure :development do
   activate :livereload
@@ -37,6 +38,7 @@ helpers do
   def books_path;       '/books'      end
   def ninjatennis_path; '/ninjatennis' end
   def programming_path; '/programming' end
+  def threemusics_path; '/three-musics' end
 
   def chronological(posts)
     posts.sort  do |x,y|
