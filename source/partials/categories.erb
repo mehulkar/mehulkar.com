@@ -1,0 +1,7 @@
+<% categories.each do |category| %>
+  <% if path_exists?(category) %>
+    <%= link_to category.strip, path_for(category) %>
+  <% else %>
+    <%= category %>
+  <% end %>
+<% end %>

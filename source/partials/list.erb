@@ -1,7 +1,13 @@
 <ul class="posts">
   <% posts.each do |post| %>
     <li>
-      <span class="categories"><%= post[:categories] %></span>
+      <span class="categories">
+        <%= partial('partials/categories',
+          locals: {
+            categories: post[:categories].split(',')
+          }
+        )%>
+      </span>
       <span class="title"><%= link_to post[:title], post[:link] %></span>
       <span class="date"><%=post[:date]%></span>
     </li>

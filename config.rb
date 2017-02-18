@@ -42,6 +42,11 @@ helpers do
   def programming_path; '/programming'  end
   def threemusics_path; '/three-musics' end
 
+  def path_for(category)
+    route_path = Category.new(category).route_path
+    self.send(route_path)
+  end
+
   def path_exists?(category)
     path = Category.new(category).route_path
     self.send(path)
