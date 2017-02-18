@@ -11,13 +11,13 @@ if !ARCHIVE_URL
   ARCHIVE_URL = gets.chomp
 end
 
-archive = Archive.new
+archive = TinyLetter::Archive.new
 archive.find_links(ARCHIVE_URL, recursive=true)
 
 total = archive.page_links.length
 
 archive.page_links.each_with_index do |link, i|
-  letter = Letter.new(link).tap(&:get)
+  letter = TinyLetter::Letter.new(link).tap(&:get)
 
   puts "[#{i}/#{total}] Creating post for #{letter.subject}"
 
