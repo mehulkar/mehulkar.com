@@ -17,7 +17,13 @@
     }
   }
 
+  .post-footer {
+    color: #aaa;
+    font-size: $small;
+  }
+
   article {
+    margin-bottom: 2em;
     h2 {
       font-size: 1.2em;
       border-bottom: solid 1px #EEE;

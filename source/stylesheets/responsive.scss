@@ -24,6 +24,10 @@ $mobile-small: $mobile-base-font-size * 0.9;
               h1 { line-height: 1em; }
               h2 { line-height: 1em; }
             }
+            .post-footer {
+              font-size: $mobile-small;
+              line-height: $mobile-small * 1.25;
+            }
 
             article {
               code {
