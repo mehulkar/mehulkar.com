@@ -107,7 +107,7 @@ helpers do
   end
 
   def categories_for_file(file)
-    extensions[:frontmatter].data(file).first[:categories]
+    extensions[:frontmatter].data(file).first[:categories] || ""
   end
 
   def post_files
