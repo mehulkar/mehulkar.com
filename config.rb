@@ -1,4 +1,5 @@
 require_relative './lib/category'
+require 'pry'
 
 set :css_dir,         'stylesheets'
 set :js_dir,          'javascripts'
