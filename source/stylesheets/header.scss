@@ -1,6 +1,7 @@
 header {
   $color: #fff;
   padding: 1em;
+  padding-bottom: 0.3em;
   width: 100%;
   background-color: #39c;
   text-align: center;
@@ -48,6 +49,11 @@ header {
         }
       }
     }
+  }
+
+  section.wave-container {
+    display: flex;
+    justify-content: center;
   }
 
   section.notes {
