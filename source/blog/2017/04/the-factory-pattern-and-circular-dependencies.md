@@ -4,8 +4,8 @@ date: 2017-04-19
 categories: programming
 ---
 
-Say I'm writing the code for a treat dispenser for my pets that dispenses a
-treat. In the simplest sense, this would look like this:
+Say I'm writing the code for a treat dispenser for my pets. In the
+simplest sense, this would look like this:
 
 ```python
 pet = recognize_pet()
