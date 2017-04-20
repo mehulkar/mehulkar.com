@@ -9,7 +9,7 @@ simplest sense, this would look like this:
 
 ```python
 pet = recognize_pet()
-dispense_treat_for(pet.treat())
+dispense(pet.treat())
 ```
 
 To be able to implement the `pet.treat()` method, I need to first know which pet
