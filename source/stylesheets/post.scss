@@ -82,16 +82,14 @@
     }
 
     blockquote {
-      color: #777;
-      border-left: #ccc solid 2px;
-      padding-left: 1em;
-      padding-right: 3em;
-      margin-left: 1em;
-      font-size: $small;
+      color: #444;
+      margin-bottom: 1em;
+      font-family: 'Indie Flower', cursive;
       p {
         font-size: 1em;
         line-height: 1.5em;
-        margin-bottom: 1em;
+        margin-bottom: 0.5em;
+        &:last-child { margin-bottom: 0; }
       }
     }
   }

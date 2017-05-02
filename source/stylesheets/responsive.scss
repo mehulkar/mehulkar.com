@@ -1,5 +1,4 @@
-@import 'variables';
-
+$mobile-base-font-size: 1em;
 $mobile-small: $mobile-base-font-size * 0.9;
 
 @media only screen
@@ -12,8 +11,10 @@ $mobile-small: $mobile-base-font-size * 0.9;
       main {
         margin-left: 0;
         padding: 2em 1em;
-        #content p {
-          font-size: $mobile-base-font-size;
+        #content {
+          p, blockquote {
+            font-size: $mobile-base-font-size;
+          }
         }
 
         #content {
