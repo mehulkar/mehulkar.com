@@ -39,6 +39,7 @@ GEM
     ffi (1.9.6)
     font-awesome-middleman (4.5.0)
       middleman-core (~> 3.0)
+    front_matter_parser (0.1.0)
     haml (4.0.6)
       tilt
     hike (1.2.3)
@@ -155,6 +156,7 @@ PLATFORMS
 
 DEPENDENCIES
   font-awesome-middleman
+  front_matter_parser
   middleman (~> 3.3.7)
   middleman-livereload (~> 3.1.0)
   middleman-neat

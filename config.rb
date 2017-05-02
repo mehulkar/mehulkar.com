@@ -1,4 +1,5 @@
 require_relative './lib/category'
+require_relative './lib/page'
 require 'pry'
 
 set :css_dir,         'stylesheets'
@@ -123,9 +124,7 @@ helpers do
   end
 
   def categories(path)
-    str = `cat #{path} | grep categories:`
-    str ||= ""
-    str.split("categories: ")[1]
+    Page.new(path).categories
   end
 
   def first_created(path)
