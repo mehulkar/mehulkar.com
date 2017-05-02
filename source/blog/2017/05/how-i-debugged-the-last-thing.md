@@ -88,9 +88,10 @@ So I wondered if the available space was also stored in a cache file somewhere.
 I exit and re-enter my ssh session. I wait a few minutes. No luck. I'm not even
 sure how to Google for this situation.
 
-Then I remember something my old boss Andy said one time on the phone.
+Then I remember something my old boss Andy said one time on the phone to someone
+else:
 
-> "Yeah, the machine is out inodes. Can you add another disk?"
+> Yeah, the machine is out inodes. Can you add another disk?
 
 Oh yes! inodes are a thing! I don't *really* know what an inode is at this
 moment, but it has something to do with the number of files or the number of
