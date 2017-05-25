@@ -78,10 +78,10 @@ For example, this markdown:
 - [fixed] [something] happened here
 ```
 
-would be rendered as:
+SHOULD be rendered as:
 
 ```html
-<span class='fixed tag'></span>
+<span class='fixed tag'>[something] happened here</span>
 ```
 
 But instead, I was getting:
