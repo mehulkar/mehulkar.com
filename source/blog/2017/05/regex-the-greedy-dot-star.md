@@ -5,7 +5,7 @@ categories: programming
 ---
 
 I was recently extending [`redcarpet`][1] (a Markdown rendering library) to
-rendering a `CHANGELOG.md` in a nicer way. The idea is that markdown like this:
+render a `CHANGELOG.md` in a nicer way. The idea is that markdown like this:
 
 ```md
 - [fixed] that one bug
@@ -53,7 +53,7 @@ def list_item(text)
 end
 ```
 
-The important part of this regex is `\\[(.*)\\]`.
+The important part of this regex is `\\[(.*)\\]`<sup>2</sup>.
 
 - The double backslashed `[` and `]` characters match literal square brackets
 in my string
@@ -182,6 +182,9 @@ Here's some links with the regex explained here:
 
 1. I've omitted the second argument that allows handling of ordered and unordered
 lists for simplification.
-
+2. I'm not entirely clear in regex land when double backslashes are needed for
+escaping and when a single backslash will do. For example, the regex101 links
+at the bottom of this article have regexes with only single backslashes
+for escaping.
 
 [1]: https://github.com/vmg/redcarpet
