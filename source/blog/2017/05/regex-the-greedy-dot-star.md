@@ -126,7 +126,7 @@ the entire string, like the greedy monster it is. So I can change the regex
 matcher to:
 
 ```
-`\\[(.*?)\\]`
+\\[(.*?)\\]
 ```
 
 Notice the extra `?`.
