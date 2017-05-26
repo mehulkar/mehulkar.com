@@ -6,7 +6,7 @@
       <h2>
         <%= partial('partials/categories',
           locals: {
-            categories: current_page.metadata[:page]["categories"].split(',')
+            current_categories: current_page.metadata[:page]["categories"].split(',')
           }
         )%>
       </h2>
