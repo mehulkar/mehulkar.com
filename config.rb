@@ -123,10 +123,6 @@ helpers do
     end
   end
 
-  def categories(path)
-    Page.new(path).categories
-  end
-
   def first_created(path)
     date_line = `cat #{path} | grep date:`
     if date_line.empty?
