@@ -4,9 +4,10 @@ require 'fileutils'
 class Post
   attr_reader :file_path
   attr_accessor :categories
+
   def initialize(title, current_time=Time.now, categories=[])
     @title = title
-    @current_time = current_time
+    @current_time = current_time.freeze
     @categories = categories
   end
 
