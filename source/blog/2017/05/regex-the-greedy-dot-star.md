@@ -92,7 +92,10 @@ But instead, I was getting:
 
 At first glance, this looked like garbage text to me, but then I realized that
 the first capture group of my regex, between the `[]` literals, was capturing
-from the *first* `[` to the last `]` in the input string.
+from the *first* `[` to the *last* `]` in the input string.
+
+So, my first capture group was capturing: `fixed] [something` instead of
+just `fixed`.
 
 This was strange to me, because I assumed that the `.*` in `\\[(.*)\\]`
 would capture UNTIL it reached the first `]`.
