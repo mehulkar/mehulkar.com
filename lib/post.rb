@@ -1,56 +1,72 @@
-#!/usr/bin/env ruby
-require 'fileutils'
+require 'front_matter_parser'
 
 class Post
-  attr_reader :file_path
-  attr_accessor :categories
+  TOP_LEVEL_DIR = Dir.pwd
+  BLOG_BASE_DIR = File.join(TOP_LEVEL_DIR, 'source', 'blog')
 
-  def initialize(title, current_time=Time.now, categories=[])
-    @title = title
-    @current_time = current_time.freeze
-    @categories = categories
+  POST_FILES = Dir["#{BLOG_BASE_DIR}/**/*.md"]
+
+  def self.all
+    POST_FILES
   end
 
-  def parameterized_title
-    title.gsub(/[^a-zA-Z0-9 -]/, '').split(" ").map(&:downcase).join('-')
+  def self.by_year
+    all.map { |file|
+      new(file)
+    }.sort_by(&:date)
+    .reverse
+    .group_by(&:year).sort_by { |year, posts|
+      year
+    }.reverse
   end
 
-  def create
-    dir = File.join('source', 'blog', year, month)
-    FileUtils.mkdir_p(dir)
-
-    @file_path = File.join(dir, "#{parameterized_title}.md")
-
-    file = File.open(@file_path, 'w+') do |f|
-      f.write("---\n")
-      f.write("title: #{title}\n")
-      f.write("date: #{full_date}\n")
-      f.write("categories: #{categories.join(',')}\n")
-      f.write("---\n\n")
-      f
-    end
+  def initialize(file_path)
+    @file_path = file_path
   end
 
-  def write_body(body)
-    File.open(@file_path, 'a+') do |f|
-      f.write(body)
-      f.write("\n")
-    end
+  def link
+    path = @file_path.match(/#{BLOG_BASE_DIR}\/(.*)\.md/)[1]
+    "/blog/#{path}"
+  end
+
+  def title
+    frontmatter['title']
+  end
+
+  def categories
+    frontmatter['categories'] || ""
+  end
+
+  def year
+    date.strftime("%Y")
+  end
+
+  def date
+    date = frontmatter['date'] || DateFromGitLog.new(@file_path).to_date
+    date.to_date
   end
 
   private
 
-  attr_reader :title, :current_time
+  def frontmatter
+    unless @frontmatter
+      unsafe_loader = ->(string) { YAML.load(string) }
+      @frontmatter = FrontMatterParser::Parser.parse_file(@file_path, loader: unsafe_loader)
+    end
+    @frontmatter
+  end
+end
 
-  def year
-    current_time.strftime('%Y')
+class DateFromGitLog
+  def initialize(path)
+    @path = path
   end
 
-  def month
-    current_time.strftime('%m')
+  def to_s
+    @_date_from_git ||= `git log --follow --date=short --pretty=format:%ad --diff-filter=A -- #{@path}`
   end
 
-  def full_date
-    current_time.strftime('%Y-%m-%d')
+  def to_date
+    Date.parse(to_s)
   end
 end

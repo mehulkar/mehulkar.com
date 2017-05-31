@@ -22,3 +22,7 @@ gem 'rake'
 gem 'font-awesome-middleman'
 gem 'nokogiri'
 gem 'front_matter_parser'
+
+group :development do
+  gem 'rspec'
+end

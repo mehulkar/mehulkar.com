@@ -8,16 +8,18 @@
   or <%= link_to 'quotations', quotations_path %>. I've also written series like <%= link_to 'Play Tennis Like a Ninja', ninjatennis_path %> and <%= link_to 'Three Musics', threemusics_path %>.
 </p>
 
-<% if !(post_groups.map { |g| g[0]}.include?(Date.today.year.to_s)) %>
+<% posts_by_year = Post.by_year %>
+
+<% if !(posts_by_year.map { |g| g[0]}.include?(Date.today.year.to_s)) %>
   <h3><%= Date.today.year%></h3>
   <p>
     I haven't written anything this year &#x2639;.
   </p>
 <% end %>
 
-<% post_groups.each do |group, posts| %>
+<% posts_by_year.each do |year, posts| %>
   <div class="post-group">
-    <h3><%= group %></h3>
-    <%= partial 'partials/list', locals: { posts: reverse_chronological(posts) } %>
+    <h3><%= year %></h3>
+    <%= partial 'partials/list', locals: { posts: posts } %>
   </div>
 <% end %>

@@ -1,12 +1,12 @@
 #!/usr/bin/env ruby
 require 'fileutils'
-require_relative '../lib/post'
+require_relative '../lib/new_post'
 
 print "Name of post: "
 title = gets.chomp
 
 puts "Creating new post"
-post = Post.new(title).tap(&:create)
+post = NewPost.new(title).tap(&:create)
 
 puts "Checking out new branch"
 `git checkout -b blog-#{post.parameterized_title}`

@@ -1,5 +1,5 @@
 require_relative './lib/category'
-require_relative './lib/page'
+require_relative './lib/post'
 require 'pry'
 
 set :css_dir,         'stylesheets'
@@ -33,9 +33,6 @@ configure :build do
 end
 
 helpers do
-  TOP_LEVEL_DIR = Dir.pwd
-  BLOG_BASE_DIR = File.join(TOP_LEVEL_DIR, 'source', 'blog')
-
   def home_path;        '/'             end
   def quotations_path;  '/quotations'   end
   def poetry_path;      '/poetry'       end
@@ -58,79 +55,23 @@ helpers do
   end
 
   def formatted_date(date)
-    date_obj = Date.parse(date)
-    date_obj.strftime('%B %d, %Y')
-  end
-
-  def chronological(posts)
-    posts.sort  do |x,y|
-      Date.parse(x[:date]) <=> Date.parse(y[:date])
-    end
-  end
-
-  def reverse_chronological(posts)
-    chronological(posts).reverse
-  end
-
-  def posts_by_category
-    post_files.group_by do |file|
-      categories_for_file(file).split(' ').first
-    end
+    date.strftime('%B %d, %Y')
   end
 
   def posts_for_category(name)
-    posts = posts_by_category[name].map do |file|
-      data_for_file(file)
+    @_posts_by_category ||= Post.all.group_by do |file|
+      categories_for_file = extensions[:frontmatter].data(file).first[:categories] || ""
+      categories_for_file.split(' ').first
     end
 
-    reverse_chronological(posts)
-  end
+    posts = @_posts_by_category[name].map do |file|
+      Post.new(file)
+    end
 
-  def post_groups
-    post_files.map { |file|
-      data_for_file(file)
-    }.group_by { |post|
-      Date.parse(post[:date]).strftime("%Y")
-    }.sort_by { |year, posts|
-      year
-    }.reverse
-  end
-
-  def data_for_file(file)
-    basename = File.basename(file).split('.')[0]
-    path = file.match(/#{BLOG_BASE_DIR}\/(.*)\.md/)[1]
-    {
-      date: first_created(file),
-      link: '/blog/' + path,
-      title: extensions[:frontmatter].data(file).first[:title],
-      categories: categories_for_file(file)
-    }
-  end
-
-  def categories_for_file(file)
-    extensions[:frontmatter].data(file).first[:categories] || ""
-  end
-
-  def post_files
-    Dir["#{BLOG_BASE_DIR}/**/*.md"]
+    posts.sort_by(&:date).reverse
   end
 
   def created_at
-    if current_page.metadata[:page]["date"]
-      Date.parse("#{current_page.metadata[:page]["date"]}").to_s
-    else
-      first_created(current_page.source_file)
-    end
-  end
-
-  def first_created(path)
-    date_line = `cat #{path} | grep date:`
-    if date_line.empty?
-      date = `git log --follow --date=short --pretty=format:%ad --diff-filter=A -- #{path}`
-      date = Date.today.to_s if date.empty?
-    else
-      date = date_line.split(" ")[1]
-    end
-    date
+    Post.new(current_page.source_file).date
   end
 end
