@@ -1,24 +1,8 @@
-<ul class="posts">
+<ul class='ml0'>
   <% posts.each do |post| %>
-    <li>
-      <div class='meta'>
-        <span class="date">
-          <%= formatted_date(post.date) %>
-        </span>
-      </div>
-      <div class="title">
-        <%= link_to post.title, post.link %>
-      </div>
-
-      <div class='meta'>
-        <span class="categories">
-          <%= partial('partials/categories',
-            locals: {
-              current_categories: post.categories.split(',')
-            }
-          )%>
-        </span>
-      </div>
+    <li class='list mb2 ml0'>
+      <span class='silver f6 mr2'><%= without_year(post.date) %></span>
+      <span><%= link_to post.title, post.link %></span>
     </li>
   <% end %>
 </ul>

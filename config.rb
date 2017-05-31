@@ -58,6 +58,10 @@ helpers do
     date.strftime('%B %d, %Y')
   end
 
+  def without_year(date)
+    date.strftime('%b %d')
+  end
+
   def posts_for_category(name)
     @_posts_by_category ||= Post.all.group_by do |file|
       categories_for_file = extensions[:frontmatter].data(file).first[:categories] || ""
