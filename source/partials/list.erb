@@ -1,7 +1,7 @@
 <ul class='ml0'>
   <% posts.each do |post| %>
     <li class='list mb2 ml0'>
-      <span class='silver f6 mr2'><%= without_year(post.date) %></span>
+      <span class='silver f6 mr3'><%= formatted_date(post.date) %></span>
       <span><%= link_to post.title, post.link %></span>
     </li>
   <% end %>
