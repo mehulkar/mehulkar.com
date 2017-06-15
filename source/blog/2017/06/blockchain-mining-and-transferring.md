@@ -4,7 +4,7 @@ date: 2017-06-14
 categories: til
 ---
 
-I vaguely knew things about Bitcoin and blockchian technology, but a lot of
+I vaguely knew things about Bitcoin and blockchain technology, but a lot of
 things became clearer today. My original question today was:
 
 > How does 'mining' (a verb) turn into a
