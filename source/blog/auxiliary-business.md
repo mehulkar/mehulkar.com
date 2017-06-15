@@ -1,5 +1,5 @@
 ---
-title: "Auxiliary Business"
+title: Auxiliary Business
 date: 2014-03-01
 categories: business
 ---
