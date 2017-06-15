@@ -1,9 +1,9 @@
 <% wrap_layout :layout do %>
-  <div class="post">
-    <div class='post-header'>
-      <h2><%= formatted_date(created_at) %></h2>
-      <h1><%= current_page.metadata[:page]["title"]%></h1>
-      <h2>
+  <div class='post bb b--black-10'>
+    <div class='bb b--black-10 mv3'>
+      <h3 class='f5 fw2 mb1'><%= formatted_date(created_at) %></h2>
+      <h1 class='fw3 mb2 mt0'><%= current_page.metadata[:page]["title"]%></h1>
+      <h3 class='f5 fw4 mv0 ttu'>
         <%= partial('partials/categories',
           locals: {
             current_categories: current_page.metadata[:page]["categories"].split(',')
@@ -11,12 +11,18 @@
         )%>
       </h2>
     </div>
-    <article>
+
+    <article class='mb3'>
       <%= yield %>
     </article>
 
-    <div class='post-footer'>
-      <p>Want to talk about this blag? <a href='mailto:mehul.kar@gmail.com?subject=I have an opinion!'> Email me</a> or send me a toot <a href='//twitter.com/mehulkar', target='_blank'>@mehulkar</a>!</p>
-    </div>
+    <p class='f6 bg-light-yellow pa3 black-80 br2 ba b--yellow'>
+      Want to talk about this blag?
+      <a class='black-80 underline' href='mailto:mehul.kar@gmail.com?subject=I have an opinion!'>
+        Email me</a>
+      or send me a toot
+      <a class='black-80 underline' href='//twitter.com/mehulkar' target='_blank'>
+        @mehulkar</a>!
+    </p>
   </div>
 <% end %>

@@ -5,6 +5,7 @@
 
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name=viewport>
 
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Mehul Kar" %></title>
@@ -15,21 +16,23 @@
 
   <body>
     <header>
-      <div class="header-content">
-        <img src="https://gravatar.com/avatar/57c2dff3cf681f22f9519a18bafc7bce?s=300">
-        <h1><a href='/'>Mehul Kar</a></h1>
+      <div class='header-content flex items-center justify-center mv3'>
+        <img class='' src="https://gravatar.com/avatar/57c2dff3cf681f22f9519a18bafc7bce?s=300">
+        <h1 class='ma0 f1 fw1 white'>
+          <a class='white' href='/'>Mehul Kar</a>
+        </h1>
       </div>
 
-      <nav>
+      <nav class='mb4'>
         <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/resume">Resume</a></li>
         <li><a href="//twitter.com/mehulkar/favorites">Favorites</a></li>
       </nav>
 
-      <section class='notes contact'>
-        <a href="//twitter.com/mehulkar"><i class='fa fa-twitter fa-2x' ></i></a>
-        <a href="mailto:mehul.kar@gmail.com"><i class='fa fa-envelope fa-2x' ></i></a>
+      <section class='mb4'>
+        <a class='white' href="//twitter.com/mehulkar"><i class='fa fa-twitter fa-2x' ></i></a>
+        <a class='white' href="mailto:mehul.kar@gmail.com"><i class='fa fa-envelope fa-2x' ></i></a>
       </section>
 
       <section class='wave-container'>
@@ -43,15 +46,14 @@
       </section>
     </header>
 
-    <main class='fx-wrapper fx-direction-column'>
-      <div id="content">
+    <main class='flex flex-column mw7'>
+      <div id="content" class='pa3'>
         <%= yield %>
       </div>
 
-      <footer>
-        &copy; <span id='year'></span>
+      <footer class='silver f6 tc pa2 mb2'>
+        <div>&copy; <span id='year'></span></div>
       </footer>
-
     </main>
   </body>
 </html>

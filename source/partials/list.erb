@@ -1,8 +1,8 @@
-<ul class='ml0'>
+<div class='ml0 pl0'>
   <% posts.each do |post| %>
-    <li class='list mb2 ml0'>
-      <span class='silver f6 mr3'><%= formatted_date(post.date) %></span>
-      <span><%= link_to post.title, post.link %></span>
-    </li>
+    <div class='mb4 bb b--black-10 flex items-baseline'>
+      <span class='silver mr3 f7'><%= formatted_date(post.date) %></span>
+      <span class='flex-auto'><%= link_to post.title, post.link %></span>
+    </div>
   <% end %>
-</ul>
+</div>

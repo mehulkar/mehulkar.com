@@ -26,8 +26,8 @@
 <% end %>
 
 <% posts_by_year.each do |year, posts| %>
-  <div class='post-group'>
-    <h3 class='mb2'><%= year %></h3>
+  <div class='mb3 mt0 ml0'>
+    <h2 class='mb3'><%= year %></h3>
     <%= partial 'partials/list', locals: { posts: posts } %>
   </div>
 <% end %>
