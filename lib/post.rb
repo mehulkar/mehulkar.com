@@ -46,6 +46,10 @@ class Post
     date.to_date
   end
 
+  def exists?
+    File.exists? @file_path
+  end
+
   private
 
   def frontmatter
