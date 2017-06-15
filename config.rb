@@ -35,7 +35,7 @@ end
 
 helpers do
   def home_path;        '/'             end
-  def quotations_path;  '/quotations'   end
+  def quote_path;  '/quotations'   end
   def poetry_path;      '/poetry'       end
   def books_path;       '/books'        end
   def ninjatennis_path; '/ninjatennis'  end
