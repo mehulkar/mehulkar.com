@@ -34,7 +34,8 @@ and halves every 4 years. So 8 years ago, you could write down "I own 50 bitcoin
 
 So now "miners" are continuously earning the privilege to earn "bitcoin".
 In fact, they first 169 "blocks" that were mined were literally just these
-proclamations.
+proclamations. Here's a reference to the [first block ever][1] with this
+proclamation.
 
 So now what do you do with these bitcoins?
 
@@ -72,3 +73,5 @@ long term, more transactions is better for the ecosystem? The latter seems fragi
 The actual act of "mining" is interesting also, but I will leave that in its
 black box for now.
 
+
+[1]: https://blockchain.info/block/00000000839a8e6886ab5951d76f411475428afc90947ee320161bbf18eb6048
