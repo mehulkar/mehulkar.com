@@ -6,7 +6,7 @@ categories: three-musics
 
  <div>
 <div style="font-style: normal; font-size: 16px; line-height: 24px; color: rgb(85, 85, 85);">I've been having trouble sleeping. My mother would say it's because I look at a computer screen all day. She's probably right.</div>
-<img class="tl-email-image" height="200" src="http://ordinaryhappilyeverafter.com/blog/wp-content/uploads/2015/03/violin.jpg" style="width: 320px; max-width: 320px;" width="320">
+<img src="http://ordinaryhappilyeverafter.com/blog/wp-content/uploads/2015/03/violin.jpg">
 </div>
 
 <ol>
@@ -18,4 +18,4 @@ categories: three-musics
 What are you listening to this week?<br>
 <br>
 P.S. Thank you to everyone who asked why I missed last week :D<br>
-P.P.S Know anyone else who loves music? Forward this email to them! 
+P.P.S Know anyone else who loves music? Forward this email to them!

@@ -5,7 +5,7 @@ categories: three-musics
 ---
 
  <div>I recently watched all 7 seasons of West Wing on Netflix and now I'm intrigued by politics. <br>
-<img class="tl-email-image" height="178" src="https://www.emory.edu/EMORY_MAGAZINE/winter2004/assets/west_wing_cast_430.jpg" style="width: 430px; max-width: 430px;" width="430">
+<img src="https://www.emory.edu/EMORY_MAGAZINE/winter2004/assets/west_wing_cast_430.jpg">
 </div>
 
 <ol>
@@ -19,4 +19,4 @@ Happy Friday!<br>
 <br>
 PS, know anyone who likes talking about music? Send them to <a href="http://threemusics.com">threemusics.com</a>!<br>
 <br>
-  
+ 
