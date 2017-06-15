@@ -20,6 +20,7 @@ page 'books.*',       layout: :category
 page 'ninjatennis.*', layout: :category
 page 'programming.*', layout: :category
 page 'three-musics.*', layout: :category
+page 'til.*',           layout: :category
 
 configure :development do
   activate :livereload
@@ -40,6 +41,7 @@ helpers do
   def ninjatennis_path; '/ninjatennis'  end
   def programming_path; '/programming'  end
   def threemusics_path; '/three-musics' end
+  def til_path;         '/til'          end
 
   def path_for(category)
     route_path = Category.new(category).route_path
