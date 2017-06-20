@@ -1,33 +1,34 @@
 <h1>Hello</h1>
 
-<p>I am a human. And so are you. Or maybe you are a robot?</p>
+<p>I am a human. What are you?</p>
 
 <p>
-  I wrote down a whole bunch of words here about mostly about
-  <%= link_to 'programming', programming_path %>, but sometimes there I take notes
-  are from <%= link_to 'books', books_path %>, sometimes I write bad
+  I write down a whole bunch of words here. They are mostly about
+  <%= link_to 'programming', programming_path %>, but sometimes I also take
+  notes from <%= link_to 'books', books_path %> or write bad
   <%= link_to 'poetry', poetry_path %> or jot down
   <%= link_to 'quotations', quote_path %>. Sometimes I even just write
-  down <%= link_to 'things I learned', til_path %>.
-</p>
-<p>
-  I've also written series like
+  down <%= link_to 'things I learn', til_path %>. I've also written series like
   <%= link_to 'Play Tennis Like a Ninja', ninjatennis_path %> and
   <%= link_to 'Three Musics', threemusics_path %>.
 </p>
 
 <% posts_by_year = Post.by_year %>
+<% current_year = Date.today.year.to_s %>
+<% years = posts_by_year.map(&:first) %>
 
-<% if !(posts_by_year.map { |g| g[0]}.include?(Date.today.year.to_s)) %>
-  <h3><%= Date.today.year%></h3>
-  <p>
-    I haven't written anything this year &#x2639;.
-  </p>
+<% if !years.include? current_year %>
+  <div class='mb3 mt0 ml0'>
+    <h2 class='mb3'><%= Date.today.year %></h2>
+    <p>
+      I haven't written anything this year &#x2639;.
+    </p>
+  </div>
 <% end %>
 
 <% posts_by_year.each do |year, posts| %>
   <div class='mb3 mt0 ml0'>
-    <h2 class='mb3'><%= year %></h3>
+    <h2 class='mb3'><%= year %></h2>
     <%= partial 'partials/list', locals: { posts: posts } %>
   </div>
 <% end %>
