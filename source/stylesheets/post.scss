@@ -24,6 +24,10 @@ body main #content article {
     }
   }
 
+  li > ul {
+    margin-top: 1rem;
+  }
+
   pre {
     code {
       border: none;
