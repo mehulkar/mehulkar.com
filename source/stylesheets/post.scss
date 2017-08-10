@@ -12,8 +12,9 @@ body main #content article {
     margin-bottom: 1em;
   }
 
-  code {
+  pre, code {
     line-height: 1.125rem;
+    font-size: 0.9rem;
   }
 
   p, li {
@@ -67,6 +68,9 @@ body main #content article {
       line-height: 1.5em;
       margin-bottom: 0.5em;
       &:last-child { margin-bottom: 0; }
+      code {
+        font-size: 0.9rem;
+      }
     }
   }
 }
