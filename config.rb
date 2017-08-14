@@ -57,7 +57,11 @@ helpers do
   end
 
   def formatted_date(date)
-    date.strftime("%d %b, %Y")
+    date.strftime("%b %d")
+  end
+
+  def full_date(date)
+    date.strftime("%b %d, %Y")
   end
 
   def posts_for_category(name)
