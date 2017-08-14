@@ -1,6 +1,6 @@
 <% current_categories.each do |category| %>
   <% if path_exists?(category) %>
-    <%= link_to category.strip, path_for(category) %>
+    <%= link_to category, path_for(category), class: 'pill dib mr1 mb1 f5 white br1' %>
   <% else %>
     <%= category %>
   <% end %>

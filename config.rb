@@ -35,7 +35,7 @@ end
 
 helpers do
   def home_path;        '/'             end
-  def quote_path;  '/quotations'   end
+  def quote_path;       '/quotations'   end
   def poetry_path;      '/poetry'       end
   def books_path;       '/books'        end
   def ninjatennis_path; '/ninjatennis'  end
@@ -61,12 +61,8 @@ helpers do
   end
 
   def posts_for_category(name)
-    @_posts_by_category ||= Post.all.group_by do |file|
-      categories_for_file = extensions[:frontmatter].data(file).first[:categories] || ""
-      categories_for_file.split(' ').first
-    end
-
-    posts = @_posts_by_category[name].map do |file|
+    by_category = Post.by_category
+    posts = by_category[name].map do |file|
       Post.new(file)
     end
 

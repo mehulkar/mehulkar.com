@@ -10,6 +10,21 @@ class Post
     POST_FILES
   end
 
+  def self.by_category
+    @_posts_by_category ||= begin
+      _by_cat = Hash.new {|h,k| h[k] = Array.new }
+
+      all.each do |file|
+        categories = Parser.load(file)['categories'] || ""
+        categories.split(',').map(&:strip).each do |c|
+          _by_cat[c] << file
+        end
+      end
+
+      _by_cat
+    end
+  end
+
   def self.by_year
     all.map { |file|
       new(file)
@@ -34,7 +49,7 @@ class Post
   end
 
   def categories
-    frontmatter['categories'] || ""
+    @categories ||= (frontmatter['categories'] || '').split(',').map(&:strip)
   end
 
   def year
@@ -53,11 +68,19 @@ class Post
   private
 
   def frontmatter
-    unless @frontmatter
-      unsafe_loader = ->(string) { YAML.load(string) }
-      @frontmatter = FrontMatterParser::Parser.parse_file(@file_path, loader: unsafe_loader)
-    end
-    @frontmatter
+    @frontmatter ||= Parser.load(@file_path)
+  end
+end
+
+class Parser
+  def self.load(file)
+    unsafe_loader = ->(string) { YAML.load(string) }
+    FrontMatterParser::Parser.parse_file(
+      file,
+      loader: unsafe_loader
+    ).front_matter
+  rescue
+    {}
   end
 end
 

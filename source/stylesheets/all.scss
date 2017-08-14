@@ -131,3 +131,13 @@ header {
   and (-webkit-min-device-pixel-ratio: 2) {
     .resume-section-wrapper .resume-section { width: 100%; }
 }
+
+.pill {
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 0.8rem;
+  padding: 3px 5px;
+  margin-bottom: 0.5rem;
+  &:hover {
+    color: white;
+  }
+}
