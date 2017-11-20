@@ -12,6 +12,6 @@ puts "Checking out new branch"
 `git checkout -b blog-#{post.parameterized_title}`
 
 puts "Opening #{post.file_path}"
-`code #{post.file_path}`
+`code . -g #{post.file_path}`
 
 # exit(0)
