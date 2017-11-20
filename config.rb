@@ -22,10 +22,6 @@ page 'programming.*', layout: :category
 page 'three-musics.*', layout: :category
 page 'til.*',           layout: :category
 
-configure :development do
-  activate :livereload
-end
-
 configure :build do
   activate :minify_css
   activate :minify_javascript   # Minify Javascript on build
