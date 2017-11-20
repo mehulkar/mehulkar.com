@@ -9,7 +9,7 @@ body main #content article {
 
   h2 {
     border-bottom: solid 1px #EEE;
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
   }
 
   pre, code {
@@ -33,7 +33,7 @@ body main #content article {
     code {
       border: none;
       display: block;
-      padding: 1em;
+      padding: 1rem;
     }
 
     &.terminal {
