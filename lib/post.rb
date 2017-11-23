@@ -3,36 +3,35 @@ require 'front_matter_parser'
 class Post
   TOP_LEVEL_DIR = Dir.pwd
   BLOG_BASE_DIR = File.join(TOP_LEVEL_DIR, 'source', 'blog')
-
   POST_FILES = Dir["#{BLOG_BASE_DIR}/**/*.md"]
 
-  def self.all
-    POST_FILES
-  end
+  attr_reader :file_path
 
-  def self.by_category
-    @_posts_by_category ||= begin
-      _by_cat = Hash.new {|h,k| h[k] = Array.new }
-
-      all.each do |file|
-        categories = Parser.load(file)['categories'] || ""
-        categories.split(',').map(&:strip).each do |c|
-          _by_cat[c] << file
-        end
-      end
-
-      _by_cat
+  class << self
+    def all
+      POST_FILES.map { |x| new(x) }
     end
-  end
 
-  def self.by_year
-    all.map { |file|
-      new(file)
-    }.sort_by(&:date)
-    .reverse
-    .group_by(&:year).sort_by { |year, posts|
-      year
-    }.reverse
+    def by_category
+      @_posts_by_category ||= begin
+        _by_cat = Hash.new {|h,k| h[k] = Array.new }
+
+        all.each do |post|
+          post.categories.each do |category|
+            _by_cat[category] << post.file_path
+          end
+        end
+        _by_cat
+      end
+    end
+
+    def by_year
+      all.sort_by(&:date)
+        .reverse
+        .group_by(&:year).sort_by { |year, posts|
+          year
+        }.reverse
+    end
   end
 
   def initialize(file_path)
