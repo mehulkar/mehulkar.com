@@ -13,17 +13,4 @@
   <%= partial('partials/categories', locals: { current_categories: Post.categories.sort })%>
 </nav>
 
-<% posts_by_year = Post.by_year %>
-<% current_year = Date.today.year.to_s %>
-<% years = posts_by_year.map(&:first) %>
-
-<% if !years.include? current_year %>
-  <div class='mb3 mt0 ml0'>
-    <h2 class='mb3'><%= Date.today.year %></h2>
-    <p>
-      I haven't written anything this year &#x2639;.
-    </p>
-  </div>
-<% end %>
-
-<%= partial 'partials/by-year', locals: { grouped_posts: posts_by_year } %>
+<%= partial 'partials/by-year', locals: { grouped_posts: Post.by_year } %>
