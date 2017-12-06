@@ -129,10 +129,8 @@ a.pill {
 .pill {
   background-color: #ccc;
   border-radius: 5px;
+  margin-left: 5px;
   &:hover {
     color: white;
-  }
-  & + .pill {
-    margin-left: 5px;
   }
 }
