@@ -3,8 +3,9 @@
     <%= link_to '&larr; Back', home_path %>
   </div>
 
-  <div class='pill dib mr1 mb4 f2 white br1 pa2'>
+  <h1 class="mb3">
     <%= current_page.metadata[:page]['title'] %>
-  </div>
+  </h1>
+
   <%= yield %>
 <% end %>

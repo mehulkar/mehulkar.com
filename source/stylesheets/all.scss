@@ -115,10 +115,6 @@ header {
   }
 }
 
-@media only screen and (max-width: 703px) {
-  .resume-section-wrapper .resume-section { width: 100%; }
-}
-
 a.pill {
   background-color: #aaa;
   &:hover {
@@ -129,8 +125,24 @@ a.pill {
 .pill {
   background-color: #ccc;
   border-radius: 5px;
-  margin-left: 5px;
+  margin-right: 5px;
   &:hover {
     color: white;
   }
+}
+
+.post-group {
+  width: calc(50% - 20px);
+}
+
+.date {
+  min-width: 45px;
+}
+
+@media only screen and (max-width: 703px) {
+  .resume-section-wrapper .resume-section { width: 100%; }
+}
+
+@media only screen and (max-width: 800px) {
+  .post-group { width: 100%; }
 }
