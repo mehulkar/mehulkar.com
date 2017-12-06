@@ -13,6 +13,10 @@
   <%= link_to 'Three Musics', threemusics_path %>.
 </p>
 
+<nav class='flex flex-wrap mb4'>
+  <%= partial('partials/categories', locals: { current_categories: Post.categories.sort })%>
+</nav>
+
 <% posts_by_year = Post.by_year %>
 <% current_year = Date.today.year.to_s %>
 <% years = posts_by_year.map(&:first) %>
