@@ -1,5 +1,19 @@
 require 'front_matter_parser'
 
+class PostCollection
+  def initialize(records)
+    @records = records
+  end
+
+  def by_year
+    @records.sort_by(&:date)
+    .reverse
+    .group_by(&:year).sort_by { |year, posts|
+      year
+    }.reverse
+  end
+end
+
 class Post
   TOP_LEVEL_DIR = Dir.pwd
   BLOG_BASE_DIR = File.join(TOP_LEVEL_DIR, 'source', 'blog')
@@ -12,13 +26,17 @@ class Post
       POST_FILES.map { |x| new(x) }
     end
 
+    def categories
+      @_categories ||= by_category.keys
+    end
+
     def by_category
       @_posts_by_category ||= begin
         _by_cat = Hash.new {|h,k| h[k] = Array.new }
 
         all.each do |post|
           post.categories.each do |category|
-            _by_cat[category] << post.file_path
+            _by_cat[category] << post
           end
         end
         _by_cat
@@ -26,11 +44,7 @@ class Post
     end
 
     def by_year
-      all.sort_by(&:date)
-        .reverse
-        .group_by(&:year).sort_by { |year, posts|
-          year
-        }.reverse
+      @_by_year ||= PostCollection.new(all).by_year
     end
   end
 

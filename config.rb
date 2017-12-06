@@ -62,11 +62,8 @@ helpers do
 
   def posts_for_category(name)
     by_category = Post.by_category
-    posts = by_category[name].map do |file|
-      Post.new(file)
-    end
-
-    posts.sort_by(&:date).reverse
+    for_category = by_category[name]
+    PostCollection.new(for_category).by_year
   end
 
   def created_at
