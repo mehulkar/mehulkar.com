@@ -25,7 +25,6 @@ of writing in this notebook. So you write down:
 
 > I just earned 12.5 bitcoin!
 
-
 Since you earned this privilege, everyone basically just agrees to what you
 write down.
 
@@ -72,6 +71,5 @@ long term, more transactions is better for the ecosystem? The latter seems fragi
 
 The actual act of "mining" is interesting also, but I will leave that in its
 black box for now.
-
 
 [1]: https://blockchain.info/block/00000000839a8e6886ab5951d76f411475428afc90947ee320161bbf18eb6048
