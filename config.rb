@@ -14,13 +14,13 @@ activate :directory_indexes
 activate :syntax
 
 page 'blog/*',        layout: :post
-page 'poetry.*',      layout: :category
-page 'quotations.*',  layout: :category
-page 'books.*',       layout: :category
-page 'ninjatennis.*', layout: :category
-page 'programming.*', layout: :category
-page 'three-musics.*', layout: :category
-page 'til.*',           layout: :category
+page 'blog/category/poetry.*',      layout: :category
+page 'blog/category/quotations.*',  layout: :category
+page 'blog/category/books.*',       layout: :category
+page 'blog/category/ninjatennis.*', layout: :category
+page 'blog/category/programming.*', layout: :category
+page 'blog/category/three-musics.*', layout: :category
+page 'blog/category/til.*',           layout: :category
 
 configure :build do
   activate :minify_css
@@ -31,13 +31,13 @@ end
 
 helpers do
   def home_path;        '/'             end
-  def quote_path;       '/quotations'   end
-  def poetry_path;      '/poetry'       end
-  def books_path;       '/books'        end
-  def ninjatennis_path; '/ninjatennis'  end
-  def programming_path; '/programming'  end
-  def threemusics_path; '/three-musics' end
-  def til_path;         '/til'          end
+  def quote_path;       '/blog/category/quotations'   end
+  def poetry_path;      '/blog/category/poetry'       end
+  def books_path;       '/blog/category/books'        end
+  def ninjatennis_path; '/blog/category/ninjatennis'  end
+  def programming_path; '/blog/category/programming'  end
+  def threemusics_path; '/blog/category/three-musics' end
+  def til_path;         '/blog/category/til'          end
 
   def path_for(category)
     route_path = Category.new(category).route_path
