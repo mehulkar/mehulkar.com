@@ -132,7 +132,14 @@ a.pill {
 }
 
 .post-group {
-  width: calc(50% - 20px);
+  .post-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .post-link {
+      width: calc(50% - 20px);
+    }
+  }
 }
 
 .date {
@@ -143,6 +150,9 @@ a.pill {
   .resume-section-wrapper .resume-section { width: 100%; }
 }
 
-@media only screen and (max-width: 800px) {
-  .post-group { width: 100%; }
+@media only screen and (max-width: 600px) {
+  .post-group .post-list {
+    display: block;
+    .post-link { width: 100%; }
+  }
 }
