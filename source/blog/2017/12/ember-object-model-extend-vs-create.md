@@ -7,7 +7,7 @@ categories: programming, ember.js
 I learned something new the other day in the course of development.
 
 I had a piece of code that took an object and used `Object.assign` to merge it with another
-object and but I noticed that it none of the properties were being copied over.
+object and but I noticed that none of the properties were being copied over.
 
 ```javascript
 someObject.someProperty
@@ -67,6 +67,23 @@ Over the years of working in Ember.js, I've never really had to care about how t
 works, because it just works. For all intents and purposes, when I define a controller or a route
 or any custom object by extending the core classes, I never had to think about where all my functions
 and properties lived. In fact, I've mostly been able to think of the framework language as
-a completely separate DSL from vanilla Javascript and treat it as a black box.
+a completely separate DSL from vanilla Javascript and treat it as a black box. Pulling back the
+curtain on this abstraction has been a long time coming!
 
-Pulling back the curtain on this abstraction has been a long time coming :)
+One notable effect of this discovery is that copying an Ember.Object (or any object
+that extends it), will not copy any default attributes of that object. For example,
+duplicating an object using `Object.assign` is a bad idea, because any default properties
+will be on the prototype and won't be carried over to the duplicate.
+
+```javascript
+Post = DS.Model.extend({
+  author: 'me'
+});
+
+const post = Post.create({
+  title: 'New post',
+  body: 'Lorem ipsum'
+});
+
+const duplicate = Object.assign({}, post);
+```
