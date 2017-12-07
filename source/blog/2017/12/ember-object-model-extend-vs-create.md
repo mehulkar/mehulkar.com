@@ -86,4 +86,9 @@ const post = Post.create({
 });
 
 const duplicate = Object.assign({}, post);
+
+duplicate.author
+//=> undefined
+
+// !!!!
 ```
