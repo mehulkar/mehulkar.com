@@ -23,5 +23,19 @@ Mishri ki mitthaas di<br/>
 Humse door ho sahi<br/>
 Aaj bicchdon se tu mil<br/>
 Aas teri hum jalaayen<br/>
-Tera Nagma hum sunaayein<br/>
-Teri seva bas hui<br/>
+Tera nagma hum sunaayein<br/>
+Teri seva bas hui.<br/>
+
+---
+
+*Extended on 12/26/2017*
+
+Ek pal ke baad bhi tu<br />
+Hum mein shaamil hai kahin<br />
+Betiyon ki saadgi mein<br />
+Shayad jaise phas gayi<br />
+
+Chaahe to tu rok le<br />
+Duniya se taaluk sabhi<br />
+Duniya tujh se rus na paaye<br />
+Sau peedhi tak tu hai yahin.<br />
