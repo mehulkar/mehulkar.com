@@ -21,6 +21,8 @@ code for Instapaper:
     exists, but since it doesn't persist (or sync between web and iOS), there is too much friction
     to use it.
 
+    **EDIT**: It turns out that [persisting sort on iOS is possible][2]!
+
 - Make link to source more obvious
 
     About once in every 10 articles, I want to look at the original source of my saved articles.
@@ -66,6 +68,7 @@ code for Instapaper:
     my Archive per week) would help me improve the latter.
 
 [1]: https://www.instapaper.com/p/mehulkar
+[2]: https://twitter.com/InstapaperHelp/status/948264703687405568
 
 **Footnotes**
 
