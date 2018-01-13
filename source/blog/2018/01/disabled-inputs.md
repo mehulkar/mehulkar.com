@@ -33,23 +33,23 @@ However, there are some intricacies to this, that are perhaps surprising.
 1. The `input` element is selectable by the `:disabled` pseudo selector.
 
     ```js
-    const input = document.querySelector('input:disabled');
+    document.querySelector('input:disabled');
     //=> <input>
     ```
 
 I discovered this while trying to write a test that asserted that an `input` element was,
 in fact, disabled. When I queried for the `input` and checked the `.disabled` property,
-it returned `false`, when I could clearly see in the rendered markup that it *looked* disabled.
+it returned `false` when I could clearly see in the rendered markup that it *looked* disabled.
 
 Digging a little deeper, it turns out that "disabled behavior" of a form control can be broken down
 into 3 things:
 
-- the state, which determine if the user can interact with the element
-- the content attribute, which is the attribute that would show up in the HTML
+- the state, which determines if the user can interact with the element
+- the content attribute, which would show up in the HTML
 - the IDL attribute, which is the javascript property on the DOM node
 
 The spec says that the IDL attribute should always reflect the content attribute, but it
-does not say anything, that I could find about how to synchronize with the state.
+does not say anything (that I could find, at least) about how to synchronize with the state.
 
 I would normally consider this a bug, but bugs are not errant behavior, bugs are deviations from
 the spec. In this case, since the spec doesn't define correct behavior, it is likely that this
