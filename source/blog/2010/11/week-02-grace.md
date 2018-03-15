@@ -1,5 +1,5 @@
 ---
-title: "Week 2: Purpose"
+title: "Week 2: Grace"
 date: 2010-11-17 00:00:00
 categories: ninja-tennis
 ---

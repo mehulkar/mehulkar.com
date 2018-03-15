@@ -1,5 +1,5 @@
 ---
-title: "Week 2: Purpose"
+title: "Week 3: Speed"
 date: 2010-11-24 00:00:00
 categories: ninja-tennis
 ---
