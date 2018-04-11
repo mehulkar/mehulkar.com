@@ -1,10 +1,10 @@
 ---
-title: Auto Closing Data Selectors?
+title: Auto Closing Attribute Selectors?
 date: 2018-04-11
 categories: javacript, css, frontend
 ---
 
-I discovere something weird the other day. It turns out that in Chrome and Firefox, data attribute
+I discovere something weird the other day. It looks like in Chrome and Firefox, attribute
 selectors will automatically be closed. Consider this example:
 
 ```js
@@ -13,9 +13,7 @@ const selector = '[some-attr]';
 document.querySelector(selector);
 ```
 
-Notice the opening and closing square brackets that form the valid selector.
-
-Now see this selector:
+Notice the opening and closing square brackets that form the valid selector. Now see this selector:
 
 ```js
 // <div some-attr>hello</div>
@@ -26,13 +24,12 @@ document.querySelector(selector);
 Notice the missing closing square bracket.
 
 In Chrome 66 and Firefox 59, this selector will still work. But in Safari, it does not work.
-
 I was even able to get selectors with values to work without closing quotation marks:
 
 ```js
 // <div some-attr-with-value="1">hello</div>
-const goodSelector = '[data-test-foo="bar"]';
-const badSelector = '[data-test-foo="bar';
+const goodSelector = '[some-attr-with-value="1"]';
+const badSelector = '[some-attr-with-value="1';
 
 document.querySelector(goodSelector); // finds the element
 document.querySelector(badSelector); // finds the element in Chrome and Firefox, but not Safari
