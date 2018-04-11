@@ -37,3 +37,7 @@ document.querySelector(badSelector); // finds the element in Chrome and Firefox,
 
 This is super strange behavior and I have not tracked down why it is the way it is.
 If anyone knows, please twitter me!
+
+Here's an interactive example on JSFiddle: [https://jsfiddle.net/mehulkar/1mobjpre/22/][1]
+
+[1]: https://jsfiddle.net/mehulkar/1mobjpre/22/
