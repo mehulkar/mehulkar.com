@@ -4,7 +4,7 @@ date: 2018-04-11
 categories: javacript, css, frontend
 ---
 
-I discovere something weird the other day. It looks like in Chrome and Firefox, attribute
+I discovered something weird the other day. It looks like in Chrome and Firefox, attribute
 selectors will automatically be closed. Consider this example:
 
 ```js
