@@ -1,7 +1,7 @@
 ---
 title: Disabled Inputs
 date: 2018-01-12
-categories: programming, til
+categories: programming, frontend
 ---
 
 Today, I learned that an `<input>` element (or any other form control) can be disabled

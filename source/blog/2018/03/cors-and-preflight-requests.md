@@ -1,7 +1,7 @@
 ---
 title: CORS and Preflight Requests
 date: 2018-03-09
-categories: programming, til
+categories: programming, frontend
 ---
 
 As a frontend developer, it's pretty common to deal with Cross Origin Resource Sharing, or CORS.

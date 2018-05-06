@@ -1,7 +1,7 @@
 ---
 title: Ruby callable methods
 date: 2017-02-10
-categories: programming
+categories: programming, ruby
 ---
 
 I wish Ruby had some semantic difference between methods that define

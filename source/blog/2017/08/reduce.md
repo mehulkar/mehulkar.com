@@ -1,7 +1,7 @@
 ---
 title: 'Reduce'
 date: 2017-08-14
-categories: programming, til
+categories: programming, javascript
 ---
 
 I've always thought of a `reduce` function as a way to create an aggregation.
