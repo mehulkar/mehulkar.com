@@ -1,7 +1,7 @@
 ---
 title: Auto Closing Attribute Selectors?
 date: 2018-04-11
-categories: javacript, css, frontend
+categories: javascript, css, frontend
 ---
 
 I discovered something weird the other day. It looks like in Chrome and Firefox, attribute
