@@ -21,7 +21,7 @@ page 'blog/category/ninjatennis.*', layout: :category
 page 'blog/category/programming.*', layout: :category
 page 'blog/category/three-musics.*', layout: :category
 page 'blog/category/til.*',           layout: :category
-page 'blog/category/tech.*',           layout: :tech
+page 'blog/category/tech.*',           layout: :category
 
 configure :build do
   activate :minify_css
