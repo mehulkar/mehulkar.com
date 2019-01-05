@@ -50,5 +50,5 @@ I find more instances, I expect that this will not be the last time I'm behind.
 **---update---**
 
 When I shared this post with [Amisha](https://twitter.com/_amishap), she pointed
-out is that it's an internet meme to see older people attempting to search in full sentences.
-I wonder if we're that one unlucky generation between how thing should be?
+out that it's an internet meme to see older people attempting to search in full sentences.
+I wonder if we're that one unlucky generation between how things should be?
