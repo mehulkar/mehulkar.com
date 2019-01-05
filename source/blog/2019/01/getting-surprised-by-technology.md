@@ -24,8 +24,8 @@ effort for me to get used to: interacting with machines in full sentences.
 
 Today, I wanted to look up if governmental employees that have to work during a shutdown get paid for
 their time when the government opens up again. My first thought was to figure out the *keywords* I'd
-need to search with. "Government". "Shutdown" "Employees"? "Paycheck"? If I could just find the right
-keywords, I could get to a Wikipedia page on government shutdowns work and read the whole thing to
+need to search with. "Government"? "Shutdown"? "Employees"? "Paycheck"? If I could just find the right
+keywords, I could get to a Wikipedia page on government shutdowns and read the whole thing to
 find the one fact I needed.
 
 I realized this instinct to find keywords will be obsolete in the next generation.
@@ -38,8 +38,9 @@ train models.
 More importantly, the next (and current) generation is already training to talk to machines
 in the same way they would ask of a human: in full sentences. When you ask Alexa when
 Elizabeth Warren was born or how much time is left on the timer, you aren't thinking about keywords,
-you're just hoping Alexa knows. This training translates back to typing into a computer. I expect
-that when the next generation goes to google.com, their instinct is to type a full sentence.
+you're just hoping Alexa knows. This training comes back to searching in apps and websites. I expect
+that when the next generation goes to google.com, their instinct is to type a full sentence, rather
+than finding the right keywords.
 
 I don't know when I'll stop thinking of search in keywords, but I am surprised at how this
 technological advancement crept up on me and how I suddenly had this realization that I'm behind
