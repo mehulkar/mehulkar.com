@@ -21,6 +21,7 @@ page 'blog/category/ninjatennis.*', layout: :category
 page 'blog/category/programming.*', layout: :category
 page 'blog/category/three-musics.*', layout: :category
 page 'blog/category/til.*',           layout: :category
+page 'blog/category/tech.*',           layout: :tech
 
 configure :build do
   activate :minify_css
@@ -38,6 +39,7 @@ helpers do
   def programming_path; '/blog/category/programming'  end
   def threemusics_path; '/blog/category/three-musics' end
   def til_path;         '/blog/category/til'          end
+  def tech_path;        '/blog/category/tech'          end
 
   def path_for(category)
     route_path = Category.new(category).route_path
