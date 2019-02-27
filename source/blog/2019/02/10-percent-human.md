@@ -1,7 +1,7 @@
 ---
 title: 10% Human
 date: 2019-02-27
-categories: reading
+categories: books
 ---
 
 I wouldn't classify *10% Human* as eye opening. Much of the advice in it included things like:
