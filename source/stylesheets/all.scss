@@ -1,5 +1,6 @@
 $base-color: #39c;
 $link-hover-color: #0055b3;
+$paragraph-mb: 1.5rem;
 
 @import 'vendor/normalize';
 @import 'vendor/tachyons';
@@ -42,7 +43,7 @@ body {
 }
 
 body main #content {
-  p { margin-bottom: 2rem; }
+  p { margin-bottom: $paragraph-mb; }
 
   nav {
     margin-left: 0

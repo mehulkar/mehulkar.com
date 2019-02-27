@@ -45,7 +45,7 @@ body main #content article {
 
   ol, ul, p, pre {
     margin-top: 0;
-    margin-bottom: 1.5em;
+    margin-bottom: $paragraph-mb;
   }
 
   /* Using !important because twitter
@@ -61,7 +61,7 @@ body main #content article {
     margin-bottom: 1rem;
     font-size: 1.25rem;
     p {
-      line-height: 1.5rem;
+      line-height: $paragraph-mb;
       margin-bottom: 0.5rem;
       font-family: 'Indie Flower', cursive;
       &:last-child { margin-bottom: 0; }
