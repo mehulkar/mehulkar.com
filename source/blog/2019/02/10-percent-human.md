@@ -13,7 +13,7 @@ very much in a "this is what we know so far" way, rather than "this is what is t
 Here is a decent list of highlights from my Kindle reading that should give you enough incentive
 to also read the book. I definiely recommend it.
 
-https://www.goodreads.com/notes/25496483-10-human/27391275-mehul
+<https://www.goodreads.com/notes/25496483-10-human/27391275-mehul>
 
 Two tangential notes:
 
