@@ -1,7 +1,4 @@
-$base-color: #39c;
-$link-hover-color: #0055b3;
-$paragraph-mb: 1.5rem;
-
+@import 'vars';
 @import 'vendor/normalize';
 @import 'vendor/tachyons';
 @import 'font-awesome';
