@@ -149,6 +149,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bundler (~> 1)
   font-awesome-middleman
   front_matter_parser
   middleman (~> 3.3.7)

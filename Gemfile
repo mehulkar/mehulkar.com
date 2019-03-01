@@ -19,6 +19,8 @@ gem 'font-awesome-middleman'
 gem 'nokogiri'
 gem 'front_matter_parser'
 
+gem 'bundler', '~> 1'
+
 group :development do
   gem 'rspec'
 end
