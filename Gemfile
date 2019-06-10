@@ -16,7 +16,6 @@ gem 'pry'
 gem 'pry-doc', '>= 0.8'
 gem 'rake'
 gem 'font-awesome-middleman'
-gem 'nokogiri'
 gem 'front_matter_parser'
 
 gem 'bundler', '~> 1'
