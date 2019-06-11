@@ -53,7 +53,7 @@ size. Although this larger API size enables a more complex (or *complete*) progr
 there are parts of it that can be boiled down so that newcomers can more easily understand an Ember
 Application, how it works, and how to tear it apart. That is the focus of the next section.
 
-## Too difficult to learn
+## Difficult to learn
 
 Others have already written about how to make Ember's programming model easier to get
 started with. The new hotness in the Octane Edition (native classes and decorators) helps
