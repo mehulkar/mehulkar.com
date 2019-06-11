@@ -1,12 +1,9 @@
 @import 'vars';
 
 body main #content article {
-  h2 {
-    border-bottom: solid 1px #EEE;
-    margin-bottom: 1rem;
-  }
-
-  h3 { margin-bottom: 0.5em; }
+  h2 { font-size: 1.6rem; font-weight: 500; margin-bottom: 1rem; border-bottom: solid 2px #ECECEC; }
+  h3 { font-size: 1.35rem; font-weight: 500; margin-bottom: 0.2rem; }
+  h4 { font-size: 1rem; font-weight: 700; margin-bottom: 0.3rem; }
 
   hr {
     border-top: 1px solid #ccc;
@@ -21,7 +18,7 @@ body main #content article {
   p, li {
     code {
       border-radius: 5px;
-      background: #f8f8f8;
+      background: #f1f1f1;
       padding: 3px 4px;
     }
   }
