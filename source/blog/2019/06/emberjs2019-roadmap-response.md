@@ -1,7 +1,7 @@
 ---
 title: "#EmberJS2019: Roadmap Response"
 date: 2019-06-03
-categories: ember.js
+categories: ember.js, frontend, programming
 ---
 
 This post is in response to [Ember 2019 Call for Blog Posts][1].
