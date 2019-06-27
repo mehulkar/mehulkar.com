@@ -2,7 +2,7 @@
 
 Now
 
-- Automation engineering at [Apple][4]
+- <s>Automation engineering</s> Frontend engineer at [Apple][4]
 
 Before
 
