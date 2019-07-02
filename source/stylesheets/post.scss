@@ -1,13 +1,20 @@
 @import 'vars';
 
 body main #content article {
-  h2 { font-size: 1.6rem; font-weight: 500; margin-bottom: 1rem; border-bottom: solid 2px #ECECEC; }
+  h2 { font-size: 1.4rem; font-weight: 600; margin-bottom: 0.4rem; }
   h3 { font-size: 1.35rem; font-weight: 500; margin-bottom: 0.2rem; }
   h4 { font-size: 1rem; font-weight: 700; margin-bottom: 0.3rem; }
 
   hr {
     border-top: 1px solid #ccc;
     margin-bottom: 20px;
+  }
+
+  aside {
+    border: solid 1px gold;
+    background: beige;
+    padding: 1rem;
+    margin: 0 2em;
   }
 
   pre, code {
