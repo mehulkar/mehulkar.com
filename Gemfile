@@ -7,7 +7,6 @@ gem 'redcarpet'
 gem 'middleman-syntax', '~> 3'
 
 gem 'pry'
-gem 'pry-doc', '>= 0.8'
 gem 'rake'
 gem 'font-awesome-middleman'
 gem 'front_matter_parser'
