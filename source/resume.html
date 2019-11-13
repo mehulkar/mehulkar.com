@@ -26,7 +26,14 @@
 
       header {
         border-bottom: solid 5px #0074D9;
-        padding-bottom: 0.5rem;
+      }
+
+      main > section {
+        border-radius: 5px;
+      }
+
+      main > section:nth-child(even) {
+        background-color: #f0f0f0;
       }
 
       h1, h2, h3 { margin: 0; }
@@ -45,6 +52,9 @@
       .mv1 { margin-bottom: 0.5rem; margin-top: 0.5rem; }
       .mb2 { margin-bottom: 1.5rem; }
       .mb3 { margin-bottom: 3rem; }
+      .ma1 { margin: 0.5rem; }
+      .pa1 { padding: 0.5rem; }
+      .pb1 { padding-bottom: 0.5rem; }
       .light { color: #aaa; }
       .tu { text-transform: uppercase; }
       .f6 { font-size: 0.8rem; }
@@ -54,7 +64,7 @@
     </style>
   </head>
   <body>
-    <header class='mb1'>
+    <header class='ma1 pb1'>
       <div class='flex flex-baseline'>
         <h1 class='flex-1'>Mehul Kar</h1>
         <a class='blue' href="mailto:mehul.kar@gmail.com">mehul.kar@gmail.com</a>
@@ -68,116 +78,124 @@
     </header>
 
     <main>
-      <h2 class='mb1'>Summary</h2>
-
-      <p>
-        I enjoy building things with web technologies. I've recently been focused on frontend
-        architecture, testing, and performance.
-      </p>
-
-      <h2 class='mb1'>Skills</h2>
-      <section class='mb1'>
-        <ul class='list flex flex-wrap'>
-          <li class='flex-third mb1'>Javascript/Ember.js</li>
-          <li class='flex-third mb1'>Testing</li>
-          <li class='flex-third mb1'>Ruby/Python/PHP</li>
-          <li class='flex-third mb1'>Agile/TDD</li>
-          <li class='flex-third mb1'>Git/Github</li>
-          <li class='flex-third mb1'>Postgres/MySQL</li>
-          <li class='flex-third mb1'>CLI/Linux</li>
-        </ul>
-      </section>
-
-      <h2 class='mb1'>Experience</h2>
-
-      <section class='mb2'>
-        <div class='flex flex-baseline bb1 b--black-50 mb1'>
-          <h3 class='flex-1'>Software Engineer at Apple</h3>
-          <span class='light tu f6'>November 2013 - <span class='fw5 blue'>Present</span></span>
-        </div>
-
-        <ul>
-          <li>Apple TV: <a href="//tv.apple.com">tv.apple.com</a>, TV.app</li>
-          <li>Apple Music: <a href="//beta.music.apple.com">beta.music.apple.com</a>, Music.app, iTunes.app</li>
-          <li>Continuous integration and dashboard software for the apps QA team</li>
-          <li>Workflow management software for the industrial design team</li>
-          <li>Issue tracker for a manufacturing operations team</li>
-          <li>Codec configuration software for the audio team</li>
-        </ul>
-      </section>
-
-      <section class='mb2'>
-        <div class='flex flex-baseline bb1 b--black-50 mb1'>
-          <h3 class='flex-1'>Web Developer at MochaLeaf, Inc</h3>
-          <span class='light tu f6'>April 2012 - November 2013</span>
-        </div>
-
-        <ul>
-          <li>Shipped products using Ember.js, Rails, and Django.</li>
-        </ul>
-      </section>
-
-      <section class='mb2'>
-        <div class='flex flex-baseline bb1 b--black-50 mb1'>
-          <h3 class='flex-1'>Founder at CollegeDesis</h3>
-          <span class='light tu f6'>April 2011 - August 2014</span>
-        </div>
+      <section class="mb1 pa1">
+        <h2 class='mb1 bb1 b--black-50'>Summary</h2>
 
         <p>
-          Worked on collaborative projects with South Asian student organizations
-          with the goal of building a national community.</p>
-        <ul>
-          <li>
-            Directory and map of ~1,000 South Asian student organizations
-            using Rails, Elasticsearch, and
-            <a href="https://codecanyon.net/user/romancode/portfolio?ref=Yatek">
-              MapSVG</a>.
-          </li>
-          <li>
-            Produced and sold <a href="https://itunes.apple.com/us/album/best-of-south-asian-a-cappella/id609757272">
-            Best of South Asian A Capella</a> album in a custom online
-            store using Stripe.
-          </li>
-          <li>Curated jukebox of South Asian DJs using Ember.js and the Soundcloud API.</li>
-        </ul>
-      </section>
-
-      <section class='mb2'>
-        <div class='flex flex-baseline bb1 b--black-50 mb1'>
-          <h3 class='flex-1'>CoFounder at FridgeWaves</h3>
-          <span class='light tu f6'>March 2010 - March 2012</span>
-        </div>
-
-        <p>Generated capital by renting appliances to international/exchange students to facilitate international
-        microloans through Kiva and Wokai. Sold the business in the summer of 2012.
+          I enjoy building things with web technologies. I've recently been focused on frontend
+          architecture, testing, and performance.
         </p>
       </section>
 
-      <h2 class='mb1'>Education</h2>
-
-      <section class='mb2'>
-        <div class='flex flex-baseline bb1 b--black-50 mb1'>
-          <h3 class='flex-1'>Student at University of Wisconsin-Whitewater</h3>
-          <span class='light tu f6'>September 2007 - May 2011</span>
-        </div>
-
-        <ul>
-          <li>BBA, Finance - Summa Cum Laude</li>
-          <li>Applied Investments Program</li>
-          <li>Dean's Advisory Council, College of Business and Economics</li>
-          <li>Segregate University Fee Allocation Committee</li>
-          <li>Collegiate Entrepreneur's Organization</li>
-        </ul>
+      <section class="mb1 pa1">
+        <h2 class='mb1 bb1 b--black-50'>Skills</h2>
+        <section class='mb1'>
+          <ul class='list flex flex-wrap'>
+            <li class='flex-third mb1'>Javascript/Ember.js</li>
+            <li class='flex-third mb1'>Testing</li>
+            <li class='flex-third mb1'>Ruby/Python/PHP</li>
+            <li class='flex-third mb1'>Agile/TDD</li>
+            <li class='flex-third mb1'>Git/Github</li>
+            <li class='flex-third mb1'>Postgres/MySQL</li>
+            <li class='flex-third mb1'>CLI/Linux</li>
+          </ul>
+        </section>
       </section>
 
-      <section class='mb2'>
-        <div class='flex flex-baseline bb1 b--black-50 mb1'>
-          <h3 class='flex-1'>Student at Dev Bootcamp</h3>
-          <span class='light tu f6'>February 2012</span>
-        </div>
-        <p>
-          8 week intensive programming bootcamp focusing on Ruby on Rails.
-        </p>
+      <section class="mb1 pa1">
+        <h2 class='mb1 bb1 b--black-50'>Experience</h2>
+
+        <section class='mb2'>
+          <div class='flex flex-baseline mb2'>
+            <h3 class='flex-1'>Software Engineer at Apple</h3>
+            <span class='light tu f6'>November 2013 - <span class='fw5 blue'>Present</span></span>
+          </div>
+
+          <ul>
+            <li>Apple TV: <a href="//tv.apple.com">tv.apple.com</a>, TV.app</li>
+            <li>Apple Music: <a href="//beta.music.apple.com">beta.music.apple.com</a>, Music.app, iTunes.app</li>
+            <li>Continuous integration and dashboard software for the apps QA team</li>
+            <li>Workflow management software for the industrial design team</li>
+            <li>Issue tracker for a manufacturing operations team</li>
+            <li>Codec configuration software for the audio team</li>
+          </ul>
+        </section>
+
+        <section class='mb2'>
+          <div class='flex flex-baseline mb2'>
+            <h3 class='flex-1'>Web Developer at MochaLeaf, Inc</h3>
+            <span class='light tu f6'>April 2012 - November 2013</span>
+          </div>
+
+          <ul>
+            <li>Shipped products using Ember.js, Rails, and Django.</li>
+          </ul>
+        </section>
+
+        <section class='mb2'>
+          <div class='flex flex-baseline mb2'>
+            <h3 class='flex-1'>Founder at CollegeDesis</h3>
+            <span class='light tu f6'>April 2011 - August 2014</span>
+          </div>
+
+          <p>
+            Worked on collaborative projects with South Asian student organizations
+            with the goal of building a national community.</p>
+          <ul>
+            <li>
+              Directory and map of ~1,000 South Asian student organizations
+              using Rails, Elasticsearch, and
+              <a href="https://codecanyon.net/user/romancode/portfolio?ref=Yatek">
+                MapSVG</a>.
+            </li>
+            <li>
+              Produced and sold <a href="https://itunes.apple.com/us/album/best-of-south-asian-a-cappella/id609757272">
+              Best of South Asian A Capella</a> album in a custom online
+              store using Stripe.
+            </li>
+            <li>Curated jukebox of South Asian DJs using Ember.js and the Soundcloud API.</li>
+          </ul>
+        </section>
+
+        <section class='mb2'>
+          <div class='flex flex-baseline mb2'>
+            <h3 class='flex-1'>CoFounder at FridgeWaves</h3>
+            <span class='light tu f6'>March 2010 - March 2012</span>
+          </div>
+
+          <p>Generated capital by renting appliances to international/exchange students to facilitate international
+          microloans through Kiva and Wokai. Sold the business in the summer of 2012.
+          </p>
+        </section>
+      </section>
+
+      <section class="mb1 pa1">
+        <h2 class='mb1 bb1 b--black-50'>Education</h2>
+
+        <section class='mb2'>
+          <div class='flex flex-baseline mb2'>
+            <h3 class='flex-1'>Student at University of Wisconsin-Whitewater</h3>
+            <span class='light tu f6'>September 2007 - May 2011</span>
+          </div>
+
+          <ul>
+            <li>BBA, Finance - Summa Cum Laude</li>
+            <li>Applied Investments Program</li>
+            <li>Dean's Advisory Council, College of Business and Economics</li>
+            <li>Segregate University Fee Allocation Committee</li>
+            <li>Collegiate Entrepreneur's Organization</li>
+          </ul>
+        </section>
+
+        <section class='mb2'>
+          <div class='flex flex-baseline mb2'>
+            <h3 class='flex-1'>Student at Dev Bootcamp</h3>
+            <span class='light tu f6'>February 2012</span>
+          </div>
+          <p>
+            8 week intensive programming bootcamp focusing on Ruby on Rails.
+          </p>
+        </section>
       </section>
     </main>
   </body>
