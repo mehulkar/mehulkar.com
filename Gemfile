@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 gem "middleman"
 gem 'redcarpet'
-gem 'middleman-syntax', '~> 3'
+gem 'middleman-syntax'
 gem "middleman-sprockets", "~> 4.0.0.rc"
 
 gem 'pry'
