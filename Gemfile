@@ -8,7 +8,6 @@ gem 'middleman-syntax', '~> 3'
 
 gem 'pry'
 gem 'rake'
-gem 'font-awesome-middleman'
 gem 'front_matter_parser'
 
 gem 'bundler', '~> 1'

@@ -34,8 +34,6 @@ GEM
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.11.2)
-    font-awesome-middleman (4.5.0)
-      middleman-core (~> 3.0)
     front_matter_parser (0.1.0)
     haml (5.1.2)
       temple (>= 0.8.0)
@@ -150,7 +148,6 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1)
-  font-awesome-middleman
   front_matter_parser
   middleman (~> 3.4.0)
   middleman-syntax (~> 3)
