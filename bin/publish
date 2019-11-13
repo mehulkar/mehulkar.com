@@ -1,28 +1,51 @@
 #!/usr/bin/env bash
 
-set -x # Log every command
+function log() {
+    GREEN='\033[0;32m'
+    NC='\033[0m'
+    echo -e "${GREEN}[$PWD] ----- $1 -----${NC}"
+}
 
 git checkout source
 GIT_REMOTE=$(git config --get remote.origin.url)
 CURRENT_REV=$(git rev-parse --short HEAD)
 
-mkdir -p build
-cd build
+TMP_GIT_DIR="tmp"
+log "Create $TMP_GIT_DIR directory and move into it"
+mkdir -p $TMP_GIT_DIR && cd $TMP_GIT_DIR
+log "Create new git repo in $TMP_GIT_DIR directory"
 git init
-git remote add new-origin $GIT_REMOTE
-git fetch new-origin && git reset new-origin/master
-cd ..
-
-bundle exec middleman build
-cd build
-git add -A
+log "configure name and email"
 git config --local user.email 'mehul.kar@gmail.com'
-git commit -m "Publishing site at $CURRENT_REV"
-git push new-origin HEAD:master -f
+git config --local user.name 'Mehul Kar'
+log "Add $GIT_REMOTE as 'origin' remote"
+git remote add origin $GIT_REMOTE
+log "Fetch latest from $GIT_REMOTE"
+git fetch origin
+log "Set new repo to latest origin/master"
+git reset --hard origin/master
 
 cd ..
 
-git checkout master
-git pull
+log "Build middleman static files"
+bundle exec middleman build
 
-git checkout source
+log "Moving new git repo into build dir"
+mv $TMP_GIT_DIR/.git build/
+rm $TMP_GIT_DIR
+
+cd build
+
+log "Add and commit all the files"
+git add -A
+git commit -m "Publishing site at $CURRENT_REV"
+
+log "push all the new things to origin/master"
+git push origin HEAD:master
+
+log "back to main folder and delete build directory"
+cd ..
+rm -rf build/
+
+log "fetch all the latest"
+git fetch --all
