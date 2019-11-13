@@ -12,8 +12,8 @@ activate :directory_indexes
 activate :syntax
 activate :sprockets
 
-page 'blog/**/*.html.md', layout: :post
 page 'blog/category/*', layout: :category
+page 'blog/*', layout: :post
 
 configure :build do
   set :relative_links,  true
