@@ -32,7 +32,7 @@ bundle exec middleman build
 
 log "Moving new git repo into build dir"
 mv $TMP_GIT_DIR/.git build/
-rm $TMP_GIT_DIR
+rm -rf $TMP_GIT_DIR
 
 cd build
 
