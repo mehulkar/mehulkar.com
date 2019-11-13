@@ -1,6 +1,6 @@
 ---
 title: "#EmberJS2019: Roadmap Response"
-categories: ember.js, frontend, programming
+categories: programming, frontend, ember.js
 ---
 
 This post is in response to [Ember 2019 Call for Blog Posts][1].
