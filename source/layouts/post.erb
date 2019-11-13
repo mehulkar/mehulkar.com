@@ -2,10 +2,10 @@
   <div class='post bb b--black-10'>
     <div class='bb b--black-10 mv3'>
       <h3 class='f5 fw2 mb1'><%= full_date(created_at) %></h2>
-      <h1 class='fw3 mb2 mt0'><%= current_page.metadata[:page]["title"]%></h1>
+      <h1 class='fw3 mb2 mt0'><%= current_page.metadata[:page][:title]%></h1>
       <%= partial('partials/categories',
           locals: {
-            current_categories: (current_page.metadata[:page]["categories"] || '').split(',').map(&:strip)
+            current_categories: (current_page.metadata[:page][:categories] || '').split(',').map(&:strip)
           }
         )%>
     </div>
