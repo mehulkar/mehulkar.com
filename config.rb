@@ -12,15 +12,8 @@ activate :directory_indexes
 activate :syntax
 activate :sprockets
 
-page 'blog/*',        layout: :post
-page 'blog/category/poetry.*',      layout: :category
-page 'blog/category/quotations.*',  layout: :category
-page 'blog/category/books.*',       layout: :category
-page 'blog/category/ninjatennis.*', layout: :category
-page 'blog/category/programming.*', layout: :category
-page 'blog/category/three-musics.*', layout: :category
-page 'blog/category/til.*',           layout: :category
-page 'blog/category/tech.*',           layout: :category
+page 'blog/**/*.html.md', layout: :post
+page 'blog/category/*', layout: :category
 
 configure :build do
   set :relative_links,  true
