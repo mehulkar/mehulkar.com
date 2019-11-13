@@ -11,8 +11,6 @@ gem 'pry'
 gem 'rake'
 gem 'front_matter_parser'
 
-gem 'bundler', '~> 1'
-
 group :development do
   gem 'rspec'
 end

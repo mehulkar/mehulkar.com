@@ -127,7 +127,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1)
   front_matter_parser
   middleman
   middleman-sprockets (~> 4.0.0.rc)
