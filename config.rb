@@ -5,7 +5,6 @@ require 'pry'
 set :css_dir,         'stylesheets'
 set :js_dir,          'javascripts'
 set :images_dir,      'images'
-set :relative_links,  true
 set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, smartypants: true, underline: true
 
@@ -24,6 +23,7 @@ page 'blog/category/til.*',           layout: :category
 page 'blog/category/tech.*',           layout: :category
 
 configure :build do
+  set :relative_links,  true
   activate :minify_css
   activate :minify_javascript   # Minify Javascript on build
   activate :asset_hash          # Enable cache buster
