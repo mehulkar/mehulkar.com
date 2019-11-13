@@ -10,8 +10,8 @@ set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, smartypants: true, underline: true
 
 activate :directory_indexes
-
 activate :syntax
+activate :sprockets
 
 page 'blog/*',        layout: :post
 page 'blog/category/poetry.*',      layout: :category
