@@ -1,5 +1,5 @@
 ---
-title: "Ember Octane: Default arguments"
+title: "Ember Octane: Default Values"
 date: 2019-12-06
 categories: programming, frontend, ember.js
 ---
@@ -151,6 +151,42 @@ There are 3 workarounds that I know of:
     This also works, but the `@classic` decorator requires installing the `ember-classic-decorator`
     and I ran into [a bug that I couldn't workaround](https://github.com/emberjs/ember-classic-decorator/issues/31).
 
+## Classic Components Computed Properties
+
+A classic component that implements a default value as a computed property can be overriden
+at invocation, but it logs a deprecation warning:
+
+```js
+import Component from '@ember/component';
+import { computed } from '@ember/object';
+
+export default Component.extends({
+    foo: computed(function() {
+        return 'default argument';
+    })
+})
+```
+
+```hbs
+<MyComponent @foo="override" />
+```
+
+The deprecation recommends implementing the computed property in the get/set syntax, but I am
+not sure why that is. (If you know please let me know and I'll update this!)
+
+```js
+import Component from '@ember/component';
+import { computed } from '@ember/object';
+
+export default Component.extends({
+    foo: computed({
+        get() {
+            return 'default argument';
+        }
+    }
+})
+```
+
 ## Glimmer Components
 
 Glimmer Compnents have the same basic problems as Classic components with native classes,
@@ -197,3 +233,16 @@ to do something like this:
 
 Other approaches for an "official" API are being discussed in Discord, but there is no conclusive
 solution yet.
+
+## Conclusion
+
+These are the places I reference when I get confused:
+
+- The Octane cheatsheet: https://ember-learn.github.io/ember-octane-vs-classic-cheat-sheet/
+- A page in the ember-decorators addon docs: https://ember-decorators.github.io/ember-decorators/docs/native-class-basics
+- Native classes primer im the Octane preview guides: https://octane-guides-preview.emberjs.com/release/working-with-javascript/native-classes/
+
+This is a pretty basic thing that has caused me a lot of confusion as I move my app towards Octane
+paradigms. I think the future is bright but the path to upgrade is also long and covered in peril.
+This post probably does not cover all the possible variations of default values in component instances.
+If you think of more let me know and I'll add them here!
