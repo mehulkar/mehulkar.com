@@ -32,10 +32,10 @@ This also "just works" because `init` assigns properties after the component
 instance has been created, and has access to the arguments passed at invocation time.
 
 Note that the example code below is contrived because I'm sticking to simple strings as values, but
-it is a very valid use case for assigning arrays and objects as defaults. Assigning
-an array/object to the prototype as in the *first* example can lead to bugs because, as mentioned
-above, the array/object would be assigned to the object's prototype and shared across all instances
-of the component.
+it is a valid technique for assigning arrays and objects as defaults. Assigning
+an array/object to the prototype (as in the *first* example) can lead to bugs because, as mentioned
+above, the array/object would be assigned to the object's prototype and shared by reference
+across all instances of the component.
 
 ```js
 import Component from '@ember/component';
