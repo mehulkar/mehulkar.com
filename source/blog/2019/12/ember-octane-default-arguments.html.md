@@ -69,7 +69,7 @@ export default class MyComponent extends Component {
 This also "just works" because the the native "class field" is assigned *per* instance of
 the class, and passing in an override at invocation will override the value.
 
-### Classic Component with Native Class and `contructor`
+## Classic Component with Native Class and `contructor`
 
 ```js
 import Component from '@ember/component';
