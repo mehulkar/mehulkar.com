@@ -17,7 +17,7 @@ into the component at invocation override those properties. For example:
 ```js
 import Component from '@ember/component';
 
-export default Componente.extend({
+export default Component.extend({
     foo: 'default foo'
 });
 ```
@@ -40,7 +40,7 @@ of the component.
 ```js
 import Component from '@ember/component';
 
-export default Componente.extend({
+export default Component.extend({
     init() {
         this._super(...arguments);
         this.foo = this.foo || 'default foo';
