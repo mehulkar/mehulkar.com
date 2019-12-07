@@ -238,9 +238,9 @@ solution yet.
 
 These are the places I reference when I get confused:
 
-- The Octane cheatsheet: https://ember-learn.github.io/ember-octane-vs-classic-cheat-sheet/
-- A page in the ember-decorators addon docs: https://ember-decorators.github.io/ember-decorators/docs/native-class-basics
-- Native classes primer im the Octane preview guides: https://octane-guides-preview.emberjs.com/release/working-with-javascript/native-classes/
+- The Octane cheatsheet: [https://ember-learn.github.io/ember-octane-vs-classic-cheat-sheet/](https://ember-learn.github.io/ember-octane-vs-classic-cheat-sheet/)
+- A page in the ember-decorators addon docs: [https://ember-decorators.github.io/ember-decorators/docs/native-class-basics](https://ember-decorators.github.io/ember-decorators/docs/native-class-basics)
+- Native classes primer im the Octane preview guides: [https://octane-guides-preview.emberjs.com/release/working-with-javascript/native-classes/](https://octane-guides-preview.emberjs.com/release/working-with-javascript/native-classes/)
 
 This is a pretty basic thing that has caused me a lot of confusion as I move my app towards Octane
 paradigms. I think the future is bright but the path to upgrade is also long and covered in peril.
