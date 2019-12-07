@@ -19,7 +19,7 @@ class NewPost
     dir = File.join('source', 'blog', year, month)
     FileUtils.mkdir_p(dir)
 
-    @file_path = File.join(dir, "#{parameterized_title}.md")
+    @file_path = File.join(dir, "#{parameterized_title}.html.md")
 
     file = File.open(@file_path, 'w+') do |f|
       f.write("---\n")
