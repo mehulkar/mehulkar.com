@@ -79,7 +79,7 @@ I have to go pee now.
 
 ---
 
-#### Footnotes
+### Footnotes
 
 1. I'm not 100% positive that I remember his name correctly.
 2. In my school (and probably all other schools) in India,

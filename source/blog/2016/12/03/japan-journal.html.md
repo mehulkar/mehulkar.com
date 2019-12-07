@@ -4,11 +4,11 @@ date: 2016-12-03
 categories: travel
 ---
 
-### Preamble
+## Preamble
 
 Most of the below is transcribed from a physical journal I wrote in during the trip. I've made a few edits (visible and invisible), but for the most part the text is word-for-word written as before. The tenses are confusing because I was sometimes writing surrounded by the things I was describing and sometimes after-the-fact. The last section on Odaiba was written after coming back to the US based on memory, so it's a shorter and less descriptive.
 
-### 11.29.2016 morning
+## 11.29.2016 morning
 
 The airport was a relief. After a disappointing Shanghai, Haneda was a breath of fresh air. The lights were on, for one. Staff was visible and the actual processing of immigration and customs was quick. They even showed a video on the plane to tell us what to expect after landing. There was a bit of a line at the wifi rental counter which actually turned out to be a general mail send/receive counter, so many people were shipping luggage--presumably to their home outside Tokyo? This might be a side-effect of smaller cars?
 
@@ -22,9 +22,9 @@ I'm sitting in Shibuya, close to the metro station at a hip coffee shop, which i
 
 Being here makes me wish I could read a few characters in Japanese. Every building that looks like a restaurant has signs outside, but no windows to confirm the existence of edibles for pay. I'm too nervous to walk in and discover for myself. It's also not clear at a glance if VISA is accepted. Speaking of credit cards, Apple Pay exists! Sadly, the only place I tried it so far did not have VISA as an acceptable provider. I'm not sure if this will be a city-wide truth yet.
 
-### 11.29.2016 afternoon
+## 11.29.2016 afternoon
 
-#### Shibuya
+### Shibuya
 
 Shibuya has been uninteresting for the most part. It's like a combination of Manhattan (with fewer subway entrances), and SF's China Town district. Shibuya Crossing was empty when I get there. I thought I was in the wrong place [edit: I *was* in the wrong place, oops]. I see lots of Udon noodle shops in small alleys and bars. Many of the doors are tiny in height and width (which is strange because the people are the same height as me on average). I walked into two sushi shops. One was commercialized, fast-food style. Each seat had a touch screen (not an iPad, but touch responsiveness wasn't terrible as I had expected!) and conveyor belts with plates of sushi that would arrive after ordering through the screen. Both sushi shops had green tea powder at each spot with a tap for hot water. Seating was at rows of bars instead of tables, like slot machines in a casino.
 
@@ -44,7 +44,7 @@ First, at Vanilla Mood, a local dive bar / cafe, I bonded with two locals and th
 
 Next, I traveled to Nakano, which ahd its own complications, incidentally--running out of cash and phone battery life will do that.
 
-#### Nakano
+### Nakano
 
 Nakaon seems authentic and suburban. Very different from Shibuya and Shinjuku and Roppongi. It feels more authentic. No billboards or flashing lights, but lots of narrow streets<sup>1</sup>.
 
@@ -58,7 +58,7 @@ A few Facebook friendships later and mental bookmarks of people to look up when 
 
 <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:40.5092592593% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BNZibkljeUs/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Dutch dinner party with Spaniards and Mexicans in Tokyo. What?</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by Mehul Kar (@mehulkar) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-11-29T15:26:15+00:00">Nov 29, 2016 at 7:26am PST</time></p></div></blockquote><script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
 
-#### Tsukiji
+### Tsukiji
 
 The Tsukiji fish market is about 3x3 blocks of alleyways with makeshift stalls selling fish, other seafood, and varios other things to eat or to take home. It's like any other farmer's market, except bigger and more Japanese.
 
@@ -68,9 +68,9 @@ This felt like a more makeshift version of Lajpat Nagar in Delhi. Some vendors b
 
 I'm checked out of my AirBnb now and have carried my luggage to Shinjuku to Green Plaza--a capsule hotel plus sauna/bathhouse. There's a cafe across the street, where I am writing this and another regular, modern hotel nearby. Staying in an infamous capsule hotel will be another adventure tonight.
 
-### 12.01.2016
+## 12.01.2016
 
-#### Green Palace Shinjuku
+### Green Palace Shinjuku
 
 The capsule hotel experience was definitely interesting, for want of a better word. Note that this was an all male hotel--most capsule hotels are, apparently. Co-ed hotels exist, but even those have entirely separate floors for men and women.
 
@@ -88,7 +88,7 @@ It was 2:30 AM by the time I finished my bath and got back to my capsule, but th
 
 It's not close to noon and I've checked out: changed back into street clothes, exchanged my locker room key for my shoes, and retrieved my duffel bag.
 
-#### Odaiba Ooedo-Onsen-Monogatari
+### Odaiba Ooedo-Onsen-Monogatari
 
 My last adventure was to travel to Odaiba, an amusement park and hot spring baths destination on the outskirts of Tokyo. The experience was much like the Green Palace: shoe locker room, check in, a yukata<sup>2</sup> selection, a bigger changing/locker room, a common area with restaurants, and then finally the bath houses with their own locker rooms to strip down in. I sat in each of the hot baths, the cold bath, and the sauna for a few minutes each, amongst tens of Japanese boys and old men. None of them paid me any attention, which was a welcome relief against my nakedness.
 
