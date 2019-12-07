@@ -151,7 +151,7 @@ There are 3 workarounds that I know of:
     This also works, but the `@classic` decorator requires installing the `ember-classic-decorator`
     and I ran into [a bug that I couldn't workaround](https://github.com/emberjs/ember-classic-decorator/issues/31).
 
-# Glimmer Components
+## Glimmer Components
 
 Glimmer Compnents have the same basic problems as Classic components with native classes,
 except that there is *actually* no `init` hook to use as a workaround. However, Glimmer components
@@ -178,7 +178,7 @@ can be defined and used.
 This is indeed the best approach, but because migrating existing components to Glimmer Components
 require other changes as well, it isn't always immediately possible to do this.
 
-# Template Only Components
+## Template Only Components
 
 All of the examples above assume that the template for `MyComponent` uses `this.foo`. However,
 components that do not have a backing JS class do not have any of these problems. There is no
