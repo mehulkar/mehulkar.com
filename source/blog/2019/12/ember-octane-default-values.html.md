@@ -66,7 +66,7 @@ export default class MyComponent extends Component {
 <MyComponent @foo="override" />
 ```
 
-This also "just works" because the the native "class field" is assigned *per* instance of
+This also "just works" because the [native class field][1] is assigned *per* instance of
 the class, and passing in an override at invocation will override the value.
 
 ## Classic Component with Native Class and `contructor`
@@ -189,9 +189,33 @@ export default Component.extends({
 
 ## Glimmer Components
 
-Glimmer Compnents have the same basic problems as Classic components with native classes,
-except that there is *actually* no `init` hook to use as a workaround. However, Glimmer components
-can use the getter workaround described above in a cleaner way:
+Glimmer Compnents have a bit of magic sauce that mitigates the problems of Classic componnts
+as native classes: `this.args`. The `args` API allows Glimmer components to access component
+properties in the constructor and assign defaults easily:
+
+```js
+import Component from '@ember/component';
+
+export default class MyComponent extends Component {
+    constructor() {
+        super(...arguments); // super must be called first.
+        return this.args.foo || 'default argument';
+    }
+}
+```
+
+```hbs
+<MyComponent @foo="override" /> <!-- override works -->
+<MyComponent /> <!-- will fall back to default -->
+<MyComponent @foo={{undefined}} /> <!-- alls falls back to default -->
+```
+
+This is the Happy Path&trade;, but because migrating existing components to Glimmer Components
+require other changes as well, it isn't always immediately possible to immediately use this.
+
+Note: I haven't made a point of this in the other examples, but assigning deafult values in
+the `constructor` (or `init`) means that the default value will not get applied if arguments
+change. If that's needed, use a getter instead (which can also use the `this.args` API).
 
 ```js
 import Component from '@ember/component';
@@ -202,17 +226,6 @@ export default class MyComponent extends Component {
     }
 }
 ```
-
-```hbs
-<MyComponent @foo="override" />
-```
-
-The salient thing in this example is the `this.args` API. This API cleanly separates arguments
-passed to components at invocation with the properties on the component instance, so a getter
-can be defined and used.
-
-This is indeed the best approach, but because migrating existing components to Glimmer Components
-require other changes as well, it isn't always immediately possible to do this.
 
 ## Template Only Components
 
@@ -246,3 +259,5 @@ This is a pretty basic thing that has caused me a lot of confusion as I move my 
 paradigms. I think the future is bright but the path to upgrade is also long and covered in peril.
 This post probably does not cover all the possible variations of default values in component instances.
 If you think of more let me know and I'll add them here!
+
+[1]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Class_fields
