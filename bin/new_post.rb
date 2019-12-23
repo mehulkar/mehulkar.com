@@ -9,7 +9,7 @@ puts "Creating new post"
 post = NewPost.new(title).tap(&:create)
 
 puts "Checking out new branch"
-`git checkout -b blog-#{post.parameterized_title}`
+`git checkout -b post/#{post.parameterized_title}`
 
 puts "Opening #{post.file_path}"
 `code . -g #{post.file_path}`
