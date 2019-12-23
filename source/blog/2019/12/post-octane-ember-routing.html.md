@@ -8,7 +8,7 @@ categories: programming, frontend, ember.js
 interoperability with native JS features like classes and decorators, and an
 inversion of the reactivity model that was so ingrained in my mind that it's almost weird to forget.
 Most of these features are fairly standard among other frameworks these days, so it remains to be
-seen how it will affect public reception, but existing Ember applications certainly have a lot to
+seen how it will affect public perception, but existing Ember applications certainly have a lot to
 look forward to. It’s pretty remarkable that a framework this old has managed to completely renew
 itself over the course of 3 major versions while remaining mostly backwards-compatible. There are
 tradeoffs to this idealogy, but I'm glad that I have no compelling reason to rewrite existing apps
