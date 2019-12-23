@@ -119,4 +119,6 @@ it much easier to form a mental modal of how the system works and make it easier
 that system when the quirks surface. The ideas presented here could take several RFCs and may involve
 other discussions, but I think they will be massively beneficial for reasons other routing as well.
 
+Now that Octane is out, I am looking forward to exploring other parts of Ember that make it a successful developer experience.
+
 [1]: https://blog.emberjs.com/2019/12/20/octane-is-here.html
