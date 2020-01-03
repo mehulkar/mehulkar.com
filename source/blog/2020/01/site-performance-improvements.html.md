@@ -79,7 +79,7 @@ Here are a set of things I played around with:
     This setup resulted in four CSS requests. One for the compiled `all.css`, which would
     then load `normalize.css` and `tachyons.css`, and then another one for the compiled `syntax.css`.
 
-    Thinking about it a little bit, I reduced these two 2 requests:
+    Thinking about it a little bit, I reduced these two requests:
 
     ```erb
     <%= stylesheet_link_tag "vendor", "app" %>
@@ -99,10 +99,10 @@ Here are a set of things I played around with:
     @import 'post';
     ```
 
-    I could have reduced farther to only one stylesheet, but I've heard that having a separate
-    resource for vendor dependencies that don't change very often is good becuase when your app
-    stylesheet changes (and busts the CDN cache with a new hashed filename), it doesn't force
-    the user to redownload the vendor stylesheet.
+    I could have reduced farther to a single stylesheet, but I read somewhere once that because
+    vendor dependencies don't change that much, and because static assets in production are usually
+    hashed filenames for caching / cache busting, it's good to keep vendor assets hashed independently
+    so users can take advantage of thier local caches.
 
 1. Google Fonts stylesheets
 
