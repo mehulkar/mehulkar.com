@@ -2,6 +2,14 @@
   --base-color: #39f;
   --link-hover-color: #0055b3;
   --paragraph-mb: 1.5rem;
+  --text-color: #333;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+      --text-color: #eee;
+  }
 }
 
 @import 'post';
@@ -25,7 +33,7 @@ img { max-width: 100%; }
 
 body {
   font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #333;
+  color: var(--text-color);
   main {
     min-height: 100%;
     margin-bottom: -80px;
