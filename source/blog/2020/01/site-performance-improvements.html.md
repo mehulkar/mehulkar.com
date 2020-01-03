@@ -29,10 +29,12 @@ Here are a set of things I played around with:
 
 1. Replace Font Awesome with custom SVG
 
-    I used to default to loading Font Awesome for icons, but I was only actually using 2 icons on the site:
-    the Twitter logo and a "envelope" icon for an email link. I downloaded the SVG icon from [Twitter Brand Resources][2]
-    and used Sketch to create a simple envelope icon. Both of these icons looks a little worse, but I don't really care. The SVG from twitter brand
-    resources also adds a background to the icon, which I could probably edit out from the SVG, but I didn't care too much about that either.
+    I used to default to installing Font Awesome for icons, so it's on this site too, but I noticed
+    that I was was only using two icons here: the Twitter logo and an "envelope" icon for an email link.
+    I downloaded the SVG icon from [Twitter Brand Resources][2] and used Sketch to create a simple envelope icon.
+    Both of these icons looks a little worse, but I don't really care and it would be easy to improve them
+    in a future iteration. The SVG from twitter brand resources also adds a background to the icon, which I could
+    probably edit out from the SVG, but I didn't care too much about that either.
 1. Resource Hints to Google Fonts and Gravatar
 
     Added `preconnect` Resource hints for Google Fonts and Gravatar. I'm not yet sure if this actually
