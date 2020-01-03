@@ -19,7 +19,7 @@ configure :build do
   set :relative_links,  true
   activate :minify_css
   activate :minify_javascript   # Minify Javascript on build
-  activate :asset_hash          # Enable cache buster
+  activate :asset_hash, ignore: [%r(images/icon*)] # Enable cache buster
   activate :relative_assets
 end
 
