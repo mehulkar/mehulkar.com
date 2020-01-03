@@ -24,6 +24,7 @@
 
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Mehul Kar" %></title>
+    <meta name="Description" content="<%= "Blog post: #{current_page.data.title}" || "Mehul Kar's home page" %>">
     <%= stylesheet_link_tag(
       "vendor",
       "app",
