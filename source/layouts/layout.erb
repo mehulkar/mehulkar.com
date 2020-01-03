@@ -2,6 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://gravatar.com" crossorigin>
+    <link rel="preconnect" href="https://www.googlesitemanager.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-19201650-1"></script>
@@ -16,11 +21,6 @@
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1" name=viewport>
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://gravatar.com" crossorigin>
-    <link rel="preconnect" href="https://www.googlesitemanager.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
 
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Mehul Kar" %></title>
@@ -31,7 +31,7 @@
       "https://fonts.googleapis.com/css?family=Indie+Flower|Libre+Baskerville&display=swap"
     )%>
     <script>
-      document.addEventListener('DOMContentLoaded',function() {
+      document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('year').innerHTML = (new Date).getFullYear();
       });
     </script>
