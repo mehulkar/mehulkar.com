@@ -7,6 +7,8 @@ categories: product
 I missed doing this for the past couple years, but starting again.
 Here are the [2016](/blog/2016-home-screen) and [2017](/blog/2017-home-screen) posts.
 
+Note: these screenshots were originally inspired by M.G Siegler, so [check out his home screen also][8].
+
 ## 2020
 
 ![2020 home screen](/images/2020-home-screen.png)
@@ -33,3 +35,4 @@ There's not much else that's too interesting here. I'm wondering how much longer
 [5]: https://apps.apple.com/us/app/transit-bus-subway-times/id498151501
 [6]: https://apps.apple.com/us/app/fitbod-weight-lifting-workout/id1041517543
 [7]: https://twitter.com/mehulkar/status/1195069658329571329
+[8]: https://500ish.com/looking-back-on-my-2019-homescreen-f0c9cde7dc6
