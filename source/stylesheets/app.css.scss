@@ -1,6 +1,8 @@
-$base-color: #39f;
-$link-hover-color: #0055b3;
-$paragraph-mb: 1.5rem;
+:root {
+  --base-color: #39f;
+  --link-hover-color: #0055b3;
+  --paragraph-mb: 1.5rem;
+}
 
 @import 'flex';
 @import 'post';
@@ -13,10 +15,10 @@ $paragraph-mb: 1.5rem;
 }
 
 a {
-  color: $base-color;
+  color: var(--base-color);
   text-decoration: none;
   &:hover, &:focus {
-    color: $link-hover-color;
+    color: var(--link-hover-color);
   }
 }
 
@@ -37,7 +39,7 @@ body {
 }
 
 body main #content {
-  p { margin-bottom: $paragraph-mb; }
+  p { margin-bottom: var(--paragraph-mb); }
 
   nav {
     margin-left: 0
@@ -61,7 +63,7 @@ header {
   padding: 1em;
   padding-bottom: 0.3em;
   width: 100%;
-  background-color: $base-color;
+  background-color: var(--base-color);
   text-align: center;
 
   li {
