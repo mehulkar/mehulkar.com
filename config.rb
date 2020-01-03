@@ -21,6 +21,8 @@ configure :build do
   activate :minify_javascript   # Minify Javascript on build
   activate :asset_hash, ignore: [%r(images/icon*)] # Enable cache buster
   activate :relative_assets
+
+  config[:analytics] = true
 end
 
 helpers do

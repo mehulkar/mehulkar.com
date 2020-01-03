@@ -2,21 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://gravatar.com" crossorigin>
-    <link rel="preconnect" href="https://www.googlesitemanager.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-19201650-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    <% if config[:analytics] %>
+      <link rel="preconnect" href="https://www.googlesitemanager.com" crossorigin>
+      <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
 
-      gtag('config', 'UA-19201650-1');
-    </script>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-19201650-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-19201650-1');
+      </script>
+    <% end %>
 
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
