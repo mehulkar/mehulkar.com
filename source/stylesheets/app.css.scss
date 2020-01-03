@@ -3,11 +3,13 @@
   --link-hover-color: #0055b3;
   --paragraph-mb: 1.5rem;
   --text-color: #333;
+  --background-color: #fff;
   color-scheme: light dark;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
+      --background-color: #222;
       --text-color: #eee;
   }
 }
@@ -34,6 +36,7 @@ img { max-width: 100%; }
 body {
   font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: var(--text-color);
+  background-color: var(--background-color);
   main {
     min-height: 100%;
     margin-bottom: -80px;
