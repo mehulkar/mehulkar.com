@@ -98,15 +98,6 @@ header {
   &.bar4 { animation-delay: 1.0s; animation-duration: 0.5s; }
 }
 
-.resume-section-wrapper {
-  justify-content: space-between;
-  .resume-section {
-    width: calc(50% - 20px);
-    padding: 0;
-    margin-bottom: 1rem;
-  }
-}
-
 a.pill {
   background-color: #818181;
   color: white;
@@ -140,10 +131,6 @@ a.pill {
 
 .date {
   min-width: 45px;
-}
-
-@media only screen and (max-width: 703px) {
-  .resume-section-wrapper .resume-section { width: 100%; }
 }
 
 @media only screen and (max-width: 600px) {
