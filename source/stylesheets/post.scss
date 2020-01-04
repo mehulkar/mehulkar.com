@@ -20,22 +20,22 @@ body main #content article {
     font-size: 0.9em;
   }
 
-  p, li {
+  pre, p, li {
     code {
-      border-radius: 5px;
-      background: #f1f1f1;
       color: var(--code-text-color);
-      padding: 3px 4px;
+      border-radius: 5px;
     }
   }
 
-  li > ul {
-    margin-top: 1rem;
+  p, li {
+    code {
+      background: #f8f8f8; // same as what rouge .highlight class does.
+      padding: 3px 5px;
+    }
   }
 
   pre {
     code {
-      border: none;
       display: block;
       padding: 1rem;
       overflow-x: scroll;
@@ -47,6 +47,10 @@ body main #content article {
       color: #FFF;
       code { background-color: #333; }
     }
+  }
+
+  li > ul {
+    margin-top: 1rem;
   }
 
   ol, ul, p, pre {
