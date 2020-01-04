@@ -5,7 +5,7 @@ categories: product
 ---
 
 I missed doing this for the past couple years, but starting again.
-Here are the [2016](/blog/2016-home-screen) and [2017](/blog/2017-home-screen) posts.
+Here are the [2016](/blog/2016-home-screen) and [2017](/blog/2017/01/2017-home-screen/) posts.
 
 Note: these screenshots were originally inspired by M.G Siegler, so [check out his home screen also][8].
 
