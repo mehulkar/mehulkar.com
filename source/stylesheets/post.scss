@@ -24,6 +24,7 @@ body main #content article {
     code {
       border-radius: 5px;
       background: #f1f1f1;
+      color: var(--code-text-color);
       padding: 3px 4px;
     }
   }
