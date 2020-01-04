@@ -1,5 +1,5 @@
 body main #content article {
-  h2 { font-size: 1.4rem; font-weight: 600; margin-bottom: 0.4rem; }
+  h2 { font-size: 1.4rem; font-weight: 600; margin-bottom: 0.5rem; }
   h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.3rem; }
   h4 { font-size: 1rem; font-weight: 500; margin-bottom: 0.3rem; }
 
@@ -10,9 +10,11 @@ body main #content article {
 
   aside {
     border: solid 1px gold;
-    background: beige;
+    border-radius: 0.25rem;
+    background: #ffa;
+    color: var(--code-text-color);
     padding: 1rem;
-    margin: 0 2em;
+    margin: 0 2em var(--paragraph-mb);
   }
 
   pre, code {

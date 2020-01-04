@@ -78,9 +78,8 @@ however, requires a comparison to the `ENDING_STOP` at every stop.
 <p>You can try out both of these methods by copying the code into a JS console
 and then dispatching events like this:</p>
 
-```js
-window.dispatchEvent(new CustomEvent('stop'));
-```
+<pre class="highlight javascript"><code>window.dispatchEvent(new CustomEvent('stop'));</code></pre>
+
 </aside>
 
 ## Tradeoffs and Insights
