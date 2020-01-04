@@ -38,6 +38,7 @@ body main #content article {
       border: none;
       display: block;
       padding: 1rem;
+      overflow-x: scroll;
     }
 
     &.terminal {
