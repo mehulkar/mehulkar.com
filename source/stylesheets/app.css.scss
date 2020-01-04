@@ -10,6 +10,7 @@
   --pill-background-color-inactive: #eee;
   --pill-text-color-inactive: #999;
   --code-text-color: #333;
+  --header-border-color: #36f;
   color-scheme: light dark;
 }
 
@@ -23,6 +24,7 @@
       --pill-background-color-inactive: #eee;
       --pill-text-color-inactive: #777;
       --code-text-color: #333;
+      --header-border-color: #eee;
   }
 }
 
@@ -84,8 +86,9 @@ header {
   padding-bottom: 0;
   background-color: var(--base-color);
   text-align: center;
-  border-bottom: solid 2px #eee;
-  border-top: solid 2px #eee;
+  border-bottom: solid 2px;
+  border-top: solid 2px;
+  border-color: var(--header-border-color);
 }
 
 .header-content--avatar {
