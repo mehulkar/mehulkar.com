@@ -30,7 +30,7 @@ Here are a set of things I played around with:
 1. Replace Font Awesome with custom SVG
 
     I used to default to installing Font Awesome for icons, so it's on this site too, but I noticed
-    that I was was only using two icons here: the Twitter logo and an "envelope" icon for an email link.
+    that I was only using two icons here: the Twitter logo and an "envelope" icon for an email link.
     I downloaded the SVG icon from [Twitter Brand Resources][2] and used Sketch to create a simple envelope icon.
     Both of these icons looks a little worse, but I don't really care and it would be easy to improve them
     in a future iteration. The SVG from twitter brand resources also adds a background to the icon, which I could
@@ -99,8 +99,8 @@ Here are a set of things I played around with:
     @import 'post';
     ```
 
-    I could have reduced farther to a single stylesheet, but I read somewhere once that because
-    vendor dependencies don't change that much, and because static assets in production are usually
+    I could have reduced farther to a single stylesheet, but I read somewhere that because
+    vendor dependencies don't change that much, and because static assets in production are
     hashed filenames for caching / cache busting, it's good to keep vendor assets hashed independently
     so users can take advantage of thier local caches.
 
@@ -122,11 +122,9 @@ Here are a set of things I played around with:
 
 1. Download smaller profile image
 
-    Another optimization that was fairly trivial was that I was download a 300px avatar image from Gravatar
-    but displaying it in a 40px space. I considered using `srcset` to optimize this for different
-    screen reoslutions, but instead simply replaced the image with an 80px image. The 300px image was 30kb,
-    and the 80px image is 4kb. A 40kb image would have been ~2kb, and the extra 2kb saving did not seem
-    worth the hassle for non-retina screens.
+    Another trivial optimization was to replace the 300px Gravatar image to a more appropriate 80px size.
+    I considered using `srcset` to optimize this for different screen reoslutions, but simply
+    decided the extra 2kb saving wasn't worth it.
 
 1. Inlined scripts
 
