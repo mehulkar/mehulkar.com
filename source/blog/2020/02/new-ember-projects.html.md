@@ -48,14 +48,8 @@ my usage:
             }
         },
         "lint-staged": {
-            "*.js": [
-                "eslint —fix",
-                "git add"
-            ],
-            "*.hbs": [
-                "ember-template-lint",
-                "git add"
-            ]
+            "*.js": ["eslint —fix"],
+            "*.hbs": ["ember-template-lint"]
         }
     }
     ```
