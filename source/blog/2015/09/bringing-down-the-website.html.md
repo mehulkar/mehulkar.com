@@ -4,7 +4,7 @@ date: 2015-09-25
 categories: three-musics
 ---
 
-<img src="http://gallery.tinyletterapp.com/2b9ddbe5bcd443ed550266ef508a378df7927a70/images/01f11a45-861b-4b71-bfc5-818cc03ca6ac.png">
+<img src="https://gallery.tinyletterapp.com/2b9ddbe5bcd443ed550266ef508a378df7927a70/images/01f11a45-861b-4b71-bfc5-818cc03ca6ac.png">
 <ol>
 	<li style="margin-bottom:10px">
 <span style="color: rgb(85, 85, 85); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; line-height: 24px;">The Bakshi Brother's website is down. I'm guessing it's because of their brilliant </span><a href="https://www.youtube.com/watch?v=0lKkGnqNRIM">Khalis Makhan</a> on Coke Studio. I have trouble believing that I bamboo flute can sound the way it does in this track.</li>

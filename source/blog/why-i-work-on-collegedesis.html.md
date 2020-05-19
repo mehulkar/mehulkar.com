@@ -26,7 +26,7 @@ cultural and religious education, political affluence, and international collabo
 
 According to [estimates](http://db.tt/opyTQuW9) from the US Census Bureau, more than 126,000 students of South Asian descent were enrolled in colleges and universities in 2011.
 
-[![image](http://i.imgur.com/r0Qwx4N.png)](http://i.imgur.com/r0Qwx4N.png)
+[![image](https://i.imgur.com/r0Qwx4N.png)](https://i.imgur.com/r0Qwx4N.png)
 
 These 126,000 are more diverse than they are the same, and I realize that the color of their skin is not
 enough to bind them. We are a complex combination of people with a complex set of backgrounds and interests and it would be foolish to assume we share a uni-layered affinity.
