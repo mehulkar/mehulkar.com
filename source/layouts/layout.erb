@@ -8,18 +8,6 @@
 
     <% if config[:analytics] %>
       <script async defer data-domain="mehulkar.com" src="https://plausible.io/js/plausible.js"></script>
-
-      <link rel="preconnect" href="https://www.googlesitemanager.com" crossorigin>
-      <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
-
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-19201650-1"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-19201650-1');
-      </script>
     <% end %>
 
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
