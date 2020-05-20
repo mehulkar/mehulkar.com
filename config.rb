@@ -37,6 +37,12 @@ helpers do
   def tech_path;        '/blog/category/tech'          end
   def frontend_path;        '/blog/category/frontend'  end
 
+  def twitter_share(page)
+    text = URI.encode(current_page.metadata[:page][:title])
+    url = URI.encode("https://mehulkar.com/#{current_resource.path}")
+    "https://twitter.com/intent/tweet/?url=#{url}&text=hihi"
+  end
+
   def path_for(category)
     route_path = Category.new(category).route_path
     self.send(route_path)
