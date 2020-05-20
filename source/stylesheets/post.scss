@@ -51,8 +51,8 @@ body main #content article {
     }
   }
 
-  li > ul {
-    margin-top: 1rem;
+  li > ul, li > ol {
+    margin-top: 0.5rem;
   }
 
   ol, ul, p, pre {
