@@ -87,7 +87,7 @@ But I'm finally coming around to appreciating merge commits--if not yet using th
     in the diff. Or see a new commit (if there was only one commit before, for example). But for faster moving
     projects, with many open PRs, it gets really hard really fast to keep track of this kind of stuff.
 
-    If, PRs usually don't need multiple rounds of review, this problem can stay dormant for a long time.
+    If PRs usually don't need multiple rounds of review, this problem can stay dormant for a long time.
     But projects where PRs get multiple reviews (either multiple from the same person, or one from many people),
     the second or third review can find it difficult to see the previous reviews prompted any changes.
 
