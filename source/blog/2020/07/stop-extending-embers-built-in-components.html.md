@@ -29,7 +29,7 @@ also important for app developers to get ahead of the curve.
 
 Step 1 is to stop extending the built in components!
 
-If you find your addon extends these components, please comment on this issue with your use case
-and any road blocks to refactoring away from your existing solution.
+If you find your app or addon extends these components, please comment on this issue with your
+use case and any road blocks to refactoring away from your existing solution.
 
 <https://github.com/emberjs/rfcs/issues/587>
