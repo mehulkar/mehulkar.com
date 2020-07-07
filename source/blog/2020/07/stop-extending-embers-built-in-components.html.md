@@ -27,4 +27,4 @@ Step 1 is to stop extending these components!
 
 If you find your addon extends these components, please comment on this issue!
 
-https://github.com/emberjs/rfcs/issues/587
+<https://github.com/emberjs/rfcs/issues/587>
