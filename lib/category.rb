@@ -2,7 +2,8 @@ class Category
 
   ROUTE_MAP = {
     'three-musics' => 'threemusics',
-    'ninja-tennis' => 'ninjatennis'
+    'ninja-tennis' => 'ninjatennis',
+    'ember.js' => 'emberjs'
   }
 
   attr_reader :name

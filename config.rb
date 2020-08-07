@@ -34,8 +34,9 @@ helpers do
   def programming_path; '/blog/category/programming'  end
   def threemusics_path; '/blog/category/three-musics' end
   def til_path;         '/blog/category/til'          end
-  def tech_path;        '/blog/category/tech'          end
-  def frontend_path;        '/blog/category/frontend'  end
+  def tech_path;        '/blog/category/tech'         end
+  def frontend_path;    '/blog/category/frontend'     end
+  def emberjs_path;     '/blog/category/emberjs'     end
 
   def path_for(category)
     route_path = Category.new(category).route_path
