@@ -1,0 +1,15 @@
+<% grouped_posts.each do |year, posts| %>
+  <div class='post-group mb4 mt0 ml0'>
+    <h2 class="post-group--title mb3 fw2 bb">
+      <%= year %>
+    </h2>
+    <div class='post-list ml0 pl0'>
+      <% posts.each do |post| %>
+        <div class='post-link mb3 flex items-baseline'>
+          <span class='date silver mr3 f7'><%= formatted_date(post.date) %></span>
+          <span class='flex-auto'><%= link_to(post.title, post.link) %></span>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>
