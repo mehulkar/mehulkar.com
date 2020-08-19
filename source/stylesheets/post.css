@@ -33,10 +33,6 @@ body main #content article p code, body main #content article li code {
   padding: 3px 5px;
 }
 
-body main #content article pre {
-
-}
-
 body main #content article pre code {
   display: block;
   padding: 1rem;
@@ -86,4 +82,13 @@ body main #content article blockquote p:last-child { margin-bottom: 0; }
 
 body main #content article blockquote p code {
   font-size: 0.9em;
+}
+
+body main #content article img {
+  margin: 0 auto;
+  display: block;
+}
+
+.book-cover {
+  box-shadow: 0px 5px 7px 0 #333;
 }

@@ -4,7 +4,7 @@ date: 2020-08-19
 categories: books
 ---
 
-![Manager's Path](/images/blog/books/managers-path.jpg)
+<img class="book-cover" src="/images/blog/books/managers-path.jpg" width="322" height="483">
 
 I finally finished [The Manager's Path][1] and highly recommend it for engineers
 at all levels. Camille walks through the skills that make engineering leaders
