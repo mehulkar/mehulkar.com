@@ -70,6 +70,8 @@ body main #content article blockquote {
   font-size: 1.25rem;
   border-left: solid 4px var(--blue-1);
   background-color: var(--blue-2);
+  color: var(--code-text-color);
+  border-radius: 8px;
 }
 
 body main #content article blockquote p {
@@ -90,5 +92,5 @@ body main #content article img {
 }
 
 .book-cover {
-  box-shadow: 0px 5px 7px 0 #333;
+  box-shadow: 2px 1px 2px 0 var(--book-shadow-color);
 }

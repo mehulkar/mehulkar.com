@@ -13,6 +13,7 @@
   --pill-text-color-inactive: #999;
   --code-text-color: #333;
   --header-border-color: #36f;
+  --book-shadow-color: #333;
   color-scheme: light dark;
 }
 
@@ -27,6 +28,7 @@
     --pill-text-color-inactive: #777;
     --code-text-color: #333;
     --header-border-color: #eee;
+    --book-shadow-color: #ccc;
   }
 }
 
