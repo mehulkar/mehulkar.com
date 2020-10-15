@@ -194,12 +194,12 @@ as native classes: `this.args`. The `args` API allows Glimmer components to acce
 properties in the constructor and assign defaults easily:
 
 ```js
-import Component from '@ember/component';
+import Component from '@glimmer/component';
 
 export default class MyComponent extends Component {
     constructor() {
         super(...arguments); // super must be called first.
-        return this.args.foo || 'default argument';
+        this.foo = this.args.foo || 'default argument';
     }
 }
 ```
