@@ -1,10 +1,23 @@
-body main #content article h2 { font-size: 1.4rem; font-weight: 600; margin-bottom: 0.5rem; }
-body main #content article h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.3rem; }
-body main #content article h4 { font-size: 1rem; font-weight: 500; margin-bottom: 0.3rem; }
+body main #content article h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+body main #content article h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+body main #content article h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
 
 body main #content article hr {
-  border-top: 1px solid #ccc;
-  margin-bottom: 20px;
+  border-top: 0.5px solid #fff;
+  margin: 50px auto;
+  width: 20%;
 }
 
 body main #content article aside {
@@ -16,7 +29,8 @@ body main #content article aside {
   margin: 0 2em var(--paragraph-mb);
 }
 
-body main #content article pre, body main #content article code {
+body main #content article pre,
+body main #content article code {
   line-height: 1.125rem;
   font-size: 0.9em;
 }
@@ -28,7 +42,8 @@ body main #content article li code {
   border-radius: 5px;
 }
 
-body main #content article p code, body main #content article li code {
+body main #content article p code,
+body main #content article li code {
   background: #f8f8f8; /* same as what rouge .highlight class does. */
   padding: 3px 5px;
 }
@@ -42,16 +57,22 @@ body main #content article pre code {
 body main #content article pre.terminal {
   border: 1px solid #000;
   background-color: #333;
-  color: #FFF;
+  color: #fff;
 }
 
-body main #content article pre.terminalcode { background-color: #333; }
+body main #content article pre.terminalcode {
+  background-color: #333;
+}
 
-body main #content article li > ul, body main #content article li > ol {
+body main #content article li > ul,
+body main #content article li > ol {
   margin-top: 0.5rem;
 }
 
-body main #content article ol, body main #content article ul, body main #content article p, body main #content article pre {
+body main #content article ol,
+body main #content article ul,
+body main #content article p,
+body main #content article pre {
   margin-top: 0;
   margin-bottom: var(--paragraph-mb);
 }
@@ -77,10 +98,12 @@ body main #content article blockquote {
 body main #content article blockquote p {
   line-height: var(--paragraph-mb);
   margin-bottom: 0.5rem;
-  font-family: 'Indie Flower', cursive;
+  font-family: "Indie Flower", cursive;
 }
 
-body main #content article blockquote p:last-child { margin-bottom: 0; }
+body main #content article blockquote p:last-child {
+  margin-bottom: 0;
+}
 
 body main #content article blockquote p code {
   font-size: 0.9em;
