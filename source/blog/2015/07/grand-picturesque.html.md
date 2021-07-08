@@ -15,10 +15,10 @@ categories: three-musics
 </ol>
 
 <div style="margin-bottom: 10px;">
-<span style="font-size: 16px;">What are you listening to this week?</span><br>
+<span style="font-size: 16px;">What are you listening to this week?</span>
  
 <hr>
-<span style="font-size: 16px;"> </span>Know someone who likes to discover and share music? Forward this email to them!<br>
-<br>
-<span style="font-size: 16px;"><a href="http://threemusics.com">threemusics.com</a></span><br>
+<span style="font-size: 16px;"> </span>Know someone who likes to discover and share music? Forward this email to them!
+
+<span style="font-size: 16px;"><a href="http://threemusics.com">threemusics.com</a></span>
  </div>

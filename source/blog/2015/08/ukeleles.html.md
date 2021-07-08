@@ -11,6 +11,6 @@ Oy!
 	<li style="margin-bottom:10px;">I don't know if they're still in business or not, but every once in a while I get an automated email from thesixtyone.com thanking me for helping get <a href="https://www.youtube.com/watch?v=ttH4Rd8djPM">Robots in Love</a> to the home page. I guess I really liked this song in 2011?</li>
 	<li style="margin-bottom:10px;">And now for <a href="https://www.youtube.com/watch?v=Wb9qjvoJ1t8">your monthly dose of Papon</a>.</li>
 </ol>
-Happy Friday!<br>
-<br>
+Happy Friday!
+
 Forward this email to a friend!

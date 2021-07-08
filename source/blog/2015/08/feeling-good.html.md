@@ -14,6 +14,6 @@ Happy Friday!
 	<li style="margin-bottom:10px">
 <a href="https://www.youtube.com/watch?v=Zt251NpJk7I">Gemini Vibe</a> is the definition of artistry. A collaboration between musicians, tap dancers, and hip hop in some grungy underground venue in LA? <strong>Yes, please</strong>.</li>
 </ol>
-What are you listening to this week?<br>
+What are you listening to this week?
  
 <hr> Know anyone else who loves music? Send them to <a href="http://threemusics.com">threemusics.com</a>!
