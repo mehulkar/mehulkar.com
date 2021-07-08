@@ -15,7 +15,7 @@ factory produces.
 
 In conversation, Stephen and Bruce discovered that while the market price of meat is
 lower than the price of plant-based and cellular meats, if the market price of meat
-*actually* factored in all of its costs (the externalities), the price of meat
+_actually_ factored in all of its costs (the externalities), the price of meat
 would be much higher. For example, if we priced in the cost of the amount of CO<sub>2</sub>
 released during meat production accurately, it would
 increase the price tag at the grocery store.
@@ -42,9 +42,9 @@ As a software engineer, I find a lot of parallels for this "adjacent" work in my
 career. Build tooling is a perfect example. In order to make this feature
 fast, I should really optimize my build config for faster feedback. Or, in order
 to use this language feature, I first have to upgrade my operating system. This
-"work leading up to the work" can be difficult to justify, and easy to get sucked into. It can make projects and ideas successful, but it can also entirely
+"work leading up to the work" can be difficult to justify, and easy to get sucked into.
+It can make projects and ideas successful, but it can also entirely
 change, or even destroy them. But to borrow the economics term, this category
 of work has a crucial role in the "efficient" team.
 
-[1]:
-https://podcasts.apple.com/us/podcast/people-i-mostly-admire/id1525936566?i=1000523462571
+[1]: https://podcasts.apple.com/us/podcast/people-i-mostly-admire/id1525936566?i=1000523462571
