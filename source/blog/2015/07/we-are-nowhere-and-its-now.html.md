@@ -13,4 +13,4 @@ Some pretty historic things happened in the last week. This weeks musics are abo
 </ol>
 What are you listening to this week?
  
-<hr> Know anyone who loves music? Send them to tinyletter.com/threemusics!
+Know anyone who loves music? Send them to tinyletter.com/threemusics!

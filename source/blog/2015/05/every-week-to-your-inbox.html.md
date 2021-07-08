@@ -14,4 +14,4 @@ I never really got into Papon's non-Hindi music, but <a href="https://www.youtub
 
 What are you listening to?
 
-<hr> If you liked this, forward this email to other enthusiasts! Or send them to tinyletter.com/threemusics.
+If you liked this, forward this email to other enthusiasts! Or send them to tinyletter.com/threemusics.

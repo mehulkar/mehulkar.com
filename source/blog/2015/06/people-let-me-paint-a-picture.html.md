@@ -13,4 +13,4 @@ Like I said a couple weeks ago, I've been listening to a lot of Christian Rock. 
 </ol>
 What have you been listening to this week?
 
-<hr> Know anyone else who loves music? Send them to <a href="http://tinyletter.com/threemusics">tinyletter.com/threemusics</a>
+Know anyone else who loves music? Send them to <a href="http://tinyletter.com/threemusics">tinyletter.com/threemusics</a>

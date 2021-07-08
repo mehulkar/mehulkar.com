@@ -16,4 +16,4 @@ But then I announced ThreeMusics publicly and amidst discovering random music an
 </ol>
 What are you listening to? Hit the reply button. 
  
-<hr> If you liked this, forward this email to other enthusiasts! Or send them to <a href="http://tinyletter.com/threemusics">tinyletter.com/threemusics</a>.
+If you liked this, forward this email to other enthusiasts! Or send them to <a href="http://tinyletter.com/threemusics">tinyletter.com/threemusics</a>.

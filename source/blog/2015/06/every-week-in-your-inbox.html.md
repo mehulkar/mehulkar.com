@@ -13,4 +13,4 @@ categories: three-musics
 </ol>
 What have you been listening to this week?
 
-<hr> Know anyone else who would enjoy this? Send them to <a href="http://tinyletter.com/threemusics">tinyletter.com/threemusics</a>
+Know anyone else who would enjoy this? Send them to <a href="http://tinyletter.com/threemusics">tinyletter.com/threemusics</a>

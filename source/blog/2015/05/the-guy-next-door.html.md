@@ -16,4 +16,4 @@ Prateek Kuhad looks and sounds like a regular dude who found his dad's guitar in
 </ol>
 Happy Friday!
  
-<hr> If you liked this, forward this email to other enthusiasts! Or send them to <a href="http://tinyletter.com/threemusics">tinyletter.com/threemusics</a>.
+If you liked this, forward this email to other enthusiasts! Or send them to <a href="http://tinyletter.com/threemusics">tinyletter.com/threemusics</a>.

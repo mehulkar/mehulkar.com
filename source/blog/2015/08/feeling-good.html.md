@@ -16,4 +16,4 @@ Happy Friday!
 </ol>
 What are you listening to this week?
  
-<hr> Know anyone else who loves music? Send them to <a href="http://threemusics.com">threemusics.com</a>!
+Know anyone else who loves music? Send them to <a href="http://threemusics.com">threemusics.com</a>!

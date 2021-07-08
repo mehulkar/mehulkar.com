@@ -14,4 +14,4 @@ Happy Friday!
 
 What are you listening to this week?
  
-<hr> Know anyone else who loves music (or makes it)? Send them to tinyletter.com/threemusics!
+Know anyone else who loves music (or makes it)? Send them to tinyletter.com/threemusics!

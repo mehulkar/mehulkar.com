@@ -12,4 +12,4 @@ Lastly. Some <a href="https://www.youtube.com/watch?v=f8xmSlMb1dg">dude plays a 
 
 Happy Friday!
 
-<hr> Know anyone else who loves music? Send them to <a href="http://tinyletter.com/threemusics">tinyletter.com/threemusics</a><span style="color: rgb(85, 85, 85); font-size: 16px; font-style: normal; line-height: 24px;">!</span>
+Know anyone else who loves music? Send them to <a href="http://tinyletter.com/threemusics">tinyletter.com/threemusics</a><span style="color: rgb(85, 85, 85); font-size: 16px; font-style: normal; line-height: 24px;">!</span>
