@@ -18,6 +18,10 @@
     <title><%= current_page.data.title || "Mehul Kar" %></title>
 
     <meta name="Description" content="<%= current_page.data.title ? "Blog post: #{current_page.data.title}" : "Mehul Kar's website" %>">
+    <meta name="twitter:title" content="<%= current_page.data.title ? "Blog post: #{current_page.data.title}" : "Mehul Kar's website" %>">
+    <meta name="twitter:description" content="<%= current_page.data.title ? "Blog post: #{current_page.data.title}" : "Mehul Kar's website" %>">
+    <meta name="og:title" content="<%= current_page.data.title ? "Blog post: #{current_page.data.title}" : "Mehul Kar's website" %>">
+    <meta name="og:description" content="<%= current_page.data.title ? "Blog post: #{current_page.data.title}" : "Mehul Kar's website" %>">
 
     <%= stylesheet_link_tag(
       "vendor",
