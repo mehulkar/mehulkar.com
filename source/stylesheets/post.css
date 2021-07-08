@@ -3,11 +3,13 @@ body main #content article h2 {
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
+
 body main #content article h3 {
   font-size: 1rem;
   font-weight: 700;
   margin-bottom: 0.3rem;
 }
+
 body main #content article h4 {
   font-size: 1rem;
   font-weight: 500;
@@ -42,10 +44,15 @@ body main #content article li code {
   border-radius: 5px;
 }
 
+body main #content article a code {
+  color: var(--base-color);
+}
+
 body main #content article p code,
 body main #content article li code {
   background: #f8f8f8; /* same as what rouge .highlight class does. */
-  padding: 3px 5px;
+  padding: 1px 5px;
+  border: solid 0.5px #d8d8d8;
 }
 
 body main #content article pre code {
