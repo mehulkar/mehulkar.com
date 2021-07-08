@@ -8,19 +8,19 @@ I was recently extending [`redcarpet`][1] (a Markdown rendering library) to
 render a `CHANGELOG.md` in a nicer way. The idea is that markdown like this:
 
 ```md
--   [fixed] that one bug
--   [added] that one feature
--   [removed] that other thing
--   this one doesn't have a tag
+- [fixed] that one bug
+- [added] that one feature
+- [removed] that other thing
+- this one doesn't have a tag
 ```
 
 turns into this HTML:
 
 ```html
-<li><span class="fixed tag">fixed</span> that one bug</li>
-<li><span class="added tag">added</span> that one feature</li>
-<li><span class="removed tag">removed</span> that other thing</li>
-<li>this one doesn't have a tag</li>
+1. <span class="fixed tag">fixed</span> that one bug 1.
+<span class="added tag">added</span> that one feature 1.
+<span class="removed tag">removed</span> that other thing 1. this one doesn't
+have a tag
 ```
 
 Notice that the main transformation is the "tag" inside square brackets
@@ -49,16 +49,16 @@ def list_item(text)
   tag_type = matched[1]
   note = matched[2]
 
-  "<li><span class=#{tag_type} tag>#{tag_type}</span>#{note}</li>"
+  "1. <span class=#{tag_type} tag>#{tag_type}</span>#{note}"
 end
 ```
 
 The important part of this regex is `\\[(.*)\\]`<sup>2</sup>.
 
--   The double backslashed `[` and `]` characters match literal square brackets
-    in my string
--   The `(.*)` between the square bracket literals match ALL characters inside
-    the square brackets
+- The double backslashed `[` and `]` characters match literal square brackets
+  in my string
+- The `(.*)` between the square bracket literals match ALL characters inside
+  the square brackets
 
 The second part of the regex `(.*)` simply captures the rest of the string in
 another capture group that we can assign to the `note` variable.
@@ -75,7 +75,7 @@ output was all messed up.
 For example, this markdown:
 
 ```markdown
--   [fixed] [something] happened here
+- [fixed] [something] happened here
 ```
 
 SHOULD be rendered as:
@@ -87,10 +87,9 @@ SHOULD be rendered as:
 But instead, I was getting:
 
 ```html
-<li>
-    <em class="fixed] [something tag">fixed] [something</em>
-    <span>happened here</span>
-</li>
+1.
+<em class="fixed] [something tag">fixed] [something</em>
+<span>happened here</span>
 ```
 
 At first glance, this looked like garbage text to me, but then I realized that
@@ -180,8 +179,8 @@ those here.
 
 Here's some links with the regex explained here:
 
--   [Wrong](https://regex101.com/r/fPar5s/1)
--   [Correct](https://regex101.com/r/hyPOEr/2)
+- [Wrong](https://regex101.com/r/fPar5s/1)
+- [Correct](https://regex101.com/r/hyPOEr/2)
 
 **Footnotes**
 
