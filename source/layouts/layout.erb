@@ -15,15 +15,17 @@
     <meta content="width=device-width, initial-scale=1" name=viewport>
 
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "Mehul Kar's website" %></title>
+    <title><%= current_page.data.title || "Mehul Kar" %></title>
 
-    <meta name="twitter:title" content="Mehul Kar's website<%= current_page.data.title ? " | Blog post: #{current_page.data.title}" : "" %>">
-    <meta name="og:title" content="Mehul Kar's website<%= current_page.data.title ? " | Blog post: #{current_page.data.title}" : "" %>">
+    <meta name="twitter:title" content="<%= current_page.data.title ? "#{current_page.data.title} " : "" %>| Mehul Kar">
+    <meta name="og:title" content="<%= current_page.data.title ? "#{current_page.data.title} " : "" %>| Mehul Kar">
 
-    <meta name="keywords" content="<%= current_page.data.categories %>">
-    <meta name="Description" content="<%= current_page.data.title ? current_page.data.title : "Mehul Kar's website" %>">
-    <meta name="twitter:description" content="<%= current_page.data.title ? current_page.data.title : "Mehul Kar's website" %>">
-    <meta name="og:description" content="<%= current_page.data.title ? current_page.data.title : "Mehul Kar's website" %>">
+    <% if current_page.data.categories.present? %>
+      <meta name="keywords" content="<%= current_page.data.categories %>">
+    <% end %>
+    <meta name="Description" content="<%= current_page.data.title ? current_page.data.title : "Mehul Kar" %>">
+    <meta name="twitter:description" content="<%= current_page.data.title ? current_page.data.title : "Mehul Kar" %>">
+    <meta name="og:description" content="<%= current_page.data.title ? current_page.data.title : "Mehul Kar" %>">
 
     <%= stylesheet_link_tag(
       "vendor",
