@@ -1,6 +1,6 @@
 ---
-title:  "An Informal Commencement Speech"
-date:   2011-03-07
+title: "An Informal Commencement Speech"
+date: 2011-03-07
 categories: poetry
 ---
 

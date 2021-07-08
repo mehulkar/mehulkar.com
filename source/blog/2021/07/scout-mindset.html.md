@@ -6,7 +6,7 @@ categories: books
 
 <img class="book-cover" src="/images/blog/books/scout-mindset.jpg">
 
-[*The Scout Mindset*][1] by [Julia Galef][3] has been one of my favorite reads
+[_The Scout Mindset_][1] by [Julia Galef][3] has been one of my favorite reads
 this year. I read the Kindle edition, but I liked it so much, I want to purchase a
 hard copy too.
 
@@ -30,7 +30,7 @@ fool ourselves into thinking we're objective when we're not.
 > believe this?,” searching for an excuse to reject it.
 
 The opposite of the titular scout mindset is the "soldier mindset", which is
-about *defending* something that already exists, rather than being curious
+about _defending_ something that already exists, rather than being curious
 about the unknown or inexplicable.
 
 > we often use soldier mindset to protect our egos by finding flattering

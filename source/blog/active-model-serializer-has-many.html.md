@@ -1,6 +1,6 @@
 ---
 title: "Active Model Serializers has_many association"
-date:  2014-10-02 00:00:00
+date: 2014-10-02 00:00:00
 categories: programming, rails
 ---
 
@@ -18,9 +18,9 @@ This will embed a array of `post` records into the `author` record.
 
 ```json
 {
-  "authors": {
-    "posts": []
-  }
+    "authors": {
+        "posts": []
+    }
 }
 ```
 
@@ -36,12 +36,13 @@ This will embed post_ids and sideload the posts:
 
 ```json
 {
-  "posts": [],
-  "authors": {
-    "post_ids": []
-  }
+    "posts": [],
+    "authors": {
+        "post_ids": []
+    }
 }
 ```
+
 ## attribute
 
 ```ruby
@@ -54,8 +55,8 @@ This will only embed the `post_ids`.
 
 ```json
 {
-  "authors": {
-    "post_ids": []
-  }
+    "authors": {
+        "post_ids": []
+    }
 }
 ```

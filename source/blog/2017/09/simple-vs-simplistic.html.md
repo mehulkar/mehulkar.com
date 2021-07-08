@@ -5,7 +5,7 @@ categories:
 ---
 
 Sometimes, I hear myself (and others) provide a "simple" explanation of a topic.
-I think describing something as "simple" subtly excludes those who do *not* find
+I think describing something as "simple" subtly excludes those who do _not_ find
 the topic simple. At the very least, this includes everyone who is new to the
 topic. This can be counter-productive, because the reason for providing "simple"
 explanations to a topic is usually to introduce the topic to newcomers!

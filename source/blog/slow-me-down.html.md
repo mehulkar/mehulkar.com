@@ -1,6 +1,6 @@
 ---
 title: Slow Me Down
-date:  2010-05-03
+date: 2010-05-03
 categories: personal
 ---
 

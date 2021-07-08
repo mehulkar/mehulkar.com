@@ -1,13 +1,12 @@
 ---
 title: "Protips: brought to you by pain"
-date:   2014-09-30 22:42:35
+date: 2014-09-30 22:42:35
 categories: programming
 ---
 
 These are probbaly not news to anyone who has any experience,
 but I've learned a few things the hard way in the wee hours of the
 morning. Making a list.
-
 
 ### DevOps
 

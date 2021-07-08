@@ -4,8 +4,9 @@ date: 2015-07-17
 categories: three-musics
 ---
 
- Happy Friday!<br>
+Happy Friday!<br>
 <img src="https://gallery.tinyletterapp.com/2b9ddbe5bcd443ed550266ef508a378df7927a70/images/b446c398-9faf-44c6-aaad-4c977abbb75d.png">
+
 <ol>
 	<li style="margin-bottom:15px;">Coke Studio is one of the most remarkable things in my music world and it has been for years. Javed Bashir's traditional folk qawwali and that lute (I think it's a lute?) in <a href="https://www.youtube.com/watch?v=jDgeABMDuiU">Yaad</a> are just amazing. Also, people like to demonize modern pop for being simplistic for the sake of being catchy (i.e. memorable). But I could say the same about traditional qawwalis and bhajans.</li>
 	<li style="margin-bottom:15px;">I found this amazing UK band that specializes in Swing. This cover of Lorde's <a href="https://www.youtube.com/watch?v=CWKBzt-v8w4">Royals</a> is one of the most classic, white things I've seen or heard. It's great.</li>

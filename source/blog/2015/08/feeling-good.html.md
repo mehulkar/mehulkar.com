@@ -4,7 +4,8 @@ date: 2015-08-07
 categories: three-musics
 ---
 
- Happy Friday!
+Happy Friday!
+
 <ol>
 	<li style="margin-bottom:10px">
 <span style="font-size: 16px;">Feeling Good is one of the greatest songs of all time. Mostly it carries itself, but Lauryn Hill letting loose in </span><a href="http://www.rollingstone.com/music/news/watch-lauryn-hills-show-stopping-feeling-good-on-tonight-show-20150731">this latest Nina Simone tribute</a><span style="font-size: 16px;"> makes me want to punch a wall.</span>
@@ -15,4 +16,4 @@ categories: three-musics
 </ol>
 What are you listening to this week?<br>
  
-<hr> Know anyone else who loves music? Send them to <a href="http://threemusics.com">threemusics.com</a>! 
+<hr> Know anyone else who loves music? Send them to <a href="http://threemusics.com">threemusics.com</a>!

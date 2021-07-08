@@ -1,6 +1,6 @@
 ---
 title: "Friday morning bootcamp blues (in Ruby)"
-date:  2012-02-10
+date: 2012-02-10
 categories: programming, ruby
 ---
 

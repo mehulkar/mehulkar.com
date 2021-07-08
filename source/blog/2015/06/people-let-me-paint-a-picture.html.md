@@ -4,7 +4,8 @@ date: 2015-06-12
 categories: three-musics
 ---
 
- Like I said a couple weeks ago, I've been listening to a lot of Christian Rock. I'm not Christian, but there's some great, uplifting music on that station. 
+Like I said a couple weeks ago, I've been listening to a lot of Christian Rock. I'm not Christian, but there's some great, uplifting music on that station.
+
 <ol>
 	<li>Roll your windows down and drive down a highway with Matthew West's "<a href="https://www.youtube.com/watch?v=b_RjndG0IX8">Do Something</a>".</li>
 	<li>Just then when I said I'm not Christian, I was reminded me of <a href="https://www.youtube.com/watch?v=ZD-peoN2APU">an old Talib Kweli favorite</a>. People let me paint a picture.</li>
@@ -12,4 +13,4 @@ categories: three-musics
 </ol>
 What have you been listening to this week?
 
-<hr> Know anyone else who loves music? Send them to <a href="http://tinyletter.com/threemusics">tinyletter.com/threemusics</a> 
+<hr> Know anyone else who loves music? Send them to <a href="http://tinyletter.com/threemusics">tinyletter.com/threemusics</a>

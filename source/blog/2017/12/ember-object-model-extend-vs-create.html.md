@@ -10,12 +10,12 @@ I had a piece of code that took an object and used `Object.assign` to merge it w
 object and but I noticed that none of the properties were being copied over.
 
 ```javascript
-someObject.someProperty
+someObject.someProperty;
 // => "I'm here!"
-const merged = Object.assign({}, someObject, { foo: 'bar' });
-merged.foo
+const merged = Object.assign({}, someObject, { foo: "bar" });
+merged.foo;
 //=> 'bar'
-merged.someProperty
+merged.someProperty;
 //=> undefined
 ```
 
@@ -25,11 +25,11 @@ behave the same way as regular POJOs with Object.assign, so I tested out the the
 
 ```javascript
 const someObject = Ember.Object.create({
-  someProperty: "I'm here!"
+    someProperty: "I'm here!",
 });
 
-const merged = Object.assign({}, someObject, { foo: 'bar' });
-merged.someProperty
+const merged = Object.assign({}, someObject, { foo: "bar" });
+merged.someProperty;
 //=> "I'm here!"
 ```
 
@@ -40,7 +40,7 @@ and it was actually defined like this:
 
 ```javascript
 const someObject = Ember.Object.extend({
-  someProperty: "I'm here!"
+    someProperty: "I'm here!",
 }).create();
 ```
 
@@ -51,16 +51,16 @@ passed to `Ember.Object.extend()` adds properties to the prototype, not the inst
 So I had to test that also:
 
 ```javascript
-function CustomObject() {};
+function CustomObject() {}
 CustomObject.prototype.someProperty = "I'm here!";
 const someObject = new CustomObject();
-const merged = Object.assign({}, a, { foo: 'bar' });
+const merged = Object.assign({}, a, { foo: "bar" });
 merged.someProperty;
 //=> undefined
 ```
 
 It wasn't surprising to me that a property on the prototype isn't copied over by `Object.assign`,
-so this made sense to me, but it *was* surprising that `Ember.Object.extend({foo: 'bar'}).create()`
+so this made sense to me, but it _was_ surprising that `Ember.Object.extend({foo: 'bar'}).create()`
 and `Ember.Object.extend().create({foo: 'bar})` were not equivalent.
 
 Over the years of working in Ember.js, I've never really had to care about how the object model
@@ -77,17 +77,17 @@ will be on the prototype and won't be carried over to the duplicate.
 
 ```javascript
 Post = DS.Model.extend({
-  author: 'me'
+    author: "me",
 });
 
 const post = Post.create({
-  title: 'New post',
-  body: 'Lorem ipsum'
+    title: "New post",
+    body: "Lorem ipsum",
 });
 
 const duplicate = Object.assign({}, post);
 
-duplicate.author
+duplicate.author;
 //=> undefined
 
 // !!!!

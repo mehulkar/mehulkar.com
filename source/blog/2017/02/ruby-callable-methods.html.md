@@ -7,13 +7,12 @@ categories: programming, ruby
 I wish Ruby had some semantic difference between methods that define
 functions and methods that define properties.
 
-For me, the difference between the two is that a function *does* something
-and a property is a tool for introspection. In other words, a property *returns*
-state or data, and a function *operates on* state or data.
+For me, the difference between the two is that a function _does_ something
+and a property is a tool for introspection. In other words, a property _returns_
+state or data, and a function _operates on_ state or data.
 
 For example, in the `Dog` class below, the `bark` method
 is a function and `age` is a method.
-
 
 ```ruby
 class Dog
@@ -35,14 +34,14 @@ defined and called differently.
 
 ```javascript
 var dog = {
-  age: 10,
-  bark: () => {
-    console.log('woof');
-  }
-}
+    age: 10,
+    bark: () => {
+        console.log("woof");
+    },
+};
 
-dog.age
-dog.bark()
+dog.age;
+dog.bark();
 ```
 
 Ruby defines properties using instance variables (variables preceded by
@@ -70,9 +69,9 @@ can mean multiple things, but in Javascript, for example, the caller of
 `Cat#present` would know if a property or a function was being accessed.
 
 ```javascript
-garfield = Cat()
-garfield.present    // is a property
-garfield.present()  // is a function
+garfield = Cat();
+garfield.present; // is a property
+garfield.present(); // is a function
 ```
 
 As you can see, the additional detail here is the `()` parentheses at the time

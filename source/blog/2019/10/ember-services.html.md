@@ -22,8 +22,8 @@ What would make a lot more sense is a component that defines and registers a Ser
 
 ```js
 // app/components/foo.js
-import Component from '@ember/component';
-import Service from '@ember/service';
+import Component from "@ember/component";
+import Service from "@ember/service";
 
 class MyPrivateService extends Service {}
 
@@ -34,8 +34,8 @@ export default class FooComponent extends Component {
 
     constructor(owner) {
         if (!registered) {
-            owner.register('service:-my-private-service', MyPrivateService);
-            this.service = owner.lookip('service:-my-private-service');
+            owner.register("service:-my-private-service", MyPrivateService);
+            this.service = owner.lookip("service:-my-private-service");
         }
     }
 }
@@ -45,12 +45,12 @@ I have not tried this code, so I’m not sure if it works, but an experienced Em
 developer may understand the intention. There are several shortcomings with this
 approach (assuming it works):
 
-- The registered `my-private-service` service is still in the application instance container,
-so after this component is instantiated once, it will be available for anyone. In fact it my
-just be confusing why it doesn’t appear in the container from the beginnig like all the other
-classes in app/services.
-- There is no explicit inject call, which breaks the normal Ember pattern of dependency injection;
-- It is probably not statically analyzeable. This one is probably fine.
+-   The registered `my-private-service` service is still in the application instance container,
+    so after this component is instantiated once, it will be available for anyone. In fact it my
+    just be confusing why it doesn’t appear in the container from the beginnig like all the other
+    classes in app/services.
+-   There is no explicit inject call, which breaks the normal Ember pattern of dependency injection;
+-   It is probably not statically analyzeable. This one is probably fine.
 
 I’m not sure if this is the only way to approach the problem of tightly coupled
 components + services. Another possibility could be using a global store with namespaced
@@ -79,31 +79,31 @@ Our team uses this pattern a lot:
 export default Service.extend({
     init() {
         this._super(...arguments);
-        window.addEventListener('custom-event', this.handleEvent);
+        window.addEventListener("custom-event", this.handleEvent);
     },
 
-    handleEvent: action(function() {
+    handleEvent: action(function () {
         // handle the event
-    })
-})
+    }),
+});
 
 // app/instance-initializers/eager-init.js
 export function initialize(appInstance) {
-    appInstance.lookup('service:foo'); // eagerly instantiate the service
+    appInstance.lookup("service:foo"); // eagerly instantiate the service
 }
 ```
 
 Setting up event listeners in a service, and then eagerly instantiating that service
 works pretty well, but there are several shortcomings to this approach:
 
-- The timing of initializers isn’t exactly guaranteed
-- The service and instance initializer files live far away from each other, so it’s not
-obvious what’s happening
-- Setting up a listener as a side effect of a lookup is a pretty obscure way of expressing what
-is needed
-- I think there are different solutions to each of these shortcomings if taken individually,
-but I think the ultumate goal here is to be able to do things after boot and before destroy.
-I think this pattern would be best served by something like this:
+-   The timing of initializers isn’t exactly guaranteed
+-   The service and instance initializer files live far away from each other, so it’s not
+    obvious what’s happening
+-   Setting up a listener as a side effect of a lookup is a pretty obscure way of expressing what
+    is needed
+-   I think there are different solutions to each of these shortcomings if taken individually,
+    but I think the ultumate goal here is to be able to do things after boot and before destroy.
+    I think this pattern would be best served by something like this:
 
 ```js
 // app/app.js
@@ -115,11 +115,11 @@ const App = Application.extend({
     beforeDestroy() {},
 
     afterInstanceInitialize() {
-        window.addEventListener('custom-event', customEventHandler);
+        window.addEventListener("custom-event", customEventHandler);
     },
     beforeInstanceDestroy() {
-        window.removeEventListener('custom-event', customEventHandler);
-    }
+        window.removeEventListener("custom-event", customEventHandler);
+    },
 });
 ```
 

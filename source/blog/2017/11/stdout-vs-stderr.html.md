@@ -8,7 +8,7 @@ I'm not sure where I first learned this, but I thought it was a non-discoverable
 that also changed how I thought about writing programs.
 
 I've always thought that `stderr` for a program is to display errors and `stdout` is for "everything
-else". But it turns out `stdout` is meant to be program *output* and `stderr` is meant to be...
+else". But it turns out `stdout` is meant to be program _output_ and `stderr` is meant to be...
 "everything else". This was conceptually difficult for me until I thought of an example.
 
 For example, in a calculator program, if I input `1 + 1`, the output is `2`. This should

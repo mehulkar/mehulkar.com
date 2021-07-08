@@ -15,16 +15,16 @@ Here are five strategies I use when approaching these kinds of refactorings.
 
 ## 1. Keep a physical notebook on my desk
 
-One of the hardest things to do when I'm down the rabbit hole of refactoring is to know *how many*
+One of the hardest things to do when I'm down the rabbit hole of refactoring is to know _how many_
 of these holes to go down. Very few are guaranteed to bring me back full circle to where I started
 with it. To help with this, I keep a simple lined notebook on my desk and write down each thing
 that I want to come back to later. It is satisfiying to have a physical copy of these instead of
 putting them into a bug tracker because:
 
-- it's faster
-- it doesn't get lost
-- I don't have to explain its content or merit to anyone else
-- I get have the satisfaction of coming back to it later
+-   it's faster
+-   it doesn't get lost
+-   I don't have to explain its content or merit to anyone else
+-   I get have the satisfaction of coming back to it later
 
 Sometimes line items from this notebook get promoted into the official bug tracker, but usually
 they do not.
@@ -34,16 +34,16 @@ they do not.
 Architectural refactors feel difficult to me because they are often associated with unfamiliar code.
 Some people are able to and are content with reading code to understand it. I am not. I think
 with my hands as I rearrange, nudge and, coddle code. In many situations, this ends up being
-valuable to the code base, but more importantly, this allows me to *feel* my way through code,
+valuable to the code base, but more importantly, this allows me to _feel_ my way through code,
 bit by bit. I:
 
-- expand or simplify variable names
-- hoist guard statements
-- pull out data as configuration
-- add or remove whitespace
-- re-order functions or methods
-- change directory structure
-- add code comments to explain my understanding of code
+-   expand or simplify variable names
+-   hoist guard statements
+-   pull out data as configuration
+-   add or remove whitespace
+-   re-order functions or methods
+-   change directory structure
+-   add code comments to explain my understanding of code
 
 These types of changes (and others) can feel like unnecessary churn to others, but to me,
 massaging code like this not only makes it easier for me to speak its language, it almost always
@@ -84,17 +84,17 @@ in the future.
 ## 5. Be Patient
 
 This is the hardest strategy for me. When I start refactoring, I don't always
-know the end goal. When I *do* know the end goal, I don't know the path to get there. So every
+know the end goal. When I _do_ know the end goal, I don't know the path to get there. So every
 refactoring on the architectural level is a meandering journey that can last any amount of time.
 Many things can happen along this journey:
 
-- Sometimes I discover entirely unrelated changes that I want to solve and re-base on.
-- Sometimes I discover that the change I wanted to make introduces other problems.
-- Sometimes I discover that teammates are opposed to certain patterns.
-- Sometimes more important things come up that take me away for days
-- Sometimes those days turn into weeks and my branch gets so old it's too much of a pain to rebase
-so I throw it away.
-- Sometimes I simply get stuck or bored and throw away my work
+-   Sometimes I discover entirely unrelated changes that I want to solve and re-base on.
+-   Sometimes I discover that the change I wanted to make introduces other problems.
+-   Sometimes I discover that teammates are opposed to certain patterns.
+-   Sometimes more important things come up that take me away for days
+-   Sometimes those days turn into weeks and my branch gets so old it's too much of a pain to rebase
+    so I throw it away.
+-   Sometimes I simply get stuck or bored and throw away my work
 
 These all test my ability and desire to stick with a refactor, but if I stay
 patient, I can usually get to a point where the refactor can either be merged or thrown away.

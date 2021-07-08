@@ -22,7 +22,7 @@ model to explain confidence.
 Rather than thinking of confidence as something that grows linearly over time
 like the stock market and corrects itself at unpredictable intervals---also like
 the stock market---maybe confidence is like a light switch: either off or on,
-but *only* off or on, and nothing in between. You wake up and it’s on, and you’re
+but _only_ off or on, and nothing in between. You wake up and it’s on, and you’re
 ready for the world. You snap out of it and you wonder what even gives you the
 right.
 

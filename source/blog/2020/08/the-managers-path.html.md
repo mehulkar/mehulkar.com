@@ -17,29 +17,29 @@ as real concerns; and most importantly, identify areas of improvement for myself
 Some choice highlights that spoke to me:
 
 > Process czars struggle when they fail to realize that most people are not as
-good at following processes as they are.
+> good at following processes as they are.
 
 I have fallen into this trap many times over the course of my career. I like
 structure and I'm good at following it. Following a process relieves me of the mental burdern
 of revisiting and overthinking decisions -- and I am very bad at making decisions.
 But I've tried and failed to scale this methodology time and again, because I
-forget that *my* process reflect the way *my* mind works, and not necessarily reflect
+forget that _my_ process reflect the way _my_ mind works, and not necessarily reflect
 how others do their best work. I don't think that invalidates why process is valuable,
 but this was a good reminder that it can backfire as a top-down directive.
 
 > if you can’t communicate and listen to what other people are saying, your career
-growth from this point on will suffer.
+> growth from this point on will suffer.
 
 I used to brush over the "technology is about communication" adage. It's not that
 I don't agree, but early in my career, I didn't have any personal experiences
 where bad communication caused bugs or missed deadlines. But in the past few
 years, miscommunication and hurt feelings have resulted in this enough times for
-me to start paying real attention. I now also *deeply* understand how important
+me to start paying real attention. I now also _deeply_ understand how important
 and hard it is to hire for these skills and how we (1) don't do it at all,
 and (2) when we do, we look for all the wrong signals.
 
 > It’s natural to feel some longing for simpler times, when it was just you and
-your computer and you didn’t have to deal with all these messy, complicated humans.
+> your computer and you didn’t have to deal with all these messy, complicated humans.
 
 I don't really yearn to work alone, but I do yearn for working in less
 messy people situations. I liked that Camille acknowledges things like this

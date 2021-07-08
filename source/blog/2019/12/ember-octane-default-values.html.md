@@ -15,10 +15,10 @@ are assigned to the Javascript object prototype, and any arguments passed
 into the component at invocation override those properties. For example:
 
 ```js
-import Component from '@ember/component';
+import Component from "@ember/component";
 
 export default Component.extend({
-    foo: 'default foo'
+    foo: "default foo",
 });
 ```
 
@@ -33,18 +33,18 @@ instance has been created, and has access to the arguments passed at invocation 
 
 Note that the example code below is contrived because I'm sticking to simple strings as values, but
 it is a valid technique for assigning arrays and objects as defaults. Assigning
-an array/object to the prototype (as in the *first* example) can lead to bugs because, as mentioned
+an array/object to the prototype (as in the _first_ example) can lead to bugs because, as mentioned
 above, the array/object would be assigned to the object's prototype and shared by reference
 across all instances of the component.
 
 ```js
-import Component from '@ember/component';
+import Component from "@ember/component";
 
 export default Component.extend({
     init() {
         this._super(...arguments);
-        this.foo = this.foo || 'default foo';
-    }
+        this.foo = this.foo || "default foo";
+    },
 });
 ```
 
@@ -55,10 +55,10 @@ export default Component.extend({
 ## Classic Components with Native Class
 
 ```js
-import Component from '@ember/component';
+import Component from "@ember/component";
 
 export default class MyComponent extends Component {
-    foo = 'default foo'
+    foo = "default foo";
 }
 ```
 
@@ -66,18 +66,18 @@ export default class MyComponent extends Component {
 <MyComponent @foo="override" />
 ```
 
-This also "just works" because the [native class field][1] is assigned *per* instance of
+This also "just works" because the [native class field][1] is assigned _per_ instance of
 the class, and passing in an override at invocation will override the value.
 
 ## Classic Component with Native Class and `contructor`
 
 ```js
-import Component from '@ember/component';
+import Component from "@ember/component";
 
 export default class MyComponent extends Component {
     constructor() {
         super(...arguments);
-        this.foo = this.foo || 'default argument';
+        this.foo = this.foo || "default argument";
     }
 }
 ```
@@ -102,14 +102,14 @@ values are passed at invocation.
 
 There are 3 workarounds that I know of:
 
-- create a getter and use *that* instead:
+-   create a getter and use _that_ instead:
 
     ```js
-    import Component from '@ember/component';
+    import Component from "@ember/component";
 
     export default class MyComponent extends Component {
         get fooWithDefault() {
-            return this.foo || 'default argument';
+            return this.foo || "default argument";
         }
     }
     ```
@@ -117,15 +117,15 @@ There are 3 workarounds that I know of:
     The downside to this workaround is that you have to remember never to use `this.foo` and always
     use `this.fooWithDefault`.
 
-- Use `init` instead of `constructor` to assign the default:
+-   Use `init` instead of `constructor` to assign the default:
 
     ```js
-    import Component from '@ember/component';
+    import Component from "@ember/component";
 
     export default class MyComponent extends Component {
         init() {
             this._super(...arguments);
-            this.foo = this.foo || 'default argument';
+            this.foo = this.foo || "default argument";
         }
     }
     ```
@@ -133,17 +133,17 @@ There are 3 workarounds that I know of:
     This works, but it's unclear if this is encouraged or discouraged at the moment, because it violates
     the `ember/classic-decorator-hooks` rule.
 
-- `@classic` decorator and `init`
+-   `@classic` decorator and `init`
 
     ```js
-    import Component from '@ember/component';
-    import classic from 'ember-classic-decorator';
+    import Component from "@ember/component";
+    import classic from "ember-classic-decorator";
 
     @classic
     export default class MyComponent extends Component {
         init() {
             this._super(...arguments);
-            this.foo = this.foo || 'default argument';
+            this.foo = this.foo || "default argument";
         }
     }
     ```
@@ -157,14 +157,14 @@ A classic component that implements a default value as a computed property can b
 at invocation, but it logs a deprecation warning:
 
 ```js
-import Component from '@ember/component';
-import { computed } from '@ember/object';
+import Component from "@ember/component";
+import { computed } from "@ember/object";
 
 export default Component.extends({
-    foo: computed(function() {
-        return 'default argument';
-    })
-})
+    foo: computed(function () {
+        return "default argument";
+    }),
+});
 ```
 
 ```hbs
@@ -194,20 +194,23 @@ as native classes: `this.args`. The `args` API allows Glimmer components to acce
 properties in the constructor and assign defaults easily:
 
 ```js
-import Component from '@glimmer/component';
+import Component from "@glimmer/component";
 
 export default class MyComponent extends Component {
     constructor() {
         super(...arguments); // super must be called first.
-        this.foo = this.args.foo || 'default argument';
+        this.foo = this.args.foo || "default argument";
     }
 }
 ```
 
 ```hbs
-<MyComponent @foo="override" /> <!-- override works -->
-<MyComponent /> <!-- will fall back to default -->
-<MyComponent @foo={{undefined}} /> <!-- alls falls back to default -->
+<MyComponent @foo="override" />
+<!-- override works -->
+<MyComponent />
+<!-- will fall back to default -->
+<MyComponent @foo={{undefined}} />
+<!-- alls falls back to default -->
 ```
 
 This is the Happy Path&trade;, but because migrating existing components to Glimmer Components
@@ -218,11 +221,11 @@ the `constructor` (or `init`) means that the default value will not get applied 
 change. If that's needed, use a getter instead (which can also use the `this.args` API).
 
 ```js
-import Component from '@ember/component';
+import Component from "@ember/component";
 
 export default class MyComponent extends Component {
     get foo() {
-        return this.args.foo || 'default argument';
+        return this.args.foo || "default argument";
     }
 }
 ```
@@ -251,9 +254,9 @@ solution yet.
 
 These are the places I reference when I get confused:
 
-- The Octane cheatsheet: [https://ember-learn.github.io/ember-octane-vs-classic-cheat-sheet/](https://ember-learn.github.io/ember-octane-vs-classic-cheat-sheet/)
-- A page in the ember-decorators addon docs: [https://ember-decorators.github.io/ember-decorators/docs/native-class-basics](https://ember-decorators.github.io/ember-decorators/docs/native-class-basics)
-- Native classes primer im the Octane preview guides: [https://octane-guides-preview.emberjs.com/release/working-with-javascript/native-classes/](https://octane-guides-preview.emberjs.com/release/working-with-javascript/native-classes/)
+-   The Octane cheatsheet: [https://ember-learn.github.io/ember-octane-vs-classic-cheat-sheet/](https://ember-learn.github.io/ember-octane-vs-classic-cheat-sheet/)
+-   A page in the ember-decorators addon docs: [https://ember-decorators.github.io/ember-decorators/docs/native-class-basics](https://ember-decorators.github.io/ember-decorators/docs/native-class-basics)
+-   Native classes primer im the Octane preview guides: [https://octane-guides-preview.emberjs.com/release/working-with-javascript/native-classes/](https://octane-guides-preview.emberjs.com/release/working-with-javascript/native-classes/)
 
 This is a pretty basic thing that has caused me a lot of confusion as I move my app towards Octane
 paradigms. I think the future is bright but the path to upgrade is also long and covered in peril.

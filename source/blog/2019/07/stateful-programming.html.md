@@ -14,7 +14,7 @@ You get on a bus from Home and are looking to get off the bus at Baker Street.
 You can figure out when to get off the bus in a couple of ways:
 
 1. Figure out the number of stops to Baker Street and get off after the bus has
-stopped that many times.
+   stopped that many times.
 2. Remember the name of your stop and check every stop to see if it's that one.
 
 If you use the first method, you'll have to remember how many stops have passed.
@@ -37,7 +37,7 @@ And we can listen for a `stop` event to decide whether or not we want to get
 off like this:
 
 ```js
-window.addEventListener('stop', stopName => {
+window.addEventListener("stop", (stopName) => {
     // handle the event
 });
 ```
@@ -62,9 +62,9 @@ function(remainingStops) {
 And to handle this in a stateless way, we can:
 
 ```js
-window.addEventListener('stop', stopName => {
+window.addEventListener("stop", (stopName) => {
     if (stopName === ENDING_STOP) {
-        alert('get off the bus!');
+        alert("get off the bus!");
     }
 });
 ```
@@ -89,7 +89,7 @@ your stop. But some of those ways are specific to the method you use.
 
 For example, if you fall asleep on the bus ride and wake up when the bus is
 already past Baker Street, you will have missed your stop regardless of the
-method you chose. However, if you fall asleep and wake up *before* Baker Street,
+method you chose. However, if you fall asleep and wake up _before_ Baker Street,
 your count of "remaining stops" is now invalid, but you can still compare each
 stop and reach Baker Street safely.
 
@@ -111,12 +111,12 @@ whether you've reached your stop. You may use a combination of the two methods,
 such as looking outside every third stop to get your bearings and revalidating
 your counter. You may use heuristics such as knowing the approximate length
 of the ride to determine how long you should count for, and when you should
-look at where you are. You might also *optimize* for different things: maybe
+look at where you are. You might also _optimize_ for different things: maybe
 you want to read a book and it doesn't matter if you miss your stop, or maybe
-you *really* can't miss your stop today and need to be vigilant.
+you _really_ can't miss your stop today and need to be vigilant.
 
 Another interesting insight is that whichever method you choose, it's not the
-*only* place to find the answer you're looking for. You could ask the bus driver
+_only_ place to find the answer you're looking for. You could ask the bus driver
 or a fellow passenger how many stops there are left. You could use an app to
 send you a push notification when your stop is approaching. You could even just
 get off at the wrong stop and walk from there or take the next bus!
@@ -134,7 +134,7 @@ But when I write code, I rarely use more than one approach to solving the proble
 a handful of error scenarios. This isn't necessarily bad, to be fair. One reason
 for this is that the amount of data available to our program is much more limited
 than the amount available to our brain. Another reason is that we rely on
-*contracts* from the things external to our program. For example, we may expect
+_contracts_ from the things external to our program. For example, we may expect
 that a bus will only ever stop at one of the stops in the known route. If it
 stops anywhere else, we'll get off at the wrong stop, but it won't be
 "our fault"--we'll just complain to the people who own and operate the bus.

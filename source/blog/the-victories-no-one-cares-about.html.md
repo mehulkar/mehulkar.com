@@ -1,6 +1,6 @@
 ---
 title: "The Victories No One Cares About"
-date:  2011-09-11
+date: 2011-09-11
 categories: personal
 ---
 
@@ -8,7 +8,7 @@ We have this crazy, insatiable need to share the happy moments of our lives. A m
 
 As a tennis instructor, my success is in seeing tiny improvements in technique, changes that are barely visible to the naked eye. Most of the time, the player doesn’t notice the difference either. As an amateur web designer, my success is in writing clean and efficient code that I can understand one year later and that I can reuse in the future as well.
 
-Unfortunately for me,  a completely refactored website and a tweaked forehand are only visible to me. The users of my website don’t care that the architecture of the code is clean and efficient if their experience doesn’t change. My clients don’t care that the tweaked forehand will allow them to play injury-free for an extra few years if their shots aren’t landing inside the lines.
+Unfortunately for me, a completely refactored website and a tweaked forehand are only visible to me. The users of my website don’t care that the architecture of the code is clean and efficient if their experience doesn’t change. My clients don’t care that the tweaked forehand will allow them to play injury-free for an extra few years if their shots aren’t landing inside the lines.
 
 Those little victories are reserved only for me.
 

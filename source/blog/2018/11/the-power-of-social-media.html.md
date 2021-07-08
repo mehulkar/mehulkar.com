@@ -6,7 +6,7 @@ categories: tech
 
 It seems as if there is a revolution everywhere I turn these days. From cries of “save the rainforest” to confirmation of water on Mars to the Kindle, the new generation (that would be us) is radically morphing the way they think. The latest, and probably the most game-changing revolution is that of social media.
 
-For most, the term is just  a buzz word, the kind that you refer to often, but don’t fully care to understand. Let me explain both the implication and the impact of this buzz word.
+For most, the term is just a buzz word, the kind that you refer to often, but don’t fully care to understand. Let me explain both the implication and the impact of this buzz word.
 
 Media (plural for medium is simply a channel for communication. Traditionally, the power to use this channel has been controlled by a select few (think Rupert Murdoch). But in the last decade, high speed internet and faster computers have made it possible to distribute this power more evenly into the public. Social media has always existed in the form of word-of-mouth and references, but technology and platforms like Facebook and twitter have made it much easier to spread the word, or, “go viral.” So far, pretty straightforward, but a good appetizer is essential if one is to enjow a wholesome meal, right?
 

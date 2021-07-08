@@ -4,14 +4,13 @@ date: 2020-03-25
 categories: ember.js
 ---
 
-I recently wanted to ship an Ember template lint rule from an addon. This use case wasn't *exactly*
+I recently wanted to ship an Ember template lint rule from an addon. This use case wasn't _exactly_
 documented anywhere, so it took me a little while to figure out how to do it effectively. For anyone
 else attempting to do the same, the ingredients are:
 
-1. A file in the addon that exports a *plugin* that contains the rule.
+1. A file in the addon that exports a _plugin_ that contains the rule.
 1. A custom test setup
 1. Using the plugin from an app that installs the addon
-
 
 ## Creating the Rule and Plugin
 
@@ -20,20 +19,20 @@ used by the Ember CLI build pipeline. Because I only needed to create one rule, 
 the root of the directory as `template-lint-plugin.js`. The file looks like this:
 
 ```js
-const Rule = require('ember-template-lint').Rule;
+const Rule = require("ember-template-lint").Rule;
 
 class MyRule extends Rule {
-  visitor() {
-    return {}
-  }
+    visitor() {
+        return {};
+    }
 }
 
 module.exports = {
-  name: 'plugin-name',
-  rules: {
-    'the-rule-name': MyRule
-  }
-}
+    name: "plugin-name",
+    rules: {
+        "the-rule-name": MyRule,
+    },
+};
 ```
 
 [The Plugin API][1] documents a few alternative ways to do this as well. For example, the default export
@@ -52,64 +51,64 @@ so I opted to set up my tests the same way.
 
 I had to do the following to make it work:
 
-1. `npm install --save-dev jest`, and configure it to run tests in the `node-tests` directory by
-adding configuration in `package.json`:
+1.  `npm install --save-dev jest`, and configure it to run tests in the `node-tests` directory by
+    adding configuration in `package.json`:
 
-    ```json
-    {
-      ...
-      "jest": {
-        "coveragePathIgnorePatterns": [
-          "<rootDir>/node_modules/",
-          "<rootDir>/node-tests/"
-        ],
-        "testMatch": [
-          "<rootDir>/node-tests/**/*-test.js"
-        ]
-      }
-    }
-    ```
+        ```json
+        {
+          ...
+          "jest": {
+            "coveragePathIgnorePatterns": [
+              "<rootDir>/node_modules/",
+              "<rootDir>/node-tests/"
+            ],
+            "testMatch": [
+              "<rootDir>/node-tests/**/*-test.js"
+            ]
+          }
+        }
+        ```
 
-    There are several other ways to configure Jest, but this was the most lightweight. The
-    decision to ignore the `node-tests` directory and then include files matching `-test.js`,
-    [comes wholesale from `ember-template-lint`][3].
+        There are several other ways to configure Jest, but this was the most lightweight. The
+        decision to ignore the `node-tests` directory and then include files matching `-test.js`,
+        [comes wholesale from `ember-template-lint`][3].
 
-1. Add a test file at `node-tests/template-lint-plugin-test.js` looks like this:
+1.  Add a test file at `node-tests/template-lint-plugin-test.js` looks like this:
 
     ```js
-    const generateRuleTests = require('ember-template-lint/lib/helpers/rule-test-harness');
+    const generateRuleTests = require("ember-template-lint/lib/helpers/rule-test-harness");
 
     // The plugin object exported from the file created above.
-    const myPlugin = require('../template-lint-plugin');
+    const myPlugin = require("../template-lint-plugin");
 
     function generateRuleTestsHelper(options) {
-      return generateRuleTests(
-        Object.assign({}, options, {
-          groupMethodBefore: beforeEach, // refers to `Jest`'s global `beforeEach`
-          groupingMethod: describe, // refers to `Jest`'s global `describe`
-          testMethod: test, // refers to `Jest`'s global `test`
-          focusMethod: test.only, // refers to `Jest`'s global `test.only`
-          plugins: [myPlugin] // The plugin
-        })
-      );
+        return generateRuleTests(
+            Object.assign({}, options, {
+                groupMethodBefore: beforeEach, // refers to `Jest`'s global `beforeEach`
+                groupingMethod: describe, // refers to `Jest`'s global `describe`
+                testMethod: test, // refers to `Jest`'s global `test`
+                focusMethod: test.only, // refers to `Jest`'s global `test.only`
+                plugins: [myPlugin], // The plugin
+            })
+        );
     }
 
     generateRuleTestsHelper({
-      name: 'the-rule-name',
-      config: true,
-      good: [
-        // examples of markup that passes the lint rule
-      ],
-      bad: [
-        // examples of markup that fails the lint rule
-      ]
+        name: "the-rule-name",
+        config: true,
+        good: [
+            // examples of markup that passes the lint rule
+        ],
+        bad: [
+            // examples of markup that fails the lint rule
+        ],
     });
     ```
 
     The examples of how to add test cases into `good` and `bad` can be taken from any of the rule
     [tests in `ember-template-lint` now][2].
 
-1. Add an npm script to `package.json` to run the "Node" tests.
+1.  Add an npm script to `package.json` to run the "Node" tests.
 
     ```
     {
@@ -121,7 +120,6 @@ adding configuration in `package.json`:
     a `test:node` script would automatically be added to the test suite and CI runs. Before 3.17,
     depending on your addon's test setup, you could simply add `&& npm run test:node` to the test script.
 
-
 ## Using the plugin in an app
 
 Now that the addon contains a lint plugin and is tested, we can actually use it in an app.
@@ -132,14 +130,14 @@ and enable the lint rule in `.template-lintrc.js`:
 // .template-lintrc.js
 
 module.exports = {
-  plugins: ['my-addon-name/template-lint-plugin'],
-  rules: {
-    'the-rule-name': true
-  }
-}
+    plugins: ["my-addon-name/template-lint-plugin"],
+    rules: {
+        "the-rule-name": true,
+    },
+};
 ```
 
-Note that the plugin's *name*  (noted in the plugin object's `name` key) isn't referenced here at all.
+Note that the plugin's _name_ (noted in the plugin object's `name` key) isn't referenced here at all.
 The only thing that is needed is a path to where the plugin is exported from and ember-template-lint
 will `require` it. Because this runs in Node, and Node's `require` can resolve paths from the
 `node_modules` directory, this works.
@@ -147,8 +145,8 @@ will `require` it. Because this runs in Node, and Node's `require` can resolve p
 There you have it! Ember template lint plugins are fairly straightforward (and a [powerful way to
 encourage a certain way of programing][4]), but the wiring wasn't immediately
 obvious to me. Another thing I found confusing is that the `rules` key in the Plugin API
-refers to the Rule *class* (i.e. the implementation), but the `rules` key in `.template-lintrc.js`
-refers to the *configuration* of that rule (on or off).
+refers to the Rule _class_ (i.e. the implementation), but the `rules` key in `.template-lintrc.js`
+refers to the _configuration_ of that rule (on or off).
 
 Hope this helps someone else!
 

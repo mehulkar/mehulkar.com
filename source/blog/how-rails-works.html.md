@@ -16,15 +16,13 @@ and I want to make it clear that (1) that's a fine way to feel and (2),
 
 [1]: https://www.youtube.com/watch?v=GtkST5-ZFHw
 
-
-
 ## What to expect
 
 You won't be writing any code in this tutorial for two reasons:
 
-- Installing Ruby on Rails can be a pain because installing Ruby is a pain.
-- So I can write another post about actual code and get more pageviews and earn
-  $0 dollars again from the lack of ads on this page.
+-   Installing Ruby on Rails can be a pain because installing Ruby is a pain.
+-   So I can write another post about actual code and get more pageviews and earn
+    $0 dollars again from the lack of ads on this page.
 
 ## So, Ruby on Rails
 
@@ -38,8 +36,6 @@ There are 3 important things:
 1. Routes,
 1. Controllers,
 1. Views
-
-
 
 ### Routes
 
@@ -75,7 +71,6 @@ responds with a message saying "You are such a monkey. Why are you such a
 monkey". And that would be that. (It cannot serve you real bananas to eat,
 though. Wouldn't that be something?)
 
-
 ### Views
 
 Typically in a web application, when someone makes a request, they want to
@@ -91,8 +86,6 @@ don't know what any of these are, AHA, I have another thing to write about!
 [Tell me!](//twitter.com/mehulkar).
 
 So that's what a view is: It contains content that should be displayed in a browser.
-
-
 
 ### All together
 

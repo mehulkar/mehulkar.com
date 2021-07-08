@@ -60,8 +60,8 @@ class MyClass():
 The `main` function here does 2 things:
 
 1. Binds `self.main` as a callback to `SIGALARM`. This means
-that if a `SIGALARM` is received by the current process, it should
-call `self.main()`.
+   that if a `SIGALARM` is received by the current process, it should
+   call `self.main()`.
 1. Sends `SIGALARM` to the current process in 10 seconds.
 
 The combination of these two lines mean that every 10 seconds
