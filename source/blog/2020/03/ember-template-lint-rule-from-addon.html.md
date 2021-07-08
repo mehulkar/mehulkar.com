@@ -22,16 +22,16 @@ the root of the directory as `template-lint-plugin.js`. The file looks like this
 const Rule = require("ember-template-lint").Rule;
 
 class MyRule extends Rule {
-    visitor() {
-        return {};
-    }
+  visitor() {
+    return {};
+  }
 }
 
 module.exports = {
-    name: "plugin-name",
-    rules: {
-        "the-rule-name": MyRule,
-    },
+  name: "plugin-name",
+  rules: {
+    "the-rule-name": MyRule,
+  },
 };
 ```
 
@@ -54,24 +54,21 @@ I had to do the following to make it work:
 1.  `npm install --save-dev jest`, and configure it to run tests in the `node-tests` directory by
     adding configuration in `package.json`:
 
-        ```json
-        {
-          ...
-          "jest": {
-            "coveragePathIgnorePatterns": [
-              "<rootDir>/node_modules/",
-              "<rootDir>/node-tests/"
-            ],
-            "testMatch": [
-              "<rootDir>/node-tests/**/*-test.js"
-            ]
-          }
-        }
-        ```
+    ```json
+    {
+      "jest": {
+        "coveragePathIgnorePatterns": [
+          "<rootDir>/node_modules/",
+          "<rootDir>/node-tests/"
+        ],
+        "testMatch": ["<rootDir>/node-tests/**/*-test.js"]
+      }
+    }
+    ```
 
-        There are several other ways to configure Jest, but this was the most lightweight. The
-        decision to ignore the `node-tests` directory and then include files matching `-test.js`,
-        [comes wholesale from `ember-template-lint`][3].
+    There are several other ways to configure Jest, but this was the most lightweight. The
+    decision to ignore the `node-tests` directory and then include files matching `-test.js`,
+    [comes wholesale from `ember-template-lint`][3].
 
 1.  Add a test file at `node-tests/template-lint-plugin-test.js` looks like this:
 
@@ -82,26 +79,26 @@ I had to do the following to make it work:
     const myPlugin = require("../template-lint-plugin");
 
     function generateRuleTestsHelper(options) {
-        return generateRuleTests(
-            Object.assign({}, options, {
-                groupMethodBefore: beforeEach, // refers to `Jest`'s global `beforeEach`
-                groupingMethod: describe, // refers to `Jest`'s global `describe`
-                testMethod: test, // refers to `Jest`'s global `test`
-                focusMethod: test.only, // refers to `Jest`'s global `test.only`
-                plugins: [myPlugin], // The plugin
-            })
-        );
+      return generateRuleTests(
+        Object.assign({}, options, {
+          groupMethodBefore: beforeEach, // refers to `Jest`'s global `beforeEach`
+          groupingMethod: describe, // refers to `Jest`'s global `describe`
+          testMethod: test, // refers to `Jest`'s global `test`
+          focusMethod: test.only, // refers to `Jest`'s global `test.only`
+          plugins: [myPlugin], // The plugin
+        })
+      );
     }
 
     generateRuleTestsHelper({
-        name: "the-rule-name",
-        config: true,
-        good: [
-            // examples of markup that passes the lint rule
-        ],
-        bad: [
-            // examples of markup that fails the lint rule
-        ],
+      name: "the-rule-name",
+      config: true,
+      good: [
+        // examples of markup that passes the lint rule
+      ],
+      bad: [
+        // examples of markup that fails the lint rule
+      ],
     });
     ```
 
@@ -110,7 +107,7 @@ I had to do the following to make it work:
 
 1.  Add an npm script to `package.json` to run the "Node" tests.
 
-    ```
+    ```json
     {
       "test:node": "jest"
     }
@@ -130,10 +127,10 @@ and enable the lint rule in `.template-lintrc.js`:
 // .template-lintrc.js
 
 module.exports = {
-    plugins: ["my-addon-name/template-lint-plugin"],
-    rules: {
-        "the-rule-name": true,
-    },
+  plugins: ["my-addon-name/template-lint-plugin"],
+  rules: {
+    "the-rule-name": true,
+  },
 };
 ```
 
