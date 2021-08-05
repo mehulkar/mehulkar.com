@@ -11,7 +11,7 @@ but the suggestions for how to analyze it still worked for me:
 [1]: https://github.com/ember-cli/ember-cli/blob/master/docs/perf-guide.md#broccoli-viz
 
 1. `BROCCOLI_VIZ=1 ember build --environment production`
-1. Open `instrumentation.0.build.json` in https://heimdalljs.github.io/heimdalljs-visualizer/#/flame.
+1. Open `instrumentation.0.build.json` in <https://heimdalljs.github.io/heimdalljs-visualizer/#/flame>.
 1. Stare at it forever until it starts to make some sense.
 
 I asked coworkers what I'm supposed to do with a flame chart and one pointed me
