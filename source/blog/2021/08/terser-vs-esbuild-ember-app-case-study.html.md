@@ -75,7 +75,7 @@ this.pool = workerpool.pool(path.join(__dirname, "lib", "worker.js"), {
 
 I thought it might be worthwhile to try without this parallelization, to reduce
 the number of factors, so I ran my build with `JOBS=1`. This time, the numbers
-were more aligned with my expectations for esbuild (which claims to be 10x-100x faster)<sup>2</sup>.
+were more aligned with my expectations for esbuild (which claims to be 10x-100x faster<sup>2</sup>).
 
 TerserWriter dropped to 4seconds--5x faster than parallelized terser! Running
 the original _terser_ implementation with `JOBS=1` on the other hand went up to 53 seconds<sup>3</sup>.
@@ -85,7 +85,7 @@ the original _terser_ implementation with `JOBS=1` on the other hand went up to 
 I wanted to see a smaller breakdown of how long it took to minify each file, so
 I used the logging in `broccoli-terser-sourcemap` to construct this table:
 
-| File                       | Size       | terser | terser JOBS=1 | esbuild | esbuild JOBS=1 |
+| File                       | Size       | terser | JOBS=1 terser | esbuild | JOBS=1 esbuild |
 | -------------------------- | ---------- | ------ | ------------- | ------- | -------------- |
 | chunk.0                    | 23.778KB   | 749ms  | 151ms         | 23708ms | ⭐ **7ms**     |
 | chunk.1                    | 6.625KB    | 383ms  | 31ms          | 23715ms | ⭐ **5ms**     |
