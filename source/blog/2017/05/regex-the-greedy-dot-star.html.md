@@ -17,10 +17,13 @@ render a `CHANGELOG.md` in a nicer way. The idea is that markdown like this:
 turns into this HTML:
 
 ```html
-1. <span class="fixed tag">fixed</span> that one bug 1.
-<span class="added tag">added</span> that one feature 1.
-<span class="removed tag">removed</span> that other thing 1. this one doesn't
-have a tag
+<ol>
+  <li><span class="fixed tag">fixed</span> that one bug</li>
+  <li><span class="added tag">added</span> that one feature</li>
+  <li><span class="removed tag">removed</span> that other thing</li>
+  <li>this one doesn't have a tag</li>
+  <ol></ol>
+</ol>
 ```
 
 Notice that the main transformation is the "tag" inside square brackets
