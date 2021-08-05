@@ -1,5 +1,5 @@
 ---
-title: "Terser vs esbuid: Ember app case study"
+title: "Terser vs esbuild: Ember app case study"
 date: 2021-08-05
 categories: programming, frontend, javascript
 ---
