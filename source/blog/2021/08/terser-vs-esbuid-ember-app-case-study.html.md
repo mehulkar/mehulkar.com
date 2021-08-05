@@ -5,8 +5,10 @@ categories: programming, frontend, javascript
 ---
 
 Over the last couple of weeks, I've been trying to improve the amount of time
-my ember apps take to build. The perf-guide in the ember-cli repo is a bit old
+my ember apps take to build. The [perf-guide in the ember-cli repo][1] is a bit old
 but the suggestions for how to analyze it still worked for me:
+
+[1]: https://github.com/ember-cli/ember-cli/blob/master/docs/perf-guide.md#broccoli-viz
 
 1. `BROCCOLI_VIZ=1 ember build --environment production`
 1. Open `instrumentation.0.build.json` in https://heimdalljs.github.io/heimdalljs-visualizer/#/flame.
