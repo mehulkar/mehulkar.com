@@ -24,33 +24,33 @@ issues, rollback.
 
 1. `brew rm watchman`
 
-   This removes `watchman` from your system.
+    This removes `watchman` from your system.
 
 1. `curl https://raw.githubusercontent.com/Homebrew/homebrew-core/ec72d21865f5b18191594565fda4157b7576dea8/Formula/watchman.rb | pbcopy`
 
-   This updates the "Formula" for installing watchman with the 4.9.0 version, which
-   is the working version<sup>1</sup>
+    This updates the "Formula" for installing watchman with the 4.9.0 version, which
+    is the working version<sup>1</sup>
 
 1. `brew edit watchman`
 
-   This opens up the file where Homebrew keeps the formula for installing watchman
-   on your system.
+    This opens up the file where Homebrew keeps the formula for installing watchman
+    on your system.
 
 1. paste and save
 
-   Save the 4.9.0 installer for watchman into the file, so that it will
-   install 4.9.0 next time you install.
+    Save the 4.9.0 installer for watchman into the file, so that it will
+    install 4.9.0 next time you install.
 
 1. `HOMEBREW_UPDATE_PREINSTALL=0 brew install watchman`
 
-   Installs `watchman`, but opts out of running updating all Homebrew
-   formulas before doing the install (which would overwrite the formula)
-   we just edited before. You can also add this to your shell profile
-   to always have this behavior.
+    Installs `watchman`, but opts out of running updating all Homebrew
+    formulas before doing the install (which would overwrite the formula)
+    we just edited before. You can also add this to your shell profile
+    to always have this behavior.
 
 1. `brew pin watchman`
 
-   Prevents upgrading the formula in the future.
+    Prevents upgrading the formula in the future.
 
 Another coworker pointed me to more commands from `watchman`, which look like reset
 steps.
