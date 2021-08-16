@@ -19,19 +19,19 @@ It's an amazing opportunity to learn from this history in high fidelity.
 
 ## San Francisco
 
-San Francisco is fascinating place because of how good it _could_ be, but how
+San Francisco is a fascinating place because of how good it _could_ be, but how
 bad it actually is to live in today. How did it get this way? Recently, I read
-Steven Buss's [_When did things go wrong in San Francisco?_][6]. I'm vaguely
-there are complicated reasons for high rent in San Francisco that are not just
-simply supply and demand economics, and I want to learn more about the part
+Steven Buss's [_When did things go wrong in San Francisco?_][6]. I'm aware
+there are complicated reasons for high rent in San Francisco that are not simply
+supply and demand economics, and I want to learn more about the part
 politics has played. In the same vein, how is San Francisco public transportation
-So. Far. Behind NYC? A [recent interview][7] with [Jeffrey Tumlin][8] helps shed
-some light, but there's so much more to understand.
+So. Far. Behind. NYC? A [recent interview][7] with Jeffrey Tumlin, the Director
+of the MTA helps shed some light, but there's so much more to understand.
 
 But even with its problems, there's a lot more to San Francisco than
 tech and startups and the Golden Gate Bridge and I want to discover it all.
-I've been maintaining [a Twitter list](https://twitter.com/i/lists/1197055189594730496)
-with local businesses, organizations, and other enthusiasts to help.
+I've been maintaining [a Twitter list][11] with local businesses, organizations,
+and other enthusiasts to help.
 
 ## Cellular Meat
 
@@ -69,6 +69,6 @@ about how engineers like myself can play more impactful role in organizations.
 [5]: https://www.amazon.com/Staff-Engineer-Leadership-beyond-management/dp/1736417916
 [6]: https://sbuss.substack.com/p/when-did-things-go-wrong-in-san-francisco
 [7]: https://docs.google.com/document/d/1_icklfvHfj8iYLB80MRb76w4Tv9OkMaJfQkotrrQAxw/edit0
-[8]: https://www.sfmta.com/people/jeffrey-tumlin
 [9]: https://braverobot.co/
 [10]: https://perfectdayfoods.com/
+[11]: https://twitter.com/i/lists/1197055189594730496
