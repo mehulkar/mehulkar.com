@@ -12,13 +12,16 @@ const fullDate = Intl.DateTimeFormat("en-us", {
 });
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.setTemplateFormats("html,hbs,md,njk");
+  eleventyConfig.setTemplateFormats("md,html,hbs,njk");
+  eleventyConfig.setTemplateFormats(["png", "webp", "jpg"]);
 
   eleventyConfig.addPassthroughCopy({
     "source/stylesheets/**/*.css": "stylesheets",
     "source/stylesheets/vendor/*.css": "stylesheets/vendor",
-    "source/images/**/*.png": "images",
-    "source/images/**/*.jpeg": "images",
+    // "source/images/**/*": "images",
+    // "source/images/**/*.webp": "images",
+    // "source/images/**/*.png": "images",
+    // "source/images/**/*.jpeg": "images",
     // 'assets/**/*.js': 'assets',
     // 'assets/**/*.css': 'assets',
     // 'manifest.json': '/manifest.json',
@@ -55,4 +58,11 @@ module.exports = function (eleventyConfig) {
     // from this value and format that.
     return fullDate.format(value);
   });
+
+  return {
+    dir: {
+      input: "./",
+      output: "./_site",
+    },
+  };
 };
