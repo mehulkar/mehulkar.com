@@ -1,6 +1,7 @@
 ---
 title: "Being Comfortable with Being Uncomfortable"
 categories: personal
+date: 2014-02-26
 ---
 
 I've decided to start writing again.

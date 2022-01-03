@@ -1,6 +1,7 @@
 ---
 title: "Go Home"
 categories: personal
+date: 2015-04-15
 ---
 
 I used to have this mandatory gym class.

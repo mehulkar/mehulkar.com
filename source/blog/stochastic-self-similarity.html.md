@@ -1,6 +1,7 @@
 ---
 title: "Stochastic Self Similarity"
 categories: til
+date: 2015-08-30
 ---
 
 I've been reading<sup>1</sup> [Creativity, Inc][1] and I learned a new concept today:
