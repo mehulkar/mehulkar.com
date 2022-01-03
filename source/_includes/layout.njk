@@ -17,16 +17,22 @@
     <meta content="width=device-width, initial-scale=1" name=viewport>
 
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title>
-      {% if title %}
-        {{title}}
-      {% else %}
-        Mehul Kar
-      {% endif %}
-    </title>
 
+    <!-- TODO: can we combine these branches with an inline if statement somehow? -->
     {% if title %}
-      <meta name="Description" content="Blog Post: {{title}}">
+      <title>{{title}}</title>
+      <meta name="description" content="Blog Post: {{title}}">
+      <meta name="twitter:title" content="{{title}} | Mehul Kar">
+      <meta name="twitter:description" content="{{title}} : Mehul Kar">
+      <meta property="og:title" content="{{title}} | Mehul Kar">
+      <meta property="og:description" content="{{title}} : Mehul Kar">
+    {% else %}
+      <title>Mehul Kar</title>
+      <meta name="description" content="Mehul Kar's website">
+      <meta name="twitter:title" content="Mehul Kar">
+      <meta name="twitter:description" content="Mehul Kar's website">
+      <meta property="og:title" content="Mehul Kar">
+      <meta property="og:description" content="Mehul Kar's website">
     {% endif %}
 
     <link rel="stylesheet" href="/stylesheets/vendor/tachyons.css">
