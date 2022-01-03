@@ -13,7 +13,7 @@ const CATEGORY_PAGES = [
   "books",
   "emberjs",
   "frontend",
-  "ninjatennis",
+  "ninja-tennis",
   "poetry",
   "programming",
   "quotations",
