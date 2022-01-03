@@ -21,6 +21,7 @@ module.exports = function (eleventyConfig) {
     "png",
     "webp",
     "jpg",
+    "jpeg",
   ]);
 
   eleventyConfig.addPassthroughCopy({
@@ -28,7 +29,7 @@ module.exports = function (eleventyConfig) {
     "source/stylesheets/vendor/*.css": "stylesheets/vendor",
     // 'assets/**/*.js': 'assets',
     // 'assets/**/*.css': 'assets',
-    // 'manifest.json': '/manifest.json',
+    "source/manifest.json": "/manifest.json",
   });
 
   //   // Add handlebars helper so we can match how 11ty generates the pages in
