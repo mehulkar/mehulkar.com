@@ -3,4 +3,6 @@ title: Ember.js
 categories: programming, frontend, ember.js, javascript
 ---
 
-<%= partial 'partials/by-year', locals: { grouped_posts: posts_for_category('ember.js') } %>
+{% set posts = collections.byYear | category("ember.js") %}
+{% from 'partials/_by-year.njk' import render %}
+{{ render(posts) }}

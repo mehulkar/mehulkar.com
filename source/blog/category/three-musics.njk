@@ -8,4 +8,6 @@ categories: music
   and discover new genres from other people.
 </p>
 
-<%= partial 'partials/by-year', locals: { grouped_posts: posts_for_category('three-musics') } %>
+{% set posts = collections.byYear | category("three-musics") %}
+{% from 'partials/_by-year.njk' import render %}
+{{ render(posts) }}

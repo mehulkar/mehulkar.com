@@ -46,12 +46,13 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("byYear", function (collectionApi) {
     const all = collectionApi.getAll();
 
+    const posts = all.filter(
+      (post) => !post.inputPath.match(/\/blog\/category/)
+    );
+
     // Group posts by year first. This is an unsorted object
     const byYear = {};
-    for (const post of all) {
-      if (post.inputPath.match(/\/blog\/category/)) {
-        continue;
-      }
+    for (const post of posts) {
       const year = post.date.getFullYear();
       byYear[year] = byYear[year] || [];
       byYear[year].push(post);
@@ -74,6 +75,28 @@ module.exports = function (eleventyConfig) {
     return sortedGroups;
   });
 
+  eleventyConfig.addNunjucksFilter("category", function (byYear, category) {
+    const filtered = [];
+
+    for (const postCollction of byYear) {
+      const year = postCollction.name;
+
+      const forCategory = postCollction.posts.filter((post) => {
+        const postCategories = getCategories(post);
+        return postCategories.includes(category);
+      });
+
+      if (forCategory.length) {
+        filtered.push({
+          name: year,
+          posts: forCategory,
+        });
+      }
+    }
+
+    return filtered;
+  });
+
   eleventyConfig.addCollection("categories", function (collectionApi) {
     const all = collectionApi.getAll();
 
@@ -81,14 +104,7 @@ module.exports = function (eleventyConfig) {
     const allCategories = new Set();
 
     for (const post of all) {
-      // Use nullish coalesce, because some posts have categories, but
-      // nothing set for it, whereas some don't have the frontmatter at all.
-      const categories = post.data.categories ?? "";
-
-      const postCategories = categories
-        .split(",")
-        .map((x) => x.trim())
-        .filter(Boolean);
+      const postCategories = getCategories(post);
 
       for (const category of postCategories) {
         allCategories.add(category);
@@ -149,3 +165,14 @@ module.exports = function (eleventyConfig) {
     },
   };
 };
+
+function getCategories(post) {
+  // Use nullish coalesce, because some posts have categories, but
+  // nothing set for it, whereas some don't have the frontmatter at all.
+  const categories = post.data.categories ?? "";
+
+  return categories
+    .split(",")
+    .map((x) => x.trim())
+    .filter(Boolean);
+}

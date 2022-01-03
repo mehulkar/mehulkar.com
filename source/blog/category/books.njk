@@ -3,4 +3,6 @@ title: Books
 categories: books, book reviews
 ---
 
-<%= partial 'partials/by-year', locals: { grouped_posts: posts_for_category('books') } %>
+{% set posts = collections.byYear | category("books") %}
+{% from 'partials/_by-year.njk' import render %}
+{{ render(posts) }}

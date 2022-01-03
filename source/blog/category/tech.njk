@@ -3,4 +3,6 @@ title: Tech
 categories: technology, tech, silicon valley,
 ---
 
-<%= partial 'partials/by-year', locals: { grouped_posts: posts_for_category('tech') } %>
+{% set posts = collections.byYear | category("tech") %}
+{% from 'partials/_by-year.njk' import render %}
+{{ render(posts) }}
