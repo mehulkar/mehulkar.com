@@ -11,6 +11,19 @@ const fullDate = Intl.DateTimeFormat("en-us", {
   year: "numeric",
 });
 
+const CATEGORY_PAGES = [
+  "books",
+  "emberjs",
+  "frontend",
+  "ninjatennis",
+  "poetry",
+  "programming",
+  "quotations",
+  "tech",
+  "three-musics",
+  "til",
+];
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.setTemplateFormats([
     "html,hbs,md,njk",
@@ -101,6 +114,15 @@ module.exports = function (eleventyConfig) {
     if (!value) return [];
 
     return value.split(", ");
+  });
+
+  eleventyConfig.addNunjucksFilter("categoryLink", function (value) {
+    const classList = "pill dib mb3 br1 ph3 pv1 ttu";
+    if (CATEGORY_PAGES.includes(value)) {
+      return `<a href="/${value}" class="pill--link ${classList}">${value}</a>`;
+    } else {
+      return `<span class="${classList}">${value}</span>`;
+    }
   });
 
   return {
