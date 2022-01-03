@@ -8,8 +8,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx eleventy --serve --input source",
-    "build": "npx eleventy --input source"
+    "start": "npx eleventy --serve",
+    "prebuild": "rm -rf ./build",
+    "build": "npx eleventy"
   },
   "repository": {
     "type": "git",
