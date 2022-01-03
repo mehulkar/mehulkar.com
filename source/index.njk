@@ -14,7 +14,6 @@ layout: layout.njk
 <h2 class="mb3">Blog</h2>
 
 {%- for year in collections.byYear -%}
-
   <div class='post-group mb4 mt0 ml0'>
     <h2 class="post-group--title mb3 fw2 bb">
       {{year.name}}
@@ -34,5 +33,7 @@ layout: layout.njk
 {%- endfor -%}
 
 <nav class='flex flex-wrap mb4'>
-  <!-- TODO: add list of categories back -->
+  {% for category in collections.categories %}
+    {{category | categoryLink | safe }}
+  {% endfor %}
 </nav>

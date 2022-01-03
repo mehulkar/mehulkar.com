@@ -71,6 +71,32 @@ module.exports = function (eleventyConfig) {
     return sortedGroups;
   });
 
+  eleventyConfig.addCollection("categories", function (collectionApi) {
+    const all = collectionApi.getAll();
+
+    // Group posts by year first. This is an unsorted object
+    const allCategories = new Set();
+
+    for (const post of all) {
+      // Use nullish coalesce, because some posts have categories, but
+      // nothing set for it, whereas some don't have the frontmatter at all.
+      const categories = post.data.categories ?? "";
+
+      const postCategories = categories
+        .split(",")
+        .map((x) => x.trim())
+        .filter(Boolean);
+
+      for (const category of postCategories) {
+        allCategories.add(category);
+      }
+    }
+
+    console.log(Array.from(allCategories));
+
+    return Array.from(allCategories);
+  });
+
   eleventyConfig.addFilter("formatDate", function (value) {
     if (!value) return "";
 
