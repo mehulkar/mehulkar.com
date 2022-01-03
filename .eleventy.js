@@ -135,7 +135,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addNunjucksFilter("categoryLink", function (value) {
     const classList = "pill dib mb3 br1 ph3 pv1 ttu";
     if (CATEGORY_PAGES.includes(value)) {
-      return `<a href="/${value}" class="pill--link ${classList}">${value}</a>`;
+      return `<a href="/blog/category/${value}" class="pill--link ${classList}">${value}</a>`;
     } else {
       return `<span class="${classList}">${value}</span>`;
     }
