@@ -1,5 +1,3 @@
-// const SlugFilter = require('@11ty/eleventy/src/Filters/Slug');
-
 const shortDate = Intl.DateTimeFormat("en-us", {
   month: "short",
   day: "numeric",
@@ -44,14 +42,6 @@ module.exports = function (eleventyConfig) {
     // 'assets/**/*.css': 'assets',
     "source/manifest.json": "/manifest.json",
   });
-
-  //   // Add handlebars helper so we can match how 11ty generates the pages in
-  //   // people-pages.njk when we generate our links in the app in index.hbs.
-  //   // https://www.11ty.dev/docs/filters/slug/
-  //   // https://github.com/11ty/eleventy/blob/v0.11.0/src/Filters/Slug.js
-  //   eleventyConfig.addHandlebarsHelper("slugify", function(value) {
-  //     return SlugFilter(value);
-  //   });
 
   eleventyConfig.addCollection("byYear", function (collectionApi) {
     const all = collectionApi.getAll();
