@@ -1,6 +1,7 @@
 ---
 title: "Unit Testing: Interface vs. Implementation"
 categories: programming
+date: 2015-05-26
 ---
 
 Disclosure: This is probably obvious to some people. It wasn't to me.

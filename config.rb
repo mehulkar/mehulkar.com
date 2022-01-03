@@ -51,14 +51,6 @@ helpers do
     false
   end
 
-  def formatted_date(date)
-    date.strftime("%b %d")
-  end
-
-  def full_date(date)
-    date.strftime("%b %d, %Y")
-  end
-
   def posts_for_category(name)
     by_category = Post.by_category
     for_category = by_category[name]
