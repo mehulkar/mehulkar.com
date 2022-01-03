@@ -3,11 +3,11 @@ layout: layout
 ---
 
 <div class='mb3'>
-  <%= link_to '&larr; Back', home_path %>
+  <a href="/">Back</a>
 </div>
 
 <h1 class="mb3">
-  <%= current_page.metadata[:page][:title] %>
+  {{title}}
 </h1>
 
-{{yield}}
+{{content | safe }}
