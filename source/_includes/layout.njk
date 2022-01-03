@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <!-- TODO: fix this
     <% if config[:analytics] %>
       <link rel="preconnect" href="https://plausible.io" crossorigin>
@@ -16,12 +17,6 @@
     <meta content="width=device-width, initial-scale=1" name=viewport>
 
     <!-- Use title if it's in the page YAML frontmatter -->
-
-    <!-- TODO: fix this
-    <title><%= current_page.data.title || "Mehul Kar" %></title>
-    <meta name="Description" content="<%= current_page.data.title ? "Blog post: #{current_page.data.title}" : "Mehul Kar's website" %>">
-    -->
-
     <title>
       {% if title %}
         {{title}}
@@ -35,12 +30,9 @@
     {% endif %}
 
     <link rel="stylesheet" href="/stylesheets/vendor/tachyons.css">
-
-    <!-- TODO: compile the sass -->
-    <link rel="stylesheet" href="/stylesheets/app.css">
     <link rel="stylesheet" href="/stylesheets/post.css">
-
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Libre+Baskerville&display=swap"></link>
+    <link rel="stylesheet" href="/stylesheets/app.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie+Flower|Libre+Baskerville&display=swap"></link>
 
     <script>
       document.addEventListener('DOMContentLoaded', function() {
