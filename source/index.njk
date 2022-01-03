@@ -24,7 +24,7 @@ layout: layout.hbs
       </span>
     </div>
   </div>
-    {%- endfor -%}
+  {%- endfor -%}
 
 <nav class='flex flex-wrap mb4'>
   <%= partial('partials/categories', locals: { current_categories: Post.categories.sort })%>
