@@ -49,6 +49,9 @@ module.exports = function (eleventyConfig) {
     // Group posts by year first. This is an unsorted object
     const byYear = {};
     for (const post of all) {
+      if (post.inputPath.match(/\/blog\/category/)) {
+        continue;
+      }
       const year = post.date.getFullYear();
       byYear[year] = byYear[year] || [];
       byYear[year].push(post);
