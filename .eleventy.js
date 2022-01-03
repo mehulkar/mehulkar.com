@@ -69,6 +69,10 @@ module.exports = function (eleventyConfig) {
     return joined;
   });
 
+  eleventyConfig.addNunjucksFilter("split", function (value) {
+    return value.split(", ");
+  });
+
   return {
     dir: {
       input: "./",
