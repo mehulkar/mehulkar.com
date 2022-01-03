@@ -23,3 +23,9 @@ categories: food, baking, journal, cookie-log
     - chef note: try chocolate chunks instead
 - cookies too white, why no brown?
     - chef note: maybe sugar wasn't brown sugar? or maybe on wrong rack in oven for browning?
+
+
+<figure>
+    ![cookies](/images/blog/cookie-log-jan-2-2022.JPG)
+    <figcaption>Photo Credit: [@_amishap](https://twitter.com/_amishap)
+</figure>
