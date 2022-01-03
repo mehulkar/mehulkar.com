@@ -70,6 +70,8 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addNunjucksFilter("split", function (value) {
+    if (!value) return [];
+
     return value.split(", ");
   });
 
