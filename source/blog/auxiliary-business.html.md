@@ -26,10 +26,10 @@ and data collection companies "Auxiliary Businesses".
 Auxiliary businesses exist as a layer on top of the
 companies that are doing work. (I want to choose my words carefully here
 because, I don't think that these auxiliary businesses are doing work that is not
-worthwhile. I also don't think that they are not worth working *for*.)
+worthwhile. I also don't think that they are not worth working _for_.)
 
 But I think that once you build one layer of auxiliary business,
-you can build any number of layers on top of *that* layer; i.e.
+you can build any number of layers on top of _that_ layer; i.e.
 analytics for the analytics company.
 
 I believe this is a slippery (but probably profitable) slope and

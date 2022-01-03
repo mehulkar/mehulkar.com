@@ -1,0 +1,10 @@
+{
+  "overrides": [
+    {
+      "files": "source/blog/**/*.html.md",
+      "options": {
+        "tabWidth": 4
+      }
+    }
+  ]
+}

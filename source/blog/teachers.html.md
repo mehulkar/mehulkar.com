@@ -1,6 +1,6 @@
 ---
 title: Teachers
-date:  2010-05-19
+date: 2010-05-19
 categories: thoughts
 ---
 

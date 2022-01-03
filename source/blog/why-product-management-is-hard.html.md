@@ -1,6 +1,6 @@
 ---
 title: Why Product Management is Hard
-date:  2015-08-26 00:00:00
+date: 2015-08-26 00:00:00
 categories: general
 ---
 
@@ -34,9 +34,9 @@ that that feature was critical and needs to come back.
 A Product Manager's role, then, is twofold:
 
 1. To break down features into small chunks so that measurable
-progress is made on a regular and frequent basis.
+   progress is made on a regular and frequent basis.
 1. To make judgement calls about the changing nature of a roadmap
-in relationship to the investments made today.
+   in relationship to the investments made today.
 
 Each of these is difficult both for the technical work required
 and the social work required to convince stakeholders about the merits
@@ -45,5 +45,4 @@ of decisions.
 **Footnotes**
 
 1. By "wrong direction", I really just mean "what _seems_ like the
-wrong direction".
-
+   wrong direction".

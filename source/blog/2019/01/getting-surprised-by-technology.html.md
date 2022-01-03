@@ -19,11 +19,11 @@ black magic in themselves. It's crazy that I can store thousands of videos on a 
 my pocket. It doesn't make a big difference that the video is something that happened already or
 is happening right now.
 
-But today, I realized that there *is* something profoundly different that will take some real
+But today, I realized that there _is_ something profoundly different that will take some real
 effort for me to get used to: interacting with machines in full sentences.
 
 Today, I wanted to look up if governmental employees that have to work during a shutdown get paid for
-their time when the government opens up again. My first thought was to figure out the *keywords* I'd
+their time when the government opens up again. My first thought was to figure out the _keywords_ I'd
 need to search with. "Government"? "Shutdown"? "Employees"? "Paycheck"? If I could just find the right
 keywords, I could get to a Wikipedia page on government shutdowns and read the whole thing to
 find the one fact I needed.

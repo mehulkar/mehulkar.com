@@ -6,7 +6,7 @@ set :css_dir,         'stylesheets'
 set :js_dir,          'javascripts'
 set :images_dir,      'images'
 set :markdown_engine, :redcarpet
-set :markdown, fenced_code_blocks: true, smartypants: true, underline: true
+set :markdown, fenced_code_blocks: true, smartypants: true, underline: false, tables: true
 
 activate :directory_indexes
 activate :syntax

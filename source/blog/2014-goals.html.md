@@ -1,19 +1,24 @@
 ---
 title: "Goals for 2014"
-date:   2014-03-12 15:18:49
+date: 2014-03-12 15:18:49
 categories: goals
 ---
 
 Some quantifiable goals for 2014 in no particular order
 
-1. #### Language
-  1. Go through all [LiveMocha][1] Spanish Courses
-  1. Learn C (_needs to be quantified_)
-1. #### Guitar
-  1. Master pentatonic scales across the bar
-  1. Play 5 mins at an open mic night
-1. #### Fitness
-  - 6 minute mile
-  - Gain 20 lbs
+### Language
+
+- Go through all [LiveMocha][1] Spanish Courses
+- Learn C (_needs to be quantified_)
+
+### Guitar
+
+- Master pentatonic scales across the bar
+- Play 5 mins at an open mic night
+
+### Fitness
+
+- 6 minute mile
+- Gain 20 lbs
 
 [1]: https://livemocha.com

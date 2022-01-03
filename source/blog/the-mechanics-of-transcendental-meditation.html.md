@@ -1,6 +1,6 @@
 ---
 title: "The Mechanics of Transcendental Meditation"
-date:   2012-12-07 00:00:00
+date: 2012-12-07 00:00:00
 categories: random
 ---
 

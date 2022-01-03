@@ -95,6 +95,7 @@ try to organize this code:
         # omitted, see above
         # returns an instance of something that inherits from Animal
     ```
+
 1. In `animal/cat.py`
 
     ```python
@@ -102,6 +103,7 @@ try to organize this code:
     class Cat(Animal):
       # omitted
     ```
+
 1. In `animal/dog.py`
 
     ```python
@@ -109,6 +111,7 @@ try to organize this code:
     class Dog(Animal):
       # omitted
     ```
+
 1. and so on for each animal type...
 
 Here's the problem... `animal/__init__.py` imports `Cat` from `animal/cat.py`, and

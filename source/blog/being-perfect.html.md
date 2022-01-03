@@ -1,6 +1,6 @@
 ---
 title: "Being Perfect"
-date:  2011-05-24
+date: 2011-05-24
 categories: poetry
 ---
 

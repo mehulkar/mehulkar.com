@@ -1,6 +1,6 @@
 ---
 title: "Alan Kay on The Web"
-date:  2012-07-10
+date: 2012-07-10
 categories: quote
 ---
 

@@ -88,13 +88,13 @@ import `Thing1::Foo` without also importing `Thing1::Bar`. I tend to think
 this tradeoff is worth it, and if a module gets too big, it's time to think
 of how to break it down further.
 
-Another thing worth noting here is that `require` always runs relative to `$CWD`, whereas `require_relative` runs relative to `__FILE__` (the current file). So if `thing2/baz.rb` really wanted to require *only* `thing1/foo.rb` (and not `thing1/bar.rb`), its two options would be:
+Another thing worth noting here is that `require` always runs relative to `$CWD`, whereas `require_relative` runs relative to `__FILE__` (the current file). So if `thing2/baz.rb` really wanted to require _only_ `thing1/foo.rb` (and not `thing1/bar.rb`), its two options would be:
 
 ```ruby
 require_relative '../thing1/foo.rb'
 # or
 require './thing1/foo.rb'
-````
+```
 
 I found that it was easier to constrain myself to requireing only the top level "loader" files than to reach into other modules and require indivudual
 files and have to remember the right path to use.

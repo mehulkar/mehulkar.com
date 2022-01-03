@@ -1,6 +1,6 @@
 ---
 title: "The Art of Being Confused"
-date:  2012-02-18
+date: 2012-02-18
 categories: programming
 ---
 

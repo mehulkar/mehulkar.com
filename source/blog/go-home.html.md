@@ -1,5 +1,5 @@
 ---
-title:  "Go Home"
+title: "Go Home"
 categories: personal
 ---
 
@@ -83,16 +83,16 @@ I have to go pee now.
 
 1. I'm not 100% positive that I remember his name correctly.
 2. In my school (and probably all other schools) in India,
-we addressed faculty and staff with their first name followed
-by the "Sir" or "Ma'am" title appropriate to their gender. This
-is an interesting cultural phenomenon that is different from US
-schools that I haven't given much thought--and probably won't following
-this--but it occurs to me as I write this, that this it is interesting.
+   we addressed faculty and staff with their first name followed
+   by the "Sir" or "Ma'am" title appropriate to their gender. This
+   is an interesting cultural phenomenon that is different from US
+   schools that I haven't given much thought--and probably won't following
+   this--but it occurs to me as I write this, that this it is interesting.
 3. And that metaphor isn't by accident; it really did feel like a
-game of poker in which Nagar sir couldn't call my bluff without risking getting
-a call from my parents. Not that I had any intentions of telling my parents about
-my plans to get out of class--they would catch on immediately--but Nagar sir
-didn't know that.
+   game of poker in which Nagar sir couldn't call my bluff without risking getting
+   a call from my parents. Not that I had any intentions of telling my parents about
+   my plans to get out of class--they would catch on immediately--but Nagar sir
+   didn't know that.
 4. All right, I'll allay the alliteration a little.
 5. Well, not nothing. That's the romantic in me talking. There are still
-plenty of things.
+   plenty of things.

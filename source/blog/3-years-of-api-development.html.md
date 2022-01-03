@@ -19,7 +19,7 @@ implementing. This process will:
 
 1. illuminate implementation difficulties, road blocks, and potential shortcuts
 2. allow consumers of the API to mock out the proposed design, making it
-easier to parallelize team workload
+   easier to parallelize team workload
 
 ## Do not autogenerate documentation
 
@@ -29,12 +29,12 @@ A DSL gathers data about endpoints and annotates them with metadata
 that is provided inline with the code. This poses one of two problems:
 
 1. The metadata content becomes too intense/lengthy making the code difficult
-to read. This is bad because documentation is for consumers and code is
-for developers. Inline docs are noise and noisy code will take longer to debug.
+   to read. This is bad because documentation is for consumers and code is
+   for developers. Inline docs are noise and noisy code will take longer to debug.
 1. The metadata DSL is not flexible enough to let developers document
-the intention and behavior of each endpoint. Intention and behavior cannot be
-captured entirely without some amount of prose. Also, an API that documents
-intention is more likely to be used responsibly.
+   the intention and behavior of each endpoint. Intention and behavior cannot be
+   captured entirely without some amount of prose. Also, an API that documents
+   intention is more likely to be used responsibly.
 
 An additional reason not to auto generate documentation is that every
 breaking change to the API becomes forcibly accompanied by a documentation
@@ -99,7 +99,6 @@ challenges:
 Think about how your API will function for each of these use cases
 early, because they are fundamental building blocks of the system
 and will be difficult to change / implement in the future.
-
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Why Glee Is Such A Big Hit
-date:  2010-11-03
+date: 2010-11-03
 categories: thoughts
 ---
 

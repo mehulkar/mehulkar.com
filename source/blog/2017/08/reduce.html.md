@@ -1,5 +1,5 @@
 ---
-title: 'Reduce'
+title: "Reduce"
 date: 2017-08-14
 categories: programming, javascript
 ---
@@ -13,11 +13,11 @@ For example, to add up all the numbers in a list:
 ```
 
 Because of this, I've always assumed that the first argument to
-the `reduce` function callback (`memo`) is *mutated* in each iteration
+the `reduce` function callback (`memo`) is _mutated_ in each iteration
 of the function and so, at the end of the iterations, `memo` becomes the final
 mutated value.
 
-Last week I learned that `memo` isn't being mutated, it's being *replaced*
+Last week I learned that `memo` isn't being mutated, it's being _replaced_
 by the return value of the previous loop.
 
 That means that `reduce` isn't simply an aggregator function, it can be used
@@ -39,21 +39,21 @@ So you can apply arbitrary logic to your `memo` value:
 
 ```javascript
 [1, 2, 3].reduce((memo, i) => {
-  let returnValue;
-  switch(i) {
-    case 1:
-      returnValue = memo + i;
-      break;
-    case 2:
-      returnValue = memo - i;
-      break;
-    case 3:
-      returnValue = memo * i;
-      break;
-    default:
-      returnValue = memo / i;
-  }
-  return returnValue;
+    let returnValue;
+    switch (i) {
+        case 1:
+            returnValue = memo + i;
+            break;
+        case 2:
+            returnValue = memo - i;
+            break;
+        case 3:
+            returnValue = memo * i;
+            break;
+        default:
+            returnValue = memo / i;
+    }
+    return returnValue;
 }, 0);
 // => -3
 ```

@@ -8,7 +8,7 @@ Whenever I've used `addEventListener`, I've always passed a function as the seco
 assumed that when an event was dispatched, the callback would be fired. For example:
 
 ```javascript
-element.addEventListener('eventName', () => console.log('hi!'));
+element.addEventListener("eventName", () => console.log("hi!"));
 ```
 
 Today, I learned that you can pass an object that conforms to a particular interface. This was
@@ -21,10 +21,10 @@ Javascript has fantastic interfaces for Events and EventListeners. The second ar
 to `addEventListener` can be anything that responds to `handleEvent`. For example:
 
 ```javascript
-element.addEventListener('eventName', {
-  handleEvent(event) {
-    console.log('event happened!');
-  }
+element.addEventListener("eventName", {
+    handleEvent(event) {
+        console.log("event happened!");
+    },
 });
 ```
 
@@ -56,10 +56,9 @@ element.addEventListener('dblClick', myCustomHandler);
 
 Further reading:
 
-- [`addEventListener` docs][1]
-- [`EventListener` interface][2]: (the object that is passed to `handleEvent`)
-- [`Event` interface][3]: (an interface for your custom handler)
-
+-   [`addEventListener` docs][1]
+-   [`EventListener` interface][2]: (the object that is passed to `handleEvent`)
+-   [`Event` interface][3]: (an interface for your custom handler)
 
 [1]: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
 [2]: https://developer.mozilla.org/en-US/docs/Web/API/Event

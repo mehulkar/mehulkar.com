@@ -69,15 +69,15 @@ inline styles have these pros and cons:
 
 **Pros:**
 
-- Completes the encapsulation of a UI component
-- Already possible
+-   Completes the encapsulation of a UI component
+-   Already possible
 
 **Cons**
 
-- Feels dirty to put ALL style inside the HTML `style` attribute.
-- Shareability of styles may suffer. This is mostly a nonproblem
-since JSX can take advantage of ES6 imports/exports, but outside
-JSX, it would still require a solution.
+-   Feels dirty to put ALL style inside the HTML `style` attribute.
+-   Shareability of styles may suffer. This is mostly a nonproblem
+    since JSX can take advantage of ES6 imports/exports, but outside
+    JSX, it would still require a solution.
 
 But putting aside the JSX approach of inline styles, another approach
 that is exciting would be HTTP 2.0 + CSS Modules. In other words,
@@ -85,7 +85,6 @@ a component could specify a CSS module that is fetched on render,
 and with an HTTP 2.0 connection, lots of components could fetch
 their styles in the same round trip on the network, thus getting
 scoped styles without performance loss.
-
 
 The second problem with components and styling is that it's unclear
 which styles _define_ the component, and which styles are _attributes_
@@ -114,8 +113,8 @@ and exciting at the same time and I'm glad for both.
 **Footnotes**
 
 1. Microservice architecture is really just an expression of a
-pure functions, by the way--at least computational microservices.
+   pure functions, by the way--at least computational microservices.
 2. Sometimes also a good way to contain technical debt, which is
-a topic I could write a whole new post on.
+   a topic I could write a whole new post on.
 
 [1]: http://www.nicoespeon.com/en/2015/01/pure-functions-javascript/

@@ -15,10 +15,10 @@ immediately clear to me from reading the MDN documentation).
 ## What I Learned
 
 I learned that it is possible for a server to respond to a preflight `OPTIONS` request with all the
-appropriate headers that whitelist the *real* request, but then respond to the *real* request with
+appropriate headers that whitelist the _real_ request, but then respond to the _real_ request with
 a different set of headers, and thoroughly confuse everyone.
 
-The big reveal is that an `OPTIONS` request isn't coupled to the *real* CORS request at all. It is
+The big reveal is that an `OPTIONS` request isn't coupled to the _real_ CORS request at all. It is
 the browser that maintains the connection between them.
 
 This seems obvious in retrospect, because a stateless server will not have any way to connect an
@@ -59,7 +59,7 @@ Notice that the `Access-Control-Allow-Origin` header is missing from the GET req
 
 This means that although the preflight request told the browser that the CORS `GET` was okay
 to send, the server "changed it's mind" about it on the real `GET` request. This is uncommon and
-most likely a server bug, but it *is* possible.
+most likely a server bug, but it _is_ possible.
 
 Until now, I thought that the CORS related response headers on the `GET` request didn't matter!
 I assumed that if the `OPTIONS` request permitted the `GET`, then all was ok.
@@ -69,8 +69,8 @@ response to the request.
 
 ## Understanding More
 
-To understand this more, I read the [MDN documentation][MDN DOCS] on CORS (which is really good), and learned
-that not *all* CORS requests require a preflight request. These are called "simple" requests.
+To understand this more, I read the [MDN documentation][mdn docs] on CORS (which is really good), and learned
+that not _all_ CORS requests require a preflight request. These are called "simple" requests.
 
 A good followup question from this nugget information would have been: if the `OPTIONS` request is
 responsible for notifying the browser about CORS rules maintained by the server, how do simple
@@ -81,6 +81,6 @@ and the `OPTIONS` request is simply a way for browsers to abort requests prematu
 
 ## More reading
 
-- [MDN Docs on CORS][MDN DOCS]
+-   [MDN Docs on CORS][mdn docs]
 
-[MDN DOCS]: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+[mdn docs]: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS

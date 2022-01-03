@@ -9,7 +9,7 @@ selectors will automatically be closed. Consider this example:
 
 ```js
 // <div some-attr>hello</div>
-const selector = '[some-attr]';
+const selector = "[some-attr]";
 document.querySelector(selector);
 ```
 
@@ -17,7 +17,7 @@ Notice the opening and closing square brackets that form the valid selector. Now
 
 ```js
 // <div some-attr>hello</div>
-const selector = '[some-attr';
+const selector = "[some-attr";
 document.querySelector(selector);
 ```
 

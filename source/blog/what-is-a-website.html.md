@@ -32,8 +32,8 @@ CS degree right there. Maybe. I don't have one so I could be totally wrong.
 
 Think of it like going to the drug store and going up to the counter
 and asking the guy in the white lab coat (who is totally a real doctor)
-for something. You're making a *request* for a resource. And the lab-coat-person
-has to listen to you and understand what you want and then *respond* with medication.
+for something. You're making a _request_ for a resource. And the lab-coat-person
+has to listen to you and understand what you want and then _respond_ with medication.
 
 If the lab-coat is any good at their job, they will give you the medication
 you really need. But they could also be bad at their job and give you the wrong

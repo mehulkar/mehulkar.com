@@ -1,6 +1,6 @@
 ---
 title: "Method Names And Variables Are The Same Thing"
-date:  2012-03-17
+date: 2012-03-17
 categories: programming, ruby
 ---
 
@@ -54,7 +54,7 @@ Now, the name property of bob, our instance of the Person class, remains “Bob�
 ```
 bob.name
 #=> “Bob"
- ```
+```
 
 This nuance may or may not seem important until you think about storing these properties in a database. For example, imagine a 3rd party company that handles customer service for B2Cs. When the 3rd party company hires a new employee, they ask him or her to fill out a form indicating their gender. Based on the gender, they assign a random pseudonym to that employee for all their interactions with customers on the phone or email, etc. One way to assign and store these pseudonyms would be to create two different tables for male and female employees and instantiate records with "Bob” or “Sally” names. There’s no reason to have two different tables other than that, as far as I can tell.
 

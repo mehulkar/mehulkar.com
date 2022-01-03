@@ -18,7 +18,7 @@ categories: quote
 >
 > you know
 >
-> focused, absorbed, inspired, communicating,  discovering, learning
+> focused, absorbed, inspired, communicating, discovering, learning
 >
 > DANCING, for heaven’s sake
 >
@@ -33,7 +33,6 @@ categories: quote
 > we should concern ourself not so much with the pursuit of happiness
 >
 > but with the happiness of pursuit.
-
 
 Copied down this quotation from [Hector's Search For Happiness](http://www.imdb.com/title/tt1626146/).
 Decent movie.

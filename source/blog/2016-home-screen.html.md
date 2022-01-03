@@ -1,6 +1,6 @@
 ---
 title: "2016: Home Screen"
-date:  2016-01-08
+date: 2016-01-08
 categories: product
 ---
 
@@ -12,9 +12,9 @@ So here is mine:
 
 I use a few rough metrics to determine if something goes on the home screen:
 
-- _frequency factor_ (how frequently I use it)
-- _immediacty factor_ (how immediately I usually need it)
-- _aspirational factor_ (how much I wish I used it)
+-   _frequency factor_ (how frequently I use it)
+-   _immediacty factor_ (how immediately I usually need it)
+-   _aspirational factor_ (how much I wish I used it)
 
 Messages and Notes have high scores in _frequency_ **and** _immediacy_.
 For example, if I need to write something down, I need the Notes app to be
@@ -32,11 +32,11 @@ face, it now has a high score in _frequency_.
 
 There are some stale apps here as well:
 
-- GroupMe is going away now that my family uses iMessage for our group chat.
-- Gaana will go away after my subscription ends this year; I've settled
-on Saavn as the superior app. Either Music or Spotify will probably go away also.
-- xkcd inspired me to build daily habits, but I don't read it as often now, so
-it will probably go away.
+-   GroupMe is going away now that my family uses iMessage for our group chat.
+-   Gaana will go away after my subscription ends this year; I've settled
+    on Saavn as the superior app. Either Music or Spotify will probably go away also.
+-   xkcd inspired me to build daily habits, but I don't read it as often now, so
+    it will probably go away.
 
 You'll notice that the Camera app is not on the home screen, even though it scores
 high on _frequency_, _immediacy_, **and** _aspiration_, but it's not on
@@ -47,6 +47,6 @@ i.e. I want to use them less.
 **Footnotes**
 
 1. Now that I know about [Pilgrim][1], Swarm might fall out of the home page
-because maybe I don't need to check in everywhere to build this map.
+   because maybe I don't need to check in everywhere to build this map.
 
 [1]: http://www.techinsider.io/inside-foursquares-pilgrim-technology-2015-12

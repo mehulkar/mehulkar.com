@@ -13,7 +13,7 @@ if/how people are addressing these concerns.
 1. Coupling of UI and Route Hierarchy
 1. What is a Component?
 
-*Note:* It's possible that I'm highly misinformed about any/all
+_Note:_ It's possible that I'm highly misinformed about any/all
 of these subjects or that you could help me reframe the problem
 in a way that makes the solution obvious.
 
@@ -32,35 +32,35 @@ retrieve changes from a rapidly developing API and stay relevant/useful?
 
 Possible answers:
 
-1. Ember CLI Mirage is the touted solution to acceptance testing
-at the moment, but I don't think it allows you to consume the actual API
-codebase at a revision. I hear it _does_ let you fallback to a live version of
-your API, so with the flip of a switch, I could run my tests against
-a live API, but the extra overhead to maintain a live API (in a clean state)
-seems...hard.
-1. Dedicated QA for end-to-end testing. This
-is not only expensive, but I think the existence of QA
-might also encourage lazy development.
-1. Improve communication/cross polination across the UI and API teams and
-manually keep API spec changes in sync. This is usually fine,
-but manual communication is slower and prone to errors. Also, this is a
-cultural solution and will take time to develop.
-1. Work on API and UI serially, instead of in parallel, so one project
-becomes well defined _before_ the other and can dictate the
-constraints and requirements. This is net slower, and creates a less
-flexible project plan.
-1. A solution I'd _like_ to explore is to generate UI mock endpoints
-with a revision of the API codebase directly, and on the fly. This
-will inevitably require a closer coupling between API and UI projects.
-Possibly even putting them in the same source control repository? (gasp!)
+1.  Ember CLI Mirage is the touted solution to acceptance testing
+    at the moment, but I don't think it allows you to consume the actual API
+    codebase at a revision. I hear it _does_ let you fallback to a live version of
+    your API, so with the flip of a switch, I could run my tests against
+    a live API, but the extra overhead to maintain a live API (in a clean state)
+    seems...hard.
+1.  Dedicated QA for end-to-end testing. This
+    is not only expensive, but I think the existence of QA
+    might also encourage lazy development.
+1.  Improve communication/cross polination across the UI and API teams and
+    manually keep API spec changes in sync. This is usually fine,
+    but manual communication is slower and prone to errors. Also, this is a
+    cultural solution and will take time to develop.
+1.  Work on API and UI serially, instead of in parallel, so one project
+    becomes well defined _before_ the other and can dictate the
+    constraints and requirements. This is net slower, and creates a less
+    flexible project plan.
+1.  A solution I'd _like_ to explore is to generate UI mock endpoints
+    with a revision of the API codebase directly, and on the fly. This
+    will inevitably require a closer coupling between API and UI projects.
+    Possibly even putting them in the same source control repository? (gasp!)
 
-    This is an unpopular opinion because isolating API and UI seems to
-    be a popular architectural pattern these days. I think, at least for
-    the projects I've worked on, this forced _decoupling_
-    has actually been a form of overengineering and doesn't have many benefits
-    except the promise that, some day in the future, the separation of projects
-    will be useful. I concede that I haven't worked in software
-    long enough to have seen this use case.
+        This is an unpopular opinion because isolating API and UI seems to
+        be a popular architectural pattern these days. I think, at least for
+        the projects I've worked on, this forced _decoupling_
+        has actually been a form of overengineering and doesn't have many benefits
+        except the promise that, some day in the future, the separation of projects
+        will be useful. I concede that I haven't worked in software
+        long enough to have seen this use case.
 
 ### Coupling of UI and Route Hierarchy
 
@@ -71,10 +71,10 @@ _inside_ a DOM element that is rendered by the parent route.
 For example, with these routes:
 
 ```js
-Router.map(function() {
-  this.route('post', function() {
-    this.route('detail')
-  });
+Router.map(function () {
+    this.route("post", function () {
+        this.route("detail");
+    });
 });
 ```
 
@@ -91,10 +91,10 @@ some wiring up of injections in weird places.
 
 Maybe I'm missing something trivial, but if this has never happened to you
 
-- my app structure is either fundamentally <del>wrong</del> different, or
-- the various workarounds (like `render` in `Ember.Route`),
-are actually the right solution and I need to get over the fact that they feel wrong, or
-- there are use cases for decoupling UI hierarchy from route hierarchy.
+-   my app structure is either fundamentally <del>wrong</del> different, or
+-   the various workarounds (like `render` in `Ember.Route`),
+    are actually the right solution and I need to get over the fact that they feel wrong, or
+-   there are use cases for decoupling UI hierarchy from route hierarchy.
 
 It's possible that I'm still thinking of my application in terms of the the 1.x
 Route + Controller + Template mentality. It's possible that components will

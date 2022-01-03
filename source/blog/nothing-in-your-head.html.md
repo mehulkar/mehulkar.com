@@ -15,6 +15,7 @@ There are several advantages to doing this:
     both absorb and express complex ideas. Both these abilities
     are increasingly important as the complexity of my role or a
     particular project increases.
+
 1. Faster context switching
 
     The fewer things I hold in my head, the fewer things I have to
@@ -24,6 +25,7 @@ There are several advantages to doing this:
     projects. One downside here is that although it becomes faster to
     switch contexts, you end up switching contexts more, since every
     change is essentially a context switch.
+
 1. Less "pigeon-holing"
 
     Things in my head about a project are my shackles to the project.

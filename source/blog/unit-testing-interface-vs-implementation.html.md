@@ -14,7 +14,6 @@ that breaks down pretty quickly. I'll use Rspec, because that's what I'm
 most familiar with, but it might as well be pseudo code because we're
 really just talking about assertions.
 
-
 ```ruby
 
 describe Cat do
@@ -33,7 +32,6 @@ end
 In this example, you can see that the tests only care about the `.talk` method.
 They don't care about how it is implemented. Let's say we decide to implement
 this `Cat` class like this:
-
 
 ```ruby
 class VoiceBox
@@ -110,7 +108,7 @@ This is important from a number of different perspectives:
     But I'll still expect my cat to meow. So if my changes break that expectation,
     my tests should tell me.
 
-3. Service level agreements
+1. Service level agreements
 
     In this world of microservices or modular design or single responsibility,
     or whatever you want to call it, objects interact with each other through
@@ -162,3 +160,4 @@ describe Cat do
     end
   end
 end
+```

@@ -1,6 +1,6 @@
 ---
-title:  "An Explanation of Microfinance"
-date:   2010-10-08
+title: "An Explanation of Microfinance"
+date: 2010-10-08
 categories: personal
 ---
 
@@ -17,6 +17,7 @@ Microfinance is founded on 3 principles:
 1. Access to funds is a basic human right and should not be limited only to a portion of the population.
 
     Credit is not usually thought of as a universal human right. Creditworthiness is based on what are known as the 5 Cs of credit analysis:
+
     - Character: borrower’s history/reputation,
     - Capacity: borrower’s income and expenses,
     - Capital: borrower’s contribution to investment,

@@ -16,11 +16,22 @@
 
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Mehul Kar" %></title>
-    <meta name="Description" content="<%= current_page.data.title ? "Blog post: #{current_page.data.title}" : "Mehul Kar's website" %>">
+
+    <meta name="twitter:title" content="<%= current_page.data.title ? "#{current_page.data.title} " : "" %>| Mehul Kar">
+    <meta name="og:title" content="<%= current_page.data.title ? "#{current_page.data.title} " : "" %>| Mehul Kar">
+
+    <% if current_page.data.categories.present? %>
+      <meta name="keywords" content="<%= current_page.data.categories %>">
+    <% end %>
+    <meta name="Description" content="<%= current_page.data.title ? current_page.data.title : "Mehul Kar" %>">
+    <meta name="twitter:description" content="<%= current_page.data.title ? current_page.data.title : "Mehul Kar" %>">
+    <meta name="og:description" content="<%= current_page.data.title ? current_page.data.title : "Mehul Kar" %>">
+
     <%= stylesheet_link_tag(
       "vendor",
+      "post",
       "app",
-      "https://fonts.googleapis.com/css?family=Indie+Flower|Libre+Baskerville&display=swap"
+      "https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap"
     )%>
     <script>
       document.addEventListener('DOMContentLoaded', function() {

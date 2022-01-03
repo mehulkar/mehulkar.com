@@ -1,6 +1,6 @@
 ---
 title: The Future Of Consumerism
-date:  2010-09-26
+date: 2010-09-26
 categories: thoughts
 ---
 

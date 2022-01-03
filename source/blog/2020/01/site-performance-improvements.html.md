@@ -11,17 +11,17 @@ I decided to start with my own website, even though it's a very simple static we
 
 ## Tech Stack
 
-- HTML: This site is built using [Middleman](http://middlemanapp.com/), a Ruby-based static site
-generator, and it works great.
-- CSS: The site loads normalize.css and tachyons.css, both of which I just
-copy-pasted into my source code, rather than loading from CDN or NPM module/RubyGem or something.
-It also loads a syntax highlighting stylesheet using the `middleman-syntax` gem and a embedded ruby
-stylesheet.
-- JS: There is a tiny bit of JS that sets the Copyright year in the footer, and a Google Analytics
-script.
-- Fonts: The site downloads two fonts from Google Fonts and also the Font Awesome font.
-- Images: Images in subpages / blog posts are deployed as part of the site's bundle and loaded from
-the same domain, but there is one image from my Gravatar profile also.
+-   HTML: This site is built using [Middleman](http://middlemanapp.com/), a Ruby-based static site
+    generator, and it works great.
+-   CSS: The site loads normalize.css and tachyons.css, both of which I just
+    copy-pasted into my source code, rather than loading from CDN or NPM module/RubyGem or something.
+    It also loads a syntax highlighting stylesheet using the `middleman-syntax` gem and a embedded ruby
+    stylesheet.
+-   JS: There is a tiny bit of JS that sets the Copyright year in the footer, and a Google Analytics
+    script.
+-   Fonts: The site downloads two fonts from Google Fonts and also the Font Awesome font.
+-   Images: Images in subpages / blog posts are deployed as part of the site's bundle and loaded from
+    the same domain, but there is one image from my Gravatar profile also.
 
 ## Improvements
 
@@ -35,6 +35,7 @@ Here are a set of things I played around with:
     Both of these icons looks a little worse, but I don't really care and it would be easy to improve them
     in a future iteration. The SVG from twitter brand resources also adds a background to the icon, which I could
     probably edit out from the SVG, but I didn't care too much about that either.
+
 1. Resource Hints to Google Fonts and Gravatar
 
     Added `preconnect` Resource hints for Google Fonts and Gravatar. I'm not yet sure if this actually
@@ -44,11 +45,12 @@ Here are a set of things I played around with:
     a big difference.
 
     ```html
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://gravatar.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://gravatar.com" crossorigin />
     ```
 
     I learned about what these mean from this post: <https://www.keycdn.com/blog/resource-hints>.
+
 1. Precompile vendor styles (normalize, tachyons, and syntax highlighting into one stylesheet
 
     A confusing thing about `@import` in SCSS is that `@import 'foo.css';` acts like a CSS
@@ -64,11 +66,11 @@ Here are a set of things I played around with:
 
     ```scss
     // all.css.scss
-    @import 'vars';
-    @import 'vendor/normalize.css';
-    @import 'vendor/tachyons.css';
-    @import 'flex';
-    @import 'post';
+    @import "vars";
+    @import "vendor/normalize.css";
+    @import "vendor/tachyons.css";
+    @import "flex";
+    @import "post";
     ```
 
     ```erb
@@ -94,9 +96,9 @@ Here are a set of things I played around with:
 
     ```scss
     // app.css.scss
-    @import 'vars';
-    @import 'flex';
-    @import 'post';
+    @import "vars";
+    @import "flex";
+    @import "post";
     ```
 
     I could have reduced farther to a single stylesheet, but I read somewhere that because
@@ -109,15 +111,18 @@ Here are a set of things I played around with:
     Another mistake I was making was to use `@import` to load Google Fonts:
 
     ```css
-    @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
-    @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
+    @import url("https://fonts.googleapis.com/css?family=Indie+Flower");
+    @import url("https://fonts.googleapis.com/css?family=Libre+Baskerville");
     ```
 
     I changed this to load both fonts in a single request and using `link`, rather than `@import`
     [which blocks parallel downloads][3].
 
     ```html
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie+Flower|Libre+Baskerville">
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Indie+Flower|Libre+Baskerville"
+    />
     ```
 
 1. Download smaller profile image
@@ -155,9 +160,9 @@ I am not great at reading these charts yet, but I skimmed through [this post by 
 get my bearings, and saw a couple things that confirmed that the steps I took above actually did
 something:
 
-- The thin yellow line marking DOM Interactive went from ~5.1 seconds to ~4.4 seconds.
-- The blue line marking "Document Complete" went from ~9.5 seconds to ~8.5 seconds
-- Number of requests went down from 15 to 11.
+-   The thin yellow line marking DOM Interactive went from ~5.1 seconds to ~4.4 seconds.
+-   The blue line marking "Document Complete" went from ~9.5 seconds to ~8.5 seconds
+-   Number of requests went down from 15 to 11.
 
 One other more nuanced things that I noticed is that CSS downloading from Google Fonts now starts
 at the same time as all the other CSS.
@@ -169,7 +174,6 @@ CSS and a large part of that is DNS, Connection, and SSL. I wonder if the `preco
 might be making this more complicated than it should be? Or maybe I should inline the `@font-face`
 directives that are in this stylesheet. Any breaking changes from Google would break the site, but
 that would probably not be the end of the world, since fallback fonts are a thing.
-
 
 [2]: https://about.twitter.com/en_us/company/brand-resources.html
 [3]: https://www.keycdn.com/blog/css-performance

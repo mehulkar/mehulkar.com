@@ -72,7 +72,7 @@ working. I try again a few times and it looks like they're failing every 2-3
 times.
 
 Clearly there is space left on the device now. I know it's a good idea not to
-fill a disk over 50%, but at 70% it *should* be working fine and it should
+fill a disk over 50%, but at 70% it _should_ be working fine and it should
 definitely have enough space to create a temp file for tab completion.
 What's going on?
 
@@ -93,7 +93,7 @@ else:
 
 > Yeah, the machine is out inodes. Can you add another disk?
 
-Oh yes! inodes are a thing! I don't *really* know what an inode is at this
+Oh yes! inodes are a thing! I don't _really_ know what an inode is at this
 moment, but it has something to do with the number of files or the number of
 open files? I don't really care right now. I need to finish diagnosing and
 hotfix this so I can get on my flight. I quickly Google how to investigate this.
@@ -134,7 +134,7 @@ file in `/tmp` and passing them as individual arguments to `rm`. Is that what
 the splat operator does? I know that it does something similar in Ruby.
 
 Ok, so what now? I can't delete files all together and I can't see how many
-files are in there. But I *really* want to see what's in `/tmp` before going
+files are in there. But I _really_ want to see what's in `/tmp` before going
 any further. I remember that I have aliased `ls` to `ls -al` on this VM. I
 wonder if removing the arguments will help get some output. Google says I can
 run `\ls` to avoid the alias and run the program directly. `/bin/ls` would also
@@ -155,7 +155,7 @@ machine, add the `rm -rf ` prefixes there and then paste the whole file back
 into my ssh session! Oh shit, the output of `ls` shows ~4.5 million files in
 `/tmp`. This could take a while.
 
-I  shut off all the other services on the VM and let 4.5 million lines of
+I shut off all the other services on the VM and let 4.5 million lines of
 `rm -rf` run uninterrupted for the next 30 minutes. The nice thing is that each
 line runs individually, so all I have to do to stop deleting files is to close
 my Terminal tab.

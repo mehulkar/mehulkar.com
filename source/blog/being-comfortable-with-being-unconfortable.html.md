@@ -1,5 +1,5 @@
 ---
-title:  "Being Comfortable with Being Uncomfortable"
+title: "Being Comfortable with Being Uncomfortable"
 categories: personal
 ---
 
@@ -13,11 +13,11 @@ much less put it in print.
 In my Sophomore year of college (not too long ago) I started
 a blog called "Thoughts, Uncited". The idea was that I was a person
 and I had thoughts and I would write them down and they would be
-completely mine. I had just read *The Fountainhead* by
+completely mine. I had just read _The Fountainhead_ by
 Ayn Rand, and I was convinced that my opinions mattered by virtue
 of them being mine. After two articles, I ran out of steam and
 "pivoted" (before I really knew what it mean "to pivot")
-to brand *Thoughts, Uncited* as a publication that would
+to brand _Thoughts, Uncited_ as a publication that would
 collect such uncited thoughts. Despite getting a logo designed for $50,
 that also, did not last.
 
@@ -52,7 +52,7 @@ was writing anything original.
 
 I stopped writing because of an overwhelming attack of [imposter syndrome][2].
 Working in this industry has made me keenly aware of how much
-I don't know&mdash;especially things that I'm really *supposed* to know. To combat
+I don't know&mdash;especially things that I'm really _supposed_ to know. To combat
 this feeling of inadequacy, I taught programming as a volunteer and drank in
 as much as I could through conversations with other software developers
 (all of whom seemed years ahead of me). But ultimately, I stopped
@@ -66,8 +66,8 @@ had much to contribute. So I kept my thoughts--cited or otherwise--to myself.
 
 Recently, I've discovered that the hesitation to stop writing is not a lack of
 confidence or competence. Rather, it is a lack of comfort. In college, I wrote
-either with a wild carelessness (*Thoughts, Uncited*), or about things I knew well, i.e.
-my own thoughts (*Off The Record*). Both were comfortable because once I hit the
+either with a wild carelessness (_Thoughts, Uncited_), or about things I knew well, i.e.
+my own thoughts (_Off The Record_). Both were comfortable because once I hit the
 publish button, I could forget about it. I think that was a fundamentally different
 (if not wrong) approach to writing.
 
@@ -98,7 +98,7 @@ the [lizard brain][3], or "The Resistance":
 > putting jitters and every project that ever shipped late because people
 > couldn't stay on the same page long enough to get something out the door.
 
-\- [*Seth Godin*][3]
+\- [_Seth Godin_][3]
 
 My hesitation to write is essentially a hesitation to become vulnerable, which is in
 turn a fear of deep emotional connection. I think in some ways, the

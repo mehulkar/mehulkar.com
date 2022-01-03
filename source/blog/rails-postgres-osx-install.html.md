@@ -1,6 +1,6 @@
 ---
 title: "Rails Postgres OSX Install"
-date:  2013-01-10 00:00:00
+date: 2013-01-10 00:00:00
 categories: programming, rails
 ---
 
