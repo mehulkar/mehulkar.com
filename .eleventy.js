@@ -40,6 +40,34 @@ module.exports = function (eleventyConfig) {
   //     return SlugFilter(value);
   //   });
 
+  eleventyConfig.addCollection("byYear", function (collectionApi) {
+    const all = collectionApi.getAll();
+
+    // Group posts by year first. This is an unsorted object
+    const byYear = {};
+    for (const post of all) {
+      const year = post.date.getFullYear();
+      byYear[year] = byYear[year] || [];
+      byYear[year].push(post);
+    }
+
+    // Get all the years, sort them numerically
+    const sortedYears = Object.keys(byYear).sort((x, y) => +y - +x);
+
+    // Create an array that with objects each corresponding
+    // to the set of posts from each year in the order we determed
+    // above.
+    const sortedGroups = [];
+    for (const year of sortedYears) {
+      sortedGroups.push({
+        name: year,
+        posts: byYear[year],
+      });
+    }
+
+    return sortedGroups;
+  });
+
   eleventyConfig.addFilter("formatDate", function (value) {
     if (!value) return "";
 
