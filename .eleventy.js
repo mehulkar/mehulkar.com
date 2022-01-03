@@ -12,8 +12,16 @@ const fullDate = Intl.DateTimeFormat("en-us", {
 });
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.setTemplateFormats("md,html,hbs,njk");
-  eleventyConfig.setTemplateFormats(["png", "webp", "jpg"]);
+  eleventyConfig.setTemplateFormats([
+    "html,hbs,md,njk",
+    "md",
+    "html",
+    "hbs",
+    "njk",
+    "png",
+    "webp",
+    "jpg",
+  ]);
 
   eleventyConfig.addPassthroughCopy({
     "source/stylesheets/**/*.css": "stylesheets",
@@ -53,6 +61,11 @@ module.exports = function (eleventyConfig) {
     // makes it wrong. We need to initialize a PST date object using the values
     // from this value and format that.
     return fullDate.format(value);
+  });
+
+  eleventyConfig.addHandlebarsHelper("concat", function () {
+    const joined = [...arguments].join(" ");
+    return joined;
   });
 
   return {

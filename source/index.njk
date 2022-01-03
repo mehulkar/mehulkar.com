@@ -1,5 +1,5 @@
 ---
-layout: layout.hbs
+layout: layout.njk
 ---
 
 <h1>👋🏾</h1>
@@ -26,5 +26,5 @@ layout: layout.hbs
 {%- endfor -%}
 
 <nav class='flex flex-wrap mb4'>
-  <%= partial('partials/categories', locals: { current_categories: Post.categories.sort })%>
+  <!-- TODO: add list of categories back -->
 </nav>
