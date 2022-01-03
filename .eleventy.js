@@ -95,8 +95,6 @@ module.exports = function (eleventyConfig) {
       }
     }
 
-    console.log(Array.from(allCategories));
-
     return Array.from(allCategories);
   });
 
