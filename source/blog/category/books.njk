@@ -1,0 +1,8 @@
+---
+title: Books
+categories: books, book reviews
+---
+
+{% set posts = collections.byYear | category("books") %}
+{% from 'partials/_by-year.njk' import render %}
+{{ render(posts) }}

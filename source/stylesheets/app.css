@@ -163,7 +163,6 @@ header {
   margin-right: 5px;
   font-size: 1rem;
 }
-
 .pill:hover {
   color: var(--pill-text-color-inactive);
 }

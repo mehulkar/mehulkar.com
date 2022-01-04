@@ -1,0 +1,8 @@
+---
+title: Poetry
+categories: poetry, poems, writing
+---
+
+{% set posts = collections.byYear | category("poetry") %}
+{% from 'partials/_by-year.njk' import render %}
+{{ render(posts) }}

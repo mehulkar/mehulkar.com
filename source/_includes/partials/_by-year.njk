@@ -1,0 +1,20 @@
+{% macro render(posts) %}
+    {%- for year in posts -%}
+        <div class='post-group mb4 mt0 ml0'>
+            <h2 class="post-group--title mb3 fw2 bb">
+                {{year.name}}
+            </h2>
+
+            <div class='post-list ml0 pl0'>
+            {% for post in year.posts %}
+                <div class='post-link mb3 flex items-baseline'>
+                <span class='date silver mr3 f7'>{{post.data.date | formatDate }}</span>
+                <span class='flex-auto'>
+                    <a href="{{post.url}}">{{post.data.title}}</a>
+                </span>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    {%- endfor -%}
+{% endmacro %}

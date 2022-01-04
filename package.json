@@ -1,0 +1,38 @@
+{
+  "name": "mehulkar.com",
+  "version": "1.0.0",
+  "description": "Built on [Middleman](http://middlemanapp.com/).",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx eleventy --serve",
+    "prebuild": "rm -rf ./build",
+    "build": "npx eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mehulkar/mehulkar.com.git"
+  },
+  "keywords": [
+    "website"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mehulkar/mehulkar.com/issues"
+  },
+  "homepage": "https://github.com/mehulkar/mehulkar.com#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.0"
+  },
+  "volta": {
+    "node": "16.13.1",
+    "npm": "8.3.0"
+  },
+  "devDependencies": {
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.3"
+  }
+}

@@ -44,7 +44,6 @@ body main #content article code {
 body main #content article pre code,
 body main #content article p code,
 body main #content article li code {
-  color: var(--code-text-color);
   border-radius: 5px;
 }
 
@@ -55,13 +54,13 @@ body main #content article a code {
 body main #content article p code,
 body main #content article li code {
   background: #f8f8f8; /* same as what rouge .highlight class does. */
+  color: var(--code-text-color);
   padding: 1px 5px;
   border: solid 0.5px #d8d8d8;
 }
 
 body main #content article pre code {
   display: block;
-  padding: 1rem;
   overflow-x: scroll;
 }
 
@@ -120,7 +119,7 @@ body main #content article blockquote p code {
 }
 
 body main #content article img {
-  margin: 0 auto;
+  margin: 0 auto 1rem;
   display: block;
 }
 

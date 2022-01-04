@@ -1,0 +1,8 @@
+---
+title: Tech
+categories: technology, tech, silicon valley,
+---
+
+{% set posts = collections.byYear | category("tech") %}
+{% from 'partials/_by-year.njk' import render %}
+{{ render(posts) }}

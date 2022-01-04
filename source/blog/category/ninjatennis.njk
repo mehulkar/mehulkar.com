@@ -1,0 +1,33 @@
+---
+title: Play Tennis Like a Ninja
+categories: sports, tennis, coaching
+---
+
+<p>Tennis is a beautiful sport. It requires</p>
+
+<ul>
+    <li>grace</li>
+    <li>speed</li>
+    <li>coordination</li>
+    <li>agility</li>
+    <li>intelligence</li>
+    <li>and awareness</li>
+</ul>
+
+<p>For a ninja, each of these are essential for success. A Ninja who has mastered his art is beautiful.</p>
+
+<p>I will teach you to play tennis like a Ninja.</p>
+
+<p>Every week, on **Tuesday at midnight**, a Ninja Letter will be sent out.</p>
+
+<p>**100 words. No more. No less.**</p>
+
+<p>(First rule of playing tennis like a ninja: DISCIPLINE)</p>
+
+<p>You will learn to control the court, your opponent, and most importantly, yourself.</p>
+
+<p>Season 1 is about mental preparation.</p>
+
+{% set posts = collections.byYear | category("ninja-tennis") %}
+{% from 'partials/_by-year.njk' import render %}
+{{ render(posts) }}
