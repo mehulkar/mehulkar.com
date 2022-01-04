@@ -5,12 +5,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- TODO: fix this
-    <% if config[:analytics] %>
-      <link rel="preconnect" href="https://plausible.io" crossorigin>
-      <script async defer data-domain="mehulkar.com" src="https://plausible.io/js/plausible.js"></script>
-    <% end %>
-    -->
+    {# TODO: do not render analytics in development #}
+    <link rel="preconnect" href="https://plausible.io" crossorigin>
+    <script async defer data-domain="mehulkar.com" src="https://plausible.io/js/plausible.js"></script>
 
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
@@ -18,7 +15,7 @@
 
     <!-- Use title if it's in the page YAML frontmatter -->
 
-    <!-- TODO: can we combine these branches with an inline if statement somehow? -->
+    {# TODO: can we combine these branches with an inline if statement somehow? #}
     {% if title %}
       <title>{{title}}</title>
       <meta name="description" content="Blog Post: {{title}}">
