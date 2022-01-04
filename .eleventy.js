@@ -130,11 +130,6 @@ module.exports = function (eleventyConfig) {
     return fullDate.format(adjusted);
   });
 
-  eleventyConfig.addHandlebarsHelper("concat", function () {
-    const joined = [...arguments].join(" ");
-    return joined;
-  });
-
   eleventyConfig.addNunjucksFilter("split", function (value) {
     if (!value) return [];
 
