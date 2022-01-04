@@ -99,11 +99,13 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addCollection("categories", function (collectionApi) {
     const all = collectionApi.getAll();
-
+    const posts = all.filter(
+      (post) => !post.inputPath.match(/\/blog\/category/)
+    );
     // Group posts by year first. This is an unsorted object
     const allCategories = new Set();
 
-    for (const post of all) {
+    for (const post of posts) {
       const postCategories = getCategories(post);
 
       for (const category of postCategories) {
