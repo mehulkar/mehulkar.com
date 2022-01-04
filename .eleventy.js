@@ -42,8 +42,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "source/stylesheets/**/*.css": "stylesheets",
     "source/stylesheets/vendor/*.css": "stylesheets/vendor",
-    // 'assets/**/*.js': 'assets',
-    // 'assets/**/*.css': 'assets',
     "source/manifest.json": "/manifest.json",
   });
 
