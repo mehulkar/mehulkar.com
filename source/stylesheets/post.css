@@ -119,7 +119,7 @@ body main #content article blockquote p code {
 }
 
 body main #content article img {
-  margin: 0 auto;
+  margin: 0 auto 1rem;
   display: block;
 }
 
