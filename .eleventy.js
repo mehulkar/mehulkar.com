@@ -11,7 +11,7 @@ const fullDate = Intl.DateTimeFormat("en-us", {
 
 const CATEGORY_PAGES = [
   "books",
-  "emberjs",
+  "ember.js",
   "frontend",
   "ninja-tennis",
   "poetry",
@@ -152,7 +152,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addNunjucksFilter("categoryLink", function (value) {
     const classList = "pill dib mb3 br1 ph3 pv1 ttu";
     if (CATEGORY_PAGES.includes(value)) {
-      return `<a href="/blog/category/${value}" class="pill--link ${classList}">${value}</a>`;
+      const path =
+        {
+          "ember.js": "emberjs",
+          "ninja-tennis": "ninjatennis",
+        }[value] || value;
+      return `<a href="/blog/category/${path}" class="pill--link ${classList}">${value}</a>`;
     } else {
       return `<span class="${classList}">${value}</span>`;
     }
