@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/mehulkar/mehulkar.com#readme",
   "dependencies": {
-    "@11ty/eleventy": "^0.11.0"
+    "@11ty/eleventy": "^0.12.1"
   },
   "volta": {
     "node": "16.13.1",
