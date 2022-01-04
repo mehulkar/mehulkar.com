@@ -118,26 +118,14 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("formatDate", function (value) {
     if (!value) return "";
-
-    // TODO: the `value` here is from frontmatter in each post,
-    // which I wrote based on the local date for me. But 11ty assumes
-    // it is UTC. For the most part this doesn't matter, because we're
-    // only displaying date and month, but sometimes the 8 hour difference
-    // makes it wrong. We need to initialize a PST date object using the values
-    // from this value and format that.
-    return shortDate.format(value);
+    const adjusted = adjustTimezone(value);
+    return shortDate.format(adjusted);
   });
 
   eleventyConfig.addFilter("fullDate", function (value) {
     if (!value) return "";
-
-    // TODO: the `value` here is from frontmatter in each post,
-    // which I wrote based on the local date for me. But 11ty assumes
-    // it is UTC. For the most part this doesn't matter, because we're
-    // only displaying date and month, but sometimes the 8 hour difference
-    // makes it wrong. We need to initialize a PST date object using the values
-    // from this value and format that.
-    return fullDate.format(value);
+    const adjusted = adjustTimezone(value);
+    return fullDate.format(adjusted);
   });
 
   eleventyConfig.addHandlebarsHelper("concat", function () {
@@ -182,4 +170,25 @@ function getCategories(post) {
     .split(",")
     .map((x) => x.trim())
     .filter(Boolean);
+}
+
+/**
+ * Eleventy hardcodes parsing of dates from frontmatter as UTC.
+ * https://www.11ty.dev/docs/dates/#dates-off-by-one-day
+ * https://github.com/11ty/eleventy/blob/a5101895787ba7a264c37a411fa5178cce1b93d9/src/Template.js#L1018-L1031
+ *
+ * But all these posts are written with PST timezone (probably).
+ * So we need to take the JS Date that Eleventy gives us, serialize
+ * it to a ISO String, change the timezone, and initialize a new Date object.
+ *
+ * @param {Date} date
+ * @returns {Date}
+ */
+function adjustTimezone(date) {
+  const isoString = new Date(date).toISOString();
+  // adjusted date. Replacing the `Z` at the end and adding an -8 hour offset
+  // makes the ISO string a PST timezone string. Then, initializing a new
+  // date object with this string, means that we get a date object with the
+  // correct timezone.
+  return new Date(isoString.replace("Z", "-08:00"));
 }
