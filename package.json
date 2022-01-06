@@ -10,7 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx eleventy --serve",
     "prebuild": "rm -rf ./build",
-    "build": "npx eleventy"
+    "build": "npx eleventy",
+    "new": "node ./bin/new.mjs"
   },
   "repository": {
     "type": "git",
@@ -29,8 +30,7 @@
     "@11ty/eleventy": "^0.12.1"
   },
   "volta": {
-    "node": "16.13.1",
-    "npm": "8.3.0"
+    "node": "17.3.0"
   },
   "devDependencies": {
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.3"
