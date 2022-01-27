@@ -41,19 +41,8 @@ body main #content article code {
   font-size: 0.9em;
 }
 
-body main #content article pre code,
-body main #content article p code,
-body main #content article li code {
-  border-radius: 5px;
-}
-
 body main #content article a code {
   color: var(--base-color);
-}
-
-body main #content article p code,
-body main #content article li code {
-  padding: 1px 5px;
 }
 
 body main #content article pre code {
