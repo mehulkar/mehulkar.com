@@ -21,8 +21,8 @@ one, test and move on.
 
 ## The Bug
 
-When testing the build from the merged codebase in a QA environment, we notice
-that the top navigation bar appears unstyled for a second.
+When testing the build from the merged codebase in a QA environment, someone
+noticed and filed a bug that the top navigation bar appears unstyled for a second.
 
 ## Debugging: The Hunch
 
@@ -162,13 +162,14 @@ I would [love to know][4] if someone has any ideas!
 ## Zooming out
 
 So why do we inject a `<link>` stylesheet in the first place? The navigation
-on our website is built by a different team that provides JS and CSS assets as
-a package. To render it, we have to find the right version for the right locale
-at runtime and inject that into the DOM. We can usually do this during SSR, but
-when that fails, the functionality falls back to inject it client side.
+on our website is built by a different team to be applied across many disparate
+domains. They provide JS and CSS assets as a package. To render it, we have to
+find the right version for the right locale at runtime and inject that into the DOM.
+We can usually do this during SSR, but when that fails, the same functionality
+runs on the client--the browser--as well.
 
-This isn't the best architecture, but it's a function of how different teams work
-together. [Conway's Law][8] in full effect.
+This isn't the most convenient architecture to maintain, but it's a function of
+how different teams work together. [Conway's Law][8] in full effect.
 
 ## Conclusion
 
