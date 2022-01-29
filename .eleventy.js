@@ -70,9 +70,12 @@ module.exports = function (eleventyConfig) {
     // above.
     const sortedGroups = [];
     for (const year of sortedYears) {
+      const posts = byYear[year].sort(
+        (post1, post2) => post2.date - post1.date
+      );
       sortedGroups.push({
         name: year,
-        posts: byYear[year],
+        posts,
       });
     }
 
