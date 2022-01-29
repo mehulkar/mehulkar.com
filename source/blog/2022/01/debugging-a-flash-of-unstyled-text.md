@@ -4,9 +4,9 @@ date: 2022-01-20
 categories: programming, debugging, javascript, ember
 ---
 
-Sometimes, it's hard for me to explain (even to myself) what I do all do at my
+Sometimes, it's hard for me to explain (even to myself) what I do all day at my
 job. I maintain some pretty simple, static web pages at my job that *should* be low
-effort to maintain. But recently, I created and fixed a bug that involved so many
+effort. But recently, I created and fixed a bug that involved so many
 unexpected things, and manifested in a weird enough way that I thought it would be
 useful to demonstrate the complexity of a frontend engineer's job.
 
