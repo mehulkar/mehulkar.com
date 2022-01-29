@@ -21,8 +21,8 @@ one, test and move on.
 
 ## The Bug
 
-When testing this code in a QA environment, we notice that the navigation bar
-appears unstyled for a brief second.
+When testing the build from the merged codebase in a QA environment, we notice
+that the top navigation bar appears unstyled for a second.
 
 ## Debugging: The Hunch
 
