@@ -1,0 +1,8 @@
+---
+title: Debugging
+categories: programming, debugging
+---
+
+{% set posts = collections.byYear | category("debugging") %}
+{% from 'partials/_by-year.njk' import render %}
+{{ render(posts) }}

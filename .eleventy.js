@@ -22,6 +22,7 @@ const CATEGORY_PAGES = [
   "tech",
   "three-musics",
   "til",
+  "debugging",
 ];
 
 module.exports = function (eleventyConfig) {
