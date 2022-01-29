@@ -49,7 +49,9 @@ module.exports = function (eleventyConfig) {
     const all = collectionApi.getAll();
 
     const posts = all.filter(
-      (post) => !post.inputPath.match(/\/blog\/category/)
+      (post) =>
+        post.inputPath.match(/\/blog/) &&
+        !post.inputPath.match(/\/blog\/category/)
     );
 
     // Group posts by year first. This is an unsorted object
