@@ -13,10 +13,11 @@ useful to demonstrate the complexity of a frontend engineer's job.
 ## The Situation
 
 Over the past couple months, my team has been merging two codebases into the same
-Github repo. The process was fairly simple: two Ember Apps that can be merged into
-one. The apps have a few differences that can be handled with some `if` statements
-or by consolidating behaviors. For example, if they use different versions of a
-dependency, it's easy enough to pick the more recent one, test and move on.
+git repository. The work was fairly simple: two [Ember.js](https://emberjs.com) apps
+that can be merged into one. The apps have a few differences that can be handled
+with some `if` statements or by consolidating behaviors. For example, if they
+use different versions of a dependency, it's easy enough to pick the more recent
+one, test and move on.
 
 ## The Bug
 
