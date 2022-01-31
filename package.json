@@ -30,7 +30,8 @@
     "@11ty/eleventy": "^0.12.1"
   },
   "volta": {
-    "node": "17.3.0"
+    "node": "17.3.0",
+    "npm": "8.4.0"
   },
   "devDependencies": {
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.3"
