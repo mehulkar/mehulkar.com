@@ -29,7 +29,7 @@ noticed and filed a bug that the top navigation bar appears unstyled for a secon
 Since this is, as they say, *NotMyFirstRodeo*, my first hunch is that server side
 rendering is broken, skipping a `<link rel=stylesheet>` tag injection at runtime.
 I've seen this happen before, and I've just fixed a JS exception in SSR the day before.
-Because I'm unable to cursorily reproduce the bug, so I send it back to the originator
+Because I'm unable to cursorily reproduce the bug, I send it back to the originator
 and move on with my day. The next day, I get the same bug back. *Not Fixed*.
 
 This time I reach out to the originator and they point out that the bug only
@@ -38,11 +38,11 @@ reproduces in Firefox. I had missed that in the report the day before!
 This time, I put in a little more effort. I build the production server locally.
 [FastBoot][5] (Ember.js's SSR solution) has a different app server for local builds
 (using a middleware [that injects][6] into the regular development `ember server`),
-and a different server for prodution: [`fastboot-app-server`][7]. They're both roughly
-the same and the meat of the SSR is the same package `fastboot`. But as luck would have it,
-The `fastboot` package in our production server is using v3 and and the one in
-`ember-cli-fastboot` is v2. It hasn't happened yet, but I'm always paranoid that
-some day this will cause that special flavor of "works on my machine bug"
+and a different server for prodution ([`fastboot-app-server`][7]). They're both roughly
+the same, and the meat of the SSR is the same [`fastboot`][9] package, but as luck
+would have it, The `fastboot` package in our production server is using v3 and
+and the one in `ember-cli-fastboot` is v2. It hasn't happened yet, but I'm always
+paranoid that some day this will cause that special flavor of "works on my machine bug"
 that we *love*  to see as developers. *eye roll*
 
 
@@ -181,7 +181,7 @@ not worth changing.
 I don't think this was a particularly *hard* problem to solve. I knew where to
 look and I knew next steps for debugging as each step before left me with more
 questions. But at the very least, it took two cycles of communicaton with the
-bug originator,  two rounds of reproducing the bug, and two rounds of switching
+bug originator, two rounds of reproducing the bug, and two rounds of switching
 contexts. This is the type of thing that eats up time in large organizations.
 This is the type of thing to be vigilant about. No bugs made it to production,
 but how often do our processes (or more generally: the status quo) have an
@@ -195,3 +195,4 @@ opportunity cost that we don't capture?
 [6]: https://github.com/ember-fastboot/ember-cli-fastboot/blob/v3.2.0-beta.5/packages/ember-cli-fastboot/index.js#L309-L337
 [7]: https://github.com/ember-fastboot/ember-cli-fastboot/tree/v3.2.0-beta.5/packages/fastboot-app-server
 [8]: https://en.wikipedia.org/wiki/Conway%27s_law
+[9]: https://github.com/ember-fastboot/ember-cli-fastboot/tree/v3.2.0-beta.5/packages/fastboot
