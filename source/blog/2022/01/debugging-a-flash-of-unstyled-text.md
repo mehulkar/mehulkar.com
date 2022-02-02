@@ -45,7 +45,6 @@ and the one in `ember-cli-fastboot` is v2. It hasn't happened yet, but I'm alway
 paranoid that some day this will cause that special flavor of "works on my machine bug"
 that we *love*  to see as developers. *eye roll*
 
-
 So I build the production server and spin it up.
 
 DOES. NOT. REPRODUCE.
@@ -55,7 +54,11 @@ into the QA environment. See the belly of the beast.
 
 I `ssh` into one of the hosts and tail the server logs. These logs should be
 forwarded to Splunk, but I want to see them in realtime and I have no idea how
-the Splunk team's synchronization works, or how long it takes.
+the Splunk team's synchronization works, or how long it takes. (There's a whole
+aside here about how long it took me to get access to and setup the credentials
+to be able to `ssh` into these remote machines. Long story short, it took a long
+time when I first got it, and if I ever lost access, I don't know how long it
+would take to get again.)
 
 The issue is apparent. `FastBoot.require('some-package')` is throwing an exception,
 and the stack trace is all over the logs. That's a red flag if I ever saw one!
