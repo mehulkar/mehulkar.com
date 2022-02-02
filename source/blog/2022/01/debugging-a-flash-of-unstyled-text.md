@@ -64,7 +64,7 @@ The issue is apparent. `FastBoot.require('some-package')` is throwing an excepti
 and the stack trace is all over the logs. That's a red flag if I ever saw one!
 That would definitely break the server side render and cause an flash of unstyled text.
 I still have two remaining mysteries: why can't I reproduce this locally? and
-why *only* Firefox? A server side crash has no bearing on the browser.
+why *only* Firefox? A server side exception has no bearing on the browser.
 
 Looking at the code, it's clear that `some-package` is in the `devDependencies`,
 and `fastbootDependencies` keys. For it to be part of the available dependencies
@@ -85,6 +85,9 @@ in the production server, it needs to be in `dependencies`.
 }
 ```
 
+I also confirm that before the repositories merged, this was configured
+correctly.
+
 ## An Aside on FastBoot
 
 During `ember build`, the `ember-cli-fastboot` addon [programmatically generates][1]
@@ -93,7 +96,7 @@ packages to be in _both_ the `dependencies` section (to get the version) and the
 `fastbootDependencies` (to allow list it in the sandbox). There are a couple issues
 with this approach:
 
-- It's impossible to deterministically install dependencies for production, as there
+- It's impossible to [deterministically install dependencies][10] for production, as there
 is no lockfile.
 - It's very easy to get it wrong (which is still a sensible tradeoff for the
 extra security!)
@@ -127,7 +130,7 @@ node -e "console.log(require('bliggity-bloo').default)"
 ```
 
 Notice that the `bliggity-bloo` package is two directories above, but it's
-still available!
+still available to require!
 
 So that explains why I couldn't reproduce the bug locally. My `dist` directory
 was nested inside my app code directory, which has its own `node_modules` that
@@ -164,12 +167,12 @@ I would [love to know][4] if someone has any ideas!
 
 ## Zooming out
 
-So why do we inject a `<link>` stylesheet in the first place? The navigation
-on our website is built by a different team to be applied across many disparate
-domains. They provide JS and CSS assets as a package. To render it, we have to
-find the right version for the right locale at runtime and inject that into the DOM.
-We can usually do this during SSR, but when that fails, the same functionality
-runs on the client--the browser--as well.
+So why do we inject a `<link>` stylesheet at runtime in the first place? Why isn't
+it just part of `index.html`? The navigation on our website is built by a different
+team to be applied across many disparate domains. They provide JS and CSS assets
+as a package. To render it, we have to find the right version for the right locale
+at runtime and inject that into the DOM. We can usually do this during SSR, but
+when that fails, the same functionality runs on the client (the browser) as well.
 
 This isn't the most convenient architecture to maintain, but it's a function of
 how different teams work together. [Conway's Law][8] in full effect.
@@ -199,3 +202,4 @@ opportunity cost that we don't capture?
 [7]: https://github.com/ember-fastboot/ember-cli-fastboot/tree/v3.2.0-beta.5/packages/fastboot-app-server
 [8]: https://en.wikipedia.org/wiki/Conway%27s_law
 [9]: https://github.com/ember-fastboot/ember-cli-fastboot/tree/v3.2.0-beta.5/packages/fastboot
+[10]: https://github.com/ember-fastboot/ember-cli-fastboot/issues/885
