@@ -110,6 +110,8 @@ error related to `agentkeepalive`. Fingers crossed this one is really just bad
 timing from my CI's network connectivity while I was doing this work and will go
 away on its own.
 
+Edit: [I'm not the only one that ran into this][9].
+
 [1]: https://github.com/npm/cli/issues/3284
 [2]: https://github.com/sass/node-sass/blob/v4.14.1/package.json#L32
 [3]: https://github.com/sass/node-sass/blob/v4.14.1/package.json#L35
@@ -118,3 +120,4 @@ away on its own.
 [6]: https://github.com/npm/cli/pull/3498
 [7]: https://volta.sh
 [8]: https://twitter.com/izs
+[9]: https://github.com/npm/cli/issues/3078
