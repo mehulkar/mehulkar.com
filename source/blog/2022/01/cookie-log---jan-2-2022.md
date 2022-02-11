@@ -1,10 +1,10 @@
 ---
-title: Cookie Log - Jan 2, 2022
+title: Cookie Log No. 1
 date: 2022-01-02
 categories: food, baking, journal, cookie-log
 ---
 
-## prep
+## prep notes
 
 - Made 1/2 sizes of <https://www.marthastewart.com/344840/soft-and-chewy-chocolate-chip-cookies>.
 - Forgot to 1/2 the salt amount and used the full 1 tsp.
@@ -21,6 +21,7 @@ categories: food, baking, journal, cookie-log
 - Color and hardness improved after sitting out for 3 minutes.
 
 ## taster notes
+
 - choco chips didn't melt all the way through (maybe need better quality ingredient?)
     - chef note: try chocolate chunks instead
 - cookies too white, why no brown?
