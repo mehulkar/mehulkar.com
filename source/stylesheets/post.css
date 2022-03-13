@@ -18,8 +18,8 @@ body main #content article h4 {
 
 body main #content article hr {
   border-top: 0.5px solid #fff;
-  margin: 50px auto;
-  width: 20%;
+  margin: 2.5rem auto;
+  width: 50%;
 }
 
 body main #content article aside {
