@@ -1,13 +1,11 @@
 ## Personal website
 
-Built on [Middleman](http://middlemanapp.com/).
+Built with [Eleventy](https://11ty.dev).
 
 ## Write
 
-Write new posts like this:
-
-```
-rake new
+```bash
+npm run new
 ```
 
 ## Deploy
