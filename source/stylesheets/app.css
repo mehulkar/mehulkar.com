@@ -180,13 +180,9 @@ header {
 }
 
 .post-group .post-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.post-group .post-list .post-link {
-  width: calc(50% - 20px);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
 }
 
 .post-group--title {
@@ -199,9 +195,32 @@ header {
 
 @media only screen and (max-width: 600px) {
   .post-group .post-list {
-    display: block;
-  }
-  .post-group .post-list .post-link {
-    width: 100%;
+    grid-template-columns: 1fr;
   }
 }
+
+
+/* Older browsers that don't support CSS Grid */
+@supports not (display: grid) {
+  .post-group .post-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .post-group .post-list .post-link {
+    width: calc(50% - 20px);
+  }
+
+  @media only screen and (max-width: 600px) {
+    .post-group .post-list {
+      display: block;
+    }
+
+    .post-group .post-list .post-link {
+      width: 100%;
+    }
+  }
+
+}
+
