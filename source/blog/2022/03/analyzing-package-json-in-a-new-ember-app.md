@@ -133,23 +133,67 @@ These packages are the meat of an Ember.js application.
 ## Nice to Haves
 
 - `ember-load-initializers`
+
+    Loads the code in `app/initializers` and `app/instance-initializers/` directories,
+    and makes it available for the Ember Application to run.
+
 - `ember-cli-app-version`
+
+    Attempts to provide a version number on build based on package.json, or git `HEAD` sha.
+
 - `@ember/optional-features`
+
+    Transitional package to configure features. Should not be a separate package.
+
 - `ember-cli-sri`
+
+    Configures subresource integrity hashes. Should not be a separate package.
+
 - `ember-fetch`
+
+    Wrapper around `fetch` that works on web and in node. Should not be a separate package.
+
 - `ember-export-application-global`
+
+    Makes available (or not) the application's name as a global. Should not be a separate package.
+
 - `ember-welcome-page`
+
+    A component with a welcome message for new apps.
+
 - `ember-page-title`
+
+    A package for updating the `<title>` on route transition. Should be part of Routing features,
+    not a separate package.
 
 ---
 
 ## Building `dist/`
 
 - `ember-cli`
+
+    CLI commands, incorporating "addons", blueprints for generating new files.
+
 - `ember-cli-babel`
+
+    A collection of babel transforms, some specific to Ember, some more generic (including `@babel/preset-env`).
+    Should be part of `ember-cli`.
+
 - `ember-auto-import`
+
+    Started as a community package and became part of the default blueprint. It should just be built
+    into `ember-cli`.
+
 - `ember-cli-htmlbars`
+
+    ??
+
 - `broccoli-asset-rev`
+
+    Fingerprints built assets and updates references everywhere it can find via a regex and
+    string manipulation. Notable that this is `broccoli-*` package, as opposed to `ember-*`.
+    Should be built into `ember-cli`.
+
 - `ember-cli-terser`
 
     This injects `terser` into the right part of the pipeline. While it's _possible_
@@ -169,15 +213,14 @@ These packages are the meat of an Ember.js application.
 
 ## Linting
 
-- `babel-eslint`
 - `ember-template-lint`
 - `eslint`
-- `eslint-config-prettier`
+- `babel-eslint`
 - `eslint-plugin-ember`
 - `eslint-plugin-node`
-- `eslint-plugin-prettier`
 - `eslint-plugin-qunit`
-- `ember-cli-dependency-checker`
+- `eslint-config-prettier`
+- `eslint-plugin-prettier`
 - `prettier`
 
 ---
@@ -190,8 +233,10 @@ These packages are the meat of an Ember.js application.
 - `qunit-dom`
 
 ---
+
 ## ??
 
 - `ember-cli-inject-live-reload`
 - `npm-run-all`
 - `loader.js`
+- `ember-cli-dependency-checker`
