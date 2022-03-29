@@ -27,12 +27,9 @@
         border-radius: 5px;
       }
 
-      main > section:nth-child(even) {
-        background-color: #f0f0f0;
-      }
-
       h1, h2, h3 { margin: 0; }
       p { margin-top: 0; }
+      li p { margin-bottom: 0; }
       p:last-child { margin-bottom: 0; }
 
       .flex {display: flex;}
@@ -74,123 +71,103 @@
 
     <main>
       <section class="mb1 pa1">
-        <h2 class='mb1 bb1 b--black-50'>Summary</h2>
-
         <p>
-          I enjoy building things with web technologies. I've recently been focused on frontend
-          architecture, testing, and performance.
+          I'm a Staff Software Engineer at Apple, where I work with web technologies. Recently,
+          I've been focused on frontend architecture, testing, and web performance.
         </p>
       </section>
 
       <section class="mb1 pa1">
-        <h2 class='mb1 bb1 b--black-50'>Skills</h2>
-        <section class='mb1'>
-          <ul class='list flex flex-wrap'>
-            <li class='flex-third mb1'>Javascript/Ember.js</li>
-            <li class='flex-third mb1'>Testing</li>
-            <li class='flex-third mb1'>Ruby/Python/PHP</li>
-            <li class='flex-third mb1'>Agile/TDD</li>
-            <li class='flex-third mb1'>Git/Github</li>
-            <li class='flex-third mb1'>Postgres/MySQL</li>
-            <li class='flex-third mb1'>CLI/Linux</li>
+        <section class='mb2'>
+          <div class='flex flex-baseline mb2'>
+            <h3 class='flex-1'>Apple - Apple Media Products team</h3>
+            <span class='light tu f6'>October 2017 - <span class='fw5 blue'>Present</span></span>
+          </div>
+
+          <p>I contribute to Apple's media services experience and presence on the web. Some highlights:
+          </p>
+
+          <ul>
+            <li>Helped launch Apple TV+ streaming on the web (<a href="//tv.apple.com">tv.apple.com</a>).</li>
+            <li>Contributed to Apple Music on the web (<a href="//music.apple.com">music.apple.com</a>).</li>
+            <li>
+              Owned AppStore, Books, and Podcast web preview pages. I led the work to reduce Javascript bundles by 50%.
+            </li>
+            <li>Implemented RUM and synthetic performance tooling (10+ million views per day).</li>
+            <li>Maintained 20+ packages of shared UI libraries and business logic</li>
+            <li>Implemented and coordinated rollout of <code>webp</code> image format across millions of web pages and images.</li>
+            <li>Contributed to Music, TV, and iTunes macOS apps.</li>
           </ul>
         </section>
-      </section>
-
-      <section class="mb1 pa1">
-        <h2 class='mb1 bb1 b--black-50'>Experience</h2>
 
         <section class='mb2'>
           <div class='flex flex-baseline mb2'>
-            <h3 class='flex-1'>Software Engineer at Apple</h3>
-            <span class='light tu f6'>November 2013 - <span class='fw5 blue'>Present</span></span>
+            <h3 class='flex-1'>Apple - Application Program Tools team</h3>
+            <span class='light tu f6'>December 2015 - October 2017</span>
+          </div>
+
+          <p>
+            I worked on custom continuous integration and dashboard for the Final Cut Pro,
+            Garageband, and Photos teams. Some highlights:
+          </p>
+
+          <ul>
+            <li>Built regression analysis UI for test suites running on daily macOS builds</li>
+            <li>Modernized Python macOS daemon (svn to git migration, versioned releases, and unit testing</li>
+            <li>Interactive CLI tooling for installation on clean macOS installs</li>
+          </ul>
+        </section>
+
+        <section class='mb2'>
+          <div class='flex flex-baseline mb2'>
+            <h3 class='flex-1'>Apple - PDCodelabs team</h3>
+            <span class='light tu f6'>November 2013 - December 2015</span>
           </div>
 
           <ul>
-            <li>Apple TV: <a href="//tv.apple.com">tv.apple.com</a>, TV.app</li>
-            <li>Apple Music: <a href="//music.apple.com">music.apple.com</a>, Music.app, iTunes.app</li>
-            <li>Continuous integration and dashboard software for the apps QA team</li>
-            <li>Workflow management software for the industrial design team</li>
-            <li>Issue tracker for a manufacturing operations team</li>
-            <li>Codec configuration software for the audio team</li>
+            <li>Workflow management software for the Industrial Design studio</li>
+            <li>Issue tracker for the Manufacturing Operations team</li>
+            <li>Audio codec configuration software</li>
           </ul>
         </section>
 
         <section class='mb2'>
           <div class='flex flex-baseline mb2'>
-            <h3 class='flex-1'>Web Developer at MochaLeaf, Inc</h3>
+            <h3 class='flex-1'>MochaLeaf - Web Developer</h3>
             <span class='light tu f6'>April 2012 - November 2013</span>
           </div>
 
-          <ul>
-            <li>Shipped products using Ember.js, Rails, and Django.</li>
-          </ul>
-        </section>
-
-        <section class='mb2'>
-          <div class='flex flex-baseline mb2'>
-            <h3 class='flex-1'>Founder at CollegeDesis</h3>
-            <span class='light tu f6'>April 2011 - August 2014</span>
-          </div>
-
-          <p>
-            Worked on collaborative projects with South Asian student organizations
-            with the goal of building a national community.</p>
-          <ul>
-            <li>
-              Directory and map of ~1,000 South Asian student organizations
-              using Rails, Elasticsearch, and
-              <a href="https://codecanyon.net/user/romancode/portfolio?ref=Yatek">
-                MapSVG</a>.
-            </li>
-            <li>
-              Produced and sold <a href="https://itunes.apple.com/us/album/best-of-south-asian-a-cappella/id609757272">
-              Best of South Asian A Capella</a> album in a custom online
-              store using Stripe.
-            </li>
-            <li>Curated jukebox of South Asian DJs using Ember.js and the Soundcloud API.</li>
-          </ul>
-        </section>
-
-        <section class='mb2'>
-          <div class='flex flex-baseline mb2'>
-            <h3 class='flex-1'>CoFounder at FridgeWaves</h3>
-            <span class='light tu f6'>March 2010 - March 2012</span>
-          </div>
-
-          <p>Generated capital by renting appliances to international/exchange students to facilitate international
-          microloans through Kiva and Wokai. Sold the business in the summer of 2012.
+          <p>This was my first professional job after a developer bootcamp. I worked
+            on contract jobs for Apple, Google, and many other smaller companies. I
+            worked on tech stacks including Ruby on Rails, Ember.js, and Django.
           </p>
         </section>
       </section>
 
+
       <section class="mb1 pa1">
-        <h2 class='mb1 bb1 b--black-50'>Education</h2>
+        <h2 class='mb1 bb1'>Education</h2>
 
         <section class='mb2'>
+          <section class='mb2'>
+            <div class='flex flex-baseline mb2'>
+              <h3 class='flex-1'>Dev Bootcamp</h3>
+              <span class='light tu f6'>February 2012 - March 2012</span>
+            </div>
+            <p>
+              8 week intensive programming bootcamp focusing on Ruby on Rails.
+            </p>
+          </section>
+
           <div class='flex flex-baseline mb2'>
-            <h3 class='flex-1'>Student at University of Wisconsin-Whitewater</h3>
+            <h3 class='flex-1'>University of Wisconsin-Whitewater</h3>
             <span class='light tu f6'>September 2007 - May 2011</span>
           </div>
 
-          <ul>
-            <li>BBA, Finance - Summa Cum Laude</li>
-            <li>Applied Investments Program</li>
-            <li>Dean's Advisory Council, College of Business and Economics</li>
-            <li>Segregate University Fee Allocation Committee</li>
-            <li>Collegiate Entrepreneur's Organization</li>
-          </ul>
+          <p>BBA, Finance - Summa Cum Laude</p>
         </section>
 
-        <section class='mb2'>
-          <div class='flex flex-baseline mb2'>
-            <h3 class='flex-1'>Student at Dev Bootcamp</h3>
-            <span class='light tu f6'>February 2012</span>
-          </div>
-          <p>
-            8 week intensive programming bootcamp focusing on Ruby on Rails.
-          </p>
-        </section>
+
       </section>
     </main>
   </body>
