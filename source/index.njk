@@ -6,18 +6,14 @@ layout: layout.njk
 
 <p>
   I  <a href="https://linkedin.com/in/mehulkar" target="_blank" rel="noopener">work at Apple</a> (for now).
-  The best way to see what I'm currently interested in is to glance through my <a href="https://twitter.com/mehulkar/likes" target="_blank" rel="noopener">Twitter faves</a>
-  or see what I'm reading on <a href="https://www.goodreads.com/user/show/27391275-mehul" target="_blank" rel="noopener">Goodreads</a>. But you can also stay here
-  and read what I'm thinking about. Here's a printable <a href="/resume">resume</a>.
+  I have ten years of experience working with web technologies and engineering infrastructure.
+  The best way to see what I'm  interested in is to glance through my <a href="https://twitter.com/mehulkar/likes" target="_blank" rel="noopener">Twitter favorites</a>
+  or see what I'm reading on <a href="https://www.goodreads.com/user/show/27391275-mehul" target="_blank" rel="noopener">Goodreads</a>.
+  But you can also stay here and read what I'm thinking about. Here's a printable <a href="/resume">resume</a>.
 </p>
 
-<h2 class="mb3">Blog</h2>
+<h2 class="mb3">Posts</h2>
 
+{% set posts = collections.byYear | category("programming") %}
 {% from 'partials/_by-year.njk' import render %}
-{{ render(collections.byYear) }}
-
-<nav class='flex flex-wrap mb4'>
-  {% for category in collections.categories %}
-    {{category | categoryLink | safe }}
-  {% endfor %}
-</nav>
+{{ render(posts) }}
