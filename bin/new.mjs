@@ -15,7 +15,7 @@ async function main() {
 }
 
 const title = await main();
-const parameterizedTitle = title.replaceAll(" ", "-").toLowerCase();
+const parameterizedTitle = title.replaceAll(" ", "-").replaceAll(':', '-').toLowerCase();
 const { month, year, fullDate } = getDateSegments();
 
 const filePath = path.resolve(
