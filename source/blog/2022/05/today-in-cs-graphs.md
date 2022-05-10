@@ -31,15 +31,15 @@ We could turn this into a directed graph by adding arrows.
 B -> A <- C
 ```
 
-A directed graphs can represent dependency chains. In this case, both B and C depend
+A directed graph can represent dependency chains. In this case, both B and C depend
 on A, and A doesn't depend on anything. This could be represented with a similar
 adjacency list:
 
 ```js
 {
-    "A": ["B", "C"],
-    "B": [],
-    "C": [],
+    "A": [],
+    "B": ["A"],
+    "C": ["A"],
 }
 ```
 
