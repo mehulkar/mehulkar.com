@@ -14,7 +14,7 @@ should be repaid, *when* it should be repaid, and *what* happens if it isn't rep
 essential parts of the agreement between the lender and borrower.
 
 When we take on "technical debt" (or at least when we take shortcuts and call it
-technical debt 🙄🤣), we're "borrowing against future debt". I like this description
+technical debt 🙄🤣), we're "borrowing against future productivity". I like this description
 from Richard Dalton<sup>1</sup>:
 
 <blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">Technical Debt is not a catch-all term for bad code.<br><br>It is deliberate borrowing against future productivity. You must know when you&#39;re doing it and why.<br><br>Bad code that bites you long after you&#39;ve written it can&#39;t be retrospectively labelled Technical Debt. It&#39;s just bad code.</p>&mdash; Richard Dalton (@richardadalton) <a href="https://twitter.com/richardadalton/status/1111366432686833664?ref_src=twsrc%5Etfw">March 28, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
