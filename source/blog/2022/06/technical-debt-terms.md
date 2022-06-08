@@ -62,19 +62,19 @@ into "everything is terrible and we can't have nice things."
 
 **But there is hope!**
 
-If can fool ourselves into turning technical debt into engineering
+If we can fool ourselves into turning technical debt into engineering
 projects, we can also do the opposite! There are two ways to tune yourself into this
 mindset:
 
 1. When you hear talk of engineering projects (often called infrastructural projects),
-    see if you can trace the origins of the demand for this project. Why now? What
-    socio-technical decisions led to the need for this project. Was it preventable?
-    How?
+    see if you can trace the origins of the demand for this project. Ask: Why do we need
+    to do this project now? What socio-technical decisions led to the need for this project?
+    Was it preventable? How?
 
     This is the part where I directly contradict Richard's tweet above. In theory,
     you can't retroactively call "bad code" (or bad decisions) technical debt after the
-    fact. But in practice, I'm not sure it's useful to be dogmatic about this. In practice,
-    all sorts of things are labeled technical debt, and it *rarely* seems to happen
+    fact. But in practice, I'm not sure it's useful to be dogmatic about it either. In practice,
+    all sorts of things are labeled technical debt, and the label is *rarely* applied
     consciously at the point it's taken on. So why shouldn't we work backwards from
     the demand for engineering work to the point at which it could have been a conscious
     decision? Why shouldn't this retroactive labeling be a tool in our kits for justifying
