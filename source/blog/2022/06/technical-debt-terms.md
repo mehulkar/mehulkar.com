@@ -19,7 +19,7 @@ from Richard Dalton<sup>1</sup>:
 
 <blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">Technical Debt is not a catch-all term for bad code.<br><br>It is deliberate borrowing against future productivity. You must know when you&#39;re doing it and why.<br><br>Bad code that bites you long after you&#39;ve written it can&#39;t be retrospectively labelled Technical Debt. It&#39;s just bad code.</p>&mdash; Richard Dalton (@richardadalton) <a href="https://twitter.com/richardadalton/status/1111366432686833664?ref_src=twsrc%5Etfw">March 28, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-I like the framing of "against future debt", but for the purpose of this post,
+I like the framing of "against future productivity", but for the purpose of this post,
 we'll hand wave over the actual point of the tweet about retroactively labeling
 bad code. (In fact, later in this post, I'll be saying something close to the
 opposite of that 😅).
