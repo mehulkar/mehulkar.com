@@ -35,18 +35,18 @@ consensus:
     overriding `cd`, which can be confusing. It worked best for me to activate my
     `virtualenv` manually, but I created a shell function to help:
 
-        ```bash
-        function v() {
-          name="${1-env}"
-          echo "Activating $name"
-          virtualenv $name > /dev/null
-          source "$name/bin/activate"
-        }
-        ```
+    ```bash
+    function v() {
+      name="${1-env}"
+      echo "Activating $name"
+      virtualenv $name > /dev/null
+      source "$name/bin/activate"
+    }
+    ```
 
-        If you're wondering, running this function multiple times is safe, because
-        it turns out that creating a virtualenv from inside a virtualenv doesn't seem
-        to create a Russian doll hierarchy (thank goodness).
+    If you're wondering, running this function multiple times is safe, because
+    it turns out that creating a virtualenv from inside a virtualenv doesn't seem
+    to create a Russian doll hierarchy (thank goodness).
 
 -   Don't attempt to share virtual environments across projects. The only advantage
     of this seems to be in automation or if you need to be stringent with disk space
