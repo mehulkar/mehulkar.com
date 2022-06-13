@@ -103,6 +103,13 @@ header {
   border-color: var(--header-border-color);
 }
 
+.header__icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
 .header-content--avatar {
   border-radius: 50%;
   border: solid 2px #fff;
