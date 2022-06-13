@@ -1,4 +1,5 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 const shortDate = Intl.DateTimeFormat("en-us", {
   month: "short",
@@ -27,6 +28,8 @@ const CATEGORY_PAGES = [
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addLiquidFilter("dateToRfc3339", pluginRss.dateToRfc3339);
 
   eleventyConfig.setTemplateFormats([
     "html,hbs,md,njk",
@@ -46,14 +49,15 @@ module.exports = function (eleventyConfig) {
     "source/manifest.json": "/manifest.json",
   });
 
-  eleventyConfig.addCollection("byYear", function (collectionApi) {
-    const all = collectionApi.getAll();
+  eleventyConfig.addCollection('posts', function(collectionApi) {
+    const allPosts = getPosts(collectionApi);
 
-    const posts = all.filter(
-      (post) =>
-        post.inputPath.match(/\/blog/) &&
-        !post.inputPath.match(/\/blog\/category/)
-    );
+    // TODO: add more categories in here?
+    return filterPostsByCategory(allPosts, 'programming');
+  })
+
+  eleventyConfig.addCollection("byYear", function (collectionApi) {
+    const posts = getPosts(collectionApi);
 
     // Group posts by year first. This is an unsorted object
     const byYear = {};
@@ -83,33 +87,9 @@ module.exports = function (eleventyConfig) {
     return sortedGroups;
   });
 
-  eleventyConfig.addNunjucksFilter("category", function (byYear, category) {
-    const filtered = [];
-
-    for (const postCollction of byYear) {
-      const year = postCollction.name;
-
-      const forCategory = postCollction.posts.filter((post) => {
-        const postCategories = getCategories(post);
-        return postCategories.includes(category);
-      });
-
-      if (forCategory.length) {
-        filtered.push({
-          name: year,
-          posts: forCategory,
-        });
-      }
-    }
-
-    return filtered;
-  });
-
   eleventyConfig.addCollection("categories", function (collectionApi) {
-    const all = collectionApi.getAll();
-    const posts = all.filter(
-      (post) => !post.inputPath.match(/\/blog\/category/)
-    );
+    const posts = getPosts(collectionApi);
+
     // Group posts by year first. This is an unsorted object
     const allCategories = new Set();
 
@@ -122,6 +102,25 @@ module.exports = function (eleventyConfig) {
     }
 
     return Array.from(allCategories);
+  });
+
+  eleventyConfig.addNunjucksFilter("category", function (byYear, category) {
+    const filtered = [];
+
+    for (const postCollection of byYear) {
+      const {name: year, posts } = postCollection;
+
+      const forCategory = filterPostsByCategory(posts, category)
+
+      if (forCategory.length) {
+        filtered.push({
+          name: year,
+          posts: forCategory,
+        });
+      }
+    }
+
+    return filtered;
   });
 
   eleventyConfig.addFilter("formatDate", function (value) {
@@ -163,6 +162,26 @@ module.exports = function (eleventyConfig) {
     },
   };
 };
+
+/**
+ * TODO: allow accepting more than one category?
+ * @param {*} posts
+ * @param {string} category
+ * @returns
+ */
+function filterPostsByCategory(posts, category) {
+  return posts.filter((post) => {
+    const postCategories = getCategories(post);
+    return postCategories.includes(category);
+  });
+}
+
+function getPosts(collectionApi) {
+  const all = collectionApi.getAll();
+  return all.filter(
+    (post) => !post.inputPath.match(/\/blog\/category/)
+  );
+}
 
 function getCategories(post) {
   // Use nullish coalesce, because some posts have categories, but
