@@ -12,8 +12,31 @@ layout: layout.njk
   But you can also stay here and read what I'm thinking about. Here's a printable <a href="/resume">resume</a>.
 </p>
 
+<p id="latest-movie">
+  <small>I just watched <span id="movie">...</span> and rated it <span id="rating">0/5</span>.</small>
+</p>
+
 <h2 class="mb3">Posts</h2>
 
 {% set posts = collections.byYear | category("programming") %}
 {% from 'partials/_by-year.njk' import render %}
 {{ render(posts) }}
+
+<script type="module">
+  const response = await fetch('/api/watching');
+  const { name, rating } = await response.json();
+  document.getElementById('movie').innerText = `"${name}"`;
+  document.getElementById('rating').innerText = `${rating}/5 stars`;
+</script>
+
+<script nomodule>
+  var req = new XMLHttpRequest();
+  req.addEventListener("load", function(res) {
+    const { name, rating } = JSON.parse(req.responseText);
+    document.getElementById('movie').innerText = `"${name}"`;
+    document.getElementById('rating').innerText = `${rating}/5 stars`;
+  });
+
+  req.open("GET", "/api/watching");
+  req.send();
+</script>
