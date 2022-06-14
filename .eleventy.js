@@ -156,6 +156,12 @@ module.exports = function (eleventyConfig) {
   });
 
   return {
+    // Turn off any template preprocessing for markdown files. `.md` files are
+    // usually for blog posts and don't contain any liquid/nunjucks templating.
+    // Also, liquid fails to parse some of the markdown in some of the posts
+    // so enabling it fails the build. See: https://github.com/11ty/eleventy/issues/2434
+    markdownTemplateEngine: false,
+
     dir: {
       input: "./source",
       output: "./build",
