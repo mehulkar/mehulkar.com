@@ -26,14 +26,12 @@
     "url": "https://github.com/mehulkar/mehulkar.com/issues"
   },
   "homepage": "https://github.com/mehulkar/mehulkar.com#readme",
-  "dependencies": {
-    "@11ty/eleventy": "^0.12.1"
-  },
   "volta": {
     "node": "16.15.1",
     "npm": "8.12.1"
   },
   "devDependencies": {
+    "@11ty/eleventy": "^1.0.1",
     "@11ty/eleventy-plugin-rss": "^1.1.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.3"
   }
