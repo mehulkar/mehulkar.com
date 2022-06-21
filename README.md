@@ -18,6 +18,6 @@ npm run start
 
 ## Deploy
 
-The master branch is auto deployed by Netflify:
+The `main` branch is auto deployed by Vercel:
 
-https://app.netlify.com/sites/mehulkar/overview
+https://vercel.com/mehulkar/mehulkar
