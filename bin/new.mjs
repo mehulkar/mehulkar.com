@@ -3,19 +3,27 @@
 // require_relative '../lib/new_post'
 import { execSync } from "child_process";
 import { fstat, writeFileSync, existsSync } from "fs";
-import * as readline from "node:readline/promises";
+import * as readline from "readline";
 import { stdin as input, stdout as output } from "process";
 import path from "path";
 
 async function main() {
   const rl = readline.createInterface({ input, output });
-  const title = await rl.question("title of post: ");
-  rl.close();
+  const title = await new Promise((resolve) => {
+    rl.question("title of post: ", (title) => {
+      resolve(title);
+      rl.close();
+    });
+  });
+
   return title;
 }
 
 const title = await main();
-const parameterizedTitle = title.replaceAll(" ", "-").replaceAll(':', '-').toLowerCase();
+const parameterizedTitle = title
+  .replaceAll(" ", "-")
+  .replaceAll(":", "-")
+  .toLowerCase();
 const { month, year, fullDate } = getDateSegments();
 
 const filePath = path.resolve(
