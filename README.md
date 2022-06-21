@@ -8,6 +8,14 @@ Built with [Eleventy](https://11ty.dev).
 npm run new
 ```
 
+## Run locally
+
+```bash
+volta install vercel # or npm i -g vercel
+npm ci
+npm run start
+```
+
 ## Deploy
 
 The master branch is auto deployed by Netflify:

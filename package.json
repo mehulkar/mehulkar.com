@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx eleventy --serve",
+    "start": "vercel dev",
     "prebuild": "rm -rf ./build",
     "build": "npx eleventy",
     "new": "node ./bin/new.mjs"
