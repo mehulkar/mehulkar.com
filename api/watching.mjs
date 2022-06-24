@@ -1,10 +1,13 @@
 import Parser from "rss-parser";
+import { shuffle } from "./_utils.mjs";
 
 const URL = "https://letterboxd.com/mehulkar/rss/";
 
 async function getLatestFilm() {
   const json = await new Parser().parseURL(URL);
-  const latestFilm = json.items[0];
+  const last10Films = json.items.slice(0, 10);
+
+  const latestFilm = shuffle(last10Films)[0];
 
   console.log(latestFilm);
 
