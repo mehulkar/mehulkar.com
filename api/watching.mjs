@@ -9,9 +9,11 @@ async function getLatestFilm() {
 
   const latestFilm = shuffle(last10Films)[0];
 
-  console.log(latestFilm);
+  console.log("lastest film", latestFilm);
 
-  const { title } = latestFilm;
+  const { title, isoDate, link } = latestFilm;
+
+  const linkWithoutUser = link.replace("/mehulkar/", "/");
 
   const STAR_CHAR = "★";
 
@@ -33,6 +35,8 @@ async function getLatestFilm() {
     rating,
     ratingString: stars,
     year,
+    watchedOn: isoDate,
+    url: linkWithoutUser,
   };
 }
 
