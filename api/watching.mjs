@@ -38,5 +38,5 @@ async function getLatestFilm() {
 
 export default async function handler(req, res) {
   const filmData = await getLatestFilm();
-  return res.send(JSON.stringify(filmData));
+  return res.status(200).json(filmData);
 }
