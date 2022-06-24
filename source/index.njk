@@ -60,6 +60,6 @@ layout: layout.njk
 
     tweetElement.querySelector('blockquote').setAttribute('cite', url);
     tweetElement.querySelector('blockquote').innerHTML = tweet.html;
-    tweetElement.querySelector('cite').innerHTML = `Source: <a target="_blank" rel="noopener noreferrer" href="${url}">${url}</a>`;
+    tweetElement.querySelector('cite').innerHTML = `<a target="_blank" rel="noopener noreferrer" href="${url}">Source</a>`;
   });
 </script>
