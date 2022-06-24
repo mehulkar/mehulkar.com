@@ -27,14 +27,16 @@ async function getRandomTweet() {
 
   const author = await client.users.findUserById(tweetData.data.author_id);
 
+  const options = {};
+  if (tweetData.data.entities && tweetData.data.entities.urls) {
+    options.urlEntities = tweetData.data.entities.urls;
+  }
+
   // https://github.com/twitter/twitter-text/blob/30e2430d90cff3b46393ea54caf511441983c260/js/pkg/twitter-text-3.1.0.js#L2897-L2906
   tweetData.data.html = TwitterText.autoLink(
     TwitterText.htmlEscape(tweetData.data.text),
 
-    // https://github.com/twitter/twitter-text/blob/30e2430d90cff3b46393ea54caf511441983c260/js/pkg/twitter-text-3.1.0.js#L2897-L2906
-    {
-      urlEntities: tweetData.data.entities.urls,
-    }
+    options
   );
 
   tweetData.data.html = tweetData.data.html.replaceAll("\n", "<br />");
