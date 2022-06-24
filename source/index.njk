@@ -36,7 +36,7 @@ layout: layout.njk
 {% from 'partials/_by-year.njk' import render %}
 {{ render(posts) }}
 
-<script type="module">
+<script>
   // movie
   fetch('/api/watching').then((res) => res.json()).then((data) => {
     console.log('movie', data);
@@ -62,41 +62,4 @@ layout: layout.njk
     tweetElement.querySelector('blockquote').innerHTML = tweet.html;
     tweetElement.querySelector('cite').innerHTML = `Source: <a target="_blank" rel="noopener noreferrer" href="${url}">${url}</a>`;
   });
-
-</script>
-
-<script nomodule>
-  // movie
-  var req = new XMLHttpRequest();
-  req.addEventListener("load", function(res) {
-    const data = JSON.parse(req.responseText);
-    const { name, rating, watchedOn, url } = data;
-    const daysAgo = Math.round((new Date() - new Date(watchedOn)) / 1000 / 60 / 60 / 24);
-    const date = new Intl.RelativeTimeFormat('en', { style: 'narrow' }).format(daysAgo * -1, 'days')
-
-    document.getElementById('movie').innerHTML = `<a href="${url}">${name}</a>`;
-    document.getElementById('movie-date').innerText = date;
-    document.getElementById('rating').innerText = `${rating}/5 stars`;
-  });
-
-  req.open("GET", "/api/watching");
-  req.send();
-
-
-  // tweet
-  var req = new XMLHttpRequest();
-  req.addEventListener("load", function(res) {
-    const data = JSON.parse(req.responseText);
-    console.log('xhr tweet', data);
-    const { tweet, author } = data;
-    const url = `https://twitter.com/${author.username}/status/${tweet.id}`;
-    const authorUrl = `https://twitter.com/${author.username}`;
-
-    document.getElementById('tweet-preamble').innerHTML = `Liked <a href="${url}" target="_blank" rel="noopener">a tweet</a> from <a href="${authorUrl}">@${author.username}</a>:`;
-    document.getElementById('tweet').innerHTML = tweet.html;
-  });
-
-  req.open("GET", "/api/fave-tweet");
-  req.send();
-
 </script>
