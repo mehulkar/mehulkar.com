@@ -17,7 +17,7 @@ async function getLatestFilm() {
 
   const STAR_CHAR = "★";
 
-  const matched = title.match(/(?<name>.*), (?<year>\d{4}) - (?<stars>★.*)/);
+  const matched = title.match(/(?<name>.*), (?<year>\d{4}) - (?<stars>★?.*)/);
 
   const { name, year, stars } = matched.groups;
 
