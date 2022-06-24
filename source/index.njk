@@ -42,7 +42,7 @@ layout: layout.njk
     console.log('movie', data);
     const { name, rating, watchedOn, url } = data;
     const daysAgo = Math.round((new Date() - new Date(watchedOn)) / 1000 / 60 / 60 / 24);
-    const date = new Intl.RelativeTimeFormat('en', { style: 'narrow' }).format(daysAgo * -1, 'days')
+    const date = new Intl.RelativeTimeFormat('en', { numeric: 'auto' }).format(daysAgo * -1, 'days')
 
     document.getElementById('movie').innerHTML = `<a href="${url}">${name}</a>`;
     document.getElementById('movie-date').innerText = date;
