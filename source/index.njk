@@ -15,9 +15,16 @@ layout: layout.njk
   But you can also stay here and read what I'm thinking about. Here's a printable <a href="/resume">resume</a>.
 </p>
 
-<p id="latest-movie">
-  <small>I just watched <span id="movie">...</span> and rated it <span id="rating">0/5</span>.</small>
-</p>
+<h2 class="mb3">Recently</h2>
+<ul class="small">
+  <li>
+    watched <span id="movie">...</span> and rated it <span id="rating">0/5</span>.
+  </li>
+  <li>
+    <p id="tweet-preamble">Liked a tweet from:</p>
+    <blockquote id="tweet"></blockquote>
+  </li>
+</ul>
 
 <h2 class="mb3">Posts</h2>
 
@@ -42,4 +49,19 @@ layout: layout.njk
 
   req.open("GET", "/api/watching");
   req.send();
+</script>
+
+<script type="module">
+  const response = await fetch('/api/fave-tweet');
+  const data = await response.json();
+  console.log(data);
+  const { tweet, author } = data;
+  const url = `https://twitter.com/${author.username}/status/${tweet.id}`;
+  const authorUrl = `https://twitter.com/${author.username}`;
+
+  document.getElementById('tweet-preamble').innerHTML = `Liked <a href="${url}" target="_blank" rel="noopener">a tweet</a> from <a href="${authorUrl}">@${author.username}</a>:`;
+  document.getElementById('tweet').innerHTML = tweet.html;
+</script>
+
+<script nomodule>
 </script>
