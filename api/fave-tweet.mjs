@@ -23,9 +23,12 @@ async function getRandomTweet() {
     expansions: "referenced_tweets.id",
   });
 
-  console.log("[debug] tweet data", tweetData);
+  const author = await client.users.findUserById(tweetData.data.author_id, {
+    "user.fields": "profile_image_url",
+  });
 
-  const author = await client.users.findUserById(tweetData.data.author_id);
+  console.log("[debug] tweet data", tweetData);
+  console.log("[debug] tweet author", author);
 
   const options = {};
   if (tweetData.data.entities && tweetData.data.entities.urls) {

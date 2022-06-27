@@ -228,10 +228,9 @@ header {
       width: 100%;
     }
   }
-
 }
 
-blockquote {
+figure#tweet {
   padding: 1rem 1.5rem 1rem;
   margin-bottom: var(--paragraph-mb);
   border-left: solid 4px var(--blue-1);
@@ -241,19 +240,19 @@ blockquote {
   box-shadow: 3px 3px 0px aliceblue;
 }
 
-blockquote p {
-  line-height: var(--paragraph-mb);
+figure#tweet blockquote {
+  background: none;
+  border: none;
   margin-bottom: 0.5rem;
-}
-
-blockquote p:last-child {
-  margin-bottom: 0;
-}
-
-blockquote p code {
-  font-size: 0.9em;
+  padding-bottom: 0;
+  box-shadow: none;
 }
 
 .small {
   font-size: 80%;
+}
+
+.tweet-author-picture {
+  border-radius: 50%;
+  margin-right: 10px;
 }

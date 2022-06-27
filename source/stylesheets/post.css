@@ -77,6 +77,29 @@ body main #content article iframe.twitter-tweet {
   margin-bottom: 20px !important;
 }
 
+body main #content article blockquote {
+  padding: 1rem 1.5rem 1rem;
+  margin-bottom: var(--paragraph-mb);
+  border-left: solid 4px var(--blue-1);
+  background-color: var(--blue-2);
+  color: var(--code-text-color);
+  border-radius: 0 8px 8px 0;
+  box-shadow: 3px 3px 0px aliceblue;
+}
+
+body main #content article blockquote p {
+  line-height: var(--paragraph-mb);
+  margin-bottom: 0.5rem;
+}
+
+body main #content article blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+body main #content article blockquote p code {
+  font-size: 0.9em;
+}
+
 body main #content article img {
   margin: 0 auto 1rem;
   display: block;
