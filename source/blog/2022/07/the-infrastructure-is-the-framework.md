@@ -22,7 +22,7 @@ But most websites need data. And data lives in databases that *don't* live on Th
 needs to fetch data from some centralized location, it adds latency *back* into equation. For
 example, let's say I visit a web page from India, and this web page requests some data during a
 server-side render, but the data is in a US data center. The latency avoided by routing the
-request to a datacenter in the Edge is hamstrung by the latency *added* by the data request.
+request to a datacenter at the Edge is hamstrung by the latency *added* by the data request.
 
 <figure>
     <picture>
@@ -36,7 +36,7 @@ request to a datacenter in the Edge is hamstrung by the latency *added* by the d
 </figure>
 
 So how do we solve this? Generically speaking, there isn't a good answer. Web authors need to
-carefully measure the tradeoff between keeping the user close to the web user, or keeping the web
+carefully measure the tradeoff between keeping the user close to the web server, or keeping the web
 server close to the database server.
 
 Malte talked about how Next.js Layouts *could* enable Vercel to intelligently split a website
