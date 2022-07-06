@@ -41,6 +41,7 @@ module.exports = function (eleventyConfig) {
     "webp",
     "jpg",
     "jpeg",
+    "11ty.js",
   ]);
 
   eleventyConfig.addPassthroughCopy({
@@ -49,12 +50,12 @@ module.exports = function (eleventyConfig) {
     "source/manifest.json": "/manifest.json",
   });
 
-  eleventyConfig.addCollection('posts', function(collectionApi) {
+  eleventyConfig.addCollection("posts", function (collectionApi) {
     const allPosts = getPosts(collectionApi);
 
     // TODO: add more categories in here?
-    return filterPostsByCategory(allPosts, 'programming');
-  })
+    return filterPostsByCategory(allPosts, "programming");
+  });
 
   eleventyConfig.addCollection("byYear", function (collectionApi) {
     const posts = getPosts(collectionApi);
@@ -108,9 +109,9 @@ module.exports = function (eleventyConfig) {
     const filtered = [];
 
     for (const postCollection of byYear) {
-      const {name: year, posts } = postCollection;
+      const { name: year, posts } = postCollection;
 
-      const forCategory = filterPostsByCategory(posts, category)
+      const forCategory = filterPostsByCategory(posts, category);
 
       if (forCategory.length) {
         filtered.push({
@@ -184,9 +185,7 @@ function filterPostsByCategory(posts, category) {
 
 function getPosts(collectionApi) {
   const all = collectionApi.getAll();
-  return all.filter(
-    (post) => !post.inputPath.match(/\/blog\/category/)
-  );
+  return all.filter((post) => !post.inputPath.match(/\/blog\/category/));
 }
 
 function getCategories(post) {

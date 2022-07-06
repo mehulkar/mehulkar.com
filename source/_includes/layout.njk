@@ -140,4 +140,11 @@
       </footer>
     </main>
   </body>
+
+  {% if "{{env.VERCEL_ANALYTICS_ID}}" %}
+    <script src={{"/javascript/analytics.js" | url }}></script>
+    <script>
+      window.webVitals("{{env.VERCEL_ANALYTICS_ID}}");
+    </script>
+  {% endif %}
 </html>
