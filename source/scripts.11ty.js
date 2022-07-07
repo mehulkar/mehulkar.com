@@ -49,7 +49,9 @@ module.exports = class {
   /**
    * @doc https://www.11ty.dev/docs/languages/javascript/#classes
    */
-  async render({ file }) {
+  async render(data) {
+    const { env, file } = data;
+
     if (!this.compiledAssets[file]) {
       // Note: Compile each file individually because esbuild doesn't seem to like
       // building multiple entry points in memory: https://github.com/evanw/esbuild/issues/2378.
@@ -57,7 +59,7 @@ module.exports = class {
         entryPoints: [ENTRY_POINTS[file]],
         format: "iife",
         bundle: true,
-        minify: true, // TODO: base this on production env
+        minify: env.ELEVENTY_ENV === "production",
         write: false, // returns output in result, instead of printing to stdout
       });
 
