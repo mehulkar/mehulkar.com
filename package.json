@@ -1,11 +1,7 @@
 {
   "name": "mehulkar.com",
   "version": "1.0.0",
-  "description": "Built on [Middleman](http://middlemanapp.com/).",
-  "main": "index.js",
-  "directories": {
-    "lib": "lib"
-  },
+  "description": "Personal website of Mehul Kar",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "vercel dev",
@@ -20,12 +16,12 @@
   "keywords": [
     "website"
   ],
-  "author": "",
+  "author": "Mehul Kar <mehul.kar@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mehulkar/mehulkar.com/issues"
   },
-  "homepage": "https://github.com/mehulkar/mehulkar.com#readme",
+  "homepage": "https://github.com/mehulkar/mehulkar.com",
   "volta": {
     "node": "16.15.1",
     "npm": "8.12.1"
