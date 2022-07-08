@@ -133,7 +133,7 @@ header {
   }
 }
 
-.wave-container wave {
+.wave-container .wave {
   display: flex;
   width: 35px;
   justify-content: space-between;
@@ -142,25 +142,25 @@ header {
   height: 20px;
 }
 
-.wave-container wave bar {
+.wave-container .wave .bar {
   width: 5px;
   background: #fff;
   animation: wave 1s infinite;
 }
 
-.wave-container wave bar.bar1 {
+.wave-container .wave .bar.bar1 {
   animation-delay: 0.1s;
   animation-duration: 1.3s;
 }
-.wave-container wave bar.bar2 {
+.wave-container .wave .bar.bar2 {
   animation-delay: 0.2s;
   animation-duration: 0.8s;
 }
-.wave-container wave bar.bar3 {
+.wave-container .wave .bar.bar3 {
   animation-delay: 0.3s;
   animation-duration: 1s;
 }
-.wave-container wave bar.bar4 {
+.wave-container .wave .bar.bar4 {
   animation-delay: 1s;
   animation-duration: 0.5s;
 }
