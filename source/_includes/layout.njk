@@ -48,6 +48,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie+Flower|Libre+Baskerville&display=swap"></link>
     <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
 
+    <link rel="feed alternate" type="application/atom+xml" href="/feed.xml" title="RSS feed for mehulkar.com">
+
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('year').innerHTML = (new Date).getFullYear();
@@ -105,7 +107,8 @@
             </g>
           </svg>
         </a>
-        <a class="white f7" href="/feed.xml">
+
+        <a type="application/atom+xml" title="RSS feed for mehulkar.com" class="feedbutton white f7" href="/feed.xml">
           <svg width="19" height="19" viewBox="0 0 455.731 455.731">
             <title>Link to RSS feed</title>
             <rect x="0" y="0" style="fill: #ffffff" width="455.731" height="455.731" />
