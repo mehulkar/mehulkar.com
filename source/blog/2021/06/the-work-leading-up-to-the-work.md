@@ -1,7 +1,7 @@
 ---
 title: The Work Leading Up To The Work
 date: 2021-06-16
-categories:
+tags:
 ---
 
 This weekend [I heard Stephen Levitt talk to Bruce Friedrich][1] about the externalities

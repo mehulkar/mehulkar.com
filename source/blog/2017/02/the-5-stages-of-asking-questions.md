@@ -1,7 +1,7 @@
 ---
 title: The 5 Stages of Asking Questions
 date: 2013-02-27
-categories: thoughts
+tags: thoughts
 ---
 
 [Reposted from my answer to a Quora question](https://www.quora.com/What-are-some-tips-and-tricks-for-high-school)

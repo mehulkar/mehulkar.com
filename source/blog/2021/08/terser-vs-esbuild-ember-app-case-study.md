@@ -1,7 +1,7 @@
 ---
 title: "Terser vs esbuild: Ember app case study"
 date: 2021-08-05
-categories: programming, frontend, javascript
+tags: programming, frontend, javascript
 ---
 
 Over the last couple of weeks, I've been trying to improve the amount of time

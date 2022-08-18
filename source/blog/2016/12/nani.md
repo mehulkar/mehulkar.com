@@ -1,7 +1,7 @@
 ---
 title: nani
 date: 2016-12-26
-categories: poetry
+tags: poetry
 ---
 
 Shaam hui, tere kaam ki<br/>

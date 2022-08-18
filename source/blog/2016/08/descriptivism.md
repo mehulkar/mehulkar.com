@@ -1,7 +1,7 @@
 ---
 title: Descriptivism
 date: 2016-08-10
-categories: thoughts
+tags: thoughts
 ---
 
 I think human beings are caught in a never-ending cycle between descriptivism

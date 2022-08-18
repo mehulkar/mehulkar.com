@@ -1,7 +1,7 @@
 ---
 title: Nothing In Your Head
 date: 2016-07-19
-categories: programming
+tags: programming
 ---
 
 I think one of the keys to becoming a better software developer

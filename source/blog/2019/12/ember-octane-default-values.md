@@ -1,7 +1,7 @@
 ---
 title: "Ember Octane: Default Values"
 date: 2019-12-06
-categories: programming, frontend, ember.js
+tags: programming, frontend, ember.js
 ---
 
 The Octane upgrade has introduced one notable complication into Ember apps that

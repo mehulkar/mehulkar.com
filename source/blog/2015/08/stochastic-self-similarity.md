@@ -1,6 +1,6 @@
 ---
 title: "Stochastic Self Similarity"
-categories: til
+tags: til
 date: 2015-08-30
 ---
 

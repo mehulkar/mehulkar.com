@@ -1,7 +1,7 @@
 ---
 title: Post-Octane Ember Routing
 date: 2019-12-22
-categories: programming, frontend, ember.js
+tags: programming, frontend, ember.js
 ---
 
 [Ember octane is released][1]! The release brings a massive simplification of the component model,

@@ -1,7 +1,7 @@
 ---
 title: Open Ember Questions
 date: 2016-03-30
-categories: programming, frontend, ember.js
+tags: programming, frontend, ember.js
 ---
 
 I have some open questions about Ember that I'd like to talk about.

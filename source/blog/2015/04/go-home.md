@@ -1,6 +1,6 @@
 ---
 title: "Go Home"
-categories: personal
+tags: personal
 date: 2015-04-15
 ---
 

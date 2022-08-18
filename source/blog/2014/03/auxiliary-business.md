@@ -1,7 +1,7 @@
 ---
 title: Auxiliary Business
 date: 2014-03-01
-categories: business
+tags: business
 ---
 
 I was reading a recent [Ask HN][1] and noticed that I was immediately

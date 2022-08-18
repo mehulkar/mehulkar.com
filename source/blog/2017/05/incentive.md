@@ -1,7 +1,7 @@
 ---
 title: Incentive
 date: 2017-05-25
-categories: quote
+tags: quote
 ---
 
 > it does not matter whether or not you have the scientific or historical

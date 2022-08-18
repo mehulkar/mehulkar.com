@@ -1,7 +1,7 @@
 ---
 title: "Week 4: Awareness"
 date: 2010-12-01 00:00:00
-categories: ninja-tennis
+tags: ninja-tennis
 ---
 
 A ninja’s most important attribute is _awareness_. Even in the darkest hours a ninja knows its surroundings.

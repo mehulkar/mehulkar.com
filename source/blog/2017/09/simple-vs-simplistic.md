@@ -1,7 +1,7 @@
 ---
 title: Simple Vs. Simplistic
 date: 2017-09-29
-categories:
+tags:
 ---
 
 Sometimes, I hear myself (and others) provide a "simple" explanation of a topic.

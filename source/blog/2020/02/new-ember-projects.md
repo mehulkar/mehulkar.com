@@ -1,7 +1,7 @@
 ---
 title: New Ember Projects
 date: 2020-02-05
-categories: programming, frontend, ember.js
+tags: programming, frontend, ember.js
 ---
 
 Some default steps to follow when I start a new Ember app. Most of this is taken from

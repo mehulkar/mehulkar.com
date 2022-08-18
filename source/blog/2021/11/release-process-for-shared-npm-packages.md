@@ -1,7 +1,7 @@
 ---
 title: Release Process for Shared npm Packages
 date: 2021-11-19
-categories: programming, javascript
+tags: programming, javascript
 ---
 
 I've been using these steps to maintain/release ~20 internal packages. It's

@@ -50,19 +50,15 @@ module.exports = function (eleventyConfig) {
     "source/manifest.json": "/manifest.json",
   });
 
-  eleventyConfig.addCollection("posts", function (collectionApi) {
-    const allPosts = getPosts(collectionApi);
-
-    // TODO: add more categories in here?
-    return filterPostsByCategory(allPosts, "programming");
-  });
-
   eleventyConfig.addCollection("byYear", function (collectionApi) {
-    const posts = getPosts(collectionApi);
-
+    // TODO: add more tags in here?
+    const homePagePosts = filterPostsByTag(
+      collectionApi.getAll(),
+      "programming"
+    );
     // Group posts by year first. This is an unsorted object
     const byYear = {};
-    for (const post of posts) {
+    for (const post of homePagePosts) {
       const year = post.date.getFullYear();
       byYear[year] = byYear[year] || [];
       byYear[year].push(post);
@@ -88,30 +84,13 @@ module.exports = function (eleventyConfig) {
     return sortedGroups;
   });
 
-  eleventyConfig.addCollection("categories", function (collectionApi) {
-    const posts = getPosts(collectionApi);
-
-    // Group posts by year first. This is an unsorted object
-    const allCategories = new Set();
-
-    for (const post of posts) {
-      const postCategories = getCategories(post);
-
-      for (const category of postCategories) {
-        allCategories.add(category);
-      }
-    }
-
-    return Array.from(allCategories);
-  });
-
   eleventyConfig.addNunjucksFilter("category", function (byYear, category) {
     const filtered = [];
 
     for (const postCollection of byYear) {
       const { name: year, posts } = postCollection;
 
-      const forCategory = filterPostsByCategory(posts, category);
+      const forCategory = filterPostsByTag(posts, category);
 
       if (forCategory.length) {
         filtered.push({
@@ -142,7 +121,7 @@ module.exports = function (eleventyConfig) {
     return value.split(", ");
   });
 
-  eleventyConfig.addNunjucksFilter("categoryLink", function (value) {
+  eleventyConfig.addNunjucksFilter("tagLink", function (value) {
     const classList = "pill dib mb3 br1 ph3 pv1 ttu";
     if (CATEGORY_PAGES.includes(value)) {
       const path =
@@ -171,32 +150,24 @@ module.exports = function (eleventyConfig) {
 };
 
 /**
- * TODO: allow accepting more than one category?
+ * TODO: allow accepting more than one tag?
  * @param {*} posts
- * @param {string} category
+ * @param {string} tag
  * @returns
  */
-function filterPostsByCategory(posts, category) {
+function filterPostsByTag(posts, tag) {
   return posts.filter((post) => {
-    const postCategories = getCategories(post);
-    return postCategories.includes(category);
+    const postTags = getTags(post);
+    return postTags.includes(tag);
   });
 }
 
-function getPosts(collectionApi) {
-  const all = collectionApi.getAll();
-  return all.filter((post) => !post.inputPath.match(/\/blog\/category/));
-}
-
-function getCategories(post) {
-  // Use nullish coalesce, because some posts have categories, but
-  // nothing set for it, whereas some don't have the frontmatter at all.
-  const categories = post.data.categories ?? "";
-
-  return categories
-    .split(",")
-    .map((x) => x.trim())
-    .filter(Boolean);
+function getTags(post) {
+  // TODO: how to use frontmatter correctly so that tags are already an array?
+  const tags = (post.data.tags[0] || "").split(",");
+  const cleaned = tags.map((x) => x.trim()).filter(Boolean);
+  const unique = new Set(cleaned);
+  return [...unique];
 }
 
 /**

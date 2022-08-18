@@ -1,7 +1,7 @@
 ---
 title: You Can Be Amazing For No Reason
 date: 2010-05-10
-categories: thoughts
+tags: thoughts
 ---
 
 The term [PechaKucha](http://www.pechakucha.org/) (pronounced pe-chak-cha) means to chit chat. It is an event format that originated in Tokyo in 2003, but has since spread to over 300 cities worldwide.

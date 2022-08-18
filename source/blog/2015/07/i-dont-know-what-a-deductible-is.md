@@ -1,7 +1,7 @@
 ---
 title: "I Don't Know What A Deductible Is"
 date: 2015-07-05
-categories: til
+tags: til
 ---
 
 So far, I've had to select a health insurance plan 3-4 times in my life.

@@ -1,7 +1,7 @@
 ---
 title: Networking Training Seminar
 date: 2010-01-27
-categories: notes
+tags: notes
 ---
 
 Last Friday, a lady from the Milwaukee Businees Journal came to teach us how to be good at networking. I was [tweeting](http://www.twitter.com/mehulkar) while the event was going on. Here they are (in reverse order):

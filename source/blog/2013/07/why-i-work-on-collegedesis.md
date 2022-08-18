@@ -1,7 +1,7 @@
 ---
 title: "Why I Work On CollegeDesis"
 date: 2013-07-19 00:00:00
-categories: personal
+tags: personal
 ---
 
 I'm building a community of South Asian student organizations to make large-scale social, political, and cultural impact. I want to strengthen this community by facilitating mutually beneficial relationships between organizations and brand partners.

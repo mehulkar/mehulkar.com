@@ -1,6 +1,6 @@
 ---
 title: "Being Comfortable with Being Uncomfortable"
-categories: personal
+tags: personal
 date: 2014-02-26
 ---
 

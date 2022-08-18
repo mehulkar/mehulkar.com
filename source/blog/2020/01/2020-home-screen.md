@@ -1,7 +1,7 @@
 ---
 title: "2020: Home Screen"
 date: 2020-01-03
-categories: product
+tags: product
 ---
 
 I missed doing this for the past couple years, but starting again.

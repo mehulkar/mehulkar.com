@@ -1,7 +1,7 @@
 ---
 title: Ember core classes cheatsheet
 date: 2017-12-04
-categories: programming, frontend, ember.js
+tags: programming, frontend, ember.js
 ---
 
 A brief cheatsheet on when to use each of `Ember`'s core classes

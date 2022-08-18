@@ -1,7 +1,7 @@
 ---
 title: Levels of Talk
 date: 2016-01-09
-categories: personal
+tags: personal
 ---
 
 The levels of conversation (from small to big) in the modern world:

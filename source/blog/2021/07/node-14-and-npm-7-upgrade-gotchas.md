@@ -1,7 +1,7 @@
 ---
 title: Node 14 and npm 7 upgrade gotchas
 date: 2021-07-08
-categories: programming, javascript
+tags: programming, javascript
 ---
 
 I recently upgraded our servers and frontend app builds to run on Node 14 and `npm@7`

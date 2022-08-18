@@ -1,7 +1,7 @@
 ---
 title: "TIL: Creating Globals"
 date: 2022-04-18
-categories: programming, javascript
+tags: programming, javascript
 ---
 
 Today I learned you can create globals by passing unnecessary arguments

@@ -1,7 +1,7 @@
 ---
 title: 5 Strategies To Refactoring Architecture
 date: 2018-07-02
-categories: programming
+tags: programming
 ---
 
 Refactoring code architecture often means touching a large number of files. In most code bases,

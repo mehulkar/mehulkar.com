@@ -1,7 +1,7 @@
 ---
 title: "The Art of Being Confused"
 date: 2012-02-18
-categories: programming
+tags: programming
 ---
 
 > A proc is a block of code that is passed into other blocks of code. But it’s different from a block because a block isn’t an object.

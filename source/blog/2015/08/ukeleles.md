@@ -1,7 +1,7 @@
 ---
 title: Ukeleles
 date: 2015-08-14
-categories: three-musics
+tags: three-musics
 ---
 
 Oy!

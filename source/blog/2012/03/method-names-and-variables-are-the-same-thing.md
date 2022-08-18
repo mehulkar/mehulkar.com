@@ -1,7 +1,7 @@
 ---
 title: "Method Names And Variables Are The Same Thing"
 date: 2012-03-17
-categories: programming, ruby
+tags: programming, ruby
 ---
 
 I discovered something interesting today. Kudos to Craig for leading me to this discovery.

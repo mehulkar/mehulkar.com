@@ -40,7 +40,7 @@ const contents = [
   "---\n",
   `title: ${title}\n`,
   `date: ${fullDate}\n`,
-  `categories:\n`,
+  `tags:\n`,
   "---\n\n",
 ].join("");
 

@@ -1,7 +1,7 @@
 ---
 title: Feeling Good
 date: 2015-08-07
-categories: three-musics
+tags: three-musics
 ---
 
 Happy Friday!

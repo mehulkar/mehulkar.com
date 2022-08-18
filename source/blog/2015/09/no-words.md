@@ -1,7 +1,7 @@
 ---
 title: No Words
 date: 2015-09-04
-categories: three-musics
+tags: three-musics
 ---
 
 I've been having trouble sleeping. My mother would say it's because I look at a computer screen all day. She's probably right.

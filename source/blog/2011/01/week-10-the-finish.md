@@ -1,7 +1,7 @@
 ---
 title: "Week 10: The Finish"
 date: 2011-01-11 00:00:00
-categories: ninja-tennis
+tags: ninja-tennis
 ---
 
 For most, the hardest part of the point is the finish. To finish the job. And to finish it cleanly.

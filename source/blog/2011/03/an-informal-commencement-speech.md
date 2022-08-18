@@ -1,7 +1,7 @@
 ---
 title: "An Informal Commencement Speech"
 date: 2011-03-07
-categories: poetry
+tags: poetry
 ---
 
 I wanted to write this speech in rhyme.<br/>

@@ -1,7 +1,7 @@
 ---
 title: "Regex: The Greedy Dot Star"
 date: 2017-05-19
-categories: programming, ruby
+tags: programming, ruby
 ---
 
 I was recently extending [`redcarpet`][1] (a Markdown rendering library) to

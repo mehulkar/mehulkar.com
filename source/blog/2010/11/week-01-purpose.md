@@ -1,7 +1,7 @@
 ---
 title: "Week 1: Purpose"
 date: 2010-11-10 00:00:00
-categories: ninja-tennis
+tags: ninja-tennis
 ---
 
 Ninjas are beautiful.

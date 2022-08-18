@@ -1,7 +1,7 @@
 ---
 title: every week to your inbox
 date: 2015-05-15
-categories: three-musics
+tags: three-musics
 ---
 
 Happy Friday!

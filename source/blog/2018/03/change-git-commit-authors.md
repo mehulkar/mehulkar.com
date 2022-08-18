@@ -1,7 +1,7 @@
 ---
 title: Change Git Commit Authors
 date: 2018-03-09
-categories:
+tags:
 ---
 
 Here's a quick script to rewrite the git author/commiter in a repo. I mess this up all

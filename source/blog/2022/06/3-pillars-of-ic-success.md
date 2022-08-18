@@ -1,7 +1,7 @@
 ---
 title: 3 Pillars of IC Success
 date: 2022-06-21
-categories: career, programming
+tags: career, programming
 ---
 
 As an individual contributor with a reasonable degree of autonomy, it can sometimes be difficult to choose or prioritize work in an organization that has an endless amount of it. As someone who has been in this position for over ten years, I’ve been surprised by the lack of actionable advice here<sup>1</sup>. But it turns out that this is for good reason; actionable advice is dependent on too many factors. Instead, it can be useful to establish a framework for making decisions. By framework, I mean a set of guiding principles to orient yourself by, before approaching a decision.

@@ -1,7 +1,7 @@
 ---
 title: “Called id for nil, which would mistakenly be 4”
 date: 2012-04-01
-categories: programming, ruby
+tags: programming, ruby
 ---
 
 I’ve gotten this error so many times while building Rails applications and it didn’t make any sense.

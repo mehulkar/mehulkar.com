@@ -1,7 +1,7 @@
 ---
 title: Impromptu Light Hearted Verses
 date: 2011-04-17
-categories: poetry
+tags: poetry
 ---
 
 <em>

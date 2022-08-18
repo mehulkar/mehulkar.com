@@ -1,7 +1,7 @@
 ---
 title: Cookie Log No. 2
 date: 2022-02-11
-categories: food, baking, journal, cookie-log
+tags: food, baking, journal, cookie-log
 ---
 
 ## prep notes

@@ -1,7 +1,7 @@
 ---
 title: Teachers
 date: 2010-05-19
-categories: thoughts
+tags: thoughts
 ---
 
 He said he wanted to talk. He said he was frustrated. And confused. And that he needed guidance.

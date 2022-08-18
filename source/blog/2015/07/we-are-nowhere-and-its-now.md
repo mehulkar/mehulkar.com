@@ -1,7 +1,7 @@
 ---
 title: We Are Nowhere, And It's Now.
 date: 2015-07-03
-categories: three-musics
+tags: three-musics
 ---
 
 Some pretty historic things happened in the last week. This weeks musics are about ideas that convey grand, but visceral messages.

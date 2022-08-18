@@ -1,7 +1,7 @@
 ---
 title: "Today in CS: Graphs"
 date: 2022-05-09
-categories: programming, programming-journal
+tags: programming, programming-journal
 ---
 
 Today, I learned about graphs, directed graphs, and DAGs. I learned

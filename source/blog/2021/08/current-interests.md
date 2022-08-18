@@ -1,7 +1,7 @@
 ---
 title: "Current Interests - Aug 2021"
 date: 2021-08-15
-categories: "about-me"
+tags: "about-me"
 ---
 
 I'm currently interested in four things: The Web, San Francisco, cellular meat,

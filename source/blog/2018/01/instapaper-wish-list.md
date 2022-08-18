@@ -1,7 +1,7 @@
 ---
 title: Instapaper Wish List
 date: 2018-01-02
-categories: product
+tags: product
 ---
 
 I use Instapaper a lot these days. I switched from Pocket a while ago for the simpler

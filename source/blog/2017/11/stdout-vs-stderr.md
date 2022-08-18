@@ -1,7 +1,7 @@
 ---
 title: stdout vs stderr
 date: 2017-11-20
-categories: programming
+tags: programming
 ---
 
 I'm not sure where I first learned this, but I thought it was a non-discoverable piece of information

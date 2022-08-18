@@ -1,7 +1,7 @@
 ---
 title: The Guy Next Door
 date: 2015-05-01
-categories: three-musics
+tags: three-musics
 ---
 
 Prateek Kuhad looks and sounds like a regular dude who found his dad's guitar in the attic and then stayed in the attic for the next 10 years writing. Wikipedia says he's classically trained though. Go figure. Not the most expressive of guys, but that's what I love about him.

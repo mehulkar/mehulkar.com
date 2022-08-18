@@ -1,7 +1,7 @@
 ---
 title: Ember Template Lint Rule from Addon
 date: 2020-03-25
-categories: ember.js
+tags: ember.js
 ---
 
 I recently wanted to ship an Ember template lint rule from an addon. This use case wasn't _exactly_

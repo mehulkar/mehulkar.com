@@ -1,6 +1,6 @@
 ---
 title: "#EmberJS2019: Roadmap Response"
-categories: programming, frontend, ember.js
+tags: programming, frontend, ember.js
 date: 2019-06-10
 ---
 
@@ -13,7 +13,7 @@ mostly kept up-to-date with the programming model. I've been pretty happy with t
 and feel like I can accomplish pretty much anything with the framework, so the perspective of
 this post is from the the difficulty I have in convincing others in my team and company to use it.
 
-The resistance to using Ember generally falls into these three categories:
+The resistance to using Ember generally falls into these three tags:
 
 1. React/Vue are clearly more popular
 1. Bundle size and flexibility

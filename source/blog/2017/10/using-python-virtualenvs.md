@@ -1,7 +1,7 @@
 ---
 title: Using Python Virtualenvs
 date: 2017-10-17
-categories: programming, python
+tags: programming, python
 ---
 
 I've been working on a Python project for the last year. Coming from

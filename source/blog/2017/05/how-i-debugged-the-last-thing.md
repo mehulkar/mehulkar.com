@@ -1,7 +1,7 @@
 ---
 title: How I Debugged The Last Thing
 date: 2017-05-02
-categories: programming, debugging
+tags: programming, debugging
 ---
 
 Early one morning, a few hours before my flight to RailsConf, a user emailed

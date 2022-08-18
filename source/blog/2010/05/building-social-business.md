@@ -1,7 +1,7 @@
 ---
 title: Building Social Business
 date: 2010-05-20
-categories: notes
+tags: notes
 ---
 
 I listened to Muhammad Yunus talk about building social business in Chicago today. I don’t usually
@@ -13,7 +13,7 @@ obvious in hindsight.
 
 1. **Conventional business is one-dimensional, but human beings are multi-dimensional.**
 
-    Actions can be divided into 2 categories: selfish and selfless. Conventional business is selfish.
+    Actions can be divided into 2 tags: selfish and selfless. Conventional business is selfish.
     The purpose is to increase the bottom line. But that one-dimensional approach to capitalism
     doesn’t capture the multi-dimensional reality of human experience.
 
