@@ -58,14 +58,11 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addCollection("byYear", function (collectionApi) {
-    // TODO: add more tags in here?
-    const homePagePosts = filterPostsByTag(
-      collectionApi.getAll(),
-      "programming"
-    );
+    const allPosts = collectionApi.getAll();
+
     // Group posts by year first. This is an unsorted object
     const byYear = {};
-    for (const post of homePagePosts) {
+    for (const post of allPosts) {
       const year = post.date.getFullYear();
       byYear[year] = byYear[year] || [];
       byYear[year].push(post);
@@ -91,18 +88,18 @@ module.exports = function (eleventyConfig) {
     return sortedGroups;
   });
 
-  eleventyConfig.addNunjucksFilter("category", function (byYear, category) {
+  eleventyConfig.addNunjucksFilter("category", function (byYear, tag) {
     const filtered = [];
 
     for (const postCollection of byYear) {
       const { name: year, posts } = postCollection;
 
-      const forCategory = filterPostsByTag(posts, category);
+      const forTag = filterPostsByTag(posts, tag);
 
-      if (forCategory.length) {
+      if (forTag.length) {
         filtered.push({
           name: year,
-          posts: forCategory,
+          posts: forTag,
         });
       }
     }
