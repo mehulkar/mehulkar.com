@@ -50,6 +50,13 @@ module.exports = function (eleventyConfig) {
     "source/manifest.json": "/manifest.json",
   });
 
+  eleventyConfig.addCollection("rssFeedPosts", function (collectionApi) {
+    const allSorted = collectionApi.getAllSorted();
+    const posts = filterPostsByTag(allSorted, "programming");
+
+    return [...posts.reverse()].slice(0, 20);
+  });
+
   eleventyConfig.addCollection("byYear", function (collectionApi) {
     // TODO: add more tags in here?
     const homePagePosts = filterPostsByTag(
