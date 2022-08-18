@@ -4,19 +4,25 @@ import { shuffle } from "./_utils.mjs";
 
 const client = new Client(process.env.TWITTER_BEARER_TOKEN);
 
+const MY_TWITTER_HANDLE = "mehulkar";
+
 async function getRandomLikedTweet(username) {
   const user = await client.users.findUserByUsername(username);
-  console.log(`Retreived user id for mehulkar`, user.data.id);
   const likes = await client.tweets.usersIdLikedTweets(user.data.id);
-  console.log(`Fetched ${likes.data.length} liked tweets`);
+
   const shuffled = shuffle(likes.data);
   const tweet = shuffled[0];
-  return tweet.id;
+  return {
+    id: tweet.id,
+    meta: {
+      user,
+      totalLikes: likes.data.length,
+    },
+  };
 }
 
 async function getRandomTweet() {
-  const tweetId = await getRandomLikedTweet("mehulkar");
-  console.log(`Fetching data for tweet id`, tweetId);
+  const { id: tweetId, meta } = await getRandomLikedTweet(MY_TWITTER_HANDLE);
 
   const tweetData = await client.tweets.findTweetById(tweetId, {
     "tweet.fields": "author_id,source,entities,created_at,referenced_tweets",
@@ -26,9 +32,6 @@ async function getRandomTweet() {
   const author = await client.users.findUserById(tweetData.data.author_id, {
     "user.fields": "profile_image_url",
   });
-
-  console.log("[debug] tweet data", tweetData);
-  console.log("[debug] tweet author", author);
 
   const options = {};
   if (tweetData.data.entities && tweetData.data.entities.urls) {
@@ -43,6 +46,13 @@ async function getRandomTweet() {
   );
 
   tweetData.data.html = tweetData.data.html.replaceAll("\n", "<br />");
+
+  console.log(
+    `Fetched ${tweetId} out of ${meta.totalLikes} likes for user: ${MY_TWITTER_HANDLE} with user ID ${meta.user.data.id}`
+  );
+
+  console.debug("tweet data", tweetData);
+  console.debug("tweet author", author);
 
   return {
     author: author.data,
