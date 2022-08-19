@@ -12,7 +12,7 @@ const fullDate = Intl.DateTimeFormat("en-us", {
   year: "numeric",
 });
 
-const CATEGORY_PAGES = [
+const TAG_PAGES = [
   "books",
   "ember.js",
   "frontend",
@@ -25,6 +25,11 @@ const CATEGORY_PAGES = [
   "til",
   "debugging",
 ];
+
+const TAG_PATH_OVERRIDES = {
+  "ember.js": "emberjs",
+  "ninja-tennis": "ninjatennis",
+};
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
@@ -119,23 +124,30 @@ module.exports = function (eleventyConfig) {
     return fullDate.format(adjusted);
   });
 
-  eleventyConfig.addNunjucksFilter("split", function (value) {
-    if (!value) return [];
+  eleventyConfig.addNunjucksFilter("splitTags", function (value) {
+    if (!value) {
+      return [];
+    }
 
-    return value.split(", ");
+    // https://github.com/11ty/eleventy/blob/v1.0.1/src/TemplateData.js#L608-L617
+    // 11ty specially parses tags and always returns an array. It expects that
+    // we are setting tags as a multiline array, if there are more than one. And
+    // if a single string is provided, it will still give that to us as an array of one string.
+    // But in _our_ posts, we specify comma separated tags.
+    // So we need to take the first value out of the single-item array, and
+    // then parse that.
+    const [tags = ""] = value;
+    return splitTagsArr(tags);
   });
 
-  eleventyConfig.addNunjucksFilter("tagLink", function (value) {
+  eleventyConfig.addNunjucksFilter("tagLink", function (tag) {
     const classList = "pill dib mb3 br1 ph3 pv1 ttu";
-    if (CATEGORY_PAGES.includes(value)) {
-      const path =
-        {
-          "ember.js": "emberjs",
-          "ninja-tennis": "ninjatennis",
-        }[value] || value;
-      return `<a href="/blog/category/${path}" class="pill--link ${classList}">${value}</a>`;
+
+    if (TAG_PAGES.includes(tag)) {
+      const path = TAG_PATH_OVERRIDES[tag] || tag;
+      return `<a href="/blog/category/${path}" class="pill--link ${classList}">${tag}</a>`;
     } else {
-      return `<span class="${classList}">${value}</span>`;
+      return `<span class="${classList}">${tag}</span>`;
     }
   });
 
@@ -166,12 +178,20 @@ function filterPostsByTag(posts, tag) {
   });
 }
 
-function getTags(post) {
-  // TODO: how to use frontmatter correctly so that tags are already an array?
-  const tags = (post.data.tags[0] || "").split(",");
-  const cleaned = tags.map((x) => x.trim()).filter(Boolean);
+function splitTagsArr(tags) {
+  const cleaned = tags
+    .split(",")
+    .map((x) => x.trim())
+    .filter(Boolean);
+
   const unique = new Set(cleaned);
   return [...unique];
+}
+
+function getTags(post) {
+  // TODO: how to use frontmatter correctly so that tags are already an array?
+  const tagsString = post.data.tags[0] || "";
+  return splitTagsArr(tagsString);
 }
 
 /**
