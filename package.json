@@ -26,6 +26,7 @@
     "node": "16.15.1",
     "npm": "8.12.1"
   },
+  "packageManager": "pnpm@7.12.2",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
