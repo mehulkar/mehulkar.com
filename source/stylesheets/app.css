@@ -71,6 +71,14 @@ body main #content {
   width: 100%;
 }
 
+/* General content typgraphy rules */
+body main #content {
+  font-size: 1.1rem;
+  font-family: "Work Sans", serif;
+  line-height: 1.65rem;
+  letter-spacing: -1px;
+}
+
 body main #content p {
   margin-bottom: var(--paragraph-mb);
 }
@@ -88,13 +96,7 @@ body main #content ul li {
   margin-bottom: 1rem;
 }
 
-body main #content p,
-body main #content li {
-  font-family: "Libre Baskerville", serif;
-  line-height: 1.65rem;
-}
-
-header {
+.site-header {
   padding: 1em;
   padding-bottom: 0;
   background-color: var(--base-color);

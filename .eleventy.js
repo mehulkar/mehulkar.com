@@ -141,7 +141,7 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addNunjucksFilter("tagLink", function (tag) {
-    const classList = "pill dib mb3 br1 ph3 pv1 ttu";
+    const classList = "pill dib mb3 br1 ph3 pv1 ttu f6";
 
     if (TAG_PAGES.includes(tag)) {
       const path = TAG_PATH_OVERRIDES[tag] || tag;
