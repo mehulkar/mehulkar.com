@@ -184,7 +184,7 @@ header.site-header {
 
 .post-group .post-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   grid-column-gap: 20px;
 }
 
@@ -246,6 +246,13 @@ figure#tweet blockquote, figure#feedly-annotation blockquote {
   box-shadow: none;
 }
 
+// TODO: text ellipsis doesn't seem to work on mobile
+figure#tweet figcaption cite, figure#feedly-annotation figcaption cite {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .small {
   font-size: 80%;
 }
@@ -253,4 +260,62 @@ figure#tweet blockquote, figure#feedly-annotation blockquote {
 .tweet-author-picture {
   border-radius: 50%;
   margin-right: 10px;
+}
+
+
+.home {
+  display: grid;
+  grid-template-areas:
+    'sidebar intro intro intro'
+    'sidebar posts posts posts';
+
+  grid-template-columns: 300px 1fr;
+}
+
+@media only screen and (max-width: 600px) {
+  .home {
+    grid-template-areas:
+      'intro'
+      'posts'
+      'sidebar';
+      grid-template-columns: 1fr;
+  }
+}
+
+.home .intro {
+  grid-area: intro;
+  padding-top: 1rem;
+}
+
+.home aside {
+  grid-area: sidebar;
+  margin-right: 1rem;
+  padding: 0.5rem;
+}
+
+
+.home aside ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+.home aside ul li {
+  border-bottom: solid 1px var(--blue-1);
+}
+
+.home aside ul p {
+  margin-bottom: 0.5rem;
+}
+
+.home .posts { grid-area: posts; }
+
+/* Utility class for mobile */
+.mobile-only {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .mobile-only {
+    display: inline;
+  }
 }
