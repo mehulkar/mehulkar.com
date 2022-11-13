@@ -196,15 +196,13 @@
       </div>
     </header>
 
-    <main class='flex flex-column mw7'>
-      <div id="content" class='pa3'>
-        {{content | safe }}
-      </div>
-
-      <footer class='silver f6 tc pa2 mb2'>
-        <div>&copy; <span id='year'></span></div>
-      </footer>
+    <main class='flex flex-column mw7 pa3'>
+      {{content | safe }}
     </main>
+
+    <footer class='silver f6 tc pa2 mb2'>
+      <div>&copy; <span id='year'></span></div>
+    </footer>
   </body>
 
   {% if "{{env.VERCEL_ANALYTICS_ID}}" %}

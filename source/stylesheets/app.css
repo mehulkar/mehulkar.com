@@ -66,33 +66,33 @@ body main {
   margin: 0 auto;
 }
 
-body main #content {
+body main {
   flex: 1;
   width: 100%;
 }
 
 /* General content typgraphy rules */
-body main #content {
+body main {
   font-size: 1.1rem;
   font-family: "Work Sans", serif;
   line-height: 1.65rem;
   letter-spacing: -1px;
 }
 
-body main #content p {
+body main p {
   margin-bottom: var(--paragraph-mb);
 }
 
-body main #content nav {
+body main nav {
   margin-left: 0;
 }
 
-body main #content ol,
-body main #content ul {
+body main ol,
+body main ul {
   margin-left: 3rem;
 }
-body main #content ol li,
-body main #content ul li {
+body main ol li,
+body main ul li {
   margin-bottom: 1rem;
 }
 
