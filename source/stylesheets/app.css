@@ -90,7 +90,7 @@ body main ul li {
   margin-bottom: 1rem;
 }
 
-header {
+header.site-header {
   padding: 1em;
   padding-bottom: 0;
   background-color: var(--base-color);
