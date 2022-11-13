@@ -64,15 +64,9 @@ body {
 body main {
   min-height: 100%;
   margin: 0 auto;
-}
-
-body main {
   flex: 1;
   width: 100%;
-}
-
-/* General content typgraphy rules */
-body main {
+  /* General content typgraphy rules */
   font-size: 1.1rem;
   font-family: "Work Sans", serif;
   line-height: 1.65rem;
@@ -96,7 +90,7 @@ body main ul li {
   margin-bottom: 1rem;
 }
 
-.site-header {
+header {
   padding: 1em;
   padding-bottom: 0;
   background-color: var(--base-color);
