@@ -1,38 +1,38 @@
-body main article h1,
-body main article h2,
-body main article h3 {
+article h1,
+article h2,
+article h3 {
   font-family: 'Lato', 'sans-serif';
 }
 
-body main article h2 {
+article h2 {
   font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
-body main article h3 {
+article h3 {
   font-size: 1rem;
   font-weight: 700;
   margin-bottom: 0.3rem;
 }
 
-body main article h4 {
+article h4 {
   font-size: 1rem;
   font-weight: 500;
   margin-bottom: 0.3rem;
 }
 
-body main article figure figcaption {
+article figure figcaption {
   font-size: 0.8rem;
 }
 
-body main article hr {
+article hr {
   border-top: 0.5px solid #fff;
   margin: 2.5rem auto;
   width: 50%;
 }
 
-body main article aside {
+article aside {
   border: solid 1px gold;
   border-radius: 0.25rem;
   background: #ffa;
@@ -42,44 +42,44 @@ body main article aside {
   margin-left: 2em;
 }
 
-body main article pre,
-body main article code {
+article pre,
+article code {
   line-height: 1.125rem;
   font-size: 0.9em;
 }
 
-body main article a code {
+article a code {
   color: var(--base-color);
 }
 
-body main article pre code {
+article pre code {
   display: block;
   overflow-x: scroll;
 }
 
-body main article pre.terminal {
+article pre.terminal {
   border: 1px solid #000;
   background-color: #333;
   color: #fff;
 }
 
-body main article pre.terminalcode {
+article pre.terminalcode {
   background-color: #333;
 }
 
-body main article li > ul,
-body main article li > ol {
+article li > ul,
+article li > ol {
   margin-top: 0.5rem;
 }
 
-body main article ol,
-body main article ul,
-body main article p,
-body main article figure,
-body main article table,
-body main article blockquote,
-body main article aside,
-body main article pre {
+article ol,
+article ul,
+article p,
+article figure,
+article table,
+article blockquote,
+article aside,
+article pre {
   margin-top: 0;
   margin-bottom: var(--paragraph-mb);
 }
@@ -88,11 +88,11 @@ body main article pre {
   converts blockquote to iframe and
   applies inline CSS
 */
-body main article iframe.twitter-tweet {
+article iframe.twitter-tweet {
   margin-bottom: 20px !important;
 }
 
-body main article blockquote {
+article blockquote {
   padding: 1rem 1.5rem 1rem;
   border-left: solid 4px var(--blue-1);
   background-color: var(--blue-2);
@@ -101,49 +101,49 @@ body main article blockquote {
   box-shadow: 3px 3px 0px aliceblue;
 }
 
-body main article blockquote p {
+article blockquote p {
   line-height: var(--paragraph-mb);
   margin-bottom: 0.5rem;
 }
 
-body main article blockquote p:last-child {
+article blockquote p:last-child {
   margin-bottom: 0;
 }
 
-body main article blockquote p code {
+article blockquote p code {
   font-size: 0.9em;
 }
 
 
-body main article img {
+article img {
   margin: 0 auto 1rem;
   display: block;
   border: solid 1px var(--image-border-color);
   border-radius: 2%;
 }
 
-body main article img.book-cover {
+article img.book-cover {
   border-radius: 3%;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-body main article table tr:nth-child(odd) {
+article table tr:nth-child(odd) {
   background-color: #fafafa;
 }
 
-body main article table td,
-body main article table th {
+article table td,
+article table th {
   padding: 5px 10px;
   white-space: nowrap;
 }
 
-body main article table {
+article table {
   border-collapse: collapse;
   display: block;
   overflow-x: scroll;
 }
 
-body main article table tr {
+article table tr {
   border: solid 1px #eee;
 }
