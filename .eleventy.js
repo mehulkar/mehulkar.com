@@ -57,7 +57,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addCollection("rssFeedPosts", function (collectionApi) {
     const allSorted = collectionApi.getAllSorted();
-    const posts = filterPostsByTag(allSorted, "programming");
+    const posts = filterPostsByTag(allSorted, ["programming", "indieweb"]);
 
     return [...posts.reverse()].slice(0, 20);
   });
@@ -93,13 +93,19 @@ module.exports = function (eleventyConfig) {
     return sortedGroups;
   });
 
-  eleventyConfig.addNunjucksFilter("category", function (byYear, tag) {
+  eleventyConfig.addNunjucksFilter("category", function (byYear, tags) {
     const filtered = [];
+
+    // ensure array for tags
+    let tagsArr = tags;
+    if (!Array.isArray(tags) && typeof tags === "string") {
+      tagsArr = [tags];
+    }
 
     for (const postCollection of byYear) {
       const { name: year, posts } = postCollection;
 
-      const forTag = filterPostsByTag(posts, tag);
+      const forTag = filterPostsByTag(posts, tagsArr);
 
       if (forTag.length) {
         filtered.push({
@@ -151,14 +157,17 @@ module.exports = function (eleventyConfig) {
     }
   });
 
-  eleventyConfig.addNunjucksFilter("addQueryParam", function (urlStr, queryParamsStr) {
-    const url = new URL(urlStr)
-    const queryParams = new URLSearchParams(queryParamsStr);
-    for ([param, value] of queryParams.entries()) {
-      url.searchParams.set(param, value)
+  eleventyConfig.addNunjucksFilter(
+    "addQueryParam",
+    function (urlStr, queryParamsStr) {
+      const url = new URL(urlStr);
+      const queryParams = new URLSearchParams(queryParamsStr);
+      for ([param, value] of queryParams.entries()) {
+        url.searchParams.set(param, value);
+      }
+      return url.toString();
     }
-    return url.toString()
-  });
+  );
 
   return {
     // Turn off any template preprocessing for markdown files. `.md` files are
@@ -180,10 +189,21 @@ module.exports = function (eleventyConfig) {
  * @param {string} tag
  * @returns
  */
-function filterPostsByTag(posts, tag) {
+function filterPostsByTag(posts, tags) {
+  // Check all the tags for each post
   return posts.filter((post) => {
     const postTags = getTags(post);
-    return postTags.includes(tag);
+
+    // If any of the tags on a post includes the ones we want
+    let include = false;
+    tags.forEach((requestedTag) => {
+      if (postTags.includes(requestedTag)) {
+        include = true;
+        return;
+      }
+    });
+
+    return include;
   });
 }
 
