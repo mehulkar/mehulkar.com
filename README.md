@@ -11,9 +11,9 @@ npm run new
 ## Run locally
 
 ```bash
-volta install vercel # or npm i -g vercel
-npm ci
-npm run start
+npm i -g vercel
+pnpm i
+pnpm start
 ```
 
 ## Deploy
