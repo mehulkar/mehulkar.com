@@ -184,9 +184,8 @@ module.exports = function (eleventyConfig) {
 };
 
 /**
- * TODO: allow accepting more than one tag?
  * @param {*} posts
- * @param {string} tag
+ * @param {string[]} tags
  * @returns
  */
 function filterPostsByTag(posts, tags) {
