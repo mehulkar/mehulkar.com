@@ -158,13 +158,18 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addNunjucksFilter(
-    "addQueryParam",
+    "buildForRSS",
     function (urlStr, queryParamsStr) {
-      const url = new URL(urlStr);
-      const queryParams = new URLSearchParams(queryParamsStr);
+      // remove trailing slash
+      const url = new URL(urlStr.replace(/\/$/, ""));
+
+      // add query param rss=true
+      const queryParams = new URLSearchParams("rss=true");
       for ([param, value] of queryParams.entries()) {
         url.searchParams.set(param, value);
       }
+
+      // return final
       return url.toString();
     }
   );

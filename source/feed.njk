@@ -28,13 +28,14 @@
   </author>
 
   {%- for post in collections.rssFeedPosts %}
-    {% set absolutePostUrl %}{{ post.url |
-        url |
-        absoluteUrl(metadata.url) |
-        addQueryParam("rss=true")
-      }}{% endset %}
+    {# post url is a relative link, we:
+      // pass into `absoluteUrl` filter which attaches `metadata.url` as the origin
+      // and also add a rss=true query param
+    #}
+    {% set absolutePostUrl %}{{ post.url | absoluteUrl(metadata.url) | buildForRSS }}{% endset %}
 
     <entry>
+      <g>{{post.url}}</g>
       <title>{{ post.data.title }}</title>
       <link href="{{ absolutePostUrl }}"/>
       <updated>{{ post.date | dateToRfc3339 }}</updated>
