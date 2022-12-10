@@ -28,13 +28,11 @@
   </author>
 
   {%- for post in collections.rssFeedPosts %}
-    {% set absolutePostUrl %}
-      {{ post.url |
+    {% set absolutePostUrl %}{{ post.url |
         url |
         absoluteUrl(metadata.url) |
         addQueryParam("rss=true")
-      }}
-    {% endset %}
+      }}{% endset %}
 
     <entry>
       <title>{{ post.data.title }}</title>
