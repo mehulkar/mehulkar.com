@@ -151,6 +151,15 @@ module.exports = function (eleventyConfig) {
     }
   });
 
+  eleventyConfig.addNunjucksFilter("addQueryParam", function (urlStr, queryParamsStr) {
+    const url = new URL(urlStr)
+    const queryParams = new URLSearchParams(queryParamsStr);
+    for ([param, value] of queryParams.entries()) {
+      url.searchParams.set(param, value)
+    }
+    return url.toString()
+  });
+
   return {
     // Turn off any template preprocessing for markdown files. `.md` files are
     // usually for blog posts and don't contain any liquid/nunjucks templating.

@@ -26,14 +26,25 @@
     <name>{{ metadata.author.name }}</name>
     <email>{{ metadata.author.email }}</email>
   </author>
+
   {%- for post in collections.rssFeedPosts %}
-    {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
+    {% set absolutePostUrl %}
+      {{ post.url |
+        url |
+        absoluteUrl(metadata.url) |
+        addQueryParam("rss=true")
+      }}
+    {% endset %}
+
     <entry>
       <title>{{ post.data.title }}</title>
       <link href="{{ absolutePostUrl }}"/>
       <updated>{{ post.date | dateToRfc3339 }}</updated>
       <id>{{ absolutePostUrl }}</id>
-      <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+      <content type="html">
+        {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
+        <p>Thanks for reading this post via RSS!</p>
+      </content>
     </entry>
   {%- endfor %}
 </feed>
