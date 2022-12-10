@@ -20,4 +20,4 @@ pnpm start
 
 The `main` branch is auto deployed by Vercel:
 
-https://vercel.com/mehulkar/mehulkar
+https://vercel.com/mehul-kar/mehulkar
