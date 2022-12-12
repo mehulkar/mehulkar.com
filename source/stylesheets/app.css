@@ -226,9 +226,8 @@ header.site-header {
   }
 }
 
-figure#tweet {
+figure#tweet, figure#feedly-annotation {
   padding: 1rem 1.5rem 1rem;
-  margin-bottom: var(--paragraph-mb);
   border-left: solid 4px var(--blue-1);
   background-color: var(--blue-2);
   color: var(--code-text-color);
@@ -236,10 +235,13 @@ figure#tweet {
   box-shadow: 3px 3px 0px aliceblue;
 }
 
-figure#tweet blockquote {
+figure#tweet p, figure#feedly-annotation p {
+  margin-bottom: 0.5rem;
+}
+
+figure#tweet blockquote, figure#feedly-annotation blockquote {
   background: none;
   border: none;
-  margin-bottom: 0.5rem;
   padding-bottom: 0;
   box-shadow: none;
 }
