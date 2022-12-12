@@ -29,7 +29,7 @@ eleventyExcludeFromCollections: true
         <p id="tweet-preamble">❤️ Liked a tweet:</p>
         <figure id="tweet">
           <div>
-            <img id="tweet-author-picture" class="tweet-author-picture" src="" width="30" height="30" role="presentation">
+            <img id="tweet-author-picture" class="tweet-author-picture tweet-author-picture--initial" src="" width="30" height="30" role="presentation">
             <blockquote cite=""></blockquote>
           </div>
 
@@ -117,7 +117,9 @@ eleventyExcludeFromCollections: true
     tweetElement.querySelector('blockquote').setAttribute('cite', url);
     tweetElement.querySelector('blockquote').innerHTML = tweet.html;
     tweetElement.querySelector('cite').innerHTML = `<a target="_blank" rel="noopener noreferrer" href="${url}">— @${author.username}</a>`;
-    tweetElement.querySelector('#tweet-author-picture').setAttribute('src', author.profile_image_url);
+    const imgEl = tweetElement.querySelector('#tweet-author-picture')
+    imgEl.setAttribute('src', author.profile_image_url);
+    imgEl.classList.remove('tweet-author-picture--initial')
   });
 
   // annotation

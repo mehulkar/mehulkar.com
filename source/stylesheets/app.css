@@ -262,6 +262,10 @@ figure#tweet figcaption cite, figure#feedly-annotation figcaption cite {
   margin-right: 10px;
 }
 
+.tweet-author-picture--initial {
+  display: none;
+}
+
 
 .home {
   display: grid;
