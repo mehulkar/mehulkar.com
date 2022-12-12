@@ -56,4 +56,4 @@ I'm not sure why, as the data seems identical.
 a new one. I'll have to figure it out some time later.
 
 The whole project took maybe 3-4 hours, but the fetch + render pattern was already set, so I didn't
-have to re-invent anything.
+have to re-invent anything. You can see it in action on the [homepage](/) of this website.
