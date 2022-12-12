@@ -22,3 +22,4 @@ node_modules
 _site/
 .vercel
 .turbo
+.env

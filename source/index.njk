@@ -16,9 +16,11 @@ eleventyExcludeFromCollections: true
   <li>
     {# TODO: Make this dynamic #}
     Read <a target="_blank" rel="noopener noreferrer" href="https://www.goodreads.com/review/show/4794773798"><em>Vanderbilt: The Rise and Fall of an American Dynasty</em>.</a>
+
   <li>
     Watched <span id="movie">...</span> <span id="movie-date">...</span> and rated it <span id="rating">0/5</span>.
   </li>
+
   <li>
     <p id="tweet-preamble">Liked a tweet:</p>
     <figure id="tweet">
@@ -41,6 +43,21 @@ eleventyExcludeFromCollections: true
       </figcaption>
     </figure>
   </li>
+
+  <li>
+    <p id="feedly-preamble">Highlighted via Feedly RSS reader:</p>
+    <figure id="feedly-annotation">
+      <div class="flex items-top">
+        <blockquote cite=""></blockquote>
+      </div>
+      <figcaption class="flex items-center">
+
+        <cite></cite>
+      </figcaption>
+    </figure>
+  </li>
+
+
 </ul>
 
 <h2 class="mb3">Posts</h2>
@@ -76,4 +93,18 @@ eleventyExcludeFromCollections: true
     tweetElement.querySelector('cite').innerHTML = `<a target="_blank" rel="noopener noreferrer" href="${url}">— @${author.username}</a>`;
     tweetElement.querySelector('#tweet-author-picture').setAttribute('src', author.profile_image_url);
   });
+
+  // annotation
+  fetch("/api/feedly-annotation").then(res => res.json()).then(data => {
+    console.log('feedly annotation', data)
+    const { text, originTitle, originURL } = data;
+    const element = document.getElementById('feedly-annotation');
+
+    element.querySelector('blockquote').innerHTML = `<p>${text}</p>`;
+
+    if (originTitle &&  originURL) {
+      element.querySelector('blockquote').setAttribute('cite', originURL);
+      element.querySelector('cite').innerHTML = `<a target="_blank" rel="noopener noreferrer" href="${originURL}">— ${originTitle}</a>`;
+    }
+  })
 </script>
