@@ -1,7 +1,7 @@
 ---
 title: Site Performance Improvements
 date: 2020-01-02
-tags: programming, frontend
+tags: programming, frontend, meta
 ---
 
 I have been saying for years that I'm going to dive deeper into web performance, but each time I
