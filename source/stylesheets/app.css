@@ -246,11 +246,12 @@ figure#tweet blockquote, figure#feedly-annotation blockquote {
   box-shadow: none;
 }
 
-// TODO: text ellipsis doesn't seem to work on mobile
+/* TODO: text ellipsis doesn't seem to work on mobile */
 figure#tweet figcaption cite, figure#feedly-annotation figcaption cite {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  flex-grow: 1;
 }
 
 .small {
