@@ -1,7 +1,7 @@
 ---
 title: Debugging a Flash of Unstyled Text
 date: 2022-01-20
-tags: programming, debugging, javascript, ember
+tags: programming, debugging, javascript, ember.js
 ---
 
 Sometimes, it's hard for me to explain (even to myself) what I do all day at my
