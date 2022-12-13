@@ -147,13 +147,13 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addNunjucksFilter("tagLink", function (tag) {
-    const classList = "pill dib mb3 br1 ph3 pv1 ttu f6";
-
+    const classList = "dib mr1 f5";
+    const tagText = `#${tag}`;
     if (TAG_PAGES.includes(tag)) {
       const path = TAG_PATH_OVERRIDES[tag] || tag;
-      return `<a href="/blog/category/${path}" class="pill--link ${classList}">${tag}</a>`;
+      return `<a href="/blog/category/${path}" class="${classList}">${tagText}</a>`;
     } else {
-      return `<span class="${classList}">${tag}</span>`;
+      return `<span class="${classList}">${tagText}</span>`;
     }
   });
 
