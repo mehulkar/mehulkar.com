@@ -46,7 +46,8 @@ async function getRandomTweet() {
     options
   );
 
-  tweetData.data.html = tweetData.data.html.replaceAll("\n", "<br />");
+  // replace \n with <br>. collapse multiple \n into a single <br>
+  tweetData.data.html = tweetData.data.html.replaceAll(/\n+/g, "<br>");
 
   console.log(
     `Fetched ${tweetId} out of ${meta.totalLikes} likes for user: ${MY_TWITTER_HANDLE} with user ID ${meta.user.data.id}`
