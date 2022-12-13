@@ -3,7 +3,7 @@ import { shuffle } from "./_utils.mjs";
 
 const URL = "https://letterboxd.com/mehulkar/rss/";
 
-async function getLatestFilm() {
+export async function getFilm() {
   const json = await new Parser().parseURL(URL);
   const last10Films = json.items.slice(0, 10);
 
@@ -38,9 +38,4 @@ async function getLatestFilm() {
     watchedOn: isoDate,
     url: linkWithoutUser,
   };
-}
-
-export default async function handler(req, res) {
-  const filmData = await getLatestFilm();
-  return res.status(200).json(filmData);
 }
