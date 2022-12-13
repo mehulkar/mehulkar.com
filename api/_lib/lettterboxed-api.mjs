@@ -35,7 +35,7 @@ export async function getFilm() {
     rating,
     ratingString: stars,
     year,
-    watchedOn: isoDate,
+    timestamp: isoDate,
     url: linkWithoutUser,
   };
 }

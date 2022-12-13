@@ -62,6 +62,7 @@ export async function getAnnotation() {
 
   const data = {
     text,
+    timestamp: new Date(annotation.created).toISOString(),
   };
 
   // Seeing some cases where there is no text, not sure why that happens

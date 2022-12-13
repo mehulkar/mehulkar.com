@@ -22,7 +22,9 @@ eleventyExcludeFromCollections: true
         📚 Read <a target="_blank" rel="noopener noreferrer" href="https://www.goodreads.com/review/show/4794773798"><em>Vanderbilt: The Rise and Fall of an American Dynasty</em>.</a>
 
       <li>
-        🎬 Watched <span id="movie">...</span> <span id="movie-date">...</span> and rated it <span id="rating">0/5</span>.
+        <p id="film-preamble">
+          🎬 Watched <span id="movie">...</span> <time>...</time> and rated it <span id="rating">0/5</span>.
+        </p>
       </li>
 
       <li>
@@ -55,7 +57,7 @@ eleventyExcludeFromCollections: true
       </li>
 
       <li>
-        <p id="feedly-preamble">🖊️ Highlighted via Feedly RSS reader:</p>
+        <p id="feedly-preamble">🖊️ Highlighted <time>...</time> via Feedly RSS reader:</p>
         <figure id="feedly-annotation">
           <blockquote cite=""></blockquote>
 
@@ -101,12 +103,12 @@ eleventyExcludeFromCollections: true
 
   function setFilmHTML(data) {
     console.log('film', data);
-    const { name, rating, watchedOn, url } = data;
-    const daysAgo = Math.round((new Date() - new Date(watchedOn)) / 1000 / 60 / 60 / 24);
-    const date = new Intl.RelativeTimeFormat('en', { numeric: 'auto' }).format(daysAgo * -1, 'days')
-
+    const { name, rating, timestamp, url } = data;
     document.getElementById('movie').innerHTML = `<a href="${url}">${name}</a>`;
-    document.getElementById('movie-date').innerText = date;
+
+    // time element
+    setTimeElement(document.querySelector('#film-preamble time'), timestamp);
+
     document.getElementById('rating').innerText = `${rating}/5 stars`;
   }
 
@@ -128,14 +130,27 @@ eleventyExcludeFromCollections: true
 
   function setAnnotationHTML(data) {
     console.log('annotation', data)
-    const { text, originTitle, originURL } = data;
+    const { text, originTitle, originURL, timestamp } = data;
     const element = document.getElementById('feedly-annotation');
 
     element.querySelector('blockquote').innerHTML = `<p>${text}</p>`;
+
+    // time element
+    setTimeElement(document.querySelector('#feedly-preamble time'), timestamp);
 
     if (originTitle &&  originURL) {
       element.querySelector('blockquote').setAttribute('cite', originURL);
       element.querySelector('cite').innerHTML = `<a target="_blank" rel="noopener noreferrer" href="${originURL}">— ${originTitle}</a>`;
     }
+  }
+
+  function setTimeElement(el, ts) {
+    el.setAttribute('datetime', ts);
+    el.innerText = daysAgo(ts);
+  }
+
+  function daysAgo(timestamp) {
+    const daysAgo = Math.round((new Date() - new Date(timestamp)) / 1000 / 60 / 60 / 24);
+    return new Intl.RelativeTimeFormat('en', { numeric: 'auto' }).format(daysAgo * -1, 'days')
   }
 </script>
