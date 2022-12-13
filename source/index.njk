@@ -107,7 +107,11 @@ eleventyExcludeFromCollections: true
 
   // tweet
   fetch('/api/fave-tweet').then(res => res.json()).then(data => {
-    console.log('tweet', data);
+    console.log('tweet html (pre)', data.tweet._originalHTML);
+    console.log('------------------')
+    console.log('tweet html (post before)', data.tweet._htmlPrev);
+    console.log('------------------')
+    console.log('tweet html (post)', data.tweet.html);
     const { tweet, author } = data;
     const url = `https://twitter.com/${author.username}/status/${tweet.id}`;
     const authorUrl = `https://twitter.com/${author.username}`;

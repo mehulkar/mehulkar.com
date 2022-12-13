@@ -45,7 +45,23 @@ async function getRandomTweet() {
     options
   );
 
-  tweetData.data.html = tweetData.data.html.replaceAll("\n", "<br />");
+  tweetData.data._originalHTML = tweetData.data.html;
+  tweetData.data._htmlPrev = tweetData.data.html.replaceAll("\n", "<br>");
+
+  // modifications
+  // 1. replace \n with <br> (TODO: why doesn't library do this?)
+  tweetData.data.html = tweetData.data.html.replaceAll(/\n+/g, "<br>");
+
+  // 2. Move all "@"" from @username mentions inside the anchor tag.
+  // tweetData.data.html = tweetData.data.html.replaceAll(
+  //   /@\<a([^\>+])\>/g,
+  //   "<a $1>@"
+  // );
+
+  tweetData.data.html = tweetData.data.html.replaceAll(
+    /@<a([^>]*)>(.*)/g,
+    "<a$1>@$2"
+  );
 
   console.log(
     `Fetched ${tweetId} out of ${meta.totalLikes} likes for user: ${MY_TWITTER_HANDLE} with user ID ${meta.user.data.id}`
