@@ -93,9 +93,14 @@ eleventyExcludeFromCollections: true
 </div>
 
 <script>
-  // movie
-  fetch('/api/watching').then((res) => res.json()).then((data) => {
-    console.log('movie', data);
+  fetch("/api/recent").then(res => res.json()).then(({ film, tweet, annotation }) => {
+    setFilmHTML(film);
+    setTweetHTML(tweet);
+    setAnnotationHTML(annotation);
+  });
+
+  function setFilmHTML(data) {
+    console.log('film', data);
     const { name, rating, watchedOn, url } = data;
     const daysAgo = Math.round((new Date() - new Date(watchedOn)) / 1000 / 60 / 60 / 24);
     const date = new Intl.RelativeTimeFormat('en', { numeric: 'auto' }).format(daysAgo * -1, 'days')
@@ -103,10 +108,9 @@ eleventyExcludeFromCollections: true
     document.getElementById('movie').innerHTML = `<a href="${url}">${name}</a>`;
     document.getElementById('movie-date').innerText = date;
     document.getElementById('rating').innerText = `${rating}/5 stars`;
-  });
+  }
 
-  // tweet
-  fetch('/api/fave-tweet').then(res => res.json()).then(data => {
+  function setTweetHTML(data) {
     console.log('tweet', data);
     const { tweet, author } = data;
     const url = `https://twitter.com/${author.username}/status/${tweet.id}`;
@@ -120,11 +124,10 @@ eleventyExcludeFromCollections: true
     const imgEl = tweetElement.querySelector('#tweet-author-picture')
     imgEl.setAttribute('src', author.profile_image_url);
     imgEl.classList.remove('tweet-author-picture--initial')
-  });
+  }
 
-  // annotation
-  fetch("/api/feedly-annotation").then(res => res.json()).then(data => {
-    console.log('feedly annotation', data)
+  function setAnnotationHTML(data) {
+    console.log('annotation', data)
     const { text, originTitle, originURL } = data;
     const element = document.getElementById('feedly-annotation');
 
@@ -134,5 +137,5 @@ eleventyExcludeFromCollections: true
       element.querySelector('blockquote').setAttribute('cite', originURL);
       element.querySelector('cite').innerHTML = `<a target="_blank" rel="noopener noreferrer" href="${originURL}">— ${originTitle}</a>`;
     }
-  })
+  }
 </script>

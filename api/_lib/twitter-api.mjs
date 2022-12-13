@@ -21,7 +21,7 @@ async function getRandomLikedTweet(username) {
   };
 }
 
-async function getRandomTweet() {
+export async function getTweet() {
   const { id: tweetId, meta } = await getRandomLikedTweet(MY_TWITTER_HANDLE);
 
   const tweetData = await client.tweets.findTweetById(tweetId, {
@@ -60,16 +60,4 @@ async function getRandomTweet() {
     author: author.data,
     tweet: tweetData.data,
   };
-}
-
-export default async function handler(req, res) {
-  try {
-    const randomTweet = await getRandomTweet();
-    return res.status(200).json(randomTweet);
-  } catch (e) {
-    console.error(e);
-    return res.status(500).json({
-      error: e,
-    });
-  }
 }
