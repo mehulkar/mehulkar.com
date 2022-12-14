@@ -4,31 +4,32 @@ date: 2022-12-13
 tags: programming, frontend, web
 ---
 
-I came across [Enhance](https://enhance.dev) and wanted to build a web form that sends data
-to a google spreadsheet. I was immediately attracted its promise of "it's just HTML" and web components,
-so I spent ~an hour with learning the basics by reading the [Quick start](https://enhance.dev/docs/)
+I wanted to build a web form that sends data to a google spreadsheet, and had recently came across
+[Enhance](https://enhance.dev). I was immediately attracted its promise of "it's just HTML" and
+web components, so I spent ~an hour with learning the basics by reading the [Quick start](https://enhance.dev/docs/)
 docs and watching the three video walkthroughs. Seemed simple enough! Enhance ships with:
 
-1. File based routing, where an API route matches the "server" render based on file name.
+1. File based routing, where an API route matches the "server render" based on file name.
 
-    For example `app/pages/index.html` would be preceded by `app/api/index.mjs`.
+    For example: `app/pages/index.html` is preceded by `app/api/index.mjs` and data from the latter
+    is made available to the former.
 
 2. Automatic Custom Element definition and registration
 
-    Just export a function in `app/elements/my-element.mjs` and then use `<my-element>`!
+    Just export a function in `app/elements/my-element.mjs` and use `<my-element>`!
     This was really nice, because `customElements.define('my-element', ...)` has always felt
-    like a turn off to me. Let me write components and _you_ else make them available!
+    like a turn off to me. Let me write components and _you_ make them available!
 
-This was enough to get started, but I ran into a few issues:
+This was enough to get excited and give it a shot, but I ran into a few issues:
 
-1. `npm create @enhance ./my-app -y` threw an error
+1. `npm create @enhance ./my-app -y` threw an error:
 
     ```sh
     ENOENT: no such file or directory, rename '/Users/mehulkar/dev/my-app/_.gitignore' -> '/Users/mehulkar/dev/my-app/.gitignore'
     ```
 
-    Digging deeper, the `@enhance/create` package is just copying a template directory and the
-    failure to [copy the `gitignore` file][1] _should_ have worked. In fact, cloning the source
+    Looking at the source, the `@enhance/create` package copies a template directory.
+    [Copying the `gitignore` file][1] _should_ have worked. In fact, cloning the source
     and executing the script worked fine. My guess is that `npm create` is using a cached version,
     although the `npm` debug logs do not indicate what version is executed, so I can't say for sure.
     I stopped debugging here, since the fix was pretty simple.
@@ -52,7 +53,7 @@ This was enough to get started, but I ran into a few issues:
     To be fair, it doesn't look like Enhance builds static sites by default or even "serverless"-style
     sites, so a `build` command may not make sense and this could be have been a choice.
 
-4. All rendered elements get state
+4. All rendered elements get state.
 
     I didn't get far enough to actually try this out, but it felt a little weird that a `page` is part
     of the lifecycle after the api route, but intnernal _elements_ receive the json "store" returned
@@ -61,12 +62,12 @@ This was enough to get started, but I ran into a few issues:
     The docs also mention that Pages can be modeled as elements, but that isn't recommended. Maybe
     that pattern would feel more natural here.
 
-5. No layout file
+5. No layout file.
 
     The started template doesn't include an `index.html` with a `<html>` tag and `DOCTYPE`, et al.
     It felt a little magical that I didn't know where this is coming from.
 
-6. Deploy
+6. Deploying.
 
     Ideally, I'd want to deploy Enhance to Vercel. Since the framework is owned by the [Begin][4],
     and the [deploy on Begin docs][5] mention "dynamic web applications composed entirely of pure functions",
