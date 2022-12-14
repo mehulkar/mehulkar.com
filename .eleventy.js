@@ -174,6 +174,23 @@ module.exports = function (eleventyConfig) {
     }
   );
 
+  eleventyConfig.addNunjucksFilter("buildTweetURL", function (page, tags) {
+    const url = new URL("https://twitter.com/intent/tweet");
+
+    // https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/guides/web-intent
+
+    // set url of web mention
+    const pageURL = new URL(`https://mehulkar.com`);
+    pageURL.pathname = page.url;
+    url.searchParams.set("url", encodeURI(pageURL));
+
+    url.searchParams.set("via", "mehulkar");
+
+    console.log(url.toString());
+
+    return url.toString();
+  });
+
   return {
     // Turn off any template preprocessing for markdown files. `.md` files are
     // usually for blog posts and don't contain any liquid/nunjucks templating.
