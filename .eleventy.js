@@ -157,22 +157,19 @@ module.exports = function (eleventyConfig) {
     }
   });
 
-  eleventyConfig.addNunjucksFilter(
-    "buildForRSS",
-    function (urlStr, queryParamsStr) {
-      // remove trailing slash
-      const url = new URL(urlStr.replace(/\/$/, ""));
+  eleventyConfig.addNunjucksFilter("buildForRSS", function (urlStr) {
+    // remove trailing slash
+    const url = new URL(urlStr.replace(/\/$/, ""));
 
-      // add query param rss=true
-      const queryParams = new URLSearchParams("rss=true");
-      for ([param, value] of queryParams.entries()) {
-        url.searchParams.set(param, value);
-      }
-
-      // return final
-      return url.toString();
+    // add query param rss=true
+    const queryParams = new URLSearchParams("rss=true");
+    for ([param, value] of queryParams.entries()) {
+      url.searchParams.set(param, value);
     }
-  );
+
+    // return final
+    return url.toString();
+  });
 
   eleventyConfig.addNunjucksFilter("buildTweetURL", function (page, tags) {
     const url = new URL("https://twitter.com/intent/tweet");
