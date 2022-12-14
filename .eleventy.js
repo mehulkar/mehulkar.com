@@ -186,8 +186,6 @@ module.exports = function (eleventyConfig) {
 
     url.searchParams.set("via", "mehulkar");
 
-    console.log(url.toString());
-
     return url.toString();
   });
 
