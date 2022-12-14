@@ -162,7 +162,7 @@ module.exports = function (eleventyConfig) {
     const url = new URL(urlStr.replace(/\/$/, ""));
 
     // add query param rss=true
-    const queryParams = new URLSearchParams("rss=true");
+    const queryParams = new URLSearchParams("utm_source=rss");
     for ([param, value] of queryParams.entries()) {
       url.searchParams.set(param, value);
     }
