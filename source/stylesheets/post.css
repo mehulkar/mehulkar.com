@@ -52,6 +52,14 @@ article code {
   font-size: 0.9em;
 }
 
+article code {
+  background: #eee;
+  padding: 0.1rem 0.25rem;
+  border-radius: 0.5rem;
+  border: solid 1px #ddd;
+  font-size: 0.85rem;
+}
+
 article a code {
   color: var(--base-color);
 }
@@ -59,6 +67,13 @@ article a code {
 article pre code {
   display: block;
   overflow-x: scroll;
+
+  // reset from other `article code` selector
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  border: none;
+  font-size: 1rem;
 }
 
 article pre.terminal {
