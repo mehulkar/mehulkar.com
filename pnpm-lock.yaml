@@ -4,6 +4,7 @@ specifiers:
   '@11ty/eleventy': 2.0.0-canary.20
   '@11ty/eleventy-plugin-rss': ^1.2.0
   '@11ty/eleventy-plugin-syntaxhighlight': ^3.1.3
+  eleventy-plugin-activity-pub: ^0.0.7
   esbuild: '0.16'
   rss-parser: ^3.12.0
   turbo: ^1.6.3
@@ -22,6 +23,7 @@ devDependencies:
   '@11ty/eleventy': 2.0.0-canary.20
   '@11ty/eleventy-plugin-rss': 1.2.0
   '@11ty/eleventy-plugin-syntaxhighlight': 3.2.2
+  eleventy-plugin-activity-pub: 0.0.7
   esbuild: 0.16.4
   turbo: 1.6.3
   web-vitals: 3.0.4
@@ -738,6 +740,10 @@ packages:
     hasBin: true
     dependencies:
       jake: 10.8.5
+    dev: true
+
+  /eleventy-plugin-activity-pub/0.0.7:
+    resolution: {integrity: sha512-0x0t3Q4/bBWdCrZkKomjlbA/HsKwkBUlA4Tzqfh2VreKtJ8r+UyyheTzh1b7JXV6oZayI4Mss9aA10MIorsABg==}
     dev: true
 
   /encodeurl/1.0.2:
