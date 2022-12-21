@@ -1,6 +1,6 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-const activityPubPlugin = require("eleventy-plugin-activity-pub").default;
+const activityPubPlugin = require("eleventy-plugin-activity-pub");
 
 const shortDate = Intl.DateTimeFormat("en-us", {
   month: "short",
