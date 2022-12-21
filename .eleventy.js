@@ -1,5 +1,6 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const activityPubPlugin = require("eleventy-plugin-activity-pub");
 
 const shortDate = Intl.DateTimeFormat("en-us", {
   month: "short",
@@ -35,6 +36,14 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addLiquidFilter("dateToRfc3339", pluginRss.dateToRfc3339);
+
+  eleventyConfig.addPlugin(activityPubPlugin, {
+    domain: "mehulkar.com",
+    username: "mehulkar",
+    displayName: "mehulkar",
+    summary:
+      "This is my personal website, but it's also discoverable on the Fediverse!",
+  });
 
   eleventyConfig.setTemplateFormats([
     "html,hbs,md,njk",
