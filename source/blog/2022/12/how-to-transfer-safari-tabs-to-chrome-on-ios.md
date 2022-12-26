@@ -1,5 +1,5 @@
 ---
-title: How To Transfer iOS Tabs From Safari to Chrome
+title: How To Transfer Safari Tabs To Chrome on iOS
 date: 2022-12-25
 tags: ios, web, browsers, howto
 ---
