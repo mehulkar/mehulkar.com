@@ -66,7 +66,11 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addCollection("rssFeedPosts", function (collectionApi) {
     const allSorted = collectionApi.getAllSorted();
-    const posts = filterPostsByTag(allSorted, ["programming", "indieweb"]);
+    const posts = filterPostsByTag(allSorted, [
+      "programming",
+      "indieweb",
+      "web",
+    ]);
 
     return [...posts.reverse()].slice(0, 20);
   });
