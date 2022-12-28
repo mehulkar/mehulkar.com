@@ -27,7 +27,7 @@
     "node": "16.15.1",
     "npm": "8.12.1"
   },
-  "packageManager": "pnpm@7.12.2",
+  "packageManager": "pnpm@7.20.0",
   "devDependencies": {
     "@11ty/eleventy": "2.0.0-canary.20",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
