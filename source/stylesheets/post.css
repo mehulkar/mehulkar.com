@@ -46,6 +46,12 @@ article aside {
   margin-left: 2em;
 }
 
+@media (prefers-color-scheme: dark) {
+  article code {
+    color: rgb(0, 0, 0);
+  }
+}
+
 article pre,
 article code {
   line-height: 1.125rem;
@@ -54,7 +60,7 @@ article code {
 
 article code {
   background: #eee;
-  padding: 0.1rem 0.25rem;
+  padding: 0.1rem 0.5rem;
   border-radius: 0.5rem;
   border: solid 1px #ddd;
   font-size: 0.85rem;
