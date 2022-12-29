@@ -18,7 +18,11 @@ article, so I'm not sure when (or if) this style would be useful. I recently ask
 about generic "highlighting" case, and [Amelia pointed me][1] to the [Web Annotation spec][2] that never
 made it out of a W3 Working Group.
 
-<iframe src="https://front-end.social/@AmeliaBR/109422449262800274/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="100%" height="500" allowfullscreen="allowfullscreen"></iframe>
+<iframe
+    src="https://front-end.social/@AmeliaBR/109422449262800274/embed"
+    class="mastodon-embed"
+    allowfullscreen="allowfullscreen">
+</iframe>
 
 Something like this would work really well with the way I want to read content on the web!
 

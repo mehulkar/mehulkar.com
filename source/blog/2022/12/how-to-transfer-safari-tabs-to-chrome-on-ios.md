@@ -15,7 +15,11 @@ apps, rather than close the tab.
 In any case, I wanted to transfer these tabs over and didn't see an easy way to do it. Someone
 suggested to first bookmark all the open tabs and that worked beautifully.
 
-<iframe src="https://front-end.social/@AmeliaBR/109542911917195735/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="100%" height="350" allowfullscreen="allowfullscreen"></iframe>
+<iframe
+    src="https://front-end.social/@AmeliaBR/109542911917195735/embed"
+    class="mastodon-embed"
+    allowfullscreen="allowfullscreen">
+</iframe>
 
 Some of the steps came from hidden menus though, so here's what I did:
 

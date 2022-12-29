@@ -117,6 +117,15 @@ article iframe.twitter-tweet {
   margin-bottom: 20px !important;
 }
 
+article iframe.mastodon-embed {
+  display: block;
+  max-width: 100%;
+  width: 80%;
+  margin: 0 auto 1rem;
+  border: 0;
+  border-radius: 10px;
+}
+
 article blockquote {
   padding: 1rem 1.5rem 1rem;
   border-left: solid 4px var(--blue-1);
