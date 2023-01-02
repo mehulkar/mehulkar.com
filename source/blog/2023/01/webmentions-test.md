@@ -7,7 +7,7 @@ tags:
 This post tests _sending_ webmentions. I've set it up by using IFTTT to send an ping to [webmention.app][1]
 when a new post is published. IFTT will wait for new items in my RSS feed.
 
-webmention.app is made by [@rem](https://remysharp.com). He first described using it in [this post][1],
+webmention.app is made by [@rem][7]. He first described using it in [this post][2],
 so in the theme of meta posts like my recent ["test suite"][3], maybe I can test sending his website
 a mention too!
 
@@ -58,3 +58,4 @@ I've also setup receiving webmentions by:
 [4]: https://webmention.rocks
 [5]: https://webmention.io
 [6]: https://brid.gy/
+[7]: https://remysharp.com
