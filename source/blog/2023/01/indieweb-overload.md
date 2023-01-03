@@ -15,6 +15,7 @@ for a long time! E.g the [Trackback spec][1] came out 20
 years ago!
 
 It's pretty cool that people have thought
-all this through already.
+all this through already, but it's a lot to
+learn if you want to participate.
 
 [1]: https://indieweb.org/Trackback
