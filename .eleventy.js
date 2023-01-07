@@ -41,6 +41,10 @@ module.exports = function (eleventyConfig) {
     domain: "mehulkar.com",
     username: "mehulkar",
     displayName: "mehulkar",
+    aliases: [
+      "https://indieweb.social/mehulkar",
+      "https://indieweb.social/users/mehulkar",
+    ],
     summary:
       "This is my personal website, but it's also discoverable on the Fediverse!",
   });
