@@ -2,7 +2,7 @@
 layout: layout.njk
 ---
 
-<div class='post bb b--black-10'>
+<div class='post bb b--black-10 mb2'>
   <article class='mb3 mw7 center'>
     <header class='bb b--black-10 mv3'>
       <h3 class='f5 fw2 mb1'>{{page.date | fullDate }}</h2>
@@ -21,3 +21,37 @@ layout: layout.njk
     Email me</a> or send me a toot <a class='black-80 underline' href="{{page | buildTweetURL(tags)}}" target='_blank'> @mehulkar</a>.
   </p>
 </div>
+
+{# TODO: looks bad when there are no replies, likes get centered #}
+<aside id="webmentions" class="webmentions mb3 mw7 center">
+  <section id="wm-likes" class="wm-likes wm-hidden">
+    <h2>Likes <span id="wm-like-count"></span></h2>
+    <ul></ul>
+  </section>
+
+  <section id="wm-replies" class="wm-replies wm-hidden">
+    <h2>Replies <span id="wm-reply-count"></span></h2>
+    <ul></ul>
+  </section>
+
+  <template id="wm-like">
+    <img alt="" id="wm-reply-author-photo" class="wm-reply-author-photo mr1" width="40" height="auto" src="">
+  </template>
+
+  <template id="wm-reply">
+    <li>
+      <div class="flex items-end mb2 bb pb2 b--black-10">
+        <img alt="" id="wm-reply-author-photo" class="wm-reply-author-photo mr1" width="40" height="auto" src="">
+        <span id="wm-reply-author" class="wm-reply-author"></span>
+        <span id="wm-reply-date"></span>
+      </div>
+      <div id="wm-reply-text"></div>
+      <span id="wm-reply-link" class="wm-reply-link"></span>
+    </li>
+  </template>
+</aside>
+
+<script src={{"/javascript/webmentions.js" | url }}></script>
+<script>
+  window.fetchWebMentions("{{page.url}}");
+</script>
