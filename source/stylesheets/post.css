@@ -181,3 +181,37 @@ article table {
 article table tr {
   border: solid 1px #eee;
 }
+
+aside.webmentions h2 {
+  margin: 1rem 0;
+}
+
+.wm-replies ul, .wm-likes ul {
+  margin-left: 0
+}
+
+.wm-replies li {
+  padding: 1rem;
+  list-style: none;
+  background: #fafafa;
+  border-radius: 10px;
+  border: solid 1px #eaeaea;
+}
+
+.wm-reply-author-photo {
+  border-radius: 50%;
+  border: solid 2px #fff;
+  box-shadow: 0px 0px 4px 0px rgb(0 0 0 / 50%);
+}
+
+.wm-reply-author {
+  margin-right: auto;
+}
+
+.wm-hidden {
+  display: none;
+}
+
+.wm-likes ul {
+  display: inline;
+}
