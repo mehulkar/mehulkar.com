@@ -2,6 +2,7 @@ const esbuild = require("esbuild");
 
 const ENTRY_POINTS = {
   analytics: "source/javascript/analytics.js",
+  webmentions: "source/javascript/webmentions.js",
 };
 
 /**
