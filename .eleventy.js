@@ -59,6 +59,7 @@ module.exports = function (eleventyConfig) {
     "webp",
     "jpg",
     "jpeg",
+    "mov",
     "11ty.js",
   ]);
 
