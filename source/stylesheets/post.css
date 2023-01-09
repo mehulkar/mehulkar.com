@@ -46,12 +46,6 @@ article aside {
   margin-left: 2em;
 }
 
-@media (prefers-color-scheme: dark) {
-  article code {
-    color: rgb(0, 0, 0);
-  }
-}
-
 article pre,
 article code {
   line-height: 1.125rem;
@@ -214,4 +208,15 @@ aside.webmentions h2 {
 
 .wm-likes ul {
   display: inline;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  article code {
+    color: rgb(0, 0, 0);
+  }
+
+  .wm-replies li {
+    background: transparent;
+  }
 }
