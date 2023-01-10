@@ -74,9 +74,4 @@ the task, I just didn't mark it down. To be fair, there is a Habit tracker featu
 works this way, but I'd rather have the tracking of the habit be an stats embellishment / gamification
 addon to a repeating task, rather than a separate feature.
 
-<label for="task">
-    <input disabled id="task" type="checkbox">
-    TODO: Check if this is really how repeating tasks work, it's been a while.
-</label>
-
 [1]: https://ticktick.com/home
