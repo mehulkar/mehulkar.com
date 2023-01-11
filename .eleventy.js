@@ -83,7 +83,7 @@ module.exports = function (eleventyConfig) {
     // Group posts by year first. This is an unsorted object
     const byYear = {};
     for (const post of allPosts) {
-      const year = post.date.getFullYear();
+      const year = adjustTimezone(post.date).getFullYear();
       byYear[year] = byYear[year] || [];
       byYear[year].push(post);
     }
