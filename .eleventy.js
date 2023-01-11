@@ -26,6 +26,7 @@ const TAG_PAGES = [
   "til",
   "debugging",
   "home-screen",
+  "meta",
 ];
 
 const TAG_PATH_OVERRIDES = {
