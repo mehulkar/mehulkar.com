@@ -1,7 +1,7 @@
 ---
 title: "2017: Home Screen"
 date: 2017-01-01
-tags: product
+tags: home-screen
 ---
 
 ![2017 home screen](/images/2017-home-screen.png)

@@ -25,6 +25,7 @@ const TAG_PAGES = [
   "three-musics",
   "til",
   "debugging",
+  "home-screen",
 ];
 
 const TAG_PATH_OVERRIDES = {

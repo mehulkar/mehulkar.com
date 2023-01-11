@@ -1,0 +1,7 @@
+---
+title: Mobile Home Screens
+---
+
+{% set posts = collections.byYear | category("home-screen") %}
+{% from 'partials/_by-year.njk' import render %}
+{{ render(posts) }}
