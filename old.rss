@@ -1,0 +1,1934 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom">
+  <id>tag:www.mehulkar.com,2005:/posts</id>
+  <link rel="alternate" type="text/html" href="http://www.mehulkar.com"/>
+  <link rel="self" type="application/atom+xml" href="http://www.mehulkar.com/posts.atom"/>
+  <title>Mehul Kar - Blog</title>
+  <updated>2013-12-06T07:42:51Z</updated>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/66</id>
+    <published>2013-12-04T18:27:30Z</published>
+    <updated>2013-12-05T22:16:13Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/66"/>
+    <title>On writing</title>
+    <content>&lt;blockquote&gt;
+&lt;p&gt;It&amp;#39;s not enough to write what you know, you have to know interesting things. So you have to put yourself in a world where you have interesting experiences. And then you also have to know what you know. And that&amp;#39;s even the hardest thing. &lt;/p&gt;
+
+&lt;p&gt;Writing what you know is fine, but knowing what you know is the key to writing or creating any piece of art, because you have to know what it is that is driving you to do this completely narcissistic and asocial act of creating… forcing your thoughts and feelings upon a world that does not care&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/65</id>
+    <published>2013-11-28T00:36:31Z</published>
+    <updated>2013-12-05T20:28:35Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/65"/>
+    <title>Getting A New System Up And Running</title>
+    <content>&lt;p&gt;In an effort to own fewer physical things, I&amp;#39;m becoming more fluid with personal computers. I&amp;#39;m trying to document all the things I need to do if I get a new computer. Assuming it&amp;#39;s running OSX, here&amp;#39;s the list:&lt;/p&gt;
+
+&lt;h2&gt;Things to install&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Chrome&lt;/li&gt;
+&lt;li&gt;Spotify&lt;/li&gt;
+&lt;li&gt;Dropbox&lt;/li&gt;
+&lt;li&gt;Sublime Text 3&lt;/li&gt;
+&lt;li&gt;Microsoft Silverlight Chrome plugin for Netflix&lt;/li&gt;
+&lt;li&gt;1Password&lt;/li&gt;
+&lt;li&gt;Some IRC client. Haven&amp;#39;t settled on one yet (Textual/Limechat)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2&gt;Programming Stuff&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Xcode&lt;/li&gt;
+&lt;li&gt;Mavericks CLI Tools (includes git)&lt;/li&gt;
+&lt;li&gt;Homebrew&lt;/li&gt;
+&lt;li&gt;RVM and Ruby&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;brew install heroku-toolbelt&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;brew install imagemagick&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;brew install node&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;brew install postgresql&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;brew install phantomjs&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2&gt;Other Random Configuration&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Clone and install &lt;a href="//github.com/mehulkar/dotfiles"&gt;dotfiles&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Change download folder to Desktop in Chrome&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;I may have missed a few things in this inventory, but here&amp;#39;s a list of things I could to do reduce setup time. &lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Learn Vim better so I can get rid of Sublime Text 3 dependency&lt;/li&gt;
+&lt;li&gt;Safari needs to make their dev tools better and then I don&amp;#39;t need Chrome&lt;/li&gt;
+&lt;li&gt;Use only web based or mobile spotify or switch to Rdio&lt;/li&gt;
+&lt;li&gt;Use text-based irc client like &lt;code&gt;irssi&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/64</id>
+    <published>2013-11-27T04:53:11Z</published>
+    <updated>2013-12-05T18:36:39Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/64"/>
+    <title>Things Sparrow Does Better Than Mail.app</title>
+    <content>&lt;p&gt;I started using Mail.app because transferring license keys in Sparrow is a pain and I don&amp;#39;t want to keep buying the app. But Mail.app feels like such a step backward for so many reasons. In no particular order:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Sparrow can scroll through emails with &lt;code&gt;j&lt;/code&gt; and &lt;code&gt;k&lt;/code&gt; from vim&amp;#39;s &lt;code&gt;hjkl&lt;/code&gt;. I&amp;#39;m not a vim power user or anything, but arrow keys are definitely less convenient than &lt;code&gt;hjkl&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Sparrow&amp;#39;s quick reply is better than always opening a new window for replies and forwards. This isn&amp;#39;t a huge deal, but quick reply makes a lot of sense. &lt;/li&gt;
+&lt;li&gt;Mail.app doesn&amp;#39;t do html email. I use hyperlinks often to refer to things. Also lists, but that&amp;#39;s not as big of a deal.&lt;/li&gt;
+&lt;li&gt;Sparrow shows all unread messages in the same thread as only 1 in the unread count. Mail.app unread message count aggregates all unread messages in each thread.&lt;/li&gt;
+&lt;li&gt;Sparrow&amp;#39;s keyboard shortcut is &lt;code&gt;E&lt;/code&gt;. Mail.app: &lt;code&gt;Cmd+Ctrl+A&lt;/code&gt;. What??&lt;/li&gt;
+&lt;li&gt;Mail.app is much more laggy when navigating between mailboxes and messages.&lt;/li&gt;
+&lt;li&gt;I have no idea what the icons in mobile Mail.app when you have an email open are supposed to do until after I tap on them. &lt;/li&gt;
+&lt;li&gt;Mail.app can&amp;#39;t default to reply-all. This is mitigated by the keyboard shortcut for reply-all. &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2&gt;Some Saving Grace&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Redirect is a cool feature&lt;/li&gt;
+&lt;li&gt;Send is the same as &lt;code&gt;cmd+shift+D&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;I&amp;#39;ve heard good things about Smart Mailboxes. Haven&amp;#39;t tried yet.&lt;/li&gt;
+&lt;li&gt;Setting colors with rules also seems useful. Haven&amp;#39;t taken the time to set up yet. &lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/63</id>
+    <published>2013-11-20T10:47:09Z</published>
+    <updated>2013-12-05T20:29:09Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/63"/>
+    <title>The Difference Between Prototypal and Classical Inheritance</title>
+    <content>&lt;p&gt;It took me forever to understand this. After I did, I found an explanation by &lt;a href="//twitter.com/nathansmith"&gt;Nathan Smith&lt;/a&gt; that made a lot more sense than all the articles I read.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Class based languages distinguish between templates (classes) and instances created from classes, whereas prototypal languages do not. The &amp;quot;super class&amp;quot; of an object in JavaScript is simply another instance.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/nathansmith/javascript-quiz"&gt;source&lt;/a&gt;&lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/62</id>
+    <published>2013-11-20T10:35:37Z</published>
+    <updated>2013-12-05T12:28:01Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/62"/>
+    <title>Reducing Parse Time (Vocabulary In Learning)</title>
+    <content>&lt;p&gt;The rate and level of complexity at which new concepts are introduced adds a degree of what I call &amp;quot;parse time&amp;quot; for beginners. This is largely related to new vocabulary.&lt;/p&gt;
+
+&lt;p&gt;For example, when you&amp;#39;re learning a language and you have to translate every word individually, each word adds individual parse time. With experience and expertise, the parse time decreases because (1) you start to batch words and parse them as phrases and (2) words that have become familiar take less time to parse.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The job of an instructor dealing with a beginner is to reduce parse time.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Parse time is directly related to the quantity of new words in the vernacular, so it stands to reason that to reduce parse time, we need to reduce the number of new words. To do this, we can:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Reduce the general scope of the topic. &lt;/li&gt;
+&lt;li&gt;Organize the scope into smaller chunks to create breaks between the &amp;quot;labor&amp;quot; of parsing and create the perception of reduced parse time.&lt;/li&gt;
+&lt;li&gt;Sacrifice specificity; i.e. use the same words to mean more things.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Luckily, in print, there is a completely different way: we can hide or delay parse time. Textbooks do this by visually separating factoids and explanations from the main narrative; research papers use footnotes; and some elements on the web uses tooltips. Essentially, this strategy allows the students to prioritize their parsing resources without sacrificing the quantity or quality of learning material.&lt;/p&gt;
+
+&lt;p&gt;Organizing parse time is an art, and consequently, a design challenge. It&amp;#39;s also worth noting, that thinking about this is applicable to writing all sorts of things, not just teaching materials (emails, poetry, elevator pitches). &lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/61</id>
+    <published>2013-10-11T01:18:10Z</published>
+    <updated>2013-12-06T05:57:51Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/61"/>
+    <title>Cover Letter to Morning Star for IPO Analyst Intern job</title>
+    <content>&lt;p&gt;I wrote this cover letter sometime in college. I can&amp;#39;t remember when. Did not get the job. Actually, I don&amp;#39;t remember if I ever sent this in. I was never sold about the idea of working in Finance.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;Dear [redacted, yes it was to a real person], &lt;/p&gt;
+
+&lt;p&gt;A friend recently forwarded an article to me about how Groupon’s $30bn pre-IPO valuation quickly fell by more than 50 percent after a bunch of red flags were raised--accounting malpractice, significantly slowing growth, and unpredictable business model among them. My reaction was similar to when Jason Fried of 37Signals wrote a press release valuing his company at $100 billion based on a $1 investment for 0.000000001% equity--surprised, but pleasantly so. Fried made an excellent point:&lt;/p&gt;
+
+&lt;p&gt;“We’ll give away everything for free and let the market speculate about how much money we could make if we wanted to make money. That way, the sky’s the limit!”&lt;/p&gt;
+
+&lt;p&gt;My familiarity and experience with startups and IPOs is focused on Silicon-Valley-esque-web-based-iPhone-app-hot-topic companies that develop easier and easier ways not go outside in the sun and experience life. Hundreds of TechCrunch articles  about the next big company later, I realized that the hype around web-based IPOs didn’t have much of a solid foundation. I learned this in a combination of three ways:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;In my applied investments course I researched a number of companies to add to our portfolio. Two that I recommended buying were Tesla Motors and Salesforce.com. Both newly IPO’d; both modern, new-age; and both backed by major investors. My colleagues in the course quickly pointed out that although both companies were fast growing, the first hadn’t been profitable since the IPO and the second had a price-earnings ratio about 20 times the S&amp;amp;P500 average. &lt;strong&gt;I learned that neither is a good statistic for investor.&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For a short period, I worked closely with IndyaVids, a California based startup that was in the wake of launching publicly. Working to develop the business model and monetizing strategy, I learned how difficult it is to actually generate revenue in the technology industry. My own web-based startup (CollegeDesis.com) is running into the same problem. &lt;strong&gt;I learned that building a product is less than half the way to profitability.&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;As a tennis instructor in the Lake Geneva, WI area, I worked with a lot of self-made Chicago area entrepreneurs as clients. One in particular, owned a business manufacturing sewage systems for municipalities, about as unattractive as it gets. If he was able to afford weekly tennis lessons for his entire family at a premier club, it must be doing well though. &lt;strong&gt;I learned that solid businesses aren’t defined by flashy websites and good PR.&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;An IPO analyst needs to be able to objectively understand a business model and project it’s long term profitability based on evidence, rather than speculation. My experiences, as described above, allow me to do just so. As an intern, I expect to be involved in a lot of research and preparation of materials for analysts and writers at Morningstar. As shown on my resume, I have experience doing both (working as a market researcher at the Wisconsin Innovation Service Center, and through the Applied Investments program). &lt;/p&gt;
+
+&lt;p&gt;And here’s a response to some of the other requirements related to this job:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Excellent verbal and communication skills? I’ve written articles for the school newspaper, I write a blog, I offered my friends proofreading services in college and usually ran out of red ink. &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Strong accounting skills? I was a finance and accounting double major for a majority of my college career until I decided that I wanted to graduate earlier. &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Ability to thrive in a fast-paced environment and PM skills? I’m a PM at the consulting company startup I work for currently and I can do fast-paced, I’m an amateur programmer/front end web developer. &lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;All in all, you want someone who can do the work no one else has the time to do and do it beyond well. I can be that person. &lt;/p&gt;
+
+&lt;p&gt;Oh, and I’ll make the coffee too. &lt;/p&gt;
+
+&lt;p&gt;Gratefully yours, &lt;/p&gt;
+
+&lt;p&gt;Mehul Kar&lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/60</id>
+    <published>2013-09-26T06:26:15Z</published>
+    <updated>2013-12-05T18:36:12Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/60"/>
+    <title>Madness</title>
+    <content>&lt;p&gt;About a year ago, I decided I needed to write something every day. The goal was to religiously produce something every day instead of consuming. &lt;/p&gt;
+
+&lt;p&gt;This is what came out on the first day. &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;quot;Who was it that sanctioned this madness!&amp;quot;
+cried the mind as it woke from its slumber.
+&amp;quot;It was I&amp;quot; said the heart, &amp;quot;For I needed to say and to feel and to share&amp;quot;
+
+And out of spite the mind stayed still,
+distracting in its silence.
+The heart bent backwards looking for
+the wisdom and humor and questions 
+That raged rampant yesterday.
+
+And betwixt the two, I languished
+Pen in my hand
+Prepared for the days ahead.
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/59</id>
+    <published>2013-09-25T02:20:08Z</published>
+    <updated>2013-12-05T12:31:40Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/59"/>
+    <title>A Poem I Read In Middle School That I Still Like</title>
+    <content>&lt;h2&gt;Infant Innocence&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;A.E. Housman&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;The Grizzly Bear is huge and wild;
+He has devoured the infant child.
+The infant child is not aware
+It has been eaten by the bear.
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/58</id>
+    <published>2013-09-03T09:40:18Z</published>
+    <updated>2013-12-05T12:31:14Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/58"/>
+    <title>RSS Feed</title>
+    <content>&lt;p&gt;I&amp;#39;ve finally added an RSS feed to this blog.&lt;/p&gt;
+
+&lt;p&gt;It&amp;#39;s actually an &lt;a href="http://www.differencebetween.net/technology/difference-between-rss-and-atom/#ixzz1RTwQ79rt"&gt;atom feed&lt;/a&gt;, but it doesn&amp;#39;t really make a difference. I&amp;#39;ve also started tracking my writing with &lt;a href="//draftin.com"&gt;Draft&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In the coming months, I will be writing more about programming, design, and things I learn. &lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/57</id>
+    <published>2013-09-01T00:13:35Z</published>
+    <updated>2013-12-05T12:31:42Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/57"/>
+    <title>A Design Thing I Learned</title>
+    <content>&lt;p&gt;A lot of interfaces have restrictions on what a user can do based on the current state of the interface. You can design to let the user lift these restrictions either through &lt;strong&gt;guidance&lt;/strong&gt; or through &lt;strong&gt;discovery&lt;/strong&gt;. I&amp;#39;ve found that new, unfamiliar interfaces are more effective when they allow the user to discover the steps to lifting restrictions for 3 reasons.&lt;/p&gt;
+
+&lt;p&gt;As an example, let&amp;#39;s use commenting on a blog post as an example. Let&amp;#39;s assume that logged in users can comment, guests cannot.&lt;/p&gt;
+
+&lt;h2&gt;Guidance&lt;/h2&gt;
+
+&lt;p&gt;If you were to design the interface with the intention of guiding the user through the steps they need to take to be able to comment on the post, you might do something like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://i.imgur.com/X84bMH1.png" alt="Sign in to comment"&gt;&lt;/p&gt;
+
+&lt;p&gt;The commenting feature is completely blocked and the solution to the first barrier is presented along with a promise of being able to comment later.&lt;/p&gt;
+
+&lt;h2&gt;Discovery&lt;/h2&gt;
+
+&lt;p&gt;If you were to let the user discover that logging in is required, you might do something like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://i.imgur.com/i75cK22.png" alt="You must be logged in!"&gt;&lt;/p&gt;
+
+&lt;p&gt;The commenting interface looks identical to when the user is logged in. But when the user clicks submit, they are redirected to the login form.&lt;/p&gt;
+
+&lt;h2&gt;3 reasons I think discovery is better&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;It shows users what is possible&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;New interfaces are usually less obvious than you think they are. Hidden elements removes the possibility of interaction. &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;It keeps a consistent call-to-action (CTA)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;By exchanging the comment box with a login button, you change the CTA on the current page from commenting to logging in. The first is integral to the purpose of your application, the second is a means to an end. Not only does this double the number of things the user has to pay attention to, it obfuscates the purpose of your application.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;It allows users to invest in the CTA before crossing hurdles&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This is up for debate. On one hand, I think I&amp;#39;m betraying the user&amp;#39;s trust by showing interactions that are not possible in the current state. On the other hand, all I&amp;#39;m doing is &lt;em&gt;delaying&lt;/em&gt; a hurdle. Users who want to cross the hurdle will cross it regardless of when it is presented.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;When a user comes across a new interface, I think it&amp;#39;s really important for them to &lt;a href="http://www.tandfonline.com/doi/abs/10.1080/01449290500330448#.UiKGFmTwIbY"&gt;immediately see&lt;/a&gt; how you want them to interact with it. For this purpose, I&amp;#39;ve started thinking more and more about boiling down pages to simple, usable, call-to-actions and making sure the user knows that they are.&lt;/p&gt;
+
+&lt;p&gt;PS, I should note that guidance and discovery are not mutually exclusive. For example, Disqus comments look like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://i.imgur.com/0QmFhvS.png" alt="Disqus comments"&gt;.&lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/56</id>
+    <published>2013-08-19T01:49:51Z</published>
+    <updated>2013-12-04T17:01:23Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/56"/>
+    <title>Youth</title>
+    <content>&lt;iframe width="560" height="315" src="//www.youtube.com/embed/ROJKEwYEx8Q" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/55</id>
+    <published>2013-07-28T22:53:24Z</published>
+    <updated>2013-12-06T05:29:00Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/55"/>
+    <title>Why I Work On CollegeDesis</title>
+    <content>&lt;p&gt;I&amp;#39;m building a community of South Asian student organizations to make large-scale social, political, and cultural impact. I want to strengthen this community by facilitating mutually beneficial relationships between organizations and brand partners.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ve been working on &lt;a href="//collegedesis.com"&gt;CollegeDesis&lt;/a&gt; with varying levels of commitment for two years now and I want to share the three core motivations that turned this side project into an obsession: &lt;strong&gt;the technology&lt;/strong&gt;, &lt;strong&gt;the business opportunity&lt;/strong&gt;, and &lt;strong&gt;the social impact&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2&gt;The Technology&lt;/h2&gt;
+
+&lt;p&gt;The South Asian student community is divided into &lt;a href="//collegedesis.com/directory"&gt;700 pieces&lt;/a&gt; (give or take) around the country. Connecting these pieces isn&amp;#39;t strictly a technical challenge, but it &lt;em&gt;is&lt;/em&gt; a &lt;em&gt;unique&lt;/em&gt; challenge. My goal is to design a network that not only creates incentives for communication and collaboration, but also disperses control to these 700 pieces and allows them to define who they&amp;#39;ll be together.&lt;/p&gt;
+
+&lt;p&gt;There are plenty of social networks that help their members connect with each other; I want to create a social network that allows groups of people to connect with other groups. When groups of people come together, &lt;a href="http://www.newyorker.com/reporting/2010/10/04/101004fa_fact_gladwell"&gt;revolutions happen&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt;The Business Opportunity&lt;/h2&gt;
+
+&lt;p&gt;The strength of a community depends on how well it exchanges value. I want to enhance the ability of South Asian student organizations to exchange value within and without themselves.&lt;/p&gt;
+
+&lt;p&gt;The 700 autonomous and organized entities scattered around the country consist of thousands of dedicated members who collect dues, host fundraisers, and travel to competitive events. But they work too long and too hard and in isolation to make all this happen. I want to help these entities find their place in the national context, while enabling them to operate more efficiently in the local one. This includes giving them access to financial and technical resources, and making it easier for them to build and maintain their local communities.&lt;/p&gt;
+
+&lt;h2&gt;The Social Impact&lt;/h2&gt;
+
+&lt;p&gt;South Asians (and minorities in general) are &lt;a href="http://www.huffingtonpost.com/2013/06/05/hate-crimes-sikhs-hindus-arabs-fbi_n_3392760.html"&gt;making&lt;/a&gt; &lt;a href="http://asianamericansinmedia.wordpress.com/2012/12/11/the-mindy-project-a-refutation-of-south-asian-american-stereotypes/"&gt;major&lt;/a&gt;  &lt;a href="http://salsa.wiredforchange.com/o/1607/p/dia/action3/common/public/?action_KEY=8101"&gt;progress&lt;/a&gt; establishing their place in American society. &lt;/p&gt;
+
+&lt;p&gt;Projects like &lt;a href="http://sasboard.wix.com/sasai"&gt;SASAI&lt;/a&gt; at the University of Pennsylvania and &lt;a href="http://web.archive.org/web/20130116182822/http://www.umsaan.org/"&gt;SAAN&lt;/a&gt; at the University of Michigan and non profits like &lt;a href="//thewlp.com/"&gt;The WLP&lt;/a&gt; are just a few of the initiatives that could &lt;a href="http://mehulkar.com/posts/21"&gt;transform the course&lt;/a&gt; of this nation&amp;#39;s culture if they had the tools to access a larger community.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m convinced that CollegeDesis can provide these tools and the consequences are exciting beyond measure: cultural and religious education, political affluence, and international collaboration come to mind.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;According to census &lt;a href="http://db.tt/opyTQuW9"&gt;estimates&lt;/a&gt;, more than 126,000 students of South Asian descent were enrolled in colleges and universities in 2011. &lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://i.imgur.com/r0Qwx4N.png"&gt;&lt;img src="http://i.imgur.com/r0Qwx4N.png" alt="image"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;These 126,000 are more diverse than they are the same, and I realize that the color of their skin is not enough to bind them. We are a complex combination of people with a complex set of backgrounds and interests and it would be foolish to assume we share a uni-layered affinity.&lt;/p&gt;
+
+&lt;p&gt;But the 700?&lt;/p&gt;
+
+&lt;p&gt;The 700 pieces of this community scattered around the country have similar interests, goals, and values.&lt;/p&gt;
+
+&lt;p&gt;Our mission at CollegeDesis is to build the tools to help these 700 South Asian student organizations connect, collaborate, and share. We think that in the process of doing so, we can help make the world a better place.&lt;/p&gt;
+
+&lt;h2&gt;Postscript&lt;/h2&gt;
+
+&lt;p&gt;If you&amp;#39;d like to help:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Share this post, especially with college and high school age students.&lt;/li&gt;
+&lt;li&gt;If you&amp;#39;re a student, &lt;a href="//collegedesis.com/join"&gt;sign up&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;If you&amp;#39;re a programmer, contribute to the &lt;a href="//github.com/collegedesis/collegedesis.com"&gt;open source codebase&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;Thank You&lt;/h3&gt;
+
+&lt;p&gt;Thank you to &lt;a href="//twitter.com/puneet86"&gt;Puneet&lt;/a&gt;,  &lt;a href="//twitter.com/hetalilodaya"&gt;Hetali&lt;/a&gt;, &lt;a href="//twitter.com/sohailprasad"&gt;Sohail&lt;/a&gt;, &lt;a href="//linkedin.com/in/monicakar"&gt;my mom&lt;/a&gt;, and everyone else who helped me edit this article. &lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/54</id>
+    <published>2013-07-24T16:58:53Z</published>
+    <updated>2013-12-06T00:11:13Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/54"/>
+    <title>100% Conversion</title>
+    <content>&lt;p&gt;I recently made a two line bandaid tweak that increased conversion on an important metric for us by 66%. The conversion was 61% and now it&amp;#39;s 100%. &lt;/p&gt;
+
+&lt;p&gt;On &lt;a href="//collegedesis.com"&gt;CollegeDesis&lt;/a&gt; we have &lt;code&gt;users&lt;/code&gt; and we have &lt;code&gt;organizations&lt;/code&gt;, and then we have a join table called &lt;code&gt;memberships&lt;/code&gt;. The number of memberships we register is more important than the number of &lt;code&gt;users&lt;/code&gt;. It&amp;#39;s really difficult to explain to people that once you sign up, you still need to add a membership to be able to do anything and I had been manually reaching out before.&lt;/p&gt;
+
+&lt;p&gt;Ideally, adding memberships should be part of the sign up process, but it wasn&amp;#39;t (and still isn&amp;#39;t), for two reasons:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Last time I checked, sending payloads with nested associations in Ember-data wasn&amp;#39;t the best so I was having trouble getting memberships to serialize correctly.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Adding a membership was a huge select box with 600 items. As terrible user experience as this is to begin with, the larger issue was that it would take the sign up page an extra couple seconds to load and I wanted the sign up to be quick and painless.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;We have &lt;a href="//collegedesis.com/directory"&gt;a map&lt;/a&gt; now that makes it easier (and more fun) to filter/search through organizations to register memberships with, but &lt;em&gt;that wasn&amp;#39;t what increased conversion&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://i.imgur.com/0LswwsU.png" alt="image"&gt;&lt;/p&gt;
+
+&lt;p&gt;This is what we did:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://i.imgur.com/bT7Gm2G.png" alt="image"&gt;&lt;/p&gt;
+
+&lt;h3&gt;Before&lt;/h3&gt;
+
+&lt;p&gt;The user would sign up, log in, and be redirected to the home page after login. The only place to add memberships was from their profile page and they didn&amp;#39;t know to make it back there.&lt;/p&gt;
+
+&lt;h3&gt;Now&lt;/h3&gt;
+
+&lt;p&gt;The user signs up, logs in, and is redirected to their profile page with a message that tells them to register a membership.&lt;/p&gt;
+
+&lt;p&gt;They still have to deal with the ugly select box, but (1) it&amp;#39;s a minor inconvenience and (2), it gives us an opportunity to make things better.&lt;/p&gt;
+
+&lt;p&gt;I may be taking Reid Hoffman&amp;#39;s &lt;a href="//blog.bufferapp.com/10-of-the-most-counterintuitive-pieces-of-advice-from-famous-entrepreneurs"&gt;counterintuitive advice&lt;/a&gt; too much for it to still be a good thing, but hey, if it gets us 100% conversion, I&amp;#39;m ok with that. &lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;If you’re not embarrassed by your first launch, you’ve launched too late&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;-&lt;a href="http://blog.kissmetrics.com/hoffmans-advice-for-entrepreneurs/"&gt;Reid Hoffman&lt;/a&gt;&lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/53</id>
+    <published>2013-07-22T21:16:24Z</published>
+    <updated>2013-12-05T20:08:45Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/53"/>
+    <title>Experts</title>
+    <content>&lt;blockquote&gt;
+&lt;p&gt;If I&amp;#39;ve learned anything in my career, it is that approaching software development as an expert, as someone who has already discovered everything there is to know about a given topic, is the one surest way to fail.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;- &lt;a href="http://www.codinghorror.com/blog/2008/05/strong-opinions-weakly-held.html"&gt;Jeff Atwood&lt;/a&gt;&lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/52</id>
+    <published>2013-07-07T09:58:56Z</published>
+    <updated>2013-12-05T12:30:46Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/52"/>
+    <title>How To Share Correctly</title>
+    <content>&lt;p&gt;Sharing should be a group activity. &lt;/p&gt;
+
+&lt;p&gt;Some people tweet everything they think, some people share everything they see. It would be fine if the amount of things to share wasn&amp;#39;t so high. We need to do a better job of evaluating the things we share before we share them.&lt;/p&gt;
+
+&lt;p&gt;Just like a professional writer gets their work edited by fellow writers, and scientists get their research reviewed by peers, professional sharers (and we&amp;#39;ll have more of them before we have less of them), should have a way to vet their picks by people they trust. &lt;/p&gt;
+
+&lt;p&gt;There should be a way to share something--let&amp;#39;s call it an item--to a closed circle of trusted people (like Path or Facebook&amp;#39;s lists or Google+ Circles) and if the item is popular in that circle, it should be made available to the general public. &lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ve seen broken implementations of this kind of thing and I&amp;#39;ve manually done this with Facebook lists, but I don&amp;#39;t know of anything that presumes that people are susceptible to temporary infatuations.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m building an implementation of this over on the &lt;a href="//collegedesis.com"&gt;collegedesis.com&lt;/a&gt; News board, but someone should make a generic version too.&lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/51</id>
+    <published>2013-06-26T21:33:16Z</published>
+    <updated>2013-12-05T20:08:24Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/51"/>
+    <title>Procrastination</title>
+    <content>&lt;blockquote&gt;
+&lt;p&gt;If you write your best papers the night before they are due, don&amp;#39;t let people tell you that you &amp;quot;should be more organized&amp;quot; or that you &amp;quot;should plan better.&amp;quot; Different things work for different people. Personally, I worked best under pressure - so I always procrastinated... and always kicked ass (which annoyed my friends to no end). ;-) Use the freedom that comes with not having grades first semester to experiment and see what works best for you.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;- &lt;a href="http://mitadmissions.org/blogs/entry/50_things"&gt;Ben Jones&lt;/a&gt;&lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/50</id>
+    <published>2013-06-12T18:56:56Z</published>
+    <updated>2013-12-05T12:30:53Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/50"/>
+    <title>Recurring Payments</title>
+    <content>&lt;p&gt;Recurring payments are the best way to make money. Here are the things I pay a fixed amount for every month. I don&amp;#39;t mind paying for these things because for one, I forget that I&amp;#39;m even paying for them, and for the other, I know exactly how much I&amp;#39;m spending. I definitely think harder about one time payments.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Rent/Utilities&lt;/li&gt;
+&lt;li&gt;Gym membership&lt;/li&gt;
+&lt;li&gt;Spotify premium&lt;/li&gt;
+&lt;li&gt;Railscast premium&lt;/li&gt;
+&lt;li&gt;DNSimple
+
+&lt;ol&gt;
+&lt;li&gt;Silver plan for domains&lt;/li&gt;
+&lt;li&gt;Mail forwarding add on&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;Mailgun Standard plan&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/49</id>
+    <published>2013-06-10T19:27:22Z</published>
+    <updated>2013-12-05T12:30:56Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/49"/>
+    <title>RSpec mocks and ActiveRecord </title>
+    <content>&lt;p&gt;Ruby&amp;#39;s triple equal matcher doesn&amp;#39;t compare &lt;code&gt;object_id&lt;/code&gt;. In the example below &lt;code&gt;bulletin.user === user&lt;/code&gt;, but they are not the same object in memory, so their properties are possibly out of sync. &lt;/p&gt;
+
+&lt;p&gt;Just something I came across while writing tests. &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="ruby"&gt;describe &amp;quot;#approved&amp;quot; do
+  let(:user) { FactoryGirl.create(:user) }
+  subject(:bulletin) { FactoryGirl.build(:bulletin_post) }
+
+  it &amp;quot;is false if the user is not approved&amp;quot; do
+    # user.stub(:approved?) { true }
+    bulletin.user_id = user.id
+    # bulletin.user === user
+    # =&amp;gt; true
+    # user.approved?
+    # =&amp;gt; true
+    # bulletin.user.approved?
+    # =&amp;gt; false
+    bulletin.user.stub(:approved?) { true }
+    # user.approved?
+    # =&amp;gt; true
+    # bulletin.user.approved?
+    # =&amp;gt; true
+    expect(bulletin.approved?).to eq(false)
+  end
+end
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/48</id>
+    <published>2013-05-22T18:05:56Z</published>
+    <updated>2013-12-05T12:30:40Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/48"/>
+    <title>Confidence</title>
+    <content>&lt;blockquote&gt;
+&lt;p&gt;Analysts estimate that Amazon has sold more than one million Kindles in 18+ months (Amazon has never said). We will sell more of our new devices than all of the Kindles ever sold during the first few weeks they are on sale. If you stick with just Amazon, Sony, etc., you will likely be sitting on the sidelines of the mainstream ebook revolution.&amp;quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;- &lt;em&gt;Steve Jobs&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;in a letter to James Murdoch on Jan 22, 2010 before the launch of the iPad.&lt;/p&gt;
+
+&lt;p&gt;This is confidence.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://qz.com/87184/the-steve-jobs-emails-that-show-how-to-win-a-hard-nosed-negotiation/"&gt;Source&lt;/a&gt;&lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/47</id>
+    <published>2013-05-21T21:15:24Z</published>
+    <updated>2013-12-05T12:31:17Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/47"/>
+    <title>Start Learning Web Development</title>
+    <content>&lt;p&gt;Web development is a subset of software development, which is a subset of coding which is a subset of programming.&lt;/p&gt;
+
+&lt;p&gt;80% of programming is learning to figure things out (google, asking questions, reading a ton), and the other 20% is about being okay with a steep learning curve/not knowing. &lt;/p&gt;
+
+&lt;p&gt;These resources/tips are for web development and are towards the languages (Ruby, Javascript) and frameworks (Ruby on Rails, Ember.js) that we are using. These are huge in the startup tech world, so that&amp;#39;s a plus.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;1 hr: Learn about the &lt;a href="http://mehulkar.com/posts/29"&gt;fundamentals of web&lt;/a&gt; (http request/response).&lt;/li&gt;
+&lt;li&gt;3 hrs: Learn &lt;a href="//learn.shayhowe.com/html-css/terminology-syntax-intro"&gt;basic HTML/CSS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;5 hrs: Learn basic Ruby (&lt;a href="//codeacademy.com"&gt;codecademy.com&lt;/a&gt;, &lt;a href="//tryruby.org"&gt;tryruby.org&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;2 hrs: Read a little bit about the MVC pattern&lt;/li&gt;
+&lt;li&gt;2 hrs: Look at a couple Rails codebases, click through folders. Here&amp;#39;s &lt;a href="//github.com/collegedesis/collegedesis.com"&gt;one&lt;/a&gt; and here&amp;#39;s &lt;a href="//github.com/mehulkar/mehulkar.com"&gt;another&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2 hrs: Learn Git (&lt;a href="http://try.github.io/"&gt;Try Git&lt;/a&gt;) and maybe skim through what &lt;a href="http://git-scm.com/book/en/Getting-Started"&gt;source control&lt;/a&gt; is.&lt;/li&gt;
+&lt;li&gt;100 years: Install Rails and Git on your computer, fork/clone a repository, edit the readme, make a pull request.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Caution&lt;/strong&gt;: Steps 1-6 are rabbit holes. You will find yourself in strange lands and it will be awesome and awful at the same time. Stop when it&amp;#39;s not interesting any more. Start again later. Or stuff it in, whatever. In my experience, it takes multiple visits to the same material to actually &lt;em&gt;get&lt;/em&gt; it. &lt;/p&gt;
+
+&lt;p&gt;When you get to #7, you should know that the kind of computer you have (Mac/PC) and the operating system you&amp;#39;re on might make your process different from mine. &lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/45</id>
+    <published>2013-04-29T19:59:13Z</published>
+    <updated>2013-12-06T03:59:14Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/45"/>
+    <title>Ember.js Numeric TextField</title>
+    <content>&lt;p&gt;&lt;strong&gt;Note: this is pretty old. I haven&amp;#39;t tested this on any of the new RCs.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Extending the Ember.TextField to bind to DS.attr(&amp;quot;number&amp;quot;) fields&lt;/p&gt;
+
+&lt;h2&gt;Usage&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class="html"&gt;{{view Ember.NumericTextField attributeBinding=&amp;quot;attr&amp;quot;}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Coffeescript&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class="coffeescript"&gt;Ember.NumericTextField = Ember.TextField.extend
+  attribute: null # set when the view is instantiated
+  placeholder: &amp;quot;numeric only&amp;quot;
+
+  init: -&amp;gt;
+    @set &amp;#39;value&amp;#39;, @get(&amp;#39;attribute&amp;#39;)
+    @_super()
+
+  change: (e) -&amp;gt;
+    @_bindAttribute()
+
+  focusOut: (e) -&amp;gt;
+    @_bindAttribute()
+
+  _bindAttribute: -&amp;gt;
+    value = @value.replace(/[^0-9]+/g, &amp;quot;&amp;quot;)
+    @set(&amp;#39;value&amp;#39;, value)
+    @set(&amp;#39;attribute&amp;#39;, @value)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Javascript&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class="javascript"&gt;Ember.NumericTextField = Ember.TextField.extend({
+  attribute: null, // set when the view is instantiated
+  placeholder: &amp;quot;numeric only&amp;quot;,
+  init: function() {
+    this.set(&amp;#39;value&amp;#39;, this.get(&amp;#39;attribute&amp;#39;));
+    return this._super();
+  },
+  change: function(e) {
+    return this._bindAttribute();
+  },
+  focusOut: function(e) {
+    return this._bindAttribute();
+  },
+  _bindAttribute: function() {
+    var value;
+    value = this.value.replace(/[^0-9]+/g, &amp;quot;&amp;quot;);
+    this.set(&amp;#39;value&amp;#39;, value);
+    return this.set(&amp;#39;attribute&amp;#39;, this.value);
+  }
+});
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/44</id>
+    <published>2013-04-24T00:12:53Z</published>
+    <updated>2013-12-05T12:31:34Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/44"/>
+    <title>Javascript dates</title>
+    <content>&lt;p&gt;Discovered via &lt;a href="//twitter.com/aerinonfire"&gt;aaron&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="javascript"&gt;new Date() === new Date()
+//=&amp;gt; false
+new Date() == new Date()
+//=&amp;gt; false
+new Date() &amp;gt; new Date()
+//=&amp;gt; false
+new Date() &amp;lt; new Date()
+//=&amp;gt; false
+new Date() &amp;gt;= new Date() &amp;amp;&amp;amp; new Date() &amp;lt;= new Date()
+//=&amp;gt; true
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/43</id>
+    <published>2013-04-24T00:12:00Z</published>
+    <updated>2013-12-05T12:31:35Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/43"/>
+    <title>Tales of IE</title>
+    <content>&lt;p&gt;Discovered something about IE yesterday.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="css"&gt;/* regular css */
+#flowgrid .d h1 {
+  background: rgba(0, 0, 0, 0.7);
+  background-image: url(&amp;#39;image.png&amp;#39;);
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We have an &lt;code&gt;ie.css&lt;/code&gt; stylesheet loaded conditionally for Internet Explorer. The stylesheet sets background color like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="css"&gt;/* ie.css */
+#flowgrid .d h1 { background: rgb(120, 120, 120); }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It took me entirely too long to figure out that when you set &lt;code&gt;backround&lt;/code&gt;, and you don&amp;#39;t explicitly set all the background properties, IE doesn&amp;#39;t just default to the existing style, it &lt;em&gt;resets&lt;/em&gt; all the other properties to their default values. So with IE stylesheet, we were getting these styles applied:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="css"&gt;#flowgrid .d h1 {
+  background-color: rgb(120, 120, 120);
+  background-image: none;
+  background-repeat: repeat;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note: I only tested this behavior against Chrome and Chrome didn&amp;#39;t seem to reset these other styles. The solution is to explicitly only set &lt;code&gt;background-color&lt;/code&gt; instead of &lt;code&gt;background&lt;/code&gt; in &lt;code&gt;ie.css&lt;/code&gt;.&lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/42</id>
+    <published>2013-04-24T00:11:10Z</published>
+    <updated>2013-12-06T00:21:19Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/42"/>
+    <title>Facebook Share Preview Images</title>
+    <content>&lt;p&gt;You know how when you share your website/page on Facebook, it shows you a preview of the link? I always forget how to customize it, so I looked it up for one last time. &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="html"&gt;&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+  &amp;lt;link rel=&amp;quot;image_src&amp;quot; href=&amp;quot;//www.domain.com/path/icon-facebook.gif&amp;quot; /&amp;gt;
+  &amp;lt;meta og:image content=&amp;quot;http://www.domain.com/path/icon-facebook.gif&amp;quot;&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The meta tag is apparently more reliable. Note that you&amp;#39;ll need to include the schema (&lt;code&gt;http&lt;/code&gt;|&lt;code&gt;https&lt;/code&gt;) for the content proprerty. Facebook also only update their cached images every 24 hours, but you can update it manually, but checking your website on &lt;a href="https://developers.facebook.com/tools/debug"&gt;their linter&lt;/a&gt;. &lt;/p&gt;
+
+&lt;h3&gt;Update&lt;/h3&gt;
+
+&lt;p&gt;One thing to keep in mind is that if your website is enforcing SSL, you will also need to add a meta property that defines the canonical URL. Add this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="html"&gt;&amp;lt;meta property=&amp;quot;og:url&amp;quot; content=&amp;quot;https://www.website.com&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Notice the inclusion of &lt;code&gt;www&lt;/code&gt; and &lt;code&gt;https&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;While you&amp;#39;re at it, you might as well add the &lt;code&gt;og:title&lt;/code&gt; and &lt;code&gt;og:description&lt;/code&gt; properties as well.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="html"&gt;&amp;lt;meta property=&amp;quot;og:title&amp;quot; content=&amp;quot;My Cool Website&amp;quot;&amp;gt;
+&amp;lt;meta property=&amp;quot;og:description&amp;quot; content=&amp;quot;This website is so great&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here&amp;#39;s the &lt;a href="https://developers.facebook.com/docs/opengraph/property-types/#image"&gt;official documentation&lt;/a&gt;. &lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/41</id>
+    <published>2013-04-18T18:55:33Z</published>
+    <updated>2013-12-06T00:10:14Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/41"/>
+    <title>Integrating Google Analytics with Ember.js</title>
+    <content>&lt;p&gt;I&amp;#39;m guessing Stack Overflow has better SEO then my website here, but I thought I&amp;#39;d post this here anyway. &lt;/p&gt;
+
+&lt;p&gt;To get Google Analytics to track page changes, just add this to your &lt;code&gt;ApplicationController&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m currently using this with Ember RC1. If someone wants to confirm that it works with RC2, &lt;a href="//twitter.com/mehulkar"&gt;let me know&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This is a combination of the code in &lt;a href="https://twitter.com/ghempton"&gt;Gordon&amp;#39;s&lt;/a&gt; &lt;a href="http://codebrief.com/2012/10/ember-dot-js-analytics-integration/"&gt;post&lt;/a&gt; and &lt;a href="https://twitter.com/pansapien"&gt;Marc&amp;#39;s&lt;/a&gt; &lt;a href="http://www.pansapien.com/2013/01/27/using-google-analytics-with-ember-js/"&gt;post&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="coffeescript"&gt;App.ApplicationController = Ember.Controller.extend
+  routeChanged: ( -&amp;gt;
+    return unless window._gaq
+    Em.run.next -&amp;gt;
+      page = if window.location.hash.length &amp;gt; 0 then window.location.hash.substring(1) else window.location.pathname
+      _gaq.push([&amp;#39;_trackPageview&amp;#39;, page])
+  ).observes(&amp;#39;currentPath&amp;#39;)
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/40</id>
+    <published>2013-03-06T05:51:58Z</published>
+    <updated>2013-12-06T00:21:05Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/40"/>
+    <title>The First Lesson</title>
+    <content>&lt;p&gt;I participated in a Teacher Training session with the Railsbridge folks yesterday that turned into a neat group discussion about the mechanics of teaching and learning and it reminded me of my tennis teaching days at &lt;a href="https://sites.google.com/site/abbeyspringstennis/"&gt;Abbey Springs&lt;/a&gt;. &lt;/p&gt;
+
+&lt;p&gt;Most of my practical experience in teaching has been on the tennis court (I estimated a minimum of a thousand hours), but I spent a large portion of my time in the classroom also observing my professors. The grades in some of my classes can probably be largely attributed to this. &lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ve come to these few conclusions, explained through anecdotes. &lt;/p&gt;
+
+&lt;h3&gt;Tennis is an extremely difficult game.&lt;/h3&gt;
+
+&lt;p&gt;I&amp;#39;ve said this hundreds of times in my lessons. It&amp;#39;s highly technical (like golf), but at the same time, it&amp;#39;s highly physical (like soccer or basketball). &lt;/p&gt;
+
+&lt;p&gt;Just so, programming is also &lt;a href="http://s3.amazonaws.com/maptini.com/app/public/system/images/38573/original/52D6FC49-085A-47F8-8E1B-83740ABBD807.png?1333665118"&gt;highly complex&lt;/a&gt;. &lt;/p&gt;
+
+&lt;h3&gt;The First Touch Is The Most Important&lt;/h3&gt;
+
+&lt;p&gt;One of the few things I remember about high school soccer practices is the coach yelling the phrase &amp;quot;first touch!&amp;quot; over and over again. The theory was that control over the ball is established the first time you touch the ball. Not only that, the first touch sets the tone for your next move. &lt;/p&gt;
+
+&lt;p&gt;Ok, that was&amp;#39;t a tennis or programming anecdote, but it&amp;#39;s still an excellent illustration of the first touch. Speaking of illustrations, check out &lt;a href="http://longbowtie.com/"&gt;this guy&lt;/a&gt;. &lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ve heard lots of stories about students who drop their computer science major after the first semester.* The same goes for tennis. So many people quit because the first experience is frustrating. &lt;/p&gt;
+
+&lt;p&gt;*I heard the statistic in an MIT lecture once but failed to find it again.&lt;/p&gt;
+
+&lt;h3&gt;It&amp;#39;s Not About Learning&lt;/h3&gt;
+
+&lt;p&gt;Memorial Day weekend marks the beginning of the country club tennis season in Wisconsin. A few hundred families and extended families are at their summer homes. They spent their time boating, on the greens, and, of course, on the tennis courts. While I was there, those 35 some hours of daylight were the best opportunities to close clients for the entire summer. &lt;/p&gt;
+
+&lt;p&gt;I learned very quickly that Memorial Day weekend had very little to do with tennis and had everything to do with my interaction with the client. If I could just manage to get the kid (or adult) to have fun, I could easily get them to commit to weekly lessons. And not just a little fun, it had to be the best hour of their life. &lt;/p&gt;
+
+&lt;p&gt;If I could do that, they wouldn&amp;#39;t be coming back for the tennis, they were coming back for the experience. And 5 times out of 10, they would bring friends. $$$$$&lt;/p&gt;
+
+&lt;p&gt;I think this is a really important concept to understand to teach anything, but especially to teach programming. Programming is not only frustrating, like tennis, it is also intimidating. &lt;/p&gt;
+
+&lt;p&gt;There is obviously no one-size-fits-all formula to create a great experience, so a teacher/mentor has to rely on his/her love of the subject (which translates into infectious enthusiasm), but it is really important to understand that the first lesson is not about learning, it&amp;#39;s about satisfaction. &lt;/p&gt;
+
+&lt;h3&gt;The Student Is Not The Student&lt;/h3&gt;
+
+&lt;p&gt;The summer of 2011 was the 5th year my boss had been working with these twin girls for 5 summers. They were above average high school players from the Chicago suburbs (one of the best tennis neighborhoods in the country) and they wanted to try out for a college team in the fall. I was given the task of playing repeated coached matches against the two to get them prepared for challenge matches. &lt;/p&gt;
+
+&lt;p&gt;One of these girls had cleaner strokes than I, was in better shape, and could hit the ball just as hard, if not harder than I could. But I never lost more than a couple games against her. And I knew I wouldn&amp;#39;t before the game started. &lt;/p&gt;
+
+&lt;p&gt;Why?&lt;/p&gt;
+
+&lt;p&gt;Because I was the pro and she was the student. &lt;/p&gt;
+
+&lt;p&gt;I found time and again that better players than I lost to me on the Abbey Springs tennis courts while I was in charge of wheeling the ball cart. They lost not because they weren&amp;#39;t good enough, but because they thought they were supposed to. &lt;/p&gt;
+
+&lt;p&gt;At Railsbridge, I&amp;#39;ve seen the same mentality rampant among first-timers. They are in awe of TAs and teachers (many of whom, ironically, were first-timers the month before). Considering how subpar my programming skills are (and my tennis skills for that matter), I&amp;#39;m always thrown off by this awe, and my first instinct is to attempt to correct the misconception. &lt;/p&gt;
+
+&lt;p&gt;While in my case, I&amp;#39;m completely unworthy of the adulation, more experienced programmers are tasked with recognizing this phenomenon. The longer a first-timer remains in this faze of aw, the farther they start to perceive the distance between where they are and where &amp;quot;experience&amp;quot; is. &lt;/p&gt;
+
+&lt;p&gt;The irony in here is that the more I&amp;#39;ve learned in one year of learning how to code, the larger this perceived distance has become for me as well. The difference is that my confidence in myself and my comfort with that distance has grown, whereas a first-timer would experience the opposite. &lt;/p&gt;
+
+&lt;p&gt;I could never convince the girl that she was a better player than I was, but I did strike me as an epiphany that someone could so real-ly limit themselves based on their perception of reality. I think this is one of the major reasons minorities have a hard time breaking into industries. Not because they can&amp;#39;t, but because they&amp;#39;re not supposed to. &lt;/p&gt;
+
+&lt;h3&gt;Lost My Train Of Thought&lt;/h3&gt;
+
+&lt;p&gt;I read this post again a day after writing and realized I never wrapped it up into a nice conclusion so the post ends kind of abruptly. I still don&amp;#39;t have a neat conclusion for you, but just wanted to acknowledge that. &lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/39</id>
+    <published>2013-03-03T19:14:48Z</published>
+    <updated>2013-12-06T00:19:56Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/39"/>
+    <title>More Thoughts on Dev Bootcamp</title>
+    <content>&lt;p&gt;Search results for dev bootcamp bring up &lt;a href="http://www.mehulkar.com/posts/6"&gt;this post&lt;/a&gt; so I&amp;#39;ve gotten quite a few emails in the past few months about my experience. This is how I responded to one of the latest emails from this week:&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;Thanks for the email, I don&amp;#39;t mind at all. It seems like your interest in technology is as a consumer. That&amp;#39;s a perfectly valid interest. As a programmer, you&amp;#39;ll find yourself heavily invested in the other side of the spectrum; in the production of technology. If it excites you to be able to create something out of nothing, then I would consider looking into Dev Bootcamp or any number of other programs there are out there. &lt;/p&gt;
+
+&lt;p&gt;Learning language or the framework is the easy part of programming or software development. You can teach yourself that if you really wanted to. I wasn&amp;#39;t able to because I also lacked the focus to be persistent enough. Dev Bootcamp was my crutch for that handicap because I was surrounded by 20 other people who wanted to learn as badly as I did. &lt;/p&gt;
+
+&lt;p&gt;The cost is a definite barrier, but if you graduate, the placement rates are quite high. Median salaries for junior developers (at least in the Bay Area) are well worth the investment. Add to that the reimbursement from your tuition for being hired at one of the partner companies, and the cost seems a lot more manageable than what it says on the website. &lt;/p&gt;
+
+&lt;p&gt;The caveat, however, is that you have to graduate from the course to make the cost worth it. &lt;/p&gt;
+
+&lt;p&gt;The only way that will happen is if you genuinely have that burning itch to learn. That part can&amp;#39;t be faked. If you burn out half way, then your tuition would have been used for learning that software development (or maybe just this particular program) wasn&amp;#39;t for you. Depending on your situation, that may &lt;em&gt;still&lt;/em&gt; be a worthwhile thing. (I don&amp;#39;t know their reimbursement policy in the case of burn out, but I&amp;#39;m sure there are options)&lt;/p&gt;
+
+&lt;p&gt;Bootcamp does a pretty good job of figuring out if the program is right for you in the interview process, by the way, so I wouldn&amp;#39;t be worried about burn out. If they get that sense from you, they&amp;#39;ll be very upfront about it. &lt;/p&gt;
+
+&lt;p&gt;All in all, Dev Bootcamp was an extremely worthwhile career move for me; I was 22 when I applied. It has changed a lot since I was in the program, so I&amp;#39;d definitely reach out to students from more recent cohorts as well (I think they have names on the website somewhere). &lt;/p&gt;
+
+&lt;p&gt;As far as I know, there is no cost to applying though. You can always get accepted and then decide not to go. That&amp;#39;s what my plan was anyway :)&lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/37</id>
+    <published>2013-02-10T09:01:09Z</published>
+    <updated>2013-12-05T12:31:13Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/37"/>
+    <title>Epiphany #1</title>
+    <content>&lt;p&gt;I&amp;#39;ve been tinkering with a guitar for a few days now and I just realized something:&lt;/p&gt;
+
+&lt;p&gt;An experienced programmer can prefer a language or set of tools but can pick up any language or set of tools and become familiar with them at whim just as an experienced musician can prefer an instrument or a genre but can pick up any instrument or genre and become familiar with it at whim. &lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/36</id>
+    <published>2012-12-30T19:43:22Z</published>
+    <updated>2013-12-05T12:31:25Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/36"/>
+    <title>Every Little Bit Helps</title>
+    <content>&lt;p&gt;Except it doesn&amp;#39;t. &lt;/p&gt;
+
+&lt;p&gt;Systemic change needs to happen on a grand scale. If you&amp;#39;re trying to displace an ocean, a few bucketfuls at a time won&amp;#39;t just take longer, it won&amp;#39;t make a difference at all. Here&amp;#39;s why:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Habits are living things.&lt;/strong&gt; They grow and reproduce and spread. If you&amp;#39;re not displacing them at a rate higher than they&amp;#39;re regenerating, you&amp;#39;re not making a difference. &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;You&amp;#39;re tiring yourself out.&lt;/strong&gt; Even if you were making a difference, changing a habit is like swimming upstream. In theory, you&amp;#39;ll eventually get where you need to go, but the marginal benefits of the short distances you cover every day are not proportional to the marginal costs. &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;The tipping point is farther away than you think.&lt;/strong&gt; It&amp;#39;s easy to get into the &amp;quot;strike while the iron is hot&amp;quot; mentality, but iron melts at 1200 &amp;deg;C.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/33</id>
+    <published>2012-10-24T07:01:17Z</published>
+    <updated>2013-12-05T12:27:46Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/33"/>
+    <title>Epiphany</title>
+    <content>&lt;p&gt;The problem isn&amp;#39;t that there aren&amp;#39;t enough good people or that there are too many bad people. The problem is that there is a lot of disagreement on what is good and bad. &lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/32</id>
+    <published>2012-10-21T03:32:01Z</published>
+    <updated>2013-12-05T12:30:58Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/32"/>
+    <title>Validation</title>
+    <content>&lt;blockquote&gt;
+&lt;p&gt;He [Jeff] said people who were right a lot of the time were people who often changed their minds. He doesn’t think consistency of thought is a particularly positive trait. It’s perfectly healthy — encouraged, even — to have an idea tomorrow that contradicted your idea today.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;- &lt;a href="http://37signals.com/svn/posts/3289-some-advice-from-jeff-bezos"&gt;Jason Fried on Jeff Bezos&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I change my mind a lot. I will take this is validation. &lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/31</id>
+    <published>2012-10-14T09:51:21Z</published>
+    <updated>2013-12-05T22:41:15Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/31"/>
+    <title>Objects vs. strings</title>
+    <content>&lt;p&gt;The app that I&amp;#39;m working on &lt;a href="http://mochaleaf.com"&gt;at work&lt;/a&gt; has a pretty complicated and dense schema. As a result displaying data in views/templates gets really hairy, really fast. I had a discussion with &lt;a href="http://twitter.com/aerinonfire"&gt;Aaron&lt;/a&gt; about this and we had differing opinions about how to handle this. &lt;/p&gt;
+
+&lt;p&gt;I prefer to deal with objects in my templates. So if I have a Book object and I want to display the title in the template, my preference is to embed &lt;code&gt;{{book.title}}&lt;/code&gt; or in erb &lt;code&gt;&amp;lt;%= @book.title %&amp;gt;&lt;/code&gt;. &lt;/p&gt;
+
+&lt;p&gt;Aaron on the other hand, prefers that templates stay simple and instead uses &lt;code&gt;{{book_title}}&lt;/code&gt; or &lt;code&gt;&amp;lt;%= @book_title %&amp;gt;&lt;/code&gt;. That is to say, he prefers to fetch the title of the book elsewhere and give the template a plain string to plop in. This is a simplistic example and Aaron would probably be on the same page as me on this one, but in a more complicated situation, I would try harder to keep sending objects to the template instead of strings. &lt;/p&gt;
+
+&lt;p&gt;There are pros and cons to both, as always, but I noticed today that Twitter uses Aaron&amp;#39;s approach. When a user is mentioned in a tweet, only the plain text version of their handle is stored. This is probably much more performant, but if someone changes their handle, old tweets can&amp;#39;t be hyperlinked to user profiles any more. This is probably a small sacrifice for Twitter, but worth pointing out. &lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/30</id>
+    <published>2012-10-02T19:05:03Z</published>
+    <updated>2013-12-05T12:31:31Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/30"/>
+    <title>Interviews</title>
+    <content>&lt;p&gt;I think people make progress as a group or are productive when they connect emotionally. &lt;/p&gt;
+
+&lt;p&gt;I think people connect emotionally when they are moved by the same thing at the same time. In that moment it doesn&amp;#39;t matter how old the people are or how skilled they are in their art or how prestigious their degree is. All that matters is the shared experience of delight (or the opposite). That shared experience is the catalyst that makes progress possible. &lt;/p&gt;
+
+&lt;p&gt;When people ask me for advice on &lt;a href="http://mehulkar.com/posts/6"&gt;how to get into Dev Bootcamp&lt;/a&gt;, I have trouble answering. Because that emotional connection can&amp;#39;t be faked. I think most in-person interviews work the same way. &lt;/p&gt;
+
+&lt;p&gt;And if they don&amp;#39;t, they should. &lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/29</id>
+    <published>2012-09-26T04:39:44Z</published>
+    <updated>2013-12-06T06:45:28Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/29"/>
+    <title>Ember.js - Before the Beginning</title>
+    <content>&lt;p&gt;As &lt;a href="http://mehulkar.com/posts/28"&gt;promised&lt;/a&gt;, here&amp;#39;s the first post about Ember.js for people who don&amp;#39;t know anything about it or about programming. This post will probably have less about Ember and more about &amp;quot;why Ember&amp;quot;.&lt;/p&gt;
+
+&lt;p&gt;I heard &lt;a href="http://twitter.com/nivenhuh"&gt;Andy&lt;/a&gt; say to an interviewee the other day that the web is like a series of contracts. I don&amp;#39;t think &amp;#39;contract&amp;#39; is the right word, but he meant that the web is a series of exchanges: requests and responses. When you type in a URL you&amp;#39;re making a request and when a website pops up in the browser you&amp;#39;re getting a response. When you search on Google, you&amp;#39;re making a request and the search results are the response. &lt;/p&gt;
+
+&lt;p&gt;A few years ago, these exchanges were handled by a server (another computer somewhere else). When you made a request, the server received it, interpreted it, and generated a response based on the set of rules or code that a programmer had given it. &lt;/p&gt;
+
+&lt;p&gt;This server was necessary for two reasons: (1) they could talk to data stores and (2) they &lt;em&gt;had&lt;/em&gt; to talk to data stores. The first one is less important, because theoretically your computer could talk directly to the data stores also. The second is important because until recently the only way to update a website with new data was to get the new data from the data store. The client (the computer you were opening websites on) lacked memory to hold data and also lacked computing power to do things with the data. So every time a website needed new data, it had to send a request to the server, which would query the data store, and respond appropriately. &lt;/p&gt;
+
+&lt;p&gt;As web applications got more complicated, they had to make more network requests. Sometimes the request was for very small amounts of data, and it seemed like a waste of a trip. Like taking a 10 mile trip to a river 10 times and only bringing back a drop of water every time because that was all you needed.&lt;/p&gt;
+
+&lt;p&gt;The other problem was that requests were made in packages, i.e. you had to request an entire new page every time you made a request, even if you only wanted to update a small portion of the page. This becomes really inconvenient. For example, if you were watching a stock price, every time you wanted to display an updated stock price the entire page would have to refresh. &lt;/p&gt;
+
+&lt;p&gt;Then browsers and clients got more powerful. And people figured out that they could send raw data to the client and have them figure out what to do with it. So they started using javascript to make requests to the server, which responded with data and the browser put it where it need to go. In the previous example then, if you wanted to update a stock price, all you had to do was request the new stock price. The request became much smaller, the response became much smaller, but your browser had to do more work. Fortunately, it was capable of doing more work now. &lt;/p&gt;
+
+&lt;p&gt;(I&amp;#39;m getting to Ember eventually.)&lt;/p&gt;
+
+&lt;p&gt;Now that applications had the capability of updating specific parts of the page, a new problem surfaced: applications were making too many small requests. And every request had to be explicit. Browsers were doing more work with the data, but all the data still existed in the store and had to be fetched every time it needed to be updated, even if the data had already been fetched once. For example, there are 20 some posts on my blog. I&amp;#39;m not changing any of them. Every time you go to a new post, you make a request and the server responds with the new post. You could make this request without having to refresh the page, but you still have to make the request. &lt;/p&gt;
+
+&lt;p&gt;This is where Ember comes in. &lt;/p&gt;
+
+&lt;p&gt;The two things that Ember provides are (1) a client side data store and (2) bindings. &lt;/p&gt;
+
+&lt;p&gt;You can load the data store with a bunch of data the first time your app loads and never make any more requests to the server. You can just get data from the client side store and update your page from that. The store automatically requests data from the server if it doesn&amp;#39;t have it, but once it&amp;#39;s loaded, it doesn&amp;#39;t have to load it again. For example, if I was using Ember on this blog, this post would have already been loaded into the store. If you went to a different post and came back, you wouldn&amp;#39;t have to make another request to the server because this post would already be in the store. &lt;/p&gt;
+
+&lt;p&gt;The other problem I mentioned before was that every time you wanted to update a piece of data on the page, you had to explicitly make the request. With the client side data store, at least you didn&amp;#39;t have to make a trip to the server to fetch this data, but you still have to explicitly ask the browser to replace text in one section of your website with different text. Ember bindings solve this problem. &lt;/p&gt;
+
+&lt;p&gt;In an Ember app, pages are constructed using templates. Portions of templates are bound to data in the data store. If data changes, the template automatically updates. Now not only do you no longer have to request the server for data and wait for a response, you don&amp;#39;t even have to tell your page when and how to update itself. It just happens. &lt;/p&gt;
+
+&lt;p&gt;At the beginning of this post, I talked about exchanges consisting of requests and responses. Those still exist, but the Ember data store reduces the number of exchanges and bindings automates them. &lt;/p&gt;
+
+&lt;p&gt;As Ryan Bates says: it. just. works. &lt;/p&gt;
+
+&lt;p&gt;(Except when it doesn&amp;#39;t, of course. But mostly, it just works)&lt;/p&gt;
+
+&lt;p&gt;In the next Ember post I&amp;#39;ll talk about the structure of Ember and do my best to relate it to Rails, the only other thing I know. &lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/28</id>
+    <published>2012-09-26T02:44:31Z</published>
+    <updated>2013-12-06T06:45:28Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/28"/>
+    <title>148 Days of Employment</title>
+    <content>&lt;p&gt;I&amp;#39;ve been getting paid to program for 148 days now (112 work days, minus a few for holidays/sick days). I thought it was about time I wrote about what I had learned. &lt;/p&gt;
+
+&lt;h3&gt;Commenting&lt;/h3&gt;
+
+&lt;p&gt;I didn&amp;#39;t think commenting code was that useful 148 days ago. It is. None of my personal projects reflect this right now, but at work I am writing 3 lines to a paragraph of comments for every line of code in some places. Now I&amp;#39;m trying to comment code in everyday English (or whatever language) as if I were explaining what I&amp;#39;m trying to do out loud. I&amp;#39;ve also learned that clarity doesn&amp;#39;t have anything to do with the number of words. Trying to contain a big thought in fewer words is a worthwhile exercise, but in many cases, spelling something out is extremely helpful for the next programmer. &lt;/p&gt;
+
+&lt;h3&gt;RTFM&lt;/h3&gt;
+
+&lt;p&gt;I think I started with Ember.js in the first 30 days (give or take) of starting work. I probably don&amp;#39;t know any better, but I like it. I&amp;#39;ve been lucky enough to get access to the contributors Campfire and I&amp;#39;m reading pretty much every word of what anyone in there says. Almost every discussion mentions a commit or an issue though and everyone seems to  get the reference. So I&amp;#39;m getting better at reading commits and issues. Being in the room has also made me feel responsible for knowing what I&amp;#39;m talking about. This &lt;a href="https://twitter.com/jjjbiatches/status/243285936060915712"&gt;tweet&lt;/a&gt; was also responsible for some of that. &lt;/p&gt;
+
+&lt;p&gt;Knowing what I&amp;#39;m talking means I have to read the source. Almost every senior programmer whose blog I&amp;#39;ve read recommends learning to read the source. I had been neglecting this skill so far (still haven&amp;#39;t read a single character of the Rails source, for example), but not any more. I&amp;#39;m reading Ember and Ember-data (and their tests) as much as I can. It&amp;#39;s not as difficult as I thought it would be. I&amp;#39;ve read the same parts multiple times and some of it I still don&amp;#39;t &lt;em&gt;get&lt;/em&gt;. But it&amp;#39;s seeping in. I can actually answer a few questions on the Freenode channel now. Sometimes. &lt;/p&gt;
+
+&lt;h3&gt;Unix&lt;/h3&gt;
+
+&lt;p&gt;I read somewhere that every programmer should know every utility in &lt;code&gt;/usr/bin/&lt;/code&gt; and learn to use it. I haven&amp;#39;t gotten that far, but I&amp;#39;m amazed at how much stuff you can do with terminal. The most amusing is, of course, &lt;code&gt;say&lt;/code&gt; (open terminal and type &lt;code&gt;say ppppppppppp&lt;/code&gt;). I put Regex and Vim in the same category as Unix because they all make me feel like a hacker. I search and replace in Regex every day. I&amp;#39;m pretty sure that&amp;#39;s not unusual or worth bragging about, but I just said a lot of words I didn&amp;#39;t know existed 5 months ago. &lt;/p&gt;
+
+&lt;h3&gt;Ember.js&lt;/h3&gt;
+
+&lt;p&gt;I want to start writing about Ember.js and why it&amp;#39;s great. I haven&amp;#39;t done it yet because I&amp;#39;m still learning and when I read other people writing about it, they do it in a way that sounds more intelligent. But I&amp;#39;m going to write a tutorial on it anyway. A tutorial for myself. And I&amp;#39;m going to try to start at the beginning. &lt;a href="http://mehulkar.com/posts/29"&gt;Here it is&lt;/a&gt;.&lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/27</id>
+    <published>2012-09-22T22:48:40Z</published>
+    <updated>2013-12-06T06:45:28Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/27"/>
+    <title>The Parts of a URL</title>
+    <content>&lt;p&gt;First of all, I&amp;#39;m not talking about URLs here, I&amp;#39;m talking about URIs. You can google that if you&amp;#39;re interested. I titled the post with URL because not many people know what a URI is. 5 minutes before writing this post, I didn&amp;#39;t either.&lt;/p&gt;
+
+&lt;p&gt;Not all of this is useful to most people, but some of it us useful to most people. &lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;http://www.something.com/blahblah?morestuff&amp;amp;%23skeet&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2&gt;The Protocol&lt;/h2&gt;
+
+&lt;p&gt;Websites you go to on the internet are just files sitting on a computer other than your own that you&amp;#39;re opening with your browser. When you type in a URL, you&amp;#39;re actually sending a message to that other computer that asking it to send those files to your computer. This is the same as downloading any other file except in the way you submit your request and receive a response. What defines that is the protocol. The most common one for every day users is &lt;code&gt;http&lt;/code&gt;. &lt;code&gt;ftp&lt;/code&gt; is another one. &lt;/p&gt;
+
+&lt;h2&gt;The Host Name&lt;/h2&gt;
+
+&lt;p&gt;This is made up of the server name (www), the second level domain (something), and the top level domain (.com). The hostname is the name of the host, i.e. the computer that is hosting the files you want to download. It&amp;#39;s a little more complicated than that, but if you want complicated, read the Wiki page for Domain names or google URI scheme. &lt;/p&gt;
+
+&lt;h2&gt;The Path&lt;/h2&gt;
+
+&lt;p&gt;In &lt;code&gt;mehulkar.com/posts&lt;/code&gt;, &amp;#39;posts&amp;#39; is the path. That&amp;#39;s the place you go in the domain of &lt;code&gt;mehulkar.com&lt;/code&gt; to get to the blog. In some cases, it could also be the particular file you want to reach. You can see a good example if you open an image with your browser (drag and drop a &lt;code&gt;.jpg&lt;/code&gt; or &lt;code&gt;.png&lt;/code&gt; into  your browser). You&amp;#39;ll see the address bar show &lt;code&gt;.png&lt;/code&gt; at the end. Same thing when you open a specific file on a website you&amp;#39;ll sometimes see &lt;code&gt;.html&lt;/code&gt; or &lt;code&gt;.gif&lt;/code&gt; or &lt;code&gt;.somethingelse&lt;/code&gt;. That path isn&amp;#39;t always a file though. &lt;/p&gt;
+
+&lt;h2&gt;The Query&lt;/h2&gt;
+
+&lt;p&gt;Every website is just a bunch of files somewhere. But most websites now are actually applications that you and I can interact with. That&amp;#39;s where queries come in handy. An easy example of user interaction is a search. When you search in a website, you&amp;#39;re giving it a command and you want it to respond. Some URIs keep track of those commands by adding &lt;em&gt;paramaters&lt;/em&gt;. Every time you see a &lt;code&gt;?&lt;/code&gt;, that&amp;#39;s a parameter. Multiple parameters are separated by &lt;code&gt;&amp;amp;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Some queries have a lot of numbers and &lt;code&gt;%&lt;/code&gt; signs. These represent special characters. e.g. &lt;code&gt;%23&lt;/code&gt; represents &lt;code&gt;#&lt;/code&gt; in a URI. A &lt;code&gt;#&lt;/code&gt; by itself is interpreted differently. &lt;code&gt;%20&lt;/code&gt; is a blank space. &lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;http://www.something.com/blahblah?morestuff&amp;amp;%23skeet&lt;/code&gt;&lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/26</id>
+    <published>2012-09-18T00:21:55Z</published>
+    <updated>2013-12-06T06:45:27Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/26"/>
+    <title>The Failure Hype</title>
+    <content>&lt;p&gt;The &lt;a href="https://www.facebook.com/photo.php?fbid=10151158112072042&amp;amp;set=a.10150110739117042.290720.91262652041"&gt;&amp;quot;famous failures&amp;quot; meme&lt;/a&gt; is good because it says that people should be OK with failure, but it&amp;#39;s bad because it says that people should be OK with failure.&lt;/p&gt;
+
+&lt;p&gt;As inevitably happens with everything, I&amp;#39;m starting to think the &amp;quot;failure is good&amp;quot; meme is becoming way overplayed. I don&amp;#39;t think failure is a good thing. Failure means you were unsuccessful. Failure means you came up short against a benchmark, albeit arbitrary. The reasons for the shortcoming vary and you can classify them as legitimate or not, it doesn&amp;#39;t matter. &lt;/p&gt;
+
+&lt;p&gt;Don&amp;#39;t encourage failure. Encourage taking action.&lt;/p&gt;
+
+&lt;p&gt;&amp;quot;Fail fast, fail often&amp;quot; is a fine motto, but it puts the horse before the cart. Better to say &amp;quot;Do more, do often&amp;quot;. &lt;a href="http://mehulkar.com/posts/23"&gt;Iteration&lt;/a&gt; is king. &lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/25</id>
+    <published>2012-09-14T07:12:59Z</published>
+    <updated>2013-12-06T06:45:27Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/25"/>
+    <title>Dev Bootcamp Testimonial</title>
+    <content>&lt;p&gt;Three things happened. Shereef asked us to write testimonials for the new DBC website and I said I would. An old friend from high school asked about DBC and what I thought about it. And Andrew Dennis wrote &lt;a href="http://adennis4.tumblr.com/post/18894303214/devbootcamp-testimonial-well-deserved"&gt;a testimonial&lt;/a&gt;. Andrew was the last straw.&lt;/p&gt;
+
+&lt;p&gt;So here it is: a review/testimonial of DevBootcamp. &lt;/p&gt;
+
+&lt;p&gt;Short version: &lt;a href="http://devbootcamp.com/apply"&gt;Apply now&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Long version: &lt;/p&gt;
+
+&lt;p&gt;Halfway through Dev Bootcamp I am reading lines of Ruby like English. I’m rails g’ing my way into models and controllers and scaffolding. I know what gems are. I know that rake isn’t a garden tool. I (am trying to make myself) believe that software is more about understanding problems and empathizing with those who have them than being able to write complex code. I can swing through git commands and branches like a monkey. I worked in a team of four to recreate the classic &lt;a href="https://github.com/mehulkar/Mastermind"&gt;Mastermind&lt;/a&gt;. &lt;/p&gt;
+
+&lt;p&gt;Wait, what?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="ruby"&gt;Time.new = 28.days.ago
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The day before bootcamp started, I was nervous because I hadn’t done much of the prep work Shereef had sent us. I hadn’t been very successful at what I had tried, and the &lt;a href="http://ruby.railstutorial.org/"&gt;Hartl Tutorial&lt;/a&gt; was too much reading for me to handle. &lt;/p&gt;
+
+&lt;p&gt;The first day of bootcamp, I was nervous. Everyone seemed super smart. I was the little fish in the big ocean. The big ocean being 92* Market St, around which my life has revolved for the past four weeks.&lt;/p&gt;
+
+&lt;p&gt;On the second day, &lt;a href="//twitter.com/alexch"&gt;Alex Chafee&lt;/a&gt; said to us&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;There is no line of code in the world that cannot be read or understood.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This has been my mantra when I have wanted to give up or gotten a &lt;a href="http://www.youtube.com/watch?v=5QQdNbvSGok"&gt;PC Load Letter&lt;/a&gt;. &lt;/p&gt;
+
+&lt;p&gt;After the second day, I blacked out. &lt;/p&gt;
+
+&lt;p&gt;In some order I can’t remember, I learned pair programming, object oriented design, database modeling, test driven development and the git version control system.&lt;/p&gt;
+
+&lt;p&gt;Then I built Twitter.&lt;/p&gt;
+
+&lt;p&gt;Turns out none of this is as magical as I thought it was. It makes sense if you have mentors like the ones we have:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://twitter.com/chriszf"&gt;Christian&lt;/a&gt; asks you questions until you find yourself staring at the answer you were looking for. Then he’ll take you to the whiteboard and scribble things about bits and memory that make perfect sense for five minutes and it makes you feel empowered and knowledgeable and full of glee. &lt;/p&gt;
+
+&lt;p&gt;Robert bikes up the stairs every day at some point and fixes all our errors. &lt;/p&gt;
+
+&lt;p&gt;&lt;a href="//twitter.com/timocratic"&gt;Tim&lt;/a&gt; makes you refactor your code until he can read it before he answers your questions. Then he’ll discuss every possible solution and its respective pros and cons in a way that drives home the “software is an art” rule. He will also demonstrate the perfect push up if you ask. &lt;/p&gt;
+
+&lt;p&gt;And then there’s &lt;a href="//tedxtalks.ted.com/video/TEDxSF-Shereef-Bishay-Open-Ente"&gt;Shereef&lt;/a&gt;; the fatherly-older-brotherly-mentorly figure who does an amazing job of breaking down concepts that make no sense into smaller concepts that… also make no sense. He says questions are gifts, and we give him many. Sometimes he opens them carefully, sometimes he rips them apart. But our gifts are never forgotten or left untouched. &lt;/p&gt;
+
+&lt;p&gt;Factoid: today, we decided that we would call ourselves Boots, modeling ourselves after the legendary Pivots of Pivotal Labs. &lt;/p&gt;
+
+&lt;p&gt;I had always put “back end development” (which included everything except HTML and CSS) into a category labeled “Too Difficult”. It was a knot tied too tightly for me to even find the crevices to loosen. Four weeks into bootcamp, I know that this knot is much bigger than I thought it was, but I’ve also learned some neat ways to systematically pry it apart. &lt;/p&gt;
+
+&lt;p&gt;This isn’t much of a testimonial. But I’m up at 3am writing it.&lt;/p&gt;
+
+&lt;p&gt;Dev Bootcamp promised to teach me how to code. It didn’t tell me how much fun I would have doing it. It’s been a blast. For a better account of what we do on a day-to-day basis, read &lt;a href="http://douglascalhoun.tumblr.com"&gt;Doug’s chronicles&lt;/a&gt;. You can also get in touch with me and I’ll do my best to respond during these next four weeks.&lt;/p&gt;
+
+&lt;p&gt;PS, if Dev Bootcamp doesn’t sound like something you’re interested in, maybe you can try &lt;a href="http://youtu.be/Hzh9koy7b1E?t=23s"&gt;this eight week program&lt;/a&gt;. &lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/24</id>
+    <published>2012-09-11T19:59:36Z</published>
+    <updated>2013-12-06T06:45:27Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/24"/>
+    <title>How To Market Effectively</title>
+    <content>&lt;p&gt;Over the past year or two, I&amp;#39;ve found that the best marketing strategy is to invest in the success of others. More specifically, in the short term success of others. I&amp;#39;ve started using this as a rule-of-thumb for any project I work on with &lt;a href="http://collegedesis.com"&gt;CollegeDesis&lt;/a&gt;. &lt;/p&gt;
+
+&lt;p&gt;Will edit this post later to expand. If you see this and these two lines are still here, &lt;a href="http://twitter.com/mehulkar"&gt;remind me&lt;/a&gt; to come back to it please?&lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/23</id>
+    <published>2012-09-09T10:08:34Z</published>
+    <updated>2013-12-06T06:45:27Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/23"/>
+    <title>The Case For Making It Work</title>
+    <content>&lt;p&gt;I&amp;#39;m seeing a big dichotomy in the programming world. One side stresses over doing things &lt;em&gt;the right way&lt;/em&gt;. The other side wants to get the job done. Some people would argue that there really isn&amp;#39;t a dichotomy, and that the latter aren&amp;#39;t really programmers, they&amp;#39;re just slapping code together. I&amp;#39;m not so sure. &lt;/p&gt;
+
+&lt;p&gt;Tonight, I had a choice to make. I could do things the right way, or I could hack it together and make it work. I really didn&amp;#39;t want to do either because neither &lt;em&gt;felt&lt;/em&gt; good, but I&amp;#39;d like to make the case for making it work.&lt;/p&gt;
+
+&lt;p&gt;When I undertake a task, I have two responsibilities: to complete the task and to do justice to it. Both responsibilities, if adhered to, return rewards. &lt;/p&gt;
+
+&lt;p&gt;I believe that success, or any other long-lasting happiness, is an iterative process. Success must be maintained by doing things. And then by doing more things. I also believe that the best form of iteration is in small loops with quick feedback cycles. Perform a task, reap the benefit, repeat. There is a sweet spot somewhere, but for the most part, we can say that the shorter a feedback cycle, the faster the iteration, the more likely the climb to success. &lt;/p&gt;
+
+&lt;p&gt;When I undertake a task then, I naturally prioritize my two responsibilities, because the overarching priority is to iterate quickly. &lt;/p&gt;
+
+&lt;p&gt;In my case tonight, I couldn&amp;#39;t decide if I should do things the right way, or hack together a solution that would work. The first would probably have taken longer and would have been more solid, the second would be quick, but painful because I knew it wasn&amp;#39;t right. But in both cases, I would have reaped the benefit of a working product. &lt;/p&gt;
+
+&lt;p&gt;I chose my hacky solution because I wanted to see a working product and celebrate &lt;a href="http://mehulkar.com/posts/13"&gt;a little victory&lt;/a&gt; for the night. I know that ultimately, I want to write code that is better technically, but my priority is on long term succes, and for that I need to iterate faster. &lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/22</id>
+    <published>2012-09-08T22:43:16Z</published>
+    <updated>2013-12-06T06:45:27Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/22"/>
+    <title>Getting Noticed Has Nothing To Do With Talent</title>
+    <content>&lt;p&gt;There are a lot of talented people in the world. Not all of them are given the credit they deserve.&lt;/p&gt;
+
+&lt;p&gt;And it’s not about perseverance either. For every heart-warming success story you hear, there are many many more of failure.&lt;/p&gt;
+
+&lt;p&gt;Getting noticed isn’t about having the skill, getting noticed is about the surprise factor. It&amp;#39;s about doing something unexpected.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.youtube.com/watch?v=bxDlC7YV5is"&gt;Greyson&lt;/a&gt; is a pretty good singer and piano player. Maybe he’s even above average compared to other popular musicians. But that’s not why 37 million people watched his video. And it’s definitely not why he was invited to be on Ellen.&lt;/p&gt;
+
+&lt;p&gt;He became an internet sensation &lt;strong&gt;because no one expected him to.&lt;/strong&gt; Because he was 13. Because his performance was just another kid in Church playing the piano. Because there’s no way something amazing happens in the middle of nowhere in Oklahoma.&lt;/p&gt;
+
+&lt;p&gt;Getting noticed isn’t about being the best, it’s about the difference between an expectation and an experience. The greater the gap, the greater the attention. And there isn’t a clause that says the experience has to be moregood than the expectation.&lt;/p&gt;
+
+&lt;p&gt;It just needs to make someone’s jaw drop.&lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/21</id>
+    <published>2012-09-07T08:10:55Z</published>
+    <updated>2013-12-06T06:45:27Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/21"/>
+    <title>Klout</title>
+    <content>&lt;blockquote&gt;
+&lt;p&gt;One of the Steve Jobs themes that really struck me is the difference between observing these things that are happening and recognizing your own power to influence them and participate in them. &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;— Roy Bahat (@roybahat)&lt;/p&gt;
+
+&lt;p&gt;Affecting others with your actions in a profound way is a powerful thing and the associated feeling is addictive. Not the butterfly effect thing where everything you do affects everyone. I&amp;#39;m talking about when you do something and it has a real impact on someone else and alters their life course in however marginal a way. &lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/20</id>
+    <published>2012-09-04T17:54:44Z</published>
+    <updated>2013-12-06T06:45:26Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/20"/>
+    <title>Nuances about Facebook / Twitter / YouTube You Should Know</title>
+    <content>&lt;h2&gt;Facebook&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;When you copy-paste a link, Facebook renders a preview of the link. Once the preview is rendered, you can (read: should) delete the URL text because it looks ugly and is useless. It is also annoying to me, which is not your concern, but I&amp;#39;m the one writing this post.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Messages you send to people you are not friends with go into the &amp;quot;Other&amp;quot; mailbox by default. There are no notifications for these &amp;quot;Other&amp;quot; messages unless someone is looking at their inbox (which expands Messages in the sidebar to reveal Other and a number next to it. I generally interact with Messages only when I have a notification on the top bar and jump right into the message, skipping the Inbox entirely and then never see the &amp;quot;Other&amp;quot; mailbox. &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Remove the preview. When you comment on anything with a link, Facebook automatically renders a preview. You can&amp;#39;t get rid of the URL text like in (1), so you should always (99% of the time) click &amp;#39;remove preview&amp;#39;. You can also remove previews of every comment on one of your statuses or links or anything in which you are the original author. &lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2&gt;Twitter&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;If you start a tweet with @username, your followers will not see it unless they follow @username also. Common ways of getting around this is to start a tweet with &amp;#39;.@username&amp;#39; (the extra period).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;By default, when you &amp;quot;reply&amp;quot; to a tweet, your reply starts with @username (whoever you&amp;#39;re replying to). This means that only mutual followers will see it (see #1). In most cases, that&amp;#39;s a good thing. But sometimes you want to share your reply with all followers. This both implies an invitation to join the conversation, or that your tweet is profound/general enough that it applies to all your followers. Before, the etiquette was to RT the original tweet and add a comment. This however, loses the conversation history. Instead, hit reply and just add a period to the front (see #1). &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;If your account is private, and you @mention someone who doesn&amp;#39;t follow you, they will never see that tweet. &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;You cannot DM someone who doesn&amp;#39;t follow you. This isn&amp;#39;t really a nuance though because if you try doing this, you will instantly know it&amp;#39;s not possible. But I&amp;#39;ve seen a lot of people ask me to DM them when they&amp;#39;re not following me. In that case, the only way to reply is to then awkwardly ask for a follow. &lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2&gt;YouTube&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;A youtube video is identified by a number. It&amp;#39;s the number that comes right after the &lt;code&gt;v=&lt;/code&gt;. The only thing the URL needs to find the video and play it is that number preceded by &lt;code&gt;youtube.com/watch?v=&lt;/code&gt;. If you&amp;#39;re sharing a youtube link remove &lt;em&gt;everything&lt;/em&gt; else from link. No really, everything. Everything else is an extra parameter that is either toggling options for playback or telling YouTube where you came to that video from. This isn&amp;#39;t a case for YouTube tracking all that data, more power to them. It is a case for you not passing those extra parameters along when you copy-paste the URL to share with someone else. &lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/17</id>
+    <published>2012-08-31T05:19:53Z</published>
+    <updated>2013-12-06T06:45:26Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/17"/>
+    <title>I'm Learning To Type</title>
+    <content>&lt;p&gt;I&amp;#39;m practicing typing the right way after years of doing it wrong. And that&amp;#39;s after getting pretty good at doing it wrong. But now that I&amp;#39;m banging on a keyboard not just &lt;em&gt;like&lt;/em&gt; it&amp;#39;s my job, but because it&amp;#39;s actually my job, I&amp;#39;m starting to understand why the right way is better. I&amp;#39;ll get to that in a second. &lt;/p&gt;
+
+&lt;p&gt;As a tennis instructor, I&amp;#39;m usually concerned when I see people with bad form. I say bad form because it really is bad form. Not because it&amp;#39;s different or new or unorthodox, but because it is physically bad for their bodies. Some people have bad form even after years of playing recreationally. &lt;/p&gt;
+
+&lt;p&gt;The reason this is relevant is because I get it now. Sometimes you never get to know that something has negative side effects so you never try to improve or change. It doesn&amp;#39;t matter that someone tells you, because people tell you all sorts of things. You have to see or experience it yourself. &lt;/p&gt;
+
+&lt;p&gt;My wrist start hurting recently while typing. Mostly while pressing any key that wasn&amp;#39;t in the middle diamond. I realized that I wasn&amp;#39;t using my pinky and barely using my ring finger. I was bending my wrist in all sorts of crazy ways so I could use the first two fingers of my right hand and the first finger of my left hand. I realized this a few weeks ago. &lt;/p&gt;
+
+&lt;p&gt;So now I&amp;#39;m practicing typing the right way. &lt;/p&gt;
+
+&lt;p&gt;It is much less painful and I can&amp;#39;t believe I haven&amp;#39;t been doing it for the past many years. &lt;/p&gt;
+
+&lt;p&gt;The change is difficult though. In many ways. &lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;I used to look at the keyboard very frequently. Now that I am trying not to, I realized I can&amp;#39;t remember where half the keys are. That is making me lose my train of thought more frequently too. &lt;/li&gt;
+&lt;li&gt;I have plenty of other things to do. The opportunity cost of changing now is much higher than it would have been last year or the year before because my time is more expensive now. &lt;/li&gt;
+&lt;li&gt;When I go back to the wrong way (when being slow gets too annoying), the pain is more noticeable. &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;But I am getting better. My ring finger has gotten stronger and I can control it with greater ease. Before, I would tap a key and my finger would get stuck down so instead of one &amp;#39;i&amp;#39;, I&amp;#39;d get iiiiiiiiiiiiii. &lt;/p&gt;
+
+&lt;p&gt;That is all. I promised myself half an hour ago that I would only type this post the right way and I am tired of doing that. I think I&amp;#39;ve also made enough of a point that I can post this. I may also have made a political statement. &lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/16</id>
+    <published>2012-08-24T22:27:02Z</published>
+    <updated>2013-12-06T06:45:26Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/16"/>
+    <title>Who Dat</title>
+    <content>&lt;p&gt;I&amp;#39;m not sure why it bothers me that everyone mixes up &amp;quot;who&amp;quot; and &amp;quot;that&amp;quot;. I read a post similar to this a long time ago and it stuck with me so I wanted to pass it along. &lt;/p&gt;
+
+&lt;p&gt;Use &amp;quot;who&amp;quot; when describing people.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://mehulkar.com/posts/15"&gt;The man &lt;em&gt;who&lt;/em&gt; beat me...&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Dear everyone &lt;em&gt;who&lt;/em&gt; mixes up &amp;quot;who&amp;quot; and &amp;quot;that&amp;quot;...&lt;/li&gt;
+&lt;li&gt;He &lt;em&gt;who&lt;/em&gt; shall not be named.&lt;/li&gt;
+&lt;li&gt;The boy &lt;em&gt;who&lt;/em&gt; cried wolf&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Use &amp;quot;that&amp;quot; for everything else.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The &lt;a href="http://mehulkar.com/posts/4"&gt;crocodile&lt;/a&gt; that ate your arm.&lt;/li&gt;
+&lt;li&gt;Chocolate &lt;em&gt;that&lt;/em&gt; doesn&amp;#39;t make you fat, isn&amp;#39;t chocolate at all.&lt;/li&gt;
+&lt;li&gt;The truth &lt;em&gt;that&lt;/em&gt; is hard to hear.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Another word that is easy to abuse is &amp;quot;peruse&amp;quot;. It really means &amp;quot;to read thoroughly or carefully,&amp;quot; but it sounds like it means &amp;quot;to carelessly flip through&amp;quot;. The problem is, when you use the word, it&amp;#39;s difficult to figure out what the writer actually means, so you can&amp;#39;t correct them. &lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/15</id>
+    <published>2012-08-24T22:16:58Z</published>
+    <updated>2013-12-06T06:45:26Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/15"/>
+    <title>The Man Who Beat Me</title>
+    <content>&lt;p&gt;&lt;em&gt;April 16, 2011 at 10:00 pm&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;It’s like I’m stuck waiting
+for a moment that matters,
+except the moment never comes
+until it shatters
+in my face
+like I was running a race
+and finished second place
+and the man who beat me disappeared
+without a trace.
+
+Until I discovered that the man who won was 
+none other than me
+a version of myself who didn’t 
+wait for opportunity
+to be served on a platter
+he made every decision, every action matter
+
+Because every second you live is more special than the last
+and if you don’t grab hold it’ll disappear fast
+like the man who beat me to the finish line
+I wish he was me, and what he had was mine.
+
+Well…
+
+maybe next time.
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/14</id>
+    <published>2012-08-24T17:07:22Z</published>
+    <updated>2013-12-06T06:45:25Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/14"/>
+    <title>Everyone Should Always Apply For Everything</title>
+    <content>&lt;p&gt;period.&lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/11</id>
+    <published>2012-08-16T08:15:51Z</published>
+    <updated>2013-12-06T06:45:25Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/11"/>
+    <title>Javascript Array Lengths</title>
+    <content>&lt;p&gt;Today I learned that you can create an Array of any length and it will still have 0 elements. That&amp;#39;s like saying that I weigh 150 lbs but my body has 0 atoms. Research pending, to me that means that properties on classes* can be artificially set. &lt;/p&gt;
+
+&lt;p&gt;The example doesn&amp;#39;t prove that, but it &lt;em&gt;does&lt;/em&gt; illustrate the first statement.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="javascript"&gt;a = Array(3);
+&amp;gt;&amp;gt; [undefined x 3]
+
+b = [undefined, undefined, undefined];
+&amp;gt;&amp;gt; [undefined, undefined, undefined]
+
+a.length == b.length;
+&amp;gt;&amp;gt; true
+
+a == b;
+&amp;gt;&amp;gt; false
+
+a.forEach(function(item) {console.log(&amp;#39;yay&amp;#39;); } );
+&amp;gt;&amp;gt; undefined
+
+b.forEach(function(item) {console.log(&amp;#39;yay&amp;#39;); } );
+&amp;gt;&amp;gt; yay
+&amp;gt;&amp;gt; yay
+&amp;gt;&amp;gt; yay
+&amp;gt;&amp;gt; undefined
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;* This is in javascript though, and there no classes in javascript. Everyone knows that. &lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/10</id>
+    <published>2012-08-07T19:48:19Z</published>
+    <updated>2013-12-06T06:45:24Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/10"/>
+    <title>Search Engine Oh-Forget-About-It</title>
+    <content>&lt;p&gt;I don&amp;#39;t understand why SEO still exists. I&amp;#39;ve never used meta tags and I&amp;#39;ve never bought links for things I make. It&amp;#39;s usually just referral traffic. If I needed more traffic I would connect with media or do PR, but I couldn&amp;#39;t see myself being bothered with SEO. &lt;/p&gt;
+
+&lt;p&gt;Usually when I google something, I&amp;#39;m either appending it with &lt;code&gt;wiki&lt;/code&gt;, or I&amp;#39;m searching Maps or Images, or I&amp;#39;m looking for something so obvious that there is only one right result and no amount of manipulation of the order of results could change my mind about what I&amp;#39;m looking for. &lt;/p&gt;
+
+&lt;p&gt;Rarely, I search without knowing what I want (e.g. flower shops that deliver for Mother&amp;#39;s Day. ). In these cases, the first 3 links on Google are advertised links and they (combined with the header and Google logo) take up about half the screen real estate. The rest of the links are usually from companies that have spent all their money on SEO budgets, so I already know not to trust them. In the end, I&amp;#39;m usually more comfortable asking on Twitter or asking someone I know for a recommendation. &lt;/p&gt;
+
+&lt;p&gt;I don&amp;#39;t search a lot any more. But I also don&amp;#39;t shop a lot either. What I&amp;#39;m really missing is the ability to find that one thing that I saw that one time that that one person had shown me* If I could find a way to find that, that would be nice. &lt;/p&gt;
+
+&lt;p&gt;* There is a short film of an Asian (sorry, don&amp;#39;t know what nationality) man with some sort of mental condition (wasn&amp;#39;t explicitly explained, but probably autism), who lives with his brother and collects glass containers (wine glasses, water glasses, etc). The whole movie is about him trying to find one particular glass of very specific dimensions that he refers to as &amp;#39;B&amp;#39;. His brother sets him up on on an interview for a job and on the way, he finds &amp;#39;B&amp;#39; and forgets about the interview. He comes home delighted and his brother goes insane that he forgot about the interview. But then the man goes inside his room and gets out all his other glasses and starts playing music on them and his brother forgives him. &lt;/p&gt;
+
+&lt;p&gt;Is there an SEO technique that will optimize search results so that they will be most relevant to this memory so I can find this film again? If there are, please let me know. &lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/9</id>
+    <published>2012-08-07T18:36:01Z</published>
+    <updated>2013-12-05T12:30:28Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/9"/>
+    <title>Endorsement</title>
+    <content>&lt;p&gt;I made &lt;a href="http://uwwtennisclub.weebly.com/"&gt;my first website&lt;/a&gt; on Weebly. And my &lt;a href="http://aceoutautism.weebly.com/"&gt;second one&lt;/a&gt;. Then I stopped using Weebly because it was too easy and because I wanted to learn how to program. &lt;/p&gt;
+
+&lt;p&gt;Whenever someone asks me to make a quick website, I either recommend Weebly or Tumblr depending on what they&amp;#39;re looking for. &lt;/p&gt;
+
+&lt;p&gt;Today, I ran across &lt;a href="http://www.reddit.com/r/pics/comments/oye34/meet_omari_two_days_ago_he_returned_from_the/c3l10gq"&gt;a post&lt;/a&gt; on Reddit about a man  in Kenya who was severely injured while protecting his orphanage. The top comment is from a &lt;code&gt;drusenko&lt;/code&gt; and reads:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;quot;This man deserves a medal.
+And what an awesome surprise to see that you created the site on Weebly! We just donated $10,000 to the cause.&amp;quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;code&gt;drusenko&lt;/code&gt; is &lt;a href="http://david.weebly.com/"&gt;David Rusenko&lt;/a&gt;, the 27(ish) year old founder of Weebly. &lt;/p&gt;
+
+&lt;p&gt;Not only is Weebly an amazing product*, the people behind it are also amazing. I  can only assume that there is some sort of correlation, (dare I say causation?) here. &lt;/p&gt;
+
+&lt;p&gt;* For the sake of accuracy, I should say &lt;em&gt;was&lt;/em&gt; an amazing product because I haven&amp;#39;t tried to use it in two years.&lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/8</id>
+    <published>2012-08-07T04:18:48Z</published>
+    <updated>2013-12-05T19:07:07Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/8"/>
+    <title>That's Such A Silicon Valley Thing To Say</title>
+    <content>&lt;blockquote class="twitter-tweet"&gt;&lt;p&gt;&lt;a href="https://twitter.com/ninakix"&gt;@ninakix&lt;/a&gt; that is such a silicon valley thing to say.&lt;/p&gt;&amp;mdash; Mehul Kar (@mehulkar) &lt;a href="https://twitter.com/mehulkar/statuses/232680681904427009"&gt;August 7, 2012&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;blockquote class="twitter-tweet"&gt;&lt;p&gt;&lt;a href="https://twitter.com/ninakix"&gt;@ninakix&lt;/a&gt; What&amp;#39;s the infrastructure for global 3G connectivity? (I don&amp;#39;t know). Seems like an irrelevant discussion for the majority of pop.&lt;/p&gt;&amp;mdash; Mehul Kar (@mehulkar) &lt;a href="https://twitter.com/mehulkar/statuses/232683124318949376"&gt;August 7, 2012&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+
+&lt;p&gt;So when I got home, I looked up the numbers.&lt;/p&gt;
+
+&lt;h3&gt;Internet Usage:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;USA: 79% population penetration&lt;/li&gt;
+&lt;li&gt;China: 38% &lt;/li&gt;
+&lt;li&gt;India: 10%&lt;/li&gt;
+&lt;li&gt;World: 32% population penetration&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;3G Connectivity:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;USA: 64%&lt;/li&gt;
+&lt;li&gt;Japan: 95%&lt;/li&gt;
+&lt;li&gt;World: 18% population penetration. &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href="http://www.scribd.com/doc/95259089/KPCB-Internet-Trends-2012"&gt;source&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;It wasn&amp;#39;t clearly stated what &amp;quot;population penetration&amp;quot; means or what it means to have access to internet. The number presented above are not the complete picture, check the &lt;a href="http://www.scribd.com/doc/95259089/KPCB-Internet-Trends-2012"&gt;source&lt;/a&gt; for that. I was mainly interested in USA v. high population countries and I put in Japan because I was mind-blown that 95% of people have 3G. Unless my interpretation of &amp;quot;population penetration&amp;quot; is off, that means that 95% of people have smartphones or tablets in Japan. &lt;/p&gt;
+
+&lt;p&gt;The other day &lt;a href="http://www.linkedin.com/in/rshanker"&gt;Ravi&lt;/a&gt; was telling me that he had tried to start an online ticketing system in India. From his offices with hi-speed internet, it seemed like an obvious solution to an apparent problem. But he didn&amp;#39;t account for the fact that access to internet even in metropolitan areas was loosely defined. In 2010, less than 10% of the population had access to internet only 5% of those who did were connected with Broadband. &lt;/p&gt;
+
+&lt;p&gt;Sitting in San Francisco typing this on my MacBook Pro Retina connected to some obscenely high gigabit connection via wi-fi, it is really easy to forget that.&lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/7</id>
+    <published>2012-08-02T07:26:57Z</published>
+    <updated>2013-12-06T07:42:51Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/7"/>
+    <title>Alan Kay, Everyone</title>
+    <content>&lt;blockquote&gt;
+&lt;p&gt;I don’t have an enormous desire to help children, but I have an enormous desire to create better adults.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;— Alan Kay&lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/6</id>
+    <published>2012-08-01T08:32:18Z</published>
+    <updated>2013-12-06T07:39:10Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/6"/>
+    <title>How to get into Dev Bootcamp and whether or not you should</title>
+    <content>&lt;h3&gt;Update&lt;/h3&gt;
+
+&lt;p&gt;This post has gotten a lot of hits and I get a lot of emails from people who read it. Although I owe Dev Bootcamp a lot, I have to point out that my experience is &lt;strong&gt;barely relevant&lt;/strong&gt; any more. I graduated in the original cohort and I don&amp;#39;t think Bootcamp is what it was back then. I probably won&amp;#39;t be able to help you prepare for your interview or accurately describe my experience because it was all more than a year ago. &lt;/p&gt;
+
+&lt;p&gt;That said, you&amp;#39;re more than welcome to get in touch if you still want to. &lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;A lot of people are asking me about my experience at Dev Bootcamp, advice on how to apply, and how I’m doing since finishing the program. I’m still open to emailing and meeting up if you’re in San Francisco, but I wanted to write down some thoughts also. I also attached my entire application from back in November. That may help you understand what kind of people Shereef is looking for, but most likely it will only be useful as an anecdote, I would not recommend trying to glean anything from it.&lt;/p&gt;
+
+&lt;h3&gt;Should you do Dev Bootcamp?&lt;/h3&gt;
+
+&lt;p&gt;You should apply if you meet the following criteria:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;You love technology, computers, machines, programming, problem solving, learning, or feeling vulnerable. Love is a pretty strong word, and I don’t use it lightly. I think you should only do things if you love them, but when the investment is so high, it’s even more important that you really love one of these things. For me, I loved programming enough that I knew I wanted to learn more, but not enough that I could dedicate appropriate amount of time to it. Being in that sweet spot is important, because on one side, if you don’t love it enough, find something else to do, and on the other side, if you love it more than anything else in the world, there are plenty of resources available to learn on your own.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;You want a job as a developer. A few great points, all gathered from discussions in email threads or other conversations.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;If you want to learn to code so you can start a tech company, I think you’re better off hiring or cofounding with a dedicated developer. If you’re splitting your time thinking about building a product and building a company, you’re doing disservice to both. You can learn to program on the side to help you communicate with the developer, but 10 weeks at Dev Bootcamp is 10 weeks you could have been building and shipping.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;17 out of 20 people from my cohort are employed in some sort of technical capacity. 3 of those 17 are employed as teachers at Dev Bootcamp. Out of the remaining 3, one started App Academy, a Dev Bootcamp clone for iOS development, one started Hackstar Academy (A Dev Bootcamp for women focusing on Python), and one is enrolled in said Hackstar Academy. Although these numbers seem pretty good, it is true that they may not be representative of future cohorts. I have no idea what to expect of the current cohort, just as I had no idea what to expect out of my cohort.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Is DBC worth $12k?&lt;/h3&gt;
+
+&lt;p&gt;This is the biggest concern. I think if you meet the criteria in the previous question, the cost and the investment should not be relevant. I would support this blanket statement completely, in theory. But in practice, things are not so easy. In November of 2011, I had between $7 and $8k saved up in my bank account. That’s when I applied and was accepted into Dev Bootcamp. One foolish (but awesome) trip to New York and a 3 months later, I had about $4K left over. I didn’t really have a game plan for payment other than getting a mediocre job to make the $120 monthly installments. I wasn’t too worried, I knew I could teach tennis and make at last that much in a day if I needed to. San Francisco was much more expensive than I anticipated. By the time bootcamp was over, I had about $50 dollars left in the bank. Again, not a big deal in my land because I have a family and parents I can always count on financially.&lt;/p&gt;
+
+&lt;p&gt;When I accepted my acceptance to DBC, I had some vague idea that I would have literally no money to pay when the course ended, but that knowledge did not factor into my decision. I took it one step at a time. Fill out the form, hit the submit button, skype interview, book a flight, etc. If I had thought about whether or not I could afford it or if I wanted to give away 8 weeks of my life on one thing, I may never have filled out the form.&lt;/p&gt;
+
+&lt;p&gt;Would I apply for DBC now that it’s twice as expensive? Honestly, I&amp;#39;d think twice. Or ten times. I’m really bad at spending money on myself. I’m used to making do with what I have and learning things on my own. The number $12,000 scares me and even knowing how the program has completely changed my mind, it would be very difficult to convince myself to do it again at that price tag. If the course marketed their monthly installment plan a little more though, and made that number more digestable, it might get to the reasoning and logical part of my brain though.&lt;/p&gt;
+
+&lt;h3&gt;Which program should you apply for?&lt;/h3&gt;
+
+&lt;p&gt;I got this question only once, but it’s worth mentioning. Dev Bootcamp or Code Academy or Hacker School or Hungry Academy? Which one is right for me? I applied to both DBC and Code Academy and was accepted into both. I chose Dev Bootcamp for two reasons: (1) I didn’t want to spend February in Chicago. 4 years of Wisconsin winter were enough for me, and (2) Code Academy folks wouldn’t let me setup a payment plan, they wanted an upfront cash payment. I am generally wary of paying large chunks of money at the same time. Even if it’s cheaper to pay upfront, I prefer to space out payments into small packets. But which one should you choose? I would say that apart from little details like unsuitable dates, etc, it is irrelevant which one you choose. If you’re applying for one of these programs, you’re likely making a big career change and taking a big risk. At this vulnerable stage, it’s more important to make a decision than to make the right decision.&lt;/p&gt;
+
+&lt;h3&gt;Tips on Applying&lt;/h3&gt;
+
+&lt;p&gt;I’m attaching my application below. It’s nothing spectacular. I think my best applications have been the ones that I have put the least amount of effort into. They usually turn out to be the most honest and straightforward also. When I notice myself trying to hard to make myself seem appealing, it’s usually a disaster. In the case of DBC, I was half hoping I wouldn’t get accepted, so I wouldn&amp;#39;t have to make a huge change in my life. This helped me write a better application, I think.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Name:&lt;/strong&gt; Mehul Kar&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Phone Number:&lt;/strong&gt; (641) 814-****&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Age:&lt;/strong&gt; Usual response: I turn 35 every year in June. (real age: 22)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Email:&lt;/strong&gt; mehul.kar@gmail.com&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Twitter:&lt;/strong&gt; @mehulkar&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Blog:&lt;/strong&gt; blog.mehulkar.com *(edit: this doesn&amp;#39;t exist anymore)&lt;/p&gt;
+
+&lt;h4&gt;Please tell us about your education and employment history:&lt;/h4&gt;
+
+&lt;p&gt;I have a degree in Finance (summa cum laude) from UW-Whitewater. I don’t really enjoy the art of multiplying money though, I think it creates more problems than it solves. My first startup, FridgeWaves, rented appliances to University students and then used the money to make international microloans. Now I’m involved with starting a consulting company and building a community of South Asian students (CollegeDesis.com). My main source of income in the past few years while I was in school was from teaching tennis at a country club and coaching high school tennis teams.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Are you currently:&lt;/strong&gt; Unemployed but not looking&lt;/p&gt;
+
+&lt;h4&gt;Why are you applying to Dev Bootcamp?&lt;/h4&gt;
+
+&lt;p&gt;I’m applying to Dev Bootcamp because I want to learn how to code awesome things. I am teaching myself as much as I can over the internet, but I need a better learning environment. My couch has a dent in it the shape of my behind. Learning alone is really fun, but learning in a place where finding people to help at 3 am isn’t a hurdle is even better.&lt;/p&gt;
+
+&lt;p&gt;Also, I’d like to learn more about the principles and theory behind programming rather than just programming and I think I will only get that in an environment with people who know what they are doing.&lt;/p&gt;
+
+&lt;h4&gt;What is your background with computers/technology/programming?&lt;/h4&gt;
+
+&lt;p&gt;I taught myself Visual Basic when was 13ish and programmed an mp3 player software. There was a leprechaun on UI and 3 musical notes appeared out of his head on a timer when you played music. I personalized it and naively gave it as a christmas present to some friends who had no appreciation for it… Real Player was big back then.&lt;/p&gt;
+
+&lt;p&gt;Since then I’ve taught myself HTML and CSS. I also play around with Wordpress themes a lot so I can read and tinker with a few WP-specific PHP functions.&lt;/p&gt;
+
+&lt;p&gt;I can name a lot of other languages as well, but can’t code in them.&lt;/p&gt;
+
+&lt;h4&gt;The ideal candidate is someone who loves to tinker, and doesn’t easily give up. Can you tell us a story that exemplifies these qualities in you?&lt;/h4&gt;
+
+&lt;p&gt;Programming specific: I got into HTML/CSS when somehow I got a Webmaster position for a University organization. I knew HTML but no CSS then. My predecessor showed me how to use an FTP client and edit the website and warned me not to mess with the stylesheet. I obviously messed with the stylesheet and the website brokedown. I spent the next 4-8 hours tinkering with the code trying to figure out what I had done. Literally looking at and applying each line/style individually. I fixed it eventually. A year or so later I did the exact same thing with a Wordpress theme. I’ve probably read the entire Codex multiple times.&lt;/p&gt;
+
+&lt;p&gt;Non-programming example: I believe in iterative processes and crowdsourcing. Recently, I spend approximately 72 hours designing a T-shirt for CollegeDesis. I started with a blank template and wrote the name of the company on it in Arial. 50+ versions later (uploading each version to a private album on Facebook later), I finished with this: http://bit.ly/desiswag. About 10 versions through, I wanted to give the job to a real designer, but I figured doing it myself was more productive than waiting for someone else.&lt;/p&gt;
+
+&lt;h4&gt;What’s one thing you like about our website, and one thing we can do better?&lt;/h4&gt;
+
+&lt;p&gt;I love how the highlighted form element changes it’s background color. Great design.
+I don’t love the bold heading font. It makes me squint.
+I’m also pretty sure this is a Wufoo form, which means that whoever made this website decided not to reinvent the wheel and focus their energies on more important things. That’s the kind of people I want to learn from. (I’m actually certain this is a Wufoo form because I saw it in the stylesheet.)
+I don’t love how this question asks for only one thing.&lt;/p&gt;
+
+&lt;h4&gt;Please tell us something surprising or amusing that you have discovered&lt;/h4&gt;
+
+&lt;p&gt;The first letters of 5 consecutive months of the year spell JASON.&lt;/p&gt;
+
+&lt;p&gt;This blows my mind every time I think about it.&lt;/p&gt;
+
+&lt;h4&gt;Will you be looking for a job as a Rails Developer in the SF Bay Area after graduation?&lt;/h4&gt;
+
+&lt;p&gt;Yes&lt;/p&gt;
+
+&lt;h4&gt;If you don’t get a job through us, or don’t want to, how will you be paying your tuition?&lt;/h4&gt;
+
+&lt;p&gt;$7200 over five years ($120/month)&lt;/p&gt;
+
+&lt;h4&gt;Do you live in the San Francisco Bay Area&lt;/h4&gt;
+
+&lt;p&gt;No, but I will be moving there for the duration of bootcamp&lt;/p&gt;
+
+&lt;h4&gt;How did you hear about us?&lt;/h4&gt;
+
+&lt;p&gt;Hacker News post accessed via the Hacker Newsletter&lt;/p&gt;
+
+&lt;h4&gt;Anything else you would like us to know?&lt;/h4&gt;
+
+&lt;p&gt;I’m a PC person with an iPhone.&lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/5</id>
+    <published>2012-08-01T08:25:14Z</published>
+    <updated>2013-12-06T02:44:37Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/5"/>
+    <title>Failing At The Little Things</title>
+    <content>&lt;p&gt;I think everyone should practice being OK with failing by failing many times. That’s not a new topic.&lt;/p&gt;
+
+&lt;p&gt;More importantly, I think that if you’re going to practice failing, you should start with the simple, mundane things. For example, I have this (bad) habit of looking up how to pronounce words before using them. If I don’t know how to pronounce a word, I’ll generally find a way to avoid saying it. This saves me from sounding and feeling ridiculous.&lt;/p&gt;
+
+&lt;p&gt;But if I don’t consciously make an effort to be OK with taking the tiny risks, I think that will translate upwards into not being OK with taking the bigger risks.&lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/4</id>
+    <published>2012-08-01T08:05:12Z</published>
+    <updated>2013-12-06T00:35:12Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/4"/>
+    <title>I Forgot About The Crocodiles</title>
+    <content>&lt;p&gt;My cousin came back from Miami recently and he mentioned that he tried croc burgers there. It made me realize that &lt;em&gt;at least&lt;/em&gt; for the past six months I have not thought about crocodiles even once. And it&amp;#39;s not just that I haven&amp;#39;t thought about crocodiles, it&amp;#39;s that the entire concept of crocodiles had been removed from my being. &lt;/p&gt;
+
+&lt;p&gt;When they came up out of the blue (or should I say murky green), it was absolutely stunning.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;What else have I lost?&lt;/em&gt;&lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/3</id>
+    <published>2012-07-25T18:22:23Z</published>
+    <updated>2013-12-05T12:30:34Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/3"/>
+    <title>My First Ruby Script At Dev Bootcamp</title>
+    <content>&lt;pre&gt;&lt;code class="ruby"&gt;class Student
+    def initialize(name, energy)
+      @name = name
+      @energy_level = energy
+    end
+
+    def will_do_yoga?
+      tired? ? “Please do Yoga at home today” : “Go to Yoga”
+    end
+
+    def tired?
+      @energy_level &amp;lt; 2
+    end
+end
+
+# Call to Question
+Student.new(&amp;quot;mehul&amp;quot;, 1).will_do_yoga?
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/2</id>
+    <published>2012-07-25T06:51:50Z</published>
+    <updated>2013-12-06T06:45:26Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/2"/>
+    <title>There's No Point To This Post</title>
+    <content>&lt;p&gt;When I first became interested in tech startups a few years ago, I thought they were beyond my reach. Silicon Valley was a mythical place where cool things happened that I would tell my Midwestern friends about, but never take part in. When I finally started a business after writing a couple of business plans and bombing two or three elevator pitch competitions, I still felt distanced from what I assumed an &lt;em&gt;entrepreneur&lt;/em&gt; in New York or San Francisco went through. But somewhere in the corner of my mind, I also felt a little validated. I had provided a real service to real people for real money. &lt;/p&gt;
+
+&lt;p&gt;Then I learned to program and moved to San Francisco. And I met and heard from countless &lt;em&gt;tech&lt;/em&gt; entrepreneurs. And it became very apparent that a lot of them were grasping at thin air and constructing sand castles[1]. That&amp;#39;s not necessarily bad, but seeing Silicon Valley from up close, I&amp;#39;m become more and more underwhelmed by the culture. It may or may not be a bubble in the sense that it will explode, but I think it&amp;#39;s a bubble that it&amp;#39;s hard to look out of. &lt;/p&gt;
+
+&lt;p&gt;Outside of working at &lt;a href="http://www.mochaleaf.com"&gt;MochaLeaf&lt;/a&gt;, I spend most of my free time working on projects for &lt;a href="http://collegedesis.com"&gt;CollegeDesis&lt;/a&gt;. In April, I organized a &amp;quot;concert&amp;quot; on &lt;a href="http://turntable.fm/collegedesis"&gt;turntable.fm&lt;/a&gt; featuring 30+ South Asian A Cappella teams from around the country. Now, I&amp;#39;m organizing another concert featuring world class South Asian DJs. I&amp;#39;m expecting over a thousand people to show up. I&amp;#39;m working on a searchable database of student organizations and an events calendar that is actually useful.&lt;/p&gt;
+
+&lt;p&gt;I would never consider CollegeDesis to be a technology startup. But what&amp;#39;s really nice is that I can use technology to achieve the end goal.&lt;/p&gt;
+
+&lt;h4&gt;Footnotes&lt;/h4&gt;
+
+&lt;ol&gt;
+&lt;li&gt;There&amp;#39;s a very good argument to this in that it&amp;#39;s better to grasp at thin air and take risks than it is to saddle up for a long career ride at any desk job. For the most part I agree. But I also think it&amp;#39;s not really risky to make another project management app or another photo sharing app. There are also good arguments to this that I won&amp;#39;t get into. &lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/12</id>
+    <published>2012-03-08T00:00:00Z</published>
+    <updated>2013-12-06T06:45:25Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/12"/>
+    <title>I Don't Expect This To Work</title>
+    <content>&lt;blockquote&gt;
+&lt;p&gt;Jason: Will that work?&lt;/p&gt;
+
+&lt;p&gt;Me: I don’t expect this to work.&lt;/p&gt;
+
+&lt;p&gt;Andrew: I feel that way every time I do anything.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I think I’m getting better at programming. I used to have no idea what was going on most of the time. Now, most of the time I know my code won’t work. &lt;/p&gt;
+
+&lt;p&gt;A prospective summer student came in today. She wanted to know if DBC was a viable alternative to a Masters in CS. &lt;a href="http://twitter.com/timocratic"&gt;Tim&lt;/a&gt; spent a lot of time weighing the pros and cons of both alternatives, like he always does.&lt;/p&gt;
+
+&lt;p&gt;I told her that the only thing I’ve learned in the past four weeks is how little I really know.&lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/38</id>
+    <published>2012-03-07T03:23:00Z</published>
+    <updated>2013-12-05T12:31:10Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/38"/>
+    <title>The 5 Stages Of Question Asking</title>
+    <content>&lt;p&gt;Wrote this as an answer to &lt;a href="http://www.quora.com/Education/What-are-some-tips-and-tricks-for-high-school"&gt;this Quora question&lt;/a&gt; asking for tips and tricks for high school.&lt;/p&gt;
+
+&lt;h3&gt;Stage 1: Get Comfortable&lt;/h3&gt;
+
+&lt;p&gt;Start with the easy questions &amp;quot;Can I go to the bathroom&amp;quot;, &amp;quot;What day is the quiz&amp;quot;, etc. These will help you become comfortable with raising your hand and speaking while the whole room is listening. It doesn&amp;#39;t matter that you already know the answer. Try not to be obnoxious and ask the same questions over and over again or questions that were asked in the last 15 minutes. But for the latter, you can always start with an apology. &lt;/p&gt;
+
+&lt;h3&gt;Stage 2: Play Jeopardy&lt;/h3&gt;
+
+&lt;p&gt;Then move to questions that show that you are listening. These aren&amp;#39;t so much questions as they are restating what you just heard in the form of a question. You can start with, &amp;quot;Just to make sure I understand correctly...&amp;quot;. Like in &lt;a href="//www.en.wikipedia.org/wiki/Rubber_duck_debugging"&gt;rubber duck debugging&lt;/a&gt;, the point of these questions is to help you rephrase material, play with it in your head, and make sense of it from multiple angles. It seems unnecessary most of the time, but in hindsight, it is extremely useful. &lt;/p&gt;
+
+&lt;h3&gt;Stage 3: Probe&lt;/h3&gt;
+
+&lt;p&gt;Now you want to ask questions that augment the material at hand. The easiest of these are hypotheticals. It takes a bit of practice to not sound like an idiot when asking these, but that should not deter you. Say the question under your breath a few times before raising your hand. You can also pretend like you&amp;#39;re thinking aloud and then retract the question as soon as you ask it. The point of these questions isn&amp;#39;t to get an answer, the point is to ask the question and to explore the possibilities. These will probably get you the most amount of flak from your classmates. The important thing to keep in mind here is to let the teacher decide whether or not there is time to entertain the question. &lt;/p&gt;
+
+&lt;h3&gt;Stage 4: Challenge Authority&lt;/h3&gt;
+
+&lt;p&gt;When the teacher says something, ask why. Don&amp;#39;t believe something just because the teacher says so. Even if the answer to &amp;quot;why&amp;quot; is common knowledge. Discretion in these is advised, obviously. Sound curious, not impertinent. This is important. More importantly, be curious, not impertinent. &lt;/p&gt;
+
+&lt;p&gt;&lt;object width="100%" height="315"&gt;&lt;param name="movie" value="//www.youtube.com/v/4u2ZsoYWwJA?hl=en_US&amp;amp;version=3&amp;amp&amp;start=432;rel=0"&gt;&lt;/param&gt;&lt;param name="allowFullScreen" value="true"&gt;&lt;/param&gt;&lt;param name="allowscriptaccess" value="always"&gt;&lt;/param&gt;&lt;embed src="//www.youtube.com/v/4u2ZsoYWwJA?hl=en_US&amp;amp&amp;start=432;version=3&amp;amp;rel=0" type="application/x-shockwave-flash" width="100%" height="315" allowscriptaccess="always" allowfullscreen="true"&gt;&lt;/embed&gt;&lt;/object&gt;&lt;/p&gt;
+
+&lt;p&gt;In rare occasions you&amp;#39;ll get the opportunity to outright disagree with the teacher. Take it. In most scenarios you&amp;#39;ll be surprised because the teacher will actually be right (believe it or not, teachers aren&amp;#39;t stupid), and that might deter you in the future if you start believing the teacher is always right. Treat each question independently. Much like the outcome of rolling a die doesn&amp;#39;t depend on the last roll, treat each situation in which you might look like an idiot for wrongly disagreeing with a teacher is an independent scenario.&lt;/p&gt;
+
+&lt;h3&gt;Stage 5: Answer Questions&lt;/h3&gt;
+
+&lt;p&gt;Hopefully, your behavior will encourage question-asking from your peers. I&amp;#39;ve found that the more questions I asked, the more it encouraged others, and the more a lecture turned into a class discussion. Don&amp;#39;t be afraid to answer someone&amp;#39;s question without raising your hand or address someone directly in the classroom. I&amp;#39;ve found that a lot of teacher&amp;#39;s don&amp;#39;t mind sacrificing order in the classroom for this type of discussion as long as it doesn&amp;#39;t turn violent. It reduces the amount of energy they need to spend in that hour and it usually leads to better class engagement and to the general level of satisfaction after the period is over. &lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;There you have it. The 5 stages. Especially in high school, if you have a choice, err on the side of obnoxious (within reason). In retrospect, I wasn&amp;#39;t as vocal in class until senior year of high school. I was more quiet in my freshman year of college, but then gained a lot of confidence (and respect from classmates/professors) in the last 3 years of my college career. One nice thing that came out of being vocal and asking a lot of questions was that I could usually skip homework reading and basically get professors or classmates to summarize entire chapters as answers to questions. This occasionally also ended in disaster and embarrassment when I was called out, but that sting doesn&amp;#39;t last as long as you would think.&lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/13</id>
+    <published>2011-09-11T16:00:00Z</published>
+    <updated>2013-12-06T06:45:25Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/13"/>
+    <title>The Victories No One Cares About</title>
+    <content>&lt;p&gt;We have this crazy, insatiable need to share the happy moments of our lives. A majority of communication is based on this desire to share. Unfortunately, in the grand scheme of things, most of these happy moments are tiny. More importantly, they are personal and hard for other people to relate to.&lt;/p&gt;
+
+&lt;p&gt;As a tennis instructor, my success is in seeing tiny improvements in technique, changes that are barely visible to the naked eye. Most of the time, the player doesn’t notice the difference either. As an amateur web designer, my success is in writing &lt;a href="http://37signals.com/svn/posts/2738-refactoring-for-designers"&gt;clean and efficient code&lt;/a&gt; that I can understand one year later and that I can reuse in the future as well.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately,  a completely refactored website and a tweaked forehand are only visible to me. The users of my website don’t care that the architecture of the code is clean and efficient if their experience doesn’t change. My clients don’t care that the tweaked forehand will allow them to play injury-free for an extra few years if their shots aren’t landing inside the lines.&lt;/p&gt;
+
+&lt;p&gt;Those little victories are reserved only for me.&lt;/p&gt;
+
+&lt;p&gt;I think it’s really interesting that these victories, that no one cares about, are the ones that give me the greatest joy. They are the ones that make me throw up my arms in the air in a silent cheer and then lower them again when others give me strange looks.&lt;/p&gt;
+
+&lt;p&gt;We have this crazy, insatiable need to share the small victories in our lives. Fortunately or unfortunately, no one cares about many of these small victories.&lt;/p&gt;
+
+&lt;p&gt;Maybe that makes them all the more valuable.&lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/34</id>
+    <published>2010-04-27T00:00:00Z</published>
+    <updated>2013-12-05T00:14:20Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/34"/>
+    <title>In Defense of Capitalism</title>
+    <content>&lt;p&gt;Let’s start with some definitions&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Capitalism&lt;/strong&gt;: economic system characterized by private or corporate ownership of capital goods&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Capital Goods&lt;/strong&gt;:…accumulated possessions calculated to bring in income&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Income&lt;/strong&gt;: A gain or recurrent benefit usually measured in money derived from capital or labor&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Money&lt;/strong&gt;: A measure of value&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Value&lt;/strong&gt;: relative worth, utility, or importance&lt;/p&gt;
+
+&lt;p&gt;Ignoring context, capitalism is an economic system characterized by an exchange of relative worth.&lt;/p&gt;
+
+&lt;p&gt;So when you shun capitalism for creating social classes, or when you idolize Robin Hood, or when you decide to dedicate your life to volunteerism because it’s the only way to “give back”, know this:&lt;/p&gt;
+
+&lt;p&gt;the capitalistic system is not to blame. Rather, it is the over-valuation of currency that makes “businessmen” collect coin instead of value.&lt;/p&gt;
+
+&lt;p&gt;Currency was developed to make it easier to exchange apples and oranges. To make it easier to purchase goods and services.&lt;/p&gt;
+
+&lt;p&gt;When &lt;a href="http://sethgodin.typepad.com/seths_blog/2010/04/quid-pro-quo.html"&gt;Seth Godin&lt;/a&gt; says that in the online world, there is no exchange of value, because there is no cash flow, he is wrong. It’s a Venn diagram where cash flow exchanges are contained inside exchanges of value. The inside circle might be almost as large as the outside, but it is not concurrent.&lt;/p&gt;
+
+&lt;p&gt;Greed for value is excusable, even necessary. Because greed for value includes greed for satisfaction, happiness, and fulfillment. Those things are valuable. They would be valuable even without currency.&lt;/p&gt;
+
+&lt;p&gt;Greed for currency is unreasonable. Because currency has no meaning in a vacuum.&lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.mehulkar.com,2005:Post/35</id>
+    <published>2009-11-21T00:00:00Z</published>
+    <updated>2013-12-05T23:16:11Z</updated>
+    <link rel="alternate" type="text/html" href="http://www.mehulkar.com/posts/35"/>
+    <title>The Nature of God</title>
+    <content>&lt;p&gt;&lt;em&gt;This was the first blog post I ever wrote. It was the reason I started a blog&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;“Do you believe in God?” &lt;/p&gt;
+
+&lt;p&gt;For most, the answer is a simple “yes” or “no”. One either believes that they believe in God, or that they don&amp;#39;t. Regardless, the question is only a gateway into a discussion of what the concept of God entails. Notice that I do not begin with a question of religion or spirituality; both, I think, are tangential. Also notice that the answer to this question is irrelevant because the idea of God defies faith. One can choose whether or not to believe, but the beauty of God is beyond the realm of choice and belief.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;I have found God. I have understood God. I have known God.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Apart from a bold presumption, the claim bears no weight. The remainder of this article is an attempt to explain the phenomenon of God as I have understood it. As already premised, this phenomenon is beyond the realm of choice and belief, so, in reality, the conclusion of forthcoming argument is void to begin with. But it is human nature for action to follow reason and thought to follow logic, so I must try. If nothing else, my writing will further cement this ideology in my brain and will serve as a point of referral for future debates--my personal holy text, if you will. &lt;/p&gt;
+
+&lt;p&gt;And so it begins…&lt;/p&gt;
+
+&lt;p&gt;I started with the question “do you believe in God?” The next logical question is “what is God?” I dislike the word “God” for the baggage it carries. For centuries, and across cultures and religions, this “God” implies a force or entity that has the power to decide the fate of “His” creation, i.e. everything. For the purpose of illustration and education, we give “God” humanlike characteristics: a face, a body, a voice, a language. We give him emotions, likes, and dislikes. Sometimes we give him weapons, sometimes we give him books. Anything to portray His superiority over mankind. And through it all we describe him as pure love and righteousness. It was only a matter of time before the description and the image mingled and the paradox formed. “If God loves his children, then why does He let us suffer? If God is all-powerful, why doesn’t he abolish poverty? If God is omniscient, why can’t he see our pain?”&lt;/p&gt;
+
+&lt;p&gt;Obviously, there is some mistake, because there is no satisfactory response to these questions.&lt;/p&gt;
+
+&lt;p&gt;The error lies in our attempt to make God human. We give God the power to choose, we give God emotions and likes and dislikes and say that he holds the reins to our lives. We assume that the power to decide is the ultimate power and if God holds that power, he must be superior. Ironically, it is this freedom to choose that separates us from the glory of God. It is this freedom that ultimately makes us human! But I digress. So then what or who or even why is God, if not to hold our puppet strings?&lt;/p&gt;
+
+&lt;p&gt;The reality of God is an experience. It is that sense of unbounded, pure happiness one glimpses in which one transcends the limitations of time and space. The nuances of the world become obsolete and one is content. There are many names for this experience, and many more ways in which one can have this experience. Musicians call it harmony, athletes call it the zone, mathematicians call it logic, scientists call it the source, priests call it faith, poets call it love, spiritualists call it silence, lovers call it trust, and artists call it beauty. I call it God.&lt;/p&gt;
+
+&lt;p&gt;There is no absolute definition for this experience except that when one has it, one has no other desires. Even the desire for the experience to never end does not exist. &lt;/p&gt;
+
+&lt;p&gt;Consider a child. Innocent. Free. Imagine the child&amp;#39;s experience. That experience of purity is the essence of God—wholesome and naturally uplifting. It strips one down to the core. It wipes away the past and the future. It purges pride and ignorance. It is elation and pure beauty. It is Aristotle’s First Mover, Plato’s Good, and Einstein’s unified field. It is the unchanging reality that persists through eons of change. It is the foundation for relativity. It is an all consuming state of being, one that is usually mistaken as a pathway to God.&lt;/p&gt;
+
+&lt;p&gt;I claim that it is not the path, it is the destination. To discover this experience is the purpose of life, and to live it is the goal.&lt;/p&gt;
+</content>
+    <author>
+      <name>Mehul Kar</name>
+    </author>
+  </entry>
+</feed>
