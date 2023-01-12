@@ -1,14 +1,57 @@
-window.fetchWebMentions = function (pageURL) {
-  const postUrl = `https://www.mehulkar.com${pageURL}`;
+const HOST = "https://webmention.io/api";
 
-  if (!postUrl) {
+function getAllVersionsOfURL(pageURL) {
+  const fullURL = `https://www.mehulkar.com${pageURL}`;
+
+  const original = new URL(fullURL);
+  const copyForTrailingSlash = new URL(fullURL);
+
+  const all = [original.toString()];
+
+  // Add with and without trailing slash
+  if (original.pathname.endsWith("/")) {
+    copyForTrailingSlash.pathname = copyForTrailingSlash.pathname.replace(
+      /\/$/,
+      ""
+    );
+    all.push(copyForTrailingSlash.toString());
+  } else {
+    copyForTrailingSlash.pathname = copyForTrailingSlash.pathname + "/";
+    all.push(copyForTrailingSlash.toString());
+  }
+
+  // TODO: handle arbitrary query params?
+
+  return all;
+}
+
+window.fetchWebMentions = function (pageURL) {
+  if (!pageURL) {
     return;
   }
 
-  const HOST = "https://webmention.io/api";
+  const postUrls = getAllVersionsOfURL(pageURL);
 
-  const countURL = `${HOST}/count?target=${postUrl}`;
-  const mentionsURL = `${HOST}/mentions.jf2?target=${postUrl}&sort-by=published&sort-dir=up`;
+  const targetSearchParams = new URLSearchParams();
+  for (const url of postUrls) {
+    targetSearchParams.append("target[]", url);
+  }
+
+  const countEndpoint = new URL(`${HOST}`);
+  countEndpoint.pathname = "/api/count";
+  for (const [key, val] of targetSearchParams.entries()) {
+    countEndpoint.searchParams.append(key, val);
+  }
+  const countURL = countEndpoint.toString();
+
+  const mentionEndpoint = new URL(HOST);
+  mentionEndpoint.pathname = "/api/mentions.jf2";
+  for (const [key, val] of targetSearchParams.entries()) {
+    mentionEndpoint.searchParams.append(key, val);
+  }
+  mentionEndpoint.searchParams.append("sort-by", "published");
+  mentionEndpoint.searchParams.append("sort-dir", "up");
+  const mentionsURL = mentionEndpoint.toString();
 
   // count
   fetch(countURL)
