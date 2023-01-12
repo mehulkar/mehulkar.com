@@ -96,9 +96,9 @@ eleventyExcludeFromCollections: true
 
 <script>
   fetch("/api/recent").then(res => res.json()).then(({ film, tweet, annotation }) => {
-    setFilmHTML(film);
-    setTweetHTML(tweet);
-    setAnnotationHTML(annotation);
+    if (film) { setFilmHTML(film);}
+    if (tweet) { setTweetHTML(tweet);}
+    if (annotation) { setAnnotationHTML(annotation);}
   });
 
   function setFilmHTML(data) {
