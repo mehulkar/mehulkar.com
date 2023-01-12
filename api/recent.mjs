@@ -9,6 +9,7 @@ export default async function handler(req, res) {
       getAnnotation(),
       getTweet(),
     ]);
+
     return res.status(200).json({
       film,
       annotation,

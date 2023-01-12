@@ -49,6 +49,7 @@ async function api(url) {
     return res.json();
   }
 
+  console.error("Error", res.statusText);
   return Promise.reject(res.statusText);
 }
 
