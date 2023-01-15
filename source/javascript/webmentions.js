@@ -129,6 +129,13 @@ window.fetchWebMentions = function (pageURL) {
         likes.forEach((entry) => {
           const clone = template.content.cloneNode(true);
           clone
+            .querySelector("#wm-reply-author-url")
+            .setAttribute("href", entry.author.url);
+          clone
+            .querySelector("#wm-reply-author-url")
+            .setAttribute("target", "_blank");
+
+          clone
             .querySelector("#wm-reply-author-photo")
             .setAttribute("src", entry.author.photo);
           clone
