@@ -1,7 +1,7 @@
 ---
 title: Neat Recursion Trick with UNIX Signals
 date: 2017-02-08
-tags: programming, python
+tags: programming, python, unix
 ---
 
 I learned a neat little trick to do recursion with UNIX signals

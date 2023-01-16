@@ -1,7 +1,7 @@
 ---
 title: Distributing Javascript Libraries
 date: 2020-05-09
-tags: programming, javascript
+tags: programming, javascript, node.js
 ---
 
 I've been learning about bundling, compiling, and distributing Javascript libraries for the last
