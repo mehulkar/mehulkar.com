@@ -14,7 +14,7 @@ import signal
 import time
 
 class MyClass:
-  def main(signum=None, frame=None):
+  def main(self):
     # bind this function as a callback to SIGALARM
     signal.signal(signal.SIGALRM, self.main)
 
@@ -88,8 +88,6 @@ def main():
   ## create subprocess
   subprocess.call(['python', 'child.py'])
 
-  signal.alarm(10)
-
 if __name__ == '__main__':
   MyClass().main()
   while True:
@@ -126,5 +124,3 @@ programming with multiple processes.
 
 I'm not sure how contrived this example is--at least a little bit--
 but I thought it was a clever implementation.
-
-Enjoy!
