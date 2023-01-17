@@ -140,6 +140,9 @@ I stopped here, because I _think_ I have a good understanding of what needs to h
 prototype (I was thinking it may be available somewhere else other than the arguments
 for the signal handler I registered with `process.on`).
 
+I've filed [an issue][12] in the Node.js Help repository to get an understanding of how I would "make
+it work" locally, if I needed to.
+
 If you are reading this and know Node.js and/or Unix, please tell me if you have
 more information about any of this!
 
@@ -161,3 +164,4 @@ realize there was a README file in there.
 [9]: https://twitter.com/cjihrig/status/1573396979954380801
 [10]: https://github.com/nodejs/node/pull/34648
 [11]: https://github.com/nodejs/node/tree/main/deps/uv
+[12]: https://github.com/nodejs/help/issues/4075
