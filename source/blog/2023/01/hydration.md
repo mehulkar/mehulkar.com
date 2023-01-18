@@ -11,7 +11,7 @@ Henry's article "How to make a website" had this little, innocuous fragment:
 [source](https://henry.codes/writing/how-to-make-a-website/)
 
 In the Modern Frontend landscape, "hydration" is typically referring
-to attaching event listeners to server-side rendered HTML and setting "state" and updating
+to attaching event listeners to server-side rendered HTML and updating
 in-memory data structures that reflect the "state" of the application based on some serialzed
 data from the server.
 
