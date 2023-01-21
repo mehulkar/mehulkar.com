@@ -4,7 +4,7 @@ date: 2023-01-20
 tags: programming, debugging, programming-journal
 ---
 
-I wish this was [one of those posts where I write about debugging an issue](/blog/category/debuging)
+I wish this was [one of those posts where I write about debugging an issue](/blog/category/debugging)
 and figuring it out. This is the other kind. Where I debug something and eventually give up.
 
 ## How it started
