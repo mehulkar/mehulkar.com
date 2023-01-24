@@ -62,9 +62,10 @@ window.fetchWebMentions = function (pageURL) {
         document.getElementById(
           "wm-reply-count"
         ).innerText = `(${res.type.reply})`;
-        document.getElementById(
-          "wm-like-count"
-        ).innerText = `(${res.type.like})`;
+
+        document.getElementById("wm-like-count").innerText = `${
+          res.type.like
+        } like${res.type.like.length === 1 ? "" : "s"}`;
       }
     });
 
@@ -98,22 +99,28 @@ window.fetchWebMentions = function (pageURL) {
         replies.map((entry) => {
           const ts = new Date(entry.published);
           const clone = template.content.cloneNode(true);
+          console.log("entry", entry);
           clone.querySelector("#wm-reply-text").innerHTML = entry.content.html;
+
           clone
             .querySelector("#wm-reply-author-photo")
             .setAttribute("src", entry.author.photo);
           clone
             .querySelector("#wm-reply-author-photo")
             .setAttribute("alt", `${entry.author.name}`);
+
           clone.querySelector(
             "#wm-reply-author"
           ).innerHTML = `<a href="${entry.author.url}">${entry.author.name}</a> said...`;
+
           clone.querySelector(
             "#wm-reply-date"
           ).innerHTML = `<time>${fullDate.format(ts)}</time>`;
+
           clone.querySelector(
             "#wm-reply-link"
           ).innerHTML = `<a target="_blank" href="${entry.url}">🔗</time>`;
+
           listEl.appendChild(clone);
         });
 

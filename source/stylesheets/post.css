@@ -142,10 +142,32 @@ article blockquote p code {
   font-size: 0.9em;
 }
 
+article img:not(article header *) {
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+article header .wm-likes ul li,
+article header .wm-likes ul li a {
+  display: inline-block;
+}
+
+article header .wm-likes ul li {
+  list-style: none;
+  margin-bottom: 0;
+}
+
+article header .wm-likes ul > li:not(:first-child) {
+  margin-left: -20px;
+  transition: margin 0.1s ease-in-out 0.1s;
+}
+
+article header .wm-likes ul:hover > li:not(:first-child) {
+  margin-left: -10px;
+  /* transition: margin 0.1s ease-out 0.1s; */
+}
 
 article img {
-  margin: 0 auto 1rem;
-  display: block;
   border: solid 1px var(--image-border-color);
   border-radius: 2%;
 }

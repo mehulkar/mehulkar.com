@@ -6,11 +6,19 @@ layout: layout.njk
   <article class='mb3 mw7 center'>
     <header class='bb b--black-10 mv3'>
       <h3 class='f5 fw2 mb1'>{{page.date | fullDate }}</h2>
-      <h1 class='fw3 mb2 mt0 post--title'>{{title}}</h1>
+      <h1 class='fw3 mb1 mt0 post--title'>{{title}}</h1>
+      <section class="mb3">
+        {% for tag in (tags | splitTags)  %}
+          {{tag | tagLink | safe }}
+        {% endfor %}
+      </section>
 
-      {% for tag in (tags | splitTags)  %}
-        {{tag | tagLink | safe }}
-      {% endfor %}
+      <section id="wm-likes" class="wm-likes wm-hidden flex">
+        <ul class="mb0"></ul>
+        <p id="wm-like-count" class="ml2 mb0"></p>
+      </section>
+
+
     </header>
 
     {{content | safe }}
@@ -25,20 +33,17 @@ layout: layout.njk
 
 {# TODO: looks bad when there are no replies, likes get centered #}
 <aside id="webmentions" class="webmentions mb3">
-  <section id="wm-likes" class="wm-likes wm-hidden mw7 center">
-    <h2>Likes <span id="wm-like-count"></span></h2>
-    <ul></ul>
-  </section>
-
   <section id="wm-replies" class="wm-replies wm-hidden mw7 center">
     <h2>Replies <span id="wm-reply-count"></span></h2>
     <ul></ul>
   </section>
 
   <template id="wm-like">
-    <a href="" id="wm-reply-author-url">
-      <img alt="" id="wm-reply-author-photo" class="wm-reply-author-photo mr1" width="40" height="auto" src="">
-    </a>
+    <li>
+      <a href="" id="wm-reply-author-url">
+        <img alt="" id="wm-reply-author-photo" class="wm-reply-author-photo" width="25" height="auto" src="">
+      </a>
+    </li>
   </template>
 
   <template id="wm-reply">
