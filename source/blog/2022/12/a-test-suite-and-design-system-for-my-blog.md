@@ -19,10 +19,11 @@ I had noticed this myself some time ago, but forgot to do anything about it. Oop
 
 So this article is effectively a test suite and a design system.
 
-Much like a test suite, if this
-article looks ok, I can assume the website is ok. And even more like a test suite, if I notice
-something on the website that _doesn't_ look ok, I will incorporate that _type_ of thing into
-this article.
+Much like a test suite, if this article looks ok, I can assume the website is ok. And even more like
+a test suite, if I notice something on the website that _doesn't_ look ok, I will incorporate that
+_type_ of thing into this article. In the words of Steve Maguire<sup>1</sup>:
+
+> Never allow the same bug to bite you twice
 
 Like a design system, I will also expect the elements of this page to look ok on different screen
 sizes, in dark mode, etc. If I was to overengineer this effort, I could write custom components
@@ -55,6 +56,7 @@ Here's a list of things this article accounts for:
   - Mastodon
 - In-line code
 - Block code
+- Footnotes
 
 ### TODO
 
@@ -62,7 +64,6 @@ And a list of things I haven't incorporated yet:
 
 - Bold text
 - Images
-- Blockquotes
 - Headings: 4
 - Embeds:
   - Twitter
@@ -113,6 +114,11 @@ I could also do some more advanced things like
     Safari has the ability to disable stylesheets from the `Develop` menu. This can be a
     good way to check things like the downloaded image size and whether your html is semantic.
 
+---
+
+Foototes
+
+1. I definitely DuckDuckGo'd "quotes about software testing" so I could use a `blockquote`.
 
 [1]: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties
 [2]: https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode

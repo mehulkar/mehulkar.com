@@ -1,9 +1,16 @@
 :root {
+  color-scheme: light dark;
+
+  /* https://nerdy.dev/custom-prop-categories */
+
+  /* Tokens */
   --base-color: #39f;
   --link-hover-color: #0055b3;
-  --blue-1: hsl(200, 83%, 77%);
-  --blue-2: hsl(200, 83%, 93%);
+  --blue-1: hsl(200, 83%, 78%);
+  --blue-2: hsl(200, 83%, 98%);
   --paragraph-mb: 1.5rem;
+
+  /* House Props */
   --text-color: #333;
   --background-color: #fff;
   --border-color: rgba(0, 0, 0, 0.1);
@@ -11,15 +18,19 @@
   --pill-background-color-hover: #858585;
   --pill-background-color-inactive: #eee;
   --pill-text-color-inactive: #999;
-  --code-text-color: #333;
+  --code-text-color: hsl(200, 83, 76%);
   --header-border-color: #36f;
   --book-shadow-color: #333;
-  color-scheme: light dark;
   --image-border-color: darkgray;
+  --aside-border: gold;
+  --aside-text-color: var(--code-text-color);
+  --aside-background-color: hsl(60,100%,83%);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --blue-2: hsl(200, 83%, 19%);
+    --code-text-color: hsl(200, 83, 76%);
     --background-color: #222;
     --border-color: rgba(255, 255, 255, 0.3);
     --text-color: #ebebeb;
@@ -27,10 +38,10 @@
     --pill-background-color-hover: #555;
     --pill-background-color-inactive: #eee;
     --pill-text-color-inactive: #777;
-    --code-text-color: #333;
     --header-border-color: #eee;
     --book-shadow-color: #ccc;
     --image-border-color: gray;
+    --aside-background-color: hsl(60,100%,24%);
   }
 }
 
@@ -85,9 +96,15 @@ body main ol,
 body main ul {
   margin-left: 3rem;
 }
+
+body main ul ul,
+body main ol ol {
+  margin-left: 1.5rem;
+}
+
 body main ol li,
 body main ul li {
-  margin-bottom: 1rem;
+  margin-bottom: 0.25rem;
 }
 
 header.site-header {

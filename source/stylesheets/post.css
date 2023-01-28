@@ -37,10 +37,10 @@ article hr {
 }
 
 article aside {
-  border: solid 1px gold;
+  border: solid 1px var(--aside-border);
+  color: var(--aside-text-color);
   border-radius: 0.25rem;
-  background: #ffa;
-  color: var(--code-text-color);
+  background: var(--aside-background-color);
   padding: 1rem;
   margin-right: 2em;
   margin-left: 2em;
@@ -126,7 +126,6 @@ article blockquote {
   background-color: var(--blue-2);
   color: var(--code-text-color);
   border-radius: 0 8px 8px 0;
-  box-shadow: 3px 3px 0px aliceblue;
 }
 
 article blockquote p {
