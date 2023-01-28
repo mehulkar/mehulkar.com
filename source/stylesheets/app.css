@@ -249,7 +249,6 @@ figure#tweet, figure#feedly-annotation {
   background-color: var(--blue-2);
   color: var(--code-text-color);
   border-radius: 0 8px 8px 0;
-  box-shadow: 3px 3px 0px aliceblue;
 }
 
 figure#tweet p, figure#feedly-annotation p {
@@ -319,10 +318,6 @@ figure#tweet figcaption cite, figure#feedly-annotation figcaption cite {
 .home aside ul {
   list-style: none;
   margin-left: 0;
-}
-
-.home aside ul li {
-  border-bottom: solid 1px var(--blue-1);
 }
 
 .home aside ul p {

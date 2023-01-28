@@ -7,54 +7,22 @@ const TOKEN = process.env.FEEDLY_ACCESS_TOKEN;
 const API_HOST = "https://cloud.feedly.com";
 const API_VERSION = "v3";
 
-// Get single annotation
-async function getRecentAnotation() {
-  // Use API to get last 20 highlights
-  const { entries } = await api(
-    `${API_HOST}/${API_VERSION}/annotations/journal`
-  );
-
-  const shuffled = shuffle(entries);
-  const annotation = shuffled[0];
-
-  // .annotation key seems to have all the data we need
-  // There is also an `_annotation` key that seems to be exactly the same, not sure why it exists
-  // but we won't use it.
-  // Other top level keys are: id, entryId, author, and created.
-  // TODO: add `created` key to show how recently I annotated.
-  return annotation.annotation;
-}
-
-// get entry
-async function getEntry(entryId) {
-  const entries = await api(
-    `${API_HOST}/${API_VERSION}/entries/${encodeURIComponent(entryId)}`
-  );
-  const [entry] = entries;
-
-  console.log(`${entries.length} entries for ${entryId}`, entries);
-
-  return entry;
-}
-
-async function api(url) {
-  const res = await fetch(url, {
-    headers: {
-      Authorization: `Bearer ${TOKEN}`,
-    },
-  });
-
-  console.log("Fetching", url);
-  if (res.ok) {
-    return res.json();
+export async function getAnnotation() {
+  let annotation;
+  try {
+    annotation = await getRecentAnotation();
+  } catch (e) {
+    console.log("[feedly error]", e);
   }
 
-  console.error("Error", res.statusText);
-  return Promise.reject(res.statusText);
-}
+  if (!annotation) {
+    console.log("returning something went wrong");
+    return {
+      text: "⚠️ Something went wrong",
+      timestamp: new Date().toISOString(),
+    };
+  }
 
-export async function getAnnotation() {
-  const annotation = await getRecentAnotation();
   console.log("annotation", annotation);
   const entry = await getEntry(annotation.entryId);
 
@@ -74,4 +42,45 @@ export async function getAnnotation() {
   }
 
   return data;
+}
+
+// Get single annotation
+async function getRecentAnotation() {
+  // Use API to get last 20 highlights
+  const { entries } = await api(
+    `${API_HOST}/${API_VERSION}/annotations/journal`
+  );
+
+  const shuffled = shuffle(entries);
+  const annotation = shuffled[0];
+
+  // .annotation key seems to have all the data we need
+  // There is also an `_annotation` key that seems to be exactly the same, not sure why it exists but we won't use it.
+  // Other top level keys are: id, entryId, author, and created.
+  // TODO: add `created` key to show how recently I annotated.
+  return annotation.annotation;
+}
+
+// get entry
+async function getEntry(entryId) {
+  const entries = await api(
+    `${API_HOST}/${API_VERSION}/entries/${encodeURIComponent(entryId)}`
+  );
+  // Return first one
+  return entries[0];
+}
+
+async function api(url) {
+  const res = await fetch(url, {
+    headers: {
+      Authorization: `Bearer ${TOKEN}`,
+    },
+  });
+
+  if (res.ok) {
+    return res.json();
+  }
+
+  console.error("Error:", res.status, res.statusText);
+  return Promise.reject(res.statusText);
 }
