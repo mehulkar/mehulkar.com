@@ -91,10 +91,7 @@ This is powerful for a couple reasons:
 
 
 --------------------------------------------------------------------------------
-
-Every platform has some form of integration with other platforms already. In
-fact, many of them have entire teams to support these integrations. Why not
-implement a protocol instead? M.G. Siegler says in [an article of the same name][1]:
+M.G. Siegler says in [an article of the same name][1]:
 
 > Mastodon brought a protocol to a product fight
 
@@ -103,5 +100,10 @@ economic reason for them to prefer a product that implements a protocol over a
 product that doesn't. But a product _team_, that's another story. Maybe,
 developing a protocol *is* better than developing a hundred different
 integrations.
+
+Every platform has some form of integration with other platforms already. In
+fact, many of them have entire teams to support these integrations. Why not
+implement a protocol instead?
+
 
 [1]: https://500ish.com/mastodon-brought-a-protocol-to-a-product-fight-ba9fda767c6a
