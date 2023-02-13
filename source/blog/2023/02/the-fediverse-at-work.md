@@ -5,10 +5,11 @@ tags: fediverse
 ---
 
 One of the advantages of the Fediverse is the interoperability of services
-through the ActivityPub and ActivityStream protocols. The promise is that a
-Twitter user could follow an Instagram account, and both could favorite content
-from YouTube. Or, rather: a Mastodon user could follow a Pixelfed account, and
-both could favorite content on PeerTube.
+through the [ActivityPub](https://www.w3.org/TR/activitypub/) and
+[ActivityStream](https://www.w3.org/TR/activitystreams-core/) protocols. The
+promise is that a Twitter user could follow an Instagram account, and both could
+favorite content from YouTube. Or, rather: a [Mastodon](https://joinmastodon.org/) user could follow a[
+Pixelfed](https://pixelfed.org/) account, and both could favorite content on [PeerTube](https://joinpeertube.org/).
 
 This is “cool”--and I'm politically and philosophically amenable to the idea
 that a utopian digital society has no walled gardens--but if I'm being honest,
