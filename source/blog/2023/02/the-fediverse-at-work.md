@@ -62,18 +62,18 @@ comments displayed on a Figma design.
 
 One of the challenges of the way we track work today is that it's never clear
 *where* the Source of Truth is. If you have something to say about a project,
-should you comment on the Notion doc that started it all? Should you start a
-thread a new thread in Slack? Review the Pull Request? **The fediverse turns
-this upside down**. Instead of designating a source of truth among many
-platforms, it's *actually* a multiplayer system. You can react and reply to
-entities from any platform and each client can present it the way it wants to.
-An activity may *start* on a platform, but after that it's a series of
-interactions from any client-server combination. Notion can participate. Loom
-can participate. Figma and Github can participate. Heck, you could participate
-from your command line if you really wanted. That's really the key. Platforms
-have their own entity models, but they are *participants* in the same universe.
-And they can do this without developing custom integrations for every platform
-they want to integrate with.
+should you comment on the Notion doc that started it all? Should you start a new
+thread in Slack? Review the Pull Request? **The fediverse turns this upside
+down**. Instead of designating a source of truth among many platforms, it's
+*actually* a multiplayer system. You can react and reply to entities from any
+platform and each client can present it the way it wants to. An activity may
+*start* on a platform, but after that it's a series of interactions from any
+client-server combination. Notion can participate. Loom can participate. Figma
+and Github can participate. Heck, you could participate from your command line
+if you really wanted. That's really the key. Platforms have their own entity
+models, but they are *participants* in the same universe. And they can do this
+without developing custom integrations for every platform they want to integrate
+with.
 
 As an individual contributor, on the other hand, you can participate in this
 universe through any of these platforms. if you want to live in Github, you
