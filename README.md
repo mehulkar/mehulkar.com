@@ -16,6 +16,13 @@ pnpm i
 pnpm start
 ```
 
+## Build locally
+
+```bash
+npm i -g turbo
+turbo build
+```
+
 ## Deploy
 
 The `main` branch is auto deployed by Vercel:
