@@ -7,7 +7,7 @@ specifiers:
   eleventy-plugin-activity-pub: ^0.1.0
   esbuild: '0.16'
   rss-parser: ^3.12.0
-  turbo: ^1.6.3
+  turbo: 1.9.4-canary.4
   twitter-api-sdk: ^1.0.9
   twitter-text: ^3.1.0
   undici: ^5.14.0
@@ -25,7 +25,7 @@ devDependencies:
   '@11ty/eleventy-plugin-syntaxhighlight': 3.2.2
   eleventy-plugin-activity-pub: 0.1.0
   esbuild: 0.16.11
-  turbo: 1.6.3
+  turbo: 1.9.4-canary.4
   web-vitals: 3.1.0
 
 packages:
@@ -1712,65 +1712,65 @@ packages:
     resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
     dev: false
 
-  /turbo-darwin-64/1.6.3:
-    resolution: {integrity: sha512-QmDIX0Yh1wYQl0bUS0gGWwNxpJwrzZU2GIAYt3aOKoirWA2ecnyb3R6ludcS1znfNV2MfunP+l8E3ncxUHwtjA==}
+  /turbo-darwin-64/1.9.4-canary.4:
+    resolution: {integrity: sha512-FTt1aJBJEqCAmuD+kCzz6bUMX0rwFgjRUYmbecpFEkNqnbAfMrJc+e8vbHsAxhVvwQ27N0mbPEiSuBl0vtDDyg==}
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-darwin-arm64/1.6.3:
-    resolution: {integrity: sha512-75DXhFpwE7CinBbtxTxH08EcWrxYSPFow3NaeFwsG8aymkWXF+U2aukYHJA6I12n9/dGqf7yRXzkF0S/9UtdyQ==}
+  /turbo-darwin-arm64/1.9.4-canary.4:
+    resolution: {integrity: sha512-tsOs9phSS4u7sYRbG5H8CTuwQADxL2feWyBxCqL+EQMG1D4SsE3vFPp6bIjXCl+nvA3eLLrQQqP26AQOwXTF3w==}
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-linux-64/1.6.3:
-    resolution: {integrity: sha512-O9uc6J0yoRPWdPg9THRQi69K6E2iZ98cRHNvus05lZbcPzZTxJYkYGb5iagCmCW/pq6fL4T4oLWAd6evg2LGQA==}
+  /turbo-linux-64/1.9.4-canary.4:
+    resolution: {integrity: sha512-psn+Ww7234IgT1UlyJLRhS+lO+iQh8G91ZEonlhVsqWalsbnayhhD7HewwMCj8fsyUDD/uHqXkGphglAFGL9Bg==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-linux-arm64/1.6.3:
-    resolution: {integrity: sha512-dCy667qqEtZIhulsRTe8hhWQNCJO0i20uHXv7KjLHuFZGCeMbWxB8rsneRoY+blf8+QNqGuXQJxak7ayjHLxiA==}
+  /turbo-linux-arm64/1.9.4-canary.4:
+    resolution: {integrity: sha512-qGTgN3d0DxaU4dhfzEpUc0ape4UHnO8ePmvD1txTp83bi8O7robLJAfdyiq7m57oLBKBO8Gz5+Nzk2+Csm8GXQ==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-windows-64/1.6.3:
-    resolution: {integrity: sha512-lKRqwL3mrVF09b9KySSaOwetehmGknV9EcQTF7d2dxngGYYX1WXoQLjFP9YYH8ZV07oPm+RUOAKSCQuDuMNhiA==}
+  /turbo-windows-64/1.9.4-canary.4:
+    resolution: {integrity: sha512-n0EmuXO99bVipwLB6E98mWcF0A1U00bhvlDdP9vNKEVXgzWA5PgWkJj8of2bK/ldWcbZNANjQHNiKnBZuBeVMA==}
     cpu: [x64]
     os: [win32]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-windows-arm64/1.6.3:
-    resolution: {integrity: sha512-BXY1sDPEA1DgPwuENvDCD8B7Hb0toscjus941WpL8CVd10hg9pk/MWn9CNgwDO5Q9ks0mw+liDv2EMnleEjeNA==}
+  /turbo-windows-arm64/1.9.4-canary.4:
+    resolution: {integrity: sha512-T25g8H8lUp2HIC6FlfF04EtbTsfGEDQ2TbExtxMXvo2CIkz7fP5MK2N4ldy2X1bi1MLEUA0q7paGOzu3KVw4lA==}
     cpu: [arm64]
     os: [win32]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo/1.6.3:
-    resolution: {integrity: sha512-FtfhJLmEEtHveGxW4Ye/QuY85AnZ2ZNVgkTBswoap7UMHB1+oI4diHPNyqrQLG4K1UFtCkjOlVoLsllUh/9QRw==}
+  /turbo/1.9.4-canary.4:
+    resolution: {integrity: sha512-IYQ18RBKYNVovz2+a+9K+KSwkOZF2SCQyxxCiaKMM/Q1dI65EIxzE4Zboy/MLT5Xqj1NzisQRzmoRiW0+Z+NSw==}
     hasBin: true
     requiresBuild: true
     optionalDependencies:
-      turbo-darwin-64: 1.6.3
-      turbo-darwin-arm64: 1.6.3
-      turbo-linux-64: 1.6.3
-      turbo-linux-arm64: 1.6.3
-      turbo-windows-64: 1.6.3
-      turbo-windows-arm64: 1.6.3
+      turbo-darwin-64: 1.9.4-canary.4
+      turbo-darwin-arm64: 1.9.4-canary.4
+      turbo-linux-64: 1.9.4-canary.4
+      turbo-linux-arm64: 1.9.4-canary.4
+      turbo-windows-64: 1.9.4-canary.4
+      turbo-windows-arm64: 1.9.4-canary.4
     dev: true
 
   /twemoji-parser/11.0.2:
