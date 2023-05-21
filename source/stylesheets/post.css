@@ -1,3 +1,8 @@
+article {
+  font-size: 1.45rem;
+  line-height: 2.4rem;
+}
+
 article h1,
 article h2,
 article h3 {
@@ -46,10 +51,13 @@ article aside {
   margin-left: 2em;
 }
 
+article pre {
+  font-size: 0.9em;
+}
+
 article pre,
 article code {
   line-height: 1.125rem;
-  font-size: 0.9em;
 }
 
 article code {
@@ -57,7 +65,7 @@ article code {
   padding: 0.1rem 0.5rem;
   border-radius: 0.5rem;
   border: solid 1px #ddd;
-  font-size: 0.85rem;
+  font-size: 1rem;
 }
 
 article a code {
