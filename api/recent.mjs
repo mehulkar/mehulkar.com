@@ -1,21 +1,13 @@
 import { getFilm } from "./_lib/lettterboxed-api.mjs";
-import { getAnnotation } from "./_lib/feedly-api.mjs";
-import { getTweet } from "./_lib/twitter-api.mjs";
 
 export default async function handler(req, res) {
   try {
-    const [film, annotation, tweet] = await Promise.allSettled([
-      getFilm(),
-      getAnnotation(),
-      getTweet(),
-    ]);
+    const [film] = await Promise.allSettled([getFilm()]);
 
-    console.log(film, annotation, tweet);
+    console.log(film);
 
     return res.status(200).json({
       film: film.status === "fulfilled" ? film.value : {},
-      annotation: annotation.status === "fulfilled" ? annotation.value : {},
-      tweet: tweet.status === "fulfilled" ? tweet.value : {},
     });
   } catch (e) {
     return res.status(500).json({ error: e });
