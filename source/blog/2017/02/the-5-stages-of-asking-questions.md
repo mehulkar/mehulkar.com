@@ -11,9 +11,7 @@ for asking the easy questions. This is the single-most important thing to learn
 as a student and the purpose of your time in high school is to learn how to be a
 good student for the rest of your life.
 
-## The 5 Stages Of Question Asking
-
-### Stage 1: Get Comfortable
+## Stage 1: Get Comfortable
 
 Start with the easy questions "Can I go to the bathroom", "What day is the
 quiz", etc. These will help you become comfortable with raising your hand and
@@ -22,7 +20,7 @@ know the answer. Try not to be obnoxious and ask the same questions over and
 over again or questions that were asked in the last 15 minutes. But for the
 latter, you can always start with an apology.
 
-### Stage 2: Play Jeopardy
+## Stage 2: Play Jeopardy
 
 Then move to questions that show that you are listening. These aren't so much
 questions as they are restating what you just heard in the form of a question.
@@ -31,7 +29,7 @@ Rubber duck debugging, the point of these questions is to help you rephrase
 material, play with it in your head, and make sense of it from multiple angles.
 It seems unnecessary most of the time, but in hindsight, it is extremely useful.
 
-### Stage 3: Probe
+## Stage 3: Probe
 
 Now you want to ask questions that augment the material at hand. The easiest of
 these are hypotheticals. It takes a bit of practice to not sound like an idiot
@@ -43,7 +41,7 @@ explore the possibilities. These will probably get you the most amount of flak
 from your classmates. The important thing to keep in mind here is to let the
 teacher decide whether or not there is time to entertain the question.
 
-### Stage 4: Challenge Authority
+## Stage 4: Challenge Authority
 
 When the teacher says something, ask why. Don't believe something just because
 the teacher says so. Even if the answer to "why" is common knowledge. Discretion
@@ -58,7 +56,7 @@ Treat each question independently. Much like the outcome of rolling a die
 doesn't depend on the last roll, treat each situation in which you might look
 like an idiot for wrongly disagreeing with a teacher is an independent scenario.
 
-### Stage 5: Answer Questions
+## Stage 5: Answer Questions
 
 Hopefully, your behavior will encourage question-asking from your peers. I've
 found that the more questions I asked, the more it encouraged others, and the
