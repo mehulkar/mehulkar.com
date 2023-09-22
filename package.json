@@ -30,7 +30,7 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.2.2",
     "eleventy-plugin-activity-pub": "^0.1.1",
     "esbuild": "~0.18.12",
-    "turbo": "1.9.4-canary.4",
+    "turbo": "1.10.14",
     "web-vitals": "^3.4.0"
   },
   "dependencies": {
