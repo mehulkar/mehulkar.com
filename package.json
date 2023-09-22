@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "vercel dev",
     "prebuild": "rm -rf ./build",
-    "build": "npx eleventy",
+    "build": "eleventy",
     "build:site": "pnpm -- turbo run build",
     "new": "node ./bin/new.mjs"
   },
