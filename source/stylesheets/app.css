@@ -4,7 +4,7 @@
   /* https://nerdy.dev/custom-prop-categories */
 
   /* Tokens */
-  --base-color: #39f;
+  --base-color: #3b82f6;
   --link-hover-color: #0055b3;
   --blue-1: hsl(200, 83%, 78%);
   --blue-2: hsl(200, 83%, 98%);
@@ -24,7 +24,7 @@
   --image-border-color: darkgray;
   --aside-border: gold;
   --aside-text-color: var(--code-text-color);
-  --aside-background-color: hsl(60,100%,83%);
+  --aside-background-color: hsl(60, 100%, 83%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -41,7 +41,7 @@
     --header-border-color: #eee;
     --book-shadow-color: #ccc;
     --image-border-color: gray;
-    --aside-background-color: hsl(60,100%,24%);
+    --aside-background-color: hsl(60, 100%, 24%);
   }
 }
 
@@ -126,7 +126,7 @@ header.site-header {
 .header-content--avatar {
   border-radius: 50%;
   border: solid 2px #fff;
-  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5)
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
 }
 
 .header-content--link,
@@ -200,9 +200,11 @@ header.site-header {
 }
 
 .post-group .post-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-column-gap: 20px;
+  list-style: none;
+}
+
+.post-link a {
+  text-decoration: underline;
 }
 
 .post-group--title {
@@ -219,31 +221,8 @@ header.site-header {
   }
 }
 
-
-/* Older browsers that don't support CSS Grid */
-@supports not (display: grid) {
-  .post-group .post-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .post-group .post-list .post-link {
-    width: calc(50% - 20px);
-  }
-
-  @media only screen and (max-width: 600px) {
-    .post-group .post-list {
-      display: block;
-    }
-
-    .post-group .post-list .post-link {
-      width: 100%;
-    }
-  }
-}
-
-figure#tweet, figure#feedly-annotation {
+figure#tweet,
+figure#feedly-annotation {
   padding: 1rem 1.5rem 1rem;
   border-left: solid 4px var(--blue-1);
   background-color: var(--blue-2);
@@ -251,11 +230,13 @@ figure#tweet, figure#feedly-annotation {
   border-radius: 0 8px 8px 0;
 }
 
-figure#tweet p, figure#feedly-annotation p {
+figure#tweet p,
+figure#feedly-annotation p {
   margin-bottom: 0.5rem;
 }
 
-figure#tweet blockquote, figure#feedly-annotation blockquote {
+figure#tweet blockquote,
+figure#feedly-annotation blockquote {
   background: none;
   border: none;
   padding-bottom: 0;
@@ -263,7 +244,8 @@ figure#tweet blockquote, figure#feedly-annotation blockquote {
 }
 
 /* TODO: text ellipsis doesn't seem to work on mobile */
-figure#tweet figcaption cite, figure#feedly-annotation figcaption cite {
+figure#tweet figcaption cite,
+figure#feedly-annotation figcaption cite {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -283,12 +265,11 @@ figure#tweet figcaption cite, figure#feedly-annotation figcaption cite {
   display: none;
 }
 
-
 .home {
   display: grid;
   grid-template-areas:
-    'sidebar intro intro intro'
-    'sidebar posts posts posts';
+    "sidebar intro intro intro"
+    "sidebar posts posts posts";
 
   grid-template-columns: 300px 1fr;
 }
@@ -296,10 +277,10 @@ figure#tweet figcaption cite, figure#feedly-annotation figcaption cite {
 @media only screen and (max-width: 600px) {
   .home {
     grid-template-areas:
-      'intro'
-      'posts'
-      'sidebar';
-      grid-template-columns: 1fr;
+      "intro"
+      "posts"
+      "sidebar";
+    grid-template-columns: 1fr;
   }
 }
 
@@ -314,7 +295,6 @@ figure#tweet figcaption cite, figure#feedly-annotation figcaption cite {
   padding: 0.5rem;
 }
 
-
 .home aside ul {
   list-style: none;
   margin-left: 0;
@@ -324,7 +304,9 @@ figure#tweet figcaption cite, figure#feedly-annotation figcaption cite {
   margin-bottom: 0.5rem;
 }
 
-.home .posts { grid-area: posts; }
+.home .posts {
+  grid-area: posts;
+}
 
 /* Utility class for mobile */
 .mobile-only {
