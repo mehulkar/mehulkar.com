@@ -5,7 +5,7 @@ tags: javascript, npm
 ---
 
 I've started to loosely try to get involved in [James Garbutt's][1] npm
-ecosystem cleanup effort, and in that process I came across
+[ecosystem cleanup effort][2], and in that process I came across
 <https://npmgraph.js.org>. This project can analyze a published npm module or a
 standalone package.json and visualize all its dependency tree. More importantly,
 it can find multiple versions of the same dependency and deprecated
@@ -32,3 +32,4 @@ This will open a browser with a URL that contains your package.json with the sam
 results as if started from the browser.
 
 [1]: https://twitter.com/43081j
+[2]: https://github.com/43081j/ecosystem-cleanup
