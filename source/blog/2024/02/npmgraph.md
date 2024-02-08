@@ -7,21 +7,18 @@ tags: javascript, npm
 I've started to loosely try to get involved in [James Garbutt's][1] npm
 [ecosystem cleanup effort][2], and in that process I came across
 <https://npmgraph.js.org>. This project can analyze a published npm module or a
-standalone package.json and visualize all its dependency tree. More importantly,
-it can find multiple versions of the same dependency and deprecated
-dependencies, giving your team easy grunt work to do.
+standalone package.json and visualize its dependency tree. More importantly, it
+can find issues with your dependency tree such as multiple versions of the same
+dependency or deprecated dependencies, giving your team easy grunt work to do.
 
 In my experience, one of the hardest problems in programming is identifying,
-taskifying, and then prioritizing maintenance work that doesn't have direct
-payoff. While npmgraph can't change your organization workflow for
-prioritization, it can certainly help identify and taskify work that your team
-can do to maintain your software.
+"taskifying", and then prioritizing maintenance work that doesn't have direct
+payoff. While npmgraph can't change how your organization prioritizes work, it
+can certainly help _identify_ work and turn it into tasks for your team. This is
+really valuable, because clear checklists that you can burn down to Inbox Zero
+help distribute work. npmgraph fits that niche very well.
 
-Clear checklists that you can burn down to Inbox Zero is extremely valuable for
-distributing and tracking work, and I think npmgraph fits that niche very well.
-Try it out on your own project!
-
-You can also run it from CLI:
+Try it out on your own project! You can also run it from CLI:
 
 ```bash
 npm i -g npmgraph-cli
