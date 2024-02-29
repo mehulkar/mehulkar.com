@@ -4,13 +4,15 @@ date: 2024-02-29
 tags:
 ---
 
-I bought a Breville Grind Control in December 2021 and sold it on Marketplace
-~August 2023. I probably stopped using it sometime in mid-2022, and it just sat
-around. I had written down some of the things I liked and didn't like about it
-back then and am publishing that today, because, why not.
+I bought a [Breville Grind Control][1] in December 2021 for $300, and gave it away
+for free it on Marketplace ~August 2023. I probably stopped using it sometime in
+mid-2022, and it just sat around. I had written down some of the things I liked
+and didn't like about it back then and am publishing that today, because, why
+not.
 
 The TL;DR is that I would not buy this again. Since mid-2022, I've been using a
-Mr. Coffee from Target and like it much more even though it lacks all the fancy features.
+[Mr. Coffee from Target][2] and like it much more even though it lacks all the fancy
+features.
 
 ## Like
 
@@ -33,3 +35,6 @@ Mr. Coffee from Target and like it much more even though it lacks all the fancy 
 - When making "number of cups", can't use a different pot (large beaker, e.g.)
   because the drip seems to come from multiple places, not directly into the
   beaker like with single serve.
+
+[1]: https://www.breville.com/us/en/products/coffee/bdc650.html
+[2]: https://www.target.com/p/mr-coffee-5-cup-switch-coffee-maker-black/-/A-78604175
