@@ -72,8 +72,11 @@ These are the notes I took (also found in my Notes app with no date attached).
   - espresso / americano, not drip
   - loud
 
-During this process, I learned that there's an organization that publishes the standards for coffee
-called the [SCAA: Specialies of Coffee Association of America][3]<sup>1</sup>: - Golden cup ratio: 9-11 grams of ground coffee for every 6 ounces of water
+During this process, I learned that there's an organization that publishes the
+standards for coffee called the
+[SCAA: Specialies of Coffee Association of America][3]<sup>1</sup>. According to
+SCAA, the golden cup ratio is 9-11 grams of ground coffee for every 6 ounces of
+water.
 
 ---
 
