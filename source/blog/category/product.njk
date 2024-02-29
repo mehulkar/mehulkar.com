@@ -1,0 +1,8 @@
+---
+title: Product
+tags: product
+---
+
+{% set posts = collections.byYear | category("product") %}
+{% from 'partials/_by-year.njk' import render %}
+{{ render(posts) }}
