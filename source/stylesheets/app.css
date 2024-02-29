@@ -318,3 +318,23 @@ figure#feedly-annotation figcaption cite {
     display: inline;
   }
 }
+
+@media only screen and (min-width: 600px) {
+  .post-group {
+    display: flex;
+    background: beige;
+  }
+
+  .post-list {
+    padding: 0.5rem 1rem;
+  }
+
+  .post-group--title {
+    border: none;
+    float: left;
+    font-size: 5rem;
+    margin-bottom: 0;
+    background: coral;
+    color: whitesmoke;
+  }
+}
