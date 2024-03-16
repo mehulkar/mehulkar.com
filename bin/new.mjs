@@ -1,8 +1,7 @@
 #!/usr/bin/env node
-// require 'fileutils'
-// require_relative '../lib/new_post'
+
 import { execSync } from "child_process";
-import { fstat, writeFileSync, existsSync } from "fs";
+import { writeFileSync, existsSync } from "fs";
 import * as readline from "readline";
 import { stdin as input, stdout as output } from "process";
 import path from "path";
@@ -21,9 +20,10 @@ async function main() {
 
 const title = await main();
 const parameterizedTitle = title
-  .replaceAll(" ", "-")
-  .replaceAll(":", "-")
+  .replaceAll(/[,:]/g, " ") // replace special characters with space
+  .replaceAll(/\s+/g, "-") // replace all contiguous spaces with a single hyphen
   .toLowerCase();
+
 const { month, year, fullDate } = getDateSegments();
 
 const filePath = path.resolve(
