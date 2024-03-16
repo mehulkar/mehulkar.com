@@ -1,9 +1,11 @@
 {% macro render(posts) %}
     {%- for year in posts -%}
         <div class='post-group mb4 mt0 ml0'>
-            <h2 class="post-group--title mb3 fw2 bb">
-                {{year.name}}
-            </h2>
+            <div class='post-group--title'>
+                <h2 class="mb3 fw2">
+                    {{year.name}}
+                </h2>
+            </div>
 
             <ul class='post-list ml0 pl0'>
                 {% for post in year.posts %}
