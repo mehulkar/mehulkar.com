@@ -327,6 +327,7 @@ figure#feedly-annotation figcaption cite {
   .post-list,
   .post-group--title {
     padding: 0.5rem;
+    padding-left: 0;
   }
 
   .post-group--title h2 {
@@ -335,6 +336,11 @@ figure#feedly-annotation figcaption cite {
     font-size: 1rem;
     margin-bottom: 0;
     text-decoration: underline;
-    padding: 0 0.5rem;
+    padding-right: 0.5rem;
   }
+}
+
+/* replaces tachyons mw7 */
+.mw7 {
+  max-width: 40rem;
 }

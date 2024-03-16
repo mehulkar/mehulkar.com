@@ -1,7 +1,7 @@
 article h1,
 article h2,
 article h3 {
-  font-family: 'Lato', 'sans-serif';
+  font-family: "Lato", "sans-serif";
 }
 
 article h1 {
@@ -205,8 +205,9 @@ aside.webmentions h2 {
   margin: 1rem 0;
 }
 
-.wm-replies ul, .wm-likes ul {
-  margin-left: 0
+.wm-replies ul,
+.wm-likes ul {
+  margin-left: 0;
 }
 
 .wm-replies li {
@@ -234,7 +235,6 @@ aside.webmentions h2 {
 .wm-likes ul {
   display: inline;
 }
-
 
 @media (prefers-color-scheme: dark) {
   article code {
