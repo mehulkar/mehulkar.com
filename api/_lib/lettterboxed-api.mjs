@@ -4,17 +4,16 @@ import { shuffle } from "./_utils.mjs";
 const URL = "https://letterboxd.com/mehulkar/rss/";
 const STAR_CHAR = "★";
 
-export async function getFilm() {
-  const json = await new Parser().parseURL(URL);
-  const last10Films = json.items.slice(0, 10);
-  const latestFilm = shuffle(last10Films)[0];
-  // console.log("lastest film", latestFilm);
+function posterFrom(htmlString) {
+  const matched = htmlString.match(/src="(?<url>.*)"/);
+  if (!matched) {
+    return "";
+  }
 
-  const { title, isoDate, link } = latestFilm;
-  const linkWithoutUser = link.replace("/mehulkar/", "/");
+  return matched.groups.url;
+}
 
-  const matched = title.match(/(?<name>.*), (?<year>\d{4}) - (?<stars>★?.*)/);
-  const { name, year, stars } = matched.groups;
+function starsToRating(stars) {
   let rating = 0;
   stars.split("").forEach((character) => {
     if (character === STAR_CHAR) {
@@ -24,12 +23,44 @@ export async function getFilm() {
     }
   });
 
+  return rating;
+}
+
+async function getAll() {
+  const json = await new Parser({
+    customFields: {
+      item: [
+        ["tmdb:movieId", "movieId"],
+        ["letterboxd:watchedDate", "watchedDate"],
+        ["letterboxd:filmTitle", "filmTitle"],
+        ["letterboxd:filmYear", "filmYear"],
+      ],
+    },
+  }).parseURL(URL);
+
+  return json.items.map((item) => ({
+    ...item,
+    posterURL: posterFrom(item.content),
+    filmURL: `https://letterboxd.com/tmdb/${item.movieId}`,
+  }));
+}
+
+export async function getFilm() {
+  const films = await getAll();
+  const last10Films = films.slice(0, 10);
+  const film = shuffle(last10Films)[0];
+  console.log("lastest film", film);
+
+  const { title, filmURL, filmTitle, filmYear, watchedDate } = film;
+
+  const matched = title.match(/.*, \d{4} - (?<stars>★?.*)/);
+  const rating = starsToRating(matched.groups.stars);
+
   return {
-    name,
+    name: filmTitle,
+    year: filmYear,
+    timestamp: new Date(watchedDate).toLocaleDateString(),
     rating,
-    ratingString: stars,
-    year,
-    timestamp: isoDate,
-    url: linkWithoutUser,
+    url: filmURL,
   };
 }
