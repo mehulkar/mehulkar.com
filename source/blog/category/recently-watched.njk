@@ -1,0 +1,8 @@
+---
+title: Watched
+tags: recently-watched, movies, videos, tv-shows
+---
+
+{% set posts = collections.byYear | category("recently-watched") %}
+{% from 'partials/_by-year.njk' import render %}
+{{ render(posts) }}
