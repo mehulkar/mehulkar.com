@@ -2,7 +2,7 @@ import { getFilm } from "./_lib/lettterboxed-api.mjs";
 
 export default async function handler(req, res) {
   try {
-    const film = await getFilm();
+    const [film] = await Promise.allSettled([getFilm()]);
 
     console.log(film);
 
