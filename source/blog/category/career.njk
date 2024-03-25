@@ -1,0 +1,8 @@
+---
+title: Career
+tags: career
+---
+
+{% set posts = collections.byYear | category("career") %}
+{% from 'partials/_by-year.njk' import render %}
+{{ render(posts) }}

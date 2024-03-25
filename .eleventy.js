@@ -28,6 +28,7 @@ const TAG_PAGES = [
   "home-screen",
   "meta",
   "product",
+  "career",
 ];
 
 const TAG_PATH_OVERRIDES = {
