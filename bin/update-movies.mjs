@@ -22,7 +22,7 @@ async function getData() {
     const year = date.getFullYear();
     const month = String(date.getMonth() + 1).padStart(2, "0");
     const filename = path.resolve(
-      `source/blog/${year}/${month}/${item.title}.md`
+      `source/blog/${year}/${month}/${item.parameterizedFilmTitle}.md`
     );
 
     return { filename, item };
