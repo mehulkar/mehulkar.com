@@ -9,6 +9,7 @@ title: "${item.filmTitle}"
 date: ${item.watchedDate}
 tags: recently-watched, movies
 ---
+Rated ${item.rating} stars.
 
 ${item.content}
 
