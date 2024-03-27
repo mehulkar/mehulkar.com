@@ -23,7 +23,7 @@
     "url": "https://github.com/mehulkar/mehulkar.com/issues"
   },
   "homepage": "https://github.com/mehulkar/mehulkar.com",
-  "packageManager": "pnpm@8.6.7",
+  "packageManager": "pnpm@9.0.0-beta.0+sha256.ff1f3981cae5c53ac1f0825645dcb59a53a8e79b654bcb96d2f1f176909fdcfa",
   "devDependencies": {
     "@11ty/eleventy": "2.0.1",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
@@ -37,6 +37,6 @@
     "rss-parser": "^3.13.0"
   },
   "engine": {
-    "node": "18"
+    "node": "20"
   }
 }
