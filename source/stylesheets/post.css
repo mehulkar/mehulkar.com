@@ -245,3 +245,14 @@ aside.webmentions h2 {
     background: transparent;
   }
 }
+
+.letterboxd-movie-data-content {
+  img {
+    float: left;
+    width: 50%;
+    margin-right: 1rem;
+  }
+  .float-clear {
+    clear: both;
+  }
+}

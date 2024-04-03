@@ -9,9 +9,13 @@ title: "${item.filmTitle}"
 date: ${item.watchedDate}
 tags: recently-watched, movies
 ---
-Rated ${item.rating} stars.
 
-${item.content}
+<div class="letterboxd-movie-data-content">
+  ${item.content}
+  <p>Rated ${item.rating} stars.<p>
+  <div class="float-clear"></div>
+</div>
+
 
 `.trim();
 }
