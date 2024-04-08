@@ -292,7 +292,6 @@ figure#feedly-annotation figcaption cite {
 .home aside {
   grid-area: sidebar;
   margin-right: 1rem;
-  padding: 0.5rem;
 }
 
 .home aside ul {

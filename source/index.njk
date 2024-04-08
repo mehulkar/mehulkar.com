@@ -4,31 +4,31 @@ eleventyExcludeFromCollections: true
 ---
 
 <div class="home">
-  <section class="intro">
-    <p>
-      👋🏾 I'm a software engineer working on <a href="https://turborepo.org">Turborepo</a> at
-      <a href="https://vercel.com"><span class="vercel-icon">▲</span>Vercel</a>.
-      Before that, I worked at Apple</a>.
-      <span class="mobile-only">See what I've been up to <a href="#recent">recently</a>.</span>
-      <a href="/resume">Resume</a>.
-    </p>
-  </section>
-
   <aside>
-    <h3 id="recent">Recently</h3>
+    <h2>In Short</h2>
     <ul class="small">
       <li>
-        {# TODO: Make this dynamic #}
-        📚 Read <a target="_blank" rel="noopener noreferrer" href="https://www.goodreads.com/review/show/4794773798"><em>Vanderbilt: The Rise and Fall of an American Dynasty</em>.</a>
+        <p>👋🏾 I am a software engineer working at <a href="https://vercel.com">Vercel</a>.
+          Before that, I worked at Apple</a>.
+        </p>
+      </li>
 
       <li>
         🎬 <a href="/blog/category/recently-watched">Recently Watched</a>
+      </li>
+
+      <li>
+        📗 Recently Read <a target="_blank" rel="noopener noreferrer" href="https://www.goodreads.com/review/show/4794773798"><em>Vanderbilt: The Rise and Fall of an American Dynasty</em>.</a>
+      </li>
+
+      <li>
+        📄 <a href="/resume">Resume</a>
       </li>
     </ul>
   </aside>
 
   <section class="posts">
-    <h2 class="mb3">Posts</h2>
+    <h2 class="mb3">Writing </h2>
     {% set posts = collections.home %}
     {% from 'partials/_by-year.njk' import render %}
     {{ render(posts) }}
