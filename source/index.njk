@@ -22,9 +22,7 @@ eleventyExcludeFromCollections: true
         📚 Read <a target="_blank" rel="noopener noreferrer" href="https://www.goodreads.com/review/show/4794773798"><em>Vanderbilt: The Rise and Fall of an American Dynasty</em>.</a>
 
       <li>
-        <p id="film-preamble">
-          🎬 Watched <span id="movie">...</span> <time>...</time> and rated it <span id="rating">0/5</span>.
-        </p>
+        🎬 <a href="/blog/category/recently-watched">Recently Watched</a>
       </li>
     </ul>
   </aside>
@@ -38,21 +36,6 @@ eleventyExcludeFromCollections: true
 </div>
 
 <script>
-  fetch("/api/recent").then(res => res.json()).then(({ film }) => {
-    if (film) { setFilmHTML(film);}
-  });
-
-  function setFilmHTML(data) {
-    console.log('film', data);
-    const { name, rating, timestamp, url } = data;
-    document.getElementById('movie').innerHTML = `<a href="${url}">${name}</a>`;
-
-    // time element
-    setTimeElement(document.querySelector('#film-preamble time'), timestamp);
-
-    document.getElementById('rating').innerText = `${rating}/5 stars`;
-  }
-
   function setTimeElement(el, ts) {
     el.setAttribute('datetime', ts);
     el.innerText = daysAgo(ts);
