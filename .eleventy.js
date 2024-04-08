@@ -81,16 +81,6 @@ module.exports = function (eleventyConfig) {
     return [...posts.reverse()].slice(0, 20);
   });
 
-  eleventyConfig.addCollection("movies", function (collectionApi) {
-    const allPosts = collectionApi.getAll();
-    const movies = allPosts.filter((post) => {
-      const tags = getTags(post);
-      return tags.includes("recently-watched");
-    });
-
-    return groupByYear(movies);
-  });
-
   eleventyConfig.addCollection("byYear", function (collectionApi) {
     const allPosts = collectionApi.getAll();
 
