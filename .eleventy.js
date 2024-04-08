@@ -88,59 +88,13 @@ module.exports = function (eleventyConfig) {
       return tags.includes("recently-watched");
     });
 
-    // Group posts by year first. This is an unsorted object
-    const byYear = {};
-    for (const post of movies) {
-      const year = adjustTimezone(post.date).getFullYear();
-      byYear[year] = byYear[year] || [];
-      byYear[year].push(post);
-    }
-
-    // Get all the years, sort them numerically
-    const sortedYears = Object.keys(byYear).sort((x, y) => +y - +x);
-
-    const sortedGroups = [];
-    for (const year of sortedYears) {
-      const items = byYear[year].sort(
-        (post1, post2) => post2.date - post1.date
-      );
-      sortedGroups.push({
-        name: year,
-        items,
-      });
-    }
-    return sortedGroups;
+    return groupByYear(movies);
   });
 
   eleventyConfig.addCollection("byYear", function (collectionApi) {
     const allPosts = collectionApi.getAll();
 
-    // Group posts by year first. This is an unsorted object
-    const byYear = {};
-    for (const post of allPosts) {
-      const year = adjustTimezone(post.date).getFullYear();
-      byYear[year] = byYear[year] || [];
-      byYear[year].push(post);
-    }
-
-    // Get all the years, sort them numerically
-    const sortedYears = Object.keys(byYear).sort((x, y) => +y - +x);
-
-    // Create an array that with objects each corresponding
-    // to the set of posts from each year in the order we determed
-    // above.
-    const sortedGroups = [];
-    for (const year of sortedYears) {
-      const posts = byYear[year].sort(
-        (post1, post2) => post2.date - post1.date
-      );
-      sortedGroups.push({
-        name: year,
-        posts,
-      });
-    }
-
-    return sortedGroups;
+    return groupByYear(allPosts);
   });
 
   eleventyConfig.addNunjucksFilter("category", function (byYear, tags) {
@@ -153,14 +107,14 @@ module.exports = function (eleventyConfig) {
     }
 
     for (const postCollection of byYear) {
-      const { name: year, posts } = postCollection;
+      const { name: year, items } = postCollection;
 
-      const forTag = filterPostsByTag(posts, tagsArr);
+      const forTag = filterPostsByTag(items, tagsArr);
 
       if (forTag.length) {
         filtered.push({
           name: year,
-          posts: forTag,
+          items: forTag,
         });
       }
     }
@@ -258,6 +212,29 @@ module.exports = function (eleventyConfig) {
     },
   };
 };
+
+function groupByYear(items) {
+  // Group items by year first. This is an unsorted object
+  const byYear = {};
+  for (const item of items) {
+    const year = adjustTimezone(item.date).getFullYear();
+    byYear[year] = byYear[year] || [];
+    byYear[year].push(item);
+  }
+
+  // Get all the years, sort them numerically
+  const sortedYears = Object.keys(byYear).sort((x, y) => +y - +x);
+
+  const sortedGroups = [];
+  for (const year of sortedYears) {
+    const items = byYear[year].sort((item1, item2) => item2.date - item1.date);
+    sortedGroups.push({
+      name: year,
+      items,
+    });
+  }
+  return sortedGroups;
+}
 
 /**
  * @param {*} posts
