@@ -2,6 +2,9 @@
 title: "Memento"
 date: 2024-01-07
 tags: recently-watched, movies
+image: "https://a.ltrbxd.com/resized/sm/upload/v1/3q/s4/aa/memento-0-600-0-900-crop.jpg?v=80f0732247"
+stars: "★★★★"
+rating: "4"
 ---
 
 <div class="letterboxd-movie-data-content">

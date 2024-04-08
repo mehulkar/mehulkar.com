@@ -2,6 +2,9 @@
 title: "De Gaulle"
 date: 2022-09-20
 tags: recently-watched, movies
+image: "https://a.ltrbxd.com/resized/film-poster/5/8/7/0/4/7/587047-de-gaulle-0-600-0-900-crop.jpg?v=38f2adf6d2"
+stars: "★★★★"
+rating: "4"
 ---
 
 <div class="letterboxd-movie-data-content">

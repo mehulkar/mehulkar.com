@@ -8,6 +8,9 @@ function getContents(item) {
 title: "${item.filmTitle}"
 date: ${item.watchedDate}
 tags: recently-watched, movies
+image: "${item.posterURL}"
+stars: "${item.stars}"
+rating: "${item.rating}"
 ---
 
 <div class="letterboxd-movie-data-content">

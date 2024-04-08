@@ -2,6 +2,9 @@
 title: "The Matrix"
 date: 2021-12-24
 tags: recently-watched, movies
+image: "https://a.ltrbxd.com/resized/film-poster/5/1/5/1/8/51518-the-matrix-0-600-0-900-crop.jpg?v=fc7c366afe"
+stars: "★★★★"
+rating: "4"
 ---
 
 <div class="letterboxd-movie-data-content">

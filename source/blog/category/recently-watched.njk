@@ -1,8 +1,40 @@
 ---
+layout: layout.njk
+eleventyExcludeFromCollections: true
 title: Watched
 tags: recently-watched, movies, videos, tv-shows
 ---
 
-{% set posts = collections.byYear | category("recently-watched") %}
-{% from 'partials/_by-year.njk' import render %}
-{{ render(posts) }}
+<h1>Recently Watched</h1>
+
+{% set movies = collections.movies %}
+{%- for year in movies -%}
+    <section style="margin-bottom: 3rem;">
+        <h2 class="mb4">{{year.name}}</h2>
+        <ul style="
+            list-style-type: none;
+            padding:0;
+            margin-left: 0;
+            display:grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-row-gap: 2rem;
+            grid-column-gap: 1rem;"
+        >
+            {% for movie in year.items %}
+                <a href="{{ movie.url }}" style="text-decoration:none; color:inherit;">
+                    <li style="padding:0;">
+                        <figure>
+                            <img style="display:block;" src="{{movie.data.image}}">
+                            <figcaption style="font-size:0.9rem;">
+                                <div>Watched on {{ movie.data.date | fullDate }}</div>
+                                <div>Rated {{ movie.data.stars }}</div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </a>
+            {% endfor %}
+        </ul>
+    </section>
+
+{%- endfor -%}
+

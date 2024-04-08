@@ -2,6 +2,9 @@
 title: "Breakfast at Tiffany's"
 date: 2022-06-23
 tags: recently-watched, movies
+image: "https://a.ltrbxd.com/resized/sm/upload/ay/kc/2m/81/c95lbDwL5WT8PV9DZsdSvRtXKNA-0-600-0-900-crop.jpg?v=e8848c7700"
+stars: "★★★"
+rating: "3"
 ---
 
 <div class="letterboxd-movie-data-content">

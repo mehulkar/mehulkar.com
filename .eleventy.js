@@ -81,6 +81,37 @@ module.exports = function (eleventyConfig) {
     return [...posts.reverse()].slice(0, 20);
   });
 
+  eleventyConfig.addCollection("movies", function (collectionApi) {
+    const allPosts = collectionApi.getAll();
+    const movies = allPosts.filter((post) => {
+      const tags = getTags(post);
+      return tags.includes("recently-watched");
+    });
+
+    // Group posts by year first. This is an unsorted object
+    const byYear = {};
+    for (const post of movies) {
+      const year = adjustTimezone(post.date).getFullYear();
+      byYear[year] = byYear[year] || [];
+      byYear[year].push(post);
+    }
+
+    // Get all the years, sort them numerically
+    const sortedYears = Object.keys(byYear).sort((x, y) => +y - +x);
+
+    const sortedGroups = [];
+    for (const year of sortedYears) {
+      const items = byYear[year].sort(
+        (post1, post2) => post2.date - post1.date
+      );
+      sortedGroups.push({
+        name: year,
+        items,
+      });
+    }
+    return sortedGroups;
+  });
+
   eleventyConfig.addCollection("byYear", function (collectionApi) {
     const allPosts = collectionApi.getAll();
 
@@ -163,6 +194,15 @@ module.exports = function (eleventyConfig) {
     // then parse that.
     const [tags = ""] = value;
     return splitTagsArr(tags);
+  });
+
+  eleventyConfig.addNunjucksFilter("debug", function (value) {
+    console.log("value", value);
+    try {
+      return JSON.stringify(value, null, 2);
+    } catch (e) {
+      return `Error: ${e}`;
+    }
   });
 
   eleventyConfig.addNunjucksFilter("tagLink", function (tag) {

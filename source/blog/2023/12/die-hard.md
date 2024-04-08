@@ -2,6 +2,9 @@
 title: "Die Hard"
 date: 2023-12-24
 tags: recently-watched, movies
+image: "https://a.ltrbxd.com/resized/film-poster/5/1/5/5/6/51556-die-hard-0-600-0-900-crop.jpg?v=e24e92754d"
+stars: "★★★★★"
+rating: "5"
 ---
 
 <div class="letterboxd-movie-data-content">
