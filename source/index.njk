@@ -31,7 +31,7 @@ eleventyExcludeFromCollections: true
 
   <section class="posts">
     <h2 class="mb3">Posts</h2>
-    {% set posts = collections.byYear %}
+    {% set posts = collections.home %}
     {% from 'partials/_by-year.njk' import render %}
     {{ render(posts) }}
   </section>

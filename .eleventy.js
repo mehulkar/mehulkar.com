@@ -84,8 +84,15 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addCollection("byYear", function (collectionApi) {
     const allPosts = collectionApi.getAll();
-
     return groupByYear(allPosts);
+  });
+
+  eleventyConfig.addCollection("home", function (collectionApi) {
+    const allPosts = collectionApi.getAll();
+    const homePosts = filterPostsByTag(allPosts, [], {
+      exclude: ["recently-watched"],
+    });
+    return groupByYear(homePosts);
   });
 
   eleventyConfig.addNunjucksFilter("category", function (byYear, tags) {
@@ -232,26 +239,53 @@ function groupByYear(items) {
  * @param {string[]} tags
  * @returns
  */
-function filterPostsByTag(posts, tags = []) {
-  if (tags.length === 0) {
+function filterPostsByTag(posts, tags = [], { exclude = [] } = {}) {
+  if (tags.length === 0 && exclude.length === 0) {
     return posts;
   }
 
-  // Check all the tags for each post
-  return posts.filter((post) => {
-    const postTags = getTags(post);
+  if (tags.length > 0 && exclude.length > 0) {
+    throw new Error('Cannot have both "tags" and "exclude" options');
+  }
 
-    // If any of the tags on a post includes the ones we want
-    let include = false;
-    tags.forEach((requestedTag) => {
-      if (postTags.includes(requestedTag)) {
-        include = true;
-        return;
-      }
+  // INCLUDE POSTS THAT HAVE THE TAGS
+  if (tags.length > 0) {
+    // Check all the tags for each post
+    return posts.filter((post) => {
+      const postTags = getTags(post);
+
+      // If any of the tags on a post includes the ones we want
+      let include = false;
+      tags.forEach((requestedTag) => {
+        if (postTags.includes(requestedTag)) {
+          include = true;
+          return;
+        }
+      });
+
+      return include;
     });
+  }
 
-    return include;
-  });
+  // REMOVE POSTS THAT INCLUDE A TAG
+  if (exclude.length > 0) {
+    // Check all the tags for each post
+    return posts.filter((post) => {
+      const postTags = getTags(post);
+      // If any of the tags on a post includes the ones we want
+      let include = true;
+      exclude.forEach((requestedTag) => {
+        if (postTags.includes(requestedTag)) {
+          include = false;
+          return;
+        }
+      });
+
+      return include;
+    });
+  }
+
+  return posts;
 }
 
 function splitTagsArr(tags) {
