@@ -25,7 +25,7 @@ tags: recently-watched, movies, videos, tv-shows
                 <a href="{{ movie.url }}" style="text-decoration:none; color:inherit;">
                     <li style="padding:0;">
                         <figure>
-                            <img style="display:block;" src="{{movie.data.image}}">
+                            <img style="display:block;" src="{{movie.data.image}}" alt="Movie poster for '{{movie.data.title}}'" title="Movie poster for '{{movie.data.title}}'">
                             <figcaption style="font-size:0.9rem;">
                                 <div>Watched on {{ movie.data.date | fullDate }}</div>
                                 <div>Rated {{ movie.data.stars }}</div>
