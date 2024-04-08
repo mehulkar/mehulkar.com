@@ -1,7 +1,7 @@
 ---
 title: TickTick
 date: 2023-01-05
-tags: product-feedback
+tags: product-review
 ---
 
 I've been using [TickTick][1] pretty heavily since 2016, completing ~1400
@@ -14,7 +14,7 @@ they were possible to pay for, I would.
 
 ## My tasks for today
 
-There's a Today view and  "Assigned to Me" view. The problem with both is how they interact with
+There's a Today view and "Assigned to Me" view. The problem with both is how they interact with
 shared lists. The Today view includes all tasks for today, even if they aren't assigned to me.
 The Assigned to Me view only shows tasks that are assigned to me, but assignment is only possible
 in shared lists, so my personal list tasks are not included. This means that if I'm using a shared
@@ -24,7 +24,7 @@ the Today view and ignore part of it.
 ## Deadlines
 
 All tasks can be assigned a due date, but they're dates on which you're expected to do the task.
-I want to express that a task needs to be done *by* a certain date. One way to use this information
+I want to express that a task needs to be done _by_ a certain date. One way to use this information
 would be to inject it into the Today view as that deadline approaches.
 
 ## List templates
@@ -41,7 +41,7 @@ On busy days (or weekends), I often like to start planning from a clean slate an
 It helps not to clutter this with the entire list of tasks. But once the list is done, deleting it
 doesn't feel right because it deletes the tasks also. I would like to be able to archive instead.
 
-I *could* use tags or clear my Today view before I do this, but a new list usually feels better.
+I _could_ use tags or clear my Today view before I do this, but a new list usually feels better.
 I would use this for packing, grocery stores, busy weekends, etc. Currently I switch over to use
 Apple Motes for this with a checklist.
 

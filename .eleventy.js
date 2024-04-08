@@ -30,6 +30,7 @@ const TAG_PAGES = [
   "product",
   "career",
   "recently-watched",
+  "product-review",
 ];
 
 const TAG_PATH_OVERRIDES = {
