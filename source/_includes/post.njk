@@ -34,7 +34,7 @@ layout: layout.njk
       <h3 class='f5 fw2 mb1'>{{page.date | fullDate }}</h2>
       <h1 class='fw3 mb1 mt0 post--title'>{{title}}</h1>
       <section class="mb2">
-        {% for tag in (tags | splitTags)  %}
+        {% for tag in tags  %}
           {{tag | tagLink | safe }}
         {% endfor %}
       </section>

@@ -135,18 +135,6 @@ module.exports = function (eleventyConfig) {
     return fullDate.format(adjusted);
   });
 
-  eleventyConfig.addNunjucksFilter("splitTags", function (value) {
-    if (!value) {
-      return [];
-    }
-
-    if (!Array.isArray(value)) {
-      throw new Error(`Non-array tags found, please correct this: ${value}`);
-    }
-
-    return value;
-  });
-
   eleventyConfig.addNunjucksFilter("debug", function (value) {
     console.log("value", value);
     try {
@@ -251,12 +239,10 @@ function filterPostsByTag(posts, tags = [], { exclude = [] } = {}) {
   if (tags.length > 0) {
     // Check all the tags for each post
     return posts.filter((post) => {
-      const postTags = getTags(post);
-
       // If any of the tags on a post includes the ones we want
       let include = false;
       tags.forEach((requestedTag) => {
-        if (postTags.includes(requestedTag)) {
+        if (post.data.tags.includes(requestedTag)) {
           include = true;
           return;
         }
@@ -270,11 +256,10 @@ function filterPostsByTag(posts, tags = [], { exclude = [] } = {}) {
   if (exclude.length > 0) {
     // Check all the tags for each post
     return posts.filter((post) => {
-      const postTags = getTags(post);
       // If any of the tags on a post includes the ones we want
       let include = true;
       exclude.forEach((requestedTag) => {
-        if (postTags.includes(requestedTag)) {
+        if (post.data.tags.includes(requestedTag)) {
           include = false;
           return;
         }
@@ -285,24 +270,6 @@ function filterPostsByTag(posts, tags = [], { exclude = [] } = {}) {
   }
 
   return posts;
-}
-
-function splitTagsArr(tags) {
-  const cleaned = tags
-    .split(",")
-    .map((x) => x.trim())
-    .filter(Boolean);
-
-  const unique = new Set(cleaned);
-  return [...unique];
-}
-
-function getTags(post) {
-  if (!Array.isArray(post.data.tags)) {
-    throw new Error("post.data.tags is not an array, please fix this!!");
-  }
-
-  return post.data.tags;
 }
 
 /**
