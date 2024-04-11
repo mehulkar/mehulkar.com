@@ -136,7 +136,6 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addNunjucksFilter("debug", function (value) {
-    console.log("value", value);
     try {
       return JSON.stringify(value, null, 2);
     } catch (e) {
