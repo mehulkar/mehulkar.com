@@ -1,7 +1,10 @@
 ---
 title: First Developer Experience With htmx
 date: 2022-12-16
-tags: programming, frontend, web
+tags:
+- programming
+- frontend
+- web
 ---
 
 A few days ago, I tried to build a web form with Enhance.dev and

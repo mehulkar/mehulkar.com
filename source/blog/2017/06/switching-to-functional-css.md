@@ -1,7 +1,9 @@
 ---
 title: Switching to Functional CSS
 date: 2017-03-06
-tags: programming, frontend
+tags:
+- programming
+- frontend
 ---
 
 I just switched over to tachyons on one of my projects. [Tachyons][1] is a functional

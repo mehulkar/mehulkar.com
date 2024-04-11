@@ -1,7 +1,8 @@
 ---
 title: "2016: Home Screen"
 date: 2016-01-08
-tags: home-screen
+tags:
+- home-screen
 ---
 
 I read M.G. Siegler's post on his home screen and I thought it was

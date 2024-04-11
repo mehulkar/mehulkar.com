@@ -1,7 +1,8 @@
 ---
 title: Technical Debt Terms
 date: 2022-06-07
-tags: programming
+tags:
+- programming
 ---
 
 When most people use the metaphor of technical debt to describe their choices in programing,

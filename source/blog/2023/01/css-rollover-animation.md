@@ -1,7 +1,12 @@
 ---
 title: CSS Rollover Animation
 date: 2023-01-08
-tags: programming, frontend, css, custom-elements, web-components
+tags:
+- programming
+- frontend
+- css
+- custom-elements
+- web-components
 ---
 
 

@@ -1,7 +1,9 @@
 ---
 title: "War Dogs"
 date: 2022-07-26
-tags: recently-watched, movies
+tags:
+- recently-watched
+- movies
 image: "https://a.ltrbxd.com/resized/sm/upload/7b/d2/2z/ef/aqhAqttDq7zgsTaBHtCD8wmTk6k-0-600-0-900-crop.jpg?v=b1d4ca3acb"
 stars: "★★★"
 rating: "3"

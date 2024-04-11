@@ -1,7 +1,9 @@
 ---
 title: "Reduce"
 date: 2017-08-14
-tags: programming, javascript
+tags:
+- programming
+- javascript
 ---
 
 I've always thought of a `reduce` function as a way to create an aggregation.

@@ -1,7 +1,10 @@
 ---
 title: Ember Object Model extend vs create
 date: 2017-12-07
-tags: programming, frontend, ember.js
+tags:
+- programming
+- frontend
+- ember.js
 ---
 
 I learned something new the other day in the course of development.

@@ -1,7 +1,8 @@
 ---
 title: Slow Me Down
 date: 2010-05-03
-tags: personal
+tags:
+- personal
 ---
 
 A friend wrote me a handwritten letter because he doesn’t like email much.

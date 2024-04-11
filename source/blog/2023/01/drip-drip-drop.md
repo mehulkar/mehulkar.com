@@ -1,7 +1,10 @@
 ---
 title: Drip, Drip, Drop
 date: 2023-01-28
-tags: tech, marketing, email
+tags:
+- tech
+- marketing
+- email
 ---
 
 When I purchase something online, I get a flurry of emails:

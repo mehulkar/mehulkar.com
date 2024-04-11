@@ -1,7 +1,9 @@
 ---
 title: Asymmetrical Inputs
 date: 2023-07-13
-tags: programming, ux
+tags:
+- programming
+- ux
 ---
 
 A few months ago I made a small app to input some data into a form and record it

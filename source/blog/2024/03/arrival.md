@@ -1,7 +1,9 @@
 ---
 title: "Arrival"
 date: 2024-03-31
-tags: recently-watched, movies
+tags:
+- recently-watched
+- movies
 image: "https://a.ltrbxd.com/resized/sm/upload/3u/dy/qd/qd/4Iu5f2nv7huqvuYkmZvSPOtbFjs-0-600-0-900-crop.jpg?v=0fc28fdf2c"
 stars: "★★★★"
 rating: "4"

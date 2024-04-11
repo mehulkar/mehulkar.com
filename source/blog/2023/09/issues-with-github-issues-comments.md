@@ -1,7 +1,10 @@
 ---
 title: Issues with Github Issues Comments
 date: 2023-09-20
-tags: product, ux, github
+tags:
+- product
+- ux
+- github
 ---
 
 Now that I work on an open source repository, I'm spending more time in Github

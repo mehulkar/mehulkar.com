@@ -1,7 +1,8 @@
 ---
 title: "An Explanation of Microfinance"
 date: 2010-10-08
-tags: personal
+tags:
+- personal
 ---
 
 As FridgeWaves gets more and more exposure, and as I tell more people about what we do, the question inevitably comes up:

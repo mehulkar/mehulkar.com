@@ -1,7 +1,9 @@
 ---
 title: EventListener objects
 date: 2018-01-22
-tags: programming, frontend
+tags:
+- programming
+- frontend
 ---
 
 Whenever I've used `addEventListener`, I've always passed a function as the second argument. I

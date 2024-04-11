@@ -1,7 +1,8 @@
 ---
 title: Building Social Business
 date: 2010-05-20
-tags: notes
+tags:
+- notes
 ---
 
 I listened to Muhammad Yunus talk about building social business in Chicago today. I don’t usually

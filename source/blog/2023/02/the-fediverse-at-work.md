@@ -1,7 +1,8 @@
 ---
 title: The Fediverse At Work
 date: 2023-02-12
-tags: fediverse
+tags:
+- fediverse
 ---
 
 One of the advantages of the Fediverse is the interoperability of services

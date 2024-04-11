@@ -1,7 +1,9 @@
 ---
 title: "Badhaai Do"
 date: 2022-06-04
-tags: recently-watched, movies
+tags:
+- recently-watched
+- movies
 image: "https://a.ltrbxd.com/resized/film-poster/6/7/5/4/0/1/675401-badhaai-do-0-600-0-900-crop.jpg?v=b11a079b1b"
 stars: "★★★★"
 rating: "4"

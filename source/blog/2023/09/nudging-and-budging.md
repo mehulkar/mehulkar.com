@@ -1,7 +1,9 @@
 ---
 title: Nudging and Budging
 date: 2023-09-22
-tags: teams, engineering
+tags:
+- teams
+- engineering
 ---
 
 A good team is made up of people who push each other to Be Better™. I call this

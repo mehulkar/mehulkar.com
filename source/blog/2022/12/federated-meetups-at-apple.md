@@ -1,7 +1,9 @@
 ---
 title: Federated meetups at Apple
 date: 2022-12-26
-tags: apple, fediverse
+tags:
+- apple
+- fediverse
 ---
 
 When I was at Apple, I created an internal tool to organize events called meetups.apple.com. The tool was roughly based on meetup.com with events and groups and rsvps, and it gained significant traction in the years I was there. By the time I left, the tool had been used to plan over 10,000 events around the world (although some of them were undoubtedly events created solely for the purpose of testing the tool). Numerous people told me (and I also believe this) that it helped push parts of Apple's siloed culture internally into an new era of open collaboration.

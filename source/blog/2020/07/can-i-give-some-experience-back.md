@@ -1,7 +1,9 @@
 ---
 title: Can I Give Some Experience Back?
 date: 2020-07-16
-tags: career, engineering
+tags:
+- career
+- engineering
 ---
 
 They say that having a little bit of knowledge can be dangerous, but they didn't

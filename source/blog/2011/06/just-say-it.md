@@ -1,7 +1,8 @@
 ---
 title: Just Say It
 date: 2011-06-06
-tags: poetry
+tags:
+- poetry
 ---
 
 Usually I write in riddles and rhymes<br/>

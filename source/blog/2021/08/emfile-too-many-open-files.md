@@ -1,7 +1,10 @@
 ---
 title: "EMFILE: too many open files"
 date: 2021-08-13
-tags: programming, javascript, watchman
+tags:
+- programming
+- javascript
+- watchman
 ---
 
 Sometimes when I run a `ember serve` I get this error:

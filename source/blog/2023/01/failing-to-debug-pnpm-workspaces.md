@@ -1,7 +1,10 @@
 ---
 title: Failing to Debug pnpm Workspaces
 date: 2023-01-20
-tags: programming, debugging, programming-journal
+tags:
+- programming
+- debugging
+- programming-journal
 ---
 
 I wish this was [one of those posts where I write about debugging an issue](/blog/category/debugging)

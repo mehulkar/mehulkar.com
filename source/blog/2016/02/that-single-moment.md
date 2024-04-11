@@ -1,7 +1,8 @@
 ---
 title: That single moment
 date: 2016-02-26
-tags: quote
+tags:
+- quote
 ---
 
 > that single moment of untarnished joy.

@@ -1,7 +1,8 @@
 ---
 title: Phir Se
 date: 2017-06-22
-tags: poetry
+tags:
+- poetry
 ---
 
 Yaad haiṅ voh taash ke din?<br />

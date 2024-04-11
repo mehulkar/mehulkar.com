@@ -1,7 +1,11 @@
 ---
 title: Recently Highlighted
 date: 2022-12-11
-tags: indieweb, 11ty, rss, meta
+tags:
+- indieweb
+- 11ty
+- rss
+- meta
 ---
 
 I've started reading more on the internet via RSS using the Feedly RSS client. Feedly has a feature

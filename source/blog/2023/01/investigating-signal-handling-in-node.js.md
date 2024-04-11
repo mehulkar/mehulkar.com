@@ -1,7 +1,10 @@
 ---
 title: Investigating Signal Handling in Node.js
 date: 2023-01-16
-tags: programming, node.js, unix
+tags:
+- programming
+- node.js
+- unix
 ---
 
 <aside>

@@ -1,7 +1,8 @@
 ---
 title: "Being Perfect"
 date: 2011-05-24
-tags: poetry
+tags:
+- poetry
 ---
 
 My life is an open book<br/>

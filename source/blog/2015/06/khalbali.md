@@ -1,7 +1,8 @@
 ---
 title: Khalbali
 date: 2015-06-19
-tags: three-musics
+tags:
+- three-musics
 ---
 
 Rohan Kymal has this crazy scientist look that makes his rendition of <a href="https://www.youtube.com/watch?v=UDnXNOIZ7EU">Crazy</a> so much more appropriate. Mashing it up with A.R Rahman's Khalbali and that "Ziddiiiiii" hook is just yes.

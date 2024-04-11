@@ -1,7 +1,11 @@
 ---
 title: Get The Right Timezone in Javascript
 date: 2022-12-17
-tags: programming, frontend, web, time
+tags:
+- programming
+- frontend
+- web
+- time
 ---
 
 I've [been][1] [hacking][2] on an app that submits a web form and I wanted

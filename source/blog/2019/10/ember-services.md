@@ -1,7 +1,10 @@
 ---
 title: Ember Services
 date: 2019-10-24
-tags: programming, frontend, ember.js
+tags:
+- programming
+- frontend
+- ember.js
 ---
 
 Ember’s established pattern of Components for short-lived state and Services for long-lived

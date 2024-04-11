@@ -1,7 +1,9 @@
 ---
 title: LinkedIn Developer API
 date: 2023-07-18
-tags: programming, api
+tags:
+- programming
+- api
 ---
 
 I had the inspiration to build an app today and after a couple hours, I'm giving up.

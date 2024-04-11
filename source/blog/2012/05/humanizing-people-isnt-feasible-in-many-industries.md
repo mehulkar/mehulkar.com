@@ -1,7 +1,8 @@
 ---
 title: Humanizing People Isn't Feasible In Many Industries
 date: 2012-05-12
-tags: thoughts
+tags:
+- thoughts
 ---
 
 I had an interesting debate with [Diane][1] and Matt today about how people are treated at companies.

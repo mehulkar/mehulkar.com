@@ -1,6 +1,9 @@
 ---
 title: "#EmberJS2019: Roadmap Response"
-tags: programming, frontend, ember.js
+tags:
+- programming
+- frontend
+- ember.js
 date: 2019-06-10
 ---
 

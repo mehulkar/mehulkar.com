@@ -1,7 +1,8 @@
 ---
 title: One. Catchy. Bengali. Number.
 date: 2015-06-26
-tags: three-musics
+tags:
+- three-musics
 ---
 
 Happy Friday!

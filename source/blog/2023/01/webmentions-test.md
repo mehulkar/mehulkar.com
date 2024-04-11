@@ -1,7 +1,9 @@
 ---
 title: Webmentions Test
 date: 2023-01-02
-tags: indieweb, meta
+tags:
+- indieweb
+- meta
 ---
 
 This post tests _sending_ webmentions. I've set it up by using IFTTT to send an ping to [webmention.app][1]

@@ -1,7 +1,9 @@
 ---
 title: How Rails Works
 date: 2014-10-04 12:06:45
-tags: programming, rails
+tags:
+- programming
+- rails
 ---
 
 You should read the one about [how websites work](/blog/what-is-a-website) first.

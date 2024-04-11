@@ -1,7 +1,8 @@
 ---
 title: When SemVer doesn't work
 date: 2023-05-21
-tags: programming
+tags:
+- programming
 ---
 
 It's Friday evening and you're working on a piece of code that you're pretty

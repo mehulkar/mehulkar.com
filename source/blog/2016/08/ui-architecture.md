@@ -1,7 +1,9 @@
 ---
 title: UI architecture
 date: 2016-08-28
-tags: programming, frontend
+tags:
+- programming
+- frontend
 ---
 
 UI architecture seems to be consolidating around components

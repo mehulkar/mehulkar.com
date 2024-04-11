@@ -1,7 +1,9 @@
 ---
 title: The Factory Pattern and Circular Dependencies
 date: 2017-04-19
-tags: programming, python
+tags:
+- programming
+- python
 ---
 
 Say I'm writing the code for a treat dispenser for my pets. In the

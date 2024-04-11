@@ -1,7 +1,9 @@
 ---
 title: "Friday morning bootcamp blues (in Ruby)"
 date: 2012-02-10
-tags: programming, ruby
+tags:
+- programming
+- ruby
 ---
 
 ```ruby

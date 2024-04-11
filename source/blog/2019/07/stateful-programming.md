@@ -1,7 +1,8 @@
 ---
 title: Stateful Programming
 date: 2019-07-01
-tags: programming
+tags:
+- programming
 ---
 
 I’ve heard people say that “state” is the cause of many bugs. This weekend,

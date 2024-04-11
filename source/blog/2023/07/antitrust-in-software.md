@@ -1,7 +1,10 @@
 ---
 title: Antitrust in Software
 date: 2023-07-20
-tags: books, software, draft
+tags:
+- books
+- software
+- draft
 ---
 
 <picture>

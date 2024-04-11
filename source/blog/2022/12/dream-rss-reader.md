@@ -1,7 +1,8 @@
 ---
 title: Dream RSS Reader
 date: 2022-12-09
-tags: indieweb
+tags:
+- indieweb
 ---
 
 I've been collecting RSS feeds in Feedly for some time, but have recently picked up actually

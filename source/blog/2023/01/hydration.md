@@ -1,7 +1,9 @@
 ---
 title: Hydration
 date: 2023-01-18
-tags: note, response
+tags:
+- note
+- response
 ---
 
 Henry's article "How to make a website" had this little, innocuous fragment:

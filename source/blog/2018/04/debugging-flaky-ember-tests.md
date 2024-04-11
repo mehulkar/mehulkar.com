@@ -1,7 +1,12 @@
 ---
 title: Debugging Flaky Ember Tests
 date: 2018-04-24
-tags: programming, debugging, frontend, ember.js, testing
+tags:
+- programming
+- debugging
+- frontend
+- ember.js
+- testing
 ---
 
 Sometimes tests can be reaaaally flaky and fail intermittently. It can be hard to chase these down,

@@ -1,7 +1,8 @@
 ---
 title: "Textbooks are Broken"
 date: 2012-07-03
-tags: business
+tags:
+- business
 ---
 
 Last week I took home a computer science textbook to learn more about computer science. I was in a unique position where I had both the resources and motivation to learn something new. A chapter into the textbook though, I realized that textbooks are horribly broken for several reasons:

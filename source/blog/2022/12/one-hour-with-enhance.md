@@ -1,7 +1,10 @@
 ---
 title: One Hour With Enhance.dev
 date: 2022-12-13
-tags: programming, frontend, web
+tags:
+- programming
+- frontend
+- web
 ---
 
 I wanted to build a web form that sends data to a google spreadsheet, and had recently came across

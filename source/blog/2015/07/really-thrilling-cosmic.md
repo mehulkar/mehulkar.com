@@ -1,7 +1,8 @@
 ---
 title: Really Thrilling & Cosmic
 date: 2015-07-17
-tags: three-musics
+tags:
+- three-musics
 ---
 
 Happy Friday!

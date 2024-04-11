@@ -1,7 +1,9 @@
 ---
 title: "Up"
 date: 2023-03-03
-tags: recently-watched, movies
+tags:
+- recently-watched
+- movies
 image: "https://a.ltrbxd.com/resized/film-poster/4/3/3/0/2/43302-up-0-600-0-900-crop.jpg?v=eac6a19a4c"
 stars: "★★★★★"
 rating: "5"

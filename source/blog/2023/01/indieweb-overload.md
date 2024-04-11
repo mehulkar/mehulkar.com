@@ -1,7 +1,9 @@
 ---
 title: Indieweb Overload
 date: 2023-01-03
-tags: indieweb, fediverse
+tags:
+- indieweb
+- fediverse
 ---
 
 I thought #indieweb was just about having a silly

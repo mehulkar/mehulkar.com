@@ -1,7 +1,9 @@
 ---
 title: Ruby callable methods
 date: 2017-02-10
-tags: programming, ruby
+tags:
+- programming
+- ruby
 ---
 
 I wish Ruby had some semantic difference between methods that define

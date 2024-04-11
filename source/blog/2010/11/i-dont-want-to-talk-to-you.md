@@ -1,7 +1,8 @@
 ---
 title: I Don't Want To Talk To You
 date: 2010-11-08
-tags: thoughts
+tags:
+- thoughts
 ---
 
 Because chances are, you are awesome. And you have an awesome story. And you want to share them with me. And out of this will come awesome ideas.

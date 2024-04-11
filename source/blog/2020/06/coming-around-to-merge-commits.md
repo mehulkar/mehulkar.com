@@ -1,7 +1,10 @@
 ---
 title: Coming around to merge commits
 date: 2020-06-10
-tags: programming, git, github
+tags:
+- programming
+- git
+- github
 ---
 
 Ever since I learned how to rebase and rebase interactively, I've avoided git merge. One of the big reasons for this is that I have `git l` aliased to a custom `git log --graph` (that I undoubtedly copy-pasted from somewhere on the internet):

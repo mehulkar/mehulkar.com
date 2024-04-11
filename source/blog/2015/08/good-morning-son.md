@@ -1,7 +1,8 @@
 ---
 title: Good Morning Son
 date: 2015-08-21
-tags: three-musics
+tags:
+- three-musics
 ---
 
 Good morning!

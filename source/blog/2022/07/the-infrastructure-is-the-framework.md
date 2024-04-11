@@ -1,7 +1,8 @@
 ---
 title: The Infrastructure Is The Framework
 date: 2022-07-05
-tags: programming
+tags:
+- programming
 ---
 
 Last week at the [San Francisco Vercel meetup][7], [Malte Ubl][6] was talking about exciting

@@ -1,7 +1,8 @@
 ---
 title: "2023: Home Screen"
 date: 2023-01-11
-tags: home-screen
+tags:
+- home-screen
 ---
 
 I haven't written one of these [since 2020](/blog/category/home-screen), so I'm excited to see

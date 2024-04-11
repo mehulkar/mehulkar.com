@@ -1,7 +1,8 @@
 ---
 title: "Week 2: Grace"
 date: 2010-11-17 00:00:00
-tags: ninja-tennis
+tags:
+- ninja-tennis
 ---
 
 Playing tennis like a ninja requires good movement.

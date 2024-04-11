@@ -1,7 +1,12 @@
 ---
 title: A Test Suite & Design System For My Blog
 date: 2022-12-28
-tags: frontend, testing, design-system, qa, meta
+tags:
+- frontend
+- testing
+- design-system
+- qa
+- meta
 ---
 
 I'm no designer, but every once in a while, I tinker with the CSS on this website to make things
