@@ -141,16 +141,7 @@ module.exports = function (eleventyConfig) {
     }
 
     if (!Array.isArray(value)) {
-      console.warn("Non-array tags found, please correct this!", value);
-      // https://github.com/11ty/eleventy/blob/v1.0.1/src/TemplateData.js#L608-L617
-      // 11ty specially parses tags and always returns an array. It expects that
-      // we are setting tags as a multiline array, if there are more than one. And
-      // if a single string is provided, it will still give that to us as an array of one string.
-      // But in _our_ posts, we specify comma separated tags.
-      // So we need to take the first value out of the single-item array, and
-      // then parse that.
-      const [tags = ""] = value;
-      return splitTagsArr(tags);
+      throw new Error(`Non-array tags found, please correct this: ${value}`);
     }
 
     return value;
@@ -308,10 +299,7 @@ function splitTagsArr(tags) {
 
 function getTags(post) {
   if (!Array.isArray(post.data.tags)) {
-    console.log("post.data.tags is not an array, please fix this!!");
-    // TODO: how to use frontmatter correctly so that tags are already an array?
-    const tagsString = post.data.tags[0] || "";
-    return splitTagsArr(tagsString);
+    throw new Error("post.data.tags is not an array, please fix this!!");
   }
 
   return post.data.tags;
