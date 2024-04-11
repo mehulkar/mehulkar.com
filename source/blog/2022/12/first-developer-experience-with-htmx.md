@@ -2,9 +2,9 @@
 title: First Developer Experience With htmx
 date: 2022-12-16
 tags:
-- programming
-- frontend
-- web
+  - programming
+  - frontend
+  - web
 ---
 
 A few days ago, I tried to build a web form with Enhance.dev and
@@ -36,25 +36,24 @@ happy with wiring things up. But I've run into three crucial issues:
 
 2. In-Flight States
 
-    I want my web form to add a `disabled` attribute somewhere while a request is in flight.
-    Although there is a way to show/hide elements [using `hx-indicator` and `hx-request`][4],
-    I don't see a way to add/remove HTML attributes. There may be a way to do this with the
-    provided events, that I haven't looked into yet.
+   I want my web form to add a `disabled` attribute somewhere while a request is in flight.
+   Although there is a way to show/hide elements [using `hx-indicator` and `hx-request`][4],
+   I don't see a way to add/remove HTML attributes. There may be a way to do this with the
+   provided events, that I haven't looked into yet.
 
 3. HTML duplication
 
-    My project is just `index.html` and an `api/` directory with some [Serverless Functions][5]
-    that are deployed on Vercel. I'm using [`vercel dev`][6] as my development server.
-    Because htmx expects HTML snippets in response to update DOM after requests, I have to duplicate
-    my HTML in `api/foo.mjs` as template strings, and keep them in sync with `index.html`.
-    This feels a bit annoying, and the only workaround I can think of is to add a build system with
-    a templating library.
+   My project is just `index.html` and an `api/` directory with some [Serverless Functions][5]
+   that are deployed on Vercel. I'm using [`vercel dev`][6] as my development server.
+   Because htmx expects HTML snippets in response to update DOM after requests, I have to duplicate
+   my HTML in `api/foo.mjs` as template strings, and keep them in sync with `index.html`.
+   This feels a bit annoying, and the only workaround I can think of is to add a build system with
+   a templating library.
 
 I spent a lot more time with `htmx` than I did [with `Enhance`][1], so this isn't really a
 comparison post (although I did attempt to build the same thing with each). Mostly this experience
 makes me want to use a "full featured" framework so I can just write my UI and business logic and
 be done, but I'm also enjoying experimenting.
-
 
 [1]: /blog/2022/12/one-hour-with-enhance/
 [2]: https://htmx.org/

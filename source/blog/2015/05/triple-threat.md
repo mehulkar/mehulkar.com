@@ -2,7 +2,7 @@
 title: Triple Threat
 date: 2015-05-29
 tags:
-- three-musics
+  - three-musics
 ---
 
 Happy Friday!

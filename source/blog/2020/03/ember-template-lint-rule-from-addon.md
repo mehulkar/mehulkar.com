@@ -2,7 +2,7 @@
 title: Ember Template Lint Rule from Addon
 date: 2020-03-25
 tags:
-- ember.js
+  - ember.js
 ---
 
 I recently wanted to ship an Ember template lint rule from an addon. This use case wasn't _exactly_
@@ -87,7 +87,7 @@ I had to do the following to make it work:
           testMethod: test, // refers to `Jest`'s global `test`
           focusMethod: test.only, // refers to `Jest`'s global `test.only`
           plugins: [myPlugin], // The plugin
-        })
+        }),
       );
     }
 

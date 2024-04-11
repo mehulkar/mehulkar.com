@@ -2,8 +2,8 @@
 title: npmgraph
 date: 2024-02-07
 tags:
-- javascript
-- npm
+  - javascript
+  - npm
 ---
 
 I've started to loosely try to get involved in [James Garbutt's][1] npm

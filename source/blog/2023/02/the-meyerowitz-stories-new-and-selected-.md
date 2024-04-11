@@ -2,8 +2,8 @@
 title: "The Meyerowitz Stories (New and Selected)"
 date: 2023-02-17
 tags:
-- recently-watched
-- movies
+  - recently-watched
+  - movies
 image: "https://a.ltrbxd.com/resized/sm/upload/3h/s9/0c/uc/lJr90SKXhEBaSchymgzOrbC56kA-0-600-0-900-crop.jpg?v=513dea5c80"
 stars: "★★★★"
 rating: "4"

@@ -2,8 +2,8 @@
 title: EventListener objects
 date: 2018-01-22
 tags:
-- programming
-- frontend
+  - programming
+  - frontend
 ---
 
 Whenever I've used `addEventListener`, I've always passed a function as the second argument. I
@@ -24,9 +24,9 @@ to `addEventListener` can be anything that responds to `handleEvent`. For exampl
 
 ```javascript
 element.addEventListener("eventName", {
-    handleEvent(event) {
-        console.log("event happened!");
-    },
+  handleEvent(event) {
+    console.log("event happened!");
+  },
 });
 ```
 
@@ -58,9 +58,9 @@ element.addEventListener('dblClick', myCustomHandler);
 
 Further reading:
 
--   [`addEventListener` docs][1]
--   [`EventListener` interface][2]: (the object that is passed to `handleEvent`)
--   [`Event` interface][3]: (an interface for your custom handler)
+- [`addEventListener` docs][1]
+- [`EventListener` interface][2]: (the object that is passed to `handleEvent`)
+- [`Event` interface][3]: (an interface for your custom handler)
 
 [1]: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
 [2]: https://developer.mozilla.org/en-US/docs/Web/API/Event

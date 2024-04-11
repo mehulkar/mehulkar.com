@@ -2,7 +2,7 @@
 title: Getting Surprised By Technology
 date: 2019-01-04
 tags:
-- tech
+  - tech
 ---
 
 I've always thought I'd be impervious to technological advancement. I thought I'd never see

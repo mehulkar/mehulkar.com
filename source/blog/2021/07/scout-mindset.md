@@ -2,7 +2,7 @@
 title: The Scout Mindset
 date: 2021-07-04
 tags:
-- books
+  - books
 ---
 
 <img class="book-cover" src="/images/blog/books/scout-mindset.jpg">

@@ -2,7 +2,7 @@
 title: Grand & Picturesque
 date: 2015-07-24
 tags:
-- three-musics
+  - three-musics
 ---
 
 Friday!!

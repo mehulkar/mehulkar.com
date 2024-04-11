@@ -2,8 +2,8 @@
 title: How Rails Works
 date: 2014-10-04 12:06:45
 tags:
-- programming
-- rails
+  - programming
+  - rails
 ---
 
 You should read the one about [how websites work](/blog/what-is-a-website) first.
@@ -22,9 +22,9 @@ and I want to make it clear that (1) that's a fine way to feel and (2),
 
 You won't be writing any code in this tutorial for two reasons:
 
--   Installing Ruby on Rails can be a pain because installing Ruby is a pain.
--   So I can write another post about actual code and get more pageviews and earn
-    $0 dollars again from the lack of ads on this page.
+- Installing Ruby on Rails can be a pain because installing Ruby is a pain.
+- So I can write another post about actual code and get more pageviews and earn
+  $0 dollars again from the lack of ads on this page.
 
 ## So, Ruby on Rails
 

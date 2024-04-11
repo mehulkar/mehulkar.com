@@ -2,8 +2,8 @@
 title: "Palm Springs"
 date: 2022-07-26
 tags:
-- recently-watched
-- movies
+  - recently-watched
+  - movies
 image: "https://a.ltrbxd.com/resized/film-poster/5/1/5/4/6/7/515467-palm-springs-0-600-0-900-crop.jpg?v=d3df94888b"
 stars: "★★★½"
 rating: "3.5"

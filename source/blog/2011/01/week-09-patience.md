@@ -2,7 +2,7 @@
 title: "Week 9: Patience"
 date: 2011-01-05 00:02:00
 tags:
-- ninja-tennis
+  - ninja-tennis
 ---
 
 Patience is a dangerous thing. To wait until the time is right. To recognize opportunity. Sometimes this is enough. But that means letting your opponent dictate the point. And that is dangerous.

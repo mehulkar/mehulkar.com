@@ -2,8 +2,8 @@
 title: "TIL: Creating Globals"
 date: 2022-04-18
 tags:
-- programming
-- javascript
+  - programming
+  - javascript
 ---
 
 Today I learned you can create globals by passing unnecessary arguments
@@ -13,10 +13,10 @@ For example:
 
 ```javascript
 function myFunc(a) {
-    console.log(a);
+  console.log(a);
 }
 
-myFunc(123, (i=100));
+myFunc(123, (i = 100));
 
 console.log(i);
 ```

@@ -1,7 +1,7 @@
 ---
 title: "Stochastic Self Similarity"
 tags:
-- til
+  - til
 date: 2015-08-30
 ---
 
@@ -12,10 +12,10 @@ Stochastic Self-similarity is a mathematical concept that describes
 phenomena that look the same at different levels of magnitude.
 Examples straight out of the book:
 
--   A coastline looking like a craggy coastline from a hang glider
-    and from outer space.
--   A branch of a tree looking like the tree itself
--   A snowflake looking like a snowflake under a microscope.
+- A coastline looking like a craggy coastline from a hang glider
+  and from outer space.
+- A branch of a tree looking like the tree itself
+- A snowflake looking like a snowflake under a microscope.
 
 The insight of this chapter in the book is that problems in our daily lives
 exhibit this same phenomenon; that smaller problems have the tendency

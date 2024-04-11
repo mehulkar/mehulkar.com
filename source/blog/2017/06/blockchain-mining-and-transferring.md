@@ -2,7 +2,7 @@
 title: Blockchain Mining and Transferring
 date: 2017-06-14
 tags:
-- til
+  - til
 ---
 
 I vaguely knew things about Bitcoin and blockchain technology, but a lot of

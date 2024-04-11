@@ -2,7 +2,7 @@
 title: "Week 7: Surprises"
 date: 2010-12-23 00:00:00
 tags:
-- ninja-tennis
+  - ninja-tennis
 ---
 
 A ninja trains with **discipline**. Practices technique until he is flawless. Until he can reproduce the same strokes over and over again.

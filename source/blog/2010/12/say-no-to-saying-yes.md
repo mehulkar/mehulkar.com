@@ -2,7 +2,7 @@
 title: Say No To Saying Yes
 date: 2010-12-14
 tags:
-- thoughts
+  - thoughts
 ---
 
 People who say YES to everything are digging themselves into a hole. Not just saying yes when you’re asked to commit to doing something, but when you’re asked to commit to any thought or idea.

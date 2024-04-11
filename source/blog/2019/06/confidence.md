@@ -2,7 +2,7 @@
 title: Confidence
 date: 2019-06-27
 tags:
-- personal
+  - personal
 ---
 
 I used to think that confidence is something you gather over time. That with

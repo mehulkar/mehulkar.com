@@ -2,7 +2,7 @@
 title: Getting Noticed Has Nothing To Do With Talent
 date: 2011-02-16
 tags:
-- product
+  - product
 ---
 
 There are a lot of talented people in the world. Not all of them are given the credit they deserve.

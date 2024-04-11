@@ -2,7 +2,7 @@
 title: Yaadon Ki Qawwali
 date: 2012-01-06
 tags:
-- poetry
+  - poetry
 ---
 
 Aao yaadon ki qawwali shokhiyon mein sunayein<br/>

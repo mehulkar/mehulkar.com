@@ -2,7 +2,7 @@
 title: Just Say It
 date: 2011-06-06
 tags:
-- poetry
+  - poetry
 ---
 
 Usually I write in riddles and rhymes<br/>

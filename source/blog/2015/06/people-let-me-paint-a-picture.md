@@ -2,7 +2,7 @@
 title: People let me paint a picture
 date: 2015-06-12
 tags:
-- three-musics
+  - three-musics
 ---
 
 Like I said a couple weeks ago, I've been listening to a lot of Christian Rock. I'm not Christian, but there's some great, uplifting music on that station.

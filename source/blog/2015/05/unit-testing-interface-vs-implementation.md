@@ -1,7 +1,7 @@
 ---
 title: "Unit Testing: Interface vs. Implementation"
 tags:
-- programming
+  - programming
 date: 2015-05-26
 ---
 
@@ -89,41 +89,41 @@ This is important from a number of different perspectives:
 
 1. Tests inform design:
 
-    When I write my tests with the interface (or API) of my objects in mind,
-    I'm forced to think about how my objects will be used by the rest of my application.
-    I'm forced to design objects with a usable API in mind. In a language like
-    Ruby, where you get to make arbitrary decisions about public / private methods,
-    this is really useful.
+   When I write my tests with the interface (or API) of my objects in mind,
+   I'm forced to think about how my objects will be used by the rest of my application.
+   I'm forced to design objects with a usable API in mind. In a language like
+   Ruby, where you get to make arbitrary decisions about public / private methods,
+   this is really useful.
 
-    For example, in a typical Rails scenario, if my application allows users to click
-    a button to make a cat meow, the `CatController` will call this `Cat.new.talk` method.
-    Or maybe I have it wired up so that every time the dog barks, the cat also meows.
-    In both of these use cases, when I write my tests to assert against the `talk` method,
-    I can guarantee that I have a working interface. I could almost compare this to
-    type checking at compile time.
+   For example, in a typical Rails scenario, if my application allows users to click
+   a button to make a cat meow, the `CatController` will call this `Cat.new.talk` method.
+   Or maybe I have it wired up so that every time the dog barks, the cat also meows.
+   In both of these use cases, when I write my tests to assert against the `talk` method,
+   I can guarantee that I have a working interface. I could almost compare this to
+   type checking at compile time.
 
 1. Implementations change, expectations remain the same:
 
-    Today, I only have a cat. Tomorrow, I might have a duck and a pig. Or maybe
-    I'll dress up my cat as a horse and send it as a decoy to an ancient civilization.
-    And to do all this, I might have to change code in the `Cat` class.
-    But I'll still expect my cat to meow. So if my changes break that expectation,
-    my tests should tell me.
+   Today, I only have a cat. Tomorrow, I might have a duck and a pig. Or maybe
+   I'll dress up my cat as a horse and send it as a decoy to an ancient civilization.
+   And to do all this, I might have to change code in the `Cat` class.
+   But I'll still expect my cat to meow. So if my changes break that expectation,
+   my tests should tell me.
 
 1. Service level agreements
 
-    In this world of microservices or modular design or single responsibility,
-    or whatever you want to call it, objects interact with each other through
-    contracts. The more objects a program has, the more important it is that breaking
-    changes to these contracts are kept to a minimum. I used to think that that the fuss
-    over 'breaking changes' was overrated. 'Just update your code when something changes,'
-    I would silently say. This is mostly fine. Except when it isn't. Which is usually the
-    case in any decent sized program over any decent length of time with any decent number of
-    contributors. Maintaining these contracts makes everyone's lives easier, because it
-    allows the developer to focus on a single piece at a time and trust that the other
-    pieces will at least interact in the same way as they did yesterday. Whether or
-    not they behave (i.e. are implemented) in the same way, is an entirely different
-    topic.
+   In this world of microservices or modular design or single responsibility,
+   or whatever you want to call it, objects interact with each other through
+   contracts. The more objects a program has, the more important it is that breaking
+   changes to these contracts are kept to a minimum. I used to think that that the fuss
+   over 'breaking changes' was overrated. 'Just update your code when something changes,'
+   I would silently say. This is mostly fine. Except when it isn't. Which is usually the
+   case in any decent sized program over any decent length of time with any decent number of
+   contributors. Maintaining these contracts makes everyone's lives easier, because it
+   allows the developer to focus on a single piece at a time and trust that the other
+   pieces will at least interact in the same way as they did yesterday. Whether or
+   not they behave (i.e. are implemented) in the same way, is an entirely different
+   topic.
 
 To end, here's an example of a test that tests the implementation, rather than
 the interface. I have both written these kinds of tests and seen it in the wild.

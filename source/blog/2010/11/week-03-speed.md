@@ -2,7 +2,7 @@
 title: "Week 3: Speed"
 date: 2010-11-24 00:00:00
 tags:
-- ninja-tennis
+  - ninja-tennis
 ---
 
 The second part of good movement is speed.

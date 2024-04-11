@@ -2,7 +2,7 @@
 title: "Week 5: Pressure"
 date: 2010-12-08 00:00:00
 tags:
-- ninja-tennis
+  - ninja-tennis
 ---
 
 The root of pressure is **fear**.

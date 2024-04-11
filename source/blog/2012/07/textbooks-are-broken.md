@@ -2,7 +2,7 @@
 title: "Textbooks are Broken"
 date: 2012-07-03
 tags:
-- business
+  - business
 ---
 
 Last week I took home a computer science textbook to learn more about computer science. I was in a unique position where I had both the resources and motivation to learn something new. A chapter into the textbook though, I realized that textbooks are horribly broken for several reasons:
@@ -29,15 +29,15 @@ In light of all of the above, I want to do a little experiment. I’d like to te
 
 You will both be taking the course and be a part of an ongoing dialogue on how to make my textbook better.
 
--   Cost: Free
--   Material: Ruby on Rails (sort of)
--   Start Date: In the next 2-3 weeks
--   Duration: Indefinite, with weekly lessons
--   Benefits: You will learn a little bit of programming my modern textbook works. If the textbook doesn’t work, you will maybe learning a little bit about programming
--   Commitment: The only thing I ask you to commit to is that if you decide not to continue with the course at any point, you will tell me why it didn’t work for you. Other than that there is no commitment.
-    Location: Doesn’t matter. Everything will be online. You will interact with me (or any other instructor) only through the textbook.
--   What you need: Minimum requirements are to have a working computer and an internet connection.
--   Warning: This is merely an experiment. I guarantee nothing. I think it will be fun. Do not quit your job to do this. I’m definitely not quitting mine.
+- Cost: Free
+- Material: Ruby on Rails (sort of)
+- Start Date: In the next 2-3 weeks
+- Duration: Indefinite, with weekly lessons
+- Benefits: You will learn a little bit of programming my modern textbook works. If the textbook doesn’t work, you will maybe learning a little bit about programming
+- Commitment: The only thing I ask you to commit to is that if you decide not to continue with the course at any point, you will tell me why it didn’t work for you. Other than that there is no commitment.
+  Location: Doesn’t matter. Everything will be online. You will interact with me (or any other instructor) only through the textbook.
+- What you need: Minimum requirements are to have a working computer and an internet connection.
+- Warning: This is merely an experiment. I guarantee nothing. I think it will be fun. Do not quit your job to do this. I’m definitely not quitting mine.
 
 Send me an email if you’d like to help me with this experiment. I think you’ll have more fun with this if you’re actually interested in learning programming and if you’re naturally curious.
 

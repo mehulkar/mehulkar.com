@@ -2,7 +2,7 @@
 title: Why Product Management is Hard
 date: 2015-08-26 00:00:00
 tags:
-- general
+  - general
 ---
 
 The goal of a product manager is to design a roadmap

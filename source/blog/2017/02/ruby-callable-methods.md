@@ -2,8 +2,8 @@
 title: Ruby callable methods
 date: 2017-02-10
 tags:
-- programming
-- ruby
+  - programming
+  - ruby
 ---
 
 I wish Ruby had some semantic difference between methods that define
@@ -36,10 +36,10 @@ defined and called differently.
 
 ```javascript
 var dog = {
-    age: 10,
-    bark: () => {
-        console.log("woof");
-    },
+  age: 10,
+  bark: () => {
+    console.log("woof");
+  },
 };
 
 dog.age;

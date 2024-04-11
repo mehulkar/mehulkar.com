@@ -2,7 +2,7 @@
 title: "The Victories No One Cares About"
 date: 2011-09-11
 tags:
-- personal
+  - personal
 ---
 
 We have this crazy, insatiable need to share the happy moments of our lives. A majority of communication is based on this desire to share. Unfortunately, in the grand scheme of things, most of these happy moments are tiny. More importantly, they are personal and hard for other people to relate to.

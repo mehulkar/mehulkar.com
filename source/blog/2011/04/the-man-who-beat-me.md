@@ -2,7 +2,7 @@
 title: The Man Who Beat Me
 date: 2011-04-16
 tags:
-- poetry
+  - poetry
 ---
 
 It’s like I’m stuck waiting<br/>

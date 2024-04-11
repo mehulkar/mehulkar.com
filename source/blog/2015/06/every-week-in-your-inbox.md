@@ -2,7 +2,7 @@
 title: Every Week In Your Inbox
 date: 2015-06-05
 tags:
-- three-musics
+  - three-musics
 ---
 
 I highly recommend going to open mic nights and sitting in a corner with a cup of tea.

@@ -2,7 +2,7 @@
 title: 3 years of API development
 date: 2016-03-07
 tags:
-- programming
+  - programming
 ---
 
 I've been writing HTTP APIs for the past 2-3 years---most of my professional life

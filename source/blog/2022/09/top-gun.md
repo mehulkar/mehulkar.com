@@ -2,8 +2,8 @@
 title: "Top Gun"
 date: 2022-09-27
 tags:
-- recently-watched
-- movies
+  - recently-watched
+  - movies
 image: "https://a.ltrbxd.com/resized/sm/upload/e9/dh/nn/5w/fKSZl8ONN7DQh5ujgdObRIFmhiZ-0-600-0-900-crop.jpg?v=042d149015"
 stars: "★★★"
 rating: "3"

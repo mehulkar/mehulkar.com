@@ -2,7 +2,7 @@
 title: Where Have All The Bards Gone?
 date: 2015-09-18
 tags:
-- three-musics
+  - three-musics
 ---
 
 I recently watched all 7 seasons of West Wing on Netflix and now I'm intrigued by politics.

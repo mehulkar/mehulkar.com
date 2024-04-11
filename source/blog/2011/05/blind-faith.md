@@ -2,7 +2,7 @@
 title: Blind Faith
 date: 2011-05-24
 tags:
-- poetry
+  - poetry
 ---
 
 Disclaimer: I really don’t know what I was thinking when I wrote this.

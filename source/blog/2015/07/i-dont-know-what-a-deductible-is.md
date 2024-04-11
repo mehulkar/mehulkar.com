@@ -2,7 +2,7 @@
 title: "I Don't Know What A Deductible Is"
 date: 2015-07-05
 tags:
-- til
+  - til
 ---
 
 So far, I've had to select a health insurance plan 3-4 times in my life.
@@ -20,8 +20,8 @@ feel angry when the next bill comes. Here's a summary:
 1. Co-payment (copay): A fee you pay when you go the doctor, just because.
 2. Deductible: The amount that is _deducted_ from the amount the insurance company pays
 
--   This is confusing for me. Why are costs framed in the context of the insurance company.
-    If it's a deductible for me, it should be deducted from what _I_ pay. But no, it's backwards.
+- This is confusing for me. Why are costs framed in the context of the insurance company.
+  If it's a deductible for me, it should be deducted from what _I_ pay. But no, it's backwards.
 
 3. Premium: What you pay the insurance provider on a regular basis for their services
 
@@ -34,7 +34,7 @@ feel angry when the next bill comes. Here's a summary:
 1. Doctor sends bill to insurance company
 1. Insurance company calculates how much they will pay
 
--   This is some combination of deducting the "deductible" and taking some percentage based on the type of treatment and your plan. It's not clear to me which order these steps happen in.
+- This is some combination of deducting the "deductible" and taking some percentage based on the type of treatment and your plan. It's not clear to me which order these steps happen in.
 
 1. Insurance company pays doctor
 1. Doctor sends me a bill for remaining cost of service

@@ -2,7 +2,7 @@
 title: A Brief History of Nuclear Diplomacy
 date: 2016-06-10
 tags:
-- til
+  - til
 ---
 
 I learned some things about nuclear power and international relations today.

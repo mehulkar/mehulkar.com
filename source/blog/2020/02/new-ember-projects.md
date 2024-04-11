@@ -2,9 +2,9 @@
 title: New Ember Projects
 date: 2020-02-05
 tags:
-- programming
-- frontend
-- ember.js
+  - programming
+  - frontend
+  - ember.js
 ---
 
 Some default steps to follow when I start a new Ember app. Most of this is taken from
@@ -13,49 +13,49 @@ my usage:
 
 1. Remove unnecessary packages:
 
-    ```bash
-    npm uninstall --save-dev \
-        ember-welcome-page \
-        ember-data \
-        ember-cli-eslint \
-        ember-cli-template-lint
-    ```
+   ```bash
+   npm uninstall --save-dev \
+       ember-welcome-page \
+       ember-data \
+       ember-cli-eslint \
+       ember-cli-template-lint
+   ```
 
 1. Add lower level packages:
 
-    ```bash
-    npm i --save-dev \
-        ember-template-lint \
-        eslint \
-        prettier \
-        eslint-plugin-prettier \
-        eslint-config-prettier \
-        husky \
-        lint-staged \
-        concurrently
-    ```
+   ```bash
+   npm i --save-dev \
+       ember-template-lint \
+       eslint \
+       prettier \
+       eslint-plugin-prettier \
+       eslint-config-prettier \
+       husky \
+       lint-staged \
+       concurrently
+   ```
 
 1. Add configs to package.json:
 
-    ```json
-    {
-        ...<other stuff>...
-        "prettier": {
-            "printWidth": 100,
-            "singleQuote": true,
-            "useTabs": false
-        },
-        "husky": {
-            "hooks": {
-                "pre-commit": "lint-staged"
-            }
-        },
-        "lint-staged": {
-            "*.js": ["eslint —fix"],
-            "*.hbs": ["ember-template-lint"]
-        }
-    }
-    ```
+   ```json
+   {
+       ...<other stuff>...
+       "prettier": {
+           "printWidth": 100,
+           "singleQuote": true,
+           "useTabs": false
+       },
+       "husky": {
+           "hooks": {
+               "pre-commit": "lint-staged"
+           }
+       },
+       "lint-staged": {
+           "*.js": ["eslint —fix"],
+           "*.hbs": ["ember-template-lint"]
+       }
+   }
+   ```
 
 1. Remove <WelcomePage/> render from application.hbs
 1. Update .eslintrc to use the prettier plugin and extend from its rules

@@ -2,8 +2,8 @@
 title: "Regex: The Greedy Dot Star"
 date: 2017-05-19
 tags:
-- programming
-- ruby
+  - programming
+  - ruby
 ---
 
 I was recently extending [`redcarpet`][1] (a Markdown rendering library) to

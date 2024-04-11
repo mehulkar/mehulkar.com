@@ -2,7 +2,7 @@
 title: Auxiliary Business
 date: 2014-03-01
 tags:
-- business
+  - business
 ---
 
 I was reading a recent [Ask HN][1] and noticed that I was immediately

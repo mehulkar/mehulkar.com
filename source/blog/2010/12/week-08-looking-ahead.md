@@ -2,7 +2,7 @@
 title: "Week 8: Looking Ahead"
 date: 2010-12-29 00:00:00
 tags:
-- ninja-tennis
+  - ninja-tennis
 ---
 
 When you lose a point, it is not because you hit that forehand long, or because your opponent hit a winner.

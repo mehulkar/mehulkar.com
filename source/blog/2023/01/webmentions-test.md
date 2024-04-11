@@ -2,8 +2,8 @@
 title: Webmentions Test
 date: 2023-01-02
 tags:
-- indieweb
-- meta
+  - indieweb
+  - meta
 ---
 
 This post tests _sending_ webmentions. I've set it up by using IFTTT to send an ping to [webmention.app][1]
@@ -43,16 +43,15 @@ _this_ post should show up on those pages.
 <a href="https://webmention.rocks/test/22">Test 22</a>
 <a href="https://webmention.rocks/test/23/page">Test 23</a>
 
-
 ## Receving Webmentions
 
 I've also setup receiving webmentions by:
 
 1. Signing up on [webmentions.io][5] to create an endpoint that can receive and store mentions for me
 2. Adding a `link[rel=webmention]` element with this endpoint, so anyone _sending_
-    webmentions can discover it.
+   webmentions can discover it.
 3. Signing up on [Bridgy][6] so any mentions on twitter and Mastodon will first discover the endpoint
-    from each post and then send the webmention.
+   from each post and then send the webmention.
 
 [1]: https://webmention.app/
 [2]: https://remysharp.com/2019/06/18/send-outgoing-webmentions

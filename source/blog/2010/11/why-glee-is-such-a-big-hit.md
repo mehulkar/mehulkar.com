@@ -2,7 +2,7 @@
 title: Why Glee Is Such A Big Hit
 date: 2010-11-03
 tags:
-- thoughts
+  - thoughts
 ---
 
 Artists become successful because they are able to convey a thought, idea, or emotion in a way that appeals to many other people. Not because they are skilled with an instrument or their voice.

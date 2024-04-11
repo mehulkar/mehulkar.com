@@ -2,9 +2,9 @@
 title: Distributing Javascript Libraries
 date: 2020-05-09
 tags:
-- programming
-- javascript
-- node.js
+  - programming
+  - javascript
+  - node.js
 ---
 
 I've been learning about bundling, compiling, and distributing Javascript libraries for the last
@@ -17,13 +17,13 @@ decision I've had to make in my career.
 Here's a list of questions I had to answer as I worked through this:
 
 1. Will this code run in the browser?
-    1. Which browsers and which versions?
-    1. Will it be bundled into something else?
-    1. Will it run via `<script>` tag?
-    1. Will it be imported with an browser ESM `import` from another script?
-    1. Will it be referenced with `<script type="module">`?
+   1. Which browsers and which versions?
+   1. Will it be bundled into something else?
+   1. Will it run via `<script>` tag?
+   1. Will it be imported with an browser ESM `import` from another script?
+   1. Will it be referenced with `<script type="module">`?
 1. Will this code run in Node.js?
-    1. Which versions? Do those versions support ESM imports?
+   1. Which versions? Do those versions support ESM imports?
 1. Will this code go through another bundler (like Rollup or Parcel)?
 1. Will this code run through a compiler (like TSC or Babel)?
 
@@ -40,39 +40,39 @@ that are meant to run in the browser, but are compiled/bundled by tools in Node.
 to a key realization: Distributing JS libraries for the web cannot be based on browser
 versions. There are a few reasons for this.
 
--   ### App build tools are the source of truth
+- ### App build tools are the source of truth
 
-    The app's build tool is the source of truth, so any JS libraries that choose their own browser support
-    will either have to choose a lowest common denominator of targets or be overridden by the app's targets.
+  The app's build tool is the source of truth, so any JS libraries that choose their own browser support
+  will either have to choose a lowest common denominator of targets or be overridden by the app's targets.
 
-    For example, if a library distributes itself with `class` syntax an app that needs to run in
-    browsers that don't have classes will compile the library down to older syntax. Conversely,
-    if a a library compiles the `class` syntax down to older syntax, any apps that don't need that
-    compiled down will incur extra cost from the library.
+  For example, if a library distributes itself with `class` syntax an app that needs to run in
+  browsers that don't have classes will compile the library down to older syntax. Conversely,
+  if a a library compiles the `class` syntax down to older syntax, any apps that don't need that
+  compiled down will incur extra cost from the library.
 
-    This commonly surfaces as the "modern vs. ES5" build debate. Libraries can solve this problem by
-    distributing multiple versions of themselves, but that relies on being able to bucket features into
-    a finite number of versions. This approach does not scale well and forces both apps and libraries
-    into a compatibility dance and turns conversations about optimization into conversations about
-    build tooling and its inevitable limitations.
+  This commonly surfaces as the "modern vs. ES5" build debate. Libraries can solve this problem by
+  distributing multiple versions of themselves, but that relies on being able to bucket features into
+  a finite number of versions. This approach does not scale well and forces both apps and libraries
+  into a compatibility dance and turns conversations about optimization into conversations about
+  build tooling and its inevitable limitations.
 
--   ### Outdated Build tools
+- ### Outdated Build tools
 
-    Another problem with this approach is that it requires app owners to have detailed knowledge about
-    their build tool and its configuration, as well as detailed knowledge about the library source. For
-    example, a library that uses optional chaining cannot be used by an app unless the app's build tool
-    can compile optional chaining. Either the library maintainer has to spend time documenting this, or
-    the app owner has to inspect library source (or wait for their build tool to fail). Neither solution
-    scales well.
+  Another problem with this approach is that it requires app owners to have detailed knowledge about
+  their build tool and its configuration, as well as detailed knowledge about the library source. For
+  example, a library that uses optional chaining cannot be used by an app unless the app's build tool
+  can compile optional chaining. Either the library maintainer has to spend time documenting this, or
+  the app owner has to inspect library source (or wait for their build tool to fail). Neither solution
+  scales well.
 
--   ### Changed Semantics
+- ### Changed Semantics
 
-    Lastly, a library that compiles itself for the browser, but is consumed by a build tool runs the risk
-    of changing semantics. For example, `import` statements compiled by WebPack are different from
-    `import` statements that run directly in the browser. A library author that distributes code
-    for browsers that implement `import` can unwittingly be opted into WebPack's compiled require statements
-    instead. This more or less "works" today because of the close collaboration between all the involved
-    parties, but seems risky in the long run.
+  Lastly, a library that compiles itself for the browser, but is consumed by a build tool runs the risk
+  of changing semantics. For example, `import` statements compiled by WebPack are different from
+  `import` statements that run directly in the browser. A library author that distributes code
+  for browsers that implement `import` can unwittingly be opted into WebPack's compiled require statements
+  instead. This more or less "works" today because of the close collaboration between all the involved
+  parties, but seems risky in the long run.
 
 ---
 

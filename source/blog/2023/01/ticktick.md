@@ -2,7 +2,7 @@
 title: TickTick
 date: 2023-01-05
 tags:
-- product-review
+  - product-review
 ---
 
 I've been using [TickTick][1] pretty heavily since 2016, completing ~1400

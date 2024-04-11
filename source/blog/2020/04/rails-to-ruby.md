@@ -2,8 +2,8 @@
 title: Rails to Ruby
 date: 2020-04-30
 tags:
-- programming
-- rails
+  - programming
+  - rails
 ---
 
 I have some `rake` tasks that sit alongisde a Rails app that fetch data from remote

@@ -2,8 +2,8 @@
 title: Node 14 and npm 7 upgrade gotchas
 date: 2021-07-08
 tags:
-- programming
-- javascript
+  - programming
+  - javascript
 ---
 
 I recently upgraded our servers and frontend app builds to run on Node 14 and `npm@7`
@@ -17,8 +17,8 @@ active, changing `package-lock.json`, and possibly the structure of `node_module
 Although `npm@7` generates an entirely different package-lock.json (indicated
 by the `"lockfileVersion": "2"` key), I realized that:
 
--   `npm@6` can run `npm ci` with a v2 package-lock.json
--   `npm@7` can run `npm ci` with a v1 package-lock.json
+- `npm@6` can run `npm ci` with a v2 package-lock.json
+- `npm@7` can run `npm ci` with a v1 package-lock.json
 
 This was nice to know, but without Volta installed and socialized to the rest of
 the team, I was worried that depending on these two *un*happy paths could result
@@ -50,10 +50,10 @@ the `node_modules/` directory (or some other directory where `node-sass` is buil
 and the `--force` command cleared it? This doesn't quite
 satisfy me for a few reasons:
 
--   I tried clearing the CI system's cache to no avail
--   I heard from others that they had issues with `npm@7` not running `postinstall`
-    scripts at all (which I was not able to reproduce locally at least).
--   I wasn't able to reproduce the missing `vendor` directory at all locally.
+- I tried clearing the CI system's cache to no avail
+- I heard from others that they had issues with `npm@7` not running `postinstall`
+  scripts at all (which I was not able to reproduce locally at least).
+- I wasn't able to reproduce the missing `vendor` directory at all locally.
 
 I think the answer is in some combination of these observations, but 🤷🏽.
 
@@ -68,16 +68,16 @@ question it for too long. I just wrote my code to handle the oddity:
 
 ```javascript
 function getOutdatedModules() {
-    let out = "{}";
-    try {
-        runCommand("npm outdated --json");
-    } catch (e) {
-        // `npm outdated --json` returns non-zero exit
-        // which means runCommand() will throw and the information
-        // will be in the throw error's stdout.
-        out = e.stdout.toString();
-    }
-    return JSON.parse(out);
+  let out = "{}";
+  try {
+    runCommand("npm outdated --json");
+  } catch (e) {
+    // `npm outdated --json` returns non-zero exit
+    // which means runCommand() will throw and the information
+    // will be in the throw error's stdout.
+    out = e.stdout.toString();
+  }
+  return JSON.parse(out);
 }
 ```
 

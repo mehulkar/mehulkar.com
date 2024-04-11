@@ -2,7 +2,7 @@
 title: The Infrastructure Is The Framework
 date: 2022-07-05
 tags:
-- programming
+  - programming
 ---
 
 Last week at the [San Francisco Vercel meetup][7], [Malte Ubl][6] was talking about exciting
@@ -18,12 +18,12 @@ the world can be delivered with the lowest possible latency. Latency is a functi
 distance, so the closer the datacenter is to the website visitor's location, the faster the website
 can be delivered.
 
-But most websites need data. And data lives in databases that *don't* live on The Edge
+But most websites need data. And data lives in databases that _don't_ live on The Edge
 (because replicating data is a hard problem). If a website is delivered from The Edge network, but it
-needs to fetch data from some centralized location, it adds latency *back* into equation. For
+needs to fetch data from some centralized location, it adds latency _back_ into equation. For
 example, let's say I visit a web page from India, and this web page requests some data during a
 server-side render, but the data is in a US data center. The latency avoided by routing the
-request to a datacenter at the Edge is hamstrung by the latency *added* by the data request.
+request to a datacenter at the Edge is hamstrung by the latency _added_ by the data request.
 
 <figure>
     <picture>
@@ -40,10 +40,10 @@ So how do we solve this? Generically speaking, there isn't a good answer. Web au
 carefully measure the tradeoff between keeping the user close to the web server, or keeping the web
 server close to the database server.
 
-Malte talked about how Next.js Layouts *could* enable Vercel to intelligently split a website
+Malte talked about how Next.js Layouts _could_ enable Vercel to intelligently split a website
 such that the outer layers (the "skin") could be deployed to the Edge, but the "meat" of the website
 could live close to the data. In other words, a Next.js website deployed on Vercel could deliver
-the *static* part of the website instantly from the Edge, improving First Paint timings, but then
+the _static_ part of the website instantly from the Edge, improving First Paint timings, but then
 deliver specific data-heavy parts of the page from datacenters close to the database servers. 🤯🤯🤯
 
 In response, [Theo][3] pointed out that this seemed like a very complicated solution to avoid
@@ -63,7 +63,7 @@ this integration was unique to Next.js and Vercel. This comment (perhaps just an
 Malte) brought the philosophy home for me, and I think that's the real story here.
 
 The idea that the infrastructure is _part_ of the web framework's design is really exciting. My
-tiny, feebly brain can't think of any other integrations yet, but I *can* grasp the paradigm
+tiny, feebly brain can't think of any other integrations yet, but I _can_ grasp the paradigm
 shift here. We've come a long way since developer teams handed their code over to an Ops team
 to deploy their code, to when "devops" became a thing, to "infrastructure expressed alongside code",
 and now to this world where infrastructure is an integral part of how you think about your code.

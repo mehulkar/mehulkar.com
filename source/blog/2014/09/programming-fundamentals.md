@@ -2,7 +2,7 @@
 title: Programming Fundamentals
 date: 2014-09-26 17:29:48
 tags:
-- programming
+  - programming
 ---
 
 ### Sequential instructions

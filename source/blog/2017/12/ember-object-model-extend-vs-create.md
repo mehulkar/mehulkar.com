@@ -2,9 +2,9 @@
 title: Ember Object Model extend vs create
 date: 2017-12-07
 tags:
-- programming
-- frontend
-- ember.js
+  - programming
+  - frontend
+  - ember.js
 ---
 
 I learned something new the other day in the course of development.
@@ -28,7 +28,7 @@ behave the same way as regular POJOs with Object.assign, so I tested out the the
 
 ```javascript
 const someObject = Ember.Object.create({
-    someProperty: "I'm here!",
+  someProperty: "I'm here!",
 });
 
 const merged = Object.assign({}, someObject, { foo: "bar" });
@@ -43,7 +43,7 @@ and it was actually defined like this:
 
 ```javascript
 const someObject = Ember.Object.extend({
-    someProperty: "I'm here!",
+  someProperty: "I'm here!",
 }).create();
 ```
 
@@ -80,12 +80,12 @@ will be on the prototype and won't be carried over to the duplicate.
 
 ```javascript
 Post = DS.Model.extend({
-    author: "me",
+  author: "me",
 });
 
 const post = Post.create({
-    title: "New post",
-    body: "Lorem ipsum",
+  title: "New post",
+  body: "Lorem ipsum",
 });
 
 const duplicate = Object.assign({}, post);

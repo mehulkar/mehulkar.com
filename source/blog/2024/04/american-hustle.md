@@ -2,8 +2,8 @@
 title: "American Hustle"
 date: 2024-04-05
 tags:
-- recently-watched
-- movies
+  - recently-watched
+  - movies
 image: "https://a.ltrbxd.com/resized/film-poster/1/2/4/3/7/9/124379-american-hustle-0-600-0-900-crop.jpg?v=f3d7328b50"
 stars: "★★½"
 rating: "2.5"

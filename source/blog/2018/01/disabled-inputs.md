@@ -2,8 +2,8 @@
 title: Disabled Inputs
 date: 2018-01-12
 tags:
-- programming
-- frontend
+  - programming
+  - frontend
 ---
 
 Today, I learned that an `<input>` element (or any other form control) can be disabled
@@ -11,9 +11,9 @@ by wrapping in a `fieldset` element and disabling the `fieldset`. For example:
 
 ```html
 <form>
-    <fieldset disabled="true">
-        <input />
-    </fieldset>
+  <fieldset disabled="true">
+    <input />
+  </fieldset>
 </form>
 ```
 
@@ -22,24 +22,24 @@ However, there are some intricacies to this, that are perhaps surprising.
 
 1. The `disabled` content attribute on the `input` does not get set.
 
-    ```js
-    document.querySelector("input[disabled]");
-    //=> null
-    ```
+   ```js
+   document.querySelector("input[disabled]");
+   //=> null
+   ```
 
 1. The `input` element node does not set its `.disabled` IDL attribute<sup>1</sup>.
 
-    ```js
-    document.querySelector("input").disabled;
-    // false
-    ```
+   ```js
+   document.querySelector("input").disabled;
+   // false
+   ```
 
 1. The `input` element is selectable by the `:disabled` pseudo selector.
 
-    ```js
-    document.querySelector("input:disabled");
-    //=> <input>
-    ```
+   ```js
+   document.querySelector("input:disabled");
+   //=> <input>
+   ```
 
 I discovered this while trying to write a test that asserted that an `input` element was,
 in fact, disabled. When I queried for the `input` and checked the `.disabled` property,
@@ -48,9 +48,9 @@ it returned `false` when I could clearly see in the rendered markup that it _loo
 Digging a little deeper, it turns out that "disabled behavior" of a form control can be broken down
 into 3 things:
 
--   the state, which determines if the user can interact with the element
--   the content attribute, which would show up in the HTML
--   the IDL attribute, which is the javascript property on the DOM node
+- the state, which determines if the user can interact with the element
+- the content attribute, which would show up in the HTML
+- the IDL attribute, which is the javascript property on the DOM node
 
 The spec says that the IDL attribute should always reflect the content attribute, but it
 does not say anything (that I could find, at least) about how to synchronize with the state.

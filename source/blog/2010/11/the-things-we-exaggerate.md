@@ -2,7 +2,7 @@
 title: The Things We Exaggerate
 date: 2010-11-22
 tags:
-- thoughts
+  - thoughts
 ---
 
 A heart doesn’t literally “break” into two pieces. It doesn’t take “forever” to do…well…anything. Whenever we use superlatives, we’re usually wrong.
