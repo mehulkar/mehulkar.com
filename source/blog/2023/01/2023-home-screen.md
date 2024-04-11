@@ -1,7 +1,8 @@
 ---
 title: "2023: Home Screen"
 date: 2023-01-11
-tags: home-screen
+tags:
+  - home-screen
 ---
 
 I haven't written one of these [since 2020](/blog/category/home-screen), so I'm excited to see
@@ -33,26 +34,26 @@ in the last couple of years. Interesting to see that they've come back.
 
 - Reading
 
-    I almost never open this, to be honest. The one thing I _do_ read on these
-    days is Feedly, and that's on the homescreen directly. Feedbin is there too,
-    because the Feedly app is frankly terrible, but Feedbin doesn't have the
-    ability highlight and save portions of articles, so I can't fully switch.
+  I almost never open this, to be honest. The one thing I _do_ read on these
+  days is Feedly, and that's on the homescreen directly. Feedbin is there too,
+  because the Feedly app is frankly terrible, but Feedbin doesn't have the
+  ability highlight and save portions of articles, so I can't fully switch.
 
 - Mastodon
 
-    I've been trying out and enjoying Mastodon like everyone else, and it's been fun
-    to try out different clients. Follow me on [`@mehulkar@indieweb.social`][4].
+  I've been trying out and enjoying Mastodon like everyone else, and it's been fun
+  to try out different clients. Follow me on [`@mehulkar@indieweb.social`][4].
 
 - Baby
 
-    Contains Reddit (for [/r/newborns][5]); TinyBeans for photo sharing with family;
-    1SE to try to capture the first year; and MyChart for doctor's visits, test results etc (IFYKYK, I guess).
+  Contains Reddit (for [/r/newborns][5]); TinyBeans for photo sharing with family;
+  1SE to try to capture the first year; and MyChart for doctor's visits, test results etc (IFYKYK, I guess).
 
 - Home
 
-    I recently got some [Kasa Smart Plugs][3] and have been plugging lamps into it.
-    That way we can say things like "Hey siri, turn on the diaper lamp" when it's 3am
-    and the "shit is hitting the fan".
+  I recently got some [Kasa Smart Plugs][3] and have been plugging lamps into it.
+  That way we can say things like "Hey siri, turn on the diaper lamp" when it's 3am
+  and the "shit is hitting the fan".
 
 ## PWAs
 
@@ -61,7 +62,7 @@ I like seeing installable home screen apps in the wild, so there's an assortment
 
 - I learned that the NWS PWA exists because [lobbyists won't let the government make a native app][6]. Yay for the web?
 - Google Finance just because I discovered that it's installable as a standalone app;
-I never open it. I need to delete it.
+  I never open it. I need to delete it.
 - SuperCuts because that's where I get my hair cut and you need to check in when you go there to get in line. It's pretty solid, actually.
 - Etsy because I _want_ to make it a browsing destination, but it's not an installable app ([yet?][7]), so it launches Safari. I need to delete it and try again later.
 
@@ -72,21 +73,20 @@ in the last few weeks.
 
 - Safari is replaced by Chrome
 
-    I don't love it yet, but [migrating][1] was pretty easy.
+  I don't love it yet, but [migrating][1] was pretty easy.
 
 - 1Password and Authenticator on the home screen.
 
 - Standard Notes
 
-    I haven't used this yet, and I'm not sure I want to make a deep dive into
-    note taking, the way everyone seems to be doing right now, but I got the app
-    recently and it's there, waiting for me.
+  I haven't used this yet, and I'm not sure I want to make a deep dive into
+  note taking, the way everyone seems to be doing right now, but I got the app
+  recently and it's there, waiting for me.
 
 - MyAudi
 
-    There's really no reason for this to be on the home screen other than to remind
-    myself that our new car has an app.
-
+  There's really no reason for this to be on the home screen other than to remind
+  myself that our new car has an app.
 
 [1]: /blog/2022/12/how-to-transfer-safari-tabs-to-chrome-on-ios
 [2]: /blog/2022/12/first-developer-experience-with-htmx

@@ -1,6 +1,9 @@
 ---
 title: "#EmberJS2019: Roadmap Response"
-tags: programming, frontend, ember.js
+tags:
+  - programming
+  - frontend
+  - ember.js
 date: 2019-06-10
 ---
 
@@ -44,9 +47,9 @@ only _some_ of this sentiment is based on actual analysis of bundle size in cont
 patterns. For that small percentage, I think Ember is well poised, but should have a more official
 story for:
 
--   dynamic imports (`ember-auto-import`)
--   code splitting / tree shaking ([Embroider][4])
--   Web Components
+- dynamic imports (`ember-auto-import`)
+- code splitting / tree shaking ([Embroider][4])
+- Web Components
 
 For others, however, I think the "size" sentiment is more based on API size, rather than bundle
 size. Although this larger API size enables a more complex (or _complete_) programming paradigm,
@@ -83,14 +86,14 @@ related modules and communicating intent for usage.
 
 Some concrete use cases for this low-level primitive are:
 
--   Defining and registering a `Helper` in a Component's JS file to indicate that it is only meant
-    to be used in that component. (Locally scoping helpers defined in this way is a separate but
-    related problem.)
--   Enabling addons to explicitly register components/services rather than relying on merging them
-    into the app's tree for the benefit of the resolver (more on this later).
--   Registering "inner" components in the same place as the user facing API to them.
-    (For example `focusing-outlet` and `focusing-inner` in ember-a11y) or default components for
-    each part of `ember-power-select`.
+- Defining and registering a `Helper` in a Component's JS file to indicate that it is only meant
+  to be used in that component. (Locally scoping helpers defined in this way is a separate but
+  related problem.)
+- Enabling addons to explicitly register components/services rather than relying on merging them
+  into the app's tree for the benefit of the resolver (more on this later).
+- Registering "inner" components in the same place as the user facing API to them.
+  (For example `focusing-outlet` and `focusing-inner` in ember-a11y) or default components for
+  each part of `ember-power-select`.
 
 An `app.register()` primitive would be just fine to accomplish this, and I'm sure it
 already exists if you dig deep into the resolver.
@@ -151,7 +154,7 @@ import FooService from "app/anywhere/foo";
 import Component from "@ember/component";
 
 export default Component.extend({
-    foo: FooService.create(), // or whatever semantics are required to lazily instantiate
+  foo: FooService.create(), // or whatever semantics are required to lazily instantiate
 });
 ```
 
@@ -160,11 +163,11 @@ export default Component.extend({
 The Ember Addon ecosystem feels a bit weird to me these days. It exists as a special
 subset of all NPM modules, and attempts to solve these problems:
 
--   Modifying Ember CLI's build pipeline with bespoke hooks
--   Wrapping 3rd party libraries that are either exported in an unsupported module format or unsafe
-    to use without wrapping in Ember's Runloop.
--   Packaging and shipping shared "core class" functionality like Components and Services in a
-    specific directory structure.
+- Modifying Ember CLI's build pipeline with bespoke hooks
+- Wrapping 3rd party libraries that are either exported in an unsupported module format or unsafe
+  to use without wrapping in Ember's Runloop.
+- Packaging and shipping shared "core class" functionality like Components and Services in a
+  specific directory structure.
 
 I think these problems are largely solvable in other ways and we should move towards thinking of
 addons as plain old NPM packages. The fact that they depend on `ember-source` is already defined

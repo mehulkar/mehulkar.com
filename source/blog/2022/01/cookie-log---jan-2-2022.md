@@ -1,7 +1,11 @@
 ---
 title: Cookie Log No. 1
 date: 2022-01-02
-tags: food, baking, journal, cookie-log
+tags:
+  - food
+  - baking
+  - journal
+  - cookie-log
 ---
 
 ## prep notes
@@ -15,7 +19,7 @@ tags: food, baking, journal, cookie-log
 ## baker notes
 
 - Feel Too soft (poking with spatula).
-    - Olive oil could be cause of too soft.
+  - Olive oil could be cause of too soft.
 - Browning/crisp on sides, but middle is soft.
 - Color is too light, look under cooked.
 - Color and hardness improved after sitting out for 3 minutes.
@@ -23,10 +27,9 @@ tags: food, baking, journal, cookie-log
 ## taster notes
 
 - choco chips didn't melt all the way through (maybe need better quality ingredient?)
-    - chef note: try chocolate chunks instead
+  - chef note: try chocolate chunks instead
 - cookies too white, why no brown?
-    - chef note: maybe sugar wasn't brown sugar? or maybe on wrong rack in oven for browning?
-
+  - chef note: maybe sugar wasn't brown sugar? or maybe on wrong rack in oven for browning?
 
 <figure>
     <picture>

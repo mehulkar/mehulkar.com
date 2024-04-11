@@ -1,7 +1,8 @@
 ---
 title: "Week 6: Battling Fear"
 date: 2010-12-15 00:00:00
-tags: ninja-tennis
+tags:
+  - ninja-tennis
 ---
 
 The true ninja feels no fear.

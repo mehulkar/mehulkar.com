@@ -1,7 +1,10 @@
 ---
 title: Open Ember Questions
 date: 2016-03-30
-tags: programming, frontend, ember.js
+tags:
+  - programming
+  - frontend
+  - ember.js
 ---
 
 I have some open questions about Ember that I'd like to talk about.
@@ -72,9 +75,9 @@ For example, with these routes:
 
 ```js
 Router.map(function () {
-    this.route("post", function () {
-        this.route("detail");
-    });
+  this.route("post", function () {
+    this.route("detail");
+  });
 });
 ```
 
@@ -91,10 +94,10 @@ some wiring up of injections in weird places.
 
 Maybe I'm missing something trivial, but if this has never happened to you
 
--   my app structure is either fundamentally <del>wrong</del> different, or
--   the various workarounds (like `render` in `Ember.Route`),
-    are actually the right solution and I need to get over the fact that they feel wrong, or
--   there are use cases for decoupling UI hierarchy from route hierarchy.
+- my app structure is either fundamentally <del>wrong</del> different, or
+- the various workarounds (like `render` in `Ember.Route`),
+  are actually the right solution and I need to get over the fact that they feel wrong, or
+- there are use cases for decoupling UI hierarchy from route hierarchy.
 
 It's possible that I'm still thinking of my application in terms of the the 1.x
 Route + Controller + Template mentality. It's possible that components will

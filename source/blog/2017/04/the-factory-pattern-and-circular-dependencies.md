@@ -1,7 +1,9 @@
 ---
 title: The Factory Pattern and Circular Dependencies
 date: 2017-04-19
-tags: programming, python
+tags:
+  - programming
+  - python
 ---
 
 Say I'm writing the code for a treat dispenser for my pets. In the
@@ -85,32 +87,32 @@ try to organize this code:
 
 1. in `animal/__init__.py`
 
-    ```python
-    from animal.cat import Cat
-    from animal.dog import Dog
+   ```python
+   from animal.cat import Cat
+   from animal.dog import Dog
 
-    class Animal():
-      @classmethod
-      def from_sound(sound)
-        # omitted, see above
-        # returns an instance of something that inherits from Animal
-    ```
+   class Animal():
+     @classmethod
+     def from_sound(sound)
+       # omitted, see above
+       # returns an instance of something that inherits from Animal
+   ```
 
 1. In `animal/cat.py`
 
-    ```python
-    from animal import Animal
-    class Cat(Animal):
-      # omitted
-    ```
+   ```python
+   from animal import Animal
+   class Cat(Animal):
+     # omitted
+   ```
 
 1. In `animal/dog.py`
 
-    ```python
-    from animal import Animal
-    class Dog(Animal):
-      # omitted
-    ```
+   ```python
+   from animal import Animal
+   class Dog(Animal):
+     # omitted
+   ```
 
 1. and so on for each animal type...
 

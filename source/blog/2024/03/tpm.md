@@ -1,7 +1,8 @@
 ---
 title: TPM
 date: 2024-03-24
-tags: career
+tags:
+  - career
 ---
 
 Late last year, I volunteered to play Technical Project Manager (TPM) on a

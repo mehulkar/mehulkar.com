@@ -1,7 +1,8 @@
 ---
 title: Remarkable
 date: 2011-03-15
-tags: quote
+tags:
+  - quote
 ---
 
 > The thing that’s gonna decide what get’s talked about what gets done, what gets changed, what gets purchased, what gets > built is…“is it remarkable”

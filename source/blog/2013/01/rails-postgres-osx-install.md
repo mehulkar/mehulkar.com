@@ -1,7 +1,9 @@
 ---
 title: "Rails Postgres OSX Install"
 date: 2013-01-10 00:00:00
-tags: programming, rails
+tags:
+  - programming
+  - rails
 ---
 
 I can never get Rails to connect to the Postgres server in development. I'll write a fuller tutorial that explains things better later, but I can explain some really basic things first.

@@ -1,7 +1,8 @@
 ---
 title: Legacy
 date: 2015-05-08
-tags: three-musics
+tags:
+  - three-musics
 ---
 
  <div>Ben E. King died last week. I didn't really know much of him or his music, but Stand By Me has been one of my all-time classic favorites for a long time and I wanted this week to be three covers of that track.

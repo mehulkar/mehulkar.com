@@ -1,7 +1,8 @@
 ---
 title: Pockets of Culture & Packets of Color
 date: 2012-03-09
-tags: random
+tags:
+  - random
 ---
 
 Holi is celebrated for many reasons. [A demigod was killed and restored][1] in the name of love. [A young boy was set on fire][2] but came out alive by the grace of God. [An ogress was chased away][3] by drunk youngsters. But the story that is most celebrated, the story for which Holi is most known, is the story of color.

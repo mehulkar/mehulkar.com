@@ -1,7 +1,8 @@
 ---
 title: The Future Of Consumerism
 date: 2010-09-26
-tags: thoughts
+tags:
+  - thoughts
 ---
 
 It used to be about ownership. The market demanded clothes and shoes, bread to eat, and houses to live in. Because they _needed_ these things. And companies provided these things.

@@ -1,7 +1,9 @@
 ---
 title: "Poor Things"
 date: 2024-03-02
-tags: recently-watched, movies
+tags:
+  - recently-watched
+  - movies
 image: "https://a.ltrbxd.com/resized/film-poster/7/1/0/3/5/2/710352-poor-things-0-600-0-900-crop.jpg?v=a0f2ee9a0e"
 stars: "★★½"
 rating: "2.5"

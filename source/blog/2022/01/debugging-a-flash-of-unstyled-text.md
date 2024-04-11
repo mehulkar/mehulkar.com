@@ -1,11 +1,15 @@
 ---
 title: Debugging a Flash of Unstyled Text
 date: 2022-01-20
-tags: programming, debugging, javascript, ember.js
+tags:
+  - programming
+  - debugging
+  - javascript
+  - ember.js
 ---
 
 Sometimes, it's hard for me to explain (even to myself) what I do all day at my
-job. I maintain some pretty simple, static web pages at my job that *should* be low
+job. I maintain some pretty simple, static web pages at my job that _should_ be low
 effort. But recently, I created and fixed a bug that involved so many
 unexpected things, and manifested in a weird enough way that I thought it would be
 useful to demonstrate the complexity of a frontend engineer's job.
@@ -26,11 +30,11 @@ noticed and filed a bug that the top navigation bar appears unstyled for a secon
 
 ## Debugging: The Hunch
 
-Since this is, as they say, *NotMyFirstRodeo*, my first hunch is that server side
+Since this is, as they say, _NotMyFirstRodeo_, my first hunch is that server side
 rendering is broken, skipping a `<link rel=stylesheet>` tag injection at runtime.
 I've seen this happen before, and I've just fixed a JS exception in SSR the day before.
 Because I'm unable to cursorily reproduce the bug, I send it back to the originator
-and move on with my day. The next day, I get the same bug back. *Not Fixed*.
+and move on with my day. The next day, I get the same bug back. _Not Fixed_.
 
 This time I reach out to the originator and they point out that the bug only
 reproduces in Firefox. I had missed that in the report the day before!
@@ -43,7 +47,7 @@ the same, and the meat of the SSR is the same [`fastboot`][9] package, but as lu
 would have it, The `fastboot` package in our production server is using v3 and
 and the one in `ember-cli-fastboot` is v2. It hasn't happened yet, but I'm always
 paranoid that some day this will cause that special flavor of "works on my machine bug"
-that we *love*  to see as developers. *eye roll*
+that we _love_ to see as developers. _eye roll_
 
 So I build the production server and spin it up.
 
@@ -64,7 +68,7 @@ The issue is apparent. `FastBoot.require('some-package')` is throwing an excepti
 and the stack trace is all over the logs. That's a red flag if I ever saw one!
 That would definitely break the server side render and cause an flash of unstyled text.
 I still have two remaining mysteries: why can't I reproduce this locally? and
-why *only* Firefox? A server side exception has no bearing on the browser.
+why _only_ Firefox? A server side exception has no bearing on the browser.
 
 Looking at the code, it's clear that `some-package` is in the `devDependencies`,
 and `fastbootDependencies` keys. For it to be part of the available dependencies
@@ -97,9 +101,9 @@ packages to be in _both_ the `dependencies` section (to get the version) and the
 with this approach:
 
 - It's impossible to [deterministically install dependencies][10] for production, as there
-is no lockfile.
+  is no lockfile.
 - It's very easy to get it wrong (which is still a sensible tradeoff for the
-extra security!)
+  extra security!)
 
 ## Back to Debugging
 
@@ -184,7 +188,7 @@ more complicated than they need to be. Sometimes the truth is somewhere in the
 middle and complications arise from constraints that we can't control or are too
 not worth changing.
 
-I don't think this was a particularly *hard* problem to solve. I knew where to
+I don't think this was a particularly _hard_ problem to solve. I knew where to
 look and I knew next steps for debugging as each step before left me with more
 questions. But at the very least, it took two cycles of communicaton with the
 bug originator, two rounds of reproducing the bug, and two rounds of switching

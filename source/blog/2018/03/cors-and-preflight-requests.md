@@ -1,7 +1,9 @@
 ---
 title: CORS and Preflight Requests
 date: 2018-03-09
-tags: programming, frontend
+tags:
+  - programming
+  - frontend
 ---
 
 As a frontend developer, it's pretty common to deal with Cross Origin Resource Sharing, or CORS.
@@ -37,23 +39,23 @@ But consider this scenario:
 1. The browser sends a preflight request to the server
 1. The server responds with 200 OK and the following headers:
 
-    ```http
-    HTTP/1.1 200 0K
-    Access-Control-Allow-Origin: *
-    Access-Control-Allow-Methods: GET
-    Access-Control-Allow-Headers: *
-    Access-Control-Expose-Headers: *
-    ```
+   ```http
+   HTTP/1.1 200 0K
+   Access-Control-Allow-Origin: *
+   Access-Control-Allow-Methods: GET
+   Access-Control-Allow-Headers: *
+   Access-Control-Expose-Headers: *
+   ```
 
 1. The browser sends the GET request
 1. The server responds with a 200 and the following headers:
 
-    ```http
-    HTTP/1.1 200 OK
-    Access-Control-Allow-Methods: GET
-    Access-Control-Allow-Headers: *
-    Access-Control-Expose-Headers: *
-    ```
+   ```http
+   HTTP/1.1 200 OK
+   Access-Control-Allow-Methods: GET
+   Access-Control-Allow-Headers: *
+   Access-Control-Expose-Headers: *
+   ```
 
 Notice that the `Access-Control-Allow-Origin` header is missing from the GET request.
 
@@ -81,6 +83,6 @@ and the `OPTIONS` request is simply a way for browsers to abort requests prematu
 
 ## More reading
 
--   [MDN Docs on CORS][mdn docs]
+- [MDN Docs on CORS][mdn docs]
 
 [mdn docs]: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS

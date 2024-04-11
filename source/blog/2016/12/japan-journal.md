@@ -1,7 +1,8 @@
 ---
 title: Japan Journal
 date: 2016-12-03
-tags: travel
+tags:
+  - travel
 ---
 
 ## Preamble

@@ -1,7 +1,8 @@
 ---
 title: Stop Extending Ember's Built In Components
 date: 2020-07-06
-tags: ember.js
+tags:
+  - ember.js
 ---
 
 One of the existential problems facing Ember today is about how to move

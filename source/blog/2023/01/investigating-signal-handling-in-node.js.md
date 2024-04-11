@@ -1,7 +1,10 @@
 ---
 title: Investigating Signal Handling in Node.js
 date: 2023-01-16
-tags: programming, node.js, unix
+tags:
+  - programming
+  - node.js
+  - unix
 ---
 
 <aside>
@@ -26,7 +29,7 @@ import process from "process";
 import { execa } from "execa";
 
 function sideEffects() {
-    console.log("triggering downstream work of child")
+  console.log("triggering downstream work of child");
 }
 
 process.on("SIGUSR1", () => sideEffects);
@@ -41,7 +44,7 @@ function launchChild() {
 
 launchChild();
 
-while(true) {
+while (true) {
   // keep alive
 }
 ```
@@ -56,7 +59,7 @@ function main() {
 }
 
 // Every 1 second, do the work
-setInterval(main, 1000)
+setInterval(main, 1000);
 ```
 
 The cool thing about this approach is that the parent doesn't need to know
@@ -150,8 +153,8 @@ more information about any of this!
 
 1. I later looked briefly at Rust and Golang implementations, and found that [a popular Rust library](https://docs.rs/signal-hook/latest/signal_hook/#signal-masks) in Rust _does_ document that it uses `sigaction` under the hood. So I felt validated that Node.js docs could have mentioned this also.
 2. To be fair, the `src/` directory is quite large, and I didn't scroll down enough on Github to even
-realize there was a README file in there.
-1. Turns out all of libuv is embedded in the Node.js codebase in the [`deps/uv` directory][11], so I could have found it there.
+   realize there was a README file in there.
+3. Turns out all of libuv is embedded in the Node.js codebase in the [`deps/uv` directory][11], so I could have found it there.
 
 [1]: /blog/2017/02/neat-recursion-trick-with-unix-signals
 [2]: https://stackoverflow.com/a/8400532/986415

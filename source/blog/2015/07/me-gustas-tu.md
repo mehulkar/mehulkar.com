@@ -1,7 +1,8 @@
 ---
 title: Me Gustas Tu
 date: 2015-07-10
-tags: three-musics
+tags:
+  - three-musics
 ---
 
 Happy Friday!

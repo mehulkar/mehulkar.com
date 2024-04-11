@@ -1,7 +1,10 @@
 ---
 title: "Ember Octane: Default Values"
 date: 2019-12-06
-tags: programming, frontend, ember.js
+tags:
+  - programming
+  - frontend
+  - ember.js
 ---
 
 The Octane upgrade has introduced one notable complication into Ember apps that
@@ -18,7 +21,7 @@ into the component at invocation override those properties. For example:
 import Component from "@ember/component";
 
 export default Component.extend({
-    foo: "default foo",
+  foo: "default foo",
 });
 ```
 
@@ -41,10 +44,10 @@ across all instances of the component.
 import Component from "@ember/component";
 
 export default Component.extend({
-    init() {
-        this._super(...arguments);
-        this.foo = this.foo || "default foo";
-    },
+  init() {
+    this._super(...arguments);
+    this.foo = this.foo || "default foo";
+  },
 });
 ```
 
@@ -58,7 +61,7 @@ export default Component.extend({
 import Component from "@ember/component";
 
 export default class MyComponent extends Component {
-    foo = "default foo";
+  foo = "default foo";
 }
 ```
 
@@ -75,10 +78,10 @@ the class, and passing in an override at invocation will override the value.
 import Component from "@ember/component";
 
 export default class MyComponent extends Component {
-    constructor() {
-        super(...arguments);
-        this.foo = this.foo || "default argument";
-    }
+  constructor() {
+    super(...arguments);
+    this.foo = this.foo || "default argument";
+  }
 }
 ```
 
@@ -102,54 +105,54 @@ values are passed at invocation.
 
 There are 3 workarounds that I know of:
 
--   create a getter and use _that_ instead:
+- create a getter and use _that_ instead:
 
-    ```js
-    import Component from "@ember/component";
+  ```js
+  import Component from "@ember/component";
 
-    export default class MyComponent extends Component {
-        get fooWithDefault() {
-            return this.foo || "default argument";
-        }
+  export default class MyComponent extends Component {
+    get fooWithDefault() {
+      return this.foo || "default argument";
     }
-    ```
+  }
+  ```
 
-    The downside to this workaround is that you have to remember never to use `this.foo` and always
-    use `this.fooWithDefault`.
+  The downside to this workaround is that you have to remember never to use `this.foo` and always
+  use `this.fooWithDefault`.
 
--   Use `init` instead of `constructor` to assign the default:
+- Use `init` instead of `constructor` to assign the default:
 
-    ```js
-    import Component from "@ember/component";
+  ```js
+  import Component from "@ember/component";
 
-    export default class MyComponent extends Component {
-        init() {
-            this._super(...arguments);
-            this.foo = this.foo || "default argument";
-        }
+  export default class MyComponent extends Component {
+    init() {
+      this._super(...arguments);
+      this.foo = this.foo || "default argument";
     }
-    ```
+  }
+  ```
 
-    This works, but it's unclear if this is encouraged or discouraged at the moment, because it violates
-    the `ember/classic-decorator-hooks` rule.
+  This works, but it's unclear if this is encouraged or discouraged at the moment, because it violates
+  the `ember/classic-decorator-hooks` rule.
 
--   `@classic` decorator and `init`
+- `@classic` decorator and `init`
 
-    ```js
-    import Component from "@ember/component";
-    import classic from "ember-classic-decorator";
+  ```js
+  import Component from "@ember/component";
+  import classic from "ember-classic-decorator";
 
-    @classic
-    export default class MyComponent extends Component {
-        init() {
-            this._super(...arguments);
-            this.foo = this.foo || "default argument";
-        }
+  @classic
+  export default class MyComponent extends Component {
+    init() {
+      this._super(...arguments);
+      this.foo = this.foo || "default argument";
     }
-    ```
+  }
+  ```
 
-    This also works, but the `@classic` decorator requires installing the `ember-classic-decorator`
-    and I ran into [a bug that I couldn't workaround](https://github.com/emberjs/ember-classic-decorator/issues/31).
+  This also works, but the `@classic` decorator requires installing the `ember-classic-decorator`
+  and I ran into [a bug that I couldn't workaround](https://github.com/emberjs/ember-classic-decorator/issues/31).
 
 ## Classic Components Computed Properties
 
@@ -161,9 +164,9 @@ import Component from "@ember/component";
 import { computed } from "@ember/object";
 
 export default Component.extends({
-    foo: computed(function () {
-        return "default argument";
-    }),
+  foo: computed(function () {
+    return "default argument";
+  }),
 });
 ```
 
@@ -197,10 +200,10 @@ properties in the constructor and assign defaults easily:
 import Component from "@glimmer/component";
 
 export default class MyComponent extends Component {
-    constructor() {
-        super(...arguments); // super must be called first.
-        this.foo = this.args.foo || "default argument";
-    }
+  constructor() {
+    super(...arguments); // super must be called first.
+    this.foo = this.args.foo || "default argument";
+  }
 }
 ```
 
@@ -224,9 +227,9 @@ change. If that's needed, use a getter instead (which can also use the `this.arg
 import Component from "@ember/component";
 
 export default class MyComponent extends Component {
-    get foo() {
-        return this.args.foo || "default argument";
-    }
+  get foo() {
+    return this.args.foo || "default argument";
+  }
 }
 ```
 
@@ -254,9 +257,9 @@ solution yet.
 
 These are the places I reference when I get confused:
 
--   The Octane cheatsheet: [https://ember-learn.github.io/ember-octane-vs-classic-cheat-sheet/](https://ember-learn.github.io/ember-octane-vs-classic-cheat-sheet/)
--   A page in the ember-decorators addon docs: [https://ember-decorators.github.io/ember-decorators/docs/native-class-basics](https://ember-decorators.github.io/ember-decorators/docs/native-class-basics)
--   Native classes primer im the Octane preview guides: [https://octane-guides-preview.emberjs.com/release/working-with-javascript/native-classes/](https://octane-guides-preview.emberjs.com/release/working-with-javascript/native-classes/)
+- The Octane cheatsheet: [https://ember-learn.github.io/ember-octane-vs-classic-cheat-sheet/](https://ember-learn.github.io/ember-octane-vs-classic-cheat-sheet/)
+- A page in the ember-decorators addon docs: [https://ember-decorators.github.io/ember-decorators/docs/native-class-basics](https://ember-decorators.github.io/ember-decorators/docs/native-class-basics)
+- Native classes primer im the Octane preview guides: [https://octane-guides-preview.emberjs.com/release/working-with-javascript/native-classes/](https://octane-guides-preview.emberjs.com/release/working-with-javascript/native-classes/)
 
 This is a pretty basic thing that has caused me a lot of confusion as I move my app towards Octane
 paradigms. I think the future is bright but the path to upgrade is also long and covered in peril.

@@ -1,7 +1,8 @@
 ---
 title: "Goals for 2014"
 date: 2014-03-12 15:18:49
-tags: goals
+tags:
+  - goals
 ---
 
 Some quantifiable goals for 2014 in no particular order

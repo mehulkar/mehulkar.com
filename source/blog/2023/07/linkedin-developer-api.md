@@ -1,7 +1,9 @@
 ---
 title: LinkedIn Developer API
 date: 2023-07-18
-tags: programming, api
+tags:
+  - programming
+  - api
 ---
 
 I had the inspiration to build an app today and after a couple hours, I'm giving up.
@@ -41,7 +43,9 @@ to get the OAuth client ID and secret. This was a bit annoying, but I created
 I set up the client ID and redirect URL on my sign in link:
 
 ```html
-<a href="https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id={redacted}&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth-callback&state=foobar&scope=r_liteprofile%20r_emailaddress">
+<a
+  href="https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id={redacted}&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth-callback&state=foobar&scope=r_liteprofile%20r_emailaddress"
+>
   Sign in
 </a>
 ```
@@ -95,20 +99,22 @@ export default async function (req) {
 // get token using authCode
 async function getToken(code) {
   const queryParams = new URLSearchParams({
-    grant_type: 'authorization_code',
+    grant_type: "authorization_code",
     code,
-    client_id: '{redacted}',
-    client_secret: '{redacted}',
+    client_id: "{redacted}",
+    client_secret: "{redacted}",
     redirect_uri: "http://localhost:3000/auth-callback",
   });
 
   const res = await await fetch(
-    `https://www.linkedin.com/oauth/v2/accessToken?${queryParams}`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
+    `https://www.linkedin.com/oauth/v2/accessToken?${queryParams}`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
     },
-  });
+  );
 
   const json = await res.json();
   if (res.ok) {
@@ -118,6 +124,7 @@ async function getToken(code) {
   throw new Error("Failed", json.error);
 }
 ```
+
 </details>
 
 This took at least an hour or so, but then I found out that the basic

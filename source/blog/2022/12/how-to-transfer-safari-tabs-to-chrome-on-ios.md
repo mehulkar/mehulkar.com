@@ -1,7 +1,11 @@
 ---
 title: How To Transfer Safari Tabs To Chrome on iOS
 date: 2022-12-25
-tags: ios, web, browsers, howto
+tags:
+  - ios
+  - web
+  - browsers
+  - howto
 ---
 
 I am finally making the switch from iOS Safari to Chrome iOS, because I switched to Chrome
@@ -25,33 +29,33 @@ Some of the steps came from hidden menus though, so here's what I did:
 
 1. Add Bookmarks for all open Tabs in iOS Safari
 
-    You can do this by long pressing the Bookmarks icon in the bottom menu bar
-    ![](/images/blog/2022/tab-transfer-ios-safari-add-bookmarks.png)
+   You can do this by long pressing the Bookmarks icon in the bottom menu bar
+   ![](/images/blog/2022/tab-transfer-ios-safari-add-bookmarks.png)
 
 2. Sync bookmarks to desktop (which already happens through iCloud) and then
-    export bookmarks from Safari in Desktop. This gives you an HTML file and you can
-    bookmark them in Chrome. There are lots of articles on Exporting/importing bookmarks across
-    browsers on the internet, so I'm going to be lazy and not show screenshots of this.
+   export bookmarks from Safari in Desktop. This gives you an HTML file and you can
+   bookmark them in Chrome. There are lots of articles on Exporting/importing bookmarks across
+   browsers on the internet, so I'm going to be lazy and not show screenshots of this.
 
 3. Once imported in Desktop Chrome, ppen all bookmarks in tabs.
    This UI is in a right click menu (and possibly elsewhere in Chrome).
 
-    ![](/images/blog/2022/tab-transfer-chrome-open-all.png)
+   ![](/images/blog/2022/tab-transfer-chrome-open-all.png)
 
-    You will want to open the specific subdirectory with the saved tabs, but this is also pretty
-    easy to do.
+   You will want to open the specific subdirectory with the saved tabs, but this is also pretty
+   easy to do.
 
 4. Now that you have all tabs opened in Desktop Chrome, the last step is to get them opened in iOS.
 
-    Chrome shows you open tabs on other devices if you're signed in, which I was. From there,
-    you can long press to open all those tabs on your mobile device. This was also a hidden menu
-    that took me a while to find.
+   Chrome shows you open tabs on other devices if you're signed in, which I was. From there,
+   you can long press to open all those tabs on your mobile device. This was also a hidden menu
+   that took me a while to find.
 
-    ![](/images/blog/2022/tab-transfer-ios-chrome-open-all.png)
+   ![](/images/blog/2022/tab-transfer-ios-chrome-open-all.png)
 
 And there it is! All 70+ tabs from iOS Safari are now open in iOS Chrome. (They're also open in desktop
 Chrome now, but I closed those out).
 
 5. As a bonus, I then closed all open tabs in iOS Safari by long pressing the Tabs icon in the bottom menu
 
-    ![](/images/blog/2022/tab-transfer-ios-safari-close-all.png)
+   ![](/images/blog/2022/tab-transfer-ios-safari-close-all.png)

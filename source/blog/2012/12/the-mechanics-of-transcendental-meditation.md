@@ -1,7 +1,8 @@
 ---
 title: "The Mechanics of Transcendental Meditation"
 date: 2012-12-07 00:00:00
-tags: random
+tags:
+  - random
 ---
 
 One of Maharishi's famous quotations is "the proof of the pudding is in the eating".

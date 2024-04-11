@@ -1,7 +1,8 @@
 ---
 title: Dream RSS Reader
 date: 2022-12-09
-tags: indieweb
+tags:
+  - indieweb
 ---
 
 I've been collecting RSS feeds in Feedly for some time, but have recently picked up actually
@@ -25,7 +26,6 @@ made it out of a W3 Working Group.
 </iframe>
 
 Something like this would work really well with the way I want to read content on the web!
-
 
 [1]: https://indieweb.social/@AmeliaBR@front-end.social/109422449295548784
 [2]: https://www.w3.org/annotation/

@@ -1,15 +1,19 @@
 ---
 title: Get The Right Timezone in Javascript
 date: 2022-12-17
-tags: programming, frontend, web, time
+tags:
+  - programming
+  - frontend
+  - web
+  - time
 ---
 
 I've [been][1] [hacking][2] on an app that submits a web form and I wanted
-to collect timestamps with those submissions. Initially, I natively  collect a `Date()` object
+to collect timestamps with those submissions. Initially, I natively collect a `Date()` object
 in Javascript like this:
 
 ```js
-new Date().toLocaleTimeString()
+new Date().toLocaleTimeString();
 ```
 
 But as anyone with any experience working with Time in Javascript will tell you: here lie dragons.
@@ -25,14 +29,14 @@ and invoke those serverless functions, this code behaves differently.
 In Vercel, the time is 8 hours ahead:
 
 ```js
-new Date().toLocaleString()
+new Date().toLocaleString();
 // 12/18/2022, 5:41:27 AM
 ```
 
 Locally:
 
 ```js
-new Date().toLocaleString()
+new Date().toLocaleString();
 // 12/17/2022, 9:41:27 PM
 ```
 
@@ -56,16 +60,16 @@ in Vercel, I could:
 // I know this is in UTC
 const utc = new Date();
 // subtract (8 hours in ms)
-const pt = d.getTime() - 8 * 60 * 1000
-new Date(pt).toLocaleString()
+const pt = d.getTime() - 8 * 60 * 1000;
+new Date(pt).toLocaleString();
 ```
 
 This code is brittle for at least a few reasons:
 
 1. `8` hours is not consistent all year round
 2. `new Date(pt)` works, but it's not _actually_ a Pacific Time date object, it's still a UTC
-    date object from 8 hours ago. This can cause other issues downstream (e.g. when trying to get
-    the timezone from this object, or when passing it into `Intl.DateTimeFormat`).
+   date object from 8 hours ago. This can cause other issues downstream (e.g. when trying to get
+   the timezone from this object, or when passing it into `Intl.DateTimeFormat`).
 
 These issues can be accounted for in various ways, but it's brittle.
 
@@ -74,11 +78,10 @@ These issues can be accounted for in various ways, but it's brittle.
 I'm happy to say I found a much more elegant solution today!
 
 ```js
-
 const formatter = new Intl.DateTimeFormat("en-US", {
-    dateStyle: "short",
-    timeStyle: "medium",
-    timeZone: "America/Los_Angeles",
+  dateStyle: "short",
+  timeStyle: "medium",
+  timeZone: "America/Los_Angeles",
 });
 
 formatter.format(new Date());

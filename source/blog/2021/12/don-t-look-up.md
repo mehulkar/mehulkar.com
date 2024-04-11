@@ -1,7 +1,9 @@
 ---
 title: "Don't Look Up"
 date: 2021-12-27
-tags: recently-watched, movies
+tags:
+  - recently-watched
+  - movies
 image: "https://a.ltrbxd.com/resized/film-poster/5/7/2/2/5/5/572255-don-t-look-up-0-600-0-900-crop.jpg?v=a58cc4aba2"
 stars: "★★★★"
 rating: "4"

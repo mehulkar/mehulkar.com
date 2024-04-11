@@ -1,7 +1,9 @@
 ---
 title: "Invictus"
 date: 2023-10-14
-tags: recently-watched, movies
+tags:
+  - recently-watched
+  - movies
 image: "https://a.ltrbxd.com/resized/film-poster/3/7/6/0/5/37605-invictus-0-600-0-900-crop.jpg?v=4cf7d9e769"
 stars: "★½"
 rating: "1.5"

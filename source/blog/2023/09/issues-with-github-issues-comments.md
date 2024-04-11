@@ -1,14 +1,16 @@
 ---
 title: Issues with Github Issues Comments
 date: 2023-09-20
-tags: product, ux, github
+tags:
+  - product
+  - ux
+  - github
 ---
 
 Now that I work on an open source repository, I'm spending more time in Github
 Issues for publicly reported bugs and feature requests. I genuinely enjoy issue
 triage, but Github Issues have several shortcomings that make it difficult for
 even me to look forward to this part of my job. Here's a list of woes:
-
 
 - Quote replies are a useless feature. They don't link back to what was being
   quoted, and scrolls down when you use the UI, so you have to re-scroll back up

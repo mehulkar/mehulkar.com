@@ -1,7 +1,12 @@
 ---
 title: A Test Suite & Design System For My Blog
 date: 2022-12-28
-tags: frontend, testing, design-system, qa, meta
+tags:
+  - frontend
+  - testing
+  - design-system
+  - qa
+  - meta
 ---
 
 I'm no designer, but every once in a while, I tinker with the CSS on this website to make things
@@ -86,7 +91,7 @@ I could also do some more advanced things like
 
   This is also kind of possible by setting `dir=rtl` attribute on the `<html>` element.
 
-  There isn't any *content* on this website that is in an RTL language,
+  There isn't any _content_ on this website that is in an RTL language,
   but doing this test can be helpful if these pages were ever viewed by someone in, say, Israel,
   with their browser language set to Hebrew.
 
@@ -105,14 +110,14 @@ I could also do some more advanced things like
 
 - Disable JavaScript
 
-    I'm not sure testing styles with JS disabled is going to do much, since I don't
-    apply any styles dynamically on the client. And if I did, this page doesn't currently
-    test for it, but it's a wild world [anything can happen][3].
+  I'm not sure testing styles with JS disabled is going to do much, since I don't
+  apply any styles dynamically on the client. And if I did, this page doesn't currently
+  test for it, but it's a wild world [anything can happen][3].
 
 - Stylesheets disabled
 
-    Safari has the ability to disable stylesheets from the `Develop` menu. This can be a
-    good way to check things like the downloaded image size and whether your html is semantic.
+  Safari has the ability to disable stylesheets from the `Develop` menu. This can be a
+  good way to check things like the downloaded image size and whether your html is semantic.
 
 ---
 

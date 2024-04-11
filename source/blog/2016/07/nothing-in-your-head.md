@@ -1,7 +1,8 @@
 ---
 title: Nothing In Your Head
 date: 2016-07-19
-tags: programming
+tags:
+  - programming
 ---
 
 I think one of the keys to becoming a better software developer
@@ -11,27 +12,27 @@ There are several advantages to doing this:
 
 1. Clarity of thought
 
-    The less I have in my head, the more clearly I am able to
-    both absorb and express complex ideas. Both these abilities
-    are increasingly important as the complexity of my role or a
-    particular project increases.
+   The less I have in my head, the more clearly I am able to
+   both absorb and express complex ideas. Both these abilities
+   are increasingly important as the complexity of my role or a
+   particular project increases.
 
 1. Faster context switching
 
-    The fewer things I hold in my head, the fewer things I have to
-    release when switching to a new task.
-    The ability to compartmentalize ideas is useful in itself, but if these
-    compartments exist outside my head, I can more easily jump between
-    projects. One downside here is that although it becomes faster to
-    switch contexts, you end up switching contexts more, since every
-    change is essentially a context switch.
+   The fewer things I hold in my head, the fewer things I have to
+   release when switching to a new task.
+   The ability to compartmentalize ideas is useful in itself, but if these
+   compartments exist outside my head, I can more easily jump between
+   projects. One downside here is that although it becomes faster to
+   switch contexts, you end up switching contexts more, since every
+   change is essentially a context switch.
 
 1. Less "pigeon-holing"
 
-    Things in my head about a project are my shackles to the project.
-    Especially if my head is the only one these things are in.
-    Most projects remain in a single domain, with an established technology
-    stack and an finite scope. These settings stagnates growth as a developer.
+   Things in my head about a project are my shackles to the project.
+   Especially if my head is the only one these things are in.
+   Most projects remain in a single domain, with an established technology
+   stack and an finite scope. These settings stagnates growth as a developer.
 
 The best ways to hold fewer things in your head is to force yourself
 to become better at documentation and automation.

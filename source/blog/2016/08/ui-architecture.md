@@ -1,7 +1,9 @@
 ---
 title: UI architecture
 date: 2016-08-28
-tags: programming, frontend
+tags:
+  - programming
+  - frontend
 ---
 
 UI architecture seems to be consolidating around components
@@ -69,15 +71,15 @@ inline styles have these pros and cons:
 
 **Pros:**
 
--   Completes the encapsulation of a UI component
--   Already possible
+- Completes the encapsulation of a UI component
+- Already possible
 
 **Cons**
 
--   Feels dirty to put ALL style inside the HTML `style` attribute.
--   Shareability of styles may suffer. This is mostly a nonproblem
-    since JSX can take advantage of ES6 imports/exports, but outside
-    JSX, it would still require a solution.
+- Feels dirty to put ALL style inside the HTML `style` attribute.
+- Shareability of styles may suffer. This is mostly a nonproblem
+  since JSX can take advantage of ES6 imports/exports, but outside
+  JSX, it would still require a solution.
 
 But putting aside the JSX approach of inline styles, another approach
 that is exciting would be HTTP 2.0 + CSS Modules. In other words,

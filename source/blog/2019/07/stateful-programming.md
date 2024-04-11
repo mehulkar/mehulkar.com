@@ -1,7 +1,8 @@
 ---
 title: Stateful Programming
 date: 2019-07-01
-tags: programming
+tags:
+  - programming
 ---
 
 I’ve heard people say that “state” is the cause of many bugs. This weekend,
@@ -38,7 +39,7 @@ off like this:
 
 ```js
 window.addEventListener("stop", (stopName) => {
-    // handle the event
+  // handle the event
 });
 ```
 
@@ -63,9 +64,9 @@ And to handle this in a stateless way, we can:
 
 ```js
 window.addEventListener("stop", (stopName) => {
-    if (stopName === ENDING_STOP) {
-        alert("get off the bus!");
-    }
+  if (stopName === ENDING_STOP) {
+    alert("get off the bus!");
+  }
 });
 ```
 

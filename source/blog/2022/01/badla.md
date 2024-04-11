@@ -1,7 +1,9 @@
 ---
 title: "Badla"
 date: 2022-01-22
-tags: recently-watched, movies
+tags:
+  - recently-watched
+  - movies
 image: "https://a.ltrbxd.com/resized/film-poster/5/0/9/2/3/6/509236-badla-0-600-0-900-crop.jpg?v=4e1429e0ae"
 stars: "★★★★"
 rating: "4"

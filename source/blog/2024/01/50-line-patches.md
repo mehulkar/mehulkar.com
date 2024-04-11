@@ -1,7 +1,9 @@
 ---
 title: 50-Line Patches
 date: 2024-01-31
-tags: programming, product
+tags:
+  - programming
+  - product
 ---
 
 Somebody shared a screenshot of Linus Torvalds email-yelling at

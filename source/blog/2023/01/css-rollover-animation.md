@@ -1,9 +1,13 @@
 ---
 title: CSS Rollover Animation
 date: 2023-01-08
-tags: programming, frontend, css, custom-elements, web-components
+tags:
+  - programming
+  - frontend
+  - css
+  - custom-elements
+  - web-components
 ---
-
 
 I've been browsing the web much more lately, because, turns out, when you have a baby you actually
 _use_ the internet for things, rather than just making it or learning how to make it. I found this
@@ -28,4 +32,5 @@ The markup for the text below is:
 ## Rendered (try rolling over)
 
 <script async src="/javascript/rollover.js"></script>
+
 <my-rollover>Some Text</my-rollover>

@@ -1,7 +1,8 @@
 ---
 title: Breville Grind Control
 date: 2024-02-29
-tags: product-review
+tags:
+  - product-review
 ---
 
 I bought a [Breville Grind Control][1] in December 2021 for $300, and gave it away

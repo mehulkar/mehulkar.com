@@ -1,7 +1,8 @@
 ---
 title: When SemVer doesn't work
 date: 2023-05-21
-tags: programming
+tags:
+  - programming
 ---
 
 It's Friday evening and you're working on a piece of code that you're pretty
@@ -35,11 +36,11 @@ incompetent?
 What if you quietly publish a v17.0.1 and, in the changelog, simply claim that
 "fixed bad merge that included other code" and hope nobody looks at the diff?
 It's plausible, you guess. And technically, it _is_ "a bug" that you included
-code from another branch in your code, right? But is a bug in *you*, the same as
-a bug in *the software*?? You pore over the SemVer spec trying to answer these
+code from another branch in your code, right? But is a bug in _you_, the same as
+a bug in _the software_?? You pore over the SemVer spec trying to answer these
 existential questions for a bit, before realizing this is silly.
 
-You can just *deprecate* v17 instead and publish a v17.1.0? A deprecation is
+You can just _deprecate_ v17 instead and publish a v17.1.0? A deprecation is
 like saying "erronous publish", right? So you don't really have to explain
 anything in the changelog. Just say it never happend and you'll be ok. Nobody
 will look twice at it, people are busy after all.
@@ -73,7 +74,7 @@ kind human will look at you, another kind human, and help you out. That could
 take 24 hours, but maybe, just maybe you'll beat the Israeli work week in the
 nick of time.
 
-If *only* you didn't have that `postpublish: "git push --follow-tags"` script
+If _only_ you didn't have that `postpublish: "git push --follow-tags"` script
 that hadn't pushed the git tag back to Github from CI yet already. Is there any
 automation that would have been triggered by that, you wonder? Maybe just the
 smoke tests your CI runs on a new publish. That's fine right? It'll run once and
@@ -92,6 +93,7 @@ versions means, and sometimes that can cause problems. Sometimes, SemVer doesn't
 work that way the spec says. Sometimes, it doesn't work at all.
 
 ---
+
 I wrote most of this at 1am while writing about how software evolution isn't
 measured in time, it's measured in versions. I had a paragraph about how
 versions are socio-technological constructs, and that paragraph got longer and

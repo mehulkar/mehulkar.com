@@ -1,7 +1,8 @@
 ---
 title: Bringing Down the... Website?
 date: 2015-09-25
-tags: three-musics
+tags:
+  - three-musics
 ---
 
 <img src="https://gallery.tinyletterapp.com/2b9ddbe5bcd443ed550266ef508a378df7927a70/images/01f11a45-861b-4b71-bfc5-818cc03ca6ac.png">

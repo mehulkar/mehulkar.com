@@ -1,7 +1,8 @@
 ---
 title: 5 Strategies To Refactoring Architecture
 date: 2018-07-02
-tags: programming
+tags:
+  - programming
 ---
 
 Refactoring code architecture often means touching a large number of files. In most code bases,
@@ -21,10 +22,10 @@ with it. To help with this, I keep a simple lined notebook on my desk and write 
 that I want to come back to later. It is satisfiying to have a physical copy of these instead of
 putting them into a bug tracker because:
 
--   it's faster
--   it doesn't get lost
--   I don't have to explain its content or merit to anyone else
--   I get have the satisfaction of coming back to it later
+- it's faster
+- it doesn't get lost
+- I don't have to explain its content or merit to anyone else
+- I get have the satisfaction of coming back to it later
 
 Sometimes line items from this notebook get promoted into the official bug tracker, but usually
 they do not.
@@ -37,13 +38,13 @@ with my hands as I rearrange, nudge and, coddle code. In many situations, this e
 valuable to the code base, but more importantly, this allows me to _feel_ my way through code,
 bit by bit. I:
 
--   expand or simplify variable names
--   hoist guard statements
--   pull out data as configuration
--   add or remove whitespace
--   re-order functions or methods
--   change directory structure
--   add code comments to explain my understanding of code
+- expand or simplify variable names
+- hoist guard statements
+- pull out data as configuration
+- add or remove whitespace
+- re-order functions or methods
+- change directory structure
+- add code comments to explain my understanding of code
 
 These types of changes (and others) can feel like unnecessary churn to others, but to me,
 massaging code like this not only makes it easier for me to speak its language, it almost always
@@ -88,13 +89,13 @@ know the end goal. When I _do_ know the end goal, I don't know the path to get t
 refactoring on the architectural level is a meandering journey that can last any amount of time.
 Many things can happen along this journey:
 
--   Sometimes I discover entirely unrelated changes that I want to solve and re-base on.
--   Sometimes I discover that the change I wanted to make introduces other problems.
--   Sometimes I discover that teammates are opposed to certain patterns.
--   Sometimes more important things come up that take me away for days
--   Sometimes those days turn into weeks and my branch gets so old it's too much of a pain to rebase
-    so I throw it away.
--   Sometimes I simply get stuck or bored and throw away my work
+- Sometimes I discover entirely unrelated changes that I want to solve and re-base on.
+- Sometimes I discover that the change I wanted to make introduces other problems.
+- Sometimes I discover that teammates are opposed to certain patterns.
+- Sometimes more important things come up that take me away for days
+- Sometimes those days turn into weeks and my branch gets so old it's too much of a pain to rebase
+  so I throw it away.
+- Sometimes I simply get stuck or bored and throw away my work
 
 These all test my ability and desire to stick with a refactor, but if I stay
 patient, I can usually get to a point where the refactor can either be merged or thrown away.

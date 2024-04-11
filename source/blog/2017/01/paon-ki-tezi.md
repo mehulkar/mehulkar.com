@@ -1,7 +1,8 @@
 ---
 title: Paon Ki Tezi
 date: 2017-01-01
-tags: poetry
+tags:
+  - poetry
 ---
 
 Kabhi kabhi jo paon ki tezi na ruke<br/>

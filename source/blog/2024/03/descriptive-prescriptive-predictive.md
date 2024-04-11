@@ -1,7 +1,8 @@
 ---
 title: Descriptive, Prescriptive, Predictive
 date: 2024-03-16
-tags: product
+tags:
+  - product
 ---
 
 The arc of a product team cycles through three mindsets: descriptive,

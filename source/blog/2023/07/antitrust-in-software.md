@@ -1,7 +1,10 @@
 ---
 title: Antitrust in Software
 date: 2023-07-20
-tags: books, software, draft
+tags:
+  - books
+  - software
+  - draft
 ---
 
 <picture>
@@ -10,12 +13,12 @@ tags: books, software, draft
     <img width="322" height="483" class="book-cover" src="/images/blog/books/the-curse-of-bigness.jpg">
 </picture>
 
-I just<sup>1</sup> finished reading *The Curse of Bigness* by Tim Wu. The book is a history
+I just<sup>1</sup> finished reading _The Curse of Bigness_ by Tim Wu. The book is a history
 of American antitrust law, starting from the ideas of Louis Brandeis to how
 those ideas were dismantling by The Chicago School in the 1960s(??) to where we
 are in present day.
 
-I learned that Brandeis' ideas of "antitrust" (as in, *anti* the Trust Movement)
+I learned that Brandeis' ideas of "antitrust" (as in, _anti_ the Trust Movement)
 came from the belief that large businesses are market manipulators, and make
 promises of efficiency and economies of scale that they can't actually keep.
 Brandeis believed that private firms that grew too large and centralized not
@@ -42,7 +45,7 @@ simply called "BusinessLogic".
 
 I used to think "God" classes got their name because they are large and connect
 to everything. But after reading about the origins of antitrust, I now also see
-how they have *undue* influence over the rest of the codebase or system. We
+how they have _undue_ influence over the rest of the codebase or system. We
 often see that monolithic pieces of code can be difficult to maneuver around.
 
 Putting all our code in a single line script is surely more efficient up to a
@@ -83,7 +86,7 @@ to the codebase that anything that interacts with it has to play by its rules.
 
 ---
 
-Note to reader: *The Curse of Bigness* proposes solutions to these problems too, but I've
+Note to reader: _The Curse of Bigness_ proposes solutions to these problems too, but I've
 sat on this post for long enough now that I wanted to optimize for publishing
 instead of getting the perfect content.
 
@@ -92,5 +95,5 @@ instead of getting the perfect content.
 ### Footnotes
 
 1. "Just" is somewhat inaccurate now. I read the book early in 2023, and started writing
-this post and didn't feel satisfied enough to publish. I still don't feel satisfied, but
-am publishing anyway, since it's unlikely that I make more progress on this.
+   this post and didn't feel satisfied enough to publish. I still don't feel satisfied, but
+   am publishing anyway, since it's unlikely that I make more progress on this.

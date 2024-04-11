@@ -1,7 +1,9 @@
 ---
 title: Asymmetrical Inputs
 date: 2023-07-13
-tags: programming, ux
+tags:
+  - programming
+  - ux
 ---
 
 A few months ago I made a small app to input some data into a form and record it
@@ -20,14 +22,14 @@ was pretty much never used. But soon it became clear that I actually want to be
 accurate to the nearest 5 minutes instead.
 
 At first, I changed my code to increment and decrement by 5 mins. This was fine
-and worked, but I eventually realized that *every* use had now doubled the
+and worked, but I eventually realized that _every_ use had now doubled the
 number of interactions to get to the same number. Four taps to enter 20 mins
 (previously two), 12 taps for 60 mins (previously 6), and so on.
 
 I don’t know where the inspiration came from, but I realized I could fulfill my
 accuracy requirement by only changing the decrement button to 5 mins, and
 keeping the increment button to 10 mins. The result was that in an evenly
-distributed range of inputs, *half* my inputs were back to the original number
+distributed range of inputs, _half_ my inputs were back to the original number
 of taps. That is to say, entering 20 mins again took two taps and 60 mins took
 six taps. 65 mins, on the other hand, took 7 taps, instead of 13 (up 6, down 1).
 

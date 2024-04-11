@@ -1,7 +1,8 @@
 ---
 title: The Power Of Social Media
 date: 2012-05-12
-tags: tech
+tags:
+  - tech
 ---
 
 It seems as if there is a revolution everywhere I turn these days. From cries of “save the rainforest” to confirmation of water on Mars to the Kindle, the new generation (that would be us) is radically morphing the way they think. The latest, and probably the most game-changing revolution is that of social media.

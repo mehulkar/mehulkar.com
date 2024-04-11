@@ -1,7 +1,8 @@
 ---
 title: Linkedin is even less useful to me now
 date: 2016-02-24
-tags: product
+tags:
+  - product
 ---
 
 Linkedin is even less useful to me now becuase they made

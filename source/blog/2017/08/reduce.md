@@ -1,7 +1,9 @@
 ---
 title: "Reduce"
 date: 2017-08-14
-tags: programming, javascript
+tags:
+  - programming
+  - javascript
 ---
 
 I've always thought of a `reduce` function as a way to create an aggregation.
@@ -39,21 +41,21 @@ So you can apply arbitrary logic to your `memo` value:
 
 ```javascript
 [1, 2, 3].reduce((memo, i) => {
-    let returnValue;
-    switch (i) {
-        case 1:
-            returnValue = memo + i;
-            break;
-        case 2:
-            returnValue = memo - i;
-            break;
-        case 3:
-            returnValue = memo * i;
-            break;
-        default:
-            returnValue = memo / i;
-    }
-    return returnValue;
+  let returnValue;
+  switch (i) {
+    case 1:
+      returnValue = memo + i;
+      break;
+    case 2:
+      returnValue = memo - i;
+      break;
+    case 3:
+      returnValue = memo * i;
+      break;
+    default:
+      returnValue = memo / i;
+  }
+  return returnValue;
 }, 0);
 // => -3
 ```

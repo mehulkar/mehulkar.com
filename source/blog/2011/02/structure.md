@@ -1,7 +1,8 @@
 ---
 title: Structure
 date: 2011-02-03
-tags: quote
+tags:
+  - quote
 ---
 
 > There are people who want the comfort and structure of a job where they’re given tasks and told what to do. I think it’s actually a minority of people.

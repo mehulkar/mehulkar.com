@@ -1,7 +1,8 @@
 ---
 title: "Cherry pick commit OUT of history"
 date: 2014-08-22 00:00:00
-tags: programming
+tags:
+  - programming
 ---
 
 If you have commits:

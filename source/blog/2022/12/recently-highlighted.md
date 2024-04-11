@@ -1,7 +1,11 @@
 ---
 title: Recently Highlighted
 date: 2022-12-11
-tags: indieweb, 11ty, rss, meta
+tags:
+  - indieweb
+  - 11ty
+  - rss
+  - meta
 ---
 
 I've started reading more on the internet via RSS using the Feedly RSS client. Feedly has a feature
@@ -21,14 +25,15 @@ as the other parts of the "Recently" section, I wrote a [Vercel serverless funct
 3. Fetch the related entry using the `entryId` key in the response
 4. Synthesize the data into:
 
-    ```json
-    {
-        "text": "the highlighted text",
-        "originUrl": "https://...",
-        "originTitle": "title of post that I highlighted"
-    }
-    ```
-1. Return the data
+   ```json
+   {
+     "text": "the highlighted text",
+     "originUrl": "https://...",
+     "originTitle": "title of post that I highlighted"
+   }
+   ```
+
+5. Return the data
 
 On the client, I have some empty elements on the 11ty-generated page already. I added a `window.fetch`
 request in a `<script>` tag and when the response comes back, and some good old-fashioned
@@ -37,25 +42,28 @@ There's a little bit of layout shift when data loads, but I put this markup in a
 expect it to affect UX too much. The whole snippet is:
 
 ```javascript
-fetch("/api/feedly-annotation").then(res => res.json()).then(data => {
+fetch("/api/feedly-annotation")
+  .then((res) => res.json())
+  .then((data) => {
     const { text, originTitle, originURL } = data;
-    const element = document.getElementById('feedly-annotation');
+    const element = document.getElementById("feedly-annotation");
 
-    element.querySelector('blockquote').innerHTML = `<p>${text}</p>`;
+    element.querySelector("blockquote").innerHTML = `<p>${text}</p>`;
 
-    if (originTitle &&  originURL) {
-        element.querySelector('blockquote').setAttribute('cite', originURL);
-        element.querySelector('cite').innerHTML = `<a target="_blank" rel="noopener noreferrer" href="${originURL}">— ${originTitle}</a>`;
+    if (originTitle && originURL) {
+      element.querySelector("blockquote").setAttribute("cite", originURL);
+      element.querySelector("cite").innerHTML =
+        `<a target="_blank" rel="noopener noreferrer" href="${originURL}">— ${originTitle}</a>`;
     }
-})
+  });
 ```
 
 Some things about the Feedly API:
 
 - The `/annotations/journal` endpoint returns entries with both an `_annotation` and `annotation` key.
-I'm not sure why, as the data seems identical.
+  I'm not sure why, as the data seems identical.
 - The Developer Access Token expires in 30 days, and I'm not sure how to use the Refresh Token to get
-a new one. I'll have to figure it out some time later.
+  a new one. I'll have to figure it out some time later.
 
 The whole project took maybe 3-4 hours, but the fetch + render pattern was already set, so I didn't
 have to re-invent anything. You can see it in action on the [homepage](/#recent) of this website.

@@ -1,7 +1,8 @@
 ---
 title: "A Toast, Impromptu"
 date: 2011-06-16
-tags: poetry
+tags:
+  - poetry
 ---
 
 From acquaintance to friendship to a daily routine<br />
