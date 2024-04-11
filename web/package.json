@@ -8,7 +8,8 @@
     "prebuild": "rm -rf ./build",
     "build": "eleventy",
     "build:site": "pnpm -- turbo run build",
-    "new": "node ./bin/new.mjs"
+    "new": "node ./bin/new.mjs",
+    "lint": "prettier -c source/**/*.md"
   },
   "repository": {
     "type": "git",

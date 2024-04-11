@@ -4,6 +4,7 @@
     ],
     "pipeline": {
         "build": {
+            "dependsOn": ["lint"],
             "inputs": [
                 "source/**"
             ],
