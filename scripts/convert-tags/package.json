@@ -1,0 +1,11 @@
+{
+  "name": "convert-tags",
+  "private": true,
+  "scripts": {
+    "build": "node index.mjs"
+  },
+  "dependencies": {
+    "fast-glob": "^3.3.2",
+    "js-yaml": "^4.1.0"
+  }
+}
