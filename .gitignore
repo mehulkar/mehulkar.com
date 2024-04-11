@@ -23,3 +23,4 @@ _site/
 .vercel
 .turbo
 .env
+.env*.local
