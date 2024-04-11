@@ -2,12 +2,38 @@
 layout: layout.njk
 ---
 
+<script type="module">
+  function pluralize(count) {
+  const pluralRules = new Intl.PluralRules('en-US');
+  const pluralForm = pluralRules.select(count);
+
+  switch (pluralForm) {
+    case 'zero':
+      return `${count} views`;
+    default:
+      return `${count} view${count !== 1 ? 's' : ''}`;
+  }
+}
+
+  const el = document.getElementById('view-count');
+  el.innerText = '~';
+  const addRes = await fetch('/api/add-view');
+  const { count } = await addRes.json()
+  if (String(count).match(/\d+/)) {
+    el.innerText = pluralize(count);
+  } else {
+    console.error('View count is not numeric:', count);
+    el.innerText = '🙁 views';
+  }
+
+</script>
+
 <div class='post bb b--black-10 mb2'>
   <article class='mb3 mw7 center'>
     <header class='bb b--black-10 mv3'>
       <h3 class='f5 fw2 mb1'>{{page.date | fullDate }}</h2>
       <h1 class='fw3 mb1 mt0 post--title'>{{title}}</h1>
-      <section class="mb3">
+      <section class="mb2">
         {% for tag in (tags | splitTags)  %}
           {{tag | tagLink | safe }}
         {% endfor %}
@@ -16,6 +42,8 @@ layout: layout.njk
         <ul class="mb0"></ul>
         <p id="wm-like-count" class="ml2 mb0"></p>
       </section>
+      <section class="stats f5 fw2 silver">
+        <p><span id="view-count"></span>
     </header>
     {{content | safe }}
   </article>
