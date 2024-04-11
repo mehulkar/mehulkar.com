@@ -1,5 +1,6 @@
 {
-  "name": "mehulkar.com",
+  "name": "web",
+  "private": true,
   "version": "1.0.0",
   "description": "Personal website of Mehul Kar",
   "scripts": {
