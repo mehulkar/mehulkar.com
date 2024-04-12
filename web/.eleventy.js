@@ -142,18 +142,15 @@ module.exports = function (eleventyConfig) {
     return url.toString();
   });
 
-  eleventyConfig.addNunjucksFilter("buildTweetURL", function (page, tags) {
-    const url = new URL("https://twitter.com/intent/tweet");
-
+  eleventyConfig.addNunjucksShortcode("tweetURL", function () {
     // https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/guides/web-intent
-
+    const url = new URL("https://twitter.com/intent/tweet");
     // set url of web mention
     const pageURL = new URL(`https://mehulkar.com`);
-    pageURL.pathname = page.url;
+    pageURL.pathname = this.page.url;
     url.searchParams.set("url", encodeURI(pageURL));
 
     url.searchParams.set("via", "mehulkar");
-
     return url.toString();
   });
 
