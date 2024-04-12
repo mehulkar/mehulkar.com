@@ -35,7 +35,7 @@ layout: layout.njk
       <h1 class='fw3 mb1 mt0 post--title'>{{title}}</h1>
       <section class="mb2">
         {% for tag in tags  %}
-          {{tag | tagLink | safe }}
+          {% tagLink tag %}
         {% endfor %}
       </section>
       <section id="wm-likes" class="wm-likes wm-hidden flex">

@@ -117,7 +117,7 @@ module.exports = function (eleventyConfig) {
     }
   });
 
-  eleventyConfig.addNunjucksFilter("tagLink", function (tag) {
+  eleventyConfig.addNunjucksShortcode("tagLink", function (tag) {
     const classList = "dib mr1 f5";
     const tagText = `#${tag}`;
     if (TAG_PAGES.includes(tag)) {
