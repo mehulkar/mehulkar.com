@@ -3,6 +3,6 @@ title: Ember.js
 tags: programming, frontend, ember.js, javascript
 ---
 
-{% set posts = collections.byYear | category("ember.js") %}
+{% set posts = collections['ember.js'] | byYear %}
 {% from 'partials/_by-year.njk' import render %}
 {{ render(posts) }}

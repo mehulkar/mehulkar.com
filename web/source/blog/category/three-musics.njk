@@ -8,6 +8,6 @@ tags: music
   and discover new genres from other people.
 </p>
 
-{% set posts = collections.byYear | category("three-musics") %}
+{% set posts = collections['three-musics'] | byYear %}
 {% from 'partials/_by-year.njk' import render %}
 {{ render(posts) }}

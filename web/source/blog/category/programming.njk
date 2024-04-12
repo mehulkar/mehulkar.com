@@ -3,6 +3,6 @@ title: Programming
 tags: programming, code
 ---
 
-{% set posts = collections.byYear | category("programming") %}
+{% set posts = collections.programming | byYear %}
 {% from 'partials/_by-year.njk' import render %}
 {{ render(posts) }}

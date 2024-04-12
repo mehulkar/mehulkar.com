@@ -3,6 +3,6 @@ title: Quotations
 tags: quotations, quotes
 ---
 
-{% set posts = collections.byYear | category("quote") %}
+{% set posts = collections.quote | byYear %}
 {% from 'partials/_by-year.njk' import render %}
 {{ render(posts) }}

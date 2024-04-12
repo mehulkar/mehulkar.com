@@ -5,6 +5,6 @@ tags: indieweb
 
 <p>This page collects all the posts on this website that are about this website itself.</p>
 
-{% set posts = collections.byYear | category("meta") %}
+{% set posts = collections.meta | byYear %}
 {% from 'partials/_by-year.njk' import render %}
 {{ render(posts) }}

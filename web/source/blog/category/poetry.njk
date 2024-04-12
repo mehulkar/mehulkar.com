@@ -3,6 +3,6 @@ title: Poetry
 tags: poetry, poems, writing
 ---
 
-{% set posts = collections.byYear | category("poetry") %}
+{% set posts = collections.poetry | byYear %}
 {% from 'partials/_by-year.njk' import render %}
 {{ render(posts) }}

@@ -3,6 +3,6 @@ title: Tech
 tags: technology, tech, silicon valley,
 ---
 
-{% set posts = collections.byYear | category("tech") %}
+{% set posts = collections.tech | byYear %}
 {% from 'partials/_by-year.njk' import render %}
 {{ render(posts) }}

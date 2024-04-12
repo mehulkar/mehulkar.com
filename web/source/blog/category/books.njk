@@ -3,6 +3,6 @@ title: Books
 tags: books, book reviews
 ---
 
-{% set posts = collections.byYear | category("books") %}
+{% set posts = collections.books | byYear %}
 {% from 'partials/_by-year.njk' import render %}
 {{ render(posts) }}

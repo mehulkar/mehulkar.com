@@ -3,6 +3,6 @@ title: Debugging
 tags: programming, debugging
 ---
 
-{% set posts = collections.byYear | category("debugging") %}
+{% set posts = collections.debugging | byYear %}
 {% from 'partials/_by-year.njk' import render %}
 {{ render(posts) }}

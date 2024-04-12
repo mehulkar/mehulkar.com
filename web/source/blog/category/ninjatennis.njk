@@ -28,6 +28,6 @@ tags: sports, tennis, coaching
 
 <p>Season 1 is about mental preparation.</p>
 
-{% set posts = collections.byYear | category("ninja-tennis") %}
+{% set posts = collections['ninja-tennis'] | byYear %}
 {% from 'partials/_by-year.njk' import render %}
 {{ render(posts) }}

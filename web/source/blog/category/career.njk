@@ -3,6 +3,6 @@ title: Career
 tags: career
 ---
 
-{% set posts = collections.byYear | category("career") %}
+{% set posts = collections.career | byYear %}
 {% from 'partials/_by-year.njk' import render %}
 {{ render(posts) }}

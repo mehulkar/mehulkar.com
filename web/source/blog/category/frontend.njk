@@ -3,6 +3,6 @@ title: Frontend
 tags: programming, frontend, javascript, html, css
 ---
 
-{% set posts = collections.byYear | category("frontend") %}
+{% set posts = collections.frontend | byYear %}
 {% from 'partials/_by-year.njk' import render %}
 {{ render(posts) }}

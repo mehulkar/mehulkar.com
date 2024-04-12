@@ -3,6 +3,6 @@ title: Product
 tags: product
 ---
 
-{% set posts = collections.byYear | category("product") %}
+{% set posts = collections.product | byYear %}
 {% from 'partials/_by-year.njk' import render %}
 {{ render(posts) }}

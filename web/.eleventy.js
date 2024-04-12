@@ -85,9 +85,8 @@ module.exports = function (eleventyConfig) {
     return [...posts.reverse()].slice(0, 20);
   });
 
-  eleventyConfig.addCollection("byYear", function (collectionApi) {
-    const allPosts = collectionApi.getAll();
-    return groupByYear(allPosts);
+  eleventyConfig.addNunjucksFilter("byYear", function (posts) {
+    return groupByYear(posts);
   });
 
   eleventyConfig.addCollection("home", function (collectionApi) {
@@ -96,31 +95,6 @@ module.exports = function (eleventyConfig) {
       exclude: ["recently-watched"],
     });
     return groupByYear(homePosts);
-  });
-
-  eleventyConfig.addNunjucksFilter("category", function (byYear, tags) {
-    const filtered = [];
-
-    // ensure array for tags
-    let tagsArr = tags;
-    if (!Array.isArray(tags) && typeof tags === "string") {
-      tagsArr = [tags];
-    }
-
-    for (const postCollection of byYear) {
-      const { name: year, items } = postCollection;
-
-      const forTag = filterPostsByTag(items, tagsArr);
-
-      if (forTag.length) {
-        filtered.push({
-          name: year,
-          items: forTag,
-        });
-      }
-    }
-
-    return filtered;
   });
 
   eleventyConfig.addFilter("formatDate", function (value) {

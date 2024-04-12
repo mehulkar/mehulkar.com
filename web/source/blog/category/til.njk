@@ -6,6 +6,6 @@ title: Today I Learned (TIL)
 until I find good questions to ask. This is basically how I got through college without reading textbooks.
 Anyway, here's some stuff I've learned.</p>
 
-{% set posts = collections.byYear | category("til") %}
+{% set posts = collections.til | byYear %}
 {% from 'partials/_by-year.njk' import render %}
 {{ render(posts) }}

@@ -7,7 +7,7 @@ tags: recently-watched, movies, videos, tv-shows
 
 <h1>Recently Watched</h1>
 
-{% set movies = collections.byYear | category("recently-watched") %}
+{% set movies = collections['recently-watched'] | byYear %}
 
 {%- for year in movies -%}
     <section style="margin-bottom: 3rem;">
