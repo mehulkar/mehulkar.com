@@ -53,9 +53,6 @@ importers:
       esbuild:
         specifier: ~0.20.2
         version: 0.20.2
-      turbo:
-        specifier: 1.13.0
-        version: 1.13.0
       web-vitals:
         specifier: ^3.5.2
         version: 3.5.2
