@@ -3,8 +3,15 @@
         "//"
     ],
     "pipeline": {
+        "start": {
+            "persistent": true,
+            "cache": false,
+            "interactive": true
+        },
         "build": {
-            "dependsOn": ["lint"],
+            "dependsOn": [
+                "lint"
+            ],
             "inputs": [
                 "source/**"
             ],
