@@ -1,5 +1,8 @@
 {
   "name": "mehulkar.com-monorepo",
+  "scripts": {
+    "update-movies": "node packages/letterboxd/bin/index.mjs"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mehulkar/mehulkar.com.git"

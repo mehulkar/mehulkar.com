@@ -1,13 +1,15 @@
 import fs from "node:fs";
 import path from "node:path";
-import { getAll } from "../lib/letterboxd.mjs";
+import { getAll } from "../src/index.mjs";
 
 function getContents(item) {
   return `
 ---
 title: "${item.filmTitle}"
 date: ${item.watchedDate}
-tags: recently-watched, movies
+tags:
+  - recently-watched
+  - movies
 image: "${item.posterURL}"
 stars: "${item.stars}"
 rating: "${item.rating}"
@@ -18,9 +20,7 @@ rating: "${item.rating}"
   <p>Rated ${item.rating} stars.<p>
   <div class="float-clear"></div>
 </div>
-
-
-`.trim();
+`.trimStart();
 }
 
 async function getData() {
@@ -30,7 +30,7 @@ async function getData() {
     const year = date.getFullYear();
     const month = String(date.getMonth() + 1).padStart(2, "0");
     const filename = path.resolve(
-      `source/blog/${year}/${month}/${item.parameterizedFilmTitle}.md`
+      `web/source/blog/${year}/${month}/${item.parameterizedFilmTitle}.md`
     );
 
     return { filename, item };
