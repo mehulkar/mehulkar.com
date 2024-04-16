@@ -122,7 +122,7 @@ Node test runner.
 },
 ```
 
-## `**` glob doesn't work
+## `**` glob doesn't work in Node 20
 
 This finds 0 tests and passes invisibly:
 
@@ -136,6 +136,8 @@ Removing the double star works, but I'm not sure if it would find test files in 
 - node --import tsx --test tests/**/*.test.ts
 + node --import tsx --test tests/*.test.ts
 ```
+
+`**` should work in Node 21 though.
 
 As a side note, I appreciate Jest's feature of exiting with non-zero exit code when no tests
 are found. `--passWithNoTests` is a nice signal that you should double-check whether any tests
