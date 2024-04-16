@@ -8,6 +8,15 @@ article h1 {
   line-height: 2.5rem;
 }
 
+article * + h1,
+article * + h2,
+article * + h3,
+article * + h4,
+article * + h5,
+article * + h6 {
+  margin-top: var(--paragraph-mb);
+}
+
 article h2 {
   font-size: 1.4rem;
   font-weight: 600;
@@ -46,18 +55,19 @@ article aside {
   margin-left: 2em;
 }
 
-article pre,
-article code {
-  line-height: 1.125rem;
-  font-size: 0.9em;
-}
-
 article code {
   background: #eee;
   padding: 0.1rem 0.5rem;
   border-radius: 0.5rem;
   border: solid 1px #ddd;
+}
+
+article :not(h1, h2, h3, h4, h5, h6) code {
   font-size: 0.85rem;
+}
+
+article :is(h1, h2, h3, h4, h5, h6) code {
+  font-size: 1.1rem;
 }
 
 article a code {
