@@ -1,7 +1,8 @@
 {
   "name": "mehulkar.com-monorepo",
   "scripts": {
-    "update-movies": "node packages/letterboxd/bin/index.mjs"
+    "update-movies": "node packages/letterboxd/bin/index.mjs",
+    "new": "node ./bin/new.mjs"
   },
   "repository": {
     "type": "git",

@@ -27,7 +27,7 @@ const parameterizedTitle = title
 const { month, year, fullDate } = getDateSegments();
 
 const filePath = path.resolve(
-  `source/blog/${year}/${month}/${parameterizedTitle}.md`
+  `web/source/blog/${year}/${month}/${parameterizedTitle}.md`
 );
 
 console.log(`New post: ${title}`);
