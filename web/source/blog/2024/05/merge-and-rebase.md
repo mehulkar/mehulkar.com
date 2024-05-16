@@ -1,7 +1,7 @@
 ---
 title: Merge and Rebase
 date: 2024-05-15
-tags: git, programming
+tags: ["git", "programming"]
 ---
 
 I have two general rules for working across branches in a git repo these days:
