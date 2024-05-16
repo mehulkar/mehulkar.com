@@ -1,7 +1,11 @@
 ---
 title: Replacing Jest with Node test runner
 date: 2024-04-16
-tags: ["programming", "javascript", "nodejs", "jest"]
+tags:
+  - programming
+  - javascript
+  - nodejs
+  - jest
 ---
 
 I tried out the new built-in Node test runner recently and ran into a few
