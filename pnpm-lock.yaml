@@ -15,13 +15,7 @@ importers:
         specifier: 1.13.0
         version: 1.13.0
 
-  packages/letterboxd:
-    dependencies:
-      rss-parser:
-        specifier: ^3.13.0
-        version: 3.13.0
-
-  scripts/convert-tags:
+  packages/convert-tags:
     dependencies:
       fast-glob:
         specifier: ^3.3.2
@@ -29,6 +23,12 @@ importers:
       js-yaml:
         specifier: ^4.1.0
         version: 4.1.0
+
+  packages/letterboxd:
+    dependencies:
+      rss-parser:
+        specifier: ^3.13.0
+        version: 3.13.0
 
   web:
     devDependencies:
