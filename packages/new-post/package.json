@@ -1,0 +1,4 @@
+{
+  "name": "@internal/new-post",
+  "bin": "./index.mjs"
+}

@@ -5,7 +5,7 @@ Built with [Eleventy](https://11ty.dev).
 ## Write
 
 ```bash
-npm run new
+pnpm new
 ```
 
 ## Run locally

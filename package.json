@@ -2,7 +2,7 @@
   "name": "mehulkar.com-monorepo",
   "scripts": {
     "update-movies": "node packages/letterboxd/bin/index.mjs",
-    "new": "node ./bin/new.mjs"
+    "new": "pnpm -F web exec new-post"
   },
   "repository": {
     "type": "git",

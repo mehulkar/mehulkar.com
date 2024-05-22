@@ -6,6 +6,8 @@ import * as readline from "readline";
 import { stdin as input, stdout as output } from "process";
 import path from "path";
 
+console.log("cwd", process.cwd());
+
 async function main() {
   const rl = readline.createInterface({ input, output });
   const title = await new Promise((resolve) => {
@@ -19,6 +21,7 @@ async function main() {
 }
 
 const title = await main();
+
 const parameterizedTitle = title
   .replaceAll(/[,:]/g, " ") // replace special characters with space
   .replaceAll(/\s+/g, "-") // replace all contiguous spaces with a single hyphen
@@ -27,7 +30,7 @@ const parameterizedTitle = title
 const { month, year, fullDate } = getDateSegments();
 
 const filePath = path.resolve(
-  `web/source/blog/${year}/${month}/${parameterizedTitle}.md`
+  `source/blog/${year}/${month}/${parameterizedTitle}.md`
 );
 
 console.log(`New post: ${title}`);

@@ -8,7 +8,6 @@
     "prebuild": "rm -rf ./build",
     "build": "eleventy",
     "build:site": "pnpm -- turbo run build",
-    "new": "node ./bin/new.mjs",
     "lint": "prettier -c source/**/*.md"
   },
   "repository": {
@@ -32,7 +31,8 @@
     "dotenv": "^16.4.5",
     "eleventy-plugin-activity-pub": "^0.1.1",
     "esbuild": "~0.20.2",
-    "web-vitals": "^3.5.2"
+    "web-vitals": "^3.5.2",
+    "@internal/new-post": "workspace:*"
   },
   "engine": {
     "node": "20"

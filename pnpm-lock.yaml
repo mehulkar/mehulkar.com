@@ -30,6 +30,8 @@ importers:
         specifier: ^3.13.0
         version: 3.13.0
 
+  packages/new-post: {}
+
   web:
     devDependencies:
       '@11ty/eleventy':
@@ -41,6 +43,9 @@ importers:
       '@11ty/eleventy-plugin-syntaxhighlight':
         specifier: ^5.0.0
         version: 5.0.0
+      '@internal/new-post':
+        specifier: workspace:*
+        version: link:../packages/new-post
       dotenv:
         specifier: ^16.4.5
         version: 16.4.5
