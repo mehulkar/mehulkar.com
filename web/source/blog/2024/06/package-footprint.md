@@ -2,6 +2,7 @@
 title: Package Footprint
 date: 2024-06-02
 tags:
+  - programming
   - monorepos
   - javascript
   - npm
