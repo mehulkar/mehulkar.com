@@ -62,15 +62,15 @@ to know.
 
 ---
 
-These are ideas are all a work in progress. I have implemented some proofs of
-concept that you can try with:
+These ideas are a work in progress. I have implemented some proofs of concept
+that you can try with:
 
 ```bash
-npx -p turborepo-tools footprint --directory . --package @your/package
+npx -p turborepo-tools footprint --directory . --package @internal/foo
 ```
 
-where `@your/package` is the `name` of an internal package in your npm/pnpm/yarn
-managed JavaScript monorepo.
+Replace `@internal/foo` with the `name` of an internal package in your
+{npm|pnpm|yarn}-managed JavaScript monorepo.
 
 If you have any ideas, find me on [Twitter!](//twitter.com/mehulkar).
 
