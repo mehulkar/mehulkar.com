@@ -1,7 +1,10 @@
 ---
 title: Package Footprint
 date: 2024-06-02
-tags: monorepos, javascript, npm
+tags:
+  - monorepos
+  - javascript
+  - npm
 ---
 
 I've been working in a large JavaScript codebase, and wrote some
