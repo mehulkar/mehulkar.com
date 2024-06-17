@@ -3,29 +3,46 @@ layout: layout.njk
 ---
 
 <script type="module">
-  function pluralize(count) {
   const pluralRules = new Intl.PluralRules('en-US');
-  const pluralForm = pluralRules.select(count);
 
-  switch (pluralForm) {
-    case 'zero':
-      return `${count} views`;
-    default:
-      return `${count} view${count !== 1 ? 's' : ''}`;
+  function getPluralForm(count) {
+    return pluralRules.select(count);
   }
+
+  function getWords(str) {
+    return str.toLowerCase() // Normalize the string to lowercase (optional)
+      .trim() // Trim leading and trailing whitespace
+      .split(/\s+/) // Use a regular expression to split the string into words
+      .filter(word => word.length > 0);
 }
 
-  const el = document.getElementById('view-count');
-  el.innerText = '~';
+
+  function pluralize(count) {
+    const pluralForm = getPluralForm(count)
+    return pluralForm === 'zero' ?
+      `${count} views` :
+      `${count} view${count !== 1 ? 's' : ''}`;
+  }
+
+  const vcEl = document.getElementById('view-count');
+  {# vcEl.innerText = '~'; #}
   const addRes = await fetch('/api/add-view');
   const { count } = await addRes.json()
   if (String(count).match(/\d+/)) {
-    el.innerText = pluralize(count);
+    vcEl.innerText = pluralize(count);
   } else {
     console.error('View count is not numeric:', count);
-    el.innerText = '🙁 views';
+    vcEl.innerText = '🙁 views';
   }
 
+  const wcEl = document.getElementById('word-count');
+  const article = document.getElementById('article-content');
+  console.log('article', article);
+  const words = getWords(article.innerText);
+  console.log(words);
+  const wc = words.length;
+  const wcPluralForm = getPluralForm(wc)
+  wcEl.innerText = wcPluralForm === 'zero' ? 'No words' : `${wc} words`
 </script>
 
 <div class='post bb b--black-10 mb2'>
@@ -43,9 +60,14 @@ layout: layout.njk
         <p id="wm-like-count" class="ml2 mb0"></p>
       </section>
       <section class="stats f5 fw2 silver">
-        <p><span id="view-count"></span>
+        <p>
+          <span id="view-count">~ views</span>
+          | <span id="word-count">~ words</span>
+        </p>
     </header>
-    {{content | safe }}
+    <section id="article-content">
+      {{content | safe }}
+    </section>
   </article>
 
   <p class='f6 bg-light-yellow pa3 black-80 br2 ba b--yellow mw7 center'>
