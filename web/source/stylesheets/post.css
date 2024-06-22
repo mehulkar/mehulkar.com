@@ -266,3 +266,9 @@ aside.webmentions h2 {
     clear: both;
   }
 }
+
+@media only screen and (min-width: 600px) {
+  article img.book-cover {
+    width: 50%;
+  }
+}
