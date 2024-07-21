@@ -2,6 +2,7 @@
 title: Bad Therapy
 date: 2024-06-22
 tags: books
+image: /images/blog/books/bad-therapy.jpg
 ---
 
 My highlights from _Bad Therapy: Why the Kids Aren't Growing Up_, by Abigail Shrier

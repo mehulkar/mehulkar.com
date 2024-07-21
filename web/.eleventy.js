@@ -89,6 +89,10 @@ module.exports = function (eleventyConfig) {
     return groupByYear(posts);
   });
 
+  eleventyConfig.addNunjucksFilter("reverseChrono", function (posts) {
+    return sortByDate(posts);
+  });
+
   eleventyConfig.addCollection("home", function (collectionApi) {
     const allPosts = collectionApi.getAll();
     const homePosts = filterPostsByTag(allPosts, [], {
@@ -182,13 +186,17 @@ function groupByYear(items) {
 
   const sortedGroups = [];
   for (const year of sortedYears) {
-    const items = byYear[year].sort((item1, item2) => item2.date - item1.date);
+    const items = sortByDate(byYear[year]);
     sortedGroups.push({
       name: year,
       items,
     });
   }
   return sortedGroups;
+}
+
+function sortByDate(posts) {
+  return posts.sort((item1, item2) => item2.date - item1.date);
 }
 
 /**

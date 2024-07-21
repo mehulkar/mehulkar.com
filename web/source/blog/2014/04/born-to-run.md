@@ -3,6 +3,7 @@ title: Born To Run
 date: 2014-04-17
 tags:
   - books
+image: /images/blog/books/born-to-run.jpg
 ---
 
 The most brilliant part of "Born to Run” is that Douglas takes you
@@ -12,7 +13,7 @@ instead of in anticipation of the destination.
 
 The way Douglass weaves his story, snaking through conversation, science,
 and description is like watching a discovery in slow motion as it dawns
-in the eyes of a weary explorer: exhilerating. It literally brought
+in the eyes of a weary explorer: exhilarating. It literally brought
 tears to my eyes.
 
 Born to run is essentially a manifesto of the human condition.

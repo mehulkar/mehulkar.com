@@ -3,6 +3,7 @@ title: 10% Human
 date: 2019-02-27
 tags:
   - books
+image: /images/blog/books/10-percent-human.jpg
 ---
 
 I wouldn't classify _10% Human_ as eye opening. Much of the advice in it included things like:

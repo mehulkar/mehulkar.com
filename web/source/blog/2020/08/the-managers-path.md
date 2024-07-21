@@ -3,6 +3,7 @@ title: The Manager's Path
 date: 2020-08-19
 tags:
   - books
+image: /images/blog/books/managers-path.jpg
 ---
 
 <img class="book-cover" src="/images/blog/books/managers-path.jpg" width="322" height="483">

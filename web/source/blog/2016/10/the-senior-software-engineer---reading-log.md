@@ -3,6 +3,7 @@ title: The Senior Software Engineer - Reading Log
 date: 2016-10-07
 tags:
   - books
+image: /images/blog/books/senior-software-engineer.jpg
 ---
 
 ## Friday, October 7, 2016

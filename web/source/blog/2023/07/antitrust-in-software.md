@@ -5,6 +5,7 @@ tags:
   - books
   - software
   - draft
+image: /images/blog/books/the-curse-of-bigness.jpg
 ---
 
 <picture>
