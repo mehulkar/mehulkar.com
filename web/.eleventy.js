@@ -97,7 +97,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("home", function (collectionApi) {
     const allPosts = collectionApi.getAll();
     const homePosts = filterPostsByTag(allPosts, [], {
-      exclude: ["recently-watched"],
+      exclude: ["recently-watched", "books"],
     });
     return groupByYear(homePosts);
   });
