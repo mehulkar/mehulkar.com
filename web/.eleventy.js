@@ -39,6 +39,7 @@ const TAG_PAGES = [
 const TAG_PATH_OVERRIDES = {
   "ember.js": "emberjs",
   "ninja-tennis": "ninjatennis",
+  books: "recently-read",
 };
 
 module.exports = function (eleventyConfig) {
