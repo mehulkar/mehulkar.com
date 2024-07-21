@@ -37,9 +37,7 @@ layout: layout.njk
 
   const wcEl = document.getElementById('word-count');
   const article = document.getElementById('article-content');
-  console.log('article', article);
   const words = getWords(article.innerText);
-  console.log(words);
   const wc = words.length;
   const wcPluralForm = getPluralForm(wc)
   wcEl.innerText = wcPluralForm === 'zero' ? 'No words' : `${wc} words`

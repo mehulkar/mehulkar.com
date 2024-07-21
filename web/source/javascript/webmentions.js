@@ -57,11 +57,9 @@ window.fetchWebMentions = function (pageURL) {
   fetch(countURL)
     .then((response) => response.json())
     .then((res) => {
-      console.log("webmention counts", res);
       if (res.count > 0) {
-        document.getElementById(
-          "wm-reply-count"
-        ).innerText = `(${res.type.reply})`;
+        document.getElementById("wm-reply-count").innerText =
+          `(${res.type.reply})`;
 
         document.getElementById("wm-like-count").innerText = `${
           res.type.like
@@ -88,8 +86,6 @@ window.fetchWebMentions = function (pageURL) {
         year: "numeric",
       });
 
-      console.log("byType", byType);
-
       const replies = byType.get("in-reply-to");
       if (replies && replies.length > 0) {
         const section = document.querySelector("#wm-replies");
@@ -99,7 +95,6 @@ window.fetchWebMentions = function (pageURL) {
         replies.map((entry) => {
           const ts = new Date(entry.published);
           const clone = template.content.cloneNode(true);
-          console.log("entry", entry);
           clone.querySelector("#wm-reply-text").innerHTML = entry.content.html;
 
           clone
@@ -109,17 +104,14 @@ window.fetchWebMentions = function (pageURL) {
             .querySelector("#wm-reply-author-photo")
             .setAttribute("alt", `${entry.author.name}`);
 
-          clone.querySelector(
-            "#wm-reply-author"
-          ).innerHTML = `<a href="${entry.author.url}">${entry.author.name}</a> said...`;
+          clone.querySelector("#wm-reply-author").innerHTML =
+            `<a href="${entry.author.url}">${entry.author.name}</a> said...`;
 
-          clone.querySelector(
-            "#wm-reply-date"
-          ).innerHTML = `<time>${fullDate.format(ts)}</time>`;
+          clone.querySelector("#wm-reply-date").innerHTML =
+            `<time>${fullDate.format(ts)}</time>`;
 
-          clone.querySelector(
-            "#wm-reply-link"
-          ).innerHTML = `<a target="_blank" href="${entry.url}">🔗</time>`;
+          clone.querySelector("#wm-reply-link").innerHTML =
+            `<a target="_blank" href="${entry.url}">🔗</time>`;
 
           listEl.appendChild(clone);
         });
