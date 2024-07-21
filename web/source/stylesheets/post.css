@@ -74,6 +74,12 @@ article a code {
   color: var(--base-color);
 }
 
+article a.external::before {
+  content: '⇗';
+  font-size: 1.4rem;
+  margin-right: 0.1rem;
+}
+
 article pre code {
   display: block;
   overflow-x: scroll;

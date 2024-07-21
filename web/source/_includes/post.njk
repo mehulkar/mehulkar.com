@@ -4,7 +4,6 @@ layout: layout.njk
 
 <script type="module">
   const pluralRules = new Intl.PluralRules('en-US');
-
   function getPluralForm(count) {
     return pluralRules.select(count);
   }
@@ -14,8 +13,7 @@ layout: layout.njk
       .trim() // Trim leading and trailing whitespace
       .split(/\s+/) // Use a regular expression to split the string into words
       .filter(word => word.length > 0);
-}
-
+  }
 
   function pluralize(count) {
     const pluralForm = getPluralForm(count)
@@ -37,12 +35,24 @@ layout: layout.njk
 
   const wcEl = document.getElementById('word-count');
   const article = document.getElementById('article-content');
-  console.log('article', article);
   const words = getWords(article.innerText);
-  console.log(words);
   const wc = words.length;
   const wcPluralForm = getPluralForm(wc)
   wcEl.innerText = wcPluralForm === 'zero' ? 'No words' : `${wc} words`
+</script>
+
+<script type=module>
+  const links = document.querySelectorAll('article #article-content a');
+  const external = [...links].filter(el => {
+    const href = el.getAttribute('href');
+    const url = new URL(href, location);
+    console.log({ el, href, uh: url.hostname, lh: location.hostname });
+    return url.hostname !== location.hostname
+  })
+
+  for (const link of external) {
+    link.classList.add('external')
+  }
 </script>
 
 <div class='post bb b--black-10 mb2'>
