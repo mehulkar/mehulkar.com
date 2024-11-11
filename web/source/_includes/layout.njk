@@ -19,14 +19,14 @@
     {# TODO: can we combine these branches with an inline if statement somehow? #}
     {% if title %}
       <title>{{title}}</title>
-      <meta name="description" content="✍🏽 {{title}}">
       <meta name="twitter:title" content="✍🏽 {{title}}">
       <meta property="og:title" content="✍🏽 {{title}}">
+      <meta name="description" content="Don't click on this">
     {% else %}
       <title>Mehul Kar</title>
-      <meta name="description" content="Mehul Kar's website">
       <meta name="twitter:title" content="Mehul Kar">
       <meta property="og:title" content="Mehul Kar">
+      <meta name="description" content="Don't click on this">
     {% endif %}
 
     {% if tags %}
