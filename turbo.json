@@ -1,8 +1,8 @@
 {
   "$schema": "https://turborepo.org/schema.json",
-  "pipeline": {
+  "ui": "tui",
+  "tasks": {
     "build": {},
     "lint": {}
-  },
-  "experimentalUI": true
+  }
 }

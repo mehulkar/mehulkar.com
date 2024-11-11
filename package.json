@@ -17,7 +17,7 @@
   "packageManager": "pnpm@9.0.0-beta.0+sha256.ff1f3981cae5c53ac1f0825645dcb59a53a8e79b654bcb96d2f1f176909fdcfa",
   "devDependencies": {
     "prettier": "^3.2.5",
-    "turbo": "1.13.0"
+    "turbo": "2.2.3"
   },
   "engine": {
     "node": "20"
