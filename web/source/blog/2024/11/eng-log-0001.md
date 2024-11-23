@@ -1,7 +1,9 @@
 ---
 title: Eng Log 0001
 date: 2024-11-23
-tags: engineering, journal
+tags:
+  - engineering
+  - journal
 ---
 
 One of the biggest reasons I don't write more often is because I have trouble
