@@ -1,5 +1,5 @@
 ---
-title: Eng Log #1
+title: Eng Log 0001
 date: 2024-11-23
 tags: engineering, journal
 ---
