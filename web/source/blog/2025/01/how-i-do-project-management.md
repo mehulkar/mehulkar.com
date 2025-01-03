@@ -80,33 +80,32 @@ optimizing for (in no particular order):
 
 ### Shipping
 
-"Shipping" doesn't have a single definition&mdash;you have to know when to call
+Shipping doesn't have a single definition&mdash;you have to know when to call
 something shipped. That means knowing the definition of done, where "done"
-actually means "paused".
+actually means paused.
 
 ### Building Trust
 
 Trust is predictability. Using the same tools across projects builds trust
-amongst those who are not intimately involved in the project (and even those who
-are).
+amongst those who are not intimately involved (and even those who are).
 
 ### Marketing
 
-Using tools forces you to give projects a name and makes it ~~easier~~ possible
-to talk about a project. If you can't talk about a project, you can't get it
-done. Put another way: if you aren't marketing the project coherently and consistently,
-you can't define what done looks like.
+We have to talk about projects frequently to get them done. Talking about
+projects frequently builds mind share, then alignment, and then support. Tools
+make this easier. A secondary effect of using consistent tools is that it forces
+you to give projects coherent (and consistent) names.
 
-### Measuring progress
+### Measuring Progress
 
 We have to be able to keep tabs on progress in a predictable fashion. This has
-the dual effect of marketing a project by appearing in the collective mind share
-repeatedly, and creating incentives to iterate in small chunks.
+the dual effect of marketing a project (see above) and creating incentives to
+iterate in small chunks.
 
-Measuring progress consistently also finds problems sooner. For example, if
-there are no updates for a period of time, is the project even active?. It's
-better to know that, debug it, and make a clear decision to pause, cancel, or
-pivot the project.
+Measuring progress also finds problems sooner. For example, if there are no
+updates for a period of time, is the project actually active?. It's better to
+know that, debug it, and make a clear decision to pause, cancel, or pivot the
+project.
 
 ### Staffing
 
