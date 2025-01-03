@@ -23,6 +23,7 @@ const TAG_PAGES = [
   "ninja-tennis",
   "poetry",
   "programming",
+  "engineering",
   "quotations",
   "tech",
   "three-musics",

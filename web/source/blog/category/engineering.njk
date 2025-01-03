@@ -1,0 +1,11 @@
+---
+title: Engineering
+tags:
+  - engineering
+  - programming
+  - code
+---
+
+{% set posts = collections.engineering | byYear %}
+{% from 'partials/_by-year.njk' import render %}
+{{ render(posts) }}
