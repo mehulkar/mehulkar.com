@@ -8,16 +8,15 @@ tags:
 
 ## What is a project?
 
-A project is known thing you deliver at some point. It is not an ongoing effort
-or a northstar or a set of tasks. Delivering a project does not mean the outcome
-you want is achieved — the _success_ of a project will determine that.
-Delivering a project simply means a coherent set of tasks were finished. You can
-disagree with this, but you're likely just using a different word for what I'm
-talking about here. At some point, things boil down to getting a set of tasks
-done. When those tasks are organized into something that can be executed, that
-is called a project.
+A project is a known thing you deliver at some point. It is _not_ an ongoing
+effort or a "North Star". Delivering a project does not mean the outcome you
+want is achieved (the _success_ of a project determines that), it simply means a
+coherent set of tasks were finished. You can disagree with this, but you're
+likely just using a different word for the same thing. At some point, things
+boil down to getting a set of tasks done. When those tasks are organized into
+something that can be executed, that is called a project.
 
-## What makes a project?
+## Elements of a project
 
 Every project has two elements: the Burndown and the Collaboration. You need
 both of these elements to predictably complete projects. For me, Linear is the
@@ -40,26 +39,43 @@ tasks themselves, etc), so I don't have a prescription for that.
 
 ### Slack
 
-Slack is a real-time communication for outsiders to drive-by, peek in, or offer
-solicited (or unsolicited) opinions. The key is that it's unstructured, which
-makes room for creativity, and a staging ground for parsing into work that must
-be done. Every project should have a dedicated Slack channel that is archived
-after the project is completed. The archival process must include a follow-on
-strategy<sup>2</sup> for people to know where to go for support after said
-project is "done".
+Every project should have a dedicated Slack channel that is archived after the
+project is completed. The archival process must include a follow-on
+strategy<sup>2</sup> pointing to where to go for support after the project is
+marked done.
 
-There is a unique connection between Slack and Linear, that is really the
-connection between a burndown and communication that must be called out. A
-project is healthy if it communicates at a regular cadence with its audience.
-For this, I use Linear's Project Update feature and auto-post that into a
-connected Slack channel. Predicatable in cadence and format. You can add/remove
-docs and meetings as you want, those are optional and depend on the project.
+Slack is two-way communication for outsiders to offer solicited (or unsolicited)
+opinions, and for insiders to riff on ideas or work in progress. The key is that
+it's unstructured, which makes room for creativity, and a creates a staging
+ground to turn conversations into executable work.
 
-## What am I optimizing for
+### Slack + Linear
+
+The burndown and communication tools should be connected in two ways:
+
+- Conversations that yield a workable tasks should be linked. The Slack Linear
+  integration makes this easy with the "Create Issue" feature. Threads are linked
+  to issues and are notified when the issue is done.
+
+- A regular update of the burndown should be posted into the communication tool.
+  Linear makes this easy with the Project update tool that can be auto-posted to
+  Slack. It's visually different from the rest of the conversation, and can
+  includes the % completion of the burndown list.
+
+This two-way integration between the elements of a project creates a predictable dynamic
+that enables teams to execute a project to done.
+
+### Other Tools
+
+Outside of a burndown list and a communication tool, you can add/remove docs and
+synchronous meetings as you want. I think these depend on the nature and health
+of the project, who's involved, and who's paying attention.
+
+## What I'm optimizing for
 
 To me, these elements of a project are obvious, but I'm coming from somewhere
 and I'm optimizing for something. This may not match what you're optimizing for,
-so let me make it more explicit. When I think about project management, I am
+so I'll make it more explicit. When I think about project management, I am
 optimizing for (in no particular order):
 
 ### Shipping
@@ -72,9 +88,7 @@ actually means "paused".
 
 Trust is predictability. Using the same tools across projects builds trust
 amongst those who are not intimately involved in the project (and even those who
-are). This is vital to the success of projects, and not just among
-stakeholders&mdash;casual observers can become stakeholders somewhat
-unpredictably.
+are).
 
 ### Marketing
 
@@ -86,30 +100,28 @@ you can't define what done looks like.
 ### Measuring progress
 
 We have to be able to keep tabs on progress in a predictable fashion. This has
-the dual effect of marketing a project (consistently appearing in the collective
-mindshare) and creating incentives to iterate in small chunks. Ironically this
-also creates the reverse influence of creating progress where there might not
-have been any. Conversely, measuring progress consistently also finds problems
-sooner. For example, if there are no updates for a period of time, is the
-project even active?. It's better to know that, debug it, and make a clear
-decision to pause, cancel, or pivot the project.
+the dual effect of marketing a project by appearing in the collective mind share
+repeatedly, and creating incentives to iterate in small chunks.
+
+Measuring progress consistently also finds problems sooner. For example, if
+there are no updates for a period of time, is the project even active?. It's
+better to know that, debug it, and make a clear decision to pause, cancel, or
+pivot the project.
 
 ### Staffing
 
 Finishing projects means you can start other projects. This doesn't mean you
-have to stop iterating, it means you can shuffle people and priorities at a
-predictable time. This is vital to healthy teams, both from an organizational
-standpoint (we need to know that a team is shipping) and a personnel standpoint
-(we need to reduce knowledge concentration and offer people the chance to od
-other things).
+have to stop iterating, it means you have a pivot point to shuffle people and
+priorities. This is vital from an organizational standpoint (we want to know how
+teams are performing) and a personnel standpoint (we want to reduce knowledge
+concentration and offer people the chance to do other things).
 
-### Promotions / Reviews
+### Performance Reviews
 
-Reviewing someone's performance will always include some form of "Person X
-{led|worked on|} on Project Y". At this point, the definition of Project Y or
-the degree of Person X's involvement should not be contentious. It should also
-not be hard for a person in charge of promotions to get a list of these
-statements. We have tools for that.
+Performance reviews will always include some form of "Person X {led|worked on}
+Project Y". At this point, the definition of Project Y or the degree of Person
+X's involvement should not be under question. It should also be easy for the
+person in charge of reviews to get this information.
 
 ---
 
