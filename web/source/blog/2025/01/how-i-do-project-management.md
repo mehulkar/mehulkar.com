@@ -31,39 +31,39 @@ track tasks, code changes, things to remember, etc. It's completely fine to
 break them up, combine, or cancel issues later. As an old colleague would say:
 "Tickets are cheap".
 
-Depending on the project, you can use Milestones or a flat list of prioritized
-Issues. Issue management is sometimes a painful chore<sup>1</sup>, and the
-amount of detail to track varies for many reasons (who's working on it and their
-personal likes, how long a project is expected to be active, the nature of the
-tasks themselves, etc), so I don't have a prescription for that.
+You can use Milestones or a flat list of prioritized issues depending on the
+project. I don't have a prescription for this because issue management can
+easily become a painful chore<sup>1</sup>, so it's better to vary how you do it
+based on who's involved and their personal tastes, how long a project is
+expected to be active, the nature of the tasks themselves, etc.
 
 ### Slack
 
 Every project should have a dedicated Slack channel that is archived after the
-project is completed. The archival process must include a follow-on
+project is completed. The archival process should include a follow-on
 strategy<sup>2</sup> pointing to where to go for support after the project is
 marked done.
 
-Slack is two-way communication for outsiders to offer solicited (or unsolicited)
-opinions, and for insiders to riff on ideas or work in progress. The key is that
-it's unstructured, which makes room for creativity, and a creates a staging
-ground to turn conversations into executable work.
+Slack is two-way communication: for outsiders to offer opinions and for insiders
+to riff on ideas or work in progress. The key is that it's unstructured, which
+makes room for creativity, and a creates a staging ground to turn conversations
+into executable tasks.
 
 ### Slack + Linear
 
 The burndown and communication tools should be connected in two ways:
 
-- Conversations that yield a workable tasks should be linked. The Slack Linear
+- Conversations that yield workable tasks should be linked. The Slack Linear
   integration makes this easy with the "Create Issue" feature. Threads are linked
   to issues and are notified when the issue is done.
 
 - A regular update of the burndown should be posted into the communication tool.
-  Linear makes this easy with the Project update tool that can be auto-posted to
+  Linear makes this easy with the Project update feature that can be auto-posted to
   Slack. It's visually different from the rest of the conversation, and can
-  includes the % completion of the burndown list.
+  includes the `%` completion of the burndown list.
 
-This two-way integration between the elements of a project creates a predictable dynamic
-that enables teams to execute a project to done.
+This two-way integration between the elements of a project creates a predictable
+dynamic that enables teams to execute a project to done.
 
 ### Other Tools
 
