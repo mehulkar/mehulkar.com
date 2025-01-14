@@ -1,5 +1,5 @@
 ---
-title: "Don't Use Composite Actions"
+title: "Don't Use GitHub Composite Actions"
 date: 2025-01-14
 tags: engineering
 ---
