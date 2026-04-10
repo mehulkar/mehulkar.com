@@ -1,7 +1,8 @@
 ---
 title: Bad Therapy
 date: 2024-06-22
-tags: books
+tags:
+- books
 image: /images/blog/books/bad-therapy.jpg
 ---
 
