@@ -11,9 +11,9 @@ pnpm new
 ## Run locally
 
 ```bash
-npm i -g vercel
 pnpm i
-pnpm start
+pnpm add -g vercel
+vc dev
 ```
 
 ## Build locally
