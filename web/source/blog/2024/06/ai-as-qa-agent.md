@@ -2,9 +2,9 @@
 title: AI as QA Agent
 date: 2024-06-16
 tags:
-- programming
-- ai
-- testing
+  - programming
+  - ai
+  - testing
 ---
 
 A really useful way to apply AI could be to automate usage of your web app to

@@ -2,7 +2,7 @@
 title: Managing Humans
 date: 2025-02-17
 tags:
-- books
+  - books
 image: /images/blog/books/managing-humans.jpg
 ---
 
