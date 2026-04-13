@@ -19,7 +19,7 @@ vc dev
 ## Build locally
 
 ```bash
-npm i -g turbo
+pnpm add -g turbo
 turbo build
 ```
 
