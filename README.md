@@ -1,6 +1,6 @@
-## Personal website
+# mehulkar.com
 
-Built with [Eleventy](https://11ty.dev).
+My personal website. Built with [Eleventy](https://11ty.dev).
 
 ## Write
 
