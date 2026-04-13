@@ -27,4 +27,4 @@ turbo build
 
 The `main` branch is auto deployed by Vercel:
 
-https://vercel.com/mehul-kar/mehulkar
+<https://vercel.com/mehul-kar/mehulkar>
