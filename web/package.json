@@ -8,7 +8,7 @@
     "prebuild": "rm -rf ./build",
     "build": "eleventy",
     "build:site": "pnpm -- turbo run build",
-    "lint": "echo nothing",
+    "lint": "prettier -c 'source/**/*.md'",
     "lint:fix": "prettier -c 'source/**/*.md' --write"
   },
   "repository": {
