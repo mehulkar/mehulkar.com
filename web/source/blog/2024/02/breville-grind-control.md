@@ -45,12 +45,10 @@ Before buying this machine, I didn't know anything about coffee maker machines, 
 These are the notes I took (also found in my Notes app with no date attached).
 
 - [Technivorm Moccamaster](https://us.moccamaster.com/collections/glass-carafe-brewers)
-
   - KBGV Select: 10 cups, $349. Too big, too expensive
   - KB: 10 cups, $319. Too big, too expensive
 
 - Breville
-
   - <https://www.breville.com/us/en/products/coffee/bdc400.html> ($279)
     - 12.4" x 6.7" x 15.7"
     - 60oz / 12 cup
@@ -61,7 +59,6 @@ These are the notes I took (also found in my Notes app with no date attached).
   - 8 cup: <https://www.oxo.com/categories/coffee-tea/brew/coffee-makers/8-cup-coffee-maker.html>
   - Too big
 - Chemex Ottomatic 2.0
-
   - 8 cups, no grinding, no timer
 
 - Sage Precision Brewer (same as Breville. same company in UK)

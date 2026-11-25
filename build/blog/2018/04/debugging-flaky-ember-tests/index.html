@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <link rel="preconnect" href="https://plausible.io" crossorigin>
+    <script async defer data-domain="mehulkar.com" src="https://plausible.io/js/plausible.js"></script>
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name=viewport>
+
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+
+    
+    
+      <title>Debugging Flaky Ember Tests</title>
+      <meta name="twitter:title" content="✍🏽 Debugging Flaky Ember Tests">
+      <meta property="og:title" content="✍🏽 Debugging Flaky Ember Tests">
+      <meta name="description" content="Don't click on this">
+    
+
+    
+      <meta name="keywords" content="programming,debugging,frontend,ember.js,testing">
+    
+
+    <link rel="stylesheet" href="/stylesheets/vendor/tachyons.css">
+    <link rel="stylesheet" href="/stylesheets/post.css">
+    <link rel="stylesheet" href="/stylesheets/app.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans|Lato&display=swap"></link>
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+    <link rel="feed alternate" type="application/atom+xml" href="/feed.xml" title="RSS feed for mehulkar.com">
+    <link rel="webmention" href="https://webmention.io/www.mehulkar.com/webmention" />
+
+    <script async src="/va/script.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('year').innerHTML = (new Date).getFullYear();
+      });
+    </script>
+
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/icon-152.png"> <!-- touch-icon-ipad -->
+    <link rel="apple-touch-icon" sizes="167x167" href="/images/icon-167.png"> <!-- touch-icon-ipad-retina -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/icon-180.png"> <!-- touch-icon-iphone-retina -->
+    <link rel="apple-touch-icon" href="/image/icon-192.png"> <!-- touch-icon-iphone.png -->
+
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#3399ff"/>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class='header-content flex items-center justify-center mb3'>
+        <!-- The h-card class and rel=me attr here is for https://indiewebify.me/validate-h-card -->
+        <a class='h-card header-content--link' href='/' rel="me">
+          <picture>
+            <source srcset="/images/avatar.webp" type="image/webp">
+            <source srcset="/images/avatar.jpeg" type="image/jpeg">
+            <img
+              alt="Picture of Mehul Kar"
+              class='header-content--avatar'
+              width='100'
+              height='100'
+              src="/images/avatar.jpeg">
+          </picture>
+
+          <h1 class="ma0 f2 fw3 white">Mehul Kar</h1>
+        </a>
+      </div>
+
+      <section class='mb3 header__icons'>
+        <a class="white f7 mr2" title="Bluesky" href="https://bsky.app/profile/mehulkar.com">
+          <svg
+            width="22"
+            fill="none"
+            stroke="white"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            viewBox="0 0 64 57">
+            <path d="M13.873 3.805C21.21 9.332 29.103 20.537 32 26.55v15.882c0-.338-.13.044-.41.867-1.512
+                    4.456-7.418 21.847-20.923 7.944-7.111-7.32-3.819-14.64 9.125-16.85-7.405
+                    1.264-15.73-.825-18.014-9.015C1.12 23.022 0 8.51 0 6.55 0-3.268 8.579-.182 13.873
+                    3.805ZM50.127 3.805C42.79 9.332 34.897 20.537 32 26.55v15.882c0-.338.13.044.41.867 1.512 4.456
+                    7.418 21.847 20.923 7.944 7.111-7.32 3.819-14.64-9.125-16.85 7.405 1.264 15.73-.825
+                    18.014-9.015C62.88 23.022 64 8.51 64 6.55c0-9.818-8.578-6.732-13.873-2.745Z">
+            </path>
+          </svg>
+        </a>
+
+        <a class="white f7 mr2" title="linkedin" href="https://linkedin.com/in/mehulkar">
+          
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            stroke-width="1"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+            <title>LinkedIn</title>
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+
+        <a class="white f7 mr2" title="Github" href="https://github.com/mehulkar">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            stroke-width="1"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-github">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37
+                    0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44
+                    0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16
+                    2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07
+                    5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3
+                    6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+            </path>
+          </svg>
+        </a>
+
+        <a class="white f7" title="RSS feed for mehulkar.com" type="application/atom+xml" href="/feed.xml">
+          
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="26"
+            height="26"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            stroke-width="1"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+            <title>Link to RSS feed</title>
+            <path d="M4 11a9 9 0 0 1 9 9"></path>
+            <path d="M4 4a16 16 0 0 1 16 16"></path>
+            <circle cx="5" cy="19" r="1"></circle>
+          </svg>
+        </a>
+      </section>
+    </header>
+
+    <main class='flex flex-column mw8 pa3'>
+      
+<script type="module">
+  const pluralRules = new Intl.PluralRules('en-US');
+
+  function getPluralForm(count) {
+    return pluralRules.select(count);
+  }
+
+  function getWords(str) {
+    return str.toLowerCase() // Normalize the string to lowercase (optional)
+      .trim() // Trim leading and trailing whitespace
+      .split(/\s+/) // Use a regular expression to split the string into words
+      .filter(word => word.length > 0);
+}
+
+
+  function pluralize(count) {
+    const pluralForm = getPluralForm(count)
+    return pluralForm === 'zero' ?
+      `${count} views` :
+      `${count} view${count !== 1 ? 's' : ''}`;
+  }
+
+  const vcEl = document.getElementById('view-count');
+  
+  const addRes = await fetch('/api/add-view');
+  const { count } = await addRes.json()
+  if (String(count).match(/\d+/)) {
+    vcEl.innerText = pluralize(count);
+  } else {
+    console.error('View count is not numeric:', count);
+    vcEl.innerText = '🙁 views';
+  }
+
+  const wcEl = document.getElementById('word-count');
+  const article = document.getElementById('article-content');
+  const words = getWords(article.innerText);
+  const wc = words.length;
+  const wcPluralForm = getPluralForm(wc)
+  wcEl.innerText = wcPluralForm === 'zero' ? 'No words' : `${wc} words`
+</script>
+
+<div class='post bb b--black-10 mb2'>
+  <article class='mb3 mw7 center'>
+    <header class='bb b--black-10 mv3'>
+      <h3 class='f5 fw2 mb1'>Apr 24, 2018</h2>
+      <h1 class='fw3 mb1 mt0 post--title'>Debugging Flaky Ember Tests</h1>
+      <section class="mb2">
+        
+          <a href="/blog/category/programming" class="dib mr1 f5">#programming</a>
+        
+          <a href="/blog/category/debugging" class="dib mr1 f5">#debugging</a>
+        
+          <a href="/blog/category/frontend" class="dib mr1 f5">#frontend</a>
+        
+          <a href="/blog/category/emberjs" class="dib mr1 f5">#ember.js</a>
+        
+          <span class="dib mr1 f5">#testing</span>
+        
+      </section>
+      <section id="wm-likes" class="wm-likes wm-hidden flex">
+        <ul class="mb0"></ul>
+        <p id="wm-like-count" class="ml2 mb0"></p>
+      </section>
+      <section class="stats f5 fw2 silver">
+        <p>
+          <span id="view-count">~ views</span>
+          | <span id="word-count">~ words</span>
+        </p>
+    </header>
+    <section id="article-content">
+      <p>Sometimes tests can be reaaaally flaky and fail intermittently. It can be hard to chase these down,
+especially becuase it's not immediately clear how to reproduce an error. When I worked more
+with Ruby code, I loved how Rspec could run tests in a random order, but would tell you the
+seed value, so that if a random ordering revealed a breakage, you could use the seed value
+to run the exact same ordering again. I couldn't find an easy to way to do this in Qunit<sup>1</sup>,
+so I figured out a more hacky way to run tests enough times that I would hopefully reproduce my
+intermittent failures and be able to debug live.</p>
+<p>Here's how I did it:</p>
+<h2>Run test suite multiple times</h2>
+<p>I usually use <code>ember server</code> and then look at tests on the <code>/tests</code> page. This works for day-to-day
+development, but to really start from scratch it's better to run <code>ember test</code>. To do that,
+I used a good ole bash loop.</p>
+<pre class="language-bash"><code class="language-bash"><span class="token keyword">for</span> <span class="token for-or-select variable">i</span> <span class="token keyword">in</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">..</span><span class="token number">20</span><span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token keyword">do</span> ember <span class="token builtin class-name">test</span><span class="token punctuation">;</span> <span class="token keyword">done</span></code></pre>
+<h2>Turn off headless mode</h2>
+<p>By default, <code>ember test</code> runs in headless Chrome. To debug and use Dev Tools, we want to use
+Chrome, but not in headless mode. To turn off headless, remove the <code>--headless</code> config in Testem
+config in <code>testem.js</code>.</p>
+<h2>Open Dev Tools automatically</h2>
+<p>Instead of futzing around with log statements, I wanted to just set a debugger and use Dev Tools.
+But when that Chrome window opens, it can be heard to get Dev Tools open right away. Automatically
+open them using the <code>--auto-open-devtools-for-tabs</code> flag in Testem config (<code>testem.js</code>), which is
+a Chrome CLI argument.</p>
+<h2>Increase timeout values</h2>
+<p>Pausing the debugger can keep the browser and the test process running for a long time and just
+exit while you're in the middle of debugging. You can increase the timeout to some large number
+by setting the <code>browser_start_timeout</code> and <code>browser_disconnect_timeout</code> values in Testem config.</p>
+<h2>Alerts</h2>
+<p>Of course when you're running your test suite 20 times back to back waiting for something to fail,
+you don't want to sit and stare at your computer. You'd much rather sit and stare at the TV while
+the computer is working. To get around that, you can play a <code>beep</code> when the test fails<sup>2</sup>:</p>
+<pre class="language-js"><code class="language-js"><span class="token function">test</span><span class="token punctuation">(</span><span class="token string">"soemthing"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">assert</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> passed <span class="token operator">=</span> actual <span class="token operator">===</span> expected<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>passed<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">beep</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  assert<span class="token punctuation">.</span><span class="token function">ok</span><span class="token punctuation">(</span>passed<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">beep</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> snd <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Audio</span><span class="token punctuation">(</span>
+    <span class="token string">"data:audio/wav;base64,//uQRAAAAWMSLwUIYAAsYkXgoQwAEaYLWfkWgAI0wWs/ItAAAGDgYtAgAyN+QWaAAihwMWm4G8QQRDiMcCBcH3Cc+CDv/7xA4Tvh9Rz/y8QADBwMWgQAZG/ILNAARQ4GLTcDeIIIhxGOBAuD7hOfBB3/94gcJ3w+o5/5eIAIAAAVwWgQAVQ2ORaIQwEMAJiDg95G4nQL7mQVWI6GwRcfsZAcsKkJvxgxEjzFUgfHoSQ9Qq7KNwqHwuB13MA4a1q/DmBrHgPcmjiGoh//EwC5nGPEmS4RcfkVKOhJf+WOgoxJclFz3kgn//dBA+ya1GhurNn8zb//9NNutNuhz31f////9vt///z+IdAEAAAK4LQIAKobHItEIYCGAExBwe8jcToF9zIKrEdDYIuP2MgOWFSE34wYiR5iqQPj0JIeoVdlG4VD4XA67mAcNa1fhzA1jwHuTRxDUQ//iYBczjHiTJcIuPyKlHQkv/LHQUYkuSi57yQT//uggfZNajQ3Vmz+Zt//+mm3Wm3Q576v////+32///5/EOgAAADVghQAAAAA//uQZAUAB1WI0PZugAAAAAoQwAAAEk3nRd2qAAAAACiDgAAAAAAABCqEEQRLCgwpBGMlJkIz8jKhGvj4k6jzRnqasNKIeoh5gI7BJaC1A1AoNBjJgbyApVS4IDlZgDU5WUAxEKDNmmALHzZp0Fkz1FMTmGFl1FMEyodIavcCAUHDWrKAIA4aa2oCgILEBupZgHvAhEBcZ6joQBxS76AgccrFlczBvKLC0QI2cBoCFvfTDAo7eoOQInqDPBtvrDEZBNYN5xwNwxQRfw8ZQ5wQVLvO8OYU+mHvFLlDh05Mdg7BT6YrRPpCBznMB2r//xKJjyyOh+cImr2/4doscwD6neZjuZR4AgAABYAAAABy1xcdQtxYBYYZdifkUDgzzXaXn98Z0oi9ILU5mBjFANmRwlVJ3/6jYDAmxaiDG3/6xjQQCCKkRb/6kg/wW+kSJ5//rLobkLSiKmqP/0ikJuDaSaSf/6JiLYLEYnW/+kXg1WRVJL/9EmQ1YZIsv/6Qzwy5qk7/+tEU0nkls3/zIUMPKNX/6yZLf+kFgAfgGyLFAUwY//uQZAUABcd5UiNPVXAAAApAAAAAE0VZQKw9ISAAACgAAAAAVQIygIElVrFkBS+Jhi+EAuu+lKAkYUEIsmEAEoMeDmCETMvfSHTGkF5RWH7kz/ESHWPAq/kcCRhqBtMdokPdM7vil7RG98A2sc7zO6ZvTdM7pmOUAZTnJW+NXxqmd41dqJ6mLTXxrPpnV8avaIf5SvL7pndPvPpndJR9Kuu8fePvuiuhorgWjp7Mf/PRjxcFCPDkW31srioCExivv9lcwKEaHsf/7ow2Fl1T/9RkXgEhYElAoCLFtMArxwivDJJ+bR1HTKJdlEoTELCIqgEwVGSQ+hIm0NbK8WXcTEI0UPoa2NbG4y2K00JEWbZavJXkYaqo9CRHS55FcZTjKEk3NKoCYUnSQ0rWxrZbFKbKIhOKPZe1cJKzZSaQrIyULHDZmV5K4xySsDRKWOruanGtjLJXFEmwaIbDLX0hIPBUQPVFVkQkDoUNfSoDgQGKPekoxeGzA4DUvnn4bxzcZrtJyipKfPNy5w+9lnXwgqsiyHNeSVpemw4bWb9psYeq//uQZBoABQt4yMVxYAIAAAkQoAAAHvYpL5m6AAgAACXDAAAAD59jblTirQe9upFsmZbpMudy7Lz1X1DYsxOOSWpfPqNX2WqktK0DMvuGwlbNj44TleLPQ+Gsfb+GOWOKJoIrWb3cIMeeON6lz2umTqMXV8Mj30yWPpjoSa9ujK8SyeJP5y5mOW1D6hvLepeveEAEDo0mgCRClOEgANv3B9a6fikgUSu/DmAMATrGx7nng5p5iimPNZsfQLYB2sDLIkzRKZOHGAaUyDcpFBSLG9MCQALgAIgQs2YunOszLSAyQYPVC2YdGGeHD2dTdJk1pAHGAWDjnkcLKFymS3RQZTInzySoBwMG0QueC3gMsCEYxUqlrcxK6k1LQQcsmyYeQPdC2YfuGPASCBkcVMQQqpVJshui1tkXQJQV0OXGAZMXSOEEBRirXbVRQW7ugq7IM7rPWSZyDlM3IuNEkxzCOJ0ny2ThNkyRai1b6ev//3dzNGzNb//4uAvHT5sURcZCFcuKLhOFs8mLAAEAt4UWAAIABAAAAAB4qbHo0tIjVkUU//uQZAwABfSFz3ZqQAAAAAngwAAAE1HjMp2qAAAAACZDgAAAD5UkTE1UgZEUExqYynN1qZvqIOREEFmBcJQkwdxiFtw0qEOkGYfRDifBui9MQg4QAHAqWtAWHoCxu1Yf4VfWLPIM2mHDFsbQEVGwyqQoQcwnfHeIkNt9YnkiaS1oizycqJrx4KOQjahZxWbcZgztj2c49nKmkId44S71j0c8eV9yDK6uPRzx5X18eDvjvQ6yKo9ZSS6l//8elePK/Lf//IInrOF/FvDoADYAGBMGb7FtErm5MXMlmPAJQVgWta7Zx2go+8xJ0UiCb8LHHdftWyLJE0QIAIsI+UbXu67dZMjmgDGCGl1H+vpF4NSDckSIkk7Vd+sxEhBQMRU8j/12UIRhzSaUdQ+rQU5kGeFxm+hb1oh6pWWmv3uvmReDl0UnvtapVaIzo1jZbf/pD6ElLqSX+rUmOQNpJFa/r+sa4e/pBlAABoAAAAA3CUgShLdGIxsY7AUABPRrgCABdDuQ5GC7DqPQCgbbJUAoRSUj+NIEig0YfyWUho1VBBBA//uQZB4ABZx5zfMakeAAAAmwAAAAF5F3P0w9GtAAACfAAAAAwLhMDmAYWMgVEG1U0FIGCBgXBXAtfMH10000EEEEEECUBYln03TTTdNBDZopopYvrTTdNa325mImNg3TTPV9q3pmY0xoO6bv3r00y+IDGid/9aaaZTGMuj9mpu9Mpio1dXrr5HERTZSmqU36A3CumzN/9Robv/Xx4v9ijkSRSNLQhAWumap82WRSBUqXStV/YcS+XVLnSS+WLDroqArFkMEsAS+eWmrUzrO0oEmE40RlMZ5+ODIkAyKAGUwZ3mVKmcamcJnMW26MRPgUw6j+LkhyHGVGYjSUUKNpuJUQoOIAyDvEyG8S5yfK6dhZc0Tx1KI/gviKL6qvvFs1+bWtaz58uUNnryq6kt5RzOCkPWlVqVX2a/EEBUdU1KrXLf40GoiiFXK///qpoiDXrOgqDR38JB0bw7SoL+ZB9o1RCkQjQ2CBYZKd/+VJxZRRZlqSkKiws0WFxUyCwsKiMy7hUVFhIaCrNQsKkTIsLivwKKigsj8XYlwt/WKi2N4d//uQRCSAAjURNIHpMZBGYiaQPSYyAAABLAAAAAAAACWAAAAApUF/Mg+0aohSIRobBAsMlO//Kk4soosy1JSFRYWaLC4qZBYWFRGZdwqKiwkNBVmoWFSJkWFxX4FFRQWR+LsS4W/rFRb/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////VEFHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAU291bmRib3kuZGUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMjAwNGh0dHA6Ly93d3cuc291bmRib3kuZGUAAAAAAAAAACU="</span><span class="token punctuation">,</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  snd<span class="token punctuation">.</span><span class="token function">play</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>In the end, my Testem config looks like this:</p>
+<pre class="language-js"><code class="language-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">framework</span><span class="token operator">:</span> <span class="token string">"qunit"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">test_page</span><span class="token operator">:</span> <span class="token string">"tests/index.html?hidepassed"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">disable_watching</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">launch_in_ci</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"Chrome"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">launch_in_dev</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"Chrome"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">browser_args</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">Chrome</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">mode</span><span class="token operator">:</span> <span class="token string">"ci"</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">browser_start_timeout</span><span class="token operator">:</span> <span class="token number">10000</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">browser_disconnect_timeout</span><span class="token operator">:</span> <span class="token number">10000</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">args</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">"--disable-gpu"</span><span class="token punctuation">,</span>
+        <span class="token comment">// '--headless',</span>
+        <span class="token string">"--auto-open-devtools-for-tabs"</span><span class="token punctuation">,</span>
+        <span class="token string">"--remote-debugging-port=9222"</span><span class="token punctuation">,</span>
+        <span class="token string">"--remote-debugging-address=0.0.0.0"</span><span class="token punctuation">,</span>
+        <span class="token string">"--no-sandbox"</span><span class="token punctuation">,</span>
+        <span class="token string">"--user-data-dir=/tmp"</span><span class="token punctuation">,</span>
+        <span class="token string">"--window-size=1440,900"</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+<p><strong>Footnotes</strong>:</p>
+<ol>
+<li>To be fair, I'm a little lost about how Ember CLI, testem, and qunit all play together and what
+their roles are, so it's possible that I just don't know how to do this.</li>
+<li>I couldn't actually get this to work, and I really didn't want to spend more time debugging
+something tangential to what I was debugging.</li>
+</ol>
+
+    </section>
+  </article>
+
+  <p class='f6 bg-light-yellow pa3 black-80 br2 ba b--yellow mw7 center'>
+    If you like this post, please <a class='black-80 underline' href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fmehulkar.com%2Fblog%2F2018%2F04%2Fdebugging-flaky-ember-tests%2F&via=mehulkar" target='_blank'>share it on Twitter</a>
+    and/or subscribe to my <a href="/feed.xml">RSS feed</a>. Or don't, that's also ok.
+  </p>
+</div>
+
+
+<aside id="webmentions" class="webmentions mb3">
+  <section id="wm-replies" class="wm-replies wm-hidden mw7 center">
+    <h2>Replies <span id="wm-reply-count"></span></h2>
+    <ul></ul>
+  </section>
+
+  <template id="wm-like">
+    <li>
+      <a href="" id="wm-reply-author-url">
+        <img alt="" id="wm-reply-author-photo" class="wm-reply-author-photo" width="25" height="auto" src="">
+      </a>
+    </li>
+  </template>
+
+  <template id="wm-reply">
+    <li>
+      <div class="flex items-end mb2 bb pb2 b--black-10">
+        <img alt="" id="wm-reply-author-photo" class="wm-reply-author-photo mr1" width="40" height="auto" src="">
+        <span id="wm-reply-author" class="wm-reply-author"></span>
+        <span id="wm-reply-date"></span>
+      </div>
+      <div id="wm-reply-text"></div>
+      <span id="wm-reply-link" class="wm-reply-link"></span>
+    </li>
+  </template>
+</aside>
+
+<script src=/javascript/webmentions.js></script>
+<script>
+  window.fetchWebMentions("/blog/2018/04/debugging-flaky-ember-tests/");
+</script>
+
+    </main>
+
+    <footer class='f6 tc pa2 mb3'>
+      <div class="mb2">&copy; <span id='year'></span></div>
+
+      <!-- Snippet from https://xn--sr8hvo.ws/. If you're seeing this, join the ring! -->
+      <a href="https://xn--sr8hvo.ws/%F0%9F%98%A2%F0%9F%8C%84%E2%9E%A1%EF%B8%8F/previous">←</a>
+        An <a href="https://xn--sr8hvo.ws/">IndieWeb Webring</a>
+      <a href="https://xn--sr8hvo.ws/%F0%9F%98%A2%F0%9F%8C%84%E2%9E%A1%EF%B8%8F/next">→</a>
+    </footer>
+  </body>
+
+  
+    <script src=/javascript/analytics.js></script>
+    <script>
+      window.webVitals("");
+    </script>
+  
+</html>

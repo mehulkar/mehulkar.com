@@ -15,7 +15,7 @@
     "url": "https://github.com/mehulkar/mehulkar.com/issues"
   },
   "homepage": "https://github.com/mehulkar/mehulkar.com",
-  "packageManager": "pnpm@9.13.2+sha256.ccce81bf7498c5f0f80e31749c1f8f03baba99d168f64590fc7e13fad3ea1938",
+  "packageManager": "pnpm@10.33.0",
   "devDependencies": {
     "prettier": "^3.2.5"
   },

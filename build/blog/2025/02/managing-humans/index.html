@@ -1,0 +1,805 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <link rel="preconnect" href="https://plausible.io" crossorigin>
+    <script async defer data-domain="mehulkar.com" src="https://plausible.io/js/plausible.js"></script>
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name=viewport>
+
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+
+    
+    
+      <title>Managing Humans</title>
+      <meta name="twitter:title" content="✍🏽 Managing Humans">
+      <meta property="og:title" content="✍🏽 Managing Humans">
+      <meta name="description" content="Don't click on this">
+    
+
+    
+      <meta name="keywords" content="books">
+    
+
+    <link rel="stylesheet" href="/stylesheets/vendor/tachyons.css">
+    <link rel="stylesheet" href="/stylesheets/post.css">
+    <link rel="stylesheet" href="/stylesheets/app.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans|Lato&display=swap"></link>
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+    <link rel="feed alternate" type="application/atom+xml" href="/feed.xml" title="RSS feed for mehulkar.com">
+    <link rel="webmention" href="https://webmention.io/www.mehulkar.com/webmention" />
+
+    <script async src="/va/script.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('year').innerHTML = (new Date).getFullYear();
+      });
+    </script>
+
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/icon-152.png"> <!-- touch-icon-ipad -->
+    <link rel="apple-touch-icon" sizes="167x167" href="/images/icon-167.png"> <!-- touch-icon-ipad-retina -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/icon-180.png"> <!-- touch-icon-iphone-retina -->
+    <link rel="apple-touch-icon" href="/image/icon-192.png"> <!-- touch-icon-iphone.png -->
+
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#3399ff"/>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class='header-content flex items-center justify-center mb3'>
+        <!-- The h-card class and rel=me attr here is for https://indiewebify.me/validate-h-card -->
+        <a class='h-card header-content--link' href='/' rel="me">
+          <picture>
+            <source srcset="/images/avatar.webp" type="image/webp">
+            <source srcset="/images/avatar.jpeg" type="image/jpeg">
+            <img
+              alt="Picture of Mehul Kar"
+              class='header-content--avatar'
+              width='100'
+              height='100'
+              src="/images/avatar.jpeg">
+          </picture>
+
+          <h1 class="ma0 f2 fw3 white">Mehul Kar</h1>
+        </a>
+      </div>
+
+      <section class='mb3 header__icons'>
+        <a class="white f7 mr2" title="Bluesky" href="https://bsky.app/profile/mehulkar.com">
+          <svg
+            width="22"
+            fill="none"
+            stroke="white"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            viewBox="0 0 64 57">
+            <path d="M13.873 3.805C21.21 9.332 29.103 20.537 32 26.55v15.882c0-.338-.13.044-.41.867-1.512
+                    4.456-7.418 21.847-20.923 7.944-7.111-7.32-3.819-14.64 9.125-16.85-7.405
+                    1.264-15.73-.825-18.014-9.015C1.12 23.022 0 8.51 0 6.55 0-3.268 8.579-.182 13.873
+                    3.805ZM50.127 3.805C42.79 9.332 34.897 20.537 32 26.55v15.882c0-.338.13.044.41.867 1.512 4.456
+                    7.418 21.847 20.923 7.944 7.111-7.32 3.819-14.64-9.125-16.85 7.405 1.264 15.73-.825
+                    18.014-9.015C62.88 23.022 64 8.51 64 6.55c0-9.818-8.578-6.732-13.873-2.745Z">
+            </path>
+          </svg>
+        </a>
+
+        <a class="white f7 mr2" title="linkedin" href="https://linkedin.com/in/mehulkar">
+          
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            stroke-width="1"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+            <title>LinkedIn</title>
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+
+        <a class="white f7 mr2" title="Github" href="https://github.com/mehulkar">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            stroke-width="1"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-github">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37
+                    0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44
+                    0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16
+                    2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07
+                    5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3
+                    6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+            </path>
+          </svg>
+        </a>
+
+        <a class="white f7" title="RSS feed for mehulkar.com" type="application/atom+xml" href="/feed.xml">
+          
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="26"
+            height="26"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            stroke-width="1"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+            <title>Link to RSS feed</title>
+            <path d="M4 11a9 9 0 0 1 9 9"></path>
+            <path d="M4 4a16 16 0 0 1 16 16"></path>
+            <circle cx="5" cy="19" r="1"></circle>
+          </svg>
+        </a>
+      </section>
+    </header>
+
+    <main class='flex flex-column mw8 pa3'>
+      
+<script type="module">
+  const pluralRules = new Intl.PluralRules('en-US');
+
+  function getPluralForm(count) {
+    return pluralRules.select(count);
+  }
+
+  function getWords(str) {
+    return str.toLowerCase() // Normalize the string to lowercase (optional)
+      .trim() // Trim leading and trailing whitespace
+      .split(/\s+/) // Use a regular expression to split the string into words
+      .filter(word => word.length > 0);
+}
+
+
+  function pluralize(count) {
+    const pluralForm = getPluralForm(count)
+    return pluralForm === 'zero' ?
+      `${count} views` :
+      `${count} view${count !== 1 ? 's' : ''}`;
+  }
+
+  const vcEl = document.getElementById('view-count');
+  
+  const addRes = await fetch('/api/add-view');
+  const { count } = await addRes.json()
+  if (String(count).match(/\d+/)) {
+    vcEl.innerText = pluralize(count);
+  } else {
+    console.error('View count is not numeric:', count);
+    vcEl.innerText = '🙁 views';
+  }
+
+  const wcEl = document.getElementById('word-count');
+  const article = document.getElementById('article-content');
+  const words = getWords(article.innerText);
+  const wc = words.length;
+  const wcPluralForm = getPluralForm(wc)
+  wcEl.innerText = wcPluralForm === 'zero' ? 'No words' : `${wc} words`
+</script>
+
+<div class='post bb b--black-10 mb2'>
+  <article class='mb3 mw7 center'>
+    <header class='bb b--black-10 mv3'>
+      <h3 class='f5 fw2 mb1'>Feb 17, 2025</h2>
+      <h1 class='fw3 mb1 mt0 post--title'>Managing Humans</h1>
+      <section class="mb2">
+        
+          <a href="/blog/category/recently-read" class="dib mr1 f5">#books</a>
+        
+      </section>
+      <section id="wm-likes" class="wm-likes wm-hidden flex">
+        <ul class="mb0"></ul>
+        <p id="wm-like-count" class="ml2 mb0"></p>
+      </section>
+      <section class="stats f5 fw2 silver">
+        <p>
+          <span id="view-count">~ views</span>
+          | <span id="word-count">~ words</span>
+        </p>
+    </header>
+    <section id="article-content">
+      <p>My highlights from <em>Managing Humans</em> by Michael Lopp</p>
+<picture>
+  <source type="image/webp" srcset="/images/blog/books/managing-humans.webp">
+  <source type="image/jpeg" srcset="/images/blog/books/managing-humans.jpg">
+  <img class="book-cover" src="/images/blog/books/managing-humans.jpg" alt="cover of book Managing Humans">
+</picture>
+<blockquote>
+<p>And, yes, that means great managers have to work terribly hard to see the subtle differences in each of the people working with them.</p>
+</blockquote>
+<p>LOCATION: 212</p>
+<blockquote>
+<p>In order to manage human beings in the moment, you’ve got to be one.</p>
+</blockquote>
+<p>LOCATION: 237</p>
+<blockquote>
+<p>This basic what-do-you-do disconnect between employees and managers is at the heart of why folks don’t trust their managers or even find them to be evil.</p>
+</blockquote>
+<p>LOCATION: 255</p>
+<blockquote>
+<p>you are not talking to a person when you talk with your manager; you are talking to the organization.</p>
+</blockquote>
+<p>LOCATION: 333</p>
+<blockquote>
+<p>Real work is visible action managers take to support their particular vision for their organization. The question you need to answer for your manager is simple: does he do what he says he’s going to do? Does he make something happen?</p>
+</blockquote>
+<p>LOCATION: 380</p>
+<blockquote>
+<p>The difference between a manager who knows what’s going on in an organization and one who is a purely politically driven slimeball is thin. But I would take either of those over some passive manager who lets the organization happen to him. Politically active managers are informed managers.</p>
+</blockquote>
+<p>LOCATION: 396</p>
+<blockquote>
+<p>Panic backs a person into a corner and their only means of getting out of that corner is relying on skills that have worked for them in the past. This is how a normally friendly manager can turn into a backstabbing asshole when it comes to a layoff. See, they were an asshole before; you just weren’t there to see it.</p>
+</blockquote>
+<p>LOCATION: 423</p>
+<blockquote>
+<p>Lastly and most importantly, these guys and gals hate—hate—each other. Volatiles believe Stables are fat, lazy, and bureaucratic. They believe Stables have become “The Man.” Meanwhile, Stables believe Volatiles hold nothing sacred and are doing whatever they please, company or product be damned. Bad news: everyone is right.</p>
+</blockquote>
+<p>LOCATION: 474</p>
+<blockquote>
+<p>while all your leadership instincts are going to tell you to negotiate a peace treaty, you might want to encourage the war.</p>
+</blockquote>
+<p>LOCATION: 477</p>
+<blockquote>
+<p>A Stable’s choice of disruption is within the context of the last war. They can certainly innovate, but they will attempt to do so within the box they bled to build.</p>
+</blockquote>
+<p>LOCATION: 504</p>
+<blockquote>
+<p>As a leader, you need to figure out how to invest in disruption, which is counterintuitive because disruption, by definition, is destructive.</p>
+</blockquote>
+<p>LOCATION: 511</p>
+<blockquote>
+<p>I don’t know the inner workings of Amazon, but when I see strategies that diverge wildly from conventional wisdom, I smell Volatiles at work.</p>
+</blockquote>
+<p>LOCATION: 519</p>
+<blockquote>
+<p>I believe a healthy company that wants to continue to grow and invent needs to invest equally in both their Stables and their Volatiles.</p>
+</blockquote>
+<p>LOCATION: 521</p>
+<blockquote>
+<p>Your Volatiles are there to remind you that nothing lasts, and that the world is full of Volatiles who consider it their mission in life to replace the inefficient, boring, and uninspired. You can’t actually build them a world, because they’ll think you’re up to something Stable, so you need to create a corner of the building where they can disrupt.</p>
+</blockquote>
+<p>LOCATION: 524</p>
+<blockquote>
+<p>The core problem centers on the folks who’ve been around longer and who also tend to have more responsibility. As far as they’re concerned, the ways they organically communicated before will remain as efficient and simple each time the group doubles in size.</p>
+</blockquote>
+<p>LOCATION: 552</p>
+<blockquote>
+<p>Furthermore, as I will discuss in Chapter 7, “The Update, the Vent, and the Disaster,” conveyance of status is not the point of a one-on-one; the point is to have a conversation about something of substance. Status can be an introduction, status can frame the conversation, but status is not the point.</p>
+</blockquote>
+<p>LOCATION: 568</p>
+<blockquote>
+<p>So write a report that takes out the noise—collaboration tools are built around reporting. The status information is out there. In what managerial textbook does it say it’s a good idea to distribute the task of figuring out what is going on to the people who are performing the work? That’s, like, your job.</p>
+</blockquote>
+<p>LOCATION: 593</p>
+<blockquote>
+<p>I like being busy. Like really busy. Like getting in, grabbing a cup of coffee, and suddenly finding the coffee is cold, it’s 6:00 p.m., and I forgot to eat busy. Busy feels great, but busy is usually tactical, not strategic. If you have time in which you’re investing in yourself while at work, and your boss is cool with it—give yourself a point.</p>
+</blockquote>
+<p>LOCATION: 658</p>
+<blockquote>
+<p>In the absence of information, people make shit up. Worse, if they at all feel threatened, they make shit up that amplifies their worst fears.</p>
+</blockquote>
+<p>LOCATION: 669</p>
+<blockquote>
+<p>the core difference between a conversation and a meeting is that it needs rules so people know when to talk.</p>
+</blockquote>
+<p>LOCATION: 704</p>
+<blockquote>
+<p>All active participants in a meeting can instinctively sense progress, and when progress isn’t being made, they get cranky and start looking for the exit. A referee’s job is to shape the meeting to meet the requirements of the agenda and the expectations of the participants.</p>
+</blockquote>
+<p>LOCATION: 717</p>
+<blockquote>
+<p>There are a variety of meeting denizens you’re going to encounter as both a referee and a meeting participant. The one I want to talk about is the person who believes it is their moral imperative to contribute to the meeting simply because they were invited.</p>
+</blockquote>
+<p>LOCATION: 750</p>
+<blockquote>
+<p>A good referee knows that abuse of the dictator role eventually results in everyone shutting down, which is just as inefficient as that one person who never shuts up.</p>
+</blockquote>
+<p>LOCATION: 756</p>
+<blockquote>
+<p>Meetings must exist, but meetings cannot be seen as the only solution for making progress. If you must meet, start the meeting by remembering that the definition of a successful meeting is that when the meeting is done, it need never occur again.</p>
+</blockquote>
+<p>LOCATION: 776</p>
+<blockquote>
+<p>In addition to trusting those who work for you by delegating work that you may truly believe only you can do, you must also understand the art of evaluating a Spartan set of data, extracting the truth, and trusting your Twinges.</p>
+</blockquote>
+<p>LOCATION: 800</p>
+<blockquote>
+<p>One of the first lessons a new manager discovers, either through trial and error or instruction, is that the approaches they used for building products aren’t going to work when it comes to people.</p>
+</blockquote>
+<p>LOCATION: 818</p>
+<blockquote>
+<p>New engineering managers wrestle with the gig because they miss building stuff. The powerfully addictive act of building is no longer part of their day, and they bitch, “You know, I don’t know what I actually do all day.” Finding other ways to scratch this itch is a topic for another chapter, but for now, one of your jobs is to listen to the stories and map them against your experience. And when there’s a Twinge, you ask questions, and you need to believe the asking of these questions is a form of building.</p>
+</blockquote>
+<p>LOCATION: 864</p>
+<blockquote>
+<p>If you’re drawing the line for success in your one-on-one as the discussion of data you could find in a status report, you’re missing the point. A one-on-one is an opportunity to learn something new amidst the grind of daily business.</p>
+</blockquote>
+<p>LOCATION: 914</p>
+<blockquote>
+<p>Business is noisy because there is always stuff to do, and the process of doing stuff is called tactics. It’s tactical work, and while tactics are progress, the real progress is made when we get strategic. A productive one-on-one is one where we talk strategically about how we do stuff, but more importantly, how we might do this stuff better.</p>
+</blockquote>
+<p>LOCATION: 930</p>
+<blockquote>
+<p>The Vent that wants no help is a rant. The ranter somehow believes that the endless restatement of their opinion is the solution.</p>
+</blockquote>
+<p>LOCATION: 947</p>
+<blockquote>
+<p>Shut up. Really. Your primary job during the Disaster is to defuse, and you start defusing by contributing absolutely nothing. If you’re a logical, reasonable management type, you’ll be tempted to ask clarifying questions—to try to shape the problem. Don’t. Be quiet. Let the emotion pass.</p>
+</blockquote>
+<p>LOCATION: 968</p>
+<blockquote>
+<p>A Disaster is the end result of poor management. When your employee believes totally losing their shit is a productive strategy, it’s because they believe it’s the only option left for making anything change.</p>
+</blockquote>
+<p>LOCATION: 975</p>
+<blockquote>
+<p>All of the listening, questioning, and discussion that happens during a one-on-one is managerial preventative maintenance</p>
+</blockquote>
+<p>LOCATION: 984</p>
+<blockquote>
+<p>This can be rough because the freakout may be pointed directly at you, but even under attack, your job is the same: Listen. Nod. Repeat.</p>
+</blockquote>
+<p>LOCATION: 1013</p>
+<blockquote>
+<p>It’s taken years of weathering these explosions to hear this and not to take it personally, but I’ve come to expect that freakouts are a normal event in passionate engineering teams. It’s still a management failure.</p>
+</blockquote>
+<p>LOCATION: 1044</p>
+<blockquote>
+<p>If you’re sitting in a meeting where you’re unable to identify any players, get the hell out.</p>
+</blockquote>
+<p>LOCATION: 1174</p>
+<blockquote>
+<p>I’m convinced that the majority of meetings on this planet go long and do little because the people sitting around the table simply do not figure out who the hell they’re talking to and what they want.</p>
+</blockquote>
+<p>LOCATION: 1204</p>
+<blockquote>
+<p>There are three distinct phases to the mandate: Decide, Deliver, and Deliver (Again).</p>
+</blockquote>
+<p>LOCATION: 1250</p>
+<blockquote>
+<p>Sometimes the team is so polarized that they start confusing the emotion with the decision. Rather than arguing the facts, they begin to argue from their heart and that is when you need to consider the mandate. Rule of thumb: When the debate is no longer productive, it’s time to make a decision.</p>
+</blockquote>
+<p>LOCATION: 1257</p>
+<blockquote>
+<p>My management style is to allow the team to argue as long as possible.</p>
+</blockquote>
+<p>LOCATION: 1259</p>
+<blockquote>
+<p>Remember that for every person on the team who has a strong opinion regarding the decision, there are probably four other coworkers who just want someone to make a decision so that they can get back to work.</p>
+</blockquote>
+<p>LOCATION: 1263</p>
+<blockquote>
+<p>Mandates are the friend of the silent majority. Even if you really annoy the concerned parties, the silent majority will appreciate the peace and quiet once you’ve delivered your verdict.</p>
+</blockquote>
+<p>LOCATION: 1267</p>
+<blockquote>
+<p>A good sign of poor mandate delivery is when the delivery degrades into another debate of the issues.</p>
+</blockquote>
+<p>LOCATION: 1275</p>
+<blockquote>
+<p>If you’re sitting with someone who was on the losing side of the decision and they’re still nodding their head, they don’t believe the battle is over. They’re sitting there figuring out their next move to erode the mandate. If you fail to get this person to open up, you will be mandating (again) in a few short weeks.</p>
+</blockquote>
+<p>LOCATION: 1291</p>
+<blockquote>
+<p>A good manager is a person who is playing to a strategy and isn’t merely stumbling around squashing fires all day.</p>
+</blockquote>
+<p>LOCATION: 1405</p>
+<blockquote>
+<p>Management is chess. When you’re presented with a problem, you sometimes need to sit back and take a look at the board, figure out the consequences of each of move, and, most importantly, pick a move.</p>
+</blockquote>
+<p>LOCATION: 1406</p>
+<blockquote>
+<p>Managers lead, and a lot of managers translate that into “managers lead by talking.”</p>
+</blockquote>
+<p>LOCATION: 1457</p>
+<blockquote>
+<p>Twenty years in, I can safely say there is one law—not in the book by Greene and Elffers—that is true: if you’re only interested in building power, you’re going to lose.</p>
+</blockquote>
+<p>LOCATION: 1472</p>
+<blockquote>
+<p>How you will be judged as a manager by your team is based on how you communicate with them.</p>
+</blockquote>
+<p>LOCATION: 1528</p>
+<blockquote>
+<p>Let’s start with the most basic rule of listening: If they don’t trust you, they aren’t going to say shit.</p>
+</blockquote>
+<p>LOCATION: 1544</p>
+<blockquote>
+<p>As you are a lead, manager, or director, early on in establishing the attention contract, they’re going to be nervous. They’re going to assume that you’ll be talking and not listening, while you’re looking to achieve the exact opposite.</p>
+</blockquote>
+<p>LOCATION: 1569</p>
+<blockquote>
+<p>Being a curious fool means talking about things that appear to have no substantive value to the conversation or the business—that’s ok. Over time, your foolishness will allow you to build connective tissue, to further develop your mental profile of this person.</p>
+</blockquote>
+<p>LOCATION: 1572</p>
+<blockquote>
+<p>The longer you’re a bad listener, the smaller your world gets and the narrower your mind becomes because you’re not exposing yourself to different ideas and perspective. The better you become at listening, the more of the world you’ll see—and the world knows a lot more than you do.</p>
+</blockquote>
+<p>LOCATION: 1607</p>
+<blockquote>
+<p>Off-sites don’t need to be swank, but they do need a sense of elsewhere. They need to be far from the tactical distractions of the office because people need a new view.</p>
+</blockquote>
+<p>LOCATION: 1684</p>
+<blockquote>
+<p>getting this particular group into a healthy conversation shouldn’t be hard, but don’t confuse a healthy conversation with progress.</p>
+</blockquote>
+<p>LOCATION: 1697</p>
+<blockquote>
+<p>After years of off-sites, my observation is that you only find three new ideas that you act upon. These can be huge company-changing ideas, but there are only going to be three, and it’s the immense burden of the Taker of Notes to not only find them, but assign them to the people who can and will drive them forward.</p>
+</blockquote>
+<p>LOCATION: 1702</p>
+<blockquote>
+<p>equate the appearance of process with a decrease in free will. You believe that process is slowly going to sap this company of the creative ninja spirit that got us from 12 to 120 people, and you’re right. Blindly landing process without considering the culture it needs to support it is a recipe for disaster. However, believing that the loosey-goosey, make-it-up-as-we-go rebel spirit that got us to 120 is going to take us to 2,000 is absurd. I believe that each time your company doubles in size, it needs to reinvent how it communicates, and each subsequent transformation is increasingly radical and foreign. Fred, if we’re going to grow, we need to constantly reinvent ourselves.</p>
+</blockquote>
+<p>LOCATION: 1706</p>
+<blockquote>
+<p>If you want to understand someone, my advice is to sit next to them and solve a very hard problem together. You will learn who they are by watching how they think.</p>
+</blockquote>
+<p>LOCATION: 1719</p>
+<blockquote>
+<p>The successful off-site is one that maps the discoveries of the off-site to the reality of the work.</p>
+</blockquote>
+<p>LOCATION: 1762</p>
+<blockquote>
+<p>We need leads and managers as a means of scaling responsibility and communication, but we need to dispel the idea that their roles are also the exclusive owners of decision-making.</p>
+</blockquote>
+<p>LOCATION: 1793</p>
+<blockquote>
+<p>It’s likely that one of the reasons they became managers is due to their productive developers, and their first reaction when things go to crap is to revert to the skills that built up their confidence. That’s writing code.</p>
+</blockquote>
+<p>LOCATION: 1849</p>
+<blockquote>
+<p>How in the world are you going to scale if you’re slowly forgetting how software is made?</p>
+</blockquote>
+<p>LOCATION: 1886</p>
+<blockquote>
+<p>If you want to be a good manager, you can stop coding daily, but . . . Stay flexible, remember what it means to be an engineer, and don’t stop developing.</p>
+</blockquote>
+<p>LOCATION: 1924</p>
+<blockquote>
+<p>deeply believe in the power of the individual, but I also believe that in order to build epic shit at scale, a colorful tapestry of talent and degrees of experience is essential.</p>
+</blockquote>
+<p>LOCATION: 1948</p>
+<blockquote>
+<p>The Lead is tactical, but is showing the first glimmers of strategy. They are beginning to understand the power of delegation, and they are still wrestling with the idea that they have authority.</p>
+</blockquote>
+<p>LOCATION: 1959</p>
+<blockquote>
+<p>remember that the Lead of Leads has a foot on both sides of the fence. They equally speak Lead and Director.</p>
+</blockquote>
+<p>LOCATION: 2004</p>
+<blockquote>
+<p>The leadership track shows up so that communication and decisions can be sensibly organized.</p>
+</blockquote>
+<p>LOCATION: 2051</p>
+<blockquote>
+<p>The main problem with systems of titles is that people are erratic, chaotic messes who learn at different paces and in different ways.</p>
+</blockquote>
+<p>LOCATION: 2091</p>
+<blockquote>
+<p>A title has no business attempting to capture the seemingly infinite ways in which individuals evolve.</p>
+</blockquote>
+<p>LOCATION: 2093</p>
+<blockquote>
+<p>Managers lose it when they are no longer questioned in their decisions. When the team stops questioning authority, the manager slowly starts to believe that his decisions are always good,</p>
+</blockquote>
+<p>LOCATION: 2163</p>
+<blockquote>
+<p>As a manager, you are responsible for making great decisions and the best way to do that is to involve as much of the team as possible in every decision.</p>
+</blockquote>
+<p>LOCATION: 2192</p>
+<blockquote>
+<p>To prevent these screw-ups, the more organized members of the team create process. Their goal is to provide structure around the work we do and to eliminate guessing. These people are well intentioned, but they still annoy the folks who know, first, we’re always going to screw up no matter how much process we have and, second, that screwing up often reveals more useful information than not screwing up.</p>
+</blockquote>
+<p>LOCATION: 2201</p>
+<blockquote>
+<p>Process creates a delectable, healthy tension between those who measure and those who create.</p>
+</blockquote>
+<p>LOCATION: 2203</p>
+<blockquote>
+<p>There is no word that irks engineers more than process. Try it right now. Get everyone in your office and say something like, “I’ve defined a new process to assist our bug triage.” Watch their faces sag. They hear “busywork.” They think, “management is trying to justify itself.”</p>
+</blockquote>
+<p>LOCATION: 2287</p>
+<blockquote>
+<p>Process is the means by which your team communicates.</p>
+</blockquote>
+<p>LOCATION: 2290</p>
+<blockquote>
+<p>If, in your organization, your pyramid is not constantly adjusting to keep itself upright, something’s wrong.</p>
+</blockquote>
+<p>LOCATION: 2306</p>
+<blockquote>
+<p>The pitch guides the people. The people refine the pitch. People and pitch create process and product,</p>
+</blockquote>
+<p>LOCATION: 2328</p>
+<blockquote>
+<p>Engineers don’t hate process. They hate process that can’t defend itself.</p>
+</blockquote>
+<p>LOCATION: 2371</p>
+<blockquote>
+<p>Then, at some magical Dunbar number, you pass two interrelated inflection points. First, the number of new hires arriving exceeds your population’s ability to organically infect culture and values. Second, because of the vast swath of preexisting people, the arriving individual erroneously believes that they as a single person can no longer influence the cultural course of the company. The team is fractured into two different groups that want exactly the same thing:</p>
+</blockquote>
+<p>LOCATION: 2394</p>
+<blockquote>
+<p>Problem is, the Old Guard can’t conceive of a universe where everyone doesn’t know everything, and they have difficulty explaining what they find obvious. The Old Guard begins to hear the New Guard’s crankiness, but their suggestion is, “Duh, fix it. It’s your company. That’s what I did.” This useless platitude only enrages the New Guard, because while they desperately want to fix it—they don’t know how—and having the Old Guard, with their informed confidence and flippancy, imply that it’s simple is maddening.</p>
+</blockquote>
+<p>LOCATION: 2404</p>
+<blockquote>
+<p>Process should be written by those who are not only intimately experiencing the pain of a lack of process, but who are also experts in the culture.</p>
+</blockquote>
+<p>LOCATION: 2434</p>
+<blockquote>
+<p>Insist on understanding, because a healthy process that can’t defend itself is a sign that you’ve forgotten what you believe.</p>
+</blockquote>
+<p>LOCATION: 2447</p>
+<blockquote>
+<p>You can’t think because when you’re busy, you’re not thinking, you’re reacting.</p>
+</blockquote>
+<p>LOCATION: 2574</p>
+<blockquote>
+<p>You won’t be a successful manager without well-developed react instincts. A quiver full of experience gives you all sorts of arrows to shoot at problems, and the timing and accuracy of some of those shots will be brilliant, but your quiver will slowly empty unless you take the time to think.</p>
+</blockquote>
+<p>LOCATION: 2582</p>
+<blockquote>
+<p>Structured thinking kills thinking, but unstructured thinking leads to useless chaos. Your meeting driver must be able to swerve the conversation back and forth between the two extremes, but generally keep it in the middle.</p>
+</blockquote>
+<p>LOCATION: 2608</p>
+<blockquote>
+<p>What I’m saying is, when you’re facing an uphill mental battle with yourself regarding the impossible task, it’s time to choose another battle . . . that isn’t a battle.</p>
+</blockquote>
+<p>LOCATION: 2904</p>
+<blockquote>
+<p>A surprising number of smart people skip this step. They believe that they can both assess and solve the problem at the same time.</p>
+</blockquote>
+<p>LOCATION: 2956</p>
+<blockquote>
+<p>Action feels like progress, but undirected action is not progress, nor is it a plan. You’re going to barge into the office and start barking orders because that is what everyone expects, but if your orders are not shaped by what you’re really attempting to do, you are just sending people scurrying around aimlessly.</p>
+</blockquote>
+<p>LOCATION: 2958</p>
+<blockquote>
+<p>One of the leading causes of sky-falling situations is distributed ownership, and as a strategy, distributed ownership seems very humane.</p>
+</blockquote>
+<p>LOCATION: 2980</p>
+<blockquote>
+<p>A sky-falling situation exists not because of a single failure on one team. It’s a collection of multiple large and small mistakes on many teams that snowballs into an unexpected worst-case scenario.</p>
+</blockquote>
+<p>LOCATION: 2984</p>
+<blockquote>
+<p>In the face of disaster, it’s the wise person who does not act until they know. Unfucking the situation is a bandage. Understanding what you’re truly trying to fix is a cure.</p>
+</blockquote>
+<p>LOCATION: 3037</p>
+<blockquote>
+<p>Hackers are allergic to process not because they don’t understand the value; they’re allergic to it because it violates their core values. These values are well documented in Zuckerberg’s letter: “Done is better than perfect,” “Code wins arguments,” and “Hacker culture is extremely open and meritocratic.” The folks who create process care about control, and they use politics to shape that control and to influence communications, and if there is ever a sentence that would cause a hacker to stand up and throw his or her keyboard at the screen, it’s the first half of this one.</p>
+</blockquote>
+<p>LOCATION: 3069</p>
+<blockquote>
+<p>Failure to create some form of predictability will result in chaos. Failure to create some sort of well-maintained barbaric chaos inside the company guarantees that a fast-moving, ambitious, risk-taking, and ruthless someone else—someone outside the company—will invade, because they know what you forgot: hacking is important.</p>
+</blockquote>
+<p>LOCATION: 3111</p>
+<blockquote>
+<p>You know what a good project manager does? They are chaos-destroying machines, and each new person you bring onto your team, each dependency you create, adds hard-to-measure entropy to your team. A good project manager thrives on measuring, controlling, and crushing entropy.</p>
+</blockquote>
+<p>LOCATION: 3166</p>
+<blockquote>
+<p>Gantt charts are great at showing the order of operations for building software, but never in history of ever have they effectively been used to measure when to ship that software.</p>
+</blockquote>
+<p>LOCATION: 3193</p>
+<blockquote>
+<p>A good project manager’s job is to decrease chaos by increasing clarity. I understand that chaos can be an essential ingredient in creative, but I guarantee you—I promise you—even with the best project manager on board, you still get to run around like a crazy person because the sky always unexpectedly falls. Chaos in a complex system is a guarantee.</p>
+</blockquote>
+<p>LOCATION: 3209</p>
+<blockquote>
+<p>As a lead, you have three jobs—people, process, and product—and you get to choose how to invest in each of those roles.</p>
+</blockquote>
+<p>LOCATION: 3212</p>
+<blockquote>
+<p>Boredom is easier to fix than an absence of belief.</p>
+</blockquote>
+<p>LOCATION: 3257</p>
+<blockquote>
+<p>In terms of a low-cost means of keeping your team content, the simple act of saying, “I know where you want to be and I’m thinking about how to get you there” is a way to demonstrate you care about the growth of your team.</p>
+</blockquote>
+<p>LOCATION: 3329</p>
+<blockquote>
+<p>For me, success in an interview is extracting as much information as possible from the candidate. This doesn’t happen because you’ve got a compelling set of interview questions; it comes from throwing a wildly different set of interviewers at your candidate.</p>
+</blockquote>
+<p>LOCATION: 3348</p>
+<blockquote>
+<p>My preference is that the manager is the person who is the bellwether for vision because that’s their job for the group.</p>
+</blockquote>
+<p>LOCATION: 3389</p>
+<blockquote>
+<p>You always have an interview feedback meeting.</p>
+</blockquote>
+<p>LOCATION: 3395</p>
+<blockquote>
+<p>Each person in your new team has a story they want to tell you and it’s never a bulleted list. Some are going to freely give this story whereas others will carefully protect the fact they even have a story, but until each person you need to work with has shared this story with you (and vice versa), the interview isn’t over.</p>
+</blockquote>
+<p>LOCATION: 3435</p>
+<blockquote>
+<p>There’s an industry standard regarding the amount of time it takes to make a hire, and it’s 90 days.</p>
+</blockquote>
+<p>LOCATION: 3442</p>
+<blockquote>
+<p>These instincts are based on where you’ve been and you have never been here before.</p>
+</blockquote>
+<p>LOCATION: 3448</p>
+<blockquote>
+<p>Grand Unification Theory? Yeah, a nerd invented that so he could sleep at night.</p>
+</blockquote>
+<p>LOCATION: 3554</p>
+<blockquote>
+<p>A switch flips when your nerd drops into this mode. She’s no longer trying to unravel the knot; she wants to understand why all knots exist.</p>
+</blockquote>
+<p>LOCATION: 3571</p>
+<blockquote>
+<p>When a nerd says “We can build it better,” he’s saying, “I have not devoted the necessary time to understanding the existing solution, and it’s more fun to build than to investigate someone else’s crap.”</p>
+</blockquote>
+<p>LOCATION: 3603</p>
+<blockquote>
+<p>You can protect the cave and honor the hoodie, but your nerd will choose when to go deep. The amount of pressure you put on your nerd to engage is directly proportionate to the amount of resistance you’ll encounter.</p>
+</blockquote>
+<p>LOCATION: 3618</p>
+<blockquote>
+<p>Perform consistently and efficiently around your nerds so they can spend their energy on what they are building and not worry about that which they can’t control. Help them scale by knowing when they’re stuck or simply bored. And let them chase those Highs, because then they can amaze everyone.</p>
+</blockquote>
+<p>LOCATION: 3627</p>
+<blockquote>
+<p>Once we begin the transition, there is no going back and this scares the hell out of everyone, including the VP who will not make a decision.</p>
+</blockquote>
+<p>LOCATION: 3818</p>
+<blockquote>
+<p>The disagreement reminded me that there are two distinct personalities when it comes to devising solutions to problems: incrementalists and completionists.</p>
+</blockquote>
+<p>LOCATION: 3915</p>
+<blockquote>
+<p>This isn’t a battle of wrong versus right; it’s the battle of right versus right. Bizarre. How does anything get done with incrementalists and completionists arguing about degrees of rightness? Here’s the trick. You want them to argue, you just don’t want them to kill each other. This is where you, the manager, come in.</p>
+</blockquote>
+<p>LOCATION: 3927</p>
+<blockquote>
+<p>Fact is, for any given technical or product problem, there’s a completionist who knows exactly what to do. Problem is, not only can they see the immediate solution; they see the two-year solution and the five-year solution. By the way, the five-year solution drastically changes the immediate solution, which is why everyone else has a problem with it. Everyone else has no insight into the five-year solution.</p>
+</blockquote>
+<p>LOCATION: 3945</p>
+<blockquote>
+<p>With all of their strategic vision, completionists often lack common corporate and people sense. Yes, they have a five-year technical roadmap in their heads, but they have nary a clue how to start pushing that agenda with the 12 different people who need to get on board to make anything happen. This is why completionists often get incorrectly labeled as curmudgeons. Sure, they’re cranky, but it’s not cranky for crankiness’s sake, it’s because they don’t have the communication and people skills to convince the company of the truth.</p>
+</blockquote>
+<p>LOCATION: 3950</p>
+<blockquote>
+<p>It’s a really simple puzzle. One personality has all the skills necessary to get stuff done but isn’t exactly sure what to do. The other personality knows exactly what to do, but doesn’t know how to do it. Your job as a manager is to find and marry these personality types in your organization, because when they understand each other’s strengths, you’ve got a complete strategically tactical product team.</p>
+</blockquote>
+<p>LOCATION: 3965</p>
+<blockquote>
+<p>influence earned by the Wolf can never ever be granted by a manager.</p>
+</blockquote>
+<p>LOCATION: 4163</p>
+<blockquote>
+<p>There are two classes of free electrons, senior electrons and junior electrons . Both have similar productivity yields, but the senior versions have become politically and socially aware.</p>
+</blockquote>
+<p>LOCATION: 4200</p>
+<blockquote>
+<p>One week more, your hair is going to be mostly pulled out, and then you’re going to realize you didn’t need a miracle in the first place and that inaction was the right move. Your free electron knew that two weeks ago. They just didn’t want to take the two hours to draw the picture for you. Annoying, huh? You’ll get over it.</p>
+</blockquote>
+<p>LOCATION: 4221</p>
+<blockquote>
+<p>The addition of these new people to the existing population transforms the comfortable chaos into legitimate chaos.</p>
+</blockquote>
+<p>LOCATION: 4277</p>
+<blockquote>
+<p>It is entirely possible that too much process or the wrong process is developed during this build-out, but when this inevitable debate occurs, it should not be about the process. It’s a debate about values. The first question isn’t, “Is this a good, bad, or efficient process?” The first question is, “How does this process reflect our values?”</p>
+</blockquote>
+<p>LOCATION: 4296</p>
+<blockquote>
+<p>Discovery of structure in a chaotic world means less chaos, and while we’re happy to make you laugh, the idea of a more orderly, structured, and knowable world is what drives us and keeps us warm in bed at night.</p>
+</blockquote>
+<p>LOCATION: 4438</p>
+<blockquote>
+<p>Once you’ve placed someone on the Skill/Will graph, you can begin to consider what your full-time job is—constantly and consistently pushing your employees to the upper-right quadrant. High skill (I’m good at what I do) and high will (I like what I do).</p>
+</blockquote>
+<p>LOCATION: 4513</p>
+<blockquote>
+<p>Just as skill and will fade together, they also rise together. If you focus on one, you often fix the other. It’s a brilliant management two-for-one.</p>
+</blockquote>
+<p>LOCATION: 4529</p>
+<blockquote>
+<p>You, your productive morning, and all the other yous walking around the building are a wonderful N-squared problem. While not mathematically sound, the fact is that you significantly underestimate the amount of work that you generated this morning. You could document and communicate the obvious work, but you can’t document all the unexpected side effects of your actions. In a large population of people, it’s close to impossible for an individual to perceive and predict the first-order consequences of their well-intentioned actions, let alone the bizarre second-order effects once those consequences get in the wild.</p>
+</blockquote>
+<p>LOCATION: 4928</p>
+<blockquote>
+<p>Engineers have a well-deserved reputation for regularly being off by a factor of three in their work estimates, and that is partly due to the fact that we are really shitty at estimating the non-linear chaotic work (and fun) that exists in keeping a group of humans pointed in the right direction.</p>
+</blockquote>
+<p>LOCATION: 4935</p>
+<blockquote>
+<p>I am a firm believer that you need a well-defined leadership role to deal with unexpected and non-linear side effects of people working together.</p>
+</blockquote>
+<p>LOCATION: 4939</p>
+<blockquote>
+<p>There are a slew of good reasons to hate crap leadership. There are leaders who hoard the information they discover. There are leaders who have crap judgement and perform awful analysis and make precisely the wrong decisions. There are leaders who are genetically bad at communication. And there are those who are simply a waste of air and space; they define their existence by creating unnecessary work for others to make themselves look productive.</p>
+</blockquote>
+<p>LOCATION: 4941</p>
+<blockquote>
+<p>It is equally likely that you remember these crap leaders a lot more than you do the leaders who quietly and effortlessly helped. The ones who gave you the data you needed when you needed it. The ones who pointed you at precisely the right person at the right time. The ones who served as a sounding board and worked hard, and, when they made a decision, you found their judgement reasoned and fair.</p>
+</blockquote>
+<p>LOCATION: 4945</p>
+
+    </section>
+  </article>
+
+  <p class='f6 bg-light-yellow pa3 black-80 br2 ba b--yellow mw7 center'>
+    If you like this post, please <a class='black-80 underline' href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fmehulkar.com%2Fblog%2F2025%2F02%2Fmanaging-humans%2F&via=mehulkar" target='_blank'>share it on Twitter</a>
+    and/or subscribe to my <a href="/feed.xml">RSS feed</a>. Or don't, that's also ok.
+  </p>
+</div>
+
+
+<aside id="webmentions" class="webmentions mb3">
+  <section id="wm-replies" class="wm-replies wm-hidden mw7 center">
+    <h2>Replies <span id="wm-reply-count"></span></h2>
+    <ul></ul>
+  </section>
+
+  <template id="wm-like">
+    <li>
+      <a href="" id="wm-reply-author-url">
+        <img alt="" id="wm-reply-author-photo" class="wm-reply-author-photo" width="25" height="auto" src="">
+      </a>
+    </li>
+  </template>
+
+  <template id="wm-reply">
+    <li>
+      <div class="flex items-end mb2 bb pb2 b--black-10">
+        <img alt="" id="wm-reply-author-photo" class="wm-reply-author-photo mr1" width="40" height="auto" src="">
+        <span id="wm-reply-author" class="wm-reply-author"></span>
+        <span id="wm-reply-date"></span>
+      </div>
+      <div id="wm-reply-text"></div>
+      <span id="wm-reply-link" class="wm-reply-link"></span>
+    </li>
+  </template>
+</aside>
+
+<script src=/javascript/webmentions.js></script>
+<script>
+  window.fetchWebMentions("/blog/2025/02/managing-humans/");
+</script>
+
+    </main>
+
+    <footer class='f6 tc pa2 mb3'>
+      <div class="mb2">&copy; <span id='year'></span></div>
+
+      <!-- Snippet from https://xn--sr8hvo.ws/. If you're seeing this, join the ring! -->
+      <a href="https://xn--sr8hvo.ws/%F0%9F%98%A2%F0%9F%8C%84%E2%9E%A1%EF%B8%8F/previous">←</a>
+        An <a href="https://xn--sr8hvo.ws/">IndieWeb Webring</a>
+      <a href="https://xn--sr8hvo.ws/%F0%9F%98%A2%F0%9F%8C%84%E2%9E%A1%EF%B8%8F/next">→</a>
+    </footer>
+  </body>
+
+  
+    <script src=/javascript/analytics.js></script>
+    <script>
+      window.webVitals("");
+    </script>
+  
+</html>

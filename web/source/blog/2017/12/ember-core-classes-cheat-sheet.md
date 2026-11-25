@@ -26,7 +26,6 @@ A brief cheatsheet on when to use each of `Ember`'s core classes
 - `Object`
   - when you want `{}` or ES6 Class, but with all the get/set/computed goodness of Ember
 - `Helper`
-
   - formatting parts of what's displayed on the page
 
 - `DS.Model`

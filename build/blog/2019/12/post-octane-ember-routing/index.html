@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <link rel="preconnect" href="https://plausible.io" crossorigin>
+    <script async defer data-domain="mehulkar.com" src="https://plausible.io/js/plausible.js"></script>
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name=viewport>
+
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+
+    
+    
+      <title>Post-Octane Ember Routing</title>
+      <meta name="twitter:title" content="✍🏽 Post-Octane Ember Routing">
+      <meta property="og:title" content="✍🏽 Post-Octane Ember Routing">
+      <meta name="description" content="Don't click on this">
+    
+
+    
+      <meta name="keywords" content="programming,frontend,ember.js">
+    
+
+    <link rel="stylesheet" href="/stylesheets/vendor/tachyons.css">
+    <link rel="stylesheet" href="/stylesheets/post.css">
+    <link rel="stylesheet" href="/stylesheets/app.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans|Lato&display=swap"></link>
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+    <link rel="feed alternate" type="application/atom+xml" href="/feed.xml" title="RSS feed for mehulkar.com">
+    <link rel="webmention" href="https://webmention.io/www.mehulkar.com/webmention" />
+
+    <script async src="/va/script.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('year').innerHTML = (new Date).getFullYear();
+      });
+    </script>
+
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/icon-152.png"> <!-- touch-icon-ipad -->
+    <link rel="apple-touch-icon" sizes="167x167" href="/images/icon-167.png"> <!-- touch-icon-ipad-retina -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/icon-180.png"> <!-- touch-icon-iphone-retina -->
+    <link rel="apple-touch-icon" href="/image/icon-192.png"> <!-- touch-icon-iphone.png -->
+
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#3399ff"/>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class='header-content flex items-center justify-center mb3'>
+        <!-- The h-card class and rel=me attr here is for https://indiewebify.me/validate-h-card -->
+        <a class='h-card header-content--link' href='/' rel="me">
+          <picture>
+            <source srcset="/images/avatar.webp" type="image/webp">
+            <source srcset="/images/avatar.jpeg" type="image/jpeg">
+            <img
+              alt="Picture of Mehul Kar"
+              class='header-content--avatar'
+              width='100'
+              height='100'
+              src="/images/avatar.jpeg">
+          </picture>
+
+          <h1 class="ma0 f2 fw3 white">Mehul Kar</h1>
+        </a>
+      </div>
+
+      <section class='mb3 header__icons'>
+        <a class="white f7 mr2" title="Bluesky" href="https://bsky.app/profile/mehulkar.com">
+          <svg
+            width="22"
+            fill="none"
+            stroke="white"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            viewBox="0 0 64 57">
+            <path d="M13.873 3.805C21.21 9.332 29.103 20.537 32 26.55v15.882c0-.338-.13.044-.41.867-1.512
+                    4.456-7.418 21.847-20.923 7.944-7.111-7.32-3.819-14.64 9.125-16.85-7.405
+                    1.264-15.73-.825-18.014-9.015C1.12 23.022 0 8.51 0 6.55 0-3.268 8.579-.182 13.873
+                    3.805ZM50.127 3.805C42.79 9.332 34.897 20.537 32 26.55v15.882c0-.338.13.044.41.867 1.512 4.456
+                    7.418 21.847 20.923 7.944 7.111-7.32 3.819-14.64-9.125-16.85 7.405 1.264 15.73-.825
+                    18.014-9.015C62.88 23.022 64 8.51 64 6.55c0-9.818-8.578-6.732-13.873-2.745Z">
+            </path>
+          </svg>
+        </a>
+
+        <a class="white f7 mr2" title="linkedin" href="https://linkedin.com/in/mehulkar">
+          
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            stroke-width="1"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+            <title>LinkedIn</title>
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+
+        <a class="white f7 mr2" title="Github" href="https://github.com/mehulkar">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            stroke-width="1"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-github">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37
+                    0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44
+                    0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16
+                    2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07
+                    5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3
+                    6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+            </path>
+          </svg>
+        </a>
+
+        <a class="white f7" title="RSS feed for mehulkar.com" type="application/atom+xml" href="/feed.xml">
+          
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="26"
+            height="26"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            stroke-width="1"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+            <title>Link to RSS feed</title>
+            <path d="M4 11a9 9 0 0 1 9 9"></path>
+            <path d="M4 4a16 16 0 0 1 16 16"></path>
+            <circle cx="5" cy="19" r="1"></circle>
+          </svg>
+        </a>
+      </section>
+    </header>
+
+    <main class='flex flex-column mw8 pa3'>
+      
+<script type="module">
+  const pluralRules = new Intl.PluralRules('en-US');
+
+  function getPluralForm(count) {
+    return pluralRules.select(count);
+  }
+
+  function getWords(str) {
+    return str.toLowerCase() // Normalize the string to lowercase (optional)
+      .trim() // Trim leading and trailing whitespace
+      .split(/\s+/) // Use a regular expression to split the string into words
+      .filter(word => word.length > 0);
+}
+
+
+  function pluralize(count) {
+    const pluralForm = getPluralForm(count)
+    return pluralForm === 'zero' ?
+      `${count} views` :
+      `${count} view${count !== 1 ? 's' : ''}`;
+  }
+
+  const vcEl = document.getElementById('view-count');
+  
+  const addRes = await fetch('/api/add-view');
+  const { count } = await addRes.json()
+  if (String(count).match(/\d+/)) {
+    vcEl.innerText = pluralize(count);
+  } else {
+    console.error('View count is not numeric:', count);
+    vcEl.innerText = '🙁 views';
+  }
+
+  const wcEl = document.getElementById('word-count');
+  const article = document.getElementById('article-content');
+  const words = getWords(article.innerText);
+  const wc = words.length;
+  const wcPluralForm = getPluralForm(wc)
+  wcEl.innerText = wcPluralForm === 'zero' ? 'No words' : `${wc} words`
+</script>
+
+<div class='post bb b--black-10 mb2'>
+  <article class='mb3 mw7 center'>
+    <header class='bb b--black-10 mv3'>
+      <h3 class='f5 fw2 mb1'>Dec 22, 2019</h2>
+      <h1 class='fw3 mb1 mt0 post--title'>Post-Octane Ember Routing</h1>
+      <section class="mb2">
+        
+          <a href="/blog/category/programming" class="dib mr1 f5">#programming</a>
+        
+          <a href="/blog/category/frontend" class="dib mr1 f5">#frontend</a>
+        
+          <a href="/blog/category/emberjs" class="dib mr1 f5">#ember.js</a>
+        
+      </section>
+      <section id="wm-likes" class="wm-likes wm-hidden flex">
+        <ul class="mb0"></ul>
+        <p id="wm-like-count" class="ml2 mb0"></p>
+      </section>
+      <section class="stats f5 fw2 silver">
+        <p>
+          <span id="view-count">~ views</span>
+          | <span id="word-count">~ words</span>
+        </p>
+    </header>
+    <section id="article-content">
+      <p><a href="https://blog.emberjs.com/2019/12/20/octane-is-here.html">Ember octane is released</a>! The release brings a massive simplification of the component model,
+interoperability with native JS features like classes and decorators, and an
+inversion of the reactivity model that was so ingrained in my mind that it's almost weird to forget.
+Most of these features are fairly standard among other frameworks these days, so it remains to be
+seen how it will affect public perception, but existing Ember applications certainly have a lot to
+look forward to. It’s pretty remarkable that a framework this old has managed to completely renew
+itself over the course of 3 major versions while remaining mostly backwards-compatible. There are
+tradeoffs to this idealogy, but I'm glad that I have no compelling reason to rewrite existing apps
+into another framework.</p>
+<p>Preamble aside, the core team has said that 2020 will be the year of routing. As someone who
+has spent a considerable amount of time grappling with the Ember router this year, I wanted to
+lay out a vision for what the first few steps should be. As a framework user, rather than a framework
+developer, this vision is guided by pain personally felt, so it is possible that it suffers from
+repeating mistakes of the past. I hope someone who knows the full history will tell me if that's the case!</p>
+<p>The vision for routing begins with a vision for the application lifecycle.</p>
+<h2>The year of <code>app.js</code></h2>
+<p>I’ve contributed in some significant way to 9 Ember apps over the last ~8 years, ranging from v0.87
+all the way to v3.14. This year was the first time I paid any attention to the<code>app/app.js</code> file.
+The more I think about it, the stranger this feels. <code>app.js</code> is the entry point to an
+Ember application, yet it contains barely a few lines of code and no obvious function call that
+looks like it is starting the application. If I were writing <code>&lt;script&gt;</code> tags on any other HTML file,
+there would very clearly be a function invocation that executes my code. I believe this gap
+between how the browser downloads and executes script and the application-writing experience is
+a major problem. How does an Ember application boot? What order do the class definitions load in?
+Who invokes the first method? How does the <code>ApplicationRoute</code> <code>model</code> hook get called?</p>
+<p>The application's definition is in <code>app.js</code>, the app's routes are defined in <code>router.js</code>,
+but the first time any developer code executes (usually) is in <code>routes/application.js</code>. and there's
+no way to trace through it. In other words, it's anyone's guess how Ember <em>begins</em> the routing
+process.</p>
+<p>(If you're wondering, the answer is that Ember CLI injects code that calls <code>Application.create()</code>
+and then on the <code>DOMReady</code> event, the created Application calls a <code>boot()</code> function that eventually
+leads to a handoff to the <code>Router</code> class.)</p>
+<p>I think the first step to improving routing starts with giving developers control <em>earlier</em> in the
+boot process and by consolidating the boot process into <code>app.js</code>. Here's what that might look like:</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">import</span> Application <span class="token keyword">from</span> <span class="token string">"@ember/application"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> config <span class="token keyword">from</span> <span class="token string">"./config/environment"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Application</span> <span class="token punctuation">{</span>
+  <span class="token function">routeMap</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">route</span><span class="token punctuation">(</span><span class="token string">"about"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  location <span class="token operator">=</span> config<span class="token punctuation">.</span>locationType<span class="token punctuation">;</span>
+  rootURL <span class="token operator">=</span> config<span class="token punctuation">.</span>rootURL<span class="token punctuation">;</span>
+
+  <span class="token function">onBoot</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// initializer code goes here</span>
+    <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onBoot</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">onInstanceBoot</span><span class="token punctuation">(</span><span class="token parameter"><span class="token operator">...</span>arguments</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// instance-initializer code goes here</span>
+    <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onInstanceBoot</span><span class="token punctuation">(</span><span class="token operator">...</span>arguments<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// this calls the visit() API, which eventually calls Router.transitionTo()</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>This approach has multiple benefits, but on the topic of routing it means a few things:</p>
+<ul>
+<li>The <code>Router</code> class no longer needs to be exposed to the end user, making room for the
+<code>RouterService</code> to fully ascend the throne it has been promised for years now. This can eventually
+lead to deprecating its existence in the Application container (it's currently available as
+<code>main:router</code>).</li>
+<li><code>routeMap()</code> is &quot;just a function&quot; and writing it as such can expose new composition patterns or
+even new DSLs that may be easier to understand or parse than a long list of <code>this.route()</code> calls.</li>
+<li>The end of the <code>router.js</code> file which is currently a distracting <em>second</em> entry point into the
+application.</li>
+<li>You'll notice in the code sample above that the super implementation of <code>onInstanceBoot</code> calls
+<code>visit()</code>. Exposing this hook also exposes an important stack trace and an invitation to explore
+the routing stack, which is currently unintuitive.</li>
+</ul>
+<p>Which brings us to...</p>
+<h2>The Router stack</h2>
+<p>The second pillar of this vision is about the various classes and packages that consist of the
+routing stack. Currently, the anatomy of the stack is:</p>
+<ul>
+<li><code>Router</code> (houses the <code>map</code> method for defining the applications routes) and injected as <code>main:router</code>
+into the Application container.</li>
+<li><code>PrivateRouter</code> an extension of a class from the <code>router_js</code> package, instantiated and made available
+as a property on <code>main:router</code>.</li>
+<li><code>Router</code> class from <code>router_js</code> which is the state machine and interacts with <code>RouteInfo</code>, <code>Transition</code>,
+and other low level classes.</li>
+<li><code>RouteRecognizer</code> which is responsible for the DSL exposed to the user for defining routes.</li>
+<li><code>RouterService</code> which is almost the same as <code>main:router</code>, but is a proper Ember Service class
+that attempts to hide the complexity in the previous four items in this list.</li>
+</ul>
+<p>This stack may have made sense at some point, but in 2020, I believe that flattening this out and
+exposing each of these layers as public API will give back power to the developer in a way that
+is not possible today (short of replacing the entire top level Router class, that is).</p>
+<p>We've already seen earlier in this post how it is not necessary to expose <code>main:router</code> at all.
+I believe that the way forward is to flatten each of the other classes and abstractions into
+the <code>RouterService</code>. A single <code>RouterService</code> places the entire concept of routing squarely into the comfort
+zones of 99% of Ember developers who understand and use the component-service architecture everywhere
+else in their application. It also allows developers to extend this class as any other Service: by exporting
+from <code>app/services/router.js</code> and overriding or adding methods.</p>
+<p>These initial steps will not solve any of the existing warts of the routing system, but it will make
+it much easier to form a mental modal of how the system works and make it easier to explore and debug
+that system when the quirks surface. The ideas presented here could take several RFCs and may involve
+other discussions, but I think they will be massively beneficial for reasons other routing as well.</p>
+<p>Now that Octane is out, I am looking forward to exploring other parts of Ember that make it a successful developer experience.</p>
+
+    </section>
+  </article>
+
+  <p class='f6 bg-light-yellow pa3 black-80 br2 ba b--yellow mw7 center'>
+    If you like this post, please <a class='black-80 underline' href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fmehulkar.com%2Fblog%2F2019%2F12%2Fpost-octane-ember-routing%2F&via=mehulkar" target='_blank'>share it on Twitter</a>
+    and/or subscribe to my <a href="/feed.xml">RSS feed</a>. Or don't, that's also ok.
+  </p>
+</div>
+
+
+<aside id="webmentions" class="webmentions mb3">
+  <section id="wm-replies" class="wm-replies wm-hidden mw7 center">
+    <h2>Replies <span id="wm-reply-count"></span></h2>
+    <ul></ul>
+  </section>
+
+  <template id="wm-like">
+    <li>
+      <a href="" id="wm-reply-author-url">
+        <img alt="" id="wm-reply-author-photo" class="wm-reply-author-photo" width="25" height="auto" src="">
+      </a>
+    </li>
+  </template>
+
+  <template id="wm-reply">
+    <li>
+      <div class="flex items-end mb2 bb pb2 b--black-10">
+        <img alt="" id="wm-reply-author-photo" class="wm-reply-author-photo mr1" width="40" height="auto" src="">
+        <span id="wm-reply-author" class="wm-reply-author"></span>
+        <span id="wm-reply-date"></span>
+      </div>
+      <div id="wm-reply-text"></div>
+      <span id="wm-reply-link" class="wm-reply-link"></span>
+    </li>
+  </template>
+</aside>
+
+<script src=/javascript/webmentions.js></script>
+<script>
+  window.fetchWebMentions("/blog/2019/12/post-octane-ember-routing/");
+</script>
+
+    </main>
+
+    <footer class='f6 tc pa2 mb3'>
+      <div class="mb2">&copy; <span id='year'></span></div>
+
+      <!-- Snippet from https://xn--sr8hvo.ws/. If you're seeing this, join the ring! -->
+      <a href="https://xn--sr8hvo.ws/%F0%9F%98%A2%F0%9F%8C%84%E2%9E%A1%EF%B8%8F/previous">←</a>
+        An <a href="https://xn--sr8hvo.ws/">IndieWeb Webring</a>
+      <a href="https://xn--sr8hvo.ws/%F0%9F%98%A2%F0%9F%8C%84%E2%9E%A1%EF%B8%8F/next">→</a>
+    </footer>
+  </body>
+
+  
+    <script src=/javascript/analytics.js></script>
+    <script>
+      window.webVitals("");
+    </script>
+  
+</html>

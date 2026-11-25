@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <link rel="preconnect" href="https://plausible.io" crossorigin>
+    <script async defer data-domain="mehulkar.com" src="https://plausible.io/js/plausible.js"></script>
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name=viewport>
+
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+
+    
+    
+      <title>Terser vs esbuild: Ember app case study</title>
+      <meta name="twitter:title" content="✍🏽 Terser vs esbuild: Ember app case study">
+      <meta property="og:title" content="✍🏽 Terser vs esbuild: Ember app case study">
+      <meta name="description" content="Don't click on this">
+    
+
+    
+      <meta name="keywords" content="programming,frontend,javascript">
+    
+
+    <link rel="stylesheet" href="/stylesheets/vendor/tachyons.css">
+    <link rel="stylesheet" href="/stylesheets/post.css">
+    <link rel="stylesheet" href="/stylesheets/app.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans|Lato&display=swap"></link>
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+    <link rel="feed alternate" type="application/atom+xml" href="/feed.xml" title="RSS feed for mehulkar.com">
+    <link rel="webmention" href="https://webmention.io/www.mehulkar.com/webmention" />
+
+    <script async src="/va/script.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('year').innerHTML = (new Date).getFullYear();
+      });
+    </script>
+
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/icon-152.png"> <!-- touch-icon-ipad -->
+    <link rel="apple-touch-icon" sizes="167x167" href="/images/icon-167.png"> <!-- touch-icon-ipad-retina -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/icon-180.png"> <!-- touch-icon-iphone-retina -->
+    <link rel="apple-touch-icon" href="/image/icon-192.png"> <!-- touch-icon-iphone.png -->
+
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#3399ff"/>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class='header-content flex items-center justify-center mb3'>
+        <!-- The h-card class and rel=me attr here is for https://indiewebify.me/validate-h-card -->
+        <a class='h-card header-content--link' href='/' rel="me">
+          <picture>
+            <source srcset="/images/avatar.webp" type="image/webp">
+            <source srcset="/images/avatar.jpeg" type="image/jpeg">
+            <img
+              alt="Picture of Mehul Kar"
+              class='header-content--avatar'
+              width='100'
+              height='100'
+              src="/images/avatar.jpeg">
+          </picture>
+
+          <h1 class="ma0 f2 fw3 white">Mehul Kar</h1>
+        </a>
+      </div>
+
+      <section class='mb3 header__icons'>
+        <a class="white f7 mr2" title="Bluesky" href="https://bsky.app/profile/mehulkar.com">
+          <svg
+            width="22"
+            fill="none"
+            stroke="white"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            viewBox="0 0 64 57">
+            <path d="M13.873 3.805C21.21 9.332 29.103 20.537 32 26.55v15.882c0-.338-.13.044-.41.867-1.512
+                    4.456-7.418 21.847-20.923 7.944-7.111-7.32-3.819-14.64 9.125-16.85-7.405
+                    1.264-15.73-.825-18.014-9.015C1.12 23.022 0 8.51 0 6.55 0-3.268 8.579-.182 13.873
+                    3.805ZM50.127 3.805C42.79 9.332 34.897 20.537 32 26.55v15.882c0-.338.13.044.41.867 1.512 4.456
+                    7.418 21.847 20.923 7.944 7.111-7.32 3.819-14.64-9.125-16.85 7.405 1.264 15.73-.825
+                    18.014-9.015C62.88 23.022 64 8.51 64 6.55c0-9.818-8.578-6.732-13.873-2.745Z">
+            </path>
+          </svg>
+        </a>
+
+        <a class="white f7 mr2" title="linkedin" href="https://linkedin.com/in/mehulkar">
+          
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            stroke-width="1"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+            <title>LinkedIn</title>
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+
+        <a class="white f7 mr2" title="Github" href="https://github.com/mehulkar">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            stroke-width="1"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-github">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37
+                    0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44
+                    0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16
+                    2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07
+                    5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3
+                    6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+            </path>
+          </svg>
+        </a>
+
+        <a class="white f7" title="RSS feed for mehulkar.com" type="application/atom+xml" href="/feed.xml">
+          
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="26"
+            height="26"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            stroke-width="1"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+            <title>Link to RSS feed</title>
+            <path d="M4 11a9 9 0 0 1 9 9"></path>
+            <path d="M4 4a16 16 0 0 1 16 16"></path>
+            <circle cx="5" cy="19" r="1"></circle>
+          </svg>
+        </a>
+      </section>
+    </header>
+
+    <main class='flex flex-column mw8 pa3'>
+      
+<script type="module">
+  const pluralRules = new Intl.PluralRules('en-US');
+
+  function getPluralForm(count) {
+    return pluralRules.select(count);
+  }
+
+  function getWords(str) {
+    return str.toLowerCase() // Normalize the string to lowercase (optional)
+      .trim() // Trim leading and trailing whitespace
+      .split(/\s+/) // Use a regular expression to split the string into words
+      .filter(word => word.length > 0);
+}
+
+
+  function pluralize(count) {
+    const pluralForm = getPluralForm(count)
+    return pluralForm === 'zero' ?
+      `${count} views` :
+      `${count} view${count !== 1 ? 's' : ''}`;
+  }
+
+  const vcEl = document.getElementById('view-count');
+  
+  const addRes = await fetch('/api/add-view');
+  const { count } = await addRes.json()
+  if (String(count).match(/\d+/)) {
+    vcEl.innerText = pluralize(count);
+  } else {
+    console.error('View count is not numeric:', count);
+    vcEl.innerText = '🙁 views';
+  }
+
+  const wcEl = document.getElementById('word-count');
+  const article = document.getElementById('article-content');
+  const words = getWords(article.innerText);
+  const wc = words.length;
+  const wcPluralForm = getPluralForm(wc)
+  wcEl.innerText = wcPluralForm === 'zero' ? 'No words' : `${wc} words`
+</script>
+
+<div class='post bb b--black-10 mb2'>
+  <article class='mb3 mw7 center'>
+    <header class='bb b--black-10 mv3'>
+      <h3 class='f5 fw2 mb1'>Aug 5, 2021</h2>
+      <h1 class='fw3 mb1 mt0 post--title'>Terser vs esbuild: Ember app case study</h1>
+      <section class="mb2">
+        
+          <a href="/blog/category/programming" class="dib mr1 f5">#programming</a>
+        
+          <a href="/blog/category/frontend" class="dib mr1 f5">#frontend</a>
+        
+          <span class="dib mr1 f5">#javascript</span>
+        
+      </section>
+      <section id="wm-likes" class="wm-likes wm-hidden flex">
+        <ul class="mb0"></ul>
+        <p id="wm-like-count" class="ml2 mb0"></p>
+      </section>
+      <section class="stats f5 fw2 silver">
+        <p>
+          <span id="view-count">~ views</span>
+          | <span id="word-count">~ words</span>
+        </p>
+    </header>
+    <section id="article-content">
+      <p>Over the last couple of weeks, I've been trying to improve the amount of time
+my ember apps take to build. The <a href="https://github.com/ember-cli/ember-cli/blob/master/docs/perf-guide.md#broccoli-viz">perf-guide in the ember-cli repo</a> is a bit old
+but the suggestions for how to analyze it still worked for me:</p>
+<ol>
+<li><code>BROCCOLI_VIZ=1 ember build --environment production</code></li>
+<li>Open <code>instrumentation.0.build.json</code> in <a href="https://heimdalljs.github.io/heimdalljs-visualizer/#/flame">https://heimdalljs.github.io/heimdalljs-visualizer/#/flame</a>.</li>
+<li>Stare at it forever until it starts to make some sense.</li>
+</ol>
+<p>I asked coworkers what I'm supposed to do with a flame chart and one pointed me
+to look at &quot;Self time&quot;. The flame chart in the visualizer doesn't make it easy
+to see the nodes that had the largest <code>time.self</code> value, but you can hover over
+each bar and look for larger values.</p>
+<p><a href="/images/blog/terser-flame-chart.png"><img src="/images/blog/terser-flame-chart.png" alt="flame chart"></a></p>
+<p>I noticed that <code>TerserWriter</code> was taking ~20s and thought it might be useful to
+try out alternatives for minification. Ember CLI's architecture is pretty confusing,
+but <code>TerserWriter</code> is located inside <code>broccoli-terser-sourcemap</code> which is a
+dependency of <code>ember-cli-terser</code><sup>1</sup>. Digging into it, I found the line that actually
+runs the underlying <code>terser</code> tool:</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">await</span> terser<span class="token punctuation">.</span><span class="token function">minify</span><span class="token punctuation">(</span>src<span class="token punctuation">,</span> options<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p><a href="https://github.com/ember-cli/broccoli-terser-sourcemap/blob/8e5decf32384f85003c10d25d85cbbe0775fea4a/lib/process-file.js#L50">source</a>.</p>
+<p>and replaced it with <code>esbuild</code>:</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">await</span> esbuild<span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">entryPoints</span><span class="token operator">:</span> <span class="token punctuation">[</span>inFile<span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">bundle</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// False because the files are already bundled at this point.</span>
+  <span class="token literal-property property">minify</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">outfile</span><span class="token operator">:</span> outFile<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>I had to make some minor adjustments such as removing all the source map things and adjusted
+debug logs to adapt to the result, but all in all this did produce a production <code>dist</code>/ that looked
+roughly the same. But <code>TerserWriter</code>'s self time grew to twice the size to 45 seconds!</p>
+<p>One thing that stuck out to me in the <a href="https://esbuild.github.io/getting-started/#build-scripts">esbuild docs</a> was:</p>
+<blockquote>
+<p>The <code>build</code> function runs the esbuild executable in a child process and returns
+a promise that resolves when the build is complete.</p>
+</blockquote>
+<p>While reading the source for <code>broccoli-terser-sourcemap</code>, I noticed that it also
+parallelizes each file it feeds to <code>terser</code>. Without any explicit configuration,
+it defaults to the number of CPUs on the machine (minus one to account for the leader
+process):</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">this</span><span class="token punctuation">.</span>concurrency <span class="token operator">=</span>
+  <span class="token function">Number</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">JOBS</span><span class="token punctuation">)</span> <span class="token operator">||</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>options<span class="token punctuation">.</span>concurrency <span class="token operator">||</span>
+  Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"os"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">cpus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// create a worker pool using an external worker script</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>pool <span class="token operator">=</span> workerpool<span class="token punctuation">.</span><span class="token function">pool</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">"lib"</span><span class="token punctuation">,</span> <span class="token string">"worker.js"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">maxWorkers</span><span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>concurrency<span class="token punctuation">,</span>
+  <span class="token literal-property property">workerType</span><span class="token operator">:</span> <span class="token string">"auto"</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p><a href="https://github.com/ember-cli/broccoli-terser-sourcemap/blob/8e5decf32384f85003c10d25d85cbbe0775fea4a/index.js#L47-L53">source</a></p>
+<p>I thought it might be worthwhile to try without this parallelization, to reduce
+the number of factors, so I ran my build with <code>JOBS=1</code>. This time, the numbers
+were more aligned with my expectations for esbuild (which claims to be 10x-100x faster<sup>2</sup>).</p>
+<p>TerserWriter dropped to 4seconds--5x faster than parallelized terser! Running
+the original <em>terser</em> implementation with <code>JOBS=1</code> on the other hand went up to 53 seconds<sup>3</sup>.</p>
+<h2>Raw Data</h2>
+<p>I wanted to see a smaller breakdown of how long it took to minify each file, so
+I used the logging in <code>broccoli-terser-sourcemap</code> to construct this table:</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Size</th>
+<th>terser</th>
+<th>JOBS=1 terser</th>
+<th>esbuild</th>
+<th>JOBS=1 esbuild</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>chunk.0</td>
+<td>23.778KB</td>
+<td>749ms</td>
+<td>151ms</td>
+<td>23708ms</td>
+<td>⭐ <strong>7ms</strong></td>
+</tr>
+<tr>
+<td>chunk.1</td>
+<td>6.625KB</td>
+<td>383ms</td>
+<td>31ms</td>
+<td>23715ms</td>
+<td>⭐ <strong>5ms</strong></td>
+</tr>
+<tr>
+<td>chunk.5</td>
+<td>7.775KB</td>
+<td>416ms</td>
+<td>44ms</td>
+<td>29765ms</td>
+<td>⭐ <strong>7ms</strong></td>
+</tr>
+<tr>
+<td>chunk.6</td>
+<td>28.27KB</td>
+<td>696ms</td>
+<td>74ms</td>
+<td>23715ms</td>
+<td>⭐ <strong>7ms</strong></td>
+</tr>
+<tr>
+<td>chunk.7</td>
+<td>1.805KB</td>
+<td>162ms</td>
+<td>5ms</td>
+<td>14966ms</td>
+<td>⭐ <strong>4ms</strong></td>
+</tr>
+<tr>
+<td>chunk.8</td>
+<td>2.217KB</td>
+<td>181ms</td>
+<td>⭐ <strong>4ms</strong></td>
+<td>14927ms</td>
+<td>5ms</td>
+</tr>
+<tr>
+<td>chunk.9</td>
+<td>45.707KB</td>
+<td>867ms</td>
+<td>138ms</td>
+<td>18170ms</td>
+<td>⭐ <strong>8ms</strong></td>
+</tr>
+<tr>
+<td>chunk.10</td>
+<td>18.248KB</td>
+<td>500ms</td>
+<td>58ms</td>
+<td>26881ms</td>
+<td>⭐ <strong>6ms</strong></td>
+</tr>
+<tr>
+<td>ember-fetch/fetch-fastboot</td>
+<td>2.736KB</td>
+<td>179ms</td>
+<td>14ms</td>
+<td>14969ms</td>
+<td>⭐ <strong>7ms</strong></td>
+</tr>
+<tr>
+<td>auto-import-fastboot</td>
+<td>134.432KB</td>
+<td>1542ms</td>
+<td>750ms</td>
+<td>23719ms</td>
+<td>⭐ <strong>125ms</strong></td>
+</tr>
+<tr>
+<td>my-app-fastboot</td>
+<td>8729.123KB</td>
+<td>4808ms</td>
+<td>3797ms</td>
+<td>3848ms</td>
+<td>⭐ <strong>392ms</strong></td>
+</tr>
+<tr>
+<td>my-app</td>
+<td>3452.765KB</td>
+<td>7899ms</td>
+<td>4779ms</td>
+<td>6483ms</td>
+<td>⭐ <strong>183ms</strong></td>
+</tr>
+<tr>
+<td>vendor</td>
+<td>4428.068KB</td>
+<td>9941ms</td>
+<td>7267ms</td>
+<td>9429ms</td>
+<td>⭐ <strong>294ms</strong></td>
+</tr>
+</tbody>
+</table>
+<p>If you look closely, <code>JOBS=1 esbuild</code> is the fastest on each individual file, but <code>JOBS=1 terser</code>
+wasn't too bad either for all the smaller files--it even bested esbuild in one case! But for larger
+files, the results were noticeably different. esbuild outperformed terser by 10x.</p>
+<p>I've decided to come out of the rabbit hole here, but one possible avenue for further
+exploration would be to investigate how terser works and see if it checks out that
+it is not an O(N) operation. Another possible way to reduce variables and run
+each of these 13 files in a deterministic order to see if that changes the results.
+I was pretty happy to stop here.</p>
+<h2>Even More Raw Data</h2>
+<h3>terser</h3>
+<pre><code>assets/chunk.7.19a220231751adc6f9e7.js (1.805KB) -&gt; 1.805KB in 162ms
+ember-fetch/fetch-fastboot-e28194c4f1288a25de407aad6f7fab09.js (2.736KB) -&gt; 0.887KB in 179ms
+assets/chunk.8.d3bc007e86beb3f59722.js (2.217KB) -&gt; 2.217KB in 181ms
+assets/chunk.1.c5058b8350a7f92f058d.js (6.625KB) -&gt; 6.596KB in 383ms
+assets/chunk.5.3a7fac165fb83163b87a.js (7.775KB) -&gt; 7.775KB in 416ms
+assets/chunk.10.f25d9a8ef2fb4d803961.js (18.248KB) -&gt; 18.101KB in 500ms
+assets/chunk.6.229a8539512008cb285f.js (28.27KB) -&gt; 28.219KB in 696ms
+assets/chunk.0.988c362969b0fa064219.js (23.778KB) -&gt; 23.63KB in 749ms
+assets/chunk.9.a258d4fae07a2ac42ad7.js (45.707KB) -&gt; 45.553KB in 867ms
+assets/auto-import-fastboot-ff24d50b4bf7b63ea1c3d7ef54babf53.js (134.432KB) -&gt; 133.896KB in 1542ms
+assets/my-app-fastboot-4cdd3aa8b913c28d1628c1be6e682271.js (8729.123KB) -&gt; 8718.29KB in 4808ms
+assets/my-app-f629a42d2456316e9837ead6ff7cd404.js (3452.765KB) -&gt; 1616.631KB in 7899ms
+assets/vendor-8f243fb0c9b9c8f88fd94a5782813287.js (4428.068KB) -&gt; 1828.842KB in 9941ms
+</code></pre>
+<h3>esbuild</h3>
+<pre><code>assets/chunk.10.f25d9a8ef2fb4d803961.js (18.248KB) -&gt; 18.272KB in 26881ms
+assets/chunk.5.3a7fac165fb83163b87a.js (7.775KB) -&gt; 7.766KB in 29765ms
+assets/chunk.0.988c362969b0fa064219.js (23.778KB) -&gt; 23.822KB in 23708ms
+assets/chunk.1.c5058b8350a7f92f058d.js (6.625KB) -&gt; 6.602KB in 23715ms
+assets/chunk.6.229a8539512008cb285f.js (28.27KB) -&gt; 28.258KB in 23715ms
+assets/auto-import-fastboot-ff24d50b4bf7b63ea1c3d7ef54babf53.js (134.432KB) -&gt; 134.748KB in 23719ms
+assets/chunk.8.d3bc007e86beb3f59722.js (2.217KB) -&gt; 2.208KB in 14927ms
+assets/chunk.7.19a220231751adc6f9e7.js (1.805KB) -&gt; 1.804KB in 14966ms
+ember-fetch/fetch-fastboot-e28194c4f1288a25de407aad6f7fab09.js (2.736KB) -&gt; 0.886KB in 14969ms
+assets/chunk.9.a258d4fae07a2ac42ad7.js (45.707KB) -&gt; 45.54KB in 18170ms
+assets/vendor-8f243fb0c9b9c8f88fd94a5782813287.js (4428.068KB) -&gt; 1880.165KB in 9429ms
+assets/my-app-f629a42d2456316e9837ead6ff7cd404.js (3452.765KB) -&gt; 1686.537KB in 6483ms
+assets/my-app-fastboot-4cdd3aa8b913c28d1628c1be6e682271.js (8729.123KB) -&gt; 12331.092KB in 3848ms
+</code></pre>
+<h3>esbuild (with JOBS=1)</h3>
+<pre><code>assets/auto-import-fastboot-ff24d50b4bf7b63ea1c3d7ef54babf53.js (134.432KB) -&gt; 134.748KB in 125ms +1ms
+assets/chunk.0.988c362969b0fa064219.js (23.778KB) -&gt; 23.822KB in 7ms +0ms
+assets/chunk.1.c5058b8350a7f92f058d.js (6.625KB) -&gt; 6.602KB in 5ms +1ms
+assets/chunk.10.f25d9a8ef2fb4d803961.js (18.248KB) -&gt; 18.272KB in 6ms +0ms
+assets/chunk.5.3a7fac165fb83163b87a.js (7.775KB) -&gt; 7.766KB in 7ms +0ms
+assets/chunk.6.229a8539512008cb285f.js (28.27KB) -&gt; 28.258KB in 7ms +0ms
+assets/chunk.7.19a220231751adc6f9e7.js (1.805KB) -&gt; 1.804KB in 4ms +0ms
+assets/chunk.8.d3bc007e86beb3f59722.js (2.217KB) -&gt; 2.208KB in 5ms +0ms
+assets/chunk.9.a258d4fae07a2ac42ad7.js (45.707KB) -&gt; 45.54KB in 8ms +1ms
+assets/vendor-8f243fb0c9b9c8f88fd94a5782813287.js (4428.068KB) -&gt; 1880.165KB in 294ms +1ms
+assets/my-app-f629a42d2456316e9837ead6ff7cd404.js (3452.765KB) -&gt; 1686.537KB in 183ms +1ms
+assets/my-app-fastboot-4cdd3aa8b913c28d1628c1be6e682271.js (8729.123KB) -&gt; 12331.092KB in 392ms +0ms
+ember-fetch/fetch-fastboot-e28194c4f1288a25de407aad6f7fab09.js (2.736KB) -&gt; 0.886KB in 7ms +0ms
+</code></pre>
+<h3>terser (with JOBS=1)</h3>
+<pre><code>assets/auto-import-fastboot-ff24d50b4bf7b63ea1c3d7ef54babf53.js (134.432KB) -&gt; 133.896KB in 750ms +0ms
+assets/chunk.0.988c362969b0fa064219.js (23.778KB) -&gt; 23.63KB in 151ms +154ms
+assets/chunk.1.c5058b8350a7f92f058d.js (6.625KB) -&gt; 6.596KB in 31ms +32ms
+assets/chunk.10.f25d9a8ef2fb4d803961.js (18.248KB) -&gt; 18.101KB in 58ms +59ms
+assets/chunk.5.3a7fac165fb83163b87a.js (7.775KB) -&gt; 7.775KB in 44ms +45ms
+assets/chunk.6.229a8539512008cb285f.js (28.27KB) -&gt; 28.219KB in 74ms +74ms
+assets/chunk.7.19a220231751adc6f9e7.js (1.805KB) -&gt; 1.805KB in 5ms +5ms
+assets/chunk.8.d3bc007e86beb3f59722.js (2.217KB) -&gt; 2.217KB in 4ms +5ms
+assets/chunk.9.a258d4fae07a2ac42ad7.js (45.707KB) -&gt; 45.553KB in 138ms +139ms
+assets/vendor-8f243fb0c9b9c8f88fd94a5782813287.js (4428.068KB) -&gt; 1828.842KB in 7267ms +7s
+assets/my-app-f629a42d2456316e9837ead6ff7cd404.js (3452.765KB) -&gt; 1616.631KB in 4779ms +5s
+assets/my-app-fastboot-4cdd3aa8b913c28d1628c1be6e682271.js (8729.123KB) -&gt; 8718.29KB in 3797ms +4s
+ember-fetch/fetch-fastboot-e28194c4f1288a25de407aad6f7fab09.js (2.736KB) -&gt; 0.887KB in 14ms +56ms
+</code></pre>
+<hr>
+<h3>Footnotes</h3>
+<ol>
+<li>I wish ember-cli consumed the broccoli plugin directly instead of wrapping it
+in yet another package :(.</li>
+<li>To be fair, esbuild is meant for bundling <em>and</em> minification, and in this study
+I'm <em>only</em> using it for minification.</li>
+<li>The big caveat here is that I ran all these test builds on my machine and only a
+couple times to validate that they weren't flukes. In a more rigorous study, I would
+want to run the builds more times under different conditions and hardwares and use
+medians to validate the results.</li>
+</ol>
+
+    </section>
+  </article>
+
+  <p class='f6 bg-light-yellow pa3 black-80 br2 ba b--yellow mw7 center'>
+    If you like this post, please <a class='black-80 underline' href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fmehulkar.com%2Fblog%2F2021%2F08%2Fterser-vs-esbuild-ember-app-case-study%2F&via=mehulkar" target='_blank'>share it on Twitter</a>
+    and/or subscribe to my <a href="/feed.xml">RSS feed</a>. Or don't, that's also ok.
+  </p>
+</div>
+
+
+<aside id="webmentions" class="webmentions mb3">
+  <section id="wm-replies" class="wm-replies wm-hidden mw7 center">
+    <h2>Replies <span id="wm-reply-count"></span></h2>
+    <ul></ul>
+  </section>
+
+  <template id="wm-like">
+    <li>
+      <a href="" id="wm-reply-author-url">
+        <img alt="" id="wm-reply-author-photo" class="wm-reply-author-photo" width="25" height="auto" src="">
+      </a>
+    </li>
+  </template>
+
+  <template id="wm-reply">
+    <li>
+      <div class="flex items-end mb2 bb pb2 b--black-10">
+        <img alt="" id="wm-reply-author-photo" class="wm-reply-author-photo mr1" width="40" height="auto" src="">
+        <span id="wm-reply-author" class="wm-reply-author"></span>
+        <span id="wm-reply-date"></span>
+      </div>
+      <div id="wm-reply-text"></div>
+      <span id="wm-reply-link" class="wm-reply-link"></span>
+    </li>
+  </template>
+</aside>
+
+<script src=/javascript/webmentions.js></script>
+<script>
+  window.fetchWebMentions("/blog/2021/08/terser-vs-esbuild-ember-app-case-study/");
+</script>
+
+    </main>
+
+    <footer class='f6 tc pa2 mb3'>
+      <div class="mb2">&copy; <span id='year'></span></div>
+
+      <!-- Snippet from https://xn--sr8hvo.ws/. If you're seeing this, join the ring! -->
+      <a href="https://xn--sr8hvo.ws/%F0%9F%98%A2%F0%9F%8C%84%E2%9E%A1%EF%B8%8F/previous">←</a>
+        An <a href="https://xn--sr8hvo.ws/">IndieWeb Webring</a>
+      <a href="https://xn--sr8hvo.ws/%F0%9F%98%A2%F0%9F%8C%84%E2%9E%A1%EF%B8%8F/next">→</a>
+    </footer>
+  </body>
+
+  
+    <script src=/javascript/analytics.js></script>
+    <script>
+      window.webVitals("");
+    </script>
+  
+</html>

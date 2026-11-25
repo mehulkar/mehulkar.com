@@ -51,7 +51,6 @@ But I'm finally coming around to appreciating merge commits--if not yet using th
    also deleting references to branches that were deleted on the `origin` remote.
 
    My workflow with git is typically:
-
    1. checkout branch `new-branch`
    1. Do work
    1. fetch master and rebase `new-branch` on it

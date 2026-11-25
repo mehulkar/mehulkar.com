@@ -1,6 +1,6 @@
-## Personal website
+# mehulkar.com
 
-Built with [Eleventy](https://11ty.dev).
+My personal website. Built with [Eleventy](https://11ty.dev).
 
 ## Write
 
@@ -11,9 +11,9 @@ pnpm new
 ## Run locally
 
 ```bash
-npm i -g vercel
 pnpm i
-pnpm start
+pnpm add -g vercel
+vc dev
 ```
 
 ## Build locally
@@ -26,4 +26,4 @@ pnpm build
 
 The `main` branch is auto deployed by Vercel:
 
-https://vercel.com/mehul-kar/mehulkar
+<https://vercel.com/mehul-kar/mehulkar>

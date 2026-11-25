@@ -18,7 +18,7 @@
   --pill-background-color-hover: #858585;
   --pill-background-color-inactive: #eee;
   --pill-text-color-inactive: #999;
-  --code-text-color: hsl(200, 83, 76%);
+  --code-text-color: hsl(200, 83%, 30%);
   --header-border-color: #36f;
   --book-shadow-color: #333;
   --image-border-color: darkgray;
@@ -29,19 +29,24 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --blue-2: hsl(200, 83%, 19%);
-    --code-text-color: hsl(200, 83, 76%);
-    --background-color: #222;
-    --border-color: rgba(255, 255, 255, 0.3);
-    --text-color: #ebebeb;
-    --pill-background-color: #515151;
-    --pill-background-color-hover: #555;
-    --pill-background-color-inactive: #eee;
-    --pill-text-color-inactive: #777;
-    --header-border-color: #eee;
-    --book-shadow-color: #ccc;
-    --image-border-color: gray;
-    --aside-background-color: hsl(60, 100%, 24%);
+    --base-color: #60a5fa;
+    --link-hover-color: #93bbfd;
+    --blue-1: hsl(200, 60%, 40%);
+    --blue-2: hsl(200, 40%, 15%);
+    --code-text-color: hsl(200, 60%, 70%);
+    --background-color: #1a1a1a;
+    --border-color: rgba(255, 255, 255, 0.15);
+    --text-color: #d4d4d4;
+    --pill-background-color: #404040;
+    --pill-background-color-hover: #4a4a4a;
+    --pill-background-color-inactive: #333;
+    --pill-text-color-inactive: #888;
+    --header-border-color: #555;
+    --book-shadow-color: #000;
+    --image-border-color: #555;
+    --aside-border: hsl(45, 60%, 40%);
+    --aside-background-color: hsl(45, 30%, 15%);
+    --aside-text-color: hsl(200, 40%, 70%);
   }
 }
 
@@ -80,8 +85,8 @@ body main {
   /* General content typgraphy rules */
   font-size: 1.1rem;
   font-family: "Work Sans", serif;
-  line-height: 1.65rem;
-  letter-spacing: -1px;
+  line-height: 1.5;
+  letter-spacing: -0.03em;
 }
 
 body main p {

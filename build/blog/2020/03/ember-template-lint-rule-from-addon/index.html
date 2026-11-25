@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <link rel="preconnect" href="https://plausible.io" crossorigin>
+    <script async defer data-domain="mehulkar.com" src="https://plausible.io/js/plausible.js"></script>
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name=viewport>
+
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+
+    
+    
+      <title>Ember Template Lint Rule from Addon</title>
+      <meta name="twitter:title" content="✍🏽 Ember Template Lint Rule from Addon">
+      <meta property="og:title" content="✍🏽 Ember Template Lint Rule from Addon">
+      <meta name="description" content="Don't click on this">
+    
+
+    
+      <meta name="keywords" content="ember.js">
+    
+
+    <link rel="stylesheet" href="/stylesheets/vendor/tachyons.css">
+    <link rel="stylesheet" href="/stylesheets/post.css">
+    <link rel="stylesheet" href="/stylesheets/app.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans|Lato&display=swap"></link>
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+    <link rel="feed alternate" type="application/atom+xml" href="/feed.xml" title="RSS feed for mehulkar.com">
+    <link rel="webmention" href="https://webmention.io/www.mehulkar.com/webmention" />
+
+    <script async src="/va/script.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('year').innerHTML = (new Date).getFullYear();
+      });
+    </script>
+
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/icon-152.png"> <!-- touch-icon-ipad -->
+    <link rel="apple-touch-icon" sizes="167x167" href="/images/icon-167.png"> <!-- touch-icon-ipad-retina -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/icon-180.png"> <!-- touch-icon-iphone-retina -->
+    <link rel="apple-touch-icon" href="/image/icon-192.png"> <!-- touch-icon-iphone.png -->
+
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#3399ff"/>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class='header-content flex items-center justify-center mb3'>
+        <!-- The h-card class and rel=me attr here is for https://indiewebify.me/validate-h-card -->
+        <a class='h-card header-content--link' href='/' rel="me">
+          <picture>
+            <source srcset="/images/avatar.webp" type="image/webp">
+            <source srcset="/images/avatar.jpeg" type="image/jpeg">
+            <img
+              alt="Picture of Mehul Kar"
+              class='header-content--avatar'
+              width='100'
+              height='100'
+              src="/images/avatar.jpeg">
+          </picture>
+
+          <h1 class="ma0 f2 fw3 white">Mehul Kar</h1>
+        </a>
+      </div>
+
+      <section class='mb3 header__icons'>
+        <a class="white f7 mr2" title="Bluesky" href="https://bsky.app/profile/mehulkar.com">
+          <svg
+            width="22"
+            fill="none"
+            stroke="white"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            viewBox="0 0 64 57">
+            <path d="M13.873 3.805C21.21 9.332 29.103 20.537 32 26.55v15.882c0-.338-.13.044-.41.867-1.512
+                    4.456-7.418 21.847-20.923 7.944-7.111-7.32-3.819-14.64 9.125-16.85-7.405
+                    1.264-15.73-.825-18.014-9.015C1.12 23.022 0 8.51 0 6.55 0-3.268 8.579-.182 13.873
+                    3.805ZM50.127 3.805C42.79 9.332 34.897 20.537 32 26.55v15.882c0-.338.13.044.41.867 1.512 4.456
+                    7.418 21.847 20.923 7.944 7.111-7.32 3.819-14.64-9.125-16.85 7.405 1.264 15.73-.825
+                    18.014-9.015C62.88 23.022 64 8.51 64 6.55c0-9.818-8.578-6.732-13.873-2.745Z">
+            </path>
+          </svg>
+        </a>
+
+        <a class="white f7 mr2" title="linkedin" href="https://linkedin.com/in/mehulkar">
+          
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            stroke-width="1"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+            <title>LinkedIn</title>
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+
+        <a class="white f7 mr2" title="Github" href="https://github.com/mehulkar">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            stroke-width="1"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-github">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37
+                    0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44
+                    0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16
+                    2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07
+                    5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3
+                    6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+            </path>
+          </svg>
+        </a>
+
+        <a class="white f7" title="RSS feed for mehulkar.com" type="application/atom+xml" href="/feed.xml">
+          
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="26"
+            height="26"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            stroke-width="1"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+            <title>Link to RSS feed</title>
+            <path d="M4 11a9 9 0 0 1 9 9"></path>
+            <path d="M4 4a16 16 0 0 1 16 16"></path>
+            <circle cx="5" cy="19" r="1"></circle>
+          </svg>
+        </a>
+      </section>
+    </header>
+
+    <main class='flex flex-column mw8 pa3'>
+      
+<script type="module">
+  const pluralRules = new Intl.PluralRules('en-US');
+
+  function getPluralForm(count) {
+    return pluralRules.select(count);
+  }
+
+  function getWords(str) {
+    return str.toLowerCase() // Normalize the string to lowercase (optional)
+      .trim() // Trim leading and trailing whitespace
+      .split(/\s+/) // Use a regular expression to split the string into words
+      .filter(word => word.length > 0);
+}
+
+
+  function pluralize(count) {
+    const pluralForm = getPluralForm(count)
+    return pluralForm === 'zero' ?
+      `${count} views` :
+      `${count} view${count !== 1 ? 's' : ''}`;
+  }
+
+  const vcEl = document.getElementById('view-count');
+  
+  const addRes = await fetch('/api/add-view');
+  const { count } = await addRes.json()
+  if (String(count).match(/\d+/)) {
+    vcEl.innerText = pluralize(count);
+  } else {
+    console.error('View count is not numeric:', count);
+    vcEl.innerText = '🙁 views';
+  }
+
+  const wcEl = document.getElementById('word-count');
+  const article = document.getElementById('article-content');
+  const words = getWords(article.innerText);
+  const wc = words.length;
+  const wcPluralForm = getPluralForm(wc)
+  wcEl.innerText = wcPluralForm === 'zero' ? 'No words' : `${wc} words`
+</script>
+
+<div class='post bb b--black-10 mb2'>
+  <article class='mb3 mw7 center'>
+    <header class='bb b--black-10 mv3'>
+      <h3 class='f5 fw2 mb1'>Mar 25, 2020</h2>
+      <h1 class='fw3 mb1 mt0 post--title'>Ember Template Lint Rule from Addon</h1>
+      <section class="mb2">
+        
+          <a href="/blog/category/emberjs" class="dib mr1 f5">#ember.js</a>
+        
+      </section>
+      <section id="wm-likes" class="wm-likes wm-hidden flex">
+        <ul class="mb0"></ul>
+        <p id="wm-like-count" class="ml2 mb0"></p>
+      </section>
+      <section class="stats f5 fw2 silver">
+        <p>
+          <span id="view-count">~ views</span>
+          | <span id="word-count">~ words</span>
+        </p>
+    </header>
+    <section id="article-content">
+      <p>I recently wanted to ship an Ember template lint rule from an addon. This use case wasn't <em>exactly</em>
+documented anywhere, so it took me a little while to figure out how to do it effectively. For anyone
+else attempting to do the same, the ingredients are:</p>
+<ol>
+<li>A file in the addon that exports a <em>plugin</em> that contains the rule.</li>
+<li>A custom test setup</li>
+<li>Using the plugin from an app that installs the addon</li>
+</ol>
+<h2>Creating the Rule and Plugin</h2>
+<p>The default Ember addon directory structure doesn't have an obvious place to put things that aren't
+used by the Ember CLI build pipeline. Because I only needed to create one rule, I added a file to
+the root of the directory as <code>template-lint-plugin.js</code>. The file looks like this:</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> Rule <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"ember-template-lint"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Rule<span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">MyRule</span> <span class="token keyword">extends</span> <span class="token class-name">Rule</span> <span class="token punctuation">{</span>
+  <span class="token function">visitor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"plugin-name"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">rules</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">"the-rule-name"</span><span class="token operator">:</span> MyRule<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+<p><a href="https://github.com/ember-template-lint/ember-template-lint/blob/v2.4.1/docs/plugins.md">The Plugin API</a> documents a few alternative ways to do this as well. For example, the default export
+could also be just the rule, and the plugin object could be created where it is used (e.g. the
+test cases and the app).</p>
+<h2>Test Setup</h2>
+<p>This one is a bit tricky. Adding a unit test file into the default <code>tests/</code> directory means
+that it gets picked up by the addon's default test suite with QUnit. This is a bit messy because
+Ember's default unit tests call <code>setupTest()</code>, which boot the Ember application. Although it's possible
+to configure this, I thought it would be better to more closely match the test setup for rules
+in <code>ember-template-lint</code> itself, which use a custom test harness, and provides a helper to set
+it up with any testing library. Internally, it uses Jest to write the test cases for the provided rules,
+so I opted to set up my tests the same way.</p>
+<p>I had to do the following to make it work:</p>
+<ol>
+<li>
+<p><code>npm install --save-dev jest</code>, and configure it to run tests in the <code>node-tests</code> directory by
+adding configuration in <code>package.json</code>:</p>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"jest"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"coveragePathIgnorePatterns"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token string">"&lt;rootDir>/node_modules/"</span><span class="token punctuation">,</span>
+      <span class="token string">"&lt;rootDir>/node-tests/"</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"testMatch"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"&lt;rootDir>/node-tests/**/*-test.js"</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>There are several other ways to configure Jest, but this was the most lightweight. The
+decision to ignore the <code>node-tests</code> directory and then include files matching <code>-test.js</code>,
+<a href="https://github.com/ember-template-lint/ember-template-lint/blob/v2.4.1/package.json#L28-L36">comes wholesale from <code>ember-template-lint</code></a>.</p>
+</li>
+<li>
+<p>Add a test file at <code>node-tests/template-lint-plugin-test.js</code> looks like this:</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> generateRuleTests <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"ember-template-lint/lib/helpers/rule-test-harness"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// The plugin object exported from the file created above.</span>
+<span class="token keyword">const</span> myPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"../template-lint-plugin"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">generateRuleTestsHelper</span><span class="token punctuation">(</span><span class="token parameter">options</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">generateRuleTests</span><span class="token punctuation">(</span>
+    Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> options<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">groupMethodBefore</span><span class="token operator">:</span> beforeEach<span class="token punctuation">,</span> <span class="token comment">// refers to `Jest`'s global `beforeEach`</span>
+      <span class="token literal-property property">groupingMethod</span><span class="token operator">:</span> describe<span class="token punctuation">,</span> <span class="token comment">// refers to `Jest`'s global `describe`</span>
+      <span class="token literal-property property">testMethod</span><span class="token operator">:</span> test<span class="token punctuation">,</span> <span class="token comment">// refers to `Jest`'s global `test`</span>
+      <span class="token literal-property property">focusMethod</span><span class="token operator">:</span> test<span class="token punctuation">.</span>only<span class="token punctuation">,</span> <span class="token comment">// refers to `Jest`'s global `test.only`</span>
+      <span class="token literal-property property">plugins</span><span class="token operator">:</span> <span class="token punctuation">[</span>myPlugin<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// The plugin</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">generateRuleTestsHelper</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"the-rule-name"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">config</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">good</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token comment">// examples of markup that passes the lint rule</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">bad</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token comment">// examples of markup that fails the lint rule</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>The examples of how to add test cases into <code>good</code> and <code>bad</code> can be taken from any of the rule
+<a href="https://github.com/ember-template-lint/ember-template-lint/tree/v2.4.1/test/unit/rules">tests in <code>ember-template-lint</code> now</a>.</p>
+</li>
+<li>
+<p>Add an npm script to <code>package.json</code> to run the &quot;Node&quot; tests.</p>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"test:node"</span><span class="token operator">:</span> <span class="token string">"jest"</span>
+<span class="token punctuation">}</span></code></pre>
+<p>In Ember CLI 3.17, <a href="https://github.com/ember-cli/ember-cli/pull/9009">the default <code>test</code> script</a> was changed to <code>npm-run-all lint:* test:*&quot;</code>, so adding
+a <code>test:node</code> script would automatically be added to the test suite and CI runs. Before 3.17,
+depending on your addon's test setup, you could simply add <code>&amp;&amp; npm run test:node</code> to the test script.</p>
+</li>
+</ol>
+<h2>Using the plugin in an app</h2>
+<p>Now that the addon contains a lint plugin and is tested, we can actually use it in an app.
+After installing the addon with <code>npm install --save-dev your-addon-name</code>, and then add the plugin
+and enable the lint rule in <code>.template-lintrc.js</code>:</p>
+<pre class="language-js"><code class="language-js"><span class="token comment">// .template-lintrc.js</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">plugins</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"my-addon-name/template-lint-plugin"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">rules</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">"the-rule-name"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+<p>Note that the plugin's <em>name</em> (noted in the plugin object's <code>name</code> key) isn't referenced here at all.
+The only thing that is needed is a path to where the plugin is exported from and ember-template-lint
+will <code>require</code> it. Because this runs in Node, and Node's <code>require</code> can resolve paths from the
+<code>node_modules</code> directory, this works.</p>
+<p>There you have it! Ember template lint plugins are fairly straightforward (and a <a href="https://twitter.com/mehulkar/status/1240020900960825345">powerful way to
+encourage a certain way of programing</a>), but the wiring wasn't immediately
+obvious to me. Another thing I found confusing is that the <code>rules</code> key in the Plugin API
+refers to the Rule <em>class</em> (i.e. the implementation), but the <code>rules</code> key in <code>.template-lintrc.js</code>
+refers to the <em>configuration</em> of that rule (on or off).</p>
+<p>Hope this helps someone else!</p>
+
+    </section>
+  </article>
+
+  <p class='f6 bg-light-yellow pa3 black-80 br2 ba b--yellow mw7 center'>
+    If you like this post, please <a class='black-80 underline' href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fmehulkar.com%2Fblog%2F2020%2F03%2Fember-template-lint-rule-from-addon%2F&via=mehulkar" target='_blank'>share it on Twitter</a>
+    and/or subscribe to my <a href="/feed.xml">RSS feed</a>. Or don't, that's also ok.
+  </p>
+</div>
+
+
+<aside id="webmentions" class="webmentions mb3">
+  <section id="wm-replies" class="wm-replies wm-hidden mw7 center">
+    <h2>Replies <span id="wm-reply-count"></span></h2>
+    <ul></ul>
+  </section>
+
+  <template id="wm-like">
+    <li>
+      <a href="" id="wm-reply-author-url">
+        <img alt="" id="wm-reply-author-photo" class="wm-reply-author-photo" width="25" height="auto" src="">
+      </a>
+    </li>
+  </template>
+
+  <template id="wm-reply">
+    <li>
+      <div class="flex items-end mb2 bb pb2 b--black-10">
+        <img alt="" id="wm-reply-author-photo" class="wm-reply-author-photo mr1" width="40" height="auto" src="">
+        <span id="wm-reply-author" class="wm-reply-author"></span>
+        <span id="wm-reply-date"></span>
+      </div>
+      <div id="wm-reply-text"></div>
+      <span id="wm-reply-link" class="wm-reply-link"></span>
+    </li>
+  </template>
+</aside>
+
+<script src=/javascript/webmentions.js></script>
+<script>
+  window.fetchWebMentions("/blog/2020/03/ember-template-lint-rule-from-addon/");
+</script>
+
+    </main>
+
+    <footer class='f6 tc pa2 mb3'>
+      <div class="mb2">&copy; <span id='year'></span></div>
+
+      <!-- Snippet from https://xn--sr8hvo.ws/. If you're seeing this, join the ring! -->
+      <a href="https://xn--sr8hvo.ws/%F0%9F%98%A2%F0%9F%8C%84%E2%9E%A1%EF%B8%8F/previous">←</a>
+        An <a href="https://xn--sr8hvo.ws/">IndieWeb Webring</a>
+      <a href="https://xn--sr8hvo.ws/%F0%9F%98%A2%F0%9F%8C%84%E2%9E%A1%EF%B8%8F/next">→</a>
+    </footer>
+  </body>
+
+  
+    <script src=/javascript/analytics.js></script>
+    <script>
+      window.webVitals("");
+    </script>
+  
+</html>

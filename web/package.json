@@ -7,7 +7,8 @@
     "start": "vercel dev",
     "prebuild": "rm -rf ./build",
     "build": "eleventy",
-    "lint": "prettier -c source/**/*.md"
+    "lint": "prettier -c 'source/**/*.md'",
+    "lint:fix": "prettier -c 'source/**/*.md' --write"
   },
   "repository": {
     "type": "git",
@@ -16,13 +17,13 @@
   "keywords": [
     "website"
   ],
-  "author": "Mehul Kar <mehul.kar@gmail.com>",
+  "author": "Mehul Kar <github@mehulkar.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mehulkar/mehulkar.com/issues"
   },
   "homepage": "https://github.com/mehulkar/mehulkar.com",
-  "packageManager": "pnpm@9.0.0-beta.0+sha256.ff1f3981cae5c53ac1f0825645dcb59a53a8e79b654bcb96d2f1f176909fdcfa",
+  "packageManager": "pnpm@10.33.0",
   "devDependencies": {
     "@11ty/eleventy": "3.0.0-alpha.6",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
