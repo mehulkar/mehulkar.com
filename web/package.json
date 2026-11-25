@@ -32,6 +32,7 @@
     "dotenv": "^18.0.10",
     "eleventy-plugin-activity-pub": "^0.1.1",
     "esbuild": "~0.28.2",
+    "markdown-it-anchor": "^10.1.0",
     "web-vitals": "^6.2.3"
   },
   "engines": {

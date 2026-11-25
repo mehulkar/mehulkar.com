@@ -1,13 +1,115 @@
 article * + h1,
 article * + h2 {
-  margin-top: calc(var(--paragraph-mb) * 2);
+  margin-top: 2.25rem;
 }
 
 article * + h3,
 article * + h4,
 article * + h5,
 article * + h6 {
-  margin-top: calc(var(--paragraph-mb) * 1.5);
+  margin-top: 1.75rem;
+}
+
+/* Post header */
+.post-date {
+  display: block;
+  color: var(--muted-text-color);
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+article h1.post--title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5rem;
+}
+
+.post-stats {
+  color: var(--muted-text-color);
+  font-size: 0.95rem;
+}
+
+/* Links in prose */
+#article-content a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  text-decoration-color: color-mix(in srgb, currentColor 40%, transparent);
+}
+
+#article-content a:hover,
+#article-content a:focus {
+  text-decoration-color: currentColor;
+}
+
+/* Heading anchors */
+#article-content .header-anchor {
+  margin-left: 0.4rem;
+  color: var(--muted-text-color);
+  text-decoration: none;
+  font-weight: 400;
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+
+#article-content :is(h2, h3, h4):hover .header-anchor,
+#article-content .header-anchor:focus {
+  opacity: 1;
+}
+
+/* Footer: share + prev/next */
+.post-footer {
+  border-top: solid 1px var(--border-color);
+  padding-top: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.post-share {
+  color: var(--muted-text-color);
+  font-size: 1rem;
+}
+
+.post-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.post-nav a {
+  display: block;
+  padding: 0.75rem 1rem;
+  border: solid 1px var(--border-color);
+  border-radius: 8px;
+  background: var(--surface-color);
+}
+
+.post-nav a:hover,
+.post-nav a:focus {
+  border-color: var(--base-color);
+}
+
+.post-nav small {
+  display: block;
+  color: var(--muted-text-color);
+  font-size: 0.85rem;
+}
+
+.post-nav .post-nav--next {
+  grid-column: 2;
+  text-align: right;
+}
+
+@media only screen and (max-width: 480px) {
+  .post-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .post-nav .post-nav--next {
+    grid-column: 1;
+  }
 }
 
 article h1,
@@ -44,7 +146,8 @@ article figure figcaption {
 }
 
 article hr {
-  border-top: 0.5px solid #fff;
+  border: none;
+  border-top: 1px solid var(--border-color);
   margin: 2.5rem auto;
   width: 50%;
 }
@@ -60,10 +163,9 @@ article aside {
 }
 
 article code {
-  background: #eee;
-  padding: 0.1rem 0.5rem;
-  border-radius: 0.5rem;
-  border: solid 1px #ddd;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 0.1em 0.3em;
+  border-radius: 4px;
 }
 
 article :not(h1, h2, h3, h4, h5, h6) code {
@@ -80,14 +182,37 @@ article a code {
 
 article pre code {
   display: block;
-  overflow-x: scroll;
+  overflow-x: auto;
 
-  // reset from other `article code` selector
+  /* reset from other `article code` selector */
   background: none;
   padding: 0;
   border-radius: 0;
   border: none;
   font-size: 1rem;
+}
+
+/* Fenced code without a language isn't styled by the Prism theme;
+   match its look (prism-okaidia) so all code blocks are consistent. */
+article pre:not([class*="language-"]) {
+  background: #272822;
+  color: #f8f8f2;
+  padding: 1em;
+  border-radius: 0.3em;
+  overflow-x: auto;
+  line-height: 1.5;
+}
+
+/* Same code size for highlighted (Prism) and plain blocks */
+article pre,
+article pre[class*="language-"],
+article pre code,
+article pre code[class*="language-"] {
+  font-size: 0.9rem;
+}
+
+article pre[class*="language-"] {
+  margin: 0 0 var(--paragraph-mb);
 }
 
 article pre.terminal {
@@ -138,7 +263,7 @@ article blockquote {
   padding: 1rem 1.5rem 1rem;
   border-left: solid 4px var(--blue-1);
   background-color: var(--blue-2);
-  color: var(--code-text-color);
+  color: var(--text-color);
   border-radius: 0 8px 8px 0;
 }
 
@@ -147,7 +272,7 @@ article details {
 }
 
 article blockquote p {
-  line-height: var(--paragraph-mb);
+  line-height: inherit;
   margin-bottom: 0.5rem;
 }
 
@@ -208,11 +333,11 @@ article table th {
 article table {
   border-collapse: collapse;
   display: block;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 article table tr {
-  border: solid 1px #eee;
+  border: solid 1px var(--border-color);
 }
 
 aside.webmentions h2 {
@@ -227,9 +352,9 @@ aside.webmentions h2 {
 .wm-replies li {
   padding: 1rem;
   list-style: none;
-  background: #fafafa;
+  background: var(--surface-color);
   border-radius: 10px;
-  border: solid 1px #eaeaea;
+  border: solid 1px var(--border-color);
 }
 
 .wm-reply-author-photo {
@@ -252,8 +377,7 @@ aside.webmentions h2 {
 
 @media (prefers-color-scheme: dark) {
   article code {
-    background: #2a2a2a;
-    border-color: #404040;
+    background: rgba(255, 255, 255, 0.08);
     color: #d4d4d4;
   }
 

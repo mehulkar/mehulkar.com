@@ -4,6 +4,7 @@ dotenv.config({ quiet: true });
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const { rssPlugin: pluginRss, dateToRfc3339 } = require("@11ty/eleventy-plugin-rss");
 const activityPubPlugin = require("eleventy-plugin-activity-pub");
+const markdownItAnchor = require("markdown-it-anchor");
 
 const shortDate = Intl.DateTimeFormat("en-us", {
   month: "short",
@@ -45,6 +46,27 @@ const TAG_PATH_OVERRIDES = {
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
+
+  // Linkable headings: adds ids + a hover "#" link to h2-h4 in posts
+  eleventyConfig.amendLibrary("md", (md) => {
+    md.use(markdownItAnchor, {
+      level: [2, 3, 4],
+      permalink: markdownItAnchor.permalink.linkInsideHeader({
+        symbol: "#",
+        placement: "after",
+        ariaHidden: true,
+      }),
+    });
+  });
+
+  // e.g. "6 min read", computed from rendered HTML at build time
+  eleventyConfig.addFilter("readingTime", function (html) {
+    const text = String(html || "")
+      .replace(/<(script|style|pre)[\s\S]*?<\/\1>/gi, " ")
+      .replace(/<[^>]+>/g, " ");
+    const words = text.split(/\s+/).filter(Boolean).length;
+    return `${Math.max(1, Math.round(words / 230))} min read`;
+  });
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addLiquidFilter("dateToRfc3339", dateToRfc3339);
 
@@ -164,15 +186,12 @@ module.exports = function (eleventyConfig) {
     return url.toString();
   });
 
-  eleventyConfig.addNunjucksShortcode("tweetURL", function () {
-    // https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/guides/web-intent
-    const url = new URL("https://twitter.com/intent/tweet");
-    // set url of web mention
-    const pageURL = new URL(`https://mehulkar.com`);
+  eleventyConfig.addNunjucksShortcode("blueskyShareURL", function (title) {
+    // https://docs.bsky.app/docs/advanced-guides/intent-links
+    const pageURL = new URL("https://www.mehulkar.com");
     pageURL.pathname = this.page.url;
-    url.searchParams.set("url", encodeURI(pageURL));
-
-    url.searchParams.set("via", "mehulkar");
+    const url = new URL("https://bsky.app/intent/compose");
+    url.searchParams.set("text", `${title} by @mehulkar.com ${pageURL}`);
     return url.toString();
   });
 

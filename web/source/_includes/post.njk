@@ -24,30 +24,25 @@ layout: layout.njk
       `${count} view${count !== 1 ? 's' : ''}`;
   }
 
-  const vcEl = document.getElementById('view-count');
-  {# vcEl.innerText = '~'; #}
-  const addRes = await fetch('/api/add-view');
-  const { count } = await addRes.json()
-  if (String(count).match(/\d+/)) {
-    vcEl.innerText = pluralize(count);
-  } else {
-    console.error('View count is not numeric:', count);
-    vcEl.innerText = '🙁 views';
+  // View count is shown only once it loads, so nothing flashes
+  try {
+    const addRes = await fetch('/api/add-view');
+    const { count } = await addRes.json();
+    if (String(count).match(/^\d+$/)) {
+      const vcEl = document.getElementById('view-count');
+      vcEl.innerText = ` · ${pluralize(count)}`;
+      vcEl.hidden = false;
+    }
+  } catch (e) {
+    console.error('Could not load view count', e);
   }
-
-  const wcEl = document.getElementById('word-count');
-  const article = document.getElementById('article-content');
-  const words = getWords(article.innerText);
-  const wc = words.length;
-  const wcPluralForm = getPluralForm(wc)
-  wcEl.innerText = wcPluralForm === 'zero' ? 'No words' : `${wc} words`
 </script>
 
 <div class='post bb b--black-10 mb2'>
   <article class='mb3 mw7 center'>
     <header class='bb b--black-10 mv3'>
-      <h3 class='f5 fw2 mb1'>{{page.date | fullDate }}</h2>
-      <h1 class='fw3 mb1 mt0 post--title'>{{title}}</h1>
+      <time class='post-date' datetime="{{page.date.toISOString()}}">{{page.date | fullDate }}</time>
+      <h1 class='post--title'>{{title}}</h1>
       <section class="mb2">
         {% for tag in tags  %}
           {% tagLink tag %}
@@ -57,21 +52,37 @@ layout: layout.njk
         <ul class="mb0"></ul>
         <p id="wm-like-count" class="ml2 mb0"></p>
       </section>
-      <section class="stats f5 fw2 silver">
-        <p>
-          <span id="view-count">~ views</span>
-          | <span id="word-count">~ words</span>
-        </p>
+      <section class="post-stats">
+        <p>{{ content | readingTime }}<span id="view-count" hidden></span></p>
+      </section>
     </header>
     <section id="article-content">
       {{content | safe }}
     </section>
   </article>
 
-  <p class='f6 bg-light-yellow pa3 black-80 br2 ba b--yellow mw7 center'>
-    If you like this post, please <a class='black-80 underline' href="{% tweetURL %}" target='_blank'>share it on Twitter</a>
-    and/or subscribe to my <a href="/feed.xml">RSS feed</a>. Or don't, that's also ok.
-  </p>
+  <footer class='post-footer mw7 center'>
+    <p class='post-share'>
+      Thanks for reading. If you liked this,
+      <a href="{% blueskyShareURL title %}" target="_blank" rel="noopener">share it on Bluesky</a>
+      or subscribe via <a href="/feed.xml">RSS</a>. Or don't, that's also ok.
+    </p>
+
+    {% set newerPost = collections.writing | getPreviousCollectionItem(page) %}
+    {% set olderPost = collections.writing | getNextCollectionItem(page) %}
+    {% if newerPost or olderPost %}
+      <nav class='post-nav' aria-label="More posts">
+        {% if olderPost %}
+          <a class='post-nav--prev' href="{{olderPost.url}}"><small>← Older</small>{{olderPost.data.title}}</a>
+        {% endif %}
+        {% if newerPost %}
+          <a class='post-nav--next' href="{{newerPost.url}}"><small>Newer →</small>{{newerPost.data.title}}</a>
+        {% endif %}
+      </nav>
+    {% endif %}
+
+    <p><a href="/writing/">← All writing</a></p>
+  </footer>
 </div>
 
 {# TODO: looks bad when there are no replies, likes get centered #}
