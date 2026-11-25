@@ -19,8 +19,7 @@ pnpm start
 ## Build locally
 
 ```bash
-npm i -g turbo
-turbo build
+pnpm build
 ```
 
 ## Deploy

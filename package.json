@@ -2,7 +2,8 @@
   "name": "mehulkar.com-monorepo",
   "scripts": {
     "update-movies": "node packages/letterboxd/bin/index.mjs",
-    "new": "pnpm -F web exec new-post"
+    "new": "pnpm -F web exec new-post",
+    "build": "pnpm -F web lint && pnpm -F web build"
   },
   "repository": {
     "type": "git",
@@ -16,8 +17,7 @@
   "homepage": "https://github.com/mehulkar/mehulkar.com",
   "packageManager": "pnpm@9.13.2+sha256.ccce81bf7498c5f0f80e31749c1f8f03baba99d168f64590fc7e13fad3ea1938",
   "devDependencies": {
-    "prettier": "^3.2.5",
-    "turbo": "2.2.3"
+    "prettier": "^3.2.5"
   },
   "engine": {
     "node": "20"
