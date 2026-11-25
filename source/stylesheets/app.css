@@ -502,10 +502,66 @@ article img {
   border-radius: 2%;
 }
 
+/* Book covers: rounded page edge, spine crease, layered shadow */
+.book-cover {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2px 6px 6px 2px;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.12),
+    0 6px 12px -2px rgba(0, 0, 0, 0.18),
+    0 18px 30px -10px rgba(0, 0, 0, 0.35);
+  transition: box-shadow 0.2s;
+}
+
+picture:has(> .book-cover) {
+  position: relative;
+  display: block;
+  border-radius: 2px 6px 6px 2px;
+  transition: transform 0.2s;
+}
+
+picture:has(> .book-cover)::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.3) 0,
+      rgba(0, 0, 0, 0.1) 2%,
+      rgba(255, 255, 255, 0.3) 3%,
+      rgba(255, 255, 255, 0) 6%,
+      rgba(0, 0, 0, 0.1) 7%,
+      transparent 12%
+    ),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.15), transparent 35%);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+article picture:has(> .book-cover),
 article img.book-cover {
-  border-radius: 3%;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  max-width: 20rem;
+}
+
+a:hover picture:has(> .book-cover) {
+  transform: translateY(-4px) rotate(-1deg);
+}
+
+a:hover .book-cover {
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.12),
+    0 10px 20px -4px rgba(0, 0, 0, 0.22),
+    0 28px 40px -12px rgba(0, 0, 0, 0.4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  picture:has(> .book-cover) {
+    transition: none;
+  }
 }
 
 article table tr:nth-child(odd) {
@@ -596,8 +652,12 @@ aside.webmentions h2 {
 }
 
 @media only screen and (min-width: 600px) {
-  article img.book-cover {
+  article img.book-cover,
+  article picture:has(> .book-cover) {
     width: 50%;
+  }
+  article picture:has(> .book-cover) > .book-cover {
+    width: 100%;
   }
 }
 
