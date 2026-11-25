@@ -95,9 +95,8 @@ module.exports = function (eleventyConfig) {
     return sortByDate(posts);
   });
 
-  eleventyConfig.addCollection("home", function (collectionApi) {
-    const allPosts = collectionApi.getAll();
-    const homePosts = filterPostsByTag(allPosts, [], {
+  function writingPosts(collectionApi) {
+    return filterPostsByTag(collectionApi.getAll(), [], {
       exclude: [
         "recently-watched",
         "books",
@@ -108,7 +107,16 @@ module.exports = function (eleventyConfig) {
         "quote",
       ],
     });
-    return groupByYear(homePosts);
+  }
+
+  // Writing posts grouped by year (archive page)
+  eleventyConfig.addCollection("home", function (collectionApi) {
+    return groupByYear(writingPosts(collectionApi));
+  });
+
+  // Writing posts, newest first (home page)
+  eleventyConfig.addCollection("writing", function (collectionApi) {
+    return sortByDate(writingPosts(collectionApi));
   });
 
   eleventyConfig.addFilter("formatDate", function (value) {

@@ -14,7 +14,7 @@ article h1,
 article h2,
 article h3,
 article h4 {
-  font-family: "Lato", "sans-serif";
+  font-family: inherit;
   letter-spacing: normal;
   font-weight: 600;
 }

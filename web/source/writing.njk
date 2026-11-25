@@ -1,0 +1,17 @@
+---
+layout: layout.njk
+title: Writing
+permalink: /writing/
+eleventyExcludeFromCollections: true
+---
+
+<div class="archive">
+  <div class="mb3">
+    <a href="/">&larr; Back</a>
+  </div>
+
+  <h1 class="section-title">Writing</h1>
+
+  {% from 'partials/_by-year.njk' import render %}
+  {{ render(collections.home) }}
+</div>
