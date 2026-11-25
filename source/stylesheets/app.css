@@ -586,6 +586,8 @@ aside.webmentions h2 {
   img {
     float: left;
     width: 50%;
+    height: auto;
+    aspect-ratio: 2 / 3;
     margin-right: 1rem;
   }
   .float-clear {

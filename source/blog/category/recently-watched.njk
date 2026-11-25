@@ -14,6 +14,7 @@ tags:
 {% set movies = collections['recently-watched'] | byYear %}
 
 {%- for year in movies -%}
+    {% set firstYear = loop.first %}
     <section style="margin-bottom: 3rem;">
         <h2 class="mb4">{{year.name}}</h2>
         <ul style="
@@ -29,7 +30,7 @@ tags:
                 <a href="{{ movie.url }}" style="text-decoration:none; color:inherit;">
                     <li style="padding:0;">
                         <figure>
-                            <img style="display:block;" src="{{movie.data.image}}" alt="Movie poster for '{{movie.data.title}}'" title="Movie poster for '{{movie.data.title}}'">
+                            <img style="display:block; width:100%; height:auto; aspect-ratio:2/3;" sizes="(min-width: 44rem) 14rem, 50vw"{% if not (loop.index <= 3 and firstYear) %} loading="lazy"{% endif %} src="{{movie.data.image}}" alt="Movie poster for '{{movie.data.title}}'" title="Movie poster for '{{movie.data.title}}'">
                             <figcaption style="font-size:0.9rem;">
                                 <div>Watched on {{ movie.data.date | fullDate }}</div>
                                 <div>Rated {{ movie.data.stars }}</div>

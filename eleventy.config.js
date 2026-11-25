@@ -18,6 +18,11 @@ try {
 
 const SITE_URL = "https://www.mehulkar.com";
 
+// Letterboxd poster URLs embed their size; swap it for a smaller one.
+const LETTERBOXD_POSTER_SIZE = "-0-600-0-900-crop";
+const letterboxdPoster = (url, w) =>
+  url.replace(LETTERBOXD_POSTER_SIZE, `-0-${w}-0-${(w * 3) / 2}-crop`);
+
 // Browser scripts bundled with esbuild into <output>/javascript/<name>.js
 const JS_ENTRY_POINTS = {
   webmentions: "source/javascript/webmentions.js",
@@ -97,8 +102,19 @@ export default function (eleventyConfig) {
     "html",
     () => (tree) => {
       tree.match({ tag: "img" }, (node) => {
-        if (/^(https?:)?\/\//.test(node.attrs?.src || "")) {
+        const src = node.attrs?.src || "";
+        if (/^(https?:)?\/\//.test(src)) {
           node.attrs["eleventy:ignore"] = "";
+        }
+        // Letterboxd posters: request smaller sizes + reserve 2:3 space
+        if (src.includes(LETTERBOXD_POSTER_SIZE)) {
+          node.attrs.srcset = [230, 460, 600]
+            .map((w) => `${letterboxdPoster(src, w)} ${w}w`)
+            .join(", ");
+          node.attrs.sizes ??= "(min-width: 44rem) 20rem, 50vw";
+          node.attrs.width = "600";
+          node.attrs.height = "900";
+          node.attrs.decoding = "async";
         }
         return node;
       });
