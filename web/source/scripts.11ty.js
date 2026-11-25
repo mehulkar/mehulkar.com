@@ -4,6 +4,7 @@ const ENTRY_POINTS = {
   analytics: "source/javascript/analytics.js",
   webmentions: "source/javascript/webmentions.js",
   rollover: "source/javascript/rollover.js",
+  "tweet-card": "source/javascript/tweet-card.js",
 };
 
 /**

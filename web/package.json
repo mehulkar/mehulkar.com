@@ -8,7 +8,8 @@
     "prebuild": "rm -rf ./build",
     "build": "eleventy",
     "lint": "prettier -c 'source/**/*.md'",
-    "lint:fix": "prettier -c 'source/**/*.md' --write"
+    "lint:fix": "prettier -c 'source/**/*.md' --write",
+    "fetch-tweets": "node scripts/fetch-tweets.mjs"
   },
   "repository": {
     "type": "git",

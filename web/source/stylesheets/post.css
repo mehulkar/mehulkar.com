@@ -410,3 +410,247 @@ aside.webmentions h2 {
     width: 50%;
   }
 }
+
+/* <tweet-card> (see lib/tweets.js + javascript/tweet-card.js) */
+tweet-card {
+  display: block;
+  max-width: 34rem;
+  margin: 0 auto var(--paragraph-mb);
+}
+
+article tweet-card blockquote {
+  margin: 0;
+  padding: 1rem 1.1rem 0.6rem;
+  background: var(--surface-color);
+  color: var(--text-color);
+  border: solid 1px var(--border-color);
+  border-radius: 14px;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s,
+    transform 0.15s;
+}
+
+tweet-card.is-interactive blockquote {
+  cursor: pointer;
+}
+
+tweet-card.is-interactive blockquote:hover,
+tweet-card.is-interactive blockquote:focus-visible {
+  border-color: color-mix(in srgb, var(--base-color) 45%, var(--border-color));
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.tweet-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.6rem;
+}
+
+article .tweet-card__author {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-width: 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+article img.tweet-card__avatar,
+.tweet-card__avatar {
+  display: block;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  border: none;
+  border-radius: 50%;
+}
+
+.tweet-card__avatar--initial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--blue-2);
+  color: var(--base-color);
+  font-weight: 700;
+}
+
+.tweet-card__names {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  line-height: 1.25;
+}
+
+.tweet-card__names > * {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tweet-card__names span {
+  color: var(--muted-text-color);
+  font-size: 0.9rem;
+}
+
+article .tweet-card__author:hover strong {
+  text-decoration: underline;
+}
+
+article .tweet-card__logo {
+  display: flex;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.tweet-card__logo svg {
+  width: 20px;
+  height: 20px;
+}
+
+article tweet-card p.tweet-card__reply-to {
+  margin: 0 0 0.25rem;
+  color: var(--muted-text-color);
+  font-size: 0.9rem;
+}
+
+article tweet-card p.tweet-card__text {
+  margin: 0 0 0.75rem;
+  font-size: 1.05rem;
+  overflow-wrap: anywhere;
+}
+
+#article-content tweet-card a {
+  text-decoration: none;
+}
+
+#article-content tweet-card .tweet-card__text a:hover,
+#article-content tweet-card .tweet-card__date:hover,
+#article-content tweet-card .tweet-card__reply-to a:hover {
+  text-decoration: underline;
+}
+
+.tweet-card__photos {
+  display: grid;
+  gap: 2px;
+  margin-bottom: 0.75rem;
+  border-radius: 12px;
+  overflow: hidden;
+  border: solid 1px var(--border-color);
+}
+
+.tweet-card__photos--2,
+.tweet-card__photos--4 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.tweet-card__photos--3 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.tweet-card__photos--3 img:first-child {
+  grid-row: span 2;
+}
+
+article .tweet-card__photos img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 22rem;
+  margin: 0;
+  object-fit: cover;
+  border: none;
+  border-radius: 0;
+}
+
+.tweet-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-top: 0.4rem;
+  border-top: solid 1px var(--border-color);
+  color: var(--muted-text-color);
+  font-size: 0.9rem;
+}
+
+article .tweet-card__date {
+  color: inherit;
+}
+
+article .tweet-card__date:hover {
+  text-decoration: underline;
+}
+
+.tweet-card__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+article .tweet-card__actions a,
+.tweet-card__actions button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.35rem;
+  border: none;
+  border-radius: 999px;
+  background: none;
+  color: var(--muted-text-color);
+  font: inherit;
+  cursor: pointer;
+  transition:
+    color 0.15s,
+    background-color 0.15s;
+}
+
+.tweet-card__actions svg {
+  width: 18px;
+  height: 18px;
+}
+
+article .tweet-card__actions a:hover,
+.tweet-card__actions button:hover {
+  color: var(--base-color);
+  background: color-mix(in srgb, var(--base-color) 12%, transparent);
+}
+
+article .tweet-card__actions a.tweet-card__like:hover {
+  color: #f91880;
+  background: rgba(249, 24, 128, 0.1);
+}
+
+.tweet-card__like.is-popping svg {
+  animation: tweet-like-pop 0.35s ease-out;
+}
+
+.tweet-card__like.is-popping path {
+  fill: currentColor;
+}
+
+@keyframes tweet-like-pop {
+  50% {
+    transform: scale(1.35);
+  }
+}
+
+.tweet-card__copy[data-state="copied"] {
+  color: #16a34a;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  article tweet-card blockquote,
+  .tweet-card__like.is-popping svg {
+    transition: none;
+    animation: none;
+    transform: none !important;
+  }
+}

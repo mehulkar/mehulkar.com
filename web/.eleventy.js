@@ -5,6 +5,7 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const { rssPlugin: pluginRss, dateToRfc3339 } = require("@11ty/eleventy-plugin-rss");
 const activityPubPlugin = require("eleventy-plugin-activity-pub");
 const markdownItAnchor = require("markdown-it-anchor");
+const { transformTweets } = require("./lib/tweets");
 
 const shortDate = Intl.DateTimeFormat("en-us", {
   month: "short",
@@ -57,6 +58,12 @@ module.exports = function (eleventyConfig) {
         ariaHidden: true,
       }),
     });
+  });
+
+  // Turn tweet URLs / X embeds into <tweet-card> elements (see lib/tweets.js)
+  eleventyConfig.addTransform("tweets", function (content) {
+    if (!(this.page.outputPath || "").endsWith(".html")) return content;
+    return transformTweets(content);
   });
 
   // e.g. "6 min read", computed from rendered HTML at build time

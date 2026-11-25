@@ -278,7 +278,6 @@ body main .post-list li.post-link {
   margin-bottom: 0.25rem;
 }
 
-figure#tweet,
 figure#feedly-annotation {
   padding: 1rem 1.5rem 1rem;
   border-left: solid 4px var(--blue-1);
@@ -287,12 +286,10 @@ figure#feedly-annotation {
   border-radius: 0 8px 8px 0;
 }
 
-figure#tweet p,
 figure#feedly-annotation p {
   margin-bottom: 0.5rem;
 }
 
-figure#tweet blockquote,
 figure#feedly-annotation blockquote {
   background: none;
   border: none;
@@ -301,7 +298,6 @@ figure#feedly-annotation blockquote {
 }
 
 /* TODO: text ellipsis doesn't seem to work on mobile */
-figure#tweet figcaption cite,
 figure#feedly-annotation figcaption cite {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -311,15 +307,6 @@ figure#feedly-annotation figcaption cite {
 
 .small {
   font-size: 80%;
-}
-
-.tweet-author-picture {
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
-.tweet-author-picture--initial {
-  display: none;
 }
 
 /* Home page */
