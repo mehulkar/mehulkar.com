@@ -1195,11 +1195,6 @@ header.site-header.is-stuck {
   will-change: transform;
 }
 
-.hero-morph .header-content--avatar,
-.hero-morph .header-content--name {
-  opacity: 0;
-}
-
 .intro-avatar {
   display: block;
   flex-shrink: 0;

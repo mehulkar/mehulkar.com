@@ -41,7 +41,6 @@ eleventyExcludeFromCollections: true
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const hero = document.querySelector(".intro-avatar");
     const target = document.querySelector(".header-content--avatar");
-    const name = document.querySelector(".header-content--name");
     const header = document.querySelector(".site-header");
     if (!hero || !target) return;
 
@@ -68,8 +67,6 @@ eleventyExcludeFromCollections: true
         `translate(${x - start.x}px, ${y - (start.y - scrollY)}px) scale(${s})`;
       const done = p >= 1;
       hero.style.visibility = done ? "hidden" : "";
-      target.style.opacity = done ? 1 : 0;
-      if (name) name.style.opacity = p;
       header.classList.toggle("is-stuck", done);
     };
 
