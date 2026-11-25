@@ -29,7 +29,7 @@ request to a datacenter at the Edge is hamstrung by the latency _added_ by the d
     <picture>
         <source srcset="/images/blog/edge-network.webp" type="image/webp">
         <source srcset="/images/blog/edge-network.jpg" type="image/jpeg">
-        <img src="/images/blog/edge-network.jpg">
+        <img alt="Diagram of edge network latency" src="/images/blog/edge-network.jpg">
     </picture>
     <figcaption>
         Drawn with <a href="https://tldraw.com" target="_blank">tldraw.com</a>

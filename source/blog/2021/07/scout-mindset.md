@@ -6,7 +6,7 @@ tags:
 image: /images/blog/books/scout-mindset.jpg
 ---
 
-<img class="book-cover" src="/images/blog/books/scout-mindset.jpg">
+<img class="book-cover" alt="Book cover for The Scout Mindset" src="/images/blog/books/scout-mindset.jpg">
 
 [_The Scout Mindset_][1] by [Julia Galef][3] has been one of my favorite reads
 this year. I read the Kindle edition, but I liked it so much, I want to purchase a

@@ -11,7 +11,7 @@ image: /images/blog/books/the-curse-of-bigness.jpg
 <picture>
     <source type="image/jpeg" src="/images/blog/books/the-curse-of-bigness.jpg">
     <source type="image/webp" src="/images/blog/books/the-curse-of-bigness.webp">
-    <img width="322" height="483" class="book-cover" src="/images/blog/books/the-curse-of-bigness.jpg">
+    <img width="322" height="483" class="book-cover" alt="Book cover for The Curse of Bigness" src="/images/blog/books/the-curse-of-bigness.jpg">
 </picture>
 
 I just<sup>1</sup> finished reading _The Curse of Bigness_ by Tim Wu. The book is a history
@@ -57,7 +57,7 @@ A recurring problem for software engineers is that "too big" is not a defensible
 reason to refactor. It's subjective, hard to enforce, and frankly, an annoying
 standard to maintain over time.
 
-<img src="/images/blog/2023/compared-to-what.jpg">
+<img alt="Compared to what?" src="/images/blog/2023/compared-to-what.jpg">
 
 The Chicago School took advantage of this Too Hard To Enforce practicality, when
 it suggested that the only measure of the "bigness" is whether or not it hurts
