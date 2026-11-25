@@ -38,20 +38,27 @@ layout: layout.njk
   }
 </script>
 
-{# Book posts: continue the "open book" transition from Recently Read #}
+{# Book posts: continue the "open book" transition from Recently Read.
+   Whole-page zoom/fade (no element morph, which jittered). #}
 {% if tags and "books" in tags %}
+<link rel="expect" href="#article-content" blocking="render">
 <style>
   @view-transition { navigation: auto; }
-  .post > article { view-transition-name: book; }
-  ::view-transition-group(book) {
-    animation-duration: 0.5s;
-    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  ::view-transition-old(root) {
+    animation: 300ms cubic-bezier(0.4, 0, 1, 1) both book-zoom-out;
   }
-  ::view-transition-old(book),
-  ::view-transition-new(book) {
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
+  ::view-transition-new(root) {
+    animation: 350ms cubic-bezier(0, 0, 0.2, 1) 120ms both book-fade-in;
+  }
+  @keyframes book-zoom-out {
+    to { opacity: 0; transform: scale(1.06); }
+  }
+  @keyframes book-fade-in {
+    from { opacity: 0; transform: scale(0.985); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    ::view-transition-old(root),
+    ::view-transition-new(root) { animation: none; }
   }
 </style>
 {% endif %}

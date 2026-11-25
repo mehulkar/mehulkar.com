@@ -21,7 +21,7 @@ tags:
       <a class="book-link" data-title="{{ book.data.title }}" href="{{ book.url }}" style="text-decoration:none; color:inherit;">
         <li style="padding:0;">
           <figure>
-            <img class="book-cover" sizes="(min-width: 44rem) 14rem, 50vw" eleventy:widths="240,480"{% if loop.index <= 3 %} loading="eager"{% endif %} src="{{book.data.image}}" alt="Book cover for '{{book.data.title}}'" title="Book cover for '{{book.data.title}}'">
+            <img class="book-cover" sizes="(min-width: 44rem) 14rem, 50vw" eleventy:widths="240,480" loading="{{ "eager" if loop.index <= 3 else "lazy" }}" src="{{book.data.image}}" alt="Book cover for '{{book.data.title}}'" title="Book cover for '{{book.data.title}}'">
             <figcaption style="font-size:0.9rem;">
               <div>{{ book.data.date | fullDate }}</div>
             </figcaption>
@@ -32,7 +32,7 @@ tags:
   </ul>
 </section>
 
-{# Clicking a book opens its cover, then the open page grows into the post
+{# Clicking a book opens its cover, then zoom/fades into the post
    (cross-document View Transition; post.njk opts in for book posts) #}
 <style>
   @view-transition { navigation: auto; }
@@ -57,7 +57,6 @@ tags:
       const title = document.createElement("span");
       title.textContent = link.dataset.title || "";
       page.append(title);
-      page.style.viewTransitionName = "book";
       cover.parentElement.insertBefore(page, cover);
       link.classList.add("is-opening");
 

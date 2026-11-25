@@ -106,6 +106,10 @@ export default function (eleventyConfig) {
         if (/^(https?:)?\/\//.test(src)) {
           node.attrs["eleventy:ignore"] = "";
         }
+        // Book covers on posts are above the fold: load eagerly
+        if (/\bbook-cover\b/.test(node.attrs?.class || "")) {
+          node.attrs.loading ??= "eager";
+        }
         // Letterboxd posters: request smaller sizes + reserve 2:3 space
         if (src.includes(LETTERBOXD_POSTER_SIZE)) {
           node.attrs.srcset = [230, 460, 600]
