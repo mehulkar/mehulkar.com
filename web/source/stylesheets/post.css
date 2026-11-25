@@ -1,20 +1,122 @@
 article * + h1,
 article * + h2 {
-  margin-top: calc(var(--paragraph-mb) * 2);
+  margin-top: 2.25rem;
 }
 
 article * + h3,
 article * + h4,
 article * + h5,
 article * + h6 {
-  margin-top: calc(var(--paragraph-mb) * 1.5);
+  margin-top: 1.75rem;
+}
+
+/* Post header */
+.post-date {
+  display: block;
+  color: var(--muted-text-color);
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+article h1.post--title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5rem;
+}
+
+.post-stats {
+  color: var(--muted-text-color);
+  font-size: 0.95rem;
+}
+
+/* Links in prose */
+#article-content a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  text-decoration-color: color-mix(in srgb, currentColor 40%, transparent);
+}
+
+#article-content a:hover,
+#article-content a:focus {
+  text-decoration-color: currentColor;
+}
+
+/* Heading anchors */
+#article-content .header-anchor {
+  margin-left: 0.4rem;
+  color: var(--muted-text-color);
+  text-decoration: none;
+  font-weight: 400;
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+
+#article-content :is(h2, h3, h4):hover .header-anchor,
+#article-content .header-anchor:focus {
+  opacity: 1;
+}
+
+/* Footer: share + prev/next */
+.post-footer {
+  border-top: solid 1px var(--border-color);
+  padding-top: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.post-share {
+  color: var(--muted-text-color);
+  font-size: 1rem;
+}
+
+.post-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.post-nav a {
+  display: block;
+  padding: 0.75rem 1rem;
+  border: solid 1px var(--border-color);
+  border-radius: 8px;
+  background: var(--surface-color);
+}
+
+.post-nav a:hover,
+.post-nav a:focus {
+  border-color: var(--base-color);
+}
+
+.post-nav small {
+  display: block;
+  color: var(--muted-text-color);
+  font-size: 0.85rem;
+}
+
+.post-nav .post-nav--next {
+  grid-column: 2;
+  text-align: right;
+}
+
+@media only screen and (max-width: 480px) {
+  .post-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .post-nav .post-nav--next {
+    grid-column: 1;
+  }
 }
 
 article h1,
 article h2,
 article h3,
 article h4 {
-  font-family: "Lato", "sans-serif";
+  font-family: inherit;
   letter-spacing: normal;
   font-weight: 600;
 }
@@ -44,7 +146,8 @@ article figure figcaption {
 }
 
 article hr {
-  border-top: 0.5px solid #fff;
+  border: none;
+  border-top: 1px solid var(--border-color);
   margin: 2.5rem auto;
   width: 50%;
 }
@@ -60,10 +163,9 @@ article aside {
 }
 
 article code {
-  background: #eee;
-  padding: 0.1rem 0.5rem;
-  border-radius: 0.5rem;
-  border: solid 1px #ddd;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 0.1em 0.3em;
+  border-radius: 4px;
 }
 
 article :not(h1, h2, h3, h4, h5, h6) code {
@@ -80,14 +182,37 @@ article a code {
 
 article pre code {
   display: block;
-  overflow-x: scroll;
+  overflow-x: auto;
 
-  // reset from other `article code` selector
+  /* reset from other `article code` selector */
   background: none;
   padding: 0;
   border-radius: 0;
   border: none;
   font-size: 1rem;
+}
+
+/* Fenced code without a language isn't styled by the Prism theme;
+   match its look (prism-okaidia) so all code blocks are consistent. */
+article pre:not([class*="language-"]) {
+  background: #272822;
+  color: #f8f8f2;
+  padding: 1em;
+  border-radius: 0.3em;
+  overflow-x: auto;
+  line-height: 1.5;
+}
+
+/* Same code size for highlighted (Prism) and plain blocks */
+article pre,
+article pre[class*="language-"],
+article pre code,
+article pre code[class*="language-"] {
+  font-size: 0.9rem;
+}
+
+article pre[class*="language-"] {
+  margin: 0 0 var(--paragraph-mb);
 }
 
 article pre.terminal {
@@ -138,7 +263,7 @@ article blockquote {
   padding: 1rem 1.5rem 1rem;
   border-left: solid 4px var(--blue-1);
   background-color: var(--blue-2);
-  color: var(--code-text-color);
+  color: var(--text-color);
   border-radius: 0 8px 8px 0;
 }
 
@@ -147,7 +272,7 @@ article details {
 }
 
 article blockquote p {
-  line-height: var(--paragraph-mb);
+  line-height: inherit;
   margin-bottom: 0.5rem;
 }
 
@@ -196,7 +321,7 @@ article img.book-cover {
 }
 
 article table tr:nth-child(odd) {
-  background-color: #fafafa;
+  background-color: rgba(0, 0, 0, 0.03);
 }
 
 article table td,
@@ -208,11 +333,11 @@ article table th {
 article table {
   border-collapse: collapse;
   display: block;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 article table tr {
-  border: solid 1px #eee;
+  border: solid 1px var(--border-color);
 }
 
 aside.webmentions h2 {
@@ -227,9 +352,9 @@ aside.webmentions h2 {
 .wm-replies li {
   padding: 1rem;
   list-style: none;
-  background: #fafafa;
+  background: var(--surface-color);
   border-radius: 10px;
-  border: solid 1px #eaeaea;
+  border: solid 1px var(--border-color);
 }
 
 .wm-reply-author-photo {
@@ -252,8 +377,7 @@ aside.webmentions h2 {
 
 @media (prefers-color-scheme: dark) {
   article code {
-    background: #2a2a2a;
-    border-color: #404040;
+    background: rgba(255, 255, 255, 0.08);
     color: #d4d4d4;
   }
 
@@ -284,5 +408,249 @@ aside.webmentions h2 {
 @media only screen and (min-width: 600px) {
   article img.book-cover {
     width: 50%;
+  }
+}
+
+/* <tweet-card> (see lib/tweets.js + javascript/tweet-card.js) */
+tweet-card {
+  display: block;
+  max-width: 34rem;
+  margin: 0 auto var(--paragraph-mb);
+}
+
+article tweet-card blockquote {
+  margin: 0;
+  padding: 1rem 1.1rem 0.6rem;
+  background: var(--surface-color);
+  color: var(--text-color);
+  border: solid 1px var(--border-color);
+  border-radius: 14px;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s,
+    transform 0.15s;
+}
+
+tweet-card.is-interactive blockquote {
+  cursor: pointer;
+}
+
+tweet-card.is-interactive blockquote:hover,
+tweet-card.is-interactive blockquote:focus-visible {
+  border-color: color-mix(in srgb, var(--base-color) 45%, var(--border-color));
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.tweet-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.6rem;
+}
+
+article .tweet-card__author {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-width: 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+article img.tweet-card__avatar,
+.tweet-card__avatar {
+  display: block;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  border: none;
+  border-radius: 50%;
+}
+
+.tweet-card__avatar--initial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--blue-2);
+  color: var(--base-color);
+  font-weight: 700;
+}
+
+.tweet-card__names {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  line-height: 1.25;
+}
+
+.tweet-card__names > * {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tweet-card__names span {
+  color: var(--muted-text-color);
+  font-size: 0.9rem;
+}
+
+article .tweet-card__author:hover strong {
+  text-decoration: underline;
+}
+
+article .tweet-card__logo {
+  display: flex;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.tweet-card__logo svg {
+  width: 20px;
+  height: 20px;
+}
+
+article tweet-card p.tweet-card__reply-to {
+  margin: 0 0 0.25rem;
+  color: var(--muted-text-color);
+  font-size: 0.9rem;
+}
+
+article tweet-card p.tweet-card__text {
+  margin: 0 0 0.75rem;
+  font-size: 1.05rem;
+  overflow-wrap: anywhere;
+}
+
+#article-content tweet-card a {
+  text-decoration: none;
+}
+
+#article-content tweet-card .tweet-card__text a:hover,
+#article-content tweet-card .tweet-card__date:hover,
+#article-content tweet-card .tweet-card__reply-to a:hover {
+  text-decoration: underline;
+}
+
+.tweet-card__photos {
+  display: grid;
+  gap: 2px;
+  margin-bottom: 0.75rem;
+  border-radius: 12px;
+  overflow: hidden;
+  border: solid 1px var(--border-color);
+}
+
+.tweet-card__photos--2,
+.tweet-card__photos--4 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.tweet-card__photos--3 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.tweet-card__photos--3 img:first-child {
+  grid-row: span 2;
+}
+
+article .tweet-card__photos img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 22rem;
+  margin: 0;
+  object-fit: cover;
+  border: none;
+  border-radius: 0;
+}
+
+.tweet-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-top: 0.4rem;
+  border-top: solid 1px var(--border-color);
+  color: var(--muted-text-color);
+  font-size: 0.9rem;
+}
+
+article .tweet-card__date {
+  color: inherit;
+}
+
+article .tweet-card__date:hover {
+  text-decoration: underline;
+}
+
+.tweet-card__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+article .tweet-card__actions a,
+.tweet-card__actions button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.35rem;
+  border: none;
+  border-radius: 999px;
+  background: none;
+  color: var(--muted-text-color);
+  font: inherit;
+  cursor: pointer;
+  transition:
+    color 0.15s,
+    background-color 0.15s;
+}
+
+.tweet-card__actions svg {
+  width: 18px;
+  height: 18px;
+}
+
+article .tweet-card__actions a:hover,
+.tweet-card__actions button:hover {
+  color: var(--base-color);
+  background: color-mix(in srgb, var(--base-color) 12%, transparent);
+}
+
+article .tweet-card__actions a.tweet-card__like:hover {
+  color: #f91880;
+  background: rgba(249, 24, 128, 0.1);
+}
+
+.tweet-card__like.is-popping svg {
+  animation: tweet-like-pop 0.35s ease-out;
+}
+
+.tweet-card__like.is-popping path {
+  fill: currentColor;
+}
+
+@keyframes tweet-like-pop {
+  50% {
+    transform: scale(1.35);
+  }
+}
+
+.tweet-card__copy[data-state="copied"] {
+  color: #16a34a;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  article tweet-card blockquote,
+  .tweet-card__like.is-popping svg {
+    transition: none;
+    animation: none;
+    transform: none !important;
   }
 }

@@ -4,35 +4,36 @@ eleventyExcludeFromCollections: true
 ---
 
 <div class="home">
-  <aside>
-    <h2>In Short</h2>
-    <p>👋🏾 I am a software engineer at <a href="https://vercel.com">Vercel</a>.
-      Before that, I worked at Apple</a>.
+  <section class="intro">
+    <picture>
+      <source srcset="/images/avatar.webp" type="image/webp">
+      <img class="intro-avatar" alt="" width="72" height="72" src="/images/avatar.jpeg">
+    </picture>
+    <div>
+    <p>
+      👋🏾 I'm a software engineer at <a href="https://vercel.com">Vercel</a>.
+      Before that, I worked at Apple. I think about programming, tools, and
+      how engineering teams work.
     </p>
 
-    <ul>
+    <ul class="intro-links">
       <li>🎬 <a href="/blog/category/recently-watched">Recently Watched</a></li>
       <li>📚 <a href="/blog/category/recently-read">Recently Read</a></li>
       <li>📄 <a href="/resume">Resume</a></li>
     </ul>
-  </aside>
+    </div>
+  </section>
 
   <section class="posts">
-    <h2 class="mb3">Writing </h2>
-    {% set posts = collections.home %}
-    {% from 'partials/_by-year.njk' import render %}
-    {{ render(posts) }}
+    <h2 class="section-title">Recent Writing</h2>
+    <ul class="post-list">
+      {% for post in collections.writing %}{% if loop.index <= 10 %}
+        <li class="post-link">
+          <a href="{{post.url}}">{{post.data.title}}</a>
+          <time class="date" datetime="{{post.date.toISOString()}}">{{post.data.date | fullDate }}</time>
+        </li>
+      {% endif %}{% endfor %}
+    </ul>
+    <p class="see-all"><a href="/writing/">All writing →</a></p>
   </section>
 </div>
-
-<script>
-  function setTimeElement(el, ts) {
-    el.setAttribute('datetime', ts);
-    el.innerText = daysAgo(ts);
-  }
-
-  function daysAgo(timestamp) {
-    const daysAgo = Math.round((new Date() - new Date(timestamp)) / 1000 / 60 / 60 / 24);
-    return new Intl.RelativeTimeFormat('en', { numeric: 'auto' }).format(daysAgo * -1, 'days')
-  }
-</script>
