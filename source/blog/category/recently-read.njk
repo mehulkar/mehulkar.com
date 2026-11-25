@@ -18,7 +18,7 @@ tags:
     grid-column-gap: 1rem;"
   >
     {% for book in books %}
-      <a href="{{ book.url }}" style="text-decoration:none; color:inherit;">
+      <a class="book-link" data-title="{{ book.data.title }}" href="{{ book.url }}" style="text-decoration:none; color:inherit;">
         <li style="padding:0;">
           <figure>
             <img class="book-cover" sizes="(min-width: 44rem) 14rem, 50vw" eleventy:widths="240,480"{% if loop.index <= 3 %} loading="eager"{% endif %} src="{{book.data.image}}" alt="Book cover for '{{book.data.title}}'" title="Book cover for '{{book.data.title}}'">
@@ -31,3 +31,54 @@ tags:
     {% endfor %}
   </ul>
 </section>
+
+{# Clicking a book opens its cover before navigating #}
+<script>
+  (() => {
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const DURATION = 700;
+
+    document.addEventListener("click", (e) => {
+      const link = e.target.closest("a.book-link");
+      if (!link || e.defaultPrevented || e.button !== 0) return;
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      const cover = link.querySelector("picture") || link.querySelector("img");
+      if (!cover || link.classList.contains("is-opening")) return;
+      e.preventDefault();
+
+      // Inside page revealed under the cover
+      const page = document.createElement("div");
+      page.className = "book-page";
+      page.style.cssText = `top:${cover.offsetTop}px;left:${cover.offsetLeft}px;width:${cover.offsetWidth}px;height:${cover.offsetHeight}px`;
+      const title = document.createElement("span");
+      title.textContent = link.dataset.title || "";
+      page.append(title);
+      cover.parentElement.insertBefore(page, cover);
+      link.classList.add("is-opening");
+
+      cover.animate(
+        [
+          { transform: "perspective(1200px) rotateY(0deg)" },
+          { transform: "perspective(1200px) rotateY(-150deg)" },
+        ],
+        { duration: DURATION, easing: "cubic-bezier(.6,0,.3,1)", fill: "forwards" },
+      );
+      link.querySelector("figure").animate(
+        [{ transform: "scale(1)" }, { transform: "scale(1.06)" }],
+        { duration: DURATION, easing: "ease-out", fill: "forwards" },
+      );
+
+      setTimeout(() => (location.href = link.href), DURATION - 100);
+    });
+
+    // Reset if user comes back via back/forward cache
+    addEventListener("pageshow", (e) => {
+      if (!e.persisted) return;
+      document.querySelectorAll(".book-link.is-opening").forEach((link) => {
+        link.classList.remove("is-opening");
+        link.querySelector(".book-page")?.remove();
+        link.querySelectorAll("*").forEach((el) => el.getAnimations().forEach((a) => a.cancel()));
+      });
+    });
+  })();
+</script>
