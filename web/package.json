@@ -23,18 +23,18 @@
     "url": "https://github.com/mehulkar/mehulkar.com/issues"
   },
   "homepage": "https://github.com/mehulkar/mehulkar.com",
-  "packageManager": "pnpm@10.33.0",
+  "packageManager": "pnpm@12.23.0",
   "devDependencies": {
-    "@11ty/eleventy": "3.0.0-alpha.6",
-    "@11ty/eleventy-plugin-rss": "^1.2.0",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@11ty/eleventy": "3.1.8",
+    "@11ty/eleventy-plugin-rss": "^3.1.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
     "@internal/new-post": "workspace:*",
-    "dotenv": "^16.4.5",
+    "dotenv": "^18.0.10",
     "eleventy-plugin-activity-pub": "^0.1.1",
-    "esbuild": "~0.20.2",
-    "web-vitals": "^3.5.2"
+    "esbuild": "~0.28.2",
+    "web-vitals": "^6.2.3"
   },
-  "engine": {
-    "node": "20"
+  "engines": {
+    "node": "26"
   }
 }
