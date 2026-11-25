@@ -27,7 +27,7 @@ tags:
             grid-column-gap: 1rem;"
         >
             {% for movie in year.items %}
-                <a href="{{ movie.url }}" style="text-decoration:none; color:inherit;">
+                <a class="movie-link" href="{{ movie.url }}" style="text-decoration:none; color:inherit;">
                     <li style="padding:0;">
                         <figure>
                             <span class="dvd-case"><span class="dvd-banner">DVD</span><img sizes="(min-width: 44rem) 14rem, 50vw"{% if not (loop.index <= 3 and firstYear) %} loading="lazy"{% endif %} src="{{movie.data.image}}" alt="Movie poster for '{{movie.data.title}}'" title="Movie poster for '{{movie.data.title}}'"></span>

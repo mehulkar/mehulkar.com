@@ -558,6 +558,33 @@ a:hover .book-cover {
     0 28px 40px -12px rgba(0, 0, 0, 0.4);
 }
 
+/* Cover grids (Recently Read / Watched): captions spaced + aligned */
+.book-link,
+.movie-link {
+  display: block;
+}
+
+.book-link li,
+.movie-link li {
+  height: 100%;
+}
+
+.book-link figure,
+.movie-link figure {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+}
+
+.book-link figcaption,
+.movie-link figcaption {
+  margin-top: auto;
+  padding-top: 0.9rem;
+  line-height: 1.45;
+  color: var(--muted-text-color);
+}
+
 /* Movie posters as DVD cases on Recently Watched */
 .dvd-case {
   position: relative;
