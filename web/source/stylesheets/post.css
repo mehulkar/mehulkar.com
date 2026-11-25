@@ -196,7 +196,7 @@ article img.book-cover {
 }
 
 article table tr:nth-child(odd) {
-  background-color: #fafafa;
+  background-color: rgba(0, 0, 0, 0.03);
 }
 
 article table td,
