@@ -558,6 +558,92 @@ a:hover .book-cover {
     0 28px 40px -12px rgba(0, 0, 0, 0.4);
 }
 
+/* Movie posters as DVD cases on Recently Watched */
+.dvd-case {
+  position: relative;
+  display: block;
+  padding: 5px 5px 5px 13px;
+  border-radius: 3px 7px 7px 3px;
+  background: linear-gradient(90deg, #0b0b0b, #2b2b2b 3%, #0f0f0f 6%, #1c1c1c 50%, #111);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.2),
+    0 6px 12px -2px rgba(0, 0, 0, 0.25),
+    0 18px 30px -10px rgba(0, 0, 0, 0.45);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Hinge ridges along the spine */
+.dvd-case::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 4px;
+  width: 4px;
+  border-radius: 2px;
+  background: repeating-linear-gradient(
+    180deg,
+    #000 0 2px,
+    #333 2px 4px
+  );
+  opacity: 0.8;
+}
+
+/* Clear plastic sleeve glare */
+.dvd-case::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(
+    115deg,
+    rgba(255, 255, 255, 0.22) 0%,
+    rgba(255, 255, 255, 0.06) 22%,
+    transparent 38%,
+    transparent 72%,
+    rgba(255, 255, 255, 0.08) 100%
+  );
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.dvd-case img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  border-radius: 1px;
+}
+
+.dvd-banner {
+  position: absolute;
+  top: 5px;
+  left: 13px;
+  right: 5px;
+  z-index: 1;
+  padding: 1px 6px;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  font: italic 800 0.65rem/1.3 system-ui, sans-serif;
+  letter-spacing: 0.08em;
+}
+
+a:hover .dvd-case {
+  transform: translateY(-4px) rotate(-1deg);
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    0 10px 20px -4px rgba(0, 0, 0, 0.3),
+    0 28px 40px -12px rgba(0, 0, 0, 0.5);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dvd-case {
+    transition: none;
+  }
+}
+
 /* Book "opening" animation on Recently Read */
 .book-link figure {
   position: relative;
