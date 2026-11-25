@@ -331,6 +331,30 @@ figure#feedly-annotation figcaption cite {
   flex-shrink: 0;
 }
 
+/* Sticky header + hero avatar morph (home) */
+body:has(.home) header.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  transition: box-shadow 0.2s;
+}
+
+header.site-header.is-stuck {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.hero-morph .intro-avatar {
+  position: relative;
+  z-index: 11;
+  transform-origin: top left;
+  will-change: transform;
+}
+
+.hero-morph .header-content--avatar,
+.hero-morph .header-content--name {
+  opacity: 0;
+}
+
 .intro-avatar {
   display: block;
   flex-shrink: 0;
