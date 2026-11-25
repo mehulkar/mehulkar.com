@@ -6,6 +6,5 @@
 /web/build
 node_modules
 .vercel
-.turbo
 .env
 .env*.local

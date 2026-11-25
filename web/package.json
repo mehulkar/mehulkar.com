@@ -7,7 +7,6 @@
     "start": "vercel dev",
     "prebuild": "rm -rf ./build",
     "build": "eleventy",
-    "build:site": "pnpm -- turbo run build",
     "lint": "prettier -c 'source/**/*.md'",
     "lint:fix": "prettier -c 'source/**/*.md' --write"
   },
@@ -29,11 +28,11 @@
     "@11ty/eleventy": "3.0.0-alpha.6",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@internal/new-post": "workspace:*",
     "dotenv": "^16.4.5",
     "eleventy-plugin-activity-pub": "^0.1.1",
     "esbuild": "~0.20.2",
-    "web-vitals": "^3.5.2",
-    "@internal/new-post": "workspace:*"
+    "web-vitals": "^3.5.2"
   },
   "engine": {
     "node": "20"

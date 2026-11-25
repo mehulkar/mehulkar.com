@@ -1,0 +1,314 @@
+:root {
+  color-scheme: light dark;
+
+  /* https://nerdy.dev/custom-prop-categories */
+
+  /* Tokens */
+  --base-color: #3b82f6;
+  --link-hover-color: #0055b3;
+  --blue-1: hsl(200, 83%, 78%);
+  --blue-2: hsl(200, 83%, 98%);
+  --paragraph-mb: 1.5rem;
+
+  /* House Props */
+  --text-color: #333;
+  --background-color: #fff;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --pill-background-color: #818181;
+  --pill-background-color-hover: #858585;
+  --pill-background-color-inactive: #eee;
+  --pill-text-color-inactive: #999;
+  --code-text-color: hsl(200, 83, 76%);
+  --header-border-color: #36f;
+  --book-shadow-color: #333;
+  --image-border-color: darkgray;
+  --aside-border: gold;
+  --aside-text-color: var(--code-text-color);
+  --aside-background-color: hsl(60, 100%, 83%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --blue-2: hsl(200, 83%, 19%);
+    --code-text-color: hsl(200, 83, 76%);
+    --background-color: #222;
+    --border-color: rgba(255, 255, 255, 0.3);
+    --text-color: #ebebeb;
+    --pill-background-color: #515151;
+    --pill-background-color-hover: #555;
+    --pill-background-color-inactive: #eee;
+    --pill-text-color-inactive: #777;
+    --header-border-color: #eee;
+    --book-shadow-color: #ccc;
+    --image-border-color: gray;
+    --aside-background-color: hsl(60, 100%, 24%);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+a {
+  color: var(--base-color);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: var(--link-hover-color);
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+body main {
+  min-height: 100%;
+  margin: 0 auto;
+  flex: 1;
+  width: 100%;
+  /* General content typgraphy rules */
+  font-size: 1.1rem;
+  font-family: "Work Sans", serif;
+  line-height: 1.65rem;
+  letter-spacing: -1px;
+}
+
+body main p {
+  margin-bottom: var(--paragraph-mb);
+}
+
+body main nav {
+  margin-left: 0;
+}
+
+body main ol,
+body main ul {
+  margin-left: 3rem;
+}
+
+body main ul ul,
+body main ol ol {
+  margin-left: 1.5rem;
+}
+
+body main ol li,
+body main ul li {
+  margin-bottom: 0.25rem;
+}
+
+header.site-header {
+  padding: 1em;
+  padding-bottom: 0;
+  background-color: var(--base-color);
+  text-align: center;
+  border-bottom: solid 2px;
+  border-color: var(--header-border-color);
+}
+
+.header__icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.header-content--avatar {
+  border-radius: 50%;
+  border: solid 2px #fff;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.header-content--link,
+.header-content--link:hover,
+.header-content--link:active {
+  color: white;
+  text-shadow: 0px 0px 2px #333;
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    height: 0px;
+  }
+  50% {
+    height: 15px;
+  }
+}
+
+.pill {
+  background-color: var(--pill-background-color-inactive);
+  color: var(--pill-text-color-inactive);
+  border-radius: 5px;
+  margin-right: 5px;
+  font-size: 1rem;
+}
+.pill:hover {
+  color: var(--pill-text-color-inactive);
+}
+
+.pill--link {
+  background-color: var(--pill-background-color);
+  color: #fff;
+}
+
+.pill--link:hover {
+  background-color: var(--pill-background-color-hover);
+  color: #fff;
+}
+
+.post-group .post-list {
+  list-style: none;
+}
+
+.post-link a {
+  text-decoration: underline;
+}
+
+.post-group--title {
+  border-color: var(--border-color);
+}
+
+.date {
+  min-width: 45px;
+}
+
+@media only screen and (max-width: 600px) {
+  .post-group .post-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+figure#tweet,
+figure#feedly-annotation {
+  padding: 1rem 1.5rem 1rem;
+  border-left: solid 4px var(--blue-1);
+  background-color: var(--blue-2);
+  color: var(--code-text-color);
+  border-radius: 0 8px 8px 0;
+}
+
+figure#tweet p,
+figure#feedly-annotation p {
+  margin-bottom: 0.5rem;
+}
+
+figure#tweet blockquote,
+figure#feedly-annotation blockquote {
+  background: none;
+  border: none;
+  padding-bottom: 0;
+  box-shadow: none;
+}
+
+/* TODO: text ellipsis doesn't seem to work on mobile */
+figure#tweet figcaption cite,
+figure#feedly-annotation figcaption cite {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex-grow: 1;
+}
+
+.small {
+  font-size: 80%;
+}
+
+.tweet-author-picture {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.tweet-author-picture--initial {
+  display: none;
+}
+
+.home {
+  display: grid;
+  grid-template-areas:
+    "sidebar intro intro intro"
+    "sidebar posts posts posts";
+
+  grid-template-columns: 300px 1fr;
+}
+
+@media only screen and (max-width: 600px) {
+  .home {
+    grid-template-areas:
+      "intro"
+      "posts"
+      "sidebar";
+    grid-template-columns: 1fr;
+  }
+}
+
+.home .intro {
+  grid-area: intro;
+  padding-top: 1rem;
+}
+
+.home aside {
+  grid-area: sidebar;
+  margin-right: 1rem;
+  padding-right: 2rem;
+}
+
+.home aside ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+.home aside ul p {
+  margin-bottom: 0.5rem;
+}
+
+.home .posts {
+  grid-area: posts;
+}
+
+/* Utility class for mobile */
+.mobile-only {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .mobile-only {
+    display: inline;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .post-group {
+    display: flex;
+  }
+
+  .post-list,
+  .post-group--title {
+    padding: 0.5rem;
+    padding-left: 0;
+  }
+
+  .post-group--title h2 {
+    border: none;
+    float: left;
+    font-size: 1rem;
+    margin-bottom: 0;
+    text-decoration: underline;
+    padding-right: 0.5rem;
+  }
+}
+
+/* replaces tachyons mw7 */
+.mw7 {
+  max-width: 40rem;
+}

@@ -19,8 +19,7 @@ vc dev
 ## Build locally
 
 ```bash
-pnpm add -g turbo
-turbo build
+pnpm build
 ```
 
 ## Deploy
