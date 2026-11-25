@@ -12,6 +12,8 @@ pnpm new
 
 ```bash
 pnpm i
+pnpm dev        # Eleventy dev server
+# or, to also run the /api functions:
 pnpm add -g vercel
 vc dev
 ```
@@ -19,8 +21,16 @@ vc dev
 ## Build locally
 
 ```bash
-pnpm build
+pnpm build      # outputs to _site/
 ```
+
+## Layout
+
+- `source/`: site content and templates (Eleventy input)
+- `api/`: Vercel serverless functions
+- `lib/`: build-time helpers used by `.eleventy.js`
+- `scripts/`: maintenance scripts (`pnpm new`, `pnpm update-movies`,
+  `pnpm fetch-tweets`, `pnpm convert-tags`)
 
 ## Deploy
 
