@@ -21,7 +21,7 @@ tags:
       <a href="{{ book.url }}" style="text-decoration:none; color:inherit;">
         <li style="padding:0;">
           <figure>
-            <img style="display:block;" src="{{book.data.image}}" alt="Book cover for '{{book.data.title}}'" title="Book cover for '{{book.data.title}}'">
+            <img style="display:block; width:100%; height:auto;" sizes="(min-width: 44rem) 14rem, 50vw" eleventy:widths="240,480"{% if loop.index <= 3 %} loading="eager"{% endif %} src="{{book.data.image}}" alt="Book cover for '{{book.data.title}}'" title="Book cover for '{{book.data.title}}'">
             <figcaption style="font-size:0.9rem;">
               <div>{{ book.data.date | fullDate }}</div>
             </figcaption>
