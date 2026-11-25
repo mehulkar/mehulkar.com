@@ -15,11 +15,11 @@
     "url": "https://github.com/mehulkar/mehulkar.com/issues"
   },
   "homepage": "https://github.com/mehulkar/mehulkar.com",
-  "packageManager": "pnpm@10.33.0",
+  "packageManager": "pnpm@12.23.0",
   "devDependencies": {
-    "prettier": "^3.2.5"
+    "prettier": "^3.10.1"
   },
-  "engine": {
-    "node": "20"
+  "engines": {
+    "node": "26"
   }
 }

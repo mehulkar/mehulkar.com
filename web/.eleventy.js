@@ -1,8 +1,8 @@
 const dotenv = require("dotenv");
-dotenv.config();
+dotenv.config({ quiet: true });
 
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const pluginRss = require("@11ty/eleventy-plugin-rss");
+const { rssPlugin: pluginRss, dateToRfc3339 } = require("@11ty/eleventy-plugin-rss");
 const activityPubPlugin = require("eleventy-plugin-activity-pub");
 
 const shortDate = Intl.DateTimeFormat("en-us", {
@@ -46,7 +46,7 @@ const TAG_PATH_OVERRIDES = {
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginRss);
-  eleventyConfig.addLiquidFilter("dateToRfc3339", pluginRss.dateToRfc3339);
+  eleventyConfig.addLiquidFilter("dateToRfc3339", dateToRfc3339);
 
   eleventyConfig.addPlugin(activityPubPlugin, {
     domain: "mehulkar.com",
