@@ -38,6 +38,24 @@ layout: layout.njk
   }
 </script>
 
+{# Book posts: continue the "open book" transition from Recently Read #}
+{% if tags and "books" in tags %}
+<style>
+  @view-transition { navigation: auto; }
+  .post > article { view-transition-name: book; }
+  ::view-transition-group(book) {
+    animation-duration: 0.5s;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  ::view-transition-old(book),
+  ::view-transition-new(book) {
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+</style>
+{% endif %}
+
 <div class='post bb b--black-10 mb2'>
   <article class='mb3 mw7 center'>
     <header class='bb b--black-10 mv3'>

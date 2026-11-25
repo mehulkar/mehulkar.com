@@ -32,7 +32,11 @@ tags:
   </ul>
 </section>
 
-{# Clicking a book opens its cover before navigating #}
+{# Clicking a book opens its cover, then the open page grows into the post
+   (cross-document View Transition; post.njk opts in for book posts) #}
+<style>
+  @view-transition { navigation: auto; }
+</style>
 <script>
   (() => {
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -53,6 +57,7 @@ tags:
       const title = document.createElement("span");
       title.textContent = link.dataset.title || "";
       page.append(title);
+      page.style.viewTransitionName = "book";
       cover.parentElement.insertBefore(page, cover);
       link.classList.add("is-opening");
 
@@ -68,7 +73,7 @@ tags:
         { duration: DURATION, easing: "ease-out", fill: "forwards" },
       );
 
-      setTimeout(() => (location.href = link.href), DURATION - 100);
+      setTimeout(() => (location.href = link.href), DURATION);
     });
 
     // Reset if user comes back via back/forward cache
