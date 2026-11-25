@@ -676,10 +676,37 @@ a:hover .dvd-case {
   position: relative;
 }
 
-.book-link.is-opening picture {
-  transform-origin: left center;
+.book-flip {
+  position: absolute;
   z-index: 2;
-  backface-visibility: visible;
+  transform-origin: left center;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.book-flip-front,
+.book-flip-back {
+  position: absolute;
+  inset: 0;
+  border-radius: 2px 6px 6px 2px;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.book-flip-front img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Inside of the cover: plain board */
+.book-flip-back {
+  transform: rotateY(180deg);
+  background:
+    linear-gradient(270deg, rgba(0, 0, 0, 0.18), transparent 12%),
+    #ece6d6;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
 }
 
 .book-page {

@@ -38,31 +38,6 @@ layout: layout.njk
   }
 </script>
 
-{# Book posts: continue the "open book" transition from Recently Read.
-   Whole-page zoom/fade (no element morph, which jittered). #}
-{% if tags and "books" in tags %}
-<link rel="expect" href="#article-content" blocking="render">
-<style>
-  @view-transition { navigation: auto; }
-  ::view-transition-old(root) {
-    animation: 300ms cubic-bezier(0.4, 0, 1, 1) both book-zoom-out;
-  }
-  ::view-transition-new(root) {
-    animation: 350ms cubic-bezier(0, 0, 0.2, 1) 120ms both book-fade-in;
-  }
-  @keyframes book-zoom-out {
-    to { opacity: 0; transform: scale(1.06); }
-  }
-  @keyframes book-fade-in {
-    from { opacity: 0; transform: scale(0.985); }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    ::view-transition-old(root),
-    ::view-transition-new(root) { animation: none; }
-  }
-</style>
-{% endif %}
-
 <div class='post bb b--black-10 mb2'>
   <article class='mb3 mw7 center'>
     <header class='bb b--black-10 mv3'>

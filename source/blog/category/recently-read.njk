@@ -32,47 +32,77 @@ tags:
   </ul>
 </section>
 
-{# Clicking a book opens its cover, then zoom/fades into the post
+{# Clicking a book swings its cover open, then the page dives into the book
    (cross-document View Transition; post.njk opts in for book posts) #}
 <style>
   @view-transition { navigation: auto; }
+  .site-header { view-transition-name: site-header; }
 </style>
+<script type="speculationrules">
+  { "prefetch": [{ "where": { "selector_matches": ".book-link" }, "eagerness": "moderate" }] }
+</script>
 <script>
   (() => {
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    const DURATION = 700;
+    const DURATION = 650;
+    const hover = matchMedia("(hover: hover)").matches;
+    // Matches the hover lift in app.css so the flip starts where the cover is
+    const lift = hover ? "translateY(-4px) rotate(-1deg)" : "translateY(0) rotate(0deg)";
+
+    const box = (el) =>
+      `top:${el.offsetTop}px;left:${el.offsetLeft}px;width:${el.offsetWidth}px;height:${el.offsetHeight}px`;
 
     document.addEventListener("click", (e) => {
       const link = e.target.closest("a.book-link");
       if (!link || e.defaultPrevented || e.button !== 0) return;
       if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
-      const cover = link.querySelector("picture") || link.querySelector("img");
-      if (!cover || link.classList.contains("is-opening")) return;
+      const img = link.querySelector("img");
+      const cover = link.querySelector("picture") || img;
+      if (!img || link.classList.contains("is-opening")) return;
       e.preventDefault();
+      link.classList.add("is-opening");
+      const fig = link.querySelector("figure");
 
-      // Inside page revealed under the cover
+      // Inside page, revealed under the cover
       const page = document.createElement("div");
       page.className = "book-page";
-      page.style.cssText = `top:${cover.offsetTop}px;left:${cover.offsetLeft}px;width:${cover.offsetWidth}px;height:${cover.offsetHeight}px`;
+      page.style.cssText = box(cover);
       const title = document.createElement("span");
       title.textContent = link.dataset.title || "";
       page.append(title);
-      cover.parentElement.insertBefore(page, cover);
-      link.classList.add("is-opening");
 
-      cover.animate(
+      // Two-sided cover: front image + plain inside board
+      const flip = document.createElement("div");
+      flip.className = "book-flip";
+      flip.style.cssText = box(cover);
+      const front = document.createElement("div");
+      front.className = "book-flip-front";
+      const frontImg = new Image();
+      frontImg.src = img.currentSrc || img.src;
+      frontImg.alt = "";
+      front.append(frontImg);
+      const back = document.createElement("div");
+      back.className = "book-flip-back";
+      flip.append(front, back);
+
+      fig.append(page, flip);
+      cover.style.visibility = "hidden";
+
+      flip.animate(
         [
-          { transform: "perspective(1200px) rotateY(0deg)" },
-          { transform: "perspective(1200px) rotateY(-150deg)" },
+          { transform: `perspective(2000px) ${lift} rotateY(0deg)` },
+          { transform: "perspective(2000px) translateY(0) rotate(0deg) rotateY(-160deg)" },
         ],
-        { duration: DURATION, easing: "cubic-bezier(.6,0,.3,1)", fill: "forwards" },
-      );
-      link.querySelector("figure").animate(
-        [{ transform: "scale(1)" }, { transform: "scale(1.06)" }],
-        { duration: DURATION, easing: "ease-out", fill: "forwards" },
+        { duration: DURATION, easing: "cubic-bezier(.55,0,.2,1)", fill: "forwards" },
       );
 
-      setTimeout(() => (location.href = link.href), DURATION);
+      // Tell the post where the book is, so the page dives into it
+      const r = page.getBoundingClientRect();
+      try {
+        sessionStorage.setItem("book-origin", `${r.left + r.width / 2}px ${r.top + r.height / 2}px`);
+      } catch {}
+
+      setTimeout(() => (location.href = link.href), DURATION * 0.85);
     });
 
     // Reset if user comes back via back/forward cache
@@ -80,8 +110,9 @@ tags:
       if (!e.persisted) return;
       document.querySelectorAll(".book-link.is-opening").forEach((link) => {
         link.classList.remove("is-opening");
-        link.querySelector(".book-page")?.remove();
-        link.querySelectorAll("*").forEach((el) => el.getAnimations().forEach((a) => a.cancel()));
+        link.querySelectorAll(".book-page, .book-flip").forEach((el) => el.remove());
+        const cover = link.querySelector("picture") || link.querySelector("img");
+        if (cover) cover.style.visibility = "";
       });
     });
   })();

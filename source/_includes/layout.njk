@@ -29,6 +29,46 @@
     <meta name="twitter:image" content="{{ shareImage }}">
 
     <link rel="stylesheet" href="/stylesheets/app.css">
+
+    {# Book posts: continue the "open book" transition from Recently Read.
+       The old page dives into the book (origin saved in sessionStorage),
+       then the post fades in. #}
+    {% if layout == "post.njk" and tags and "books" in tags %}
+    <script>
+      try {
+        const o = sessionStorage.getItem("book-origin");
+        if (o) {
+          document.documentElement.style.setProperty("--book-origin", o);
+          sessionStorage.removeItem("book-origin");
+        }
+      } catch {}
+    </script>
+    <style>
+      @view-transition { navigation: auto; }
+      /* Header stays put; only the content dives */
+      .site-header { view-transition-name: site-header; }
+      ::view-transition-group(site-header) { animation: none; }
+      ::view-transition-old(site-header) { display: none; }
+      ::view-transition-new(site-header) { animation: none; }
+      ::view-transition-old(root) {
+        transform-origin: var(--book-origin, 50% 50%);
+        animation: 450ms cubic-bezier(0.5, 0, 0.75, 0) both book-dive;
+      }
+      ::view-transition-new(root) {
+        animation: 300ms ease-out 200ms both book-fade-in;
+      }
+      @keyframes book-dive {
+        to { opacity: 0; transform: scale(2.5); }
+      }
+      @keyframes book-fade-in {
+        from { opacity: 0; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        ::view-transition-old(root),
+        ::view-transition-new(root) { animation: none; }
+      }
+    </style>
+    {% endif %}
     {% if "/blog/" in page.url %}
       <link rel="stylesheet" href="/stylesheets/prism-okaidia.css">
     {% endif %}
