@@ -5,10 +5,7 @@ eleventyExcludeFromCollections: true
 
 <div class="home">
   <section class="intro">
-    <picture>
-      <source srcset="/images/avatar.webp" type="image/webp">
-      <img class="intro-avatar" alt="" width="72" height="72" src="/images/avatar.jpeg">
-    </picture>
+    <img class="intro-avatar" alt="" width="72" height="72" sizes="72px" eleventy:widths="72,144" loading="eager" src="/images/avatar.jpeg">
     <div>
     <p>
       👋🏾 I'm a software engineer at <a href="https://vercel.com">Vercel</a>.
